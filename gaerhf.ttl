@@ -1,0 +1,357 @@
+@prefix gaerhf: <urn:gaerhf:id:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# classes
+gaerhf:human-figure a rdfs:Class ;
+   rdfs:label "Human figure" .
+
+gaerhf:context a rdfs:Class ;
+   rdfs:label "Context" .
+
+gaerhf:group-of-human-figures a rdfs:Class ;
+   rdfs:label "Group of human figures" .
+
+
+# properties
+gaerhf:described-by a rdf:Property ;
+   rdfs:label "described by" .
+
+gaerhf:depicted-by a rdf:Property ;
+   rdfs:label "depicted by" .
+
+gaerhf:earliest-date a rdf:Property ;
+   rdfs:label "earliest date" .
+
+gaerhf:latest-date a rdf:Property ;
+   rdfs:label "latest date" .
+
+gaerhf:wikipedia-image-page a rdf:Property ;
+   rdfs:label "wikipedia image page" .
+
+
+# contexts
+
+gaerhf:cueva-de-las-manos a gaerhf:context;
+   rdfs:label "Cueva de las Manos" ;
+   gaerhf:described-by <https://www.historymuseum.ca/blog/tyara-maskette/> .
+
+gaerhf:goachanas-cave a gaerhf:context ;
+   rdfs:label "Goachanas Cave" ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Apollo_11_Cave> .
+
+gaerhf:sulawesi-cave a gaerhf:context ;
+   rdfs:label "Sulawesi Cave" ;
+   gaerhf:described-by <https://www.nature.com/articles/d41586-019-03826-4> .
+
+gaerhf:gwion-gwion-rock-paintings a gaerhf:context ;
+   rdfs:label "Gwion Gwion rock paintings" ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Gwion_Gwion_rock_paintings> .
+
+gaerhf:kimberley-rock-art a gaerhf:context ;
+   rdfs:label "Kimberley Rock Art" ;
+   gaerhf:described-by <https://japingkaaboriginalart.com/articles/kimberley-rock-art-overview/> .
+
+gaerhf:kanheri-caves a gaerhf:context ;
+   rdfs:label "Kanheri Caves" ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Kanheri_Caves> .
+
+# cultures
+
+gaerhf:arctic-first-peoples a gaerhf:culture ;
+ rdfs:label "Arctic First Peoples" ;
+ gaerhf:region gaerhf:arctic ;
+ gaerhf:described-by <https://en.wikipedia.org/wiki/Circumpolar_peoples> .
+
+gaerhf:australian-first-nations a gaerhf:culture ;
+   rdfs:label "Australian First Nations" ;
+   gaerhf:region gaerhf:australia ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Indigenous_Australians> .
+
+gaerhf:dorset-culture a gaerhf:culture ;
+ rdfs:label "Dorset Culture" ;
+ rdfs:seeAlso <http://vocab.getty.edu/aat/300016734> ;
+ gaerhf:described-by <https://en.wikipedia.org/wiki/Dorset_culture> .
+
+gaerhf:olmec a gaerhf:culture ;
+ rdfs:label "Olmec" ;
+ gaerhf:region gaerhf:central-america ;
+ gaerhf:described-by <https://en.wikipedia.org/wiki/Olmecs> .
+
+gaerhf:predynastic-egypt a gaerhf:culture ;
+ rdfs:label "Predynastic Egypt" ;
+ gaerhf:region gaerhf:egypt ;
+ gaerhf:described-by <https://en.wikipedia.org/wiki/Prehistoric_Egypt> .
+
+gaerhf:pharaonic-egypt a gaerhf:culture ;
+ rdfs:label "Pharaonic Egypt" .
+
+gaerhf:chorrera a gaerhf:culture ;
+ rdfs:label "Chorrera" ;
+ gaerhf:region gaerhf:south-america ;
+ gaerhf:described-by <https://en.wikipedia.org/wiki/Chorrera_culture> .
+
+gaerhf:indus-valley-civilization a gaerhf:culture ;
+ rdfs:label "Indus Valley Civilization" ;
+ gaerhf:region gaerhf:indian-subcontinent ;
+ gaerhf:described-by <https://en.wikipedia.org/wiki/Indus_Valley_Civilisation> .
+
+
+# human figures
+
+gaerhf:venus-hohle-fels a gaerhf:human-figure ;
+   rdfs:label "Venus of Hohle Fels" ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels> ;
+   gaerhf:earliest-date -40000 ;
+   gaerhf:latest-date -35000 .
+
+gaerhf:venus-willendorf a gaerhf:human-figure ;
+   rdfs:label "Venus of Willendorf" ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Venus_of_Willendorf> ;
+   gaerhf:earliest-date -29000 ;
+   gaerhf:latest-date -27000 .
+
+gaerhf:ppnb-stone-mask a gaerhf:human-figure ;
+   rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
+   gaerhf:wikipedia-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> ;
+   gaerhf:earliest-date -7500 ;
+   gaerhf:latest-date -6500 .
+
+gaerhf:tombstone-of-ertola a gaerhf:human-figure ;
+   rdfs:label "Tombstone of Ertola" ;
+   gaerhf:described-by
+   <https://blog.english-heritage.org.uk/role-women-hadrians-wall/> ,
+   <https://romaninscriptionsofbritain.org/inscriptions/1181> ;
+   gaerhf:earliest-date 350 ;
+   gaerhf:latest-date 450 .
+
+gaerhf:arctic-first-peoples-masket a gaerhf:human-figure ;
+   rdfs:label "Arctic First Peoples Maskette" ;
+   gaerhf:described-by <https://www.historymuseum.ca/collections/artifact/1295533/?q=QkHn-13%3A489%20&page_num=1&item_num=0&media_irn=5394933> ;
+   gaerhf:earliest-date -1900 ;
+   gaerhf:latest-date -1600 .
+
+gaerhf:tyara-maskette a gaerhf:human-figure ;
+   rdfs:label "Tyara Maskette" ;
+   gaerhf:described-by <https://collections.historymuseum.ca/public/pages/cmccpublic/alt-emupublic/Display.php?irn=387394&QueryPage=Query.php&lang=0> ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:dorset-culture ;
+   gaerhf:earliest-date 1 ;
+   gaerhf:latest-date 500 .
+
+gaerhf:egyptian-predynastic-female-figurine a gaerhf:representation-of-human-figure ;
+   rdfs:label "Egyptian Predynastic Female Figurine" ;
+   gaerhf:described-by <https://www.brooklynmuseum.org/opencollection/objects/4223> ;
+   gaerhf:earliest-date -3650 ;
+   gaerhf:latest-date -3300 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:predynastic-egypt .
+
+gaerhf:olmec-standing-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/14-standing-figure> ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -300 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:ballplayer-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://art.thewalters.org/detail/80383/ballplayer-figure/> ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -600 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:neolithic-stone-mask a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.imj.org.il/en/collections/197936-0> .
+
+gaerhf:olmec-standing-male-statuette a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/08-standing-male-statuette> ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -300 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:olmec-transformation-figure-in-combat-stance a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/06-transformation-figure-in-combat-stance> ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -300 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:olmec-fragmentary-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/15-fragmentary-figure> ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -300 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:olmec-seated-old-man a gaerhf:human-figure ;
+   rdfs:label "Olmec seated old man" ;
+   gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/17-seated-old-man> ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -300 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:olmec-seated-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/18-seated-figure> ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -300 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:olmec-jade-mask a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/30-jade-mask> ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -300 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:olmec-stone-yuguito a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
+   gaerhf:earliest-date -1200 ;
+   gaerhf:latest-date -900 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
+
+gaerhf:maliwawa-figures a gaerhf:group-of-human-figures ;
+   rdfs:label "Maliwawa Figures" ;
+   gaerhf:described-by <https://www.smithsonianmag.com/smart-news/ancient-australian-aboriginal-art-unlike-anything-seen-180975984/> ,
+    <https://www.tandfonline.com/doi/figure/10.1080/03122417.2020.1818361?scroll=top&needAccess=true> ;
+   gaerhf:earliest-date -7400 ;
+   gaerhf:latest-date -4000 ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:australian-first-nations .
+
+gaerhf:wandjina-rock-art-mount-elizabeth-station a gaerhf:human-figure ;
+   gaerhf:wikipedia-image-page <https://commons.wikimedia.org/wiki/File:Aboriginal_rock_art_on_the_Barnett_River,_Mount_Elizabeth_Station.jpg> ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:australian-first-nations ;
+   gaerhf:earliest-date -2000 ;
+   gaerhf:latest-date -1800 .
+
+gaerhf:kimberley-rock-art-figures a gaerhf:group-of-human-figures ;
+   gaerhf:described-by <https://japingkaaboriginalart.com/articles/kimberley-rock-art-overview/> ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:australian-first-nations ;
+   gaerhf:earliest-date -38000 ;
+   gaerhf:latest-date -37000 .
+
+gaerhf:chorrera-standing-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/316443> ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:chorrera ;
+   gaerhf:earliest-date -1000 ;
+   gaerhf:latest-date -100 .
+
+gaerhf:chorrera-ceramic-figure-pendant a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/314168> ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:chorrera ;
+   gaerhf:earliest-date -1000 ;
+   gaerhf:latest-date -200 .
+
+gaerhf:orim-dong-megalith-petroglyph a gaerhf:human-figure ;
+   gaerhf:described-by <https://en.m.wikipedia.org/wiki/File:Orim-dongmegalithpetroglyph.jpg> ;
+   gaerhf:period-note "Middle Mumun Pottery Period (Korea)" ;
+   gaerhf:earliest-date -700 ;
+   gaerhf:latest-date -550 .
+
+gaerhf:maitreya-in-meditation a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/perspectives/pensive-treasure>, <https://www.museum.go.kr/site/eng/relic/represent/view?relicId=1256> ;
+   gaerhf:period-note "Three Kingdoms Period (Korea)" ;
+   gaerhf:earliest-date 550 ;
+   gaerhf:latest-date 650 .
+
+gaerhf:biamsa-temple-buddhist-stele a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.worldhistory.org/image/6051/buddhist-stele-unified-silla-kingdom/> , <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=1818791> ;
+   gaerhf:period-note "Unified Silla Kingdom (Korea)" ;
+   gaerhf:earliest-date 650 ;
+   gaerhf:latest-date 700 .
+
+gaerhf:gilt-bronze-bhaisajyaguru-buddha a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=1818774> ;
+   gaerhf:period-note "Unified Silla Kingdom (Korea)" ;
+   gaerhf:earliest-date 676 ;
+   gaerhf:latest-date 935 .
+
+gaerhf:horse-rider-shaped-vessels a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519710> ;
+   gaerhf:period-note "Silla Kingdom (Korea)" ;
+   gaerhf:earliest-date 500 ;
+   gaerhf:latest-date 500 .
+
+gaerhf:sarira-reliquaries a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519700> ;
+   gaerhf:period-note "Unified Silla Kingdom (Korea)" ;
+   gaerhf:earliest-date 675 ;
+   gaerhf:latest-date 685 .
+
+gaerhf:seated-mother-goddess a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/61085?ft=indus+goddess+figurine&amp;offset=0&amp;rpp=40&amp;pos=10> ;
+   gaerhf:art-historical-or-tradition gaerhf:indus-valley-civilization ;
+   gaerhf:earliest-date -3000 ;
+   gaerhf:latest-date -2500 .
+
+gaerhf:gandhara-standing-buddha a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/38820> ;
+   gaerhf:period-note "Gandhara Region (Pakistan)" ;
+   gaerhf:earliest-date 300 ;
+   gaerhf:latest-date 400 .
+
+gaerhf:pashupati-seal a gaerhf:human-figure ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:indus-valley-civilization ;
+   gaerhf:earliest-date -2350 ;
+   gaerhf:latest-date -2200 .
+
+gaerhf:patna-yakshas a gaerhf:human-figure ;
+   gaerhf:described-by <https://commons.wikimedia.org/wiki/File:Patna_Yakshas_and_inscriptions.jpg> ;
+   gaerhf:period-note "Mauryan Empire (India)" ;
+   gaerhf:earliest-date -300 ;
+   gaerhf:latest-date -200 .
+
+gaerhf:maurya-standing-male-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/38075> ;
+   gaerhf:period-note "Mauryan Empire (India)" ;
+   gaerhf:earliest-date -300 ;
+   gaerhf:latest-date -100 .
+
+gaerhf:mudgarpani-yaksha a gaerhf:human-figure ;
+   gaerhf:described-by <https://commons.wikimedia.org/wiki/File:Mudgarpani_Yaksha,_Mathura,_100_BCE.jpg> ;
+   gaerhf:period-note "Mathura (India)" ;
+   gaerhf:earliest-date -110 ;
+   gaerhf:latest-date -90 .
+
+gaerhf:terracotta-ganges-and-attendant a gaerhf:human-figure ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
+   gaerhf:period-note "Gupta (India)" ;
+   gaerhf:earliest-date 400 ;
+   gaerhf:latest-date 600 .
+
+gaerhf:pancika-and-hariti a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.britishmuseum.org/collection/object/A_1950-0726-2> , <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:PharroAndArdoxsho.jpg> ;
+   gaerhf:period-note "Kushan (Pakistan)" ;
+   gaerhf:earliest-date 100 ;
+   gaerhf:latest-date 300 .
+
+gaerhf:gudimallam-lingam a gaerhf:human-figure ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
+   gaerhf:period-note "Satavahanas ? (India)" ;
+   gaerhf:earliest-date -200 ;
+   gaerhf:latest-date 100 .
+
+gaerhf:descent-of-the-ganges a gaerhf:human-figure ;
+   gaerhf:described-by <https://en.wikipedia.org/wiki/Descent_of_the_Ganges_(Mahabalipuram)> ;
+   gaerhf:period-note "Pallava Dynasty (India)" ;
+   gaerhf:earliest-date 600 ;
+   gaerhf:latest-date 700 .
+
+gaerhf:ceramic-whistle-in-the-form-of-a-standing-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/313554> ;
+   gaerhf:period-note "Chorrera or Bahia (Ecuador)" ;
+   gaerhf:earliest-date -200 ;
+   gaerhf:latest-date 300 .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
