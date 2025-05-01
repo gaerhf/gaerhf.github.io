@@ -158,7 +158,9 @@ gaerhf:ballplayer-figure a gaerhf:human-figure ;
    gaerhf:art-historical-culture-or-tradition gaerhf:olmec .
 
 gaerhf:neolithic-stone-mask a gaerhf:human-figure ;
-   gaerhf:described-by <https://www.imj.org.il/en/collections/197936-0> .
+   gaerhf:described-by <https://www.imj.org.il/en/collections/197936-0> ;
+   gaerhf:earliest-date -7000 ;
+   gaerhf:latest-date -6000 .
 
 gaerhf:olmec-standing-male-statuette a gaerhf:human-figure ;
    gaerhf:described-by <https://www.doaks.org/resources/olmec-art/catalogue/08-standing-male-statuette> ;
@@ -283,6 +285,12 @@ gaerhf:gandhara-standing-buddha a gaerhf:human-figure ;
    gaerhf:earliest-date 300 ;
    gaerhf:latest-date 400 .
 
+gaerhf:gandhara-bodhisattva a gaerhf:human-figure ;
+   gaerhf:described-by <https://csmvs.in/collections/bodhisattva/> ;
+   gaerhf:period-note "Gandhara Region (Pakistan)" ;
+   gaerhf:earliest-date 200 ;
+   gaerhf:latest-date 300 .
+
 gaerhf:pashupati-seal a gaerhf:human-figure ;
    gaerhf:described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
    gaerhf:art-historical-culture-or-tradition gaerhf:indus-valley-civilization ;
@@ -326,6 +334,7 @@ gaerhf:gudimallam-lingam a gaerhf:human-figure ;
    gaerhf:latest-date 100 .
 
 gaerhf:descent-of-the-ganges a gaerhf:human-figure ;
+   rdfs:label "Descent of Ganges Frieze" ;
    gaerhf:described-by <https://en.wikipedia.org/wiki/Descent_of_the_Ganges_(Mahabalipuram)> ;
    gaerhf:period-note "Pallava Dynasty (India)" ;
    gaerhf:earliest-date 600 ;
@@ -336,6 +345,79 @@ gaerhf:ceramic-whistle-in-the-form-of-a-standing-figure a gaerhf:human-figure ;
    gaerhf:period-note "Chorrera or Bahia (Ecuador)" ;
    gaerhf:earliest-date -200 ;
    gaerhf:latest-date 300 .
+
+gaerhf:gobeklitepe-sculpture-A2 a gaerhf:human-figure ;
+   gaerhf:described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> , <https://arachne.dainst.org/entity/2003369?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=212> ;
+   gaerhf:period-note "Gobekli Tepe (Turkey)" ;
+   gaerhf:earliest-date -9500 ;
+   gaerhf:latest-date -8000 .
+
+gaerhf:cahokia-resting-warrior-figurine a gaerhf:human-figure ;
+   gaerhf:described-by <https://archeology.uark.edu/restingwarrior3d/> ;
+   gaerhf:period-note "Cahokia (Illinois)" ;
+   gaerhf:earliest-date 1100 ;
+   gaerhf:latest-date 1200 .
+
+gaerhf:keller-figurine a gaerhf:human-figure ;
+   gaerhf:described-by <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> ;
+   gaerhf:period-note "Cahokia (Illinois)" ;
+   gaerhf:earliest-date 1050 ;
+   gaerhf:latest-date 1200 .
+
+gaerhf:esteros-female-figurine a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/317723> ;
+   gaerhf:period-note "Esteros or Bahia (Ecuador)" ;
+   gaerhf:earliest-date -400 ;
+   gaerhf:latest-date 0 .
+
+gaerhf:esteros-standing-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/317724> ;
+   gaerhf:period-note "Esteros or Bahia (Ecuador)" ;
+   gaerhf:earliest-date -400 ;
+   gaerhf:latest-date 0 .
+
+gaerhf:chorrera-figure-vessel a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/315062> ;
+   gaerhf:art-historical-culture-or-tradition gaerhf:chorrera ;
+   gaerhf:earliest-date -900 ;
+   gaerhf:latest-date -200 .
+
+gaerhf:tolita-tumaco-bench-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/316449> ;
+   gaerhf:period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
+   gaerhf:earliest-date 100 ;
+   gaerhf:latest-date 400 .
+
+gaerhf:tolita-tumaco-seated-elder a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.metmuseum.org/art/collection/search/314299> ;
+   gaerhf:period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
+   gaerhf:earliest-date -200 ;
+   gaerhf:latest-date 400 .
+
+gaerhf:venus-of-mal-ta a gaerhf:human-figure ;
+   gaerhf:described-by <http://malta.artemiris.org/find/view/35> ;
+   gaerhf:period-note "Mal'ta-Buret' Culture (Siberia)" ;
+   gaerhf:earliest-date -21000 ;
+   gaerhf:latest-date -20500 .
+
+gaerhf:nok-head-and-torso-of-a-female-figure a gaerhf:human-figure ;
+   gaerhf:described-by <https://emuseum.mfah.org/objects/31704/head-and-torso-of-a-female-figure> ;
+   gaerhf:period-note "Nok (Nigeria)" ;
+   gaerhf:earliest-date -500 ;
+   gaerhf:latest-date 200 .
+
+gaerhf:nok-male-head a gaerhf:human-figure ;
+   gaerhf:described-by <https://www.slam.org/collection/objects/28893/> ;
+   gaerhf:period-note "Nok (Nigeria)" ;
+   gaerhf:earliest-date -500 ;
+   gaerhf:latest-date -50 .
+
+gaerhf:han-pottery-storyteller-beating-a-drum a gaerhf:human-figure ;
+   gaerhf:described-by <https://en.chnmuseum.cn/collections_577/collection_highlights_608/archaeological_discoveries_609/202008/t20200831_247541.html> ;
+   gaerhf:period-note "Eastern Han Dynasty (China)" ;
+   gaerhf:earliest-date 25 ;
+   gaerhf:latest-date 220 .
+
 
 
 

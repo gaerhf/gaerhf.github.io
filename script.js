@@ -4,7 +4,7 @@ const figureDetailsDiv = document.getElementById('figure-details');
 const detailLabel = document.getElementById('detail-label');
 const detailInfo = document.getElementById('detail-info');
 const detailImageDiv = document.getElementById('detail-image');
-const backToListButton = document.getElementById('back-to-list');
+// const backToListButton = document.getElementById('back-to-list');
 
 async function convertTurtleToJsonLd(turtleData) {
     const store = $rdf.graph();
@@ -156,10 +156,10 @@ function showFigureDetails(figure) {
     figureDetailsDiv.classList.remove('hidden');
 }
 
-backToListButton.addEventListener('click', () => {
-    figureDetailsDiv.classList.add('hidden');
-    figureListDiv.classList.remove('hidden');
-});
+// backToListButton.addEventListener('click', () => {
+//     figureDetailsDiv.classList.add('hidden');
+//     figureListDiv.classList.remove('hidden');
+// });
 
 // Load and display the figures when the script runs
 loadAndDisplayFigures();
