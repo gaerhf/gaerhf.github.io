@@ -110,7 +110,7 @@ function displayFigureList(allSubjects) {
 
         let dateDisplay = '';
         if (earliestDate && latestDate) {
-            dateDisplay = `(${earliestDate} - ${latestDate})`;
+            dateDisplay = `(${earliestDate} to ${latestDate})`;
         } else if (earliestDate) {
             dateDisplay = `(${earliestDate})`;
         }
@@ -131,7 +131,7 @@ function showFigureDetails(figure) {
 
     const earliestDate = figure['urn:gaerhf:id:earliest-date'] ? figure['urn:gaerhf:id:earliest-date'][0]['@value'] : 'N/A';
     const latestDate = figure['urn:gaerhf:id:latest-date'] ? figure['urn:gaerhf:id:latest-date'][0]['@value'] : 'N/A';
-    const describedBy = figure['urn:gaerhf:id:described-by'] ? figure['urn:gaerhf:id:described-by'].map(item => `<a href="${item['@id']}" target="_blank">Link</a>`).join(', ') : 'N/A';
+    const describedBy = figure['urn:gaerhf:id:described-by'] ? figure['urn:gaerhf:id:described-by'].map(item => `<a href="${item['@id']}" target="_new">Link</a>`).join(', ') : 'N/A';
     const wikipediaImagePage = figure['urn:gaerhf:id:wikipedia-image-page'] ? figure['urn:gaerhf:id:wikipedia-image-page'][0]['@id'] : null;
 
     detailInfo.innerHTML += `<p><strong>Earliest Date:</strong> ${earliestDate}</p>`;
