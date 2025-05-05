@@ -328,6 +328,13 @@
    :latest-date -300 ;
    :art-historical-culture-or-tradition :olmec .
 
+:adena-hopewell-pipe a :human-figure ;
+   rdfs:label "Adena or Hopewell Pipe" ;
+   :described-by <https://www.clevelandart.org/articles/centennial-loan-adena-pipe#> ;
+   :earliest-date -800 ;
+   :latest-date -1 ;
+   :thumbnail-image <https://www.clevelandart.org/_next/image?url=https%3A%2F%2Fweb-drupal-cms-prod.clevelandart.org%2F%2Fsites%2Fdefault%2Ffiles%2FJuly-August2016_AdenaPipe_A.jpg&w=1920&q=75> .
+
 :orim-dong-megalith-petroglyph a :human-figure ;
    :described-by <https://en.m.wikipedia.org/wiki/File:Orim-dongmegalithpetroglyph.jpg> ;
    :period-note "Middle Mumun Pottery Period (Korea)" ;
