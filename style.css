@@ -1,12 +1,16 @@
 body {
     font-family: sans-serif;
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
     background-color: #f4f4f4;
     color: #333;
+    min-height: 100vh; /* Ensure the body is at least the height of the viewport */
+    position: relative; /* Needed for absolute positioning of the footer */
 }
 
-h2 {
-    color: #555;
+#main-title {
+    font-size:1.5em;
+    padding:0px;
+    margin:0px;
 }
 
 #figure-list-container {
@@ -56,50 +60,50 @@ h2 {
     padding: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex; /* Enable flexbox for header */
-    flex-direction: column; /* Stack title and details wrapper */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #figure-details-wrapper {
-    display: flex; /* Enable flexbox for details wrapper */
-    width: 80%; /* Adjust width as needed */
-    margin-top: 20px; /* Add some space */
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
     background-color: #eee;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    position: relative; /* For absolute positioning of floated image */
-    flex-wrap: wrap; /* Allow content to wrap if needed */
+    padding: 8px;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 #detail-info {
-    flex-grow: 1; /* Allow info to take up available space */
-    margin-right: 20px; /* Space between info and image */
+    flex-grow: 1;
+    margin-right: 20px;
     text-align: left;
 }
 
 #detail-image {
-    flex-shrink: 0; /* Prevent image from shrinking */
-    max-width: 300px; /* Adjust as needed */
-    margin-top: 20px; /* Space below label if it comes first */
+    flex-shrink: 0;
+    max-width: 200px;
+    margin-top: 10px;
     text-align: center;
 }
 
 #detail-image img {
     max-height: 250px;
     width: auto;
-    border-radius: 6px;
+    border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    float: right; /* Keep the float */
+    float: right;
     margin: 0 0 10px 10px;
 }
 
 #detail-label {
     font-size: 1.5em;
-    margin-top: 15px; /* Space below image if it comes before */
+    margin-top: 15px;
     text-align: center;
-    width: 100%; /* Ensure label takes full width */
+    width: 100%;
 }
 
 .culture-info {
@@ -144,4 +148,23 @@ h2 {
     max-height: 80%;
     overflow-y: auto;
     text-align: left;
+}
+
+.sticky-footer {
+    background-color: #f0f0f0;
+    /* padding: 10px 20px; */
+    text-align: center;
+    position: fixed; /* Make it stick! */
+    bottom: 0;            /* Stick to the bottom */
+    left: 0;
+    width: 100%;
+}
+
+.sticky-footer a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.sticky-footer a:hover {
+    text-decoration: underline;
 }

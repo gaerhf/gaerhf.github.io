@@ -100,8 +100,8 @@
 
 # human figures
 
-:venus-hohle-fels a :human-figure ;
-   rdfs:label "Venus of Hohle Fels" ;
+:hohle-fels-figurine a :human-figure ;
+   rdfs:label "Female Figurine from Hohle Fels" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels> ;
    :earliest-date -40000 ;
    :latest-date -35000 ;
@@ -114,29 +114,29 @@
 #    :earliest-date -38000 ;
 #    :latest-date -37000 .
 
-:venus-willendorf a :human-figure ;
-   rdfs:label "Venus of Willendorf" ;
+:willendorf-figurine a :human-figure ;
+   rdfs:label "Female Figurine from Willendorf" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Willendorf> ;
    :earliest-date -29000 ;
    :latest-date -27000 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_von_Willendorf_01.jpg> .
 
-:venus-of-mal-ta a :human-figure ;
-   rdfs:label "Venus of Mal'ta" ;
+:mal-ta-female-figurine a :human-figure ;
+   rdfs:label "Female Figurine from Mal'ta (Siberia)" ;
    :described-by <http://malta.artemiris.org/find/view/35> ;
    :period-note "Mal'ta-Buret' Culture (Siberia)" ;
    :earliest-date -21000 ;
    :latest-date -20500 ;
    :thumbnail-image <http://malta.artemiris.org/storage/find/73109e670eac203b8775a9aafe310dbc.jpg> .
 
-:figure-on-bench-sayburc a :human-figure ;
-   rdfs:label "Neolithic Figure carved in Bench" ;
+:male-figure-on-bench-sayburc a :human-figure ;
+   rdfs:label "Neolithic Male Figure carved in Bench" ;
    :approximate-date -11000 ;
    :described-by <https://www.livescience.com/oldest-narrative-scene-neolithic-turkey> ;
    :thumbnail-image <https://cdn.mos.cms.futurecdn.net/D4xTVuuwTUMF6NGQRNXuse-1200-80.jpg> .
 
 :gobeklitepe-figure-A2 a :human-figure ;
-   rdfs:label "Gobeklitepe Figure A2" ;
+   rdfs:label "Gobeklitepe Male Figure A2" ;
    :described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> , <https://arachne.dainst.org/entity/2003369?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=212> ;
    :period-note "Gobekli Tepe (Turkey)" ;
    :earliest-date -9500 ;
@@ -148,8 +148,17 @@
    :earliest-date -7500 ;
    :latest-date -6500 .
 
+:maliwawa-figures a :group-of-human-figures ;
+   rdfs:label "Maliwawa Figures" ;
+   :described-by <https://www.smithsonianmag.com/smart-news/ancient-australian-aboriginal-art-unlike-anything-seen-180975984/> ,
+    <https://www.tandfonline.com/doi/figure/10.1080/03122417.2020.1818361?scroll=top&needAccess=true> ;
+   :earliest-date -7400 ;
+   :latest-date -4000 ;
+   :art-historical-culture-or-tradition :australian-first-nations ;
+   :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/EdiLRvytYRYjtQGSL7yf9I68uWM=/fit-in/1072x0/filters:focal(931x560:932x561)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b8/65/b865d6a9-bbc1-44ec-9f4b-8b885aa6c83b/rock_art_3a.jpeg> .
+
 :neolithic-stone-mask a :human-figure ;
-   rdfs:label "Neolithic Stone Mask" ;
+   rdfs:label "Pre-pottery Neolithic Stone Mask" ;
    :described-by <https://www.imj.org.il/en/collections/197936-0> ;
    :earliest-date -7000 ;
    :latest-date -6000 ;
@@ -172,6 +181,19 @@
    :material-note "Ceramic" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/61085/95936/main-image> .
 
+:pashupati-seal a :human-figure ;
+   rdfs:label "Pashupati Seal" ;
+   :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
+   :art-historical-culture-or-tradition :indus-valley-civilization ;
+   :approximate-date -2200 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
+
+:wandjina-rock-art-mount-elizabeth-station a :human-figure ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aboriginal_rock_art_on_the_Barnett_River,_Mount_Elizabeth_Station.jpg> ;
+   :art-historical-culture-or-tradition :australian-first-nations ;
+   :earliest-date -2000 ;
+   :latest-date -1800 .
+
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
    :described-by <https://www.historymuseum.ca/collections/artifact/1295533/?q=QkHn-13%3A489%20&page_num=1&item_num=0&media_irn=5394933> ;
@@ -191,12 +213,27 @@
    :latest-date -1500 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:594px-MaskeAgamemnon-MOD.jpg> .
 
+:olmec-stone-yuguito a :human-figure ;
+   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
+   :earliest-date -1200 ;
+   :latest-date -900 ;
+   :art-historical-culture-or-tradition :olmec ;
+   :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
+
 :jomon-doju-statuette a :human-figure ;
    rdfs:label "Jōmon dogū statuette" ;
    :earliest-date -1000 ;
    :latest-date -400 ;
    :art-historical-culture-or-tradition :jomon ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_statue,_late_Jomon_period.JPG> .
+
+:chorrera-standing-figure a :human-figure ;
+   rdfs:label "Chorrera Standing Figure" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/316443> ;
+   :art-historical-culture-or-tradition :chorrera ;
+   :earliest-date -1000 ;
+   :latest-date -100 ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/316443/655595/main-image> .
 
 :olmec-standing-figure a :human-figure ;
    rdfs:label "Jadeite Standing Figure" ;
@@ -205,7 +242,7 @@
    :latest-date -300 ;
    :art-historical-culture-or-tradition :olmec .
 
-:ballplayer-figure a :human-figure ;
+:olmec-ballplayer-figure a :human-figure ;
    rdfs:label "Jadeite Ballplayer" ;
    :described-by <https://art.thewalters.org/detail/80383/ballplayer-figure/> ;
    :earliest-date -900 ;
@@ -254,19 +291,28 @@
    :described-by <https://www.worldhistory.org/image/9799/prince-of-glauberg/> ;
    :earliest-date -550 ;
    :latest-date -450 ;
-   :art-historical-culture-or-tradition :la-tene .
+   :art-historical-culture-or-tradition :la-tene ;
+   :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
 
 :nok-head-and-torso-of-a-female-figure a :human-figure ;
    :described-by <https://emuseum.mfah.org/objects/31704/head-and-torso-of-a-female-figure> ;
    :period-note "Nok (Nigeria)" ;
    :earliest-date -500 ;
-   :latest-date 200 .
+   :latest-date 200 ;
+   :thumbnail-image <https://emuseum.mfah.org/internal/media/dispatcher/294946/postagestamp> .
 
 :nok-male-head a :human-figure ;
    :described-by <https://www.slam.org/collection/objects/28893/> ;
    :period-note "Nok (Nigeria)" ;
    :earliest-date -500 ;
    :latest-date -50 .
+
+:qin-terracotta-army a :group-of-human-figures ;
+   rdfs:label "Qin Terracotta Army" ;
+   :approximate-date -209 ;
+   :described-by <https://en.wikipedia.org/wiki/Terracotta_Army> ;
+   :art-historical-culture-or-tradition :qin-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerreros_de_Terracota,_Xi%27an_(15547299927).jpg>.
 
 :nazca-standing-figure a :human-figure ;
    rdfs:label "Nazca Standing Figure" ;
@@ -288,33 +334,6 @@
    <https://romaninscriptionsofbritain.org/inscriptions/1181> ;
    :earliest-date 350 ;
    :latest-date 450 .
-
-:olmec-stone-yuguito a :human-figure ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
-   :earliest-date -1200 ;
-   :latest-date -900 ;
-   :art-historical-culture-or-tradition :olmec .
-
-:maliwawa-figures a :group-of-human-figures ;
-   rdfs:label "Maliwawa Figures" ;
-   :described-by <https://www.smithsonianmag.com/smart-news/ancient-australian-aboriginal-art-unlike-anything-seen-180975984/> ,
-    <https://www.tandfonline.com/doi/figure/10.1080/03122417.2020.1818361?scroll=top&needAccess=true> ;
-   :earliest-date -7400 ;
-   :latest-date -4000 ;
-   :art-historical-culture-or-tradition :australian-first-nations ;
-   :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/EdiLRvytYRYjtQGSL7yf9I68uWM=/fit-in/1072x0/filters:focal(931x560:932x561)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b8/65/b865d6a9-bbc1-44ec-9f4b-8b885aa6c83b/rock_art_3a.jpeg> .
-
-:wandjina-rock-art-mount-elizabeth-station a :human-figure ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aboriginal_rock_art_on_the_Barnett_River,_Mount_Elizabeth_Station.jpg> ;
-   :art-historical-culture-or-tradition :australian-first-nations ;
-   :earliest-date -2000 ;
-   :latest-date -1800 .
-
-:chorrera-standing-figure a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/316443> ;
-   :art-historical-culture-or-tradition :chorrera ;
-   :earliest-date -1000 ;
-   :latest-date -100 .
 
 :chorrera-ceramic-figure-pendant a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/314168> ;
@@ -369,13 +388,6 @@
    :period-note "Gandhara Region (Pakistan)" ;
    :earliest-date 200 ;
    :latest-date 300 .
-
-:pashupati-seal a :human-figure ;
-   :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
-   :art-historical-culture-or-tradition :indus-valley-civilization ;
-   :earliest-date -2350 ;
-   :latest-date -2200 ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
 
 :patna-yakshas a :human-figure ;
    :described-by <https://commons.wikimedia.org/wiki/File:Patna_Yakshas_and_inscriptions.jpg> ;
