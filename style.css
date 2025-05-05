@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    margin: 20px;
+    margin: 20px 0 0 0;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -9,11 +9,16 @@ h2 {
     color: #555;
 }
 
+#figure-list-container {
+    padding: 15px;
+}
+
 #figure-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 15px;
+    margin-top: 10px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -21,17 +26,21 @@ h2 {
 
 .figure-item {
     border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
+    padding: 8px 12px;
     cursor: pointer;
-    background-color: #f9f9f9;
-    border-radius: 6px;
+    background-color: #fff;
+    border-radius: 4px;
     transition: transform 0.2s ease-in-out;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    text-align: left;
 }
 
 .figure-item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
 }
 
 .figure-item h3 {
@@ -39,12 +48,64 @@ h2 {
     color: #333;
 }
 
-#figure-details {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #fff;
+#header-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Enable flexbox for header */
+    flex-direction: column; /* Stack title and details wrapper */
+    align-items: center; /* Center items horizontally */
+}
+
+#figure-details-wrapper {
+    display: flex; /* Enable flexbox for details wrapper */
+    width: 80%; /* Adjust width as needed */
+    margin-top: 20px; /* Add some space */
+    background-color: #eee;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* For absolute positioning of floated image */
+    flex-wrap: wrap; /* Allow content to wrap if needed */
+}
+
+#detail-info {
+    flex-grow: 1; /* Allow info to take up available space */
+    margin-right: 20px; /* Space between info and image */
+    text-align: left;
+}
+
+#detail-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    max-width: 300px; /* Adjust as needed */
+    margin-top: 20px; /* Space below label if it comes first */
+    text-align: center;
+}
+
+#detail-image img {
+    max-height: 250px;
+    width: auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    float: right; /* Keep the float */
+    margin: 0 0 10px 10px;
+}
+
+#detail-label {
+    font-size: 1.5em;
+    margin-top: 15px; /* Space below image if it comes before */
+    text-align: center;
+    width: 100%; /* Ensure label takes full width */
+}
+
+.culture-info {
+    font-size: 0.8em;
+    color: #777;
+    margin-left: 10px;
 }
 
 #back-to-list {
@@ -63,12 +124,7 @@ h2 {
 }
 
 .hidden {
-    display: none;
-}
-
-#detail-info {
-    margin-top: 15px;
-    line-height: 1.6;
+    display: none !important;
 }
 
 #detail-info p {
@@ -79,19 +135,13 @@ h2 {
     font-weight: bold;
 }
 
-#detail-image {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#detail-image img {
+#detail-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 80%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-#detail-image p {
-    font-style: italic;
-    color: #777;
+    max-height: 80%;
+    overflow-y: auto;
+    text-align: left;
 }
