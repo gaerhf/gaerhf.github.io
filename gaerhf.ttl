@@ -114,13 +114,6 @@
    :latest-date -35000 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:VenusHohlefels2.jpg> .
 
-# :kimberley-rock-art-figures a :group-of-human-figures ;
-#    rdfs:label "Kimberly Rock Art Figures" ;
-#    :described-by <https://japingkaaboriginalart.com/articles/kimberley-rock-art-overview/> ;
-#    :art-historical-culture-or-tradition :australian-first-nations ;
-#    :earliest-date -38000 ;
-#    :latest-date -37000 .
-
 :willendorf-figurine a :human-figure ;
    rdfs:label "Female Figurine from Willendorf" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Willendorf> ;
@@ -135,6 +128,14 @@
    :earliest-date -21000 ;
    :latest-date -20500 ;
    :thumbnail-image <http://malta.artemiris.org/storage/find/73109e670eac203b8775a9aafe310dbc.jpg> .
+
+:gwion-gwion-rock-paintigs a :group-of-human-figures ;
+   rdfs:label "Gwion Gwion Rock Paintings" ;
+   :described-by <https://en.wikipedia.org/wiki/Gwion_Gwion_rock_paintings> ;
+   :art-historical-culture-or-tradition :australian-first-nations ;
+   :earliest-date -15000 ;
+   :latest-date -3000 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
 
 :male-figure-on-bench-sayburc a :human-figure ;
    rdfs:label "Neolithic Male Figure carved in Bench" ;
@@ -155,6 +156,13 @@
    :earliest-date -7500 ;
    :latest-date -6500 .
 
+:round-head-figures-of-tassili-n-ajjer a :group-of-human-figures ;
+   rdfs:label "Round Head Figures of Tassili n'Ajjer" ;
+   :described-by <https://en.wikipedia.org/wiki/Round_Head_Period> ;
+   :earliest-date -7500 ;
+   :latest-date -5500 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fondazione_Passaré_V1_056.jpg> .
+
 :maliwawa-figures a :group-of-human-figures ;
    rdfs:label "Maliwawa Figures" ;
    :described-by <https://www.smithsonianmag.com/smart-news/ancient-australian-aboriginal-art-unlike-anything-seen-180975984/> ,
@@ -170,6 +178,12 @@
    :earliest-date -7000 ;
    :latest-date -6000 ;
    :thumbnail-image <https://www.imj.org.il/sites/default/files/collections/IAA~Mask_%20Nahal%20Hemar%20Neolithic_%207th%20century%20BCE2.jpg> .
+
+:mestikawi-cave-group-scenes a :group-of-human-figures ;
+   rdfs:label "Mestikawi Cave Group Scenes" ;
+   :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
+   :approximate-date -5000 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestias2.JPG> .
 
 :egyptian-predynastic-female-figurine a :human-figure ;
    rdfs:label "Egyptian Predynastic Female Figurine" ;
@@ -219,13 +233,21 @@
    rdfs:label "Mycenaean Gold Mask from Grave Circle B" ;
    :earliest-date -1700 ;
    :latest-date -1600 ;
+   :described-by <https://en.wikipedia.org/wiki/Grave_Circle_B,_Mycenae> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funeral_mask_from_Mycenae_NAMA_080841.jpg> .
 
 :mycenaean-funerary-mask-grave-circle-a a :human-figure ;
    rdfs:label "Mycenaean Gold Mask from Grave Circle A";
+   :described-by <https://en.wikipedia.org/wiki/Mask_of_Agamemnon> ;
    :earliest-date -1550 ;
    :latest-date -1500 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:594px-MaskeAgamemnon-MOD.jpg> .
+
+:pylos-combat-agate a :group-of-human-figures ;
+   rdfs:label "Pylos Combat Agate" ;
+   :approximate-date -1450 ;
+   :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
+   :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
 
 :olmec-stone-yuguito a :human-figure ;
    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
@@ -347,12 +369,21 @@
    :described-by <https://en.wikipedia.org/wiki/Nazca_lines> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_46.JPG> .
 
+:terracotta-male-figure-from-kalchayan a :human-figure ;
+   rdfs:label "Terracotta Male figure from Kalchayan" ;
+   :art-historical-culture-or-tradition :kushan ;
+   :earliest-date -50 ;
+   :latest-date 50;
+   :described-by <https://en.wikipedia.org/wiki/Khalchayan> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg> .
+
 :tyara-maskette a :human-figure ;
    rdfs:label "Tyara Maskette" ;
    :described-by <https://collections.historymuseum.ca/public/pages/cmccpublic/alt-emupublic/Display.php?irn=387394&QueryPage=Query.php&lang=0> ;
    :art-historical-culture-or-tradition :dorset-culture ;
    :earliest-date 1 ;
-   :latest-date 500 .
+   :latest-date 500 ;
+   :thumbnail-image <https://collections.historymuseum.ca/public/objects/common/webmedia.php?irn=45090> .
 
 :tombstone-of-ertola a :human-figure ;
    rdfs:label "Tombstone of Ertola" ;
