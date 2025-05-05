@@ -453,14 +453,16 @@
 :esteros-female-figurine a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/317723> ;
    :period-note "Esteros or Bahia (Ecuador)" ;
-   :earliest-date -400 ;
-   :latest-date -1 .
+   :earliest-date -500 ;
+   :latest-date -1 ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
 
 :esteros-standing-figure a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/317724> ;
    :period-note "Esteros or Bahia (Ecuador)" ;
    :earliest-date -400 ;
-   :latest-date -1 .
+   :latest-date -1 ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
 
 :chorrera-figure-vessel a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/315062> ;
