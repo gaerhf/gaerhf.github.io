@@ -100,6 +100,13 @@
 
 # human figures
 
+:sulawesi-cave-hunting-scene a :group-of-human-figures ;
+   rdfs:label "Sulawesi Cave Hunting Scene" ;
+   :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ;
+   :earliest-date -45000 ;
+   :latest-date -35000 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Maros_hunting_scene.png> .
+
 :hohle-fels-figurine a :human-figure ;
    rdfs:label "Female Figurine from Hohle Fels" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels> ;
@@ -172,6 +179,13 @@
    :art-historical-culture-or-tradition :predynastic-egypt ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/07.447.502_SL1.jpg?width=256&quality=75> .
 
+:narmer-palette a :human-figure ;
+   rdfs:label "Narmer Palette" ;
+   :approximate-date -3000 ;
+   :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
+   :art-historical-culture-or-tradition :pharaonic-egypt .
+
 :seated-female-figure a :human-figure ;
    rdfs:label "Seated Female Figure" ;
    :described-by <https://www.metmuseum.org/art/collection/search/61085?ft=indus+goddess+figurine&amp;offset=0&amp;rpp=40&amp;pos=10> ;
@@ -235,6 +249,12 @@
    :latest-date -100 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/316443/655595/main-image> .
 
+:chorrera-ceramic-figure-pendant a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/314168> ;
+   :art-historical-culture-or-tradition :chorrera ;
+   :earliest-date -1000 ;
+   :latest-date -200 .
+
 :olmec-standing-figure a :human-figure ;
    rdfs:label "Jadeite Standing Figure" ;
    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/14-standing-figure> ;
@@ -286,6 +306,12 @@
    :latest-date -300 ;
    :art-historical-culture-or-tradition :olmec .
 
+:orim-dong-megalith-petroglyph a :human-figure ;
+   :described-by <https://en.m.wikipedia.org/wiki/File:Orim-dongmegalithpetroglyph.jpg> ;
+   :period-note "Middle Mumun Pottery Period (Korea)" ;
+   :earliest-date -700 ;
+   :latest-date -550 .
+
 :prince-of-glauberg a :human-figure ;
    rdfs:label "So-called Prince of Glauberg" ;
    :described-by <https://www.worldhistory.org/image/9799/prince-of-glauberg/> ;
@@ -336,23 +362,24 @@
    :earliest-date 350 ;
    :latest-date 450 .
 
-:chorrera-ceramic-figure-pendant a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/314168> ;
-   :art-historical-culture-or-tradition :chorrera ;
-   :earliest-date -1000 ;
-   :latest-date -200 .
-
-:orim-dong-megalith-petroglyph a :human-figure ;
-   :described-by <https://en.m.wikipedia.org/wiki/File:Orim-dongmegalithpetroglyph.jpg> ;
-   :period-note "Middle Mumun Pottery Period (Korea)" ;
-   :earliest-date -700 ;
-   :latest-date -550 .
-
 :maitreya-in-meditation a :human-figure ;
    :described-by <https://www.metmuseum.org/perspectives/pensive-treasure>, <https://www.museum.go.kr/site/eng/relic/represent/view?relicId=1256> ;
    :period-note "Three Kingdoms Period (Korea)" ;
    :earliest-date 550 ;
    :latest-date 650 .
+
+:horse-rider-shaped-vessels a :human-figure ;
+   :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519710> ;
+   :period-note "Silla Kingdom (Korea)" ;
+   :earliest-date 500 ;
+   :latest-date 500 .
+
+:bamiyan-buddhas a :group-of-human-figures ;
+   rdfs:label "Bamiyan Buddhas" ;
+   :earliest-date 570 ;
+   :latest-date 625 ;
+   :described-by <https://en.wikipedia.org/wiki/Buddhas_of_Bamiyan> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_of_Bamiyan.jpg> .
 
 :biamsa-temple-buddhist-stele a :human-figure ;
    :described-by <https://www.worldhistory.org/image/6051/buddhist-stele-unified-silla-kingdom/> , <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=1818791> ;
@@ -365,12 +392,6 @@
    :period-note "Unified Silla Kingdom (Korea)" ;
    :earliest-date 676 ;
    :latest-date 935 .
-
-:horse-rider-shaped-vessels a :human-figure ;
-   :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519710> ;
-   :period-note "Silla Kingdom (Korea)" ;
-   :earliest-date 500 ;
-   :latest-date 500 .
 
 :sarira-reliquaries a :human-figure ;
    :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519700> ;
