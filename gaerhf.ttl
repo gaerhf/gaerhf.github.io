@@ -318,6 +318,7 @@
    rdfs:label "Nazca Standing Figure" ;
    :earliest-date -200 ;
    :latest-date 500 ;
+   :described-by <https://en.wikipedia.org/wiki/Nazca_lines> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_46.JPG> .
 
 :tyara-maskette a :human-figure ;
