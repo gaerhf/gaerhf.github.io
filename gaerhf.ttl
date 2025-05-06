@@ -265,6 +265,13 @@
    :art-historical-culture-or-tradition :olmec ;
    :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
 
+:bust-of-nefertiti a :human-figure ;
+   rdfs:label "Bust of Nefertiti" ;
+   :art-historical-culture-or-tradition :pharaonic-egypt ;
+   :approximate-date -1345 ;
+   :described-by <https://en.wikipedia.org/wiki/Nefertiti_Bust> ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Nofretete_Neues_Museum.jpg> .
+
 :jomon-doju-statuette a :human-figure ;
    rdfs:label "Jōmon dogū statuette" ;
    :earliest-date -1000 ;
