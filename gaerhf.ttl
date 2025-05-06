@@ -200,14 +200,21 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
    :art-historical-culture-or-tradition :pharaonic-egypt .
 
-:seated-female-figure a :human-figure ;
-   rdfs:label "Seated Female Figure" ;
+:mehrgarh-seated-female-figure a :human-figure ;
+   rdfs:label "Mehrgarh-style Seated Female Figure" ;
    :described-by <https://www.metmuseum.org/art/collection/search/61085?ft=indus+goddess+figurine&amp;offset=0&amp;rpp=40&amp;pos=10> ;
-   :art-historical-or-tradition :indus-valley-civilization ;
+   :art-historical-culture-or-tradition :indus-valley-civilization ;
    :earliest-date -3000 ;
    :latest-date -2500 ;
    :material-note "Ceramic" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/61085/95936/main-image> .
+
+:cycladic-figurine-spedos-type a :human-figure ;
+   rdfs:label "Cycladic Figurine (Spedos Type)" ;
+   :earliest-date -2800 ;
+   :latest-date -2300 ;
+   :described-by <https://en.wikipedia.org/wiki/Cycladic_art> ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Cycladic_art#/media/File:Cycladic_female_figurine_2.jpg> .
 
 :pashupati-seal a :human-figure ;
    rdfs:label "Pashupati Seal" ;
@@ -216,7 +223,9 @@
    :approximate-date -2200 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
 
-:wandjina-rock-art-mount-elizabeth-station a :human-figure ;
+:wandjina-rock-art-mount-elizabeth-station a :group-of-human-figures ;
+   rdfs:label "Wandjina Rock Art" ;
+   :described-by <https://en.wikipedia.org/wiki/Wandjina> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aboriginal_rock_art_on_the_Barnett_River,_Mount_Elizabeth_Station.jpg> ;
    :art-historical-culture-or-tradition :australian-first-nations ;
    :earliest-date -2000 ;
@@ -362,6 +371,28 @@
    :earliest-date -500 ;
    :latest-date -50 .
 
+:hopewell-head-in-profile a :human-figure ;
+   rdfs:label "Hopewell Head in Profile" ;
+   :described-by <https://en.wikipedia.org/wiki/Hopewell_tradition> ;
+   :material-note "Mica" ;
+   :earliest-date -200 ;
+   :latest-date 500 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human_face_effigy,_Hopewell_culture,_Turner_Group,_Mound_3,_altar,_Little_Miami_Valley,_Ohio,_200_BC_to_500_AD,_mica_-_Native_American_collection_-_Peabody_Museum,_Harvard_University_-_DSC06093.jpg> .
+
+:hopewell-mica-torso a :human-figure ;
+   rdfs:label "Hopewell Mica Torso" ;
+   :described-by <https://www.ohiohistory.org/hopewell-headhunters/> ;
+   :earliest-date -200 ;
+   :latest-date 500 ;
+   :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/A283-242a-mica-torso.jpg> .
+
+:hopewell-shaman-bear a :human-figure ;
+   rdfs:label "Hopewell Shaman Bear" ;
+   :described-by <https://www.ohiohistory.org/hopewell-headhunters/> ;
+   :earliest-date -200 ;
+   :latest-date 500 ;
+   :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/shaman-of-newark-color.jpg> .
+
 :qin-terracotta-army a :group-of-human-figures ;
    rdfs:label "Qin Terracotta Army" ;
    :approximate-date -209 ;
@@ -391,6 +422,13 @@
    :earliest-date 1 ;
    :latest-date 500 ;
    :thumbnail-image <https://collections.historymuseum.ca/public/objects/common/webmedia.php?irn=45090> .
+
+:prima-porta-augustus a :human-figure ;
+   rdfs:label "Prima Porta Augustus" ;
+   :described-by <https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta> ;
+   :art-historical-culture-or-tradition :roman-empire ;
+   :approximate-date 20;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg> .
 
 :tombstone-of-ertola a :human-figure ;
    rdfs:label "Tombstone of Ertola" ;

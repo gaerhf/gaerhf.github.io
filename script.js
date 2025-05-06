@@ -280,9 +280,9 @@ function showFigureDetails(figureId) {
             const describedByLink = document.createElement('p');
             const link = document.createElement('a');
             link.href = figure.describedBy;
-            link.textContent = 'Further Description';
+            link.textContent = 'More information';
             link.target = '_blank'; // Open in a new tab
-            describedByLink.appendChild(document.createTextNode('Description: '));
+            // describedByLink.appendChild(document.createTextNode('Description: '));
             describedByLink.appendChild(link);
             detailInfo.appendChild(describedByLink);
         }
