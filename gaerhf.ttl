@@ -192,7 +192,6 @@
    :art-historical-culture-or-tradition :hamangia-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
 
-
 :head-from-lake-varna a :human-figure ;
    rdfs:label "Head from Varna" ;
    :described-by <https://en.wikipedia.org/wiki/Varna_Necropolis> ;
@@ -246,6 +245,8 @@
    :latest-date -2300 ;
    :described-by <https://en.wikipedia.org/wiki/Cycladic_art> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Cycladic_art#/media/File:Cycladic_female_figurine_2.jpg> .
+
+# https://en.wikipedia.org/wiki/Thinker_from_Yehud
 
 :pashupati-seal a :human-figure ;
    rdfs:label "Pashupati Seal" ;
@@ -415,6 +416,20 @@
    :period-note "Nok (Nigeria)" ;
    :earliest-date -500 ;
    :latest-date -50 .
+
+:esteros-female-figurine a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/317723> ;
+   :period-note "Esteros or Bahia (Ecuador)" ;
+   :earliest-date -500 ;
+   :latest-date -1 ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
+
+:esteros-standing-figure a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/317724> ;
+   :period-note "Esteros or Bahia (Ecuador)" ;
+   :earliest-date -400 ;
+   :latest-date -1 ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
 
 :hopewell-head-in-profile a :human-figure ;
    rdfs:label "Hopewell Head in Profile" ;
@@ -593,27 +608,21 @@
    :described-by <https://archeology.uark.edu/restingwarrior3d/> ;
    :period-note "Cahokia (Illinois)" ;
    :earliest-date 1100 ;
-   :latest-date 1200 .
+   :latest-date 1200 ;
+   :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
 
 :keller-figurine a :human-figure ;
-   :described-by <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> ;
+   :described-by <https://en.wikipedia.org/wiki/Mississippian_stone_statuary> ;
    :period-note "Cahokia (Illinois)" ;
    :earliest-date 1050 ;
-   :latest-date 1200 .
+   :latest-date 1200 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
 
-:esteros-female-figurine a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/317723> ;
-   :period-note "Esteros or Bahia (Ecuador)" ;
-   :earliest-date -500 ;
-   :latest-date -1 ;
-   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
+# https://en.wikipedia.org/wiki/Mississippian_copper_plates
 
-:esteros-standing-figure a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/317724> ;
-   :period-note "Esteros or Bahia (Ecuador)" ;
-   :earliest-date -400 ;
-   :latest-date -1 ;
-   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
+# https://en.wikipedia.org/wiki/Mississippian_stone_statuary
+
+# https://en.wikipedia.org/wiki/Jayavarman_VII
 
 :chorrera-figure-vessel a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/315062> ;
@@ -639,22 +648,10 @@
    :earliest-date 25 ;
    :latest-date 220 .
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+:chaco-clay-figurines a :group-of-human-figures ;
+   rdfs:label "Chaco Clay Figurines" ;
+   :described-by <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600_full.html> ;
+   :earliest-date 1020 ;
+   :latest-date 1140 ;
+   :art-historical-culture-or-tradition :anasazi ;
+   :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
