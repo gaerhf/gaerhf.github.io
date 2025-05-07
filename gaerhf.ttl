@@ -185,6 +185,37 @@
    :approximate-date -5000 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestias2.JPG> .
 
+:hamangia-seated-figures a :group-of-human-figures ;
+   rdfs:label "Hamangia Seated Figures" ;
+   :described-by <https://en.wikipedia.org/wiki/Thinker_of_Hamangia> ;
+   :approximate-date -5000 ;
+   :art-historical-culture-or-tradition :hamangia-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
+
+
+:head-from-lake-varna a :human-figure ;
+   rdfs:label "Head from Varna" ;
+   :described-by <https://en.wikipedia.org/wiki/Varna_Necropolis> ;
+   :earliest-date -4500 ;
+   :latest-date -4000 ;
+   :art-historical-culture-or-tradition :varna-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human-sized_clay_head_found_at_Varna_necropolis.png> .
+
+:cucuteni-trypillia-figurine a :human-figure ;
+   rdfs:label "Cucuteni-Trypillia Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Cucuteni–Trypillia_culture#Early_period_(5800–5000_BC)> ;
+   :earliest-date -4050 ;
+   :latest-date -3900 ;
+   :art-historical-culture-or-tradition :chalcolithic-europe ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Goddess_figurine_with_Tattoos.jpg> .
+
+:neolithic-figurine-karditsa a :human-figure ;
+   rdfs:label "Neolithic Figurine from Karditsa" ;
+   :described-by <https://en.wikipedia.org/wiki/Karditsa_Thinker> ;
+   :approximate-date -3900 ;
+   :art-historical-culture-or-tradition :neolithic-europe ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karditsa_Thinker_-_NAMA_5894.jpg> .
+
 :egyptian-predynastic-female-figurine a :human-figure ;
    rdfs:label "Egyptian Predynastic Female Figurine" ;
    :described-by <https://www.brooklynmuseum.org/opencollection/objects/4223> ;
@@ -365,6 +396,13 @@
    :art-historical-culture-or-tradition :la-tene ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
 
+:euphronios-krater a :group-of-human-figures ;
+   rdfs:label "Euphronios Krater" ;
+   :described-by <https://en.wikipedia.org/wiki/Euphronios_Krater> ;
+   :approximate-date -520 ;
+   :art-historical-culture-or-tradition :archaic-greece ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Euphronios_krater_side_A_MET_L.2006.10.jpg> .
+
 :nok-head-and-torso-of-a-female-figure a :human-figure ;
    :described-by <https://emuseum.mfah.org/objects/31704/head-and-torso-of-a-female-figure> ;
    :period-note "Nok (Nigeria)" ;
@@ -429,6 +467,14 @@
    :earliest-date 1 ;
    :latest-date 500 ;
    :thumbnail-image <https://collections.historymuseum.ca/public/objects/common/webmedia.php?irn=45090> .
+
+:san-agustin-megaliths a :group-of-human-figures ;
+   rdfs:label "San Agustin Megaliths" ;
+   :described-by <https://en.wikipedia.org/wiki/San_Agustín_Archaeological_Park> ;
+   :earliest-date 1 ;
+   :latest-date 900 ;
+   :art-historical-culture-or-tradition :andean ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CO_San_Agustín_0802_002_(17248622975).jpg> .
 
 :prima-porta-augustus a :human-figure ;
    rdfs:label "Prima Porta Augustus" ;
