@@ -60,19 +60,49 @@
 # cultures
 
 :arctic-first-peoples a :culture ;
- rdfs:label "Arctic First Peoples" ;
+   rdfs:label "Arctic First Peoples" ;
    :region :arctic ;
    :described-by <https://en.wikipedia.org/wiki/Circumpolar_peoples> .
+
+:aurignacian a :culture ;
+   rdfs:label "Aurignacian" ;
+   :described-by <https://en.wikipedia.org/wiki/Aurignacian> .
 
 :australian-first-nations a :culture ;
    rdfs:label "Australian First Nations" ;
    :region :australia ;
    :described-by <https://en.wikipedia.org/wiki/Indigenous_Australians> .
 
+:cucuteni-trypillia-culture a :culture ;
+   rdfs:label "Cucuteni-Trypillia Culture" ;
+   :described-by <https://artsandculture.google.com/story/the-wonderland-of-the-cucuteni-trypillia-culture-national-museum-of-the-history-of-ukraine/MwWhDX1ENQSGog>,
+   <https://en.wikipedia.org/wiki/Cucuteni–Trypillia_culture> .
+
 :dorset-culture a :culture ;
    rdfs:label "Dorset Culture" ;
    rdfs:seeAlso <http://vocab.getty.edu/aat/300016734> ;
    :described-by <https://en.wikipedia.org/wiki/Dorset_culture> .
+
+:gravettian a :culture ;
+   rdfs:label "Gravettian" ;
+   :described-by <https://en.wikipedia.org/wiki/Gravettian> .
+
+:kingdom-of-nri a :culture ;
+   rdfs:label "Kingdom of Nri" ;
+   :described-by <https://en.m.wikipedia.org/wiki/Kingdom_of_Nri> .
+
+:mal-ta-buret-culture a :culture ;
+   rdfs:label "Mal'ta–Buret' Culture" ;
+   :described-by <https://en.wikipedia.org/wiki/Mal%27ta–Buret%27_culture> ,
+      <http://malta.artemiris.org> .
+
+:mississippian a :culture ;
+   rdfs:label "Mississippian" ;
+   :described-by <https://en.wikipedia.org/wiki/Mississippian_culture> .
+
+:nordic-bronze-age a :culture ;
+   rdfs:label "Nordic Bronze Age" ;
+   :described-by <https://en.wikipedia.org/wiki/Nordic_Bronze_Age> .
 
 :olmec a :culture ;
    rdfs:label "Olmec" ;
@@ -112,6 +142,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels> ;
    :earliest-date -40000 ;
    :latest-date -35000 ;
+   :art-historical-culture-or-tradition :aurignacian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:VenusHohlefels2.jpg> .
 
 :willendorf-figurine a :human-figure ;
@@ -119,7 +150,15 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Willendorf> ;
    :earliest-date -29000 ;
    :latest-date -27000 ;
+   :art-historical-culture-or-tradition :gravettian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_von_Willendorf_01.jpg> .
+
+:brassempouy-gravettian-head a :human-figure ;
+    rdfs:label "Brassempouy Gravettian Head" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_of_Brassempouy> ;
+   :approximate-date -25000 ;
+   :art-historical-culture-or-tradition :gravettian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_de_Brassempouy.jpg> .
 
 :mal-ta-female-figurine a :human-figure ;
    rdfs:label "Female Figurine from Mal'ta (Siberia)" ;
@@ -127,7 +166,14 @@
    :period-note "Mal'ta-Buret' Culture (Siberia)" ;
    :earliest-date -21000 ;
    :latest-date -20500 ;
+   :art-historical-culture-or-tradition :mal-ta-buret-culture ;
    :thumbnail-image <http://malta.artemiris.org/storage/find/73109e670eac203b8775a9aafe310dbc.jpg> .
+
+:qurta-rock-art-figures a :group-of-human-figures ;
+   rdfs:label "Qurta Rock Art Figures" ;
+   :described-by <https://doi.org/10.1017/S0003598X00061998> , <https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf> ;
+   :approximate-date -13000 ;
+   :art-historical-culture-or-tradition :saharan-pleistocene .
 
 :gwion-gwion-rock-paintigs a :group-of-human-figures ;
    rdfs:label "Gwion Gwion Rock Paintings" ;
@@ -143,12 +189,16 @@
    :described-by <https://www.livescience.com/oldest-narrative-scene-neolithic-turkey> ;
    :thumbnail-image <https://cdn.mos.cms.futurecdn.net/D4xTVuuwTUMF6NGQRNXuse-1200-80.jpg> .
 
+# https://en.wikipedia.org/wiki/Kel_Essuf_Period#Kel_Essuf_Rock_Art_and_Hunter-Gatherers
+
 :gobeklitepe-figure-A2 a :human-figure ;
    rdfs:label "Gobeklitepe Male Figure A2" ;
    :described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> , <https://arachne.dainst.org/entity/2003369?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=212> ;
    :period-note "Gobekli Tepe (Turkey)" ;
    :earliest-date -9500 ;
    :latest-date -8000 .
+
+# https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf
 
 :ppnb-stone-mask a :human-figure ;
    rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
@@ -161,6 +211,7 @@
    :described-by <https://en.wikipedia.org/wiki/Round_Head_Period> ;
    :earliest-date -7500 ;
    :latest-date -5500 ;
+   :art-historical-culture-or-tradition :epipaleolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fondazione_Passaré_V1_056.jpg> .
 
 :maliwawa-figures a :group-of-human-figures ;
@@ -205,7 +256,7 @@
    :described-by <https://en.wikipedia.org/wiki/Cucuteni–Trypillia_culture#Early_period_(5800–5000_BC)> ;
    :earliest-date -4050 ;
    :latest-date -3900 ;
-   :art-historical-culture-or-tradition :chalcolithic-europe ;
+   :art-historical-culture-or-tradition :cucuteni-trypillia-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Goddess_figurine_with_Tattoos.jpg> .
 
 :neolithic-figurine-karditsa a :human-figure ;
@@ -239,6 +290,13 @@
    :material-note "Ceramic" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/61085/95936/main-image> .
 
+:tel-asmar-temple-figures a :human-figure ;
+   rdfs:label "Tel Asmar Temple Figures" ;
+   :described-by <https://smarthistory.org/standing-male-worshipper-from-the-square-temple-at-eshnunna-tell-asmar/> ;
+   :earliest-date -2900 ;
+   :latest-date -2350 ;
+   :thumbnail-image <https://smarthistory.org/wp-content/uploads/2023/07/Votive-figs4-1.jpg> .
+
 :cycladic-figurine-spedos-type a :human-figure ;
    rdfs:label "Cycladic Figurine (Spedos Type)" ;
    :earliest-date -2800 ;
@@ -247,6 +305,13 @@
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Cycladic_art#/media/File:Cycladic_female_figurine_2.jpg> .
 
 # https://en.wikipedia.org/wiki/Thinker_from_Yehud
+
+:seated-statue-of-gudea a :human-figure ;
+   rdfs:label "Seated Statue of Gudea" ;
+   :described-by <https://en.wikipedia.org/wiki/Statues_of_Gudea> ;
+   :earliest-date -2144 ;
+   :latest-date -2124 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg> .
 
 :pashupati-seal a :human-figure ;
    rdfs:label "Pashupati Seal" ;
@@ -375,6 +440,15 @@
    :earliest-date -900 ;
    :latest-date -300 ;
    :art-historical-culture-or-tradition :olmec .
+
+:grevensvænge-figurines a :group-of-human-figures ;
+   rdfs:label "Grevensvænge figurines" ;
+   :described-by <https://en.wikipedia.org/wiki/Grevensvænge_figurines> ;
+   :earliest-date -800 ;
+   :lastest-date -500 ;
+   :art-historical-culture-or-tradition :nordic-bronze-age ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DO-10044-Figurer_Grevensvænge.jpg> .
+
 
 :adena-hopewell-pipe a :human-figure ;
    rdfs:label "Adena or Hopewell Pipe" ;
@@ -604,20 +678,6 @@
    :earliest-date -200 ;
    :latest-date 300 .
 
-:cahokia-resting-warrior-figurine a :human-figure ;
-   :described-by <https://archeology.uark.edu/restingwarrior3d/> ;
-   :period-note "Cahokia (Illinois)" ;
-   :earliest-date 1100 ;
-   :latest-date 1200 ;
-   :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
-
-:keller-figurine a :human-figure ;
-   :described-by <https://en.wikipedia.org/wiki/Mississippian_stone_statuary> ;
-   :period-note "Cahokia (Illinois)" ;
-   :earliest-date 1050 ;
-   :latest-date 1200 ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
-
 # https://en.wikipedia.org/wiki/Mississippian_copper_plates
 
 # https://en.wikipedia.org/wiki/Mississippian_stone_statuary
@@ -648,6 +708,14 @@
    :earliest-date 25 ;
    :latest-date 220 .
 
+:igbo-ukwu-face-pendant a :human-figure ;
+   rdfs:label "Igbo ukwu Face Pendant" ;
+   :described-by <https://en.wikipedia.org/wiki/Archaeology_of_Igbo-Ukwu> ;
+   :earliest-date 900 ;
+   :latest-date 1100;
+   :art-historical-culture-or-tradition :kingdom-of-nri ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Igbo_ukwu_face_pendant.png> .
+
 :chaco-clay-figurines a :group-of-human-figures ;
    rdfs:label "Chaco Clay Figurines" ;
    :described-by <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600_full.html> ;
@@ -655,3 +723,21 @@
    :latest-date 1140 ;
    :art-historical-culture-or-tradition :anasazi ;
    :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
+
+:cahokiam-resting-warrior-figurine a :human-figure ;
+   rdfs:label "Cahokian Resting Warrior Figurine" ;
+   :described-by <https://archeology.uark.edu/restingwarrior3d/> ;
+   :period-note "Cahokia (Illinois)" ;
+   :earliest-date 1100 ;
+   :latest-date 1200 ;
+   :art-historical-culture-or-tradition :mississippian ;
+   :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
+
+:keller-figurine a :human-figure ;
+   rdfs:label "Keller Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Mississippian_stone_statuary> ;
+   :period-note "Cahokia (Illinois)" ;
+   :earliest-date 1050 ;
+   :latest-date 1200 ;
+   :art-historical-culture-or-tradition :mississippian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .

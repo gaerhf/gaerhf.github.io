@@ -258,17 +258,31 @@ function showFigureDetails(figureId) {
             detailImageDiv.appendChild(thumbnail);
         }
 
-        // **The following code was missing - it's now restored**
-        if (figure.cultureLabel) {
-            detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.cultureLabel} (${figure.culture})</p>`;
+        if (figure.cultureLabel && figure.culture) {
+            const cultureLink = document.createElement('p');
+            const link = document.createElement('a');
+            link.href = figure.culture; // Use the culture URI as the link
+            link.textContent = figure.cultureLabel; // Display only the label
+            cultureLink.appendChild(document.createTextNode('Culture: '));
+            cultureLink.appendChild(link);
+            detailInfo.appendChild(cultureLink);
+        } else if (figure.cultureLabel) {
+            detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.cultureLabel}</p>`;
         } else if (figure.culture) {
-            detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.culture}</p>`;
+            const cultureLink = document.createElement('p');
+            const link = document.createElement('a');
+            link.href = figure.culture; // Use the culture URI as the link
+            link.textContent = 'View Culture Details'; // Generic text if no label
+            cultureLink.appendChild(document.createTextNode('Culture: '));
+            cultureLink.appendChild(link);
+            detailInfo.appendChild(cultureLink);
         }
+
         if (figure.earliestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Earliest Date:</strong> ${formatDateForDisplay(figure.earliestDate)}</p>`;
         }
         if (figure.approximateDate !== null && figure.earliestDate === null) {
-            detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
+            detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)} (used for sorting)</p>`;
         } else if (figure.approximateDate !== null && figure.earliestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
         }
@@ -281,8 +295,7 @@ function showFigureDetails(figureId) {
             const link = document.createElement('a');
             link.href = figure.describedBy;
             link.textContent = 'More information';
-            link.target = '_blank'; // Open in a new tab
-            // describedByLink.appendChild(document.createTextNode('Description: '));
+            link.target = '_blank';
             describedByLink.appendChild(link);
             detailInfo.appendChild(describedByLink);
         }
