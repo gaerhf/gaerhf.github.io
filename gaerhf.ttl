@@ -235,6 +235,7 @@
     <https://www.tandfonline.com/doi/figure/10.1080/03122417.2020.1818361?scroll=top&needAccess=true> ;
    :earliest-date -7400 ;
    :latest-date -4000 ;
+   :in-modern-country-note "Australia" ;
    :art-historical-culture-or-tradition :australian-first-nations ;
    :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/EdiLRvytYRYjtQGSL7yf9I68uWM=/fit-in/1072x0/filters:focal(931x560:932x561)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b8/65/b865d6a9-bbc1-44ec-9f4b-8b885aa6c83b/rock_art_3a.jpeg> .
 
@@ -250,12 +251,14 @@
    rdfs:label "Mestikawi Cave Group Scenes" ;
    :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
    :approximate-date -5000 ;
+   :in-modern-country-note "Egypt" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestias2.JPG> .
 
 :hamangia-seated-figures a :group-of-human-figures ;
    rdfs:label "Hamangia Seated Figures" ;
    :described-by <https://en.wikipedia.org/wiki/Thinker_of_Hamangia> ;
    :approximate-date -5000 ;
+   :in-modern-country-note "Romania" ;
    :art-historical-culture-or-tradition :hamangia-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
 
@@ -264,6 +267,7 @@
    :described-by <https://en.wikipedia.org/wiki/Varna_Necropolis> ;
    :earliest-date -4500 ;
    :latest-date -4000 ;
+   :in-modern-country-note "Bulgaria" ;
    :art-historical-culture-or-tradition :varna-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human-sized_clay_head_found_at_Varna_necropolis.png> .
 
@@ -272,6 +276,7 @@
    :described-by <https://en.wikipedia.org/wiki/Cucuteni–Trypillia_culture#Early_period_(5800–5000_BC)> ;
    :earliest-date -4050 ;
    :latest-date -3900 ;
+   :in-modern-country-note "Romania" ;
    :art-historical-culture-or-tradition :cucuteni-trypillia-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Goddess_figurine_with_Tattoos.jpg> .
 
@@ -279,6 +284,7 @@
    rdfs:label "Neolithic Figurine from Karditsa" ;
    :described-by <https://en.wikipedia.org/wiki/Karditsa_Thinker> ;
    :approximate-date -3900 ;
+   :in-modern-country-note "Greece" ;
    :art-historical-culture-or-tradition :neolithic-europe ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karditsa_Thinker_-_NAMA_5894.jpg> .
 
@@ -287,12 +293,14 @@
    :described-by <https://www.brooklynmuseum.org/opencollection/objects/4223> ;
    :earliest-date -3650 ;
    :latest-date -3300 ;
+   :in-modern-country-note "Egypt" ;
    :art-historical-culture-or-tradition :predynastic-egypt ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/07.447.502_SL1.jpg?width=256&quality=75> .
 
 :narmer-palette a :human-figure ;
    rdfs:label "Narmer Palette" ;
    :approximate-date -3000 ;
+   :in-modern-country-note "Egypt" ;
    :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
    :art-historical-culture-or-tradition :pharaonic-egypt .
@@ -303,6 +311,7 @@
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :earliest-date -3000 ;
    :latest-date -2500 ;
+   :in-modern-country-note "Pakistan" ;
    :material-note "Ceramic" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/61085/95936/main-image> .
 
@@ -311,12 +320,14 @@
    :described-by <https://smarthistory.org/standing-male-worshipper-from-the-square-temple-at-eshnunna-tell-asmar/> ;
    :earliest-date -2900 ;
    :latest-date -2350 ;
+   :in-modern-country-note "Iraq" ;
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2023/07/Votive-figs4-1.jpg> .
 
 :cycladic-figurine-spedos-type a :human-figure ;
    rdfs:label "Cycladic Figurine (Spedos Type)" ;
    :earliest-date -2800 ;
    :latest-date -2300 ;
+   :in-modern-country-note "Greece" ;
    :described-by <https://en.wikipedia.org/wiki/Cycladic_art> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Cycladic_art#/media/File:Cycladic_female_figurine_2.jpg> .
 

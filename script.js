@@ -191,15 +191,34 @@ function renderFiguresAsList(figuresArray) {
         }
 
         const textContainer = document.createElement('div');
+
+        // show date range if available, or approximate date
+        
+        if (figure.earliestDate !== null) {
+            const dateDiv = document.createElement('div');
+            dateDiv.classList.add('date-info');
+            dateDiv.style.fontSize = '0.8em';
+            dateDiv.style.marginBottom = '.4em';
+            dateDiv.textContent = `${formatDateForDisplay(figure.earliestDate)} - ${formatDateForDisplay(figure.latestDate)}`;
+            textContainer.appendChild(dateDiv);
+        } else if (figure.approximateDate !== null) {
+            const dateDiv = document.createElement('div');
+            dateDiv.classList.add('date-info');
+            dateDiv.style.fontSize = '0.8em';
+            dateDiv.style.marginBottom = '.4em';
+            dateDiv.textContent = `${formatDateForDisplay(figure.approximateDate)}`;
+            textContainer.appendChild(dateDiv);
+        }
+
         const labelSpan = document.createElement('span');
         labelSpan.textContent = figure.label || figure.id;
         textContainer.appendChild(labelSpan);
 
         if (figure.cultureLabel || figure.culture) {
             const cultureDiv = document.createElement('div');
-            cultureDiv.classList.add('culture-info');
+            cultureDiv.classList.add('country-info');
             cultureDiv.style.fontSize = '0.8em';
-            cultureDiv.textContent = `(${figure.cultureLabel || figure.culture})`;
+            cultureDiv.textContent = `${figure.cultureLabel || figure.culture}`;
             textContainer.appendChild(cultureDiv);
         }
 
@@ -207,7 +226,7 @@ function renderFiguresAsList(figuresArray) {
             const countryDiv = document.createElement('div');
             countryDiv.classList.add('country-info');
             countryDiv.style.fontSize = '0.8em';
-            countryDiv.textContent = `(${figure.inModernCountry})`;
+            countryDiv.textContent = `${figure.inModernCountry}`;
             textContainer.appendChild(countryDiv);
         }
 
@@ -243,7 +262,7 @@ function showFigureDetails(figureId) {
         if (figure.cultureLabel && figure.cultureDescribedBy) {
             const cultureLink = document.createElement('p');
             const strongElement = document.createElement('strong');
-            strongElement.textContent = 'Culture: ';
+            strongElement.textContent = 'Art Historical Tradition or Culture: ';
             const link = document.createElement('a');
             link.href = figure.cultureDescribedBy;
             link.textContent = figure.cultureLabel;
@@ -252,9 +271,9 @@ function showFigureDetails(figureId) {
             cultureLink.appendChild(link);
             detailInfo.appendChild(cultureLink);
         } else if (figure.cultureLabel) {
-            detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.cultureLabel}</p>`;
+            detailInfo.innerHTML += `<p><strong>Art Historical Tradition or Culture:</strong> ${figure.cultureLabel}</p>`;
         } else if (figure.culture) {
-            detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.culture}</p>`
+            detailInfo.innerHTML += `<p><strong>Art Historical Tradition or Culture:</strong> ${figure.culture}</p>`
         }
 
         if (figure.inModernCountry) {
