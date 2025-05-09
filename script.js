@@ -62,7 +62,7 @@ async function getWikimediaImageUrl(pageUrl, width = 200) {
     }
 }
 
-async function buildFiguresDict($rdf) {
+async function buildFiguresInfoDict($rdf) {
     const figureType = $rdf.sym('urn:gaerhf:id:human-figure');
     const groupType = $rdf.sym('urn:gaerhf:id:group-of-human-figures');
     const rdfType = $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type');
@@ -97,11 +97,12 @@ async function buildFiguresDict($rdf) {
                 let cultureLabel = null;
                 const wikipediaImagePage = kb.anyValue(subject, wikipediaImagePageProp);
                 const describedBy = kb.anyValue(subject, describedByProp);
-                const explicitThumbnailURL = kb.anyValue(subject, thumbnailImageProp); // Get explicit thumbnail
+                const thumbnailURL = kb.anyValue(subject, thumbnailImageProp); // Get explicit thumbnail
 
                 if (culture) {
                     cultureShortId = culture.uri.replace('urn:gaerhf:id:', '');
                     cultureLabel = kb.anyValue(culture, rdfsLabelProp);
+                    cultureDescribedBy = kb.anyValue(culture, describedByProp);
                 }
 
                 processedDict[shortId] = {
@@ -112,13 +113,13 @@ async function buildFiguresDict($rdf) {
                     approximateDate: approximateDate,
                     culture: cultureShortId,
                     cultureLabel: cultureLabel,
+                    cultureDescribedBy: cultureDescribedBy,
                     wikipediaImagePage: wikipediaImagePage,
                     describedBy: describedBy,
-                    explicitThumbnailURL: explicitThumbnailURL // Store explicit thumbnail URL
+                    thumbnailURL: thumbnailURL 
                 };
             }));
         });
-        console.log("Final processedDict:", processedDict);
         return processedDict;
     } catch (error) {
         console.error("Error processing store:", error);
@@ -126,8 +127,8 @@ async function buildFiguresDict($rdf) {
     }
 }
 
-function sortFigures(figures_local) {
-    const figuresArray = Object.values(figures_local);
+function sortFiguresByDate(figures) {
+    const figuresArray = Object.values(figures);
 
     figuresArray.sort((a, b) => {
         let dateA = a.earliestDate;
@@ -156,14 +157,15 @@ function sortFigures(figures_local) {
     return figuresArray;
 }
 
-function renderFigures(figuresArray) {
+function renderFiguresAsList(figuresArray) {
     figureListDiv.innerHTML = '';
     if (!figuresArray || figuresArray.length === 0) {
         figureListDiv.textContent = 'No human figures or groups found.';
         return;
     }
 
-    figuresArray.forEach(figure => {
+    figuresArray.forEach(figureId => {
+        const figure = figuresDict[figureId];
         const figureItem = document.createElement('div');
         figureItem.classList.add('figure-item');
         figureItem.style.display = 'flex';
@@ -206,37 +208,6 @@ function renderFigures(figuresArray) {
     });
 }
 
-function getWikimediaImageUrlSync(pageUrl, width = 200) {
-    try {
-        const parts = pageUrl.split('/');
-        const filename = parts[parts.length - 1];
-        const apiUrlBase = 'https://commons.wikimedia.org/w/api.php';
-        const apiUrl = `${apiUrlBase}?action=query&prop=imageinfo&iiprop=url|thumburl&titles=${filename}&iiurlwidth=${width}&format=json&origin=*`;
-
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', apiUrl, false); // Synchronous request
-        xhr.send();
-
-        if (xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText);
-            const pages = data.query.pages;
-            const pageId = Object.keys(pages)[0];
-            if (pageId !== "-1" && pages[pageId].imageinfo && pages[pageId].imageinfo[0].thumburl) {
-                return pages[pageId].imageinfo[0].thumburl;
-            } else {
-                console.error("Could not retrieve thumbnail URL from the API response for:", pageUrl);
-                return null;
-            }
-        } else {
-            console.error(`Error fetching image info (sync): ${xhr.status} - ${xhr.statusText}`);
-            return null;
-        }
-    } catch (error) {
-        console.error("An error occurred while fetching Wikimedia image info (sync):", error);
-        return null;
-    }
-}
-
 function showFigureDetails(figureId) {
     const figure = figuresDict[figureId];
     if (figure && headerContainer) {
@@ -258,31 +229,25 @@ function showFigureDetails(figureId) {
             detailImageDiv.appendChild(thumbnail);
         }
 
-        if (figure.cultureLabel && figure.culture) {
+        if (figure.cultureLabel && figure.cultureDescribedBy) {
             const cultureLink = document.createElement('p');
             const link = document.createElement('a');
-            link.href = figure.culture; // Use the culture URI as the link
-            link.textContent = figure.cultureLabel; // Display only the label
+            link.href = figure.cultureDescribedBy;
+            link.textContent = figure.cultureLabel;
             cultureLink.appendChild(document.createTextNode('Culture: '));
             cultureLink.appendChild(link);
             detailInfo.appendChild(cultureLink);
         } else if (figure.cultureLabel) {
             detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.cultureLabel}</p>`;
         } else if (figure.culture) {
-            const cultureLink = document.createElement('p');
-            const link = document.createElement('a');
-            link.href = figure.culture; // Use the culture URI as the link
-            link.textContent = 'View Culture Details'; // Generic text if no label
-            cultureLink.appendChild(document.createTextNode('Culture: '));
-            cultureLink.appendChild(link);
-            detailInfo.appendChild(cultureLink);
+            detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.culture}</p>`
         }
 
         if (figure.earliestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Earliest Date:</strong> ${formatDateForDisplay(figure.earliestDate)}</p>`;
         }
         if (figure.approximateDate !== null && figure.earliestDate === null) {
-            detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)} (used for sorting)</p>`;
+            detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
         } else if (figure.approximateDate !== null && figure.earliestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
         }
@@ -303,6 +268,36 @@ function showFigureDetails(figureId) {
     } else {
         console.error("Figure details not found for ID:", figureId);
     }
+}
+
+function sortFiguresByDate(figures) {
+    const figuresArray = Object.values(figures);
+
+    figuresArray.sort((a, b) => {
+        let dateA = a.earliestDate;
+        let dateB = b.earliestDate;
+
+        if (dateA === null && a.approximateDate !== null) {
+            dateA = a.approximateDate;
+        }
+        if (dateB === null && b.approximateDate !== null) {
+            dateB = b.approximateDate;
+        }
+
+        if (dateA !== null && dateB !== null) {
+            return dateA - dateB;
+        } else if (dateA !== null) {
+            return -1;
+        } else if (dateB !== null) {
+            return 1;
+        } else {
+            const labelA = a.label || a.id;
+            const labelB = b.label || b.id;
+            return labelA.localeCompare(labelB);
+        }
+    });
+
+    return figuresArray.map(figure => figure.id); // Return only an array of IDs
 }
 
 function getWikimediaImageUrlSync(pageUrl, width = 200) {
@@ -338,19 +333,14 @@ function getWikimediaImageUrlSync(pageUrl, width = 200) {
 
 async function loadAndDisplayFigures($rdf) {
     if (await initializeStore($rdf)) {
-        figuresDict = await buildFiguresDict($rdf);
-        console.log("figuresDict item after build (in loadAndDisplay):", figuresDict['olmec-standing-figure']);
-        console.log("figuresDict BEFORE sort:", figuresDict); // ADD THIS LOG
+        figuresDict = await buildFiguresInfoDict($rdf);
 
-        const figuresDictStringified = JSON.stringify(figuresDict);
-        const figuresDictParsed = JSON.parse(figuresDictStringified);
 
-        const sortedFiguresForDisplay = sortFigures(figuresDictParsed); // Use the parsed object
-        console.log("Contents of figuresDict (after sort call): ", figuresDictParsed);
-        console.log("Contents of sortedFigures: ", sortedFiguresForDisplay)
-        renderFigures(sortedFiguresForDisplay);
-        if (sortedFiguresForDisplay.length > 0) {
-            showFigureDetails(sortedFiguresForDisplay[0].id);
+        const figuresDisplayIndex = sortFiguresByDate(figuresDict);
+
+        renderFiguresAsList(figuresDisplayIndex);
+        if (figuresDisplayIndex.length > 0) {
+            showFigureDetails(figuresDisplayIndex[0].id);
         }
     }
 }
