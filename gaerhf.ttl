@@ -104,6 +104,10 @@
    rdfs:label "Nordic Bronze Age" ;
    :described-by <https://en.wikipedia.org/wiki/Nordic_Bronze_Age> .
 
+:nuragic-culture a :culture ;
+   rdfs:label "Nuragic Culture" ;
+   :described-by <https://en.wikipedia.org/wiki/Nuragic_civilization> .
+
 :olmec a :culture ;
    rdfs:label "Olmec" ;
    :region :central-america ;
@@ -131,6 +135,16 @@
    rdfs:label "Saharan Rock Art" ;
    :region :sahara-desert ;
    :described-by <https://en.wikipedia.org/wiki/Saharan_rock_art> .
+
+:tlatico-culture a :culture ;
+   rdfs:label "Tlatilco" ;
+   :region :central-america ;
+   :described-by <https://en.wikipedia.org/wiki/Tlatilco_culture> .
+
+:valdiva-culture a :culture ;
+   rdfs:label "Valdivia Culture" ;
+   :region :south-america ;
+   :described-by <https://en.wikipedia.org/wiki/Valdivia_culture> .
 
 # human figures
 
@@ -331,6 +345,15 @@
    :described-by <https://en.wikipedia.org/wiki/Cycladic_art> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Cycladic_art#/media/File:Cycladic_female_figurine_2.jpg> .
 
+:valdiva-culture-female-figurine a :human-figure ;
+   rdfs:label "Valdivia Culture Female Figurine" ;
+   :described-by <https://www.brooklynmuseum.org/en-GB/objects/102869> ;
+   :earliest-date -2600 ;
+   :latest-date -1500 ;
+   :in-modern-country-note "Ecuador" ;
+   :art-historical-culture-or-tradition :valdiva-culture ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Valdivia_culture#/media/File:Valdivia_Female_Figurine_2600-1500_BCE_Brooklyn_Museum.jpg> .
+
 # https://en.wikipedia.org/wiki/Thinker_from_Yehud
 
 :seated-statue-of-gudea a :human-figure ;
@@ -338,6 +361,7 @@
    :described-by <https://en.wikipedia.org/wiki/Statues_of_Gudea> ;
    :earliest-date -2144 ;
    :latest-date -2124 ;
+   :in-modern-country-note "Iraq" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg> .
 
 :pashupati-seal a :human-figure ;
@@ -345,6 +369,7 @@
    :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :approximate-date -2200 ;
+   :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
 
 :wandjina-rock-art-mount-elizabeth-station a :group-of-human-figures ;
@@ -352,6 +377,7 @@
    :described-by <https://en.wikipedia.org/wiki/Wandjina> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aboriginal_rock_art_on_the_Barnett_River,_Mount_Elizabeth_Station.jpg> ;
    :art-historical-culture-or-tradition :australian-first-nations ;
+   :in-modern-country-note "Australia" ;
    :earliest-date -2000 ;
    :latest-date -1800 .
 
@@ -360,12 +386,14 @@
    :described-by <https://www.historymuseum.ca/collections/artifact/1295533/?q=QkHn-13%3A489%20&page_num=1&item_num=0&media_irn=5394933> ;
    :earliest-date -1900 ;
    :latest-date -1600 ;
+   :in-modern-country-note "Canada" ;
    :thumbnail-image <https://www.historymuseum.ca/ke/_resources/120798/5050-1613-0243-094-base-cmhsize-small.jpg> .
 
 :mycenaean-funerary-mask-grave-circle-b a :human-figure ;
    rdfs:label "Mycenaean Gold Mask from Grave Circle B" ;
    :earliest-date -1700 ;
    :latest-date -1600 ;
+   :in-modern-country-note "Greece" ;
    :described-by <https://en.wikipedia.org/wiki/Grave_Circle_B,_Mycenae> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funeral_mask_from_Mycenae_NAMA_080841.jpg> .
 
@@ -374,32 +402,46 @@
    :described-by <https://en.wikipedia.org/wiki/Mask_of_Agamemnon> ;
    :earliest-date -1550 ;
    :latest-date -1500 ;
+   :in-modern-country-note "Greece" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:594px-MaskeAgamemnon-MOD.jpg> .
 
 :pylos-combat-agate a :group-of-human-figures ;
    rdfs:label "Pylos Combat Agate" ;
    :approximate-date -1450 ;
+   :in-modern-country-note "Greece" ;
    :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
 
-:olmec-stone-yuguito a :human-figure ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
-   :earliest-date -1200 ;
-   :latest-date -900 ;
-   :art-historical-culture-or-tradition :olmec ;
-   :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
+:tlatico-so-called-acrobat a :human-figure ;
+   rdfs:label "Tlatilco Acrobat" ;
+   :described-by <https://en.wikipedia.org/wiki/Tlatilco_acrobat> ;
+   :earliest-date -1300 ;
+   :latest-date -800 ;
+   :in-modern-country-note "Mexico" ;
+   :art-historical-culture-or-tradition :tlatico-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Acróbata_de_Tlatilco.JPG> .
 
 :bust-of-nefertiti a :human-figure ;
    rdfs:label "Bust of Nefertiti" ;
    :art-historical-culture-or-tradition :pharaonic-egypt ;
    :approximate-date -1345 ;
+   :in-modern-country-note "Egypt" ;
    :described-by <https://en.wikipedia.org/wiki/Nefertiti_Bust> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Nofretete_Neues_Museum.jpg> .
+
+:olmec-stone-yuguito a :human-figure ;
+   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
+   :earliest-date -1200 ;
+   :latest-date -900 ;
+   :in-modern-country-note "Mexico" ;
+   :art-historical-culture-or-tradition :olmec ;
+   :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
 
 :jomon-doju-statuette a :human-figure ;
    rdfs:label "Jōmon dogū statuette" ;
    :earliest-date -1000 ;
    :latest-date -400 ;
+   :in-modern-country-note "Japan" ;
    :art-historical-culture-or-tradition :jomon ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_statue,_late_Jomon_period.JPG> .
 
@@ -409,6 +451,7 @@
    :art-historical-culture-or-tradition :chorrera ;
    :earliest-date -1000 ;
    :latest-date -100 ;
+   :in-modern-country-note "Ecuador" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/316443/655595/main-image> .
 
 :chorrera-ceramic-figure-pendant a :human-figure ;
@@ -416,6 +459,15 @@
    :art-historical-culture-or-tradition :chorrera ;
    :earliest-date -1000 ;
    :latest-date -200 .
+
+:giants-of-mont-e-prama a :group-of-human-figures ;
+   rdfs:label "Giants of Mont'e Prama, Sardinia" ;
+   :described-by <https://en.wikipedia.org/wiki/Giants_of_Mont%27e_Prama> ;
+   :earliest-date -900 ;
+   :latest-date -700 ;
+   :in-modern-country-note "Italy" ;
+   :art-historical-culture-or-tradition :nuragic-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Età_nuragica,_giganti_di_monte_prama,_xiii-ix_secolo_ac_ca.,_da_cabras,_guerriero_05,_01.jpg> .
 
 :olmec-standing-figure a :human-figure ;
    rdfs:label "Jadeite Standing Figure" ;
@@ -733,7 +785,8 @@
    :described-by <https://en.chnmuseum.cn/collections_577/collection_highlights_608/archaeological_discoveries_609/202008/t20200831_247541.html> ;
    :period-note "Eastern Han Dynasty (China)" ;
    :earliest-date 25 ;
-   :latest-date 220 .
+   :latest-date 220 ;
+   :in-modern-country-note "China" .
 
 :igbo-ukwu-face-pendant a :human-figure ;
    rdfs:label "Igbo ukwu Face Pendant" ;
@@ -741,6 +794,7 @@
    :earliest-date 900 ;
    :latest-date 1100;
    :art-historical-culture-or-tradition :kingdom-of-nri ;
+   :in-modern-country-note "Nigeria" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Igbo_ukwu_face_pendant.png> .
 
 :chaco-clay-figurines a :group-of-human-figures ;
@@ -748,6 +802,7 @@
    :described-by <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600_full.html> ;
    :earliest-date 1020 ;
    :latest-date 1140 ;
+   :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :anasazi ;
    :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
 
@@ -757,6 +812,7 @@
    :period-note "Cahokia (Illinois)" ;
    :earliest-date 1100 ;
    :latest-date 1200 ;
+   :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :mississippian ;
    :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
 
@@ -766,5 +822,6 @@
    :period-note "Cahokia (Illinois)" ;
    :earliest-date 1050 ;
    :latest-date 1200 ;
+   :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :mississippian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
