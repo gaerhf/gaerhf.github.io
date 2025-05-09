@@ -110,23 +110,27 @@
    :described-by <https://en.wikipedia.org/wiki/Olmecs> .
 
 :predynastic-egypt a :culture ;
- rdfs:label "Predynastic Egypt" ;
+   rdfs:label "Predynastic Egypt" ;
    :region :egypt ;
    :described-by <https://en.wikipedia.org/wiki/Prehistoric_Egypt> .
 
 :pharaonic-egypt a :culture ;
- rdfs:label "Pharaonic Egypt" .
+   rdfs:label "Pharaonic Egypt" .
 
 :chorrera a :culture ;
- rdfs:label "Chorrera" ;
+   rdfs:label "Chorrera" ;
    :region :south-america ;
    :described-by <https://en.wikipedia.org/wiki/Chorrera_culture> .
 
 :indus-valley-civilization a :culture ;
- rdfs:label "Indus Valley Civilization" ;
+   rdfs:label "Indus Valley Civilization" ;
    :region :indian-subcontinent ;
    :described-by <https://en.wikipedia.org/wiki/Indus_Valley_Civilisation> .
 
+:saharan-rock-art a :culture ;
+   rdfs:label "Saharan Rock Art" ;
+   :region :sahara-desert ;
+   :described-by <https://en.wikipedia.org/wiki/Saharan_rock_art> .
 
 # human figures
 
@@ -135,6 +139,7 @@
    :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ;
    :earliest-date -45000 ;
    :latest-date -35000 ;
+   :in-modern-country-note "Indonesia" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Maros_hunting_scene.png> .
 
 :hohle-fels-figurine a :human-figure ;
@@ -142,6 +147,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels> ;
    :earliest-date -40000 ;
    :latest-date -35000 ;
+   :in-modern-country-note "Germany" ;
    :art-historical-culture-or-tradition :aurignacian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:VenusHohlefels2.jpg> .
 
@@ -150,6 +156,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Willendorf> ;
    :earliest-date -29000 ;
    :latest-date -27000 ;
+   :in-modern-country-note "Austria" ;
    :art-historical-culture-or-tradition :gravettian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_von_Willendorf_01.jpg> .
 
@@ -157,6 +164,7 @@
     rdfs:label "Brassempouy Gravettian Head" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Brassempouy> ;
    :approximate-date -25000 ;
+   :in-modern-country-note "France" ;
    :art-historical-culture-or-tradition :gravettian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_de_Brassempouy.jpg> .
 
@@ -166,6 +174,7 @@
    :period-note "Mal'ta-Buret' Culture (Siberia)" ;
    :earliest-date -21000 ;
    :latest-date -20500 ;
+   :in-modern-country-note "Russia" ;
    :art-historical-culture-or-tradition :mal-ta-buret-culture ;
    :thumbnail-image <http://malta.artemiris.org/storage/find/73109e670eac203b8775a9aafe310dbc.jpg> .
 
@@ -173,7 +182,8 @@
    rdfs:label "Qurta Rock Art Figures" ;
    :described-by <https://doi.org/10.1017/S0003598X00061998> , <https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf> ;
    :approximate-date -13000 ;
-   :art-historical-culture-or-tradition :saharan-pleistocene .
+   :in-modern-country-note "Egypt" ;
+   :art-historical-culture-or-tradition :saharan-rock-art .
 
 :gwion-gwion-rock-paintigs a :group-of-human-figures ;
    rdfs:label "Gwion Gwion Rock Paintings" ;
@@ -181,11 +191,13 @@
    :art-historical-culture-or-tradition :australian-first-nations ;
    :earliest-date -15000 ;
    :latest-date -3000 ;
+   :in-modern-country-note "Australia" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
 
 :male-figure-on-bench-sayburc a :human-figure ;
    rdfs:label "Neolithic Male Figure carved in Bench" ;
    :approximate-date -11000 ;
+   :in-modern-country-note "Turkey" ;
    :described-by <https://www.livescience.com/oldest-narrative-scene-neolithic-turkey> ;
    :thumbnail-image <https://cdn.mos.cms.futurecdn.net/D4xTVuuwTUMF6NGQRNXuse-1200-80.jpg> .
 
@@ -195,6 +207,7 @@
    rdfs:label "Gobeklitepe Male Figure A2" ;
    :described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> , <https://arachne.dainst.org/entity/2003369?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=212> ;
    :period-note "Gobekli Tepe (Turkey)" ;
+   :in-modern-country-note "Turkey" ;
    :earliest-date -9500 ;
    :latest-date -8000 .
 
@@ -203,6 +216,7 @@
 :ppnb-stone-mask a :human-figure ;
    rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> ;
+   :in-modern-country-note "West Bank, Palestinian Territories" ;
    :earliest-date -7500 ;
    :latest-date -6500 .
 
@@ -211,7 +225,8 @@
    :described-by <https://en.wikipedia.org/wiki/Round_Head_Period> ;
    :earliest-date -7500 ;
    :latest-date -5500 ;
-   :art-historical-culture-or-tradition :epipaleolithic ;
+   :in-modern-country-note "Algeria" ;
+   :art-historical-culture-or-tradition :saharan-rock-art ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fondazione_Passaré_V1_056.jpg> .
 
 :maliwawa-figures a :group-of-human-figures ;
@@ -228,7 +243,8 @@
    :described-by <https://www.imj.org.il/en/collections/197936-0> ;
    :earliest-date -7000 ;
    :latest-date -6000 ;
-   :thumbnail-image <https://www.imj.org.il/sites/default/files/collections/IAA~Mask_%20Nahal%20Hemar%20Neolithic_%207th%20century%20BCE2.jpg> .
+   :in-modern-country-note "Israel" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
 
 :mestikawi-cave-group-scenes a :group-of-human-figures ;
    rdfs:label "Mestikawi Cave Group Scenes" ;

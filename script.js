@@ -71,6 +71,7 @@ async function buildFiguresInfoDict($rdf) {
     const approximateDateProp = $rdf.sym('urn:gaerhf:id:approximate-date');
     const rdfsLabelProp = $rdf.sym('http://www.w3.org/2000/01/rdf-schema#label');
     const cultureProp = $rdf.sym('urn:gaerhf:id:art-historical-culture-or-tradition');
+    const inModernCountryProp = $rdf.sym('urn:gaerhf:id:in-modern-country-note');
     const wikipediaImagePageProp = $rdf.sym('urn:gaerhf:id:wikimedia-commons-image-page');
     const describedByProp = $rdf.sym('urn:gaerhf:id:described-by');
     const thumbnailImageProp = $rdf.sym('urn:gaerhf:id:thumbnail-image'); // New property
@@ -95,6 +96,7 @@ async function buildFiguresInfoDict($rdf) {
                 const culture = kb.any(subject, cultureProp);
                 let cultureShortId = null;
                 let cultureLabel = null;
+                const inModernCountry = kb.any(subject, inModernCountryProp);
                 const wikipediaImagePage = kb.anyValue(subject, wikipediaImagePageProp);
                 const describedBy = kb.anyValue(subject, describedByProp);
                 const thumbnailURL = kb.anyValue(subject, thumbnailImageProp); // Get explicit thumbnail
@@ -113,6 +115,7 @@ async function buildFiguresInfoDict($rdf) {
                     approximateDate: approximateDate,
                     culture: cultureShortId,
                     cultureLabel: cultureLabel,
+                    inModernCountry: inModernCountry,
                     cultureDescribedBy: cultureDescribedBy,
                     wikipediaImagePage: wikipediaImagePage,
                     describedBy: describedBy,
@@ -200,6 +203,14 @@ function renderFiguresAsList(figuresArray) {
             textContainer.appendChild(cultureDiv);
         }
 
+        if(figure.inModernCountry) {
+            const countryDiv = document.createElement('div');
+            countryDiv.classList.add('country-info');
+            countryDiv.style.fontSize = '0.8em';
+            countryDiv.textContent = `(${figure.inModernCountry})`;
+            textContainer.appendChild(countryDiv);
+        }
+
         figureItem.appendChild(textContainer);
         figureItem.addEventListener('click', () => {
             showFigureDetails(figure.id);
@@ -231,16 +242,23 @@ function showFigureDetails(figureId) {
 
         if (figure.cultureLabel && figure.cultureDescribedBy) {
             const cultureLink = document.createElement('p');
+            const strongElement = document.createElement('strong');
+            strongElement.textContent = 'Culture: ';
             const link = document.createElement('a');
             link.href = figure.cultureDescribedBy;
             link.textContent = figure.cultureLabel;
-            cultureLink.appendChild(document.createTextNode('Culture: '));
+        
+            cultureLink.appendChild(strongElement);
             cultureLink.appendChild(link);
             detailInfo.appendChild(cultureLink);
         } else if (figure.cultureLabel) {
             detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.cultureLabel}</p>`;
         } else if (figure.culture) {
             detailInfo.innerHTML += `<p><strong>Culture:</strong> ${figure.culture}</p>`
+        }
+
+        if (figure.inModernCountry) {
+            detailInfo.innerHTML += `<p><strong>Modern Country:</strong> ${figure.inModernCountry}</p>`;
         }
 
         if (figure.earliestDate !== null) {
