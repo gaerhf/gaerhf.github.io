@@ -172,8 +172,8 @@ function renderFiguresAsList(figuresArray) {
         figureItem.style.alignItems = 'center';
 
         let thumbnailUrl = null;
-        if (figure.explicitThumbnailURL) {
-            thumbnailUrl = figure.explicitThumbnailURL;
+        if (figure.thumbnailURL) {
+            thumbnailUrl = figure.thumbnailURL;
         } else if (figure.wikipediaImagePage) {
             thumbnailUrl = getWikimediaImageUrlSync(figure.wikipediaImagePage, 50);
         }
@@ -216,8 +216,8 @@ function showFigureDetails(figureId) {
         detailImageDiv.innerHTML = '';
 
         let detailImageUrl = null;
-        if (figure.explicitThumbnailURL) {
-            detailImageUrl = figure.explicitThumbnailURL;
+        if (figure.thumbnailURL) {
+            detailImageUrl = figure.thumbnailURL;
         } else if (figure.wikipediaImagePage) {
             detailImageUrl = getWikimediaImageUrlSync(figure.wikipediaImagePage, 200);
         }
@@ -340,7 +340,7 @@ async function loadAndDisplayFigures($rdf) {
 
         renderFiguresAsList(figuresDisplayIndex);
         if (figuresDisplayIndex.length > 0) {
-            showFigureDetails(figuresDisplayIndex[0].id);
+            showFigureDetails(figuresDisplayIndex[0]);
         }
     }
 }
