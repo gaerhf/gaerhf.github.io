@@ -83,6 +83,12 @@
    rdfs:seeAlso <http://vocab.getty.edu/aat/300016734> ;
    :described-by <https://en.wikipedia.org/wiki/Dorset_culture> .
 
+:gandhara a :culture ;
+   rdfs:label "Gandhara" ;
+   :region :south-asia ;
+   :described-by <https://smarthistory.org/gandharan-sculpture/>,
+   <https://www.metmuseum.org/essays/gandhara> .
+
 :gravettian a :culture ;
    rdfs:label "Gravettian" ;
    :described-by <https://en.wikipedia.org/wiki/Gravettian> .
@@ -91,6 +97,11 @@
    rdfs:label "Jōmon" ;
    :region :japan ;
    :described-by <https://en.wikipedia.org/wiki/Jōmon_period> .
+
+:khmer-empire a :culture ;
+   rdfs:label "Khmer Empire" ;
+   :region :southeast-asia ;
+   :described-by <https://en.wikipedia.org/wiki/Khmer_Empire> .
 
 :kingdom-of-nri a :culture ;
    rdfs:label "Kingdom of Nri" ;
@@ -144,6 +155,11 @@
    rdfs:label "Saharan Rock Art" ;
    :region :sahara-desert ;
    :described-by <https://en.wikipedia.org/wiki/Saharan_rock_art> .
+
+:tang-dynasty a :culture ;
+   rdfs:label "Tang Dynasty" ;
+   :region :china ;
+   :described-by <https://en.wikipedia.org/wiki/Tang_dynasty> .
 
 :tlatico-culture a :culture ;
    rdfs:label "Tlatilco" ;
@@ -333,6 +349,14 @@
    :in-modern-country-note "Israel" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
 
+:catalhoyuk-seated-female-figurine a :human-figure ;
+   rdfs:label "Catalhoyuk Seated Female Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Catalhoyuk> ;
+   :approximate-date -6000 ;
+   :in-modern-country-note "Turkey" ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Woman_of_Çatalhöyük_on_black_background.jpg> .
+
 :mestikawi-cave-group-scenes a :group-of-human-figures ;
    rdfs:label "Mestikawi Cave Group Scenes" ;
    :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
@@ -347,6 +371,8 @@
    :in-modern-country-note "Romania" ;
    :art-historical-culture-or-tradition :hamangia-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
+
+# -5000 - -4200 https://en.wikipedia.org/wiki/Jiroft_culture
 
 :head-from-lake-varna a :human-figure ;
    rdfs:label "Head from Varna" ;
@@ -382,6 +408,24 @@
    :in-modern-country-note "Egypt" ;
    :art-historical-culture-or-tradition :predynastic-egypt ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/07.447.502_SL1.jpg?width=256&quality=75> .
+
+:warka-vase a :group-of-human-figures ;
+   rdfs:label "Warka Vase" ;
+   :described-by <https://smarthistory.org/warka-vase/>,<https://en.wikipedia.org/wiki/Warka_Vase> ;
+   :earliest-date -3500 ;
+   :latest-date -3000 ;
+   :in-modern-country-note "Iraq" ;
+   :art-historical-culture-or-tradition :sumerian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_vase_(background_retouched).jpg> .
+
+:mask-of-warka a :human-figure ;
+   rdfs:label "Mask of Warka" ;
+   :described-by <https://en.wikipedia.org/wiki/Warka_mask> ;
+   :earliest-date -3200 ;
+   :latest-date -3000 ;
+   :in-modern-country-note "Iraq" ;
+   :art-historical-culture-or-tradition :sumerian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_mask_(cropped).jpg> .
 
 :narmer-palette a :human-figure ;
    rdfs:label "Narmer Palette" ;
@@ -446,6 +490,8 @@
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_girl_of_Mohenjo-daro.jpg> .
 
+# -2200 https://commons.wikimedia.org/wiki/File:Abakan_-_Khakassia_-_Russia_Okunev_stela.jpg
+
 :seated-statue-of-gudea-of-lagash a :human-figure ;
    rdfs:label "Seated Statue of Gudea of Lagash" ;
    :described-by <https://en.wikipedia.org/wiki/Statues_of_Gudea> ;
@@ -461,6 +507,15 @@
    :approximate-date -2200 ;
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
+
+:mohenjo-daro-priest-king a :human-figure ;
+   rdfs:label "Mohenjo daro Priest King" ;
+   :described-by <https://en.wikipedia.org/wiki/Priest-King_(Mohenjo-daro)> ;
+   :earliest-date -2000 ;
+   :latest-date -1900 ;
+   :in-modern-country-note "Pakistan" ;
+   :art-historical-culture-or-tradition :indus-valley-civilization ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Mohenjo-daro_Priesterkönig.jpeg> .
 
 :wandjina-rock-art-mount-elizabeth-station a :group-of-human-figures ;
    rdfs:label "Wandjina Rock Art" ;
@@ -519,6 +574,22 @@
    :described-by <https://en.wikipedia.org/wiki/Nefertiti_Bust> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Nofretete_Neues_Museum.jpg> .
 
+:sanxingdui-bronze-head-protuding-eyes a :human-figure ;
+   rdfs:label "Sanxingdui Bronze Head with Protuding Eyes" ;
+   :described-by <https://en.wikipedia.org/wiki/Sanxingdui> ;
+   :earliest-date -1200 ;
+   :latest-date -1000 ;
+   :in-modern-country-note "China" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:青铜纵目面具B.jpg> .
+
+:sanxingdui-gilded-bronze-head a :human-figure ;
+   rdfs:label "Sanxingdui Gilded Bronze Head" ;
+   :described-by <https://en.wikipedia.org/wiki/Sanxingdui> ;
+   :earliest-date -1200 ;
+   :latest-date -1000 ;
+   :in-modern-country-note "China" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gold_Mask_(黄金面罩).jpg> .
+
 :olmec-stone-yuguito a :human-figure ;
    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
    :earliest-date -1200 ;
@@ -526,6 +597,33 @@
    :in-modern-country-note "Mexico" ;
    :art-historical-culture-or-tradition :olmec ;
    :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
+
+:tlatico-figurines a :group-of-human-figures ;
+   rdfs:label "Tlatilco Figurines" ;
+   :described-by <https://en.wikipedia.org/wiki/Tlatilco_culture> ;
+   :earliest-date -1000 ;
+   :latest-date -800 ;
+   :in-modern-country-note "Mexico" ;
+   :art-historical-culture-or-tradition :tlatico-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tlatilco_culture_figurines.jpg> .
+
+:jinsha-figurine a :human-figure ;
+   rdfs:label "Jinsha Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Jinsha_site> ;
+   :earliest-date -1000 ;
+   :latest-date -500 ;
+   :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :jinsha-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum.jpg> .
+
+:jinsha-kneeling-stone-figures a :group-of-human-figures ;
+   rdfs:label "Jinsha Kneeling Stone Figures" ;
+   :described-by <https://en.wikipedia.org/wiki/Jinsha_site#Kneeling_stone_human_figures> ;
+   :earliest-date -1000 ;
+   :latest-date -500 ;
+   :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :jinsha-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum_-_51131523226.jpg> .
 
 :jomon-doju-statuette a :human-figure ;
    rdfs:label "Jōmon dogū statuette" ;
@@ -742,6 +840,7 @@
    :described-by <https://en.wikipedia.org/wiki/San_Agustín_Archaeological_Park> ;
    :earliest-date 1 ;
    :latest-date 900 ;
+   :in-modern-country-note "Colombia" ;
    :art-historical-culture-or-tradition :andean ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CO_San_Agustín_0802_002_(17248622975).jpg> .
 
@@ -751,6 +850,24 @@
    :art-historical-culture-or-tradition :roman-empire ;
    :approximate-date 20;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg> .
+
+:gift-of-anathapindada-relief a :human-figure ;
+   rdfs:label "Gift of Anathapindada Relief" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/38207> ;
+   :earliest-date 100 ;
+   :latest-date 300 ;
+   :in-modern-country-note "Pakistan" ;
+   :art-historical-culture-or-tradition :gandhara ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/as/original/DT8660.jpg> .
+
+:statue-of-absadmiya-hatra a :human-figure ;
+   rdfs:label "Statue of Absadmiya, Hatra" ;
+   :described-by <https://www.worldhistory.org/image/10852/statue-of-prince-absadmiya-from-hatra/> ;
+   :earliest-date 140 ;
+   :latest-date 180 ;
+   :in-modern-country-note "Iraq" ;
+   :art-historical-culture-or-tradition :hatra ;
+   :thumbnail-image <https://www.worldhistory.org/uploads/images/10852.jpg> .
 
 :tombstone-of-ertola a :human-figure ;
    rdfs:label "Tombstone of Ertola" ;
@@ -858,6 +975,15 @@
    :earliest-date -200 ;
    :latest-date 300 .
 
+:leshan-giant-buddha a :human-figure ;
+   rdfs:label "Leshan Giant Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
+   :earliest-date 713 ;
+   :latest-date 803 ;
+   :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :tang-dynasty ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_View_from_below.jpg> .
+
 # https://en.wikipedia.org/wiki/Mississippian_copper_plates
 
 # https://en.wikipedia.org/wiki/Mississippian_stone_statuary
@@ -898,6 +1024,23 @@
    :latest-date 220 ;
    :in-modern-country-note "China" .
 
+:gandharan-standing-buddha a :human-figure ;
+   rdfs:label "Gandharan Standing Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Standing_Buddha_from_Gandhara_(Tokyo)> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :art-historical-culture-or-tradition :gandhara ;
+   :in-modern-country-note "Pakistan" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
+
+:fondukistan-monastery-divintity a :human-figure ;
+   rdfs:label "Fondukistan Monastery Divinity" ;
+   :described-by <https://www.guimet.fr/en/our-collections/afghanistan-pakistan/divinity-seating-royal-ease-position> ;
+   :earliest-date 600 ;
+   :latest-date 700 ;
+   :in-modern-country-note "Afghanistan" ;
+   :thumbnail-image <https://www.guimet.fr/sites/default/files/styles/width_1220px/public/2023-07/divinite-assise-en-delassement.jpg?itok=rlsorMb_> .
+
 :igbo-ukwu-face-pendant a :human-figure ;
    rdfs:label "Igbo ukwu Face Pendant" ;
    :described-by <https://en.wikipedia.org/wiki/Archaeology_of_Igbo-Ukwu> ;
@@ -906,6 +1049,16 @@
    :art-historical-culture-or-tradition :kingdom-of-nri ;
    :in-modern-country-note "Nigeria" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Igbo_ukwu_face_pendant.png> .
+
+:banteay-srei-fight-between-sunda-upasunda a :group-of-human-figures ;
+   rdfs:label "Banteay Srei - Fight between Sunda and Upasunda" ;
+   :described-by <https://en.wikipedia.org/wiki/Banteay_Srei#The_third_(outer)_enclosure>,
+   <https://www.guimet.fr/fr/nos-collections/asie-du-sud-est/le-combat-entre-les-demons-sunda-et-upasunda> ;
+   :earliest-date 967 ;
+   :latest-date 1000 ;
+   :in-modern-country-note "Cambodia" ;
+   :art-historical-culture-or-tradition :khmer-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fronton_Cambodge_Musée_Guimet_9972.jpg> .
 
 :chaco-clay-figurines a :group-of-human-figures ;
    rdfs:label "Chaco Clay Figurines" ;
