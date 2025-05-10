@@ -87,6 +87,11 @@
    rdfs:label "Gravettian" ;
    :described-by <https://en.wikipedia.org/wiki/Gravettian> .
 
+:jomon a :culture ;
+   rdfs:label "Jōmon" ;
+   :region :japan ;
+   :described-by <https://en.wikipedia.org/wiki/Jōmon_period> .
+
 :kingdom-of-nri a :culture ;
    rdfs:label "Kingdom of Nri" ;
    :described-by <https://en.m.wikipedia.org/wiki/Kingdom_of_Nri> .
@@ -117,6 +122,10 @@
    rdfs:label "Predynastic Egypt" ;
    :region :egypt ;
    :described-by <https://en.wikipedia.org/wiki/Prehistoric_Egypt> .
+
+:pre-pottery-neolithic a :culture ;
+   rdfs:label "Pre-pottery Neolithic" ;
+   :described-by <https://en.wikipedia.org/wiki/Pre-Pottery_Neolithic> .
 
 :pharaonic-egypt a :culture ;
    rdfs:label "Pharaonic Egypt" .
@@ -165,6 +174,23 @@
    :art-historical-culture-or-tradition :aurignacian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:VenusHohlefels2.jpg> .
 
+:galgenberg-figurine a :human-figure ;
+   rdfs:label "Galgenberg Female Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_of_Galgenberg> ;
+   :approximate-date -36000 ;
+   :in-modern-country-note "Austria" ;
+   :art-historical-culture-or-tradition :aurignacian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_vom_Galgenberg.JPG> .
+
+:dolni-vestonice-figurine a :human-figure ;
+   rdfs:label "Dolní Věstonice Female Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_of_Doln%C3%AD_V%C4%9Bstonice> ;
+   :earliest-date -31000 ;
+   :latest-date -27000 ;
+   :in-modern-country-note "Czech Republic" ;
+   :art-historical-culture-or-tradition :gravettian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vestonicka_venuse_edit.jpg> .
+
 :willendorf-figurine a :human-figure ;
    rdfs:label "Female Figurine from Willendorf" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Willendorf> ;
@@ -192,6 +218,15 @@
    :art-historical-culture-or-tradition :mal-ta-buret-culture ;
    :thumbnail-image <http://malta.artemiris.org/storage/find/73109e670eac203b8775a9aafe310dbc.jpg> .
 
+:lubang-jeriji-saleh-cave-hunting-group a :group-of-human-figures ;
+   rdfs:label "Lubang Jeriji Saleh Cave Hunting Group" ;
+   :described-by <https://www.smithsonianmag.com/science-nature/worlds-oldest-known-figurative-paintings-discovered-borneo-cave-180970747/>,
+               <https://en.wikipedia.org/wiki/Lubang_Jeriji_Saléh> ;
+   :earliest-date -20000 ;
+   :latest-date -13000 ;
+   :in-modern-country-note "Indonesia" ;
+   :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/z-zenrrnbTxRMap28ZLM2TeAF60=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d3/70/d370e4f4-292a-4ca6-8010-f1f27a15b433/humans-3.jpg> .
+
 :qurta-rock-art-figures a :group-of-human-figures ;
    rdfs:label "Qurta Rock Art Figures" ;
    :described-by <https://doi.org/10.1017/S0003598X00061998> , <https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf> ;
@@ -208,6 +243,14 @@
    :in-modern-country-note "Australia" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
 
+:shigir-anthropomorphic-figure a :human-figure ;
+   rdfs:label "Shigir Anthropomorphic Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Shigir_Idol> ;
+   :earliest-date -11000 ;
+   :latest-date -9000 ;
+   :in-modern-country-note "Russia" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Большой_шигирский_идол.jpg> .
+
 :male-figure-on-bench-sayburc a :human-figure ;
    rdfs:label "Neolithic Male Figure carved in Bench" ;
    :approximate-date -11000 ;
@@ -217,22 +260,51 @@
 
 # https://en.wikipedia.org/wiki/Kel_Essuf_Period#Kel_Essuf_Rock_Art_and_Hunter-Gatherers
 
+# -10000 https://en.wikipedia.org/wiki/Magura_Cave
+
+:magura-cave-paintings a :group-of-human-figures ;
+   rdfs:label "Magura Cave Paintings" ;
+   :described-by <https://en.wikipedia.org/wiki/Magura_Cave> ;
+   :earliest-date -10000 ;
+   :latest-date -3000 ;
+   :in-modern-country-note "Bulgaria" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Magura_-_drawings.jpg> .
+
+:balikligol-life-size-figure a :human-figure ;
+   rdfs:label "Balıklıgöl Life-Size Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Urfa_Man> ;
+   :approximate-date -9000 ;
+   :in-modern-country-note "Turkey" ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> . 
+
 :gobeklitepe-figure-A2 a :human-figure ;
    rdfs:label "Gobeklitepe Male Figure A2" ;
    :described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> , <https://arachne.dainst.org/entity/2003369?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=212> ;
    :period-note "Gobekli Tepe (Turkey)" ;
    :in-modern-country-note "Turkey" ;
    :earliest-date -9500 ;
-   :latest-date -8000 .
+   :latest-date -8000 ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic .
 
 # https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf
 
+:ain-ghazal-statues a :group-of-human-figures ;
+   rdfs:label "Ain Ghazal Statues" ;
+   :described-by <https://en.wikipedia.org/wiki/Ayn_Ghazal_statues> ;
+   :earliest-date -7200 ;
+   :latest-date -6250 ;
+   :in-modern-country-note "Jordan" ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ain_Ghazal_Statue_Jordan_Archaeological_Museum_Amman_Jordan0821.jpg> .
+
 :ppnb-stone-mask a :human-figure ;
    rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> ;
    :in-modern-country-note "West Bank, Palestinian Territories" ;
    :earliest-date -7500 ;
-   :latest-date -6500 .
+   :latest-date -6500 ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> .
 
 :round-head-figures-of-tassili-n-ajjer a :group-of-human-figures ;
    rdfs:label "Round Head Figures of Tassili n'Ajjer" ;
@@ -346,7 +418,7 @@
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Cycladic_art#/media/File:Cycladic_female_figurine_2.jpg> .
 
 :valdiva-culture-female-figurine a :human-figure ;
-   rdfs:label "Valdivia Culture Female Figurine" ;
+   rdfs:label "Valdiva Culture Female Figurine" ;
    :described-by <https://www.brooklynmuseum.org/en-GB/objects/102869> ;
    :earliest-date -2600 ;
    :latest-date -1500 ;
@@ -356,8 +428,26 @@
 
 # https://en.wikipedia.org/wiki/Thinker_from_Yehud
 
-:seated-statue-of-gudea a :human-figure ;
-   rdfs:label "Seated Statue of Gudea" ;
+:joman-female-figurine a :human-figure ;
+   rdfs:label "Jōmon Female Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Jōmon_Venus> ;
+   :approximate-date -2500 ;
+   :in-modern-country-note "Japan" ;
+   :art-historical-culture-or-tradition :jomon ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tanabatake_Venus._Middle_Jōmon.JPG> .
+
+
+:mohenjo-daro-female-figurine a :human-figure ;
+   rdfs:label "Mohenjo daro Female Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)> ;
+   :earliest-date -2300 ;
+   :latest-date -1750 ;
+   :in-modern-country-note "Pakistan" ;
+   :art-historical-culture-or-tradition :indus-valley-civilization ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_girl_of_Mohenjo-daro.jpg> .
+
+:seated-statue-of-gudea-of-lagash a :human-figure ;
+   rdfs:label "Seated Statue of Gudea of Lagash" ;
    :described-by <https://en.wikipedia.org/wiki/Statues_of_Gudea> ;
    :earliest-date -2144 ;
    :latest-date -2124 ;
@@ -534,6 +624,7 @@
    :described-by <https://www.clevelandart.org/articles/centennial-loan-adena-pipe#> ;
    :earliest-date -800 ;
    :latest-date -1 ;
+   :in-modern-country-note "United States" ;
    :thumbnail-image <https://www.clevelandart.org/_next/image?url=https%3A%2F%2Fweb-drupal-cms-prod.clevelandart.org%2F%2Fsites%2Fdefault%2Ffiles%2FJuly-August2016_AdenaPipe_A.jpg&w=1920&q=75> .
 
 :orim-dong-megalith-petroglyph a :human-figure ;
@@ -583,6 +674,15 @@
    :earliest-date -400 ;
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
+
+:laocoon-and-sons a :human-figure ;
+   rdfs:label "Laocoön and His Sons" ;
+   :described-by <https://en.wikipedia.org/wiki/Laocoön_and_His_Sons> ;
+   :earliest-date -100 ;
+   :latest-date 75 ;
+   :in-modern-country-note "Italy" ;
+   :art-historical-culture-or-tradition :late-hellenistic ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Laocoön_and_his_sons_group.jpg> .
 
 :hopewell-head-in-profile a :human-figure ;
    rdfs:label "Hopewell Head in Profile" ;
@@ -634,6 +734,7 @@
    :art-historical-culture-or-tradition :dorset-culture ;
    :earliest-date 1 ;
    :latest-date 500 ;
+   :in-modern-country-note "Canada" ;
    :thumbnail-image <https://collections.historymuseum.ca/public/objects/common/webmedia.php?irn=45090> .
 
 :san-agustin-megaliths a :group-of-human-figures ;
@@ -762,6 +863,15 @@
 # https://en.wikipedia.org/wiki/Mississippian_stone_statuary
 
 # https://en.wikipedia.org/wiki/Jayavarman_VII
+
+:bust-of-jayavarman-vii a :human-figure ;
+   rdfs:label "Bust of Jayavarman VII" ;
+   :described-by <https://en.wikipedia.org/wiki/Jayavarman_VII> ;
+   :earliest-date 1181 ;
+   :latest-date 1218 ;
+   :in-modern-country-note "Cambodia" ;
+   :art-historical-culture-or-tradition :khmer-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
 
 :chorrera-figure-vessel a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/315062> ;
