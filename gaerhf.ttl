@@ -73,6 +73,16 @@
    :region :australia ;
    :described-by <https://en.wikipedia.org/wiki/Indigenous_Australians> .
 
+:bactria-margiana-archaeological-complex a :culture ;
+   rdfs:label "Bactria–Margiana Archaeological Complex" ;
+   :region :central-asia ;
+   :described-by <https://en.wikipedia.org/wiki/Bactria–Margiana_Archaeological_Complex> .
+
+:chemurchek-culture a :culture ;
+   rdfs:label "Chemurchek Culture" ;
+   :region :central-asia ;
+   :described-by <https://en.wikipedia.org/wiki/Chemurchek_culture> .
+
 :cucuteni-trypillia-culture a :culture ;
    rdfs:label "Cucuteni-Trypillia Culture" ;
    :described-by <https://artsandculture.google.com/story/the-wonderland-of-the-cucuteni-trypillia-culture-national-museum-of-the-history-of-ukraine/MwWhDX1ENQSGog>,
@@ -461,6 +471,15 @@
    :described-by <https://en.wikipedia.org/wiki/Cycladic_art> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Cycladic_art#/media/File:Cycladic_female_figurine_2.jpg> .
 
+:chemurchek-funerary-marker a :human-figure ;
+   rdfs:label "Chemurchek Funerary Marker" ;
+   :described-by <https://en.wikipedia.org/wiki/Chemurchek_culture#Gallery> ;
+   :earliest-date -2750 ;
+   :latest-date -1900 ;
+   :in-modern-country-note "Mongolia" ;
+   :art-historical-culture-or-tradition :chemurchek-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Statue_0.jpg> .
+
 :valdiva-culture-female-figurine a :human-figure ;
    rdfs:label "Valdiva Culture Female Figurine" ;
    :described-by <https://www.brooklynmuseum.org/en-GB/objects/102869> ;
@@ -491,6 +510,25 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_girl_of_Mohenjo-daro.jpg> .
 
 # -2200 https://commons.wikimedia.org/wiki/File:Abakan_-_Khakassia_-_Russia_Okunev_stela.jpg
+
+
+:bmac-seated-female a :human-figure ;
+   rdfs:label "BMAC Seated Female" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/329073> ;
+   :earliest-date -2200 ;
+   :latest-date -1700 ;
+   :in-modern-country-note "Turkmenistan or Neighboring" ;
+   :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_female_MET_DT867.jpg> . 
+
+:bamc-standing-male a :human-figure ;
+   rdfs:label "BMAC Stanging Male" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/328593> ;
+   :earliest-date -2200 ;
+   :latest-date -1700 ;
+   :in-modern-country-note "Turkmenistan or Neighboring" ;
+   :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monstrous_male_figure_MET_dp22227.jpg> .
 
 :seated-statue-of-gudea-of-lagash a :human-figure ;
    rdfs:label "Seated Statue of Gudea of Lagash" ;
