@@ -630,6 +630,13 @@
 
 # -2200 https://commons.wikimedia.org/wiki/File:Abakan_-_Khakassia_-_Russia_Okunev_stela.jpg
 
+:dagenham-idol a :human-figure ;
+   rdfs:label "Dagenham Idol" ;
+   :described-by <https://en.wikipedia.org/wiki/Dagenham_idol> ;
+   :approximate-date -2250 ;
+   :in-modern-country-note "United Kingdom" ;
+   :art-historical-culture-or-tradition :neolithic-britain ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Dagenham_Idol.jpg> .
 
 :bmac-seated-female a :human-figure ;
    rdfs:label "BMAC Seated Female" ;
@@ -763,6 +770,14 @@
    :in-modern-country-note "Mexico" ;
    :art-historical-culture-or-tradition :olmec ;
    :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
+
+:ralaghan-idol a :human-figure ;
+   rdfs:label "Ralaghan Idol" ;
+   :described-by <https://en.wikipedia.org/wiki/Ralaghan_Idol> ;
+   :earliest-date -1100 ;
+   :latest-date -900 ;
+   :in-modern-country-note "Ireland" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_antropomorfa_probabilmente_segnacolo_di_confine,_da_una_torbiera_presso_ralaghan,_co._di_cavan,_1100-1000_ac_ca.jpg> .
 
 :tlatico-figurines a :group-of-human-figures ;
    rdfs:label "Tlatilco Figurines" ;
@@ -938,6 +953,25 @@
    :earliest-date -400 ;
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
+
+# -375 - -100 https://en.wikipedia.org/wiki/Braak_Bog_Figures
+
+:braak-bog-figures a :group-of-human-figures ;
+   rdfs:label "Braak Bog Figures" ;
+   :described-by <https://en.wikipedia.org/wiki/Braak_Bog_figures> ;
+   :earliest-date -375 ;
+   :latest-date -100 ;
+   :in-modern-country-note "Germany" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Braak_Bog_Figures.JPG> .
+
+:lohanipur-torso a :human-figure ;
+   rdfs:label "Lohanipur Torso" ;
+   :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
+   :earliest-date -300 ;
+   :latest-date -100 ;
+   :in-modern-country-note "India" ;
+   :art-historical-culture-or-tradition :maurya-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Patna_Museum_Lohanipur_torso.jpg> .
 
 :laocoon-and-sons a :human-figure ;
    rdfs:label "Laocoön and His Sons" ;
