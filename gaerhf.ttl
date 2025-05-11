@@ -117,6 +117,10 @@
    rdfs:label "Kingdom of Nri" ;
    :described-by <https://en.m.wikipedia.org/wiki/Kingdom_of_Nri> .
 
+:magdalenian a :culture ;
+   rdfs:label "Magdalenian" ;
+   :described-by <https://en.wikipedia.org/wiki/Magdalenian> .
+
 :mal-ta-buret-culture a :culture ;
    rdfs:label "Mal'ta–Buret' Culture" ;
    :described-by <https://en.wikipedia.org/wiki/Mal%27ta–Buret%27_culture> ,
@@ -125,6 +129,12 @@
 :mississippian a :culture ;
    rdfs:label "Mississippian" ;
    :described-by <https://en.wikipedia.org/wiki/Mississippian_culture> .
+
+:nok-culture a :culture ;
+   rdfs:label "Nok Culture" ;
+   :region :west-africa ;
+   :described-by <https://en.wikipedia.org/wiki/Nok_culture>,
+   <https://traffickingculture.org/encyclopedia/case-studies/nok-terracottas/> .
 
 :nordic-bronze-age a :culture ;
    rdfs:label "Nordic Bronze Age" ;
@@ -243,6 +253,15 @@
    :in-modern-country-note "Russia" ;
    :art-historical-culture-or-tradition :mal-ta-buret-culture ;
    :thumbnail-image <http://malta.artemiris.org/storage/find/73109e670eac203b8775a9aafe310dbc.jpg> .
+
+:lascaux-ithyphallic-figure a :human-figure ;
+   rdfs:label "Lascaux Ithyphallic Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Lascaux> ;
+   :earliest-date -20000 ;
+   :latest-date -17000 ;
+   :in-modern-country-note "France" ;
+   :art-historical-culture-or-tradition :magdalenian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lascaux_01.jpg> .
 
 :lubang-jeriji-saleh-cave-hunting-group a :group-of-human-figures ;
    rdfs:label "Lubang Jeriji Saleh Cave Hunting Group" ;
@@ -367,6 +386,24 @@
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Woman_of_Çatalhöyük_on_black_background.jpg> .
 
+:sesklo-female-figurine-torso a :human-figure ;
+   rdfs:label "Torso of Female Figurine from Sesklo" ;
+   :described-by <https://en.wikipedia.org/wiki/Neolithic_Greece#Middle_Neolithic_(MN)_5800–5300_BC> ;
+   :earliest-date -5800 ;
+   :latest-date -5300 ;
+   :in-modern-country-note "Greece" ;
+   :art-historical-culture-or-tradition :neolithic-greece ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pottery_woman_torso_neolothic,_NAMA_Nama830.jpg> .
+
+:thessalian-neolithic-figurine a :human-figure ;
+   rdfs:label "Neolithic Figurine from Thessaly" ;
+   :described-by <https://en.wikipedia.org/wiki/Neolithic_Greece#Middle_Neolithic_(MN)_5800–5300_BC> ;
+   :earliest-date -5300 ;
+   :latest-date -3300 ;
+   :in-modern-country-note "Greece" ;
+   :art-historical-culture-or-tradition :neolithic-greece ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_marble_Thessaly_5300-3300_BC,_NAMA_8772_080802x.jpg> .  
+
 :mestikawi-cave-group-scenes a :group-of-human-figures ;
    rdfs:label "Mestikawi Cave Group Scenes" ;
    :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
@@ -383,6 +420,15 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
 
 # -5000 - -4200 https://en.wikipedia.org/wiki/Jiroft_culture
+
+:sesklo-figurine-with-child a :human-figure ;
+   rdfs:label "Sesklo Figurine with Child" ;
+   :described-by <https://www.namuseum.gr/en/monthly_artefact/beautiful-young-lady-of-the-neolithic-age/C> ;
+   :earliest-date -4800 ;
+   :latest-date -4500 ;
+   :in-modern-country-note "Greece" ;
+   :art-historical-culture-or-tradition :neolithic-greece ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_with_child_small_painted_terracott_neolithic,_NAMA_5937_080804.jpg> .
 
 :head-from-lake-varna a :human-figure ;
    rdfs:label "Head from Varna" ;
@@ -409,6 +455,8 @@
    :in-modern-country-note "Greece" ;
    :art-historical-culture-or-tradition :neolithic-europe ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karditsa_Thinker_-_NAMA_5894.jpg> .
+
+# https://www.metmuseum.org/art/collection/search/547202
 
 :egyptian-predynastic-female-figurine a :human-figure ;
    rdfs:label "Egyptian Predynastic Female Figurine" ;
@@ -444,6 +492,19 @@
    :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
    :art-historical-culture-or-tradition :pharaonic-egypt .
+
+# -3000 - -2500 https://en.wikipedia.org/wiki/Astuvansalmi_rock_paintings
+
+# uncertain date range https://commons.wikimedia.org/wiki/File:Kiuruveden_reikäkirves_-_Stone_axe_of_Kiuruvesi.jpg
+
+:merhgarh-female-figurine a :human-figure ;
+   rdfs:label "Mehrgarh Female Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Mehrgarh#Human_figurines> ;
+   :earliest-date -3000 ;
+   :latest-date -2500 ;
+   :in-modern-country-note "Pakistan" ;
+   :art-historical-culture-or-tradition :indus-valley-civilization ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Mother_Goddess_,3000–2500_B.C._Pakistan_(Baluchistan)_Mehrgarh_style.jpg> .
 
 :mehrgarh-seated-female-figure a :human-figure ;
    rdfs:label "Mehrgarh-style Seated Female Figure" ;
