@@ -160,14 +160,14 @@ function sortFiguresByDate(figures) {
     return figuresArray;
 }
 
-function renderFiguresAsList(figuresArray) {
+async function renderFiguresAsList(figuresArray) {
     figureListDiv.innerHTML = '';
     if (!figuresArray || figuresArray.length === 0) {
         figureListDiv.textContent = 'No human figures or groups found.';
         return;
     }
 
-    figuresArray.forEach(figureId => {
+    for (const figureId of figuresArray) {
         const figure = figuresDict[figureId];
         const figureItem = document.createElement('div');
         figureItem.classList.add('figure-item');
@@ -178,7 +178,7 @@ function renderFiguresAsList(figuresArray) {
         if (figure.thumbnailURL) {
             thumbnailUrl = figure.thumbnailURL;
         } else if (figure.wikipediaImagePage) {
-            thumbnailUrl = getWikimediaImageUrlSync(figure.wikipediaImagePage, 50);
+            thumbnailUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 50); // Await the async call
         }
 
         if (thumbnailUrl) {
@@ -192,8 +192,7 @@ function renderFiguresAsList(figuresArray) {
 
         const textContainer = document.createElement('div');
 
-        // show date range if available, or approximate date
-        
+        // Show date range if available, or approximate date
         if (figure.earliestDate !== null) {
             const dateDiv = document.createElement('div');
             dateDiv.classList.add('date-info');
@@ -222,7 +221,7 @@ function renderFiguresAsList(figuresArray) {
             textContainer.appendChild(cultureDiv);
         }
 
-        if(figure.inModernCountry) {
+        if (figure.inModernCountry) {
             const countryDiv = document.createElement('div');
             countryDiv.classList.add('country-info');
             countryDiv.style.fontSize = '0.8em';
@@ -235,10 +234,10 @@ function renderFiguresAsList(figuresArray) {
             showFigureDetails(figure.id);
         });
         figureListDiv.appendChild(figureItem);
-    });
+    }
 }
 
-function showFigureDetails(figureId) {
+async function showFigureDetails(figureId) {
     const figure = figuresDict[figureId];
     if (figure && headerContainer) {
         detailLabel.textContent = figure.label || figure.id;
@@ -249,7 +248,7 @@ function showFigureDetails(figureId) {
         if (figure.thumbnailURL) {
             detailImageUrl = figure.thumbnailURL;
         } else if (figure.wikipediaImagePage) {
-            detailImageUrl = getWikimediaImageUrlSync(figure.wikipediaImagePage, 200);
+            detailImageUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 200); // Await the async call
         }
 
         if (detailImageUrl) {
@@ -266,14 +265,14 @@ function showFigureDetails(figureId) {
             const link = document.createElement('a');
             link.href = figure.cultureDescribedBy;
             link.textContent = figure.cultureLabel;
-        
+
             cultureLink.appendChild(strongElement);
             cultureLink.appendChild(link);
             detailInfo.appendChild(cultureLink);
         } else if (figure.cultureLabel) {
             detailInfo.innerHTML += `<p><strong>Art Historical Tradition or Culture:</strong> ${figure.cultureLabel}</p>`;
         } else if (figure.culture) {
-            detailInfo.innerHTML += `<p><strong>Art Historical Tradition or Culture:</strong> ${figure.culture}</p>`
+            detailInfo.innerHTML += `<p><strong>Art Historical Tradition or Culture:</strong> ${figure.culture}</p>`;
         }
 
         if (figure.inModernCountry) {
@@ -301,7 +300,6 @@ function showFigureDetails(figureId) {
             describedByLink.appendChild(link);
             detailInfo.appendChild(describedByLink);
         }
-
     } else {
         console.error("Figure details not found for ID:", figureId);
     }
@@ -337,33 +335,30 @@ function sortFiguresByDate(figures) {
     return figuresArray.map(figure => figure.id); // Return only an array of IDs
 }
 
-function getWikimediaImageUrlSync(pageUrl, width = 200) {
+async function getWikimediaImageUrl(pageUrl, width = 200) {
     try {
         const parts = pageUrl.split('/');
         const filename = parts[parts.length - 1];
         const apiUrlBase = 'https://commons.wikimedia.org/w/api.php';
         const apiUrl = `${apiUrlBase}?action=query&prop=imageinfo&iiprop=url|thumburl&titles=${filename}&iiurlwidth=${width}&format=json&origin=*`;
+        const response = await fetch(apiUrl);
 
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', apiUrl, false); // Synchronous request
-        xhr.send();
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
-        if (xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText);
-            const pages = data.query.pages;
-            const pageId = Object.keys(pages)[0];
-            if (pageId !== "-1" && pages[pageId].imageinfo && pages[pageId].imageinfo[0].thumburl) {
-                return pages[pageId].imageinfo[0].thumburl;
-            } else {
-                console.error("Could not retrieve thumbnail URL from the API response for:", pageUrl);
-                return null;
-            }
+        const data = await response.json();
+        const pages = data.query.pages;
+        const pageId = Object.keys(pages)[0];
+
+        if (pageId !== "-1" && pages[pageId].imageinfo && pages[pageId].imageinfo[0].thumburl) {
+            return pages[pageId].imageinfo[0].thumburl;
         } else {
-            console.error(`Error fetching image info (sync): ${xhr.status} - ${xhr.statusText}`);
+            console.error("Could not retrieve thumbnail URL from the API response for:", pageUrl);
             return null;
         }
     } catch (error) {
-        console.error("An error occurred while fetching Wikimedia image info (sync):", error);
+        console.error("An error occurred while fetching Wikimedia image info:", error);
         return null;
     }
 }

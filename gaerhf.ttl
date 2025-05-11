@@ -103,6 +103,11 @@
    rdfs:label "Gravettian" ;
    :described-by <https://en.wikipedia.org/wiki/Gravettian> .
 
+:hamangia-culture a :culture ;
+   rdfs:label "Hamangia Culture" ;
+   :region :southeast-europe ;
+   :described-by <https://en.wikipedia.org/wiki/Hamangia_culture> .
+
 :jomon a :culture ;
    rdfs:label "Jōmon" ;
    :region :japan ;
@@ -307,6 +312,14 @@
 
 # -10000 https://en.wikipedia.org/wiki/Magura_Cave
 
+:pedra-furada-rock-art a :group-of-human-figures ;
+   rdfs:label "Pedra Furada Rock Art" ;
+   :described-by <https://www.bradshawfoundation.com/south_america/serra_da_capivara/pedra_furada/index.php> ;
+   :earliest-date -10000 ;
+   :latest-date -4000 ;
+   :in-modern-country-note "Brazil" ;
+   :thumbnail-image <https://www.bradshawfoundation.com/south_america/serra_da_capivara/pedra_furada/photographs/5a.jpg> .
+
 :magura-cave-paintings a :group-of-human-figures ;
    rdfs:label "Magura Cave Paintings" ;
    :described-by <https://en.wikipedia.org/wiki/Magura_Cave> ;
@@ -333,6 +346,16 @@
    :art-historical-culture-or-tradition :pre-pottery-neolithic .
 
 # https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf
+
+# -8000 https://virtual-museum-syria.org/aleppo/female-figurine-2/
+
+:tell-mureybet-female-figurine a :human-figure ;
+   rdfs:label "Tell Mureybit Female Figurine" ;
+   :described-by <https://virtual-museum-syria.org/aleppo/female-figurine-2/> ;
+   :approximate-date -8000 ;
+   :in-modern-country-note "Syria" ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :thumbnail-image <https://virtual-museum-syria.org/aleppo/wp-content/uploads/sites/2/2021/06/fINbasiC-2-800x1574.jpg> .
 
 :ain-ghazal-statues a :group-of-human-figures ;
    rdfs:label "Ain Ghazal Statues" ;
@@ -386,6 +409,15 @@
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Woman_of_Çatalhöyük_on_black_background.jpg> .
 
+:bangudae-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Bangudae Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Bangudae_Petroglyphs#Human_figures> ;
+   :earliest-date -6000 ;
+   :latest-date -1000 ;
+   :in-modern-country-note "South Korea" ;
+   :art-historical-culture-or-tradition :neolithic-korea ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bangudae3.jpg> .
+
 :sesklo-female-figurine-torso a :human-figure ;
    rdfs:label "Torso of Female Figurine from Sesklo" ;
    :described-by <https://en.wikipedia.org/wiki/Neolithic_Greece#Middle_Neolithic_(MN)_5800–5300_BC> ;
@@ -394,6 +426,32 @@
    :in-modern-country-note "Greece" ;
    :art-historical-culture-or-tradition :neolithic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pottery_woman_torso_neolothic,_NAMA_Nama830.jpg> .
+
+:halaf-culture-seated-female-figurine a :human-figure ;
+   rdfs:label "Halaf Culture Seated Female Figurine" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/327066> ;
+   :earliest-date -5600 ;
+   :latest-date -5000 ;
+   :in-modern-country-note "Syria and Neighboring" ;
+   :art-historical-culture-or-tradition :halaf-culture ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327066/711765/main-image> .
+
+:halag-culture-painted-female-figurine a :human-figure ;
+   rdfs:label "Halaf Culture Painted Female Figurine" ;
+   :described-by <https://art.thewalters.org/object/48.2741/> ;
+   :earliest-date -5000 ;
+   :latest-date -4500 ;
+   :in-modern-country-note "Syria and Neighboring" ;
+   :art-historical-culture-or-tradition :halaf-culture ;
+   :thumbnail-image <https://art.thewalters.org/images/art/PS1_48.2741_3Qtr_DD_T09.jpg> .
+
+:rock-art-of-sierra-de-san-francisco a :group-of-human-figures ;
+   rdfs:label "Rock Art of Sierra de San Francisco" ;
+   :described-by <https://en.wikipedia.org/wiki/Rock_Paintings_of_Sierra_de_San_Francisco> ;
+   :earliest-date -5000 ;
+   :latest-date -1000 ;
+   :in-modern-country-note "Mexico" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_en_el_techo_de_la_cueva_%22El_Ratón%22.JPG> .
 
 :thessalian-neolithic-figurine a :human-figure ;
    rdfs:label "Neolithic Figurine from Thessaly" ;
@@ -641,6 +699,15 @@
    :described-by <https://en.wikipedia.org/wiki/Grave_Circle_B,_Mycenae> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funeral_mask_from_Mycenae_NAMA_080841.jpg> .
 
+:akrotiri-woman-gathering-saffron a :human-figure ;
+   rdfs:label "Akrotiri Woman Gathering Plant" ;
+   :described-by <https://en.wikipedia.org/wiki/Wall_Paintings_of_Thera> ;
+   :earliest-date -1600 ;
+   :latest-date -1500 ;
+   :in-modern-country-note "Greece" ;
+   :art-historical-culture-or-tradition :minoan ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cueilleuse_de_safran,_fresque,_Akrotiri,_Grèce.jpg> .
+
 :mycenaean-funerary-mask-grave-circle-a a :human-figure ;
    rdfs:label "Mycenaean Gold Mask from Grave Circle A";
    :described-by <https://en.wikipedia.org/wiki/Mask_of_Agamemnon> ;
@@ -824,11 +891,11 @@
    :in-modern-country-note "United States" ;
    :thumbnail-image <https://www.clevelandart.org/_next/image?url=https%3A%2F%2Fweb-drupal-cms-prod.clevelandart.org%2F%2Fsites%2Fdefault%2Ffiles%2FJuly-August2016_AdenaPipe_A.jpg&w=1920&q=75> .
 
-:orim-dong-megalith-petroglyph a :human-figure ;
-   :described-by <https://en.m.wikipedia.org/wiki/File:Orim-dongmegalithpetroglyph.jpg> ;
-   :period-note "Middle Mumun Pottery Period (Korea)" ;
-   :earliest-date -700 ;
-   :latest-date -550 .
+# :orim-dong-megalith-petroglyph a :human-figure ;
+#    :described-by <https://en.m.wikipedia.org/wiki/File:Orim-dongmegalithpetroglyph.jpg> ;
+#    :period-note "Middle Mumun Pottery Period (Korea)" ;
+#    :earliest-date -700 ;
+#    :latest-date -550 .
 
 :prince-of-glauberg a :human-figure ;
    rdfs:label "So-called Prince of Glauberg" ;
@@ -909,6 +976,16 @@
    :described-by <https://en.wikipedia.org/wiki/Terracotta_Army> ;
    :art-historical-culture-or-tradition :qin-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerreros_de_Terracota,_Xi%27an_(15547299927).jpg>.
+
+:han-female-dancer a :human-figure ;
+   rdfs:label "Han Female Dancer" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/42178> ;
+   :earliest-date -200 ;
+   :latest-date -100 ;
+   :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :han-dynasty ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/42178/151378/main-image> .
+
 
 :nazca-standing-figure a :human-figure ;
    rdfs:label "Nazca Standing Figure" ;
