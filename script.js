@@ -66,6 +66,7 @@ async function buildFiguresInfoDict($rdf) {
     const figureType = $rdf.sym('urn:gaerhf:id:human-figure');
     const groupType = $rdf.sym('urn:gaerhf:id:group-of-human-figures');
     const rdfType = $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type');
+    const dateProp = $rdf.sym('urn:gaerhf:id:date');
     const earliestDateProp = $rdf.sym('urn:gaerhf:id:earliest-date');
     const latestDateProp = $rdf.sym('urn:gaerhf:id:latest-date');
     const approximateDateProp = $rdf.sym('urn:gaerhf:id:approximate-date');
@@ -86,13 +87,19 @@ async function buildFiguresInfoDict($rdf) {
             await Promise.all(subjectsOfType.map(async subject => {
                 const shortId = subject.uri.replace('urn:gaerhf:id:', '');
 
+                const label = kb.anyValue(subject, rdfsLabelProp);
+
+                const dateStr = kb.anyValue(subject, dateProp);
                 const earliestDateStr = kb.anyValue(subject, earliestDateProp);
                 const latestDateStr = kb.anyValue(subject, latestDateProp);
                 const approximateDateStr = kb.anyValue(subject, approximateDateProp);
-                const label = kb.anyValue(subject, rdfsLabelProp);
+
+                // Convert date strings to numbers
+                const date = dateStr ? parseFloat(dateStr) : null;
                 const earliestDate = earliestDateStr ? parseFloat(earliestDateStr) : null;
                 const latestDate = latestDateStr ? parseFloat(latestDateStr) : null;
                 const approximateDate = approximateDateStr ? parseFloat(approximateDateStr) : null;
+
                 const culture = kb.any(subject, cultureProp);
                 let cultureShortId = null;
                 let cultureLabel = null;
@@ -110,6 +117,7 @@ async function buildFiguresInfoDict($rdf) {
                 processedDict[shortId] = {
                     id: shortId,
                     label: label || shortId,
+                    date: date,
                     earliestDate: earliestDate,
                     latestDate: latestDate,
                     approximateDate: approximateDate,
@@ -134,15 +142,8 @@ function sortFiguresByDate(figures) {
     const figuresArray = Object.values(figures);
 
     figuresArray.sort((a, b) => {
-        let dateA = a.earliestDate;
-        let dateB = b.earliestDate;
-
-        if (dateA === null && a.approximateDate !== null) {
-            dateA = a.approximateDate;
-        }
-        if (dateB === null && b.approximateDate !== null) {
-            dateB = b.approximateDate;
-        }
+        let dateA = a.date !== null ? a.date : (a.earliestDate || a.approximateDate);
+        let dateB = b.date !== null ? b.date : (b.earliestDate || b.approximateDate);
 
         if (dateA !== null && dateB !== null) {
             return dateA - dateB;
@@ -157,7 +158,7 @@ function sortFiguresByDate(figures) {
         }
     });
 
-    return figuresArray;
+    return figuresArray.map(figure => figure.id); // Return only an array of IDs
 }
 
 async function renderFiguresAsList(figuresArray) {
@@ -193,7 +194,14 @@ async function renderFiguresAsList(figuresArray) {
         const textContainer = document.createElement('div');
 
         // Show date range if available, or approximate date
-        if (figure.earliestDate !== null) {
+        if (figure.date !== null) {
+            const dateDiv = document.createElement('div');
+            dateDiv.classList.add('date-info');
+            dateDiv.style.fontSize = '0.8em';
+            dateDiv.style.marginBottom = '.4em';
+            dateDiv.textContent = `${formatDateForDisplay(figure.date)}`;
+            textContainer.appendChild(dateDiv);
+        } else if (figure.earliestDate !== null && figure.latestDate !== null) {
             const dateDiv = document.createElement('div');
             dateDiv.classList.add('date-info');
             dateDiv.style.fontSize = '0.8em';
@@ -279,14 +287,16 @@ async function showFigureDetails(figureId) {
             detailInfo.innerHTML += `<p><strong>Modern Country:</strong> ${figure.inModernCountry}</p>`;
         }
 
+        if (figure.date !== null) {
+            detailInfo.innerHTML += `<p><strong>Date:</strong> ${formatDateForDisplay(figure.date)}</p>`;
+        }
+        if (figure.approximateDate !== null ) {
+            detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
+        }
         if (figure.earliestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Earliest Date:</strong> ${formatDateForDisplay(figure.earliestDate)}</p>`;
         }
-        if (figure.approximateDate !== null && figure.earliestDate === null) {
-            detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
-        } else if (figure.approximateDate !== null && figure.earliestDate !== null) {
-            detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
-        }
+        
         if (figure.latestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Latest Date:</strong> ${formatDateForDisplay(figure.latestDate)}</p>`;
         }
@@ -305,35 +315,6 @@ async function showFigureDetails(figureId) {
     }
 }
 
-function sortFiguresByDate(figures) {
-    const figuresArray = Object.values(figures);
-
-    figuresArray.sort((a, b) => {
-        let dateA = a.earliestDate;
-        let dateB = b.earliestDate;
-
-        if (dateA === null && a.approximateDate !== null) {
-            dateA = a.approximateDate;
-        }
-        if (dateB === null && b.approximateDate !== null) {
-            dateB = b.approximateDate;
-        }
-
-        if (dateA !== null && dateB !== null) {
-            return dateA - dateB;
-        } else if (dateA !== null) {
-            return -1;
-        } else if (dateB !== null) {
-            return 1;
-        } else {
-            const labelA = a.label || a.id;
-            const labelB = b.label || b.id;
-            return labelA.localeCompare(labelB);
-        }
-    });
-
-    return figuresArray.map(figure => figure.id); // Return only an array of IDs
-}
 
 async function getWikimediaImageUrl(pageUrl, width = 200) {
     try {

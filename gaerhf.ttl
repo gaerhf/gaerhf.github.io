@@ -196,7 +196,16 @@
    :region :south-america ;
    :described-by <https://en.wikipedia.org/wiki/Valdivia_culture> .
 
+:wari-culture a :culture ;
+   rdfs:label "Wari Culture" ;
+   :region :south-america ;
+   :described-by <https://en.wikipedia.org/wiki/Wari_culture> .
+
 # human figures
+# for inclusion
+# stelae of Tutu Fella https://www.theguardian.com/science/punctuated-equilibrium/2011/sep/03/2
+   # https://www.britishmuseum.org/collection/object/E_2013-2034-16206
+
 
 :sulawesi-cave-hunting-scene a :group-of-human-figures ;
    rdfs:label "Sulawesi Cave Hunting Scene" ;
@@ -241,6 +250,15 @@
    :art-historical-culture-or-tradition :gravettian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_von_Willendorf_01.jpg> .
 
+:brno-figurine a :human-figure ;
+   rdfs:label "Brno Male Figurine" ;
+   :described-by <https://www.donsmaps.com/brnoburial.html> ;
+   :earliest-date -29000 ;
+   :latest-date -25000 ;
+   :in-modern-country-note "Czech Republic" ;
+   :art-historical-culture-or-tradition :pavlovian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_figurine,_mammoth_ivory,_Anthropos,_Brno,_187999.jpg> .
+
 :brassempouy-gravettian-head a :human-figure ;
     rdfs:label "Brassempouy Gravettian Head" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Brassempouy> ;
@@ -248,6 +266,8 @@
    :in-modern-country-note "France" ;
    :art-historical-culture-or-tradition :gravettian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_de_Brassempouy.jpg> .
+
+# -25000 - -20000 https://en.wikipedia.org/wiki/Venus_figurines_of_Kostyonki
 
 :mal-ta-female-figurine a :human-figure ;
    rdfs:label "Female Figurine from Mal'ta (Siberia)" ;
@@ -505,6 +525,8 @@
    :in-modern-country-note "Romania" ;
    :art-historical-culture-or-tradition :cucuteni-trypillia-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Goddess_figurine_with_Tattoos.jpg> .
+
+# -4000 - -3000 https://en.wikipedia.org/wiki/Chasséen_culture "Stele de Lauris"
 
 :neolithic-figurine-karditsa a :human-figure ;
    rdfs:label "Neolithic Figurine from Karditsa" ;
@@ -958,7 +980,7 @@
 
 :braak-bog-figures a :group-of-human-figures ;
    rdfs:label "Braak Bog Figures" ;
-   :described-by <https://en.wikipedia.org/wiki/Braak_Bog_figures> ;
+   :described-by <https://en.wikipedia.org/wiki/Braak_Bog_Figures> ;
    :earliest-date -375 ;
    :latest-date -100 ;
    :in-modern-country-note "Germany" ;
@@ -972,6 +994,8 @@
    :in-modern-country-note "India" ;
    :art-historical-culture-or-tradition :maurya-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Patna_Museum_Lohanipur_torso.jpg> .
+
+# -150 - -1 https://en.wikipedia.org/wiki/Gundestrup_cauldron
 
 :laocoon-and-sons a :human-figure ;
    rdfs:label "Laocoön and His Sons" ;
@@ -1086,6 +1110,13 @@
    <https://romaninscriptionsofbritain.org/inscriptions/1181> ;
    :earliest-date 350 ;
    :latest-date 450 .
+
+:mankuwar-buddha a :human-figure ;
+   rdfs:label "Mankuwar Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Gupta_art#Sarnath_school> ;
+   :date 448 ;
+   :in-modern-country-note "India" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mankuwar_Buddha_with_background.jpg> .
 
 :maitreya-in-meditation a :human-figure ;
    :described-by <https://www.metmuseum.org/perspectives/pensive-treasure>, <https://www.museum.go.kr/site/eng/relic/represent/view?relicId=1256> ;
@@ -1242,6 +1273,32 @@
    :art-historical-culture-or-tradition :gandhara ;
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
+
+:wari-tray-with-figures a :group-of-human-figures ;
+   rdfs:label "Wari Tray with Figures" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/316330> ;
+   :earliest-date 500 ;
+   :latest-date 1000 ;
+   :in-modern-country-note "Peru" ;
+   :art-historical-culture-or-tradition :wari-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Snuff_Tray_MET_DT1273_(cropped).jpg> .
+
+:wari-head-shaped-vessel a :human-figure ;
+   rdfs:label "Wari Head-shaped Vessel" ;
+   :described-by <https://art.thewalters.org/object/48.2849/> ;
+   :earliest-date 650 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Peru" ;
+   :art-historical-culture-or-tradition :wari-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Huari_-_Head_Pot_with_Painted_Design_-_Walters_482849_-_Three_Quarter_Right_(cropped).jpg> .
+
+:so-called-bennet-monolith a :human-figure ;
+   rdfs:label "So-called Bennet Monolith" ;
+   :described-by <https://en.wikipedia.org/wiki/Tiwanaku#Archaeology> ;
+   :earliest-date 500 ;
+   :latest-date 1100 ;
+   :in-modern-country-note "Bolivia" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antonio_Portugal_y_el_Monolito_Bennett.jpg> .
 
 :fondukistan-monastery-divintity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
