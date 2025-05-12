@@ -284,15 +284,15 @@
 
 # -25000 - -20000 https://en.wikipedia.org/wiki/Venus_figurines_of_Kostyonki
 
-:mal-ta-female-figurine a :human-figure ;
-   rdfs:label "Female Figurine from Mal'ta (Siberia)" ;
-   :described-by <http://malta.artemiris.org/find/view/35> ;
+:mal-ta-female-figurine a :group-of-human-figures ;
+   rdfs:label "Figurines from Mal'ta (Siberia)" ;
+   :described-by <http://malta.artemiris.org/category/view/9> ;
    :period-note "Mal'ta-Buret' Culture (Siberia)" ;
    :earliest-date -21000 ;
    :latest-date -20500 ;
    :in-modern-country-note "Russia" ;
    :art-historical-culture-or-tradition :mal-ta-buret-culture ;
-   :thumbnail-image <http://malta.artemiris.org/storage/find/73109e670eac203b8775a9aafe310dbc.jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurines_from_central_Siberia_Mal%27ta_(grey_background).jpg> .
 
 :lascaux-ithyphallic-figure a :human-figure ;
    rdfs:label "Lascaux Ithyphallic Figure" ;
