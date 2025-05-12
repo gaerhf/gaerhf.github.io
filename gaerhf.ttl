@@ -131,9 +131,19 @@
    :described-by <https://en.wikipedia.org/wiki/Mal%27ta–Buret%27_culture> ,
       <http://malta.artemiris.org> .
 
+:maya-culture a :culture ;
+   rdfs:label "Mayan Culture" ;
+   :region :central-america ;
+   :described-by <https://en.wikipedia.org/wiki/Maya_civilization> .
+
 :mississippian a :culture ;
    rdfs:label "Mississippian" ;
    :described-by <https://en.wikipedia.org/wiki/Mississippian_culture> .
+
+:moche a :culture ;
+   rdfs:label "Moche" ;
+   :region :south-america ;
+   :described-by <https://en.wikipedia.org/wiki/Moche_culture> .
 
 :nok-culture a :culture ;
    rdfs:label "Nok Culture" ;
@@ -180,6 +190,11 @@
    rdfs:label "Saharan Rock Art" ;
    :region :sahara-desert ;
    :described-by <https://en.wikipedia.org/wiki/Saharan_rock_art> .
+
+:shu-kingdom a :culture ;
+   rdfs:label "Shu Kingdom" ;
+   :region :china ;
+   :described-by <https://en.wikipedia.org/wiki/Shu_(kingdom)> .
 
 :tang-dynasty a :culture ;
    rdfs:label "Tang Dynasty" ;
@@ -769,12 +784,22 @@
    :described-by <https://en.wikipedia.org/wiki/Nefertiti_Bust> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Nofretete_Neues_Museum.jpg> .
 
+:sanxingdui-standing-figure a :human-figure ;
+   rdfs:label "Sanxingdui Standing Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Sanxingdui> ;
+   :earliest-date -1300 ;
+   :latest-date -1100 ;
+   :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :shu-kingdom ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg> .
+
 :sanxingdui-bronze-head-protuding-eyes a :human-figure ;
    rdfs:label "Sanxingdui Bronze Head with Protuding Eyes" ;
    :described-by <https://en.wikipedia.org/wiki/Sanxingdui> ;
    :earliest-date -1200 ;
    :latest-date -1000 ;
    :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :shu-kingdom ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:青铜纵目面具B.jpg> .
 
 :sanxingdui-gilded-bronze-head a :human-figure ;
@@ -783,6 +808,7 @@
    :earliest-date -1200 ;
    :latest-date -1000 ;
    :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :shu-kingdom ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gold_Mask_(黄金面罩).jpg> .
 
 :olmec-stone-yuguito a :human-figure ;
@@ -1274,6 +1300,15 @@
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
 
+:moche-head-shaped-vessel a :human-figure ;
+   rdfs:label "Moche Head-shaped Vessel" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/308528> ;
+   :earliest-date 500 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Peru" ;
+   :art-historical-culture-or-tradition :moche-culture ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/308528/2084843/main-image> .
+
 :wari-tray-with-figures a :group-of-human-figures ;
    rdfs:label "Wari Tray with Figures" ;
    :described-by <https://www.metmuseum.org/art/collection/search/316330> ;
@@ -1282,15 +1317,6 @@
    :in-modern-country-note "Peru" ;
    :art-historical-culture-or-tradition :wari-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Snuff_Tray_MET_DT1273_(cropped).jpg> .
-
-:wari-head-shaped-vessel a :human-figure ;
-   rdfs:label "Wari Head-shaped Vessel" ;
-   :described-by <https://art.thewalters.org/object/48.2849/> ;
-   :earliest-date 650 ;
-   :latest-date 800 ;
-   :in-modern-country-note "Peru" ;
-   :art-historical-culture-or-tradition :wari-culture ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Huari_-_Head_Pot_with_Painted_Design_-_Walters_482849_-_Three_Quarter_Right_(cropped).jpg> .
 
 :so-called-bennet-monolith a :human-figure ;
    rdfs:label "So-called Bennet Monolith" ;
@@ -1307,6 +1333,23 @@
    :latest-date 700 ;
    :in-modern-country-note "Afghanistan" ;
    :thumbnail-image <https://www.guimet.fr/sites/default/files/styles/width_1220px/public/2023-07/divinite-assise-en-delassement.jpg?itok=rlsorMb_> .
+
+:wari-head-shaped-vessel a :human-figure ;
+   rdfs:label "Wari Head-shaped Vessel" ;
+   :described-by <https://art.thewalters.org/object/48.2849/> ;
+   :earliest-date 650 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Peru" ;
+   :art-historical-culture-or-tradition :wari-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Huari_-_Head_Pot_with_Painted_Design_-_Walters_482849_-_Three_Quarter_Right_(cropped).jpg> .
+
+:mask-of-k-inich-janaab-pakal a :human-figure ;
+   rdfs:label "Mask of K'inich Janaab' Pakal" ;
+   :described-by <https://en.wikipedia.org/wiki/Jade_mask_of_Pakal> ;
+   :date 683 ;
+   :in-modern-country-note "Mexico" ;
+   :art-historical-culture-or-tradition :maya-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palenque_-_Maske_des_Pakal.jpg> .
 
 :igbo-ukwu-face-pendant a :human-figure ;
    rdfs:label "Igbo ukwu Face Pendant" ;

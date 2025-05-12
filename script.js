@@ -146,7 +146,14 @@ function sortFiguresByDate(figures) {
         let dateB = b.date !== null ? b.date : (b.earliestDate || b.approximateDate);
 
         if (dateA !== null && dateB !== null) {
-            return dateA - dateB;
+            const comparison = dateA - dateB;
+            if (comparison !== 0) {
+                return comparison;
+            }
+            // If earliestDate is equal, compare latestDate
+            if (a.latestDate !== null && b.latestDate !== null) {
+                return a.latestDate - b.latestDate;
+            }
         } else if (dateA !== null) {
             return -1;
         } else if (dateB !== null) {
