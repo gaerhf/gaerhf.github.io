@@ -88,10 +88,20 @@
    :described-by <https://artsandculture.google.com/story/the-wonderland-of-the-cucuteni-trypillia-culture-national-museum-of-the-history-of-ukraine/MwWhDX1ENQSGog>,
    <https://en.wikipedia.org/wiki/Cucuteni–Trypillia_culture> .
 
+:deer-stone-culture a :culture ;
+   rdfs:label "Deer Stones Culture" ;
+   :region :central-asia ;
+   :described-by <https://en.wikipedia.org/wiki/Deer_stones_culture> .
+
 :dorset-culture a :culture ;
    rdfs:label "Dorset Culture" ;
    rdfs:seeAlso <http://vocab.getty.edu/aat/300016734> ;
    :described-by <https://en.wikipedia.org/wiki/Dorset_culture> .
+
+:european-neolithic-standing-stones a :culture ;
+   rdfs:label "European Neolithic Standing Stones" ;
+   :region :europe ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir>,<https://en.wikipedia.org/wiki/Statue_menhir> .
 
 :gandhara a :culture ;
    rdfs:label "Gandhara" ;
@@ -102,6 +112,11 @@
 :gravettian a :culture ;
    rdfs:label "Gravettian" ;
    :described-by <https://en.wikipedia.org/wiki/Gravettian> .
+
+:halaf-culture a :culture ;
+   rdfs:label "Halaf Culture" ;
+   :region :syria ;
+   :described-by <https://en.wikipedia.org/wiki/Halaf_culture> .
 
 :hamangia-culture a :culture ;
    rdfs:label "Hamangia Culture" ;
@@ -154,6 +169,11 @@
 :nordic-bronze-age a :culture ;
    rdfs:label "Nordic Bronze Age" ;
    :described-by <https://en.wikipedia.org/wiki/Nordic_Bronze_Age> .
+
+:northern-satraps-of-india a :culture ;
+   rdfs:label "Northern Satraps of India" ;
+   :region :south-asia ;
+   :described-by <https://en.wikipedia.org/wiki/Northern_Satraps> .
 
 :nuragic-culture a :culture ;
    rdfs:label "Nuragic Culture" ;
@@ -284,6 +304,15 @@
 
 # -25000 - -20000 https://en.wikipedia.org/wiki/Venus_figurines_of_Kostyonki
 
+:female-figurines-of-kostyonki a :group-of-human-figures ;
+   rdfs:label  "Female Figurines of Kostyonki" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_figurines_of_Kostyonki> ;
+   :earliest-date -25000 ;
+   :latest-date -20000 ;
+   :in-modern-country-note "Russia" ;
+   :art-historical-culture-or-tradition :gravettian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kostenki_I_Venus.jpg> .
+
 :mal-ta-female-figurine a :group-of-human-figures ;
    rdfs:label "Figurines from Mal'ta (Siberia)" ;
    :described-by <http://malta.artemiris.org/category/view/9> ;
@@ -334,6 +363,7 @@
    :earliest-date -11000 ;
    :latest-date -9000 ;
    :in-modern-country-note "Russia" ;
+   :representative-point 57.3809, 60.1407 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Большой_шигирский_идол.jpg> .
 
 :male-figure-on-bench-sayburc a :human-figure ;
@@ -580,6 +610,25 @@
    :art-historical-culture-or-tradition :sumerian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_mask_(cropped).jpg> .
 
+:stone-relief-figure-of-saint-sernin a :human-figure ;
+   rdfs:label "Stone Relief Figure of Saint Sernin" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_Saint-Sernin> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :in-modern-country-note "France" ;
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:La_statue-menhir_dite_%22La_Dame_de_Saint-Sernin%22.jpg> .
+
+:stone-relief-figure-of-maurels a :human-figure ;
+   rdfs:label "Stone Relief Figure of Maurels" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_des_Maurels> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :in-modern-country-note "France" ;
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(musée_fenaille,_rodez)_01.jpg> .
+
+
 :narmer-palette a :human-figure ;
    rdfs:label "Narmer Palette" ;
    :approximate-date -3000 ;
@@ -646,6 +695,14 @@
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Valdivia_culture#/media/File:Valdivia_Female_Figurine_2600-1500_BCE_Brooklyn_Museum.jpg> .
 
 # https://en.wikipedia.org/wiki/Thinker_from_Yehud
+
+:kernosivsky-idol a :human-figure ;
+   rdfs:label "Kernosivsky Idol" ;
+   :described-by <https://en.wikipedia.org/wiki/Kernosivsky_idol> ;
+   :approximate-date -2500 ;
+   :in-modern-country-note "Ukraine" ;
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Керносовский_идол.png> .
 
 :joman-female-figurine a :human-figure ;
    rdfs:label "Jōmon Female Figurine" ;
@@ -766,6 +823,15 @@
    :in-modern-country-note "Greece" ;
    :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
+
+:deer-stones-funerary-marker a :human-figure ;
+   rdfs:label "Deer Stones Culture Funerary Marker" ;
+   :described-by <https://en.wikipedia.org/wiki/Deer_stones_culture#Type_I:_Classic_Mongolian> ;
+   :earliest-date -1200 ;
+   :latest-date -800 ;
+   :in-modern-country-note "Mongolia" ;
+   :art-historical-culture-or-tradition :deer-stone-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_deer_stone._Uushigiin_Övör_site,_Deer_Stone_14,_near_Mörön,_northern_Mongolia.jpg> .
 
 :tlatico-so-called-acrobat a :human-figure ;
    rdfs:label "Tlatilco Acrobat" ;
@@ -960,6 +1026,14 @@
 #    :earliest-date -700 ;
 #    :latest-date -550 .
 
+:capestrano-warrior a :human-figure ;
+   rdfs:label "Capestrano Warrior" ;
+   :described-by <https://en.wikipedia.org/wiki/Warrior_of_Capestrano> ;
+   :approximate-date -550 ;
+   :in-modern-country-note "Italy" ;
+   :art-historical-culture-or-tradition :picene-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerriero_di_Capestrano_-_Museo_Archeologico_Nazionale_d%27Abruzzo_Villa_Frigerj_-_Chieti_-_Italy_-_6_Feb._2013.jpg> .
+
 :prince-of-glauberg a :human-figure ;
    rdfs:label "So-called Prince of Glauberg" ;
    :described-by <https://www.worldhistory.org/image/9799/prince-of-glauberg/> ;
@@ -1012,6 +1086,15 @@
    :in-modern-country-note "Germany" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Braak_Bog_Figures.JPG> .
 
+:female-bust-from-elche a :human-figure ;
+   rdfs:label "Female Bust from Elche" ;
+   :described-by <https://en.wikipedia.org/wiki/Lady_of_Elche> ;
+   :earliest-date -400 ;
+   :latest-date -300 ;
+   :in-modern-country-note "Spain" ;
+   :art-historical-culture-or-tradition :iberian-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Escultura_ibérica_%22Dama_de_Elche%22._Museo_Arqueológico_Nacional_(España)._Spain.jpg> .
+
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
    :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
@@ -1031,6 +1114,15 @@
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :late-hellenistic ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Laocoön_and_his_sons_group.jpg> .
+
+:alabaster-female-figurine-with-ruby-eyes a :human-figure ;
+   rdfs:label "Alabaster Female Figurine with Ruby Eyes" ;
+   :Described-by <https://collections.louvre.fr/en/ark:/53355/cl010144841> ;
+   :earliest-date -100 ;
+   :latest-date 100 ;
+   :in-modern-country-note "Iraq" ;
+   :art-historical-culture-or-tradition :parthian ;
+   :wikipedia-image-page <https://commons.wikimedia.org/wiki/File:Statuette_Goddess_Louvre_AO20127.jpg> .
 
 :hopewell-head-in-profile a :human-figure ;
    rdfs:label "Hopewell Head in Profile" ;
@@ -1284,6 +1376,15 @@
    :earliest-date -200 ;
    :latest-date 400 .
 
+:kankali-tila-tablet a :group-of-human-figures ;
+   rdfs:label "Kankali Tila tablet of Sodasa" ;
+   :described-by <https://en.wikipedia.org/wiki/Kankali_Tila_tablet_of_Sodasa> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :in-modern-country-note "India" ;
+   :art-historical-culture-or-tradition :northern-satraps-of-india  ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Amohini_relief,_Mathura,_circa_15_CE.jpg> .
+
 :han-pottery-storyteller-beating-a-drum a :human-figure ;
    :described-by <https://en.chnmuseum.cn/collections_577/collection_highlights_608/archaeological_discoveries_609/202008/t20200831_247541.html> ;
    :period-note "Eastern Han Dynasty (China)" ;
@@ -1325,6 +1426,14 @@
    :latest-date 1100 ;
    :in-modern-country-note "Bolivia" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antonio_Portugal_y_el_Monolito_Bennett.jpg> .
+
+:so-called-ponce-monolith a :human-figure ;
+   rdfs:label "So-called Ponce Monolith" ;
+   :described-by <https://de.wikipedia.org/wiki/Ponce-Monolith> ;
+   :earliest-date 500 ;
+   :latest-date 1100 ;
+   :in-modern-country-note "Bolivia" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bol-tihuanaco-el-fr.jpg> .
 
 :fondukistan-monastery-divintity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
