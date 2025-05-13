@@ -456,6 +456,15 @@
    :art-historical-culture-or-tradition :saharan-rock-art ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fondazione_Passaré_V1_056.jpg> .
 
+:pastoral-period-hunter-tin-aboteka a :human-figure ;
+   rdfs:label "Pastoral Period Hunter from Tin Aboteka" ;
+   :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-4191> ;
+   :earliest-date -7500 ;
+   :latest-date -4000 ;
+   :in-modern-country-note "Algeria" ;
+   :art-historical-culture-or-tradition :saharan-rock-art ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_11/10_21/eeb44702_ca7b_451c_ba84_a3df015a47d5/mid_01548817_001.jpg> .
+
 :maliwawa-figures a :group-of-human-figures ;
    rdfs:label "Maliwawa Figures" ;
    :described-by <https://www.smithsonianmag.com/smart-news/ancient-australian-aboriginal-art-unlike-anything-seen-180975984/> ,
