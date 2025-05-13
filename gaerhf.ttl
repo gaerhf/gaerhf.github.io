@@ -83,6 +83,11 @@
    :region :central-asia ;
    :described-by <https://en.wikipedia.org/wiki/Chemurchek_culture> .
 
+:chorrera a :culture ;
+   rdfs:label "Chorrera" ;
+   :region :south-america ;
+   :described-by <https://en.wikipedia.org/wiki/Chorrera_culture> .
+
 :cucuteni-trypillia-culture a :culture ;
    rdfs:label "Cucuteni-Trypillia Culture" ;
    :described-by <https://artsandculture.google.com/story/the-wonderland-of-the-cucuteni-trypillia-culture-national-museum-of-the-history-of-ukraine/MwWhDX1ENQSGog>,
@@ -196,10 +201,11 @@
 :pharaonic-egypt a :culture ;
    rdfs:label "Pharaonic Egypt" .
 
-:chorrera a :culture ;
-   rdfs:label "Chorrera" ;
-   :region :south-america ;
-   :described-by <https://en.wikipedia.org/wiki/Chorrera_culture> .
+:roman-egypt a :culture ;
+   rdfs:label "Roman Egypt" ;
+   :region :egypt ;
+   :described-by <https://en.wikipedia.org/wiki/Roman_Egypt> ,
+   <https://www.metmuseum.org/essays/roman-egypt> .
 
 :indus-valley-civilization a :culture ;
    rdfs:label "Indus Valley Civilization" ;
@@ -209,7 +215,8 @@
 :saharan-rock-art a :culture ;
    rdfs:label "Saharan Rock Art" ;
    :region :sahara-desert ;
-   :described-by <https://en.wikipedia.org/wiki/Saharan_rock_art> .
+   :described-by <https://africanrockart.britishmuseum.org/regional_introduction/rock-art-in-northern-africa/>,
+    <https://en.wikipedia.org/wiki/Saharan_rock_art> .
 
 :shu-kingdom a :culture ;
    rdfs:label "Shu Kingdom" ;
@@ -290,8 +297,9 @@
    :described-by <https://www.donsmaps.com/brnoburial.html> ;
    :earliest-date -29000 ;
    :latest-date -25000 ;
+   :material-note "Mammoth ivory" ;
    :in-modern-country-note "Czech Republic" ;
-   :art-historical-culture-or-tradition :pavlovian ;
+   :art-historical-culture-or-tradition :gravettian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_figurine,_mammoth_ivory,_Anthropos,_Brno,_187999.jpg> .
 
 :brassempouy-gravettian-head a :human-figure ;
@@ -442,8 +450,8 @@
 :round-head-figures-of-tassili-n-ajjer a :group-of-human-figures ;
    rdfs:label "Round Head Figures of Tassili n'Ajjer" ;
    :described-by <https://en.wikipedia.org/wiki/Round_Head_Period> ;
-   :earliest-date -7500 ;
-   :latest-date -5500 ;
+   :earliest-date -10000 ;
+   :latest-date -8000 ;
    :in-modern-country-note "Algeria" ;
    :art-historical-culture-or-tradition :saharan-rock-art ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fondazione_Passaré_V1_056.jpg> .
@@ -712,7 +720,6 @@
    :art-historical-culture-or-tradition :jomon ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tanabatake_Venus._Middle_Jōmon.JPG> .
 
-
 :mohenjo-daro-female-figurine a :human-figure ;
    rdfs:label "Mohenjo daro Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)> ;
@@ -750,6 +757,14 @@
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monstrous_male_figure_MET_dp22227.jpg> .
 
+:pashupati-seal a :human-figure ;
+   rdfs:label "Pashupati Seal" ;
+   :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
+   :art-historical-culture-or-tradition :indus-valley-civilization ;
+   :approximate-date -2200 ;
+   :in-modern-country-note "Pakistan" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
+
 :seated-statue-of-gudea-of-lagash a :human-figure ;
    rdfs:label "Seated Statue of Gudea of Lagash" ;
    :described-by <https://en.wikipedia.org/wiki/Statues_of_Gudea> ;
@@ -758,13 +773,15 @@
    :in-modern-country-note "Iraq" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg> .
 
-:pashupati-seal a :human-figure ;
-   rdfs:label "Pashupati Seal" ;
-   :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
-   :art-historical-culture-or-tradition :indus-valley-civilization ;
-   :approximate-date -2200 ;
-   :in-modern-country-note "Pakistan" ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
+:figure-riding-animal a :human-figure ;
+   rdfs:label "Figure Riding Animal" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1897-0511-104> ;
+   :earliest-date -2000 ;
+   :latest-date -1800 ;
+   :in-modern-country-note "Iraq" ;
+   :art-historical-culture-or-tradition :elamite-culture ;
+   :note "The date of this piece is uncertain and the findspot is unknown." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/19d9f995_395f_4e0f_b9f7_a3b7006cfa12/mid_00032589_001.jpg> .
 
 :mohenjo-daro-priest-king a :human-figure ;
    rdfs:label "Mohenjo daro Priest King" ;
@@ -1003,6 +1020,12 @@
    :latest-date -300 ;
    :art-historical-culture-or-tradition :olmec .
 
+:chorrera-figure-vessel a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/315062> ;
+   :art-historical-culture-or-tradition :chorrera ;
+   :earliest-date -900 ;
+   :latest-date -200 .
+
 :grevensvænge-figurines a :group-of-human-figures ;
    rdfs:label "Grevensvænge figurines" ;
    :described-by <https://en.wikipedia.org/wiki/Grevensvænge_figurines> ;
@@ -1010,7 +1033,6 @@
    :lastest-date -500 ;
    :art-historical-culture-or-tradition :nordic-bronze-age ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DO-10044-Figurer_Grevensvænge.jpg> .
-
 
 :adena-hopewell-pipe a :human-figure ;
    rdfs:label "Adena or Hopewell Pipe" ;
@@ -1040,6 +1062,7 @@
    :earliest-date -550 ;
    :latest-date -450 ;
    :art-historical-culture-or-tradition :la-tene ;
+   :in-modern-country-note "Germany" ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
 
 :euphronios-krater a :group-of-human-figures ;
@@ -1049,18 +1072,33 @@
    :art-historical-culture-or-tradition :archaic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Euphronios_krater_side_A_MET_L.2006.10.jpg> .
 
+:phoenecian-apotropaic-mask a :human-figure ;
+   rdfs:label "Phoenician Apotropaic Mask" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1856-1223-456> ;
+   :earliest-date -500 ;
+   :latest-date -400 ;
+   :in-modern-country-note "Italy" ;
+   :find-spot-note "Tharros" ;
+   :material-note "Ceramic" ;
+   :art-historical-culture-or-tradition :punic-culture ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/c5b0b252_b162_41a7_9e84_a3b7006d2c79/mid_00032498_001.jpg> .  
+
 :nok-head-and-torso-of-a-female-figure a :human-figure ;
    :described-by <https://emuseum.mfah.org/objects/31704/head-and-torso-of-a-female-figure> ;
    :period-note "Nok (Nigeria)" ;
    :earliest-date -500 ;
    :latest-date 200 ;
+   :in-modern-country-note "Nigeria" ;
+   :art-historical-culture-or-tradition :nok-culture ;
    :thumbnail-image <https://emuseum.mfah.org/internal/media/dispatcher/294946/postagestamp> .
 
 :nok-male-head a :human-figure ;
    :described-by <https://www.slam.org/collection/objects/28893/> ;
    :period-note "Nok (Nigeria)" ;
    :earliest-date -500 ;
-   :latest-date -50 .
+   :latest-date -50 ;
+   :art-historical-culture-or-tradition :nok-culture ;
+   :in-modern-country-note "Nigeria" .
 
 :esteros-female-figurine a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/317723> ;
@@ -1075,8 +1113,6 @@
    :earliest-date -400 ;
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
-
-# -375 - -100 https://en.wikipedia.org/wiki/Braak_Bog_Figures
 
 :braak-bog-figures a :group-of-human-figures ;
    rdfs:label "Braak Bog Figures" ;
@@ -1115,14 +1151,17 @@
    :art-historical-culture-or-tradition :late-hellenistic ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Laocoön_and_his_sons_group.jpg> .
 
-:alabaster-female-figurine-with-ruby-eyes a :human-figure ;
-   rdfs:label "Alabaster Female Figurine with Ruby Eyes" ;
-   :Described-by <https://collections.louvre.fr/en/ark:/53355/cl010144841> ;
-   :earliest-date -100 ;
-   :latest-date 100 ;
-   :in-modern-country-note "Iraq" ;
-   :art-historical-culture-or-tradition :parthian ;
-   :wikipedia-image-page <https://commons.wikimedia.org/wiki/File:Statuette_Goddess_Louvre_AO20127.jpg> .
+:gudimallam-lingam a :human-figure ;
+   :described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
+   :period-note "Satavahanas ? (India)" ;
+   :earliest-date -200 ;
+   :latest-date 100 .
+
+:ceramic-whistle-in-the-form-of-a-standing-figure a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/313554> ;
+   :period-note "Chorrera or Bahia (Ecuador)" ;
+   :earliest-date -200 ;
+   :latest-date 300 .
 
 :hopewell-head-in-profile a :human-figure ;
    rdfs:label "Hopewell Head in Profile" ;
@@ -1131,6 +1170,13 @@
    :earliest-date -200 ;
    :latest-date 500 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human_face_effigy,_Hopewell_culture,_Turner_Group,_Mound_3,_altar,_Little_Miami_Valley,_Ohio,_200_BC_to_500_AD,_mica_-_Native_American_collection_-_Peabody_Museum,_Harvard_University_-_DSC06093.jpg> .
+
+:qin-terracotta-army a :group-of-human-figures ;
+   rdfs:label "Qin Terracotta Army" ;
+   :date -209 ;
+   :described-by <https://en.wikipedia.org/wiki/Terracotta_Army> ;
+   :art-historical-culture-or-tradition :qin-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerreros_de_Terracota,_Xi%27an_(15547299927).jpg>.
 
 :hopewell-mica-torso a :human-figure ;
    rdfs:label "Hopewell Mica Torso" ;
@@ -1146,13 +1192,6 @@
    :latest-date 500 ;
    :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/shaman-of-newark-color.jpg> .
 
-:qin-terracotta-army a :group-of-human-figures ;
-   rdfs:label "Qin Terracotta Army" ;
-   :approximate-date -209 ;
-   :described-by <https://en.wikipedia.org/wiki/Terracotta_Army> ;
-   :art-historical-culture-or-tradition :qin-empire ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerreros_de_Terracota,_Xi%27an_(15547299927).jpg>.
-
 :han-female-dancer a :human-figure ;
    rdfs:label "Han Female Dancer" ;
    :described-by <https://www.metmuseum.org/art/collection/search/42178> ;
@@ -1162,6 +1201,11 @@
    :art-historical-culture-or-tradition :han-dynasty ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/42178/151378/main-image> .
 
+:tolita-tumaco-seated-elder a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/314299> ;
+   :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
+   :earliest-date -200 ;
+   :latest-date 400 .
 
 :nazca-standing-figure a :human-figure ;
    rdfs:label "Nazca Standing Figure" ;
@@ -1170,6 +1214,15 @@
    :described-by <https://en.wikipedia.org/wiki/Nazca_lines> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_46.JPG> .
 
+:alabaster-female-figurine-with-ruby-eyes a :human-figure ;
+   rdfs:label "Alabaster Female Figurine with Ruby Eyes" ;
+   :Described-by <https://collections.louvre.fr/en/ark:/53355/cl010144841> ;
+   :earliest-date -100 ;
+   :latest-date 100 ;
+   :in-modern-country-note "Iraq" ;
+   :art-historical-culture-or-tradition :parthian ;
+   :wikipedia-image-page <https://commons.wikimedia.org/wiki/File:Statuette_Goddess_Louvre_AO20127.jpg> .
+
 :terracotta-male-figure-from-kalchayan a :human-figure ;
    rdfs:label "Terracotta Male figure from Kalchayan" ;
    :art-historical-culture-or-tradition :kushan ;
@@ -1177,15 +1230,6 @@
    :latest-date 50;
    :described-by <https://en.wikipedia.org/wiki/Khalchayan> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg> .
-
-:tyara-maskette a :human-figure ;
-   rdfs:label "Tyara Maskette" ;
-   :described-by <https://collections.historymuseum.ca/public/pages/cmccpublic/alt-emupublic/Display.php?irn=387394&QueryPage=Query.php&lang=0> ;
-   :art-historical-culture-or-tradition :dorset-culture ;
-   :earliest-date 1 ;
-   :latest-date 500 ;
-   :in-modern-country-note "Canada" ;
-   :thumbnail-image <https://collections.historymuseum.ca/public/objects/common/webmedia.php?irn=45090> .
 
 :san-agustin-megaliths a :group-of-human-figures ;
    rdfs:label "San Agustin Megaliths" ;
@@ -1202,6 +1246,14 @@
    :art-historical-culture-or-tradition :roman-empire ;
    :approximate-date 20;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg> .
+
+:couple-from-pompeii a :group-of-human-figures ;
+   rdfs:label "Couple from Pompeii" ;
+   :described-by <https://en.wikipedia.org/wiki/Portrait_of_Terentius_Neo> ;
+   :approximate-date 30 ;
+   :in-modern-country-note "Italy" ;
+   :art-historical-culture-or-tradition :roman-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pompeii-couple.jpg> .
 
 :gift-of-anathapindada-relief a :human-figure ;
    rdfs:label "Gift of Anathapindada Relief" ;
@@ -1220,6 +1272,12 @@
    :in-modern-country-note "Iraq" ;
    :art-historical-culture-or-tradition :hatra ;
    :thumbnail-image <https://www.worldhistory.org/uploads/images/10852.jpg> .
+
+:gandhara-standing-buddha a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/38820> ;
+   :period-note "Gandhara Region (Pakistan)" ;
+   :earliest-date 300 ;
+   :latest-date 400 .
 
 :tombstone-of-ertola a :human-figure ;
    rdfs:label "Tombstone of Ertola" ;
@@ -1273,12 +1331,6 @@
    :earliest-date 675 ;
    :latest-date 685 .
 
-:gandhara-standing-buddha a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/38820> ;
-   :period-note "Gandhara Region (Pakistan)" ;
-   :earliest-date 300 ;
-   :latest-date 400 .
-
 :gandhara-bodhisattva a :human-figure ;
    :described-by <https://csmvs.in/collections/bodhisattva/> ;
    :period-note "Gandhara Region (Pakistan)" ;
@@ -1295,7 +1347,11 @@
    :described-by <https://www.metmuseum.org/art/collection/search/38075> ;
    :period-note "Mauryan Empire (India)" ;
    :earliest-date -300 ;
-   :latest-date -100 .
+   :latest-date -100 ;
+   :material-note "Ceramic" ;
+   :art-historical-culture-or-tradition :mauryan-empire ;
+   :in-modern-country-note "India" ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/38075/2176388/restricted> .
 
 :mudgarpani-yaksha a :human-figure ;
    :described-by <https://commons.wikimedia.org/wiki/File:Mudgarpani_Yaksha,_Mathura,_100_BCE.jpg> ;
@@ -1303,78 +1359,17 @@
    :earliest-date -110 ;
    :latest-date -90 .
 
-:terracotta-ganges-and-attendant a :human-figure ;
-   :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
-   :period-note "Gupta (India)" ;
-   :earliest-date 400 ;
-   :latest-date 600 .
-
 :pancika-and-hariti a :human-figure ;
    :described-by <https://www.britishmuseum.org/collection/object/A_1950-0726-2> , <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:PharroAndArdoxsho.jpg> ;
    :period-note "Kushan (Pakistan)" ;
    :earliest-date 100 ;
    :latest-date 300 .
 
-:gudimallam-lingam a :human-figure ;
-   :described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
-   :period-note "Satavahanas ? (India)" ;
-   :earliest-date -200 ;
-   :latest-date 100 .
-
-:descent-of-the-ganges a :human-figure ;
-   rdfs:label "Descent of Ganges Frieze" ;
-   :described-by <https://en.wikipedia.org/wiki/Descent_of_the_Ganges_(Mahabalipuram)> ;
-   :period-note "Pallava Dynasty (India)" ;
-   :earliest-date 600 ;
-   :latest-date 700 .
-
-:ceramic-whistle-in-the-form-of-a-standing-figure a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/313554> ;
-   :period-note "Chorrera or Bahia (Ecuador)" ;
-   :earliest-date -200 ;
-   :latest-date 300 .
-
-:leshan-giant-buddha a :human-figure ;
-   rdfs:label "Leshan Giant Buddha" ;
-   :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
-   :earliest-date 713 ;
-   :latest-date 803 ;
-   :in-modern-country-note "China" ;
-   :art-historical-culture-or-tradition :tang-dynasty ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_View_from_below.jpg> .
-
 # https://en.wikipedia.org/wiki/Mississippian_copper_plates
 
 # https://en.wikipedia.org/wiki/Mississippian_stone_statuary
 
 # https://en.wikipedia.org/wiki/Jayavarman_VII
-
-:bust-of-jayavarman-vii a :human-figure ;
-   rdfs:label "Bust of Jayavarman VII" ;
-   :described-by <https://en.wikipedia.org/wiki/Jayavarman_VII> ;
-   :earliest-date 1181 ;
-   :latest-date 1218 ;
-   :in-modern-country-note "Cambodia" ;
-   :art-historical-culture-or-tradition :khmer-empire ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
-
-:chorrera-figure-vessel a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/315062> ;
-   :art-historical-culture-or-tradition :chorrera ;
-   :earliest-date -900 ;
-   :latest-date -200 .
-
-:tolita-tumaco-bench-figure a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/316449> ;
-   :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
-   :earliest-date 100 ;
-   :latest-date 400 .
-
-:tolita-tumaco-seated-elder a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/314299> ;
-   :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
-   :earliest-date -200 ;
-   :latest-date 400 .
 
 :kankali-tila-tablet a :group-of-human-figures ;
    rdfs:label "Kankali Tila tablet of Sodasa" ;
@@ -1385,12 +1380,30 @@
    :art-historical-culture-or-tradition :northern-satraps-of-india  ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Amohini_relief,_Mathura,_circa_15_CE.jpg> .
 
+:tyara-maskette a :human-figure ;
+   rdfs:label "Tyara Maskette" ;
+   :described-by <https://collections.historymuseum.ca/public/pages/cmccpublic/alt-emupublic/Display.php?irn=387394&QueryPage=Query.php&lang=0> ;
+   :art-historical-culture-or-tradition :dorset-culture ;
+   :earliest-date 1 ;
+   :latest-date 500 ;
+   :in-modern-country-note "Canada" ;
+   :thumbnail-image <https://collections.historymuseum.ca/public/objects/common/webmedia.php?irn=45090> .
+
 :han-pottery-storyteller-beating-a-drum a :human-figure ;
    :described-by <https://en.chnmuseum.cn/collections_577/collection_highlights_608/archaeological_discoveries_609/202008/t20200831_247541.html> ;
    :period-note "Eastern Han Dynasty (China)" ;
    :earliest-date 25 ;
    :latest-date 220 ;
    :in-modern-country-note "China" .
+
+:roman-period-egyptian-funerary-portrait a :human-figure ;
+   rdfs:label "Roman Period Egyptian Funerary Portrait" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/547951> ;
+   :earliest-date 100 ;
+   :latest-date 150 ;
+   :in-modern-country-note "Egypt" ;
+   :art-historical-culture-or-tradition :roman-egypt ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/547951/2174855/main-image> .
 
 :gandharan-standing-buddha a :human-figure ;
    rdfs:label "Gandharan Standing Buddha" ;
@@ -1400,6 +1413,18 @@
    :art-historical-culture-or-tradition :gandhara ;
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
+
+:tolita-tumaco-bench-figure a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/316449> ;
+   :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
+   :earliest-date 100 ;
+   :latest-date 400 .
+
+:terracotta-ganges-and-attendant a :human-figure ;
+   :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
+   :period-note "Gupta (India)" ;
+   :earliest-date 400 ;
+   :latest-date 600 .
 
 :moche-head-shaped-vessel a :human-figure ;
    rdfs:label "Moche Head-shaped Vessel" ;
@@ -1443,6 +1468,15 @@
    :in-modern-country-note "Afghanistan" ;
    :thumbnail-image <https://www.guimet.fr/sites/default/files/styles/width_1220px/public/2023-07/divinite-assise-en-delassement.jpg?itok=rlsorMb_> .
 
+:descent-of-the-ganges a :human-figure ;
+   rdfs:label "Descent of Ganges Frieze" ;
+   :described-by <https://en.wikipedia.org/wiki/Descent_of_the_Ganges_(Mahabalipuram)> ;
+   :period-note "Pallava Dynasty (India)" ;
+   :earliest-date 600 ;
+   :latest-date 700 ;
+   :in-modern-country-note "India" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg> .
+
 :wari-head-shaped-vessel a :human-figure ;
    rdfs:label "Wari Head-shaped Vessel" ;
    :described-by <https://art.thewalters.org/object/48.2849/> ;
@@ -1459,6 +1493,24 @@
    :in-modern-country-note "Mexico" ;
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palenque_-_Maske_des_Pakal.jpg> .
+
+:leshan-giant-buddha a :human-figure ;
+   rdfs:label "Leshan Giant Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
+   :earliest-date 713 ;
+   :latest-date 803 ;
+   :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :tang-dynasty ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_View_from_below.jpg> .
+
+:four-evangelists-aachen-gospel a :group-of-human-figures ;
+   rdfs:label "Four Evangelists, Aachen Gospel" ;
+   :described-by <https://en.wikipedia.org/wiki/Aachen_Gospels_(Ada_School)> ;
+   :earliest-date 800 ;
+   :latest-date 810 ;
+   :in-modern-country-note "Germany" ;
+   :art-historical-culture-or-tradition :carolingian-renaissance ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karolingischer_Buchmaler_um_820_001.jpg> .
 
 :igbo-ukwu-face-pendant a :human-figure ;
    rdfs:label "Igbo ukwu Face Pendant" ;
@@ -1488,6 +1540,16 @@
    :art-historical-culture-or-tradition :anasazi ;
    :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
 
+:keller-figurine a :human-figure ;
+   rdfs:label "Keller Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Mississippian_stone_statuary> ;
+   :period-note "Cahokia (Illinois)" ;
+   :earliest-date 1050 ;
+   :latest-date 1200 ;
+   :in-modern-country-note "United States" ;
+   :art-historical-culture-or-tradition :mississippian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
+
 :cahokiam-resting-warrior-figurine a :human-figure ;
    rdfs:label "Cahokian Resting Warrior Figurine" ;
    :described-by <https://archeology.uark.edu/restingwarrior3d/> ;
@@ -1498,12 +1560,11 @@
    :art-historical-culture-or-tradition :mississippian ;
    :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
 
-:keller-figurine a :human-figure ;
-   rdfs:label "Keller Figurine" ;
-   :described-by <https://en.wikipedia.org/wiki/Mississippian_stone_statuary> ;
-   :period-note "Cahokia (Illinois)" ;
-   :earliest-date 1050 ;
-   :latest-date 1200 ;
-   :in-modern-country-note "United States" ;
-   :art-historical-culture-or-tradition :mississippian ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
+:bust-of-jayavarman-vii a :human-figure ;
+   rdfs:label "Bust of Jayavarman VII" ;
+   :described-by <https://en.wikipedia.org/wiki/Jayavarman_VII> ;
+   :earliest-date 1181 ;
+   :latest-date 1218 ;
+   :in-modern-country-note "Cambodia" ;
+   :art-historical-culture-or-tradition :khmer-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .

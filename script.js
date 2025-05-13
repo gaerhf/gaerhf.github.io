@@ -71,6 +71,7 @@ async function buildFiguresInfoDict($rdf) {
     const latestDateProp = $rdf.sym('urn:gaerhf:id:latest-date');
     const approximateDateProp = $rdf.sym('urn:gaerhf:id:approximate-date');
     const rdfsLabelProp = $rdf.sym('http://www.w3.org/2000/01/rdf-schema#label');
+    const noteProp = $rdf.sym('urn:gaerhf:id:note');
     const cultureProp = $rdf.sym('urn:gaerhf:id:art-historical-culture-or-tradition');
     const inModernCountryProp = $rdf.sym('urn:gaerhf:id:in-modern-country-note');
     const wikipediaImagePageProp = $rdf.sym('urn:gaerhf:id:wikimedia-commons-image-page');
@@ -100,6 +101,8 @@ async function buildFiguresInfoDict($rdf) {
                 const latestDate = latestDateStr ? parseFloat(latestDateStr) : null;
                 const approximateDate = approximateDateStr ? parseFloat(approximateDateStr) : null;
 
+                const note = kb.anyValue(subject, noteProp);
+
                 const culture = kb.any(subject, cultureProp);
                 let cultureShortId = null;
                 let cultureLabel = null;
@@ -121,6 +124,7 @@ async function buildFiguresInfoDict($rdf) {
                     earliestDate: earliestDate,
                     latestDate: latestDate,
                     approximateDate: approximateDate,
+                    note: note,
                     culture: cultureShortId,
                     cultureLabel: cultureLabel,
                     inModernCountry: inModernCountry,
@@ -316,6 +320,10 @@ async function showFigureDetails(figureId) {
             link.target = '_blank';
             describedByLink.appendChild(link);
             detailInfo.appendChild(describedByLink);
+        }
+
+        if (figure.note) {
+            detailInfo.innerHTML += `<p><strong>Note:</strong> ${figure.note}</p>`;
         }
     } else {
         console.error("Figure details not found for ID:", figureId);
