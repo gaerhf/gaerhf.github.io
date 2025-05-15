@@ -609,6 +609,15 @@
    :art-historical-culture-or-tradition :predynastic-egypt ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/07.447.502_SL1.jpg?width=256&quality=75> .
 
+:gebel-el-arak-knife a :human-figure ;
+   rdfs:label "Gebel el-Arak Knife" ;
+   :described-by <https://en.wikipedia.org/wiki/Gebel_el-Arak_Knife> ;
+   :earliest-date -3500 ;
+   :latest-date -3200 ;
+   :in-modern-country-note "Egypt" ;
+   :art-historical-culture-or-tradition :predynastic-egypt ; # can be more specific
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gebel_el-Arak_Knife_ivory_handle_(front_top_part_detail).jpg> .
+
 :warka-vase a :group-of-human-figures ;
    rdfs:label "Warka Vase" ;
    :described-by <https://smarthistory.org/warka-vase/>,<https://en.wikipedia.org/wiki/Warka_Vase> ;
@@ -658,6 +667,16 @@
 
 # uncertain date range https://commons.wikimedia.org/wiki/File:Kiuruveden_reikäkirves_-_Stone_axe_of_Kiuruvesi.jpg
 
+:cycladic-female-figurine-plastiras-type a :human-figure ;
+   rdfs:label "Cycladic Female Figurine (Plastiras Type)" ;
+   :described-by <https://www.getty.edu/art/collection/object/103SQR> ;
+   :earliest-date -3000 ;
+   :latest-date -2800 ;
+   :in-modern-country-note "Greece" ;
+   :art-historical-culture-or-tradition :cycladic-art ;
+   :thumbnail-image <https://media.getty.edu/iiif/image/de65363a-8e1f-4d5b-bf31-9cf4fe423948/0,0,2640,4096/165,/0/default.jpg> .
+
+
 :merhgarh-female-figurine a :human-figure ;
    rdfs:label "Mehrgarh Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Mehrgarh#Human_figurines> ;
@@ -676,6 +695,15 @@
    :in-modern-country-note "Pakistan" ;
    :material-note "Ceramic" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/61085/95936/main-image> .
+
+:chariot-driver-tassili-n-ajjer a :human-figure ;
+   rdfs:label "Chariot Driver from Tassili n'Ajjer" ;
+   :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-4567> ;
+   :earliest-date -3000 ;
+   :latest-date -2000 ;
+   :in-modern-country-note "Algeria" ;
+   :art-historical-culture-or-tradition :saharan-rock-art ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_11/10_22/9aeb1cc8_a698_40ee_97cd_a3df01714a90/mid_01556626_001.jpg> .
 
 :tel-asmar-temple-figures a :human-figure ;
    rdfs:label "Tel Asmar Temple Figures" ;
@@ -711,7 +739,7 @@
    :art-historical-culture-or-tradition :valdiva-culture ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Valdivia_culture#/media/File:Valdivia_Female_Figurine_2600-1500_BCE_Brooklyn_Museum.jpg> .
 
-# https://en.wikipedia.org/wiki/Thinker_from_Yehud
+# -2250 - -2000 https://commons.wikimedia.org/wiki/File:Elam_cool.jpg
 
 :kernosivsky-idol a :human-figure ;
    rdfs:label "Kernosivsky Idol" ;
@@ -792,6 +820,15 @@
    :note "The date of this piece is uncertain and the findspot is unknown." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/19d9f995_395f_4e0f_b9f7_a3b7006cfa12/mid_00032589_001.jpg> .
 
+:cypriot-red-polished-ware-plank-figure a :human-figure ;
+   rdfs:label "Cypriot Red Polished Ware Figure" ;
+   :described-by <https://www.getty.edu/art/collection/object/108J4B> ;
+   :earliest-date -2000 ;
+   :latest-date -1900 ;
+   :in-modern-country-note "Cyprus" ;
+   :art-historical-culture-or-tradition :philia-culture ;
+   :thumbnail-image <https://media.getty.edu/iiif/image/74715ced-ad1d-4f96-84b5-8070567edcd8/0,0,3249,4096/204,/0/default.jpg> .   
+
 :mohenjo-daro-priest-king a :human-figure ;
    rdfs:label "Mohenjo daro Priest King" ;
    :described-by <https://en.wikipedia.org/wiki/Priest-King_(Mohenjo-daro)> ;
@@ -817,6 +854,14 @@
    :latest-date -1600 ;
    :in-modern-country-note "Canada" ;
    :thumbnail-image <https://www.historymuseum.ca/ke/_resources/120798/5050-1613-0243-094-base-cmhsize-small.jpg> .
+
+:seated-figure-on-vessel a :human-figure ;
+   rdfs:label "Seated Figure on Vessel" ;
+   :described-by <https://en.wikipedia.org/wiki/Thinker_from_Yehud> ;
+   :earliest-date -1800 ;
+   :latest-date -1600 ;
+   :in-modern-country-note "Israel" ;
+   :wikimedi-commons-image-page <https://en.wikipedia.org/wiki/File:Thinker_from_Yehud.jpeg> .
 
 :mycenaean-funerary-mask-grave-circle-b a :human-figure ;
    rdfs:label "Mycenaean Gold Mask from Grave Circle B" ;
@@ -849,6 +894,15 @@
    :in-modern-country-note "Greece" ;
    :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
+
+:jade-statuette-standing-dignitary a :human-figure ;
+   rdfs:label "Jade Statuette of a Standing Dignitary" ;
+   :described-by <https://harvardartmuseums.org/collections/object/204810> ;
+   :earliest-date -1200 ;
+   :latest-date -1000 ;
+   :in-modern-country-note "China" ;
+   :art-historical-culture-or-tradition :shang-dynasty ;
+   :thumbnail-images <https://ids.hvrd.art/ids/view/17386315?width=250&height=250> .
 
 :deer-stones-funerary-marker a :human-figure ;
    rdfs:label "Deer Stones Culture Funerary Marker" ;
@@ -1092,6 +1146,15 @@
    :art-historical-culture-or-tradition :punic-culture ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/c5b0b252_b162_41a7_9e84_a3b7006d2c79/mid_00032498_001.jpg> .  
 
+:warrior-of-mogente a :human-figure ;
+   rdfs:label "Warrior of Mogente" ;
+   :described-by <https://en.wikipedia.org/wiki/Warrior_of_Mogente> ;
+   :earliest-date -500 ;
+   :latest-date -300 ;
+   :in-modern-country-note "Spain" ;
+   :art-historical-culture-or-tradition :iberian-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerrer_de_Moixent,_Museu_de_Prehistòria_de_València.jpg> .
+
 :nok-head-and-torso-of-a-female-figure a :human-figure ;
    :described-by <https://emuseum.mfah.org/objects/31704/head-and-torso-of-a-female-figure> ;
    :period-note "Nok (Nigeria)" ;
@@ -1150,6 +1213,15 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Patna_Museum_Lohanipur_torso.jpg> .
 
 # -150 - -1 https://en.wikipedia.org/wiki/Gundestrup_cauldron
+
+:figure-with-libyco-berber-script a :human-figure ;
+   rdfs:label "Figure with Libyco-Berber Script" ;
+   :described-by <https://en.wikipedia.org/wiki/Gundestrup_cauldron> ;
+   :earliest-date -200 ;
+   :latest-date 400 ;
+   :in-modern-country-note "Morocco" ;
+   :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> . 
 
 :laocoon-and-sons a :human-figure ;
    rdfs:label "Laocoön and His Sons" ;
