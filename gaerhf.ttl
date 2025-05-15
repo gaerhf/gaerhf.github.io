@@ -1093,7 +1093,7 @@
    rdfs:label "Grevensvænge figurines" ;
    :described-by <https://en.wikipedia.org/wiki/Grevensvænge_figurines> ;
    :earliest-date -800 ;
-   :lastest-date -500 ;
+   :latest-date -500 ;
    :art-historical-culture-or-tradition :nordic-bronze-age ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DO-10044-Figurer_Grevensvænge.jpg> .
 

@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Approaches to Early Representations of the Human Figure</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
     <script src="https://unpkg.com/rdflib@2.2.19/dist/rdflib.min.js"></script>
 </head>
+
 <body>
     <div id="header-container">
         <h2 id="main-title">Global Approaches to Early Representations of the Human Figure (GAERHF)</h2>
+        <!-- <div id="date-range-slider">
+            <label for="date-range">Date Range:</label>
+            <div id="date-range"></div>
+            <span id="start-date-value">-10000 BCE</span> - <span id="end-date-value">2025 CE</span>
+        </div> -->
         <div id="figure-details-wrapper">
             <h2 id="detail-label"></h2>
             <div id="detail-info"></div>
             <div id="detail-image"></div>
         </div>
+        <div id="tabs">
+            <button class="tab-button active" data-tab="figure-list">List</button>
+            <!-- <button class="tab-button" data-tab="figure-map">Map</button> -->
+            <button class="tab-button" data-tab="figure-timeline">Timeline</button>
+        </div>
+        <div id="figure-timeline-scale" class="tab-scale"></div>
     </div>
-    <div id="figure-list">
-        <h2>Loading...</h2>
+
+
+
+
+    <!-- Tabbed interface -->
+    <div id="tab-container">
+        <div id="tab-content">
+            <div id="figure-list-container" class="tab-content active">
+                <div id="figure-list">
+                    <h2>Loading...</h2>
+                </div>
+            </div>
+            <div id="figure-timeline-container" class="tab-content">
+                <div class="timeline-scroll-wrapper">
+                    <div id="figure-timeline"></div>
+                </div>
+            </div>
+            <!-- ...map tab... -->
+        </div>
     </div>
 
     <footer class="sticky-footer">
-        <p>Data and code available on <a href="https://github.com/orgs/gaerhf/repositories">Github.</a> <a href="https://isaw.nyu.edu/people/faculty/sebastian-heath">Sebastian Heath</a>, Editor. The current content of this site is very preliminary and under active editing and development.</p>
+        <p>Data and code available on <a href="https://github.com/orgs/gaerhf/repositories">Github.</a> <a
+                href="https://isaw.nyu.edu/people/faculty/sebastian-heath">Sebastian Heath</a>, Editor. The current
+            content of this site is very preliminary and under active editing and development.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
