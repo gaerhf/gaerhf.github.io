@@ -1123,6 +1123,7 @@
    :described-by <https://en.wikipedia.org/wiki/Grevensvænge_figurines> ;
    :earliest-date -800 ;
    :latest-date -500 ;
+   :in-modern-country-note "Denmark" ;
    :art-historical-culture-or-tradition :nordic-bronze-age ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DO-10044-Figurer_Grevensvænge.jpg> .
 
@@ -1545,6 +1546,15 @@
    :earliest-date 500 ;
    :latest-date 600 ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:太田市飯塚町出土_埴輪_挂甲の武人-2.jpg> .
+
+:sekijun-male-figure a :human-figure ;
+   rdfs:label "Sekijin Male Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Sekijin_sekiba> ;
+   :earliest-date 500 ;
+   :latest-date 600 ;
+   :in-modern-country-note "Japan" ;
+   :art-historical-culture-or-tradition :kofun-period ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:岩戸山古墳出土_石人_(J-831).JPG> .
 
 :moche-head-shaped-vessel a :human-figure ;
    rdfs:label "Moche Head-shaped Vessel" ;

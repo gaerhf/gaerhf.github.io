@@ -14,6 +14,12 @@ let figuresDict = {};
 let currentSortedIndex = [];
 let tp;
 
+// Playback variables
+let timelinePlayInterval = null;
+let timelinePlayIndex = 0;
+
+let currentFigureId = null;
+
 // Convenience functions
 function formatDateForDisplay(date) {
     if (date === null) {
@@ -426,6 +432,8 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
     // Get the width of the timeline container for label positioning
     const containerWidth = timelineContainer.offsetWidth;
 
+    let hoverTimeout = null;
+
     figuresDisplayIndex.forEach((figureId, index) => {
         const figure = figuresDict[figureId];
         const startDate = figure.earliestDate || figure.date || figure.approximateDate;
@@ -448,10 +456,21 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
         figureDiv.style.position = 'absolute';
         figureDiv.style.left = `${startPercent}%`;
         figureDiv.style.width = `${Math.max(endPercent - startPercent, 0.5)}%`;
-        figureDiv.style.top = `${index * 15}px`;
+        figureDiv.style.top = `${index * 20}px`; // Use 20px or more for better spacing
         figureDiv.title = `${figure.label || figure.id}: ${formatDateForDisplay(startDate)} - ${formatDateForDisplay(endDate)}`;
         figureDiv.addEventListener('click', () => {
             showFigureDetails(figureId);
+        });
+        figureDiv.dataset.figureId = figureId;
+
+        figureDiv.addEventListener('mouseover', () => {
+            hoverTimeout = setTimeout(() => {
+                showFigureDetails(figureId);
+            }, 250);
+        });
+
+        figureDiv.addEventListener('mouseout', () => {
+            clearTimeout(hoverTimeout);
         });
 
         // Add country label if available
@@ -478,10 +497,12 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
 
     // Optional: set container to relative positioning for absolute bars
     timelineContainer.style.position = 'relative';
-    timelineContainer.style.height = `${figuresDisplayIndex.length * 15 + 20}px`;
+    timelineContainer.style.height = `${figuresDisplayIndex.length * 20 + 20}px`;
 }
 
 async function showFigureDetails(figureId) {
+    currentFigureId = figureId;
+
     const figure = figuresDict[figureId];
     if (figure && headerContainer) {
         detailLabel.textContent = figure.label || figure.id;
@@ -643,6 +664,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
     const timelineScale = document.getElementById('figure-timeline-scale');
+    const playBtn = document.getElementById('timeline-play-btn');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -664,6 +686,93 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 timelineScale.classList.remove('active');
             }
+
+            // Show/hide the play button
+            if (button.getAttribute('data-tab') === 'figure-timeline') {
+                playBtn.style.display = '';
+            } else {
+                playBtn.style.display = 'none';
+                stopTimelinePlayback();
+            }
         });
     });
+
+    playBtn.addEventListener('click', () => {
+        if (playBtn.dataset.playing === "true") {
+            stopTimelinePlayback();
+        } else {
+            startTimelinePlayback();
+        }
+    });
 });
+
+function highlightAndScrollToFigure(figureId) {
+    document.querySelectorAll('.timeline-figure.highlighted').forEach(div => {
+        div.classList.remove('highlighted');
+    });
+    const currentDiv = document.querySelector(`.timeline-figure[data-figure-id="${figureId}"]`);
+    if (currentDiv) {
+        currentDiv.classList.add('highlighted');
+        const timelineContainer = document.getElementById('figure-timeline');
+        const containerHeight = timelineContainer.clientHeight;
+        const divOffsetTop = currentDiv.offsetTop;
+        const divHeight = currentDiv.offsetHeight;
+        const newScrollTop = divOffsetTop - (containerHeight / 2) + (divHeight / 2);
+        const maxScroll = timelineContainer.scrollHeight - containerHeight;
+        timelineContainer.scrollTop = Math.max(0, Math.min(newScrollTop, maxScroll));
+    }
+}
+
+function startTimelinePlayback() {
+    const playBtn = document.getElementById('timeline-play-btn');
+    playBtn.textContent = '⏸️';
+    playBtn.dataset.playing = "true";
+
+    const timelineTab = document.getElementById('figure-timeline-container');
+    let figures = [];
+    if (timelineTab && timelineTab.classList.contains('active')) {
+        figures = Array.from(document.querySelectorAll('.timeline-figure')).map(div => div.dataset.figureId);
+        if (!figures.length && typeof currentSortedIndex !== "undefined") {
+            figures = currentSortedIndex;
+        }
+    } else if (typeof currentSortedIndex !== "undefined") {
+        figures = currentSortedIndex;
+    }
+
+    if (!figures.length) return;
+
+    // Start from the current figure if available
+    let startIndex = 0;
+    if (currentFigureId) {
+        const idx = figures.indexOf(currentFigureId);
+        if (idx !== -1) startIndex = idx;
+    }
+    timelinePlayIndex = startIndex;
+
+    showFigureDetails(figures[timelinePlayIndex]);
+    highlightAndScrollToFigure(figures[timelinePlayIndex]);
+
+    timelinePlayInterval = setInterval(() => {
+        timelinePlayIndex++;
+        if (timelinePlayIndex >= figures.length) {
+            stopTimelinePlayback();
+            return;
+        }
+        showFigureDetails(figures[timelinePlayIndex]);
+        highlightAndScrollToFigure(figures[timelinePlayIndex]);
+    }, 2000);
+}
+
+function stopTimelinePlayback() {
+    const playBtn = document.getElementById('timeline-play-btn');
+    playBtn.textContent = '▶️';
+    playBtn.dataset.playing = "false";
+    if (timelinePlayInterval) {
+        clearInterval(timelinePlayInterval);
+        timelinePlayInterval = null;
+    }
+    // Remove highlight when stopped
+    document.querySelectorAll('.timeline-figure.highlighted').forEach(div => {
+        div.classList.remove('highlighted');
+    });
+}
