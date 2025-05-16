@@ -7,14 +7,8 @@ body {
     position: relative; /* Needed for absolute positioning of the footer */
 }
 
-#main-title {
-    font-size:1.5em;
-    padding:0px;
-    margin:0px;
-}
-
 #figure-list-container {
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 #figure-list {
@@ -66,59 +60,56 @@ body {
     top: 0;
     z-index: 100;
     background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 27em;
+    /* padding: 8px 0 4px 0; */
+    height: 22em;
 }
 
 #header-bottom {
     width: 100%;
-    margin-top: auto; /* Pushes this section to the bottom of header-container */
+    margin-top: 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
 }
 
 #figure-details-wrapper {
     display: flex;
-    width: 80%;
-    margin-top: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 70%;
     background-color: #eee;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 8px;
+    padding: 12px 16px;
     position: relative;
-    flex-wrap: wrap;
-}
-
-#detail-info {
-    flex-grow: 1;
-    margin-right: 20px;
-    text-align: left;
-}
-
-#detail-image {
-    flex-shrink: 0;
-    max-width: 200px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-#detail-image img {
-    max-height: 250px;
-    width: auto;
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    float: right;
-    margin: 0 0 10px 10px;
+    min-height: 80px;
+    gap: 20px;
 }
 
 #detail-label {
-    font-size: 1.5em;
-    margin-top: 15px;
     text-align: center;
-    width: 100%;
+    margin-left: 4em;
+    font-size: 1.1em;
+}
+
+#detail-info {
+    flex: 1 1 0;
+    text-align: left;
+    /* Optionally add a little left padding if you want */
+    /* padding-left: 8px; */
+}
+
+#detail-image {
+    flex: 0 0 auto;
+    max-width: 200px;
+    margin: 0;
+}
+
+#detail-image img {
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .culture-info {
@@ -158,7 +149,6 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 80%;
     max-height: 80%;
     overflow-y: auto;
@@ -388,4 +378,12 @@ body {
     cursor: pointer;
     background: none;
     border: none;
+}
+
+#main-title {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 6px 0;
+    font-size: 1.2em;
+    display: block;
 }

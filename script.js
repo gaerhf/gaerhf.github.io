@@ -478,6 +478,9 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
 
         figureDiv.addEventListener('mouseover', () => {
             hoverTimeout = setTimeout(() => {
+                document.querySelectorAll('.timeline-figure.highlighted').forEach(div => {
+                    div.classList.remove('highlighted');
+                });
                 showFigureDetails(figureId);
             }, 250);
         });
@@ -519,7 +522,6 @@ async function showFigureDetails(figureId) {
     const figure = figuresDict[figureId];
     if (figure && headerContainer) {
         detailLabel.textContent = figure.label || figure.id;
-        detailLabel.setAttribute("id", `label-${figure.id}`);
         detailInfo.innerHTML = '';
         detailImageDiv.innerHTML = '';
 
@@ -734,6 +736,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollToListFigure(currentFigureId);
             } else if (tabName === 'figure-timeline' && currentFigureId) {
                 scrollToTimelineFigure(currentFigureId);
+                highlightTimelineFigure(currentFigureId);
             }
             // ------------------------------------------------------
         });
