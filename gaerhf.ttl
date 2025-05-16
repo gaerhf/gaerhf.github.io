@@ -616,6 +616,16 @@
 
 # https://www.metmuseum.org/art/collection/search/547202
 
+:westray-figurine a :human-figure ;
+   rdfs:label "Westray Figurine" ;
+   :described-by <https://www.historicenvironment.scot/archives-and-research/archives-and-collections/properties-in-care-collections/object/figurine-3800-bc-2500-bc-neolithic-links-of-noltland-26222>,
+      <https://en.wikipedia.org/wiki/Westray_Wife> ;
+   :earliest-date -3800 ;
+   :latest-date -2500 ;
+   :in-modern-country-note "Scotland" ;
+   :art-historical-culture-or-tradition :neolithic-europe ;
+   :thumbnail-image <https://vernonbrowser.historicenvironment.scot/records/images/xlarge/4886/6a20d0f81f14281c217fad52372a45859d6937ac.jpg> .
+
 :egyptian-predynastic-female-figurine a :human-figure ;
    rdfs:label "Egyptian Predynastic Female Figurine" ;
    :described-by <https://www.brooklynmuseum.org/opencollection/objects/4223> ;
@@ -1288,6 +1298,7 @@
    :date -209 ;
    :described-by <https://en.wikipedia.org/wiki/Terracotta_Army> ;
    :art-historical-culture-or-tradition :qin-empire ;
+   :in-modern-country-note "China" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerreros_de_Terracota,_Xi%27an_(15547299927).jpg>.
 
 :hopewell-mica-torso a :human-figure ;
@@ -1399,12 +1410,22 @@
    :earliest-date 350 ;
    :latest-date 450 .
 
+:smiss-stone-figure-snakes a :human-figure ;
+   rdfs:label "Carved Stone with Figure Holding Snakes from Smiss" ;
+   :described-by <https://en.wikipedia.org/wiki/Snake-witch_stone> ;
+   :earliest-date 400 ;
+   :latest-date 600 ;
+   :in-modern-country-note "Sweden" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Snake-witch.JPG> .
+
 :mankuwar-buddha a :human-figure ;
    rdfs:label "Mankuwar Buddha" ;
    :described-by <https://en.wikipedia.org/wiki/Gupta_art#Sarnath_school> ;
    :date 448 ;
    :in-modern-country-note "India" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mankuwar_Buddha_with_background.jpg> .
+
+# 550 https://en.wikipedia.org/wiki/Head_of_Eutropius
 
 :maitreya-in-meditation a :human-figure ;
    :described-by <https://www.metmuseum.org/perspectives/pensive-treasure>, <https://www.museum.go.kr/site/eng/relic/represent/view?relicId=1256> ;

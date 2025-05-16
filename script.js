@@ -237,6 +237,7 @@ async function renderFiguresAsList(figuresArray) {
     for (const figureId of figuresArray) {
         const figure = figuresDict[figureId];
         const figureItem = document.createElement('div');
+        figureItem.setAttribute('id', `list-${figure.id}`);
         figureItem.classList.add('figure-item');
         figureItem.style.display = 'flex';
         figureItem.style.alignItems = 'center';
@@ -309,6 +310,17 @@ async function renderFiguresAsList(figuresArray) {
         });
         figureListDiv.appendChild(figureItem);
     }
+
+    // --- Add this block at the end ---
+    // If there's a hash in the URL, scroll to that figure
+    const hash = window.location.hash;
+    if (hash && hash.length > 1) {
+        const figureId = hash.substring(1);
+        if (document.getElementById(`list-${figureId}`)) {
+            scrollToListFigure(figureId);
+        }
+    }
+    // --- End block ---
 }
 
 // Timeline display settings
@@ -452,6 +464,7 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
         const endPercent = scaledEnd * 100;
 
         const figureDiv = document.createElement('div');
+        figureDiv.setAttribute('id', `timeline-${figureId}`);
         figureDiv.classList.add('timeline-figure');
         figureDiv.style.position = 'absolute';
         figureDiv.style.left = `${startPercent}%`;
@@ -506,6 +519,7 @@ async function showFigureDetails(figureId) {
     const figure = figuresDict[figureId];
     if (figure && headerContainer) {
         detailLabel.textContent = figure.label || figure.id;
+        detailLabel.setAttribute("id", `label-${figure.id}`);
         detailInfo.innerHTML = '';
         detailImageDiv.innerHTML = '';
 
@@ -571,6 +585,15 @@ async function showFigureDetails(figureId) {
         if (figure.note) {
             detailInfo.innerHTML += `<p><strong>Note:</strong> ${figure.note}</p>`;
         }
+
+        const directLink = document.createElement('p');
+        const link = document.createElement('a');
+        link.href = `/#${figure.id}`;
+        link.textContent = 'Direct Link';
+        link.target = '_blank';
+        directLink.appendChild(link);
+        detailInfo.appendChild(directLink);
+
     } else {
         console.error("Figure details not found for ID:", figureId);
     }
@@ -605,7 +628,6 @@ async function getWikimediaImageUrl(pageUrl, width = 200) {
 }
 
 async function loadAndDisplayFigures($rdf) {
-
     const filteredFiguresIndex = filterFiguresByDateRange(minYear, maxYear);
     console.log("Filtered figures count:", filteredFiguresIndex.length);
 
@@ -619,6 +641,18 @@ async function loadAndDisplayFigures($rdf) {
 
     renderFiguresAsList(sortedFiguresIndex);
     renderFiguresAsTimeline(sortedFiguresIndex);
+
+    // --- Add this block ---
+    // Check for hash in URL and show that figure if present and valid
+    const hash = window.location.hash;
+    if (hash && hash.length > 1) {
+        const figureId = hash.substring(1);
+        if (figuresDict[figureId]) {
+            showFigureDetails(figureId);
+            return; // Don't show the first by default if hash is present
+        }
+    }
+    // --- End block ---
 
     if (sortedFiguresIndex.length > 0) {
         showFigureDetails(sortedFiguresIndex[0]);
@@ -694,6 +728,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 playBtn.style.display = 'none';
                 stopTimelinePlayback();
             }
+
+            // --- Scroll to current figure in the relevant view ---
+            if (tabName === 'figure-list' && currentFigureId) {
+                scrollToListFigure(currentFigureId);
+            } else if (tabName === 'figure-timeline' && currentFigureId) {
+                scrollToTimelineFigure(currentFigureId);
+            }
+            // ------------------------------------------------------
         });
     });
 
@@ -706,21 +748,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function highlightAndScrollToFigure(figureId) {
+function scrollToListFigure(figureId) {
+    const currentDiv = document.getElementById(`list-${figureId}`);
+    if (currentDiv) {
+        currentDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        console.warn(`Element with ID list-${figureId} not found.`);
+    }
+}
+
+function scrollToTimelineFigure(figureId) {
+    const currentDiv = document.getElementById(`timeline-${figureId}`);
+    if (currentDiv) {
+        currentDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        console.warn(`Element with ID list-${figureId} not found.`);
+    }
+}
+
+function highlightTimelineFigure(figureId) {
     document.querySelectorAll('.timeline-figure.highlighted').forEach(div => {
         div.classList.remove('highlighted');
     });
-    const currentDiv = document.querySelector(`.timeline-figure[data-figure-id="${figureId}"]`);
+    const currentDiv = document.getElementById(`timeline-${figureId}`);
     if (currentDiv) {
         currentDiv.classList.add('highlighted');
-        const timelineContainer = document.getElementById('figure-timeline');
-        const containerHeight = timelineContainer.clientHeight;
-        const divOffsetTop = currentDiv.offsetTop;
-        const divHeight = currentDiv.offsetHeight;
-        const newScrollTop = divOffsetTop - (containerHeight / 2) + (divHeight / 2);
-        const maxScroll = timelineContainer.scrollHeight - containerHeight;
-        timelineContainer.scrollTop = Math.max(0, Math.min(newScrollTop, maxScroll));
-    }
+        }
 }
 
 function startTimelinePlayback() {
@@ -750,7 +803,8 @@ function startTimelinePlayback() {
     timelinePlayIndex = startIndex;
 
     showFigureDetails(figures[timelinePlayIndex]);
-    highlightAndScrollToFigure(figures[timelinePlayIndex]);
+    scrollToTimelineFigure(figures[timelinePlayIndex]);
+    highlightTimelineFigure(figures[timelinePlayIndex]);
 
     timelinePlayInterval = setInterval(() => {
         timelinePlayIndex++;
@@ -759,7 +813,8 @@ function startTimelinePlayback() {
             return;
         }
         showFigureDetails(figures[timelinePlayIndex]);
-        highlightAndScrollToFigure(figures[timelinePlayIndex]);
+        highlightTimelineFigure(figures[timelinePlayIndex]);
+        scrollToTimelineFigure(figures[timelinePlayIndex]);
     }, 2000);
 }
 
@@ -776,3 +831,10 @@ function stopTimelinePlayback() {
         div.classList.remove('highlighted');
     });
 }
+
+window.addEventListener('hashchange', () => {
+    const hash = window.location.hash;
+    if (hash && hash.length > 1 && figuresDict[hash.substring(1)]) {
+        showFigureDetails(hash.substring(1));
+    }
+});
