@@ -142,6 +142,12 @@
    rdfs:label "Kingdom of Nri" ;
    :described-by <https://en.m.wikipedia.org/wiki/Kingdom_of_Nri> .
 
+
+:kofun-period a :culture ;
+   rdfs:label "Kofun Period" ;
+   :region :japan ;
+   :described-by <https://en.wikipedia.org/wiki/Kofun_period> .
+
 :magdalenian a :culture ;
    rdfs:label "Magdalenian" ;
    :described-by <https://en.wikipedia.org/wiki/Magdalenian> .
@@ -491,6 +497,16 @@
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Woman_of_Çatalhöyük_on_black_background.jpg> .
 
+:cueva-huenul-1-rock-art a :group-of-human-figures ;
+   rdfs:label "Cueva Huenul 1 Rock Art" ;
+   :described-by <https://www.science.org/doi/10.1126/sciadv.adk4415> ;
+   :earliest-date -6500 ;
+   :latest-date -3500 ;
+   :note "The small human figures post-date the earliest motifs and so may be late in date range." ;
+   :in-modern-country-note "Argentina" ;
+   :thumbnail-image <https://www.science.org/cms/10.1126/sciadv.adk4415/asset/c816897b-7a60-4e2f-865f-afdf49480a97/assets/images/large/sciadv.adk4415-f5.jpg> .
+
+
 :bangudae-petroglyphs a :group-of-human-figures ;
    rdfs:label "Bangudae Petroglyphs" ;
    :described-by <https://en.wikipedia.org/wiki/Bangudae_Petroglyphs#Human_figures> ;
@@ -705,6 +721,16 @@
    :art-historical-culture-or-tradition :saharan-rock-art ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_11/10_22/9aeb1cc8_a698_40ee_97cd_a3df01714a90/mid_01556626_001.jpg> .
 
+:dogu-female-abstract-figurine a :human-figure ;
+   rdfs:label "Dōgu Female Abstract Figurine" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> ;
+   :earliest-date -3000 ;
+   :latest-date -2000 ;
+   :in-modern-country-note "Japan" ;
+   :art-historical-culture-or-tradition :jomon ;
+   :note "This particular dōgu does not have its own landing page on Wikipedia or the internet generally. It should." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> .
+
 :tel-asmar-temple-figures a :human-figure ;
    rdfs:label "Tel Asmar Temple Figures" ;
    :described-by <https://smarthistory.org/standing-male-worshipper-from-the-square-temple-at-eshnunna-tell-asmar/> ;
@@ -861,7 +887,7 @@
    :earliest-date -1800 ;
    :latest-date -1600 ;
    :in-modern-country-note "Israel" ;
-   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Thinker_from_Yehud.jpeg> .
+   :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/d/d6/Thinker_from_Yehud.jpeg?20230912000419> .
 
 :mycenaean-funerary-mask-grave-circle-b a :human-figure ;
    rdfs:label "Mycenaean Gold Mask from Grave Circle B" ;
@@ -1002,6 +1028,7 @@
 
 :jomon-doju-statuette a :human-figure ;
    rdfs:label "Jōmon dogū statuette" ;
+   :described-by <https://en.wikipedia.org/wiki/Dogū#Shakōkidogū> ;
    :earliest-date -1000 ;
    :latest-date -400 ;
    :in-modern-country-note "Japan" ;
@@ -1018,8 +1045,10 @@
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/316443/655595/main-image> .
 
 :chorrera-ceramic-figure-pendant a :human-figure ;
+   rdfs:label "Chorrera Ceramic Figure Pendant" ;
    :described-by <https://www.metmuseum.org/art/collection/search/314168> ;
    :art-historical-culture-or-tradition :chorrera ;
+   :in-modern-country-note "Ecuador" ;
    :earliest-date -1000 ;
    :latest-date -200 .
 
@@ -1132,6 +1161,7 @@
    rdfs:label "Euphronios Krater" ;
    :described-by <https://en.wikipedia.org/wiki/Euphronios_Krater> ;
    :approximate-date -520 ;
+   :in-modern-country-note "Made in Greece, found in Italy" ;
    :art-historical-culture-or-tradition :archaic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Euphronios_krater_side_A_MET_L.2006.10.jpg> .
 
@@ -1506,6 +1536,15 @@
    :period-note "Gupta (India)" ;
    :earliest-date 400 ;
    :latest-date 600 .
+
+:haniwa-warrior-keiko-armor a :human-figure ;
+   rdfs:label "Haniwa Warrior in Keiko Armor" ;
+   :described-by <https://en.wikipedia.org/wiki/Haniwa_Warrior_in_Keiko_Armor> ;
+   :in-modern-country-note "Japan" ;
+   :art-historical-culture-or-tradition :kofun-period ;
+   :earliest-date 500 ;
+   :latest-date 600 ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:太田市飯塚町出土_埴輪_挂甲の武人-2.jpg> .
 
 :moche-head-shaped-vessel a :human-figure ;
    rdfs:label "Moche Head-shaped Vessel" ;

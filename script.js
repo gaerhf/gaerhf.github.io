@@ -483,7 +483,6 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
 
 async function showFigureDetails(figureId) {
     const figure = figuresDict[figureId];
-    console.log("Showing details for figure:", figureId, figure);
     if (figure && headerContainer) {
         detailLabel.textContent = figure.label || figure.id;
         detailInfo.innerHTML = '';
@@ -633,7 +632,6 @@ async function initializeStore($rdf) {
 (async function initializeAndLoadFigures() {
     if (await initializeStore($rdf)) {
         figuresDict = await buildFiguresInfoDict($rdf);
-        console.log("Figures dictionary initialized:", figuresDict);
     }
     loadAndDisplayFigures($rdf);
 })();
