@@ -532,7 +532,8 @@ async function showFigureDetails(figureId) {
         const linkIcon = document.createElement('a');
         linkIcon.href = `/#${figure.id}`;
         linkIcon.target = '_blank';
-        linkIcon.style.marginLeft = '0.5em';
+        linkIcon.style.marginLeft = '0.6em';
+        linkIcon.style.fontSize = '.5em';
         linkIcon.title = 'Direct link to this figure';
         // Unicode "link" icon: 🔗 (U+1F517)
         linkIcon.textContent = '🔗';
