@@ -280,6 +280,16 @@
    :art-historical-culture-or-tradition :aurignacian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_vom_Galgenberg.JPG> .
 
+:figure-carved-in-mammoth-tusk a :human-figure ;
+   rdfs:label "Figure carved in Mammoth Tusk" ;
+   :described-by <https://en.wikipedia.org/wiki/Adorant_from_the_Geißenklösterle_cave> ;
+   :earliest-date -35000 ;
+   :latest-date -30000 ;
+   :in-modern-country-note "Germany" ;
+   :art-historical-culture-or-tradition :aurignacian ;
+   :note "So-called “adorant” from the Geißenklösterle cave" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adorant,_Geisenklösterle,_Blaubeuren-Weiler,_Alb-Donau-Kreis,_Aurignacian_culture,_35,000_to_45,000_years_old,_ivory_-_Landesmuseum_Württemberg_-_Stuttgart,_Germany_-_DSC02709.jpg> .
+
 :dolni-vestonice-figurine a :human-figure ;
    rdfs:label "Dolní Věstonice Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Doln%C3%AD_V%C4%9Bstonice> ;
