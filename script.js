@@ -527,6 +527,17 @@ async function showFigureDetails(figureId) {
     const figure = figuresDict[figureId];
     if (figure && headerContainer) {
         detailLabel.textContent = figure.label || figure.id;
+
+        // Add direct link icon
+        const linkIcon = document.createElement('a');
+        linkIcon.href = `/#${figure.id}`;
+        linkIcon.target = '_blank';
+        linkIcon.style.marginLeft = '0.5em';
+        linkIcon.title = 'Direct link to this figure';
+        // Unicode "link" icon: 🔗 (U+1F517)
+        linkIcon.textContent = '🔗';
+        detailLabel.appendChild(linkIcon);
+
         detailInfo.innerHTML = '';
         detailImageDiv.innerHTML = '';
 
@@ -603,13 +614,13 @@ async function showFigureDetails(figureId) {
             detailInfo.innerHTML += `<p><strong>Note:</strong> ${figure.note}</p>`;
         }
 
-        const directLink = document.createElement('p');
-        const link = document.createElement('a');
-        link.href = `/#${figure.id}`;
-        link.textContent = 'Direct Link';
-        link.target = '_blank';
-        directLink.appendChild(link);
-        detailInfo.appendChild(directLink);
+        // const directLink = document.createElement('p');
+        // const link = document.createElement('a');
+        // link.href = `/#${figure.id}`;
+        // link.textContent = 'Direct Link';
+        // link.target = '_blank';
+        // directLink.appendChild(link);
+        // detailInfo.appendChild(directLink);
 
     } else {
         console.error("Figure details not found for ID:", figureId);
