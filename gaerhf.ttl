@@ -426,6 +426,8 @@
    :in-modern-country-note "Bulgaria" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Magura_-_drawings.jpg> .
 
+# -10000?? https://en.wikipedia.org/wiki/El_Abra
+
 :balikligol-life-size-figure a :human-figure ;
    rdfs:label "Balıklıgöl Life-Size Figure" ;
    :described-by <https://en.wikipedia.org/wiki/Urfa_Man> ;
@@ -447,15 +449,6 @@
 
 # -8000 https://virtual-museum-syria.org/aleppo/female-figurine-2/
 
-:tell-qarassa-bone-wand-faces a :group-of-human-figures ;
-   rdfs:label "Tell Qarassa Bone “Wand” with Faces" ;
-   :described-by <https://archaeology.org/issues/july-august-2014/artifacts/syria-neolithic-carved-bone-wand/>,
-   <https://doi.org/10.1017/S0003598X00050237> ;
-   :earliest-date -8000 ;
-   :latest-date -7000 ;
-   :in-modern-country-note "Syria" ;
-   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
-   :thumbnail-image <https://archaeology.org/wp-content/uploads/2014/06/JA14-Artifact-Syrian-Neolithic-Face-Wand.jpg> .
 
 :flint-anthropoid-figurines-kharaysin a :group-of-human-figures ;
    rdfs:label "Flint Anthropoid Figurines from Kharaysin" ;
@@ -482,6 +475,18 @@
    :in-modern-country-note "Syria" ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :thumbnail-image <https://virtual-museum-syria.org/aleppo/wp-content/uploads/sites/2/2021/06/fINbasiC-2-800x1574.jpg> .
+
+:tell-qarassa-bone-wand-faces a :group-of-human-figures ;
+   rdfs:label "Tell Qarassa Bone “Wand” with Faces" ;
+   :described-by <https://archaeology.org/issues/july-august-2014/artifacts/syria-neolithic-carved-bone-wand/>,
+   <https://doi.org/10.1017/S0003598X00050237> ;
+   :earliest-date -8000 ;
+   :latest-date -7000 ;
+   :in-modern-country-note "Syria" ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2014/06/JA14-Artifact-Syrian-Neolithic-Face-Wand.jpg> .
+
+# -8000 https://en.wikipedia.org/wiki/Toquepala_Caves
 
 :ain-ghazal-statues a :group-of-human-figures ;
    rdfs:label "Ain Ghazal Statues" ;
@@ -553,6 +558,7 @@
    :in-modern-country-note "Argentina" ;
    :thumbnail-image <https://www.science.org/cms/10.1126/sciadv.adk4415/asset/c816897b-7a60-4e2f-865f-afdf49480a97/assets/images/large/sciadv.adk4415-f5.jpg> .
 
+# -6000 https://www.bradshawfoundation.com/africa/gilf_kebir_cave_of_swimmers/index.php
 
 :bangudae-petroglyphs a :group-of-human-figures ;
    rdfs:label "Bangudae Petroglyphs" ;
@@ -1600,6 +1606,15 @@
    :earliest-date 100 ;
    :latest-date 400 .
 
+:kushan-plaque-with-two-figures a :group-of-human-figures ;
+   rdfs:label "Kushan Plaque with Two Figures" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/327830> ;
+   :earliest-date 200 ;
+   :latest-date 300 ;
+   :in-modern-country-note "Afghanistan and neighboring." ;
+   :art-historical-culture-or-tradition :kushan-empire ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327830/711829/main-image> .
+
 :terracotta-ganges-and-attendant a :human-figure ;
    :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
    :period-note "Gupta (India)" ;
@@ -1729,6 +1744,10 @@
    :art-historical-culture-or-tradition :khmer-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fronton_Cambodge_Musée_Guimet_9972.jpg> .
 
+# 1000 - 1100 https://commons.wikimedia.org/wiki/File:Avalokiteshvara,_the_Bodhisattva_of_Compassion,_Guge_kingdom,_1000-1050_AD,_Ngari,_west_Tibet,_brass_alloy,_copper_%26_tin_inlay,_colored_wax,_traces_of_gilding,_and_pigment_-_Freer_Gallery_of_Art_-_DSC04534.jpg
+
+# 1000 - 1100 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F2001.2a-d/ https://commons.wikimedia.org/wiki/File:Avalokiteshvara,_the_Bodhisattva_of_Compassion,_Guge_kingdom,_1000-1050_AD,_Ngari,_west_Tibet,_brass_alloy,_copper_%26_tin_inlay,_colored_wax,_traces_of_gilding,_and_pigment_-_Freer_Gallery_of_Art_-_DSC04534.jpg
+
 :chaco-clay-figurines a :group-of-human-figures ;
    rdfs:label "Chaco Clay Figurines" ;
    :described-by <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600_full.html> ;
@@ -1737,6 +1756,24 @@
    :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :anasazi ;
    :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
+
+:dresden-codex a :group-of-human-figures ;
+   rdfs:label "Dresden Codex" ;
+   :described-by <https://en.wikipedia.org/wiki/Dresden_Codex> ;
+   :earliest-date 1000 ;
+   :latest-date 1200 ;
+   :in-modern-country-note "Mexico" ;
+   :art-historical-culture-or-tradition :maya-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dresden_Codex_p09.jpg> .
+
+:maya-codex-of-mexico a :group-of-human-figures ;
+   rdfs:label "Maya Codex of Mexico" ;
+   :described-by <https://en.wikipedia.org/wiki/Maya_Codex_of_Mexico> ;
+   :earliest-date 1021 ;
+   :latest-date 1152 ;
+   :in-modern-country-note "Mexico" ;
+   :art-historical-culture-or-tradition :maya-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Grolier_Codex_in_HuffPo_2.jpg> .
 
 :keller-figurine a :human-figure ;
    rdfs:label "Keller Figurine" ;
@@ -1757,6 +1794,8 @@
    :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :mississippian ;
    :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
+
+# 1150 - 1250 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1968.75/
 
 :bust-of-jayavarman-vii a :human-figure ;
    rdfs:label "Bust of Jayavarman VII" ;
