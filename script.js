@@ -160,7 +160,7 @@ async function buildFiguresInfoDict($rdf) {
 
                 const inModernCountry = tp.any(subject, inModernCountryProp);
                 const wikipediaImagePage = tp.anyValue(subject, wikipediaImagePageProp);
-                const describedBy = tp.anyValue(subject, describedByProp);
+                const describedBy = tp.each(subject, describedByProp).map(val => val.value);
                 const thumbnailURL = tp.anyValue(subject, thumbnailImageProp); // Get explicit thumbnail
 
                 if (culture) {
@@ -579,14 +579,24 @@ async function showFigureDetails(figureId) {
             detailInfo.innerHTML += `<p><strong>Latest Date:</strong> ${formatDateForDisplay(figure.latestDate)}</p>`;
         }
 
-        if (figure.describedBy) {
-            const describedByLink = document.createElement('p');
-            const link = document.createElement('a');
-            link.href = figure.describedBy;
-            link.textContent = 'More information';
-            link.target = '_blank';
-            describedByLink.appendChild(link);
-            detailInfo.appendChild(describedByLink);
+        if (figure.describedBy && figure.describedBy.length > 0) {
+            const morePara = document.createElement('p');
+            morePara.textContent = 'More: ';
+            figure.describedBy.forEach((url, idx) => {
+                const link = document.createElement('a');
+                link.href = url;
+                try {
+                    link.textContent = new URL(url).hostname;
+                } catch {
+                    link.textContent = url;
+                }
+                link.target = '_blank';
+                morePara.appendChild(link);
+                if (idx < figure.describedBy.length - 1) {
+                    morePara.appendChild(document.createTextNode(', '));
+                }
+            });
+            detailInfo.appendChild(morePara);
         }
 
         if (figure.note) {
