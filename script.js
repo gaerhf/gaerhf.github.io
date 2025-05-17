@@ -519,6 +519,11 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
 async function showFigureDetails(figureId) {
     currentFigureId = figureId;
 
+    // Update the URL hash without reloading the page
+    if (window.location.hash !== `#${figureId}`) {
+        history.replaceState(null, '', `#${figureId}`);
+    }
+
     const figure = figuresDict[figureId];
     if (figure && headerContainer) {
         detailLabel.textContent = figure.label || figure.id;

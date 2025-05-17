@@ -371,6 +371,15 @@
    :in-modern-country-note "Australia" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
 
+:grotta-dell-addaura-inscribed-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Grotta dell'Addaura Inscribed Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Grotta_dell%27Addaura> ;
+   :earliest-date -12000 ;
+   :latest-date -8000 ;
+   :in-modern-country-note "Italy" ;
+   :art-historical-culture-or-tradition :epigravettian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palermo-Museo-Archeologico-bjs-11.jpg> .
+
 :shigir-anthropomorphic-figure a :human-figure ;
    rdfs:label "Shigir Anthropomorphic Figure" ;
    :described-by <https://en.wikipedia.org/wiki/Shigir_Idol> ;
@@ -427,6 +436,34 @@
 # https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf
 
 # -8000 https://virtual-museum-syria.org/aleppo/female-figurine-2/
+
+:tell-qarassa-bone-wand-faces a :group-of-human-figures ;
+   rdfs:label "Tell Qarassa Bone “Wand” with Faces" ;
+   :described-by <https://archaeology.org/issues/july-august-2014/artifacts/syria-neolithic-carved-bone-wand/>,
+   <https://doi.org/10.1017/S0003598X00050237> ;
+   :earliest-date -8000 ;
+   :latest-date -7000 ;
+   :in-modern-country-note "Syria" ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2014/06/JA14-Artifact-Syrian-Neolithic-Face-Wand.jpg> .
+
+:flint-anthropoid-figurines-kharaysin a :group-of-human-figures ;
+   rdfs:label "Flint Anthropoid Figurines from Kharaysin" ;
+   :described-by <https://www.cambridge.org/core/journals/antiquity/article/flint-figurines-from-the-early-neolithic-site-of-kharaysin-jordan/FFEB57291718AF9FF216F1113844C61B> ;
+   :earliest-date -8500 ;
+   :latest-date -6500 ;
+   :in-modern-country-note "Jordan" ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20210127172904183-0208:S0003598X20000782:S0003598X20000782_fig4.png> .
+
+:ceramic-anthropoid-figurines-kharaysin a :group-of-human-figures ;
+   rdfs:label "Ceramic Anthropoid Figurines from Kharaysin" ;
+   :described-by <https://www.cambridge.org/core/journals/antiquity/article/flint-figurines-from-the-early-neolithic-site-of-kharaysin-jordan/FFEB57291718AF9FF216F1113844C61B> ;
+   :earliest-date -8500 ;
+   :latest-date -6500 ;
+   :in-modern-country-note "Jordan" ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20210127172904183-0208:S0003598X20000782:S0003598X20000782_fig6.png> .
 
 :tell-mureybet-female-figurine a :human-figure ;
    rdfs:label "Tell Mureybit Female Figurine" ;
