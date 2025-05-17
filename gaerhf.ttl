@@ -1019,6 +1019,14 @@
    :described-by <https://en.wikipedia.org/wiki/Nefertiti_Bust> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Nofretete_Neues_Museum.jpg> .
 
+:mask-of-tutankhamun a :human-figure ;
+   rdfs:label "Mask of Tutankhamun" ;
+   :described-by <https://en.wikipedia.org/wiki/Mask_of_Tutankhamun> ;
+   :art-historical-culture-or-tradition :pharaonic-egypt ;
+   :approximate-date -1323 ;
+   :in-modern-country-note "Egypt" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CairoEgMuseumTaaMaskMostlyPhotographed.jpg> .
+
 :sanxingdui-standing-figure a :human-figure ;
    rdfs:label "Sanxingdui Standing Figure" ;
    :described-by <https://en.wikipedia.org/wiki/Sanxingdui> ;
@@ -1620,6 +1628,15 @@
    :period-note "Gupta (India)" ;
    :earliest-date 400 ;
    :latest-date 600 .
+
+:christ-pantokrator-saint-catherines a :human-figure ;
+   rdfs:label "Christ Pantokrator, Saint Catherine's Monastery" ;
+   :described-by <https://en.wikipedia.org/wiki/Christ_Pantocrator_(Sinai)> ;
+   :earliest-date 500 ;
+   :latest-date 550 ;
+   :in-modern-country-note "Egypt" ;
+   :art-historical-culture-or-tradition :byzantine-art ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay.jpg> .
 
 :haniwa-warrior-keiko-armor a :human-figure ;
    rdfs:label "Haniwa Warrior in Keiko Armor" ;
