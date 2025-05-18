@@ -148,6 +148,11 @@
    :region :japan ;
    :described-by <https://en.wikipedia.org/wiki/Kofun_period> .
 
+:lapita-culture a :culture ;
+   rdfs:label "Lapita Culture" ;
+   :region :oceania ;
+   :described-by <https://en.wikipedia.org/wiki/Lapita_culture> .
+
 :magdalenian a :culture ;
    rdfs:label "Magdalenian" ;
    :described-by <https://en.wikipedia.org/wiki/Magdalenian> .
@@ -341,6 +346,15 @@
    :in-modern-country-note "Russia" ;
    :art-historical-culture-or-tradition :gravettian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kostenki_I_Venus.jpg> .
+
+:female-figurine-from-laussel a :human-figure ;
+   rdfs:label "Female Figurine from Laussel" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_of_Laussel> ;
+   :earliest-date -23000 ;
+   :latest-date -22000 ;
+   :in-modern-country-note "France" ;
+   :art-historical-culture-or-tradition :gravettian ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_de_Laussel_expo_Art_et_Prehistoire.jpg> .
 
 :mal-ta-female-figurine a :group-of-human-figures ;
    rdfs:label "Figurines from Mal'ta (Siberia)" ;
@@ -866,9 +880,18 @@
    rdfs:label "Dagenham Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Dagenham_idol> ;
    :approximate-date -2250 ;
-   :in-modern-country-note "United Kingdom" ;
+   :in-modern-country-note "England" ;
    :art-historical-culture-or-tradition :neolithic-britain ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Dagenham_Idol.jpg> .
+
+:victory-stele-naram-sin a :group-of-human-figures ;
+   rdfs:label "Victory Stele of Naram-Sin" ;
+   :described-by <https://en.wikipedia.org/wiki/Victory_Stele_of_Naram-Sin> ;
+   :earliest-date -2250 ;
+   :latest-date -2200 ;
+   :in-modern-country-note "Iraq" ;
+   :art-historical-culture-or-tradition :akkadian-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Victory_stele_of_Naram-Suen_(31064823690)_(cropped).jpg> .
 
 :bmac-seated-female a :human-figure ;
    rdfs:label "BMAC Seated Female" ;
@@ -1074,6 +1097,16 @@
    :latest-date -900 ;
    :in-modern-country-note "Ireland" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_antropomorfa_probabilmente_segnacolo_di_confine,_da_una_torbiera_presso_ralaghan,_co._di_cavan,_1100-1000_ac_ca.jpg> .
+
+:lapita-sherd-face a :human-figure ;
+   rdfs:label "Lapita Sherd with Face" ;
+   :described-by <https://smarthistory.org/lapita/>,
+    <https://doi.org/10.1080/15564894.2012.726941>,
+    <https://www.jstor.org/stable/j.ctt24h9sg.17> ;
+   :approximate-date -1000 ;
+   :in-modern-country-note "Solomon Islands" ;
+   :art-historical-culture-or-tradition :lapita-culture ;
+   :thumbnail-image <https://smarthistory.org/wp-content/uploads/2016/12/lapitafragment.jpg> .
 
 :tlatico-figurines a :group-of-human-figures ;
    rdfs:label "Tlatilco Figurines" ;
@@ -1550,7 +1583,7 @@
    :material-note "Ceramic" ;
    :art-historical-culture-or-tradition :mauryan-empire ;
    :in-modern-country-note "India" ;
-   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/38075/2176388/restricted> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MauryanStatuette2ndCenturyBCE.jpg> .
 
 :mudgarpani-yaksha a :human-figure ;
    :described-by <https://commons.wikimedia.org/wiki/File:Mudgarpani_Yaksha,_Mathura,_100_BCE.jpg> ;
@@ -1630,12 +1663,13 @@
 
 :doll-tomb-crepereia-tryphaena a :human-figure ;
    rdfs:label "Doll from the Tomb of Crepereia Tryphaena" ;
-   :described-by <https://en.wikipedia.org/wiki/Crepereia_Tryphaena> ;
+   :described-by <https://en.wikipedia.org/wiki/Crepereia_Tryphaena>,
+      <https://www.centralemontemartini.org/en/percorso/crepereia-tryphaena> ;
    :earliest-date 120 ;
    :latest-date 160 ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :roman-empire ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Crepereia_Tryphaena_2.jpg> .
+   :thumbnail-image <https://www.centralemontemartini.org/sites/default/files/styles/large/public/storage/images/musei/centrale_montemartini/collezioni/percorsi_per_sale/sala_colonne/crepereia_tryphaena/corredo_di_crepereia_tryphaena_bambola/745590-1-ita-IT/corredo_di_crepereia_tryphaena_bambola.jpg> .
 
 :kushan-plaque-with-two-figures a :group-of-human-figures ;
    rdfs:label "Kushan Plaque with Two Figures" ;
@@ -1881,3 +1915,13 @@
    :in-modern-country-note "Cambodia" ;
    :art-historical-culture-or-tradition :khmer-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
+
+:etowah-mound-marble-figures a :group-of-human-figures ;
+   rdfs:label "Etowah Mound Marble Figures" ;
+   :described-by <https://en.wikipedia.org/wiki/Etowah_mounds>,
+   <http://www.lithiccastinglab.com/gallery-pages/2005juneetowahstatuespage1.htm> ;
+   :earliest-date 1250 ;
+   :latest-date 1375 ;
+   :in-modern-country-note "United States" ;
+   :art-historical-culture-or-tradition :mississippian ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .  
