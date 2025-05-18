@@ -224,6 +224,11 @@
    :described-by <https://africanrockart.britishmuseum.org/regional_introduction/rock-art-in-northern-africa/>,
     <https://en.wikipedia.org/wiki/Saharan_rock_art> .
 
+:sogdian-art a :culture ;
+   rdfs:label "Sogdian Art" ;
+   :region :central-asia ;
+   :described-by <https://en.wikipedia.org/wiki/Sogdian_art> .
+
 :shu-kingdom a :culture ;
    rdfs:label "Shu Kingdom" ;
    :region :china ;
@@ -1608,11 +1613,29 @@
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
 
+:birthing-scene-from-ostia a :group-of-human-figures ;
+   rdfs:label "Birthing Scene from Ostia" ;
+   :described-by <http://www.ostia-antica.org/museums/london-science-museum.htm> ;
+   :earliest-date 100 ;
+   :latest-date 300 ;
+   :in-modern-country-note "Italy" ;
+   :art-historical-culture-or-tradition :roman-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Marble_plaque_showing_parturition_scene,_Ostia,_Italy,_400_B_Wellcome_L0065025.jpg> . 
+
 :tolita-tumaco-bench-figure a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/316449> ;
    :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
    :earliest-date 100 ;
    :latest-date 400 .
+
+:doll-tomb-crepereia-tryphaena a :human-figure ;
+   rdfs:label "Doll from the Tomb of Crepereia Tryphaena" ;
+   :described-by <https://en.wikipedia.org/wiki/Crepereia_Tryphaena> ;
+   :earliest-date 120 ;
+   :latest-date 160 ;
+   :in-modern-country-note "Italy" ;
+   :art-historical-culture-or-tradition :roman-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Crepereia_Tryphaena_2.jpg> .
 
 :kushan-plaque-with-two-figures a :group-of-human-figures ;
    rdfs:label "Kushan Plaque with Two Figures" ;
@@ -1622,6 +1645,33 @@
    :in-modern-country-note "Afghanistan and neighboring." ;
    :art-historical-culture-or-tradition :kushan-empire ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327830/711829/main-image> .
+
+:balalyk-tepe-murals a :group-of-human-figures ;
+   rdfs:label "Balalyk Tepe Murals" ;
+   :described-by <https://en.wikipedia.org/wiki/Balalyk_Tepe> ;
+   :earliest-date 200 ;
+   :latest-date 400 ;
+   :in-modern-country-note "Turkmenistan" ;
+   :art-historical-culture-or-tradition :kushan-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_mural.jpg> .
+
+:mayan-wooden-kneeling-figure a :human-figure ;
+   rdfs:label "Mayan Wooden Kneeling Figure" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/313256> ;
+   :earliest-date 410 ;
+   :latest-date 650 ;
+   :in-modern-country-note "Mexico or Guatemala" ;
+   :art-historical-culture-or-tradition :mayan-culture ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-24340-001.jpg> .
+
+:penjikent-murals a :group-of-human-figures ;
+   rdfs:label "Penjikent Murals" ;
+   :described-by <https://en.wikipedia.org/wiki/Penjikent_murals> ;
+   :earliest-date 480 ;
+   :latest-date 722 ;
+   :in-modern-country-note "Tajikistan" ;
+   :art-historical-culture-or-tradition :sogdian-art ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_painting,_1st_half_of_7th_century_CE.jpg> .
 
 :terracotta-ganges-and-attendant a :human-figure ;
    :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
@@ -1706,6 +1756,15 @@
    :latest-date 700 ;
    :in-modern-country-note "India" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg> .
+
+:afrasiab-murals a :group-of-human-figures ;
+   rdfs:label "Afrasiab Murals" ;
+   :described-by <https://en.wikipedia.org/wiki/Afrasiab_murals> ;
+   :earliest-date 640 ;
+   :latest-date 660 ;
+   :in-modern-country-note "Uzbekistan" ;
+   :art-historical-culture-or-tradition :sogdian-art ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ambassadors_from_Chaganian_(central_figure,_inscription_of_the_neck),_and_Chach_(modern_Tashkent)_to_king_Varkhuman_of_Samarkand._648-651_CE,_Afrasiyab,_Samarkand.jpg> .
 
 :wari-head-shaped-vessel a :human-figure ;
    rdfs:label "Wari Head-shaped Vessel" ;
