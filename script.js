@@ -127,6 +127,7 @@ async function buildFiguresInfoDict($rdf) {
     const inModernCountryProp = $rdf.sym('urn:gaerhf:id:in-modern-country-note');
     const wikipediaImagePageProp = $rdf.sym('urn:gaerhf:id:wikimedia-commons-image-page');
     const thumbnailImageProp = $rdf.sym('urn:gaerhf:id:thumbnail-image'); // New property
+    const latLongProp = $rdf.sym('urn:gaerhf:id:representative-latlong-point');
 
     const processedDict = {};
 
@@ -162,6 +163,15 @@ async function buildFiguresInfoDict($rdf) {
                 const wikipediaImagePage = tp.anyValue(subject, wikipediaImagePageProp);
                 const describedBy = tp.each(subject, describedByProp).map(val => val.value);
                 const thumbnailURL = tp.anyValue(subject, thumbnailImageProp); // Get explicit thumbnail
+                const latLongNode = tp.any(subject, latLongProp);
+                let representativeLatLongPoint = null;
+                if (latLongNode && latLongNode.termType === 'Collection') {
+                    // It's an RDF list/collection
+                    const items = latLongNode.elements.map(el => parseFloat(el.value));
+                    if (items.length === 2 && items.every(v => !isNaN(v))) {
+                        representativeLatLongPoint = items;
+                    }
+                }
 
                 if (culture) {
                     cultureShortId = culture.uri.replace('urn:gaerhf:id:', '');
@@ -183,7 +193,8 @@ async function buildFiguresInfoDict($rdf) {
                     cultureDescribedBy: cultureDescribedBy,
                     inModernCountry: inModernCountry,
                     wikipediaImagePage: wikipediaImagePage,
-                    thumbnailURL: thumbnailURL 
+                    thumbnailURL: thumbnailURL ,
+                    representativeLatLongPoint: representativeLatLongPoint,
                 };
             }));
         });
@@ -516,6 +527,38 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
     timelineContainer.style.height = `${figuresDisplayIndex.length * 20 + 20}px`;
 }
 
+let leafletMap = null;
+
+function renderFiguresOnMap(figuresArray) {
+    // Only initialize once
+    if (!leafletMap) {
+        leafletMap = L.map('figure-map').setView([20, 0], 2); // World view
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(leafletMap);
+    }
+
+    // Remove existing markers
+    if (leafletMap._layers) {
+        Object.values(leafletMap._layers)
+            .filter(layer => layer instanceof L.Marker)
+            .forEach(marker => leafletMap.removeLayer(marker));
+    }
+
+    console.log("Rendering figures on map:", figuresArray.length);
+    figuresArray.forEach(figureId => {
+        const figure = figuresDict[figureId];
+        if (figure && figure.representativeLatLongPoint) {
+            const [lat, lng] = figure.representativeLatLongPoint;
+            const marker = L.marker([lat, lng]).addTo(leafletMap);
+            marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
+            marker.on('click', () => {
+                showFigureDetails(figureId);
+            });
+        }
+    });
+}
+
 async function showFigureDetails(figureId) {
     currentFigureId = figureId;
 
@@ -668,8 +711,10 @@ async function loadAndDisplayFigures($rdf) {
     const sortedFiguresIndex = sortFigures(filteredFiguresIndex, 'date');
     console.log("Sorted figures count:", sortedFiguresIndex.length);
 
-    renderFiguresAsList(sortedFiguresIndex);
-    renderFiguresAsTimeline(sortedFiguresIndex);
+    currentSortedIndex = sortedFiguresIndex;
+
+    renderFiguresAsList(currentSortedIndex);
+    renderFiguresAsTimeline(currentSortedIndex);
 
     // --- Add this block ---
     // Check for hash in URL and show that figure if present and valid
@@ -764,6 +809,14 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (tabName === 'figure-timeline' && currentFigureId) {
                 scrollToTimelineFigure(currentFigureId);
                 highlightTimelineFigure(currentFigureId);
+            } else if (tabName === 'figure-map') {
+                // For the map tab, ensure the map is rendered and centered on the current figure
+                setTimeout(() => {
+                    if (leafletMap) {
+                        leafletMap.invalidateSize();
+                    }
+                }, 200); // Delay to allow the tab to become visible
+                renderFiguresOnMap(currentSortedIndex);
             }
             // ------------------------------------------------------
         });
@@ -868,3 +921,5 @@ window.addEventListener('hashchange', () => {
         showFigureDetails(hash.substring(1));
     }
 });
+
+
