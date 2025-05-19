@@ -708,6 +708,7 @@
    :latest-date -2500 ;
    :in-modern-country-note "Scotland" ;
    :art-historical-culture-or-tradition :neolithic-europe ;
+   :representative-latlong-point (59.322778 -3) ; 
    :thumbnail-image <https://vernonbrowser.historicenvironment.scot/records/images/xlarge/4886/6a20d0f81f14281c217fad52372a45859d6937ac.jpg> .
 
 :egyptian-predynastic-female-figurine a :human-figure ;
