@@ -911,7 +911,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Victory_stele_of_Naram-Suen_(31064823690)_(cropped).jpg> .
 
 :bassetki-statue a :human-figure ;
-   rdfs:label "Bashetki Statue" ;
+   rdfs:label "Bassetki Statue" ;
    :described-by <https://en.wikipedia.org/wiki/Bashetki_Statue> ;
    :earliest-date -2250 ;
    :latest-date -2220 ;
