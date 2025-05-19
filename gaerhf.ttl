@@ -1141,6 +1141,7 @@
    :approximate-date -1000 ;
    :in-modern-country-note "Solomon Islands" ;
    :art-historical-culture-or-tradition :lapita-culture ;
+   :representative-latlong-point (-11 166.25) ; # for santa cruz islands
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2016/12/lapitafragment.jpg> .
 
 :tlatico-figurines a :group-of-human-figures ;
