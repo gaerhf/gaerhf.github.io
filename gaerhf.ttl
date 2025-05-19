@@ -408,6 +408,8 @@
    :earliest-date -15000 ;
    :latest-date -3000 ;
    :in-modern-country-note "Australia" ;
+   :representative-latlong-point (-17.49145 124.53265) ;
+   :note "Location is approximate, as the exact location is not readily available to protect the site." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
 
 :grotta-dell-addaura-inscribed-petroglyphs a :group-of-human-figures ;
@@ -1482,6 +1484,7 @@
    :earliest-date -50 ;
    :latest-date 50;
    :described-by <https://en.wikipedia.org/wiki/Khalchayan> ;
+   :representative-latlong-point (38.293611 67.978889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg> .
 
 :san-agustin-megaliths a :group-of-human-figures ;
@@ -1718,6 +1721,7 @@
    :latest-date 400 ;
    :in-modern-country-note "Turkmenistan" ;
    :art-historical-culture-or-tradition :kushan-empire ;
+   :representative-latlong-point (37.535384 67.115405) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_mural.jpg> .
 
 :mayan-wooden-kneeling-figure a :human-figure ;
@@ -1751,6 +1755,7 @@
    :latest-date 550 ;
    :in-modern-country-note "Egypt" ;
    :art-historical-culture-or-tradition :byzantine-art ;
+   :representative-latlong-point (28.555556 33.976111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay.jpg> .
 
 :haniwa-warrior-keiko-armor a :human-figure ;
