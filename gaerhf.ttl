@@ -711,6 +711,7 @@
    :approximate-date -3900 ;
    :in-modern-country-note "Greece" ;
    :art-historical-culture-or-tradition :neolithic-europe ;
+   :representative-latlong-point (39.366667 21.916667) ; # ll for Karditsa, Greece
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karditsa_Thinker_-_NAMA_5894.jpg> .
 
 # https://www.metmuseum.org/art/collection/search/547202
@@ -1213,6 +1214,16 @@
    :earliest-date -1000 ;
    :latest-date -200 .
 
+:dong-son-kneeling-figure a :human-figure ;
+   rdfs:label "Dong Son Kneeling Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Dong_Son_culture> ;
+   :earliest-date -1000 ;
+   :latest-date 100 ;
+   :in-modern-country-note "Vietnam" ;
+   :representative-latlong-point (16 108) ; # ll for Red River Valley, Vietnam
+   :art-historical-culture-or-tradition :dong-son-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Bronze_Lamp_in_the_Shape_of_a_Kneeling_Man_(Original).jpg> .
+
 :giants-of-mont-e-prama a :group-of-human-figures ;
    rdfs:label "Giants of Mont'e Prama, Sardinia" ;
    :described-by <https://en.wikipedia.org/wiki/Giants_of_Mont%27e_Prama> ;
@@ -1356,6 +1367,7 @@
    :latest-date -300 ;
    :in-modern-country-note "Spain" ;
    :art-historical-culture-or-tradition :iberian-culture ;
+   :representative-latlong-point (38.875556 -0.753056) ; # ll for Mogente, Spain
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerrer_de_Moixent,_Museu_de_Prehistòria_de_València.jpg> .
 
 :nok-head-and-torso-of-a-female-figure a :human-figure ;
@@ -1405,6 +1417,7 @@
    :earliest-date -400 ;
    :latest-date -300 ;
    :in-modern-country-note "Spain" ;
+   :representative-latlong-point (38.266944 -0.698333) ; # ll for Elche, Spain
    :art-historical-culture-or-tradition :iberian-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Escultura_ibérica_%22Dama_de_Elche%22._Museo_Arqueológico_Nacional_(España)._Spain.jpg> .
 
