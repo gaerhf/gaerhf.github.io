@@ -575,6 +575,16 @@
    :in-modern-country-note "Israel" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
 
+:anthropoid-object-engraved-hair-damjili-cave a :human-figure ;
+   rdfs:label "Anthropoid Object with Engraved Hair from Damjili Cave" ;
+   :described-by <https://doi.org/10.1016/j.ara.2025.100611> ;
+   :earliest-date -6200 ;
+   :latest-date -6000 ;
+   :in-modern-country-note "Azerbaijan" ;
+   :representative-latlong-point (41.148056 45.241111) ;
+   :note "From the linked publication, “The supposed head is decorated with several vertical lines from the top, likely representing hair.”" ;
+   :thumbnail-image <https://ars.els-cdn.com/content/image/1-s2.0-S2352226725000212-gr2.jpg> .
+
 :catalhoyuk-seated-female-figurine a :human-figure ;
    rdfs:label "Catalhoyuk Seated Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Catalhoyuk> ;
@@ -1292,12 +1302,23 @@
 #    :earliest-date -700 ;
 #    :latest-date -550 .
 
+:hawtar-athat-statue a :human-figure ;
+   rdfs:label "Hawtar'athat Statue" ;
+   :described-by <https://www.researchgate.net/figure/The-Hawtarathat-statue-discovered-in-Nashqum-present-day-al-Bayda-end-of-the_fig1_340635269> ;
+   :earliest-date -620 ;
+   :latest-date -500 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "Yemen" ;
+   :representative-latlong-point (13.716667 44.733333) ; # ll for  Al-Bayda, Yemen
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BronzeManNashqum.jpg> .
+
 :capestrano-warrior a :human-figure ;
    rdfs:label "Capestrano Warrior" ;
    :described-by <https://en.wikipedia.org/wiki/Warrior_of_Capestrano> ;
    :approximate-date -550 ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :picene-culture ;
+   :representative-latlong-point (42.269444 13.766667) ; # ll for Capestrano, Italy
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerriero_di_Capestrano_-_Museo_Archeologico_Nazionale_d%27Abruzzo_Villa_Frigerj_-_Chieti_-_Italy_-_6_Feb._2013.jpg> .
 
 :prince-of-glauberg a :human-figure ;
@@ -1398,6 +1419,10 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Patna_Museum_Lohanipur_torso.jpg> .
 
 # -150 - -1 https://en.wikipedia.org/wiki/Gundestrup_cauldron
+
+# -200 - 100 https://scva-artsobjects-images.s3.eu-west-2.amazonaws.com/675/RLS-1_Alaska-Americas_Figure-Ivory.jpg
+
+# https://www.penn.museum/sites/expedition/the-vanishing-art-of-the-arctic/
 
 :figure-with-libyco-berber-script a :human-figure ;
    rdfs:label "Figure with Libyco-Berber Script" ;
@@ -1515,6 +1540,8 @@
    :described-by <https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta> ;
    :art-historical-culture-or-tradition :roman-empire ;
    :approximate-date 20;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (42.002081 12.493619) ; # Villa of Livia, Prima Porta, Italy
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg> .
 
 :couple-from-pompeii a :group-of-human-figures ;
