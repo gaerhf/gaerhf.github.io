@@ -1000,10 +1000,11 @@
 
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
-   :described-by <https://www.historymuseum.ca/collections/artifact/1295533/?q=QkHn-13%3A489%20&page_num=1&item_num=0&media_irn=5394933> ;
+   :described-by <https://www.historymuseum.ca/collections/artifact/1295533> ;
    :earliest-date -1900 ;
    :latest-date -1600 ;
    :in-modern-country-note "Canada" ;
+   :representative-latlong-point (75.171333 -88.975453) ; # devon island, Nunavut, Canada
    :thumbnail-image <https://www.historymuseum.ca/ke/_resources/120798/5050-1613-0243-094-base-cmhsize-small.jpg> .
 
 :seated-figure-on-vessel a :human-figure ;
@@ -1062,6 +1063,7 @@
    :latest-date -800 ;
    :in-modern-country-note "Mongolia" ;
    :art-historical-culture-or-tradition :deer-stone-culture ;
+   :representative-latlong-point (49.654763 99.929315) ; # ll for Uushigiin Övör, Mongolia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_deer_stone._Uushigiin_Övör_site,_Deer_Stone_14,_near_Mörön,_northern_Mongolia.jpg> .
 
 :tlatico-so-called-acrobat a :human-figure ;
@@ -1097,6 +1099,7 @@
    :latest-date -1100 ;
    :in-modern-country-note "China" ;
    :art-historical-culture-or-tradition :shu-kingdom ;
+   :representative-latlong-point (30.993 104.2) ; # ll for Sanxingdui, China
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg> .
 
 :sanxingdui-bronze-head-protuding-eyes a :human-figure ;
@@ -1105,6 +1108,7 @@
    :earliest-date -1200 ;
    :latest-date -1000 ;
    :in-modern-country-note "China" ;
+   :representative-latlong-point (30.993 104.2) ; # ll for Sanxingdui, China
    :art-historical-culture-or-tradition :shu-kingdom ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:青铜纵目面具B.jpg> .
 
@@ -1115,6 +1119,7 @@
    :latest-date -1000 ;
    :in-modern-country-note "China" ;
    :art-historical-culture-or-tradition :shu-kingdom ;
+   :representative-latlong-point (30.993 104.2) ; # ll for Sanxingdui, China
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gold_Mask_(黄金面罩).jpg> .
 
 :olmec-stone-yuguito a :human-figure ;
@@ -1131,6 +1136,7 @@
    :earliest-date -1100 ;
    :latest-date -900 ;
    :in-modern-country-note "Ireland" ;
+   :representative-latlong-point (53.957838 -6.911619) ; # ll for Ralaghan, Ireland
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_antropomorfa_probabilmente_segnacolo_di_confine,_da_una_torbiera_presso_ralaghan,_co._di_cavan,_1100-1000_ac_ca.jpg> .
 
 :lapita-sherd-face a :human-figure ;
@@ -1338,6 +1344,8 @@
    :latest-date 200 ;
    :in-modern-country-note "Nigeria" ;
    :art-historical-culture-or-tradition :nok-culture ;
+   :representative-latlong-point (9.5 8) ; # ll for Nigeria
+   :note "Mapped location is general for Nigeria, not specific for this figure." ;
    :thumbnail-image <https://emuseum.mfah.org/internal/media/dispatcher/294946/postagestamp> .
 
 :nok-male-head a :human-figure ;
@@ -1731,6 +1739,16 @@
    :representative-latlong-point (37.535384 67.115405) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_mural.jpg> .
 
+:battle-scene-aberlemno-2 a :group-of-human-figures ;
+   rdfs:label "Battle Scene on Stone Aberlemno 2" ;
+   :described-by <https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones#The_battle_scene_on_Aberlemno_2> ;
+   :earliest-date 600 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Scotland" ;
+   :art-historical-culture-or-tradition :pictish-art ;
+   :representative-latlong-point (56.689167 -2.781389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pictish_Stone_at_Aberlemno_Church_Yard_-_Battle_Scene_Detail.jpg> .
+
 :mayan-wooden-kneeling-figure a :human-figure ;
    rdfs:label "Mayan Wooden Kneeling Figure" ;
    :described-by <https://www.metmuseum.org/art/collection/search/313256> ;
@@ -1738,6 +1756,8 @@
    :latest-date 650 ;
    :in-modern-country-note "Mexico or Guatemala" ;
    :art-historical-culture-or-tradition :mayan-culture ;
+   :representative-latlong-point (16.75 -89.15) ;
+   :note "The mapped location is only a general indication of possilbe origin. See discussion on Met Museum page." ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-24340-001.jpg> .
 
 :penjikent-murals a :group-of-human-figures ;
