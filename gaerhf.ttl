@@ -914,7 +914,7 @@
 
 :bassetki-statue a :human-figure ;
    rdfs:label "Bassetki Statue" ;
-   :described-by <https://en.wikipedia.org/wiki/Bashetki_Statue> ;
+   :described-by <https://en.wikipedia.org/wiki/Bassetki_Statue> ;
    :earliest-date -2250 ;
    :latest-date -2220 ;
    :in-modern-country-note "Iraq" ;
