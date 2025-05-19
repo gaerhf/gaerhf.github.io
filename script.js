@@ -550,7 +550,7 @@ function renderFiguresOnMap(figuresArray) {
         const figure = figuresDict[figureId];
         if (figure && figure.representativeLatLongPoint) {
             const [lat, lng] = figure.representativeLatLongPoint;
-            const marker = L.marker([lat, lng]).addTo(leafletMap);
+            const marker = L.marker([lat, lng], { icon: redCircleIcon }).addTo(leafletMap);
             marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
             marker.on('click', () => {
                 showFigureDetails(figureId);
@@ -920,6 +920,15 @@ window.addEventListener('hashchange', () => {
     if (hash && hash.length > 1 && figuresDict[hash.substring(1)]) {
         showFigureDetails(hash.substring(1));
     }
+});
+
+// Custom red circle icon for Leaflet markers
+const redCircleIcon = L.divIcon({
+    className: 'custom-red-marker',
+    iconSize: [10, 10], // Adjust size as needed
+    iconAnchor: [9, 9], // Center the icon
+    popupAnchor: [0, -9],
+    html: '<div style="width:10px;height:10px;background:#d22;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>'
 });
 
 

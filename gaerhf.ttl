@@ -392,6 +392,7 @@
    :earliest-date -20000 ;
    :latest-date -13000 ;
    :in-modern-country-note "Indonesia" ;
+   :representative-latlong-point (1.241472 117.329111) ;
    :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/z-zenrrnbTxRMap28ZLM2TeAF60=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d3/70/d370e4f4-292a-4ca6-8010-f1f27a15b433/humans-3.jpg> .
 
 :qurta-rock-art-figures a :group-of-human-figures ;
@@ -447,6 +448,7 @@
    :earliest-date -10000 ;
    :latest-date -4000 ;
    :in-modern-country-note "Brazil" ;
+   :representative-latlong-point (-8.666667 -42.55) ; # national park
    :thumbnail-image <https://www.bradshawfoundation.com/south_america/serra_da_capivara/pedra_furada/photographs/5a.jpg> .
 
 :magura-cave-paintings a :group-of-human-figures ;
@@ -583,11 +585,12 @@
 
 :cueva-huenul-1-rock-art a :group-of-human-figures ;
    rdfs:label "Cueva Huenul 1 Rock Art" ;
-   :described-by <https://www.science.org/doi/10.1126/sciadv.adk4415> ;
+   :described-by <https://www.science.org/doi/10.1126/sciadv.adk4415>, <https://doi.org/10.7183/1045-6635.26.3.304> ;
    :earliest-date -6500 ;
    :latest-date -3500 ;
    :note "The small human figures post-date the earliest motifs and so may be late in date range." ;
    :in-modern-country-note "Argentina" ;
+   :representative-latlong-point (-36.949551 -69.801431) ;
    :thumbnail-image <https://www.science.org/cms/10.1126/sciadv.adk4415/asset/c816897b-7a60-4e2f-865f-afdf49480a97/assets/images/large/sciadv.adk4415-f5.jpg> .
 
 # -6000 https://www.bradshawfoundation.com/africa/gilf_kebir_cave_of_swimmers/index.php
@@ -946,6 +949,7 @@
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :approximate-date -2200 ;
    :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (27.329167 68.138889) ; # ll for Mohenjo-daro, Pakistan
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
 
 :seated-statue-of-gudea-of-lagash a :human-figure ;
@@ -954,6 +958,7 @@
    :earliest-date -2144 ;
    :latest-date -2124 ;
    :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (31.562028 46.177583) ; # ll for Girsu, Iraq
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg> .
 
 :figure-riding-animal a :human-figure ;
