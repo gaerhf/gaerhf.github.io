@@ -671,6 +671,7 @@
    :described-by <https://en.wikipedia.org/wiki/Thinker_of_Hamangia> ;
    :approximate-date -5000 ;
    :in-modern-country-note "Romania" ;
+   :representative-latlong-point (44.338056 28.033611) ; # ll for Cernavoda, Romania
    :art-historical-culture-or-tradition :hamangia-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
 
