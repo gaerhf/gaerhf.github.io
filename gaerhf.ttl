@@ -789,6 +789,7 @@
    rdfs:label "Narmer Palette" ;
    :approximate-date -3000 ;
    :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.097222 32.779444) ; # ll for Hierakonpolis, Egypt
    :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
    :art-historical-culture-or-tradition :pharaonic-egypt .
@@ -1094,6 +1095,7 @@
    :approximate-date -1345 ;
    :in-modern-country-note "Egypt" ;
    :described-by <https://en.wikipedia.org/wiki/Nefertiti_Bust> ;
+   :representative-latlong-point (27.645278 30.896389) ; # ll for Amarna, Egypt
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Nofretete_Neues_Museum.jpg> .
 
 :mask-of-tutankhamun a :human-figure ;
@@ -1205,6 +1207,8 @@
    :earliest-date -1000 ;
    :latest-date -100 ;
    :in-modern-country-note "Ecuador" ;
+   :representative-latlong-point (-1.901104 -79.753096) ; # generic ll
+   :note "Mapped point is generic for Chorrera culture, not the specific findspot of this piece." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/316443/655595/main-image> .
 
 :chorrera-ceramic-figure-pendant a :human-figure ;
@@ -1313,6 +1317,16 @@
 #    :period-note "Middle Mumun Pottery Period (Korea)" ;
 #    :earliest-date -700 ;
 #    :latest-date -550 .
+
+:mantiklos-apollo a :human-figure ;
+   rdfs:label "Mantiklos Apollo" ;
+   :described-by <https://collections.mfa.org/objects/152660> ;
+   :earliest-date -700 ;
+   :latest-date -675 ;
+   :in-modern-country-note "Greece" ;
+   :art-historical-culture-or-tradition :geometric-greece ;
+   :representative-latlong-point (38.5 22.5) ; # ll for Thebes, Greece
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Collection_MfA_Boston_0198-2.jpg> .
 
 :hawtar-athat-statue a :human-figure ;
    rdfs:label "Hawtar'athat Statue" ;
