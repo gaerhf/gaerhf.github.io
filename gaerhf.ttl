@@ -1653,6 +1653,7 @@
    :earliest-date 1 ;
    :latest-date 500 ;
    :in-modern-country-note "Canada" ;
+   :representative-latlong-point (62 -70) ; # hudson strait
    :thumbnail-image <https://collections.historymuseum.ca/public/objects/common/webmedia.php?irn=45090> .
 
 :han-pottery-storyteller-beating-a-drum a :human-figure ;
