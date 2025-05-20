@@ -1357,6 +1357,8 @@
    :latest-date -450 ;
    :art-historical-culture-or-tradition :la-tene ;
    :in-modern-country-note "Germany" ;
+   :representative-latlong-point (50.311235 9.017070) ; # ll for Glauberg, Germany
+   :note "Mapped location is general for Glauberg, not specific for this figure." ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
 
 :euphronios-krater a :group-of-human-figures ;
@@ -1899,10 +1901,12 @@
 
 :fondukistan-monastery-divintity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
-   :described-by <https://www.guimet.fr/en/our-collections/afghanistan-pakistan/divinity-seating-royal-ease-position> ;
+   :described-by <https://www.guimet.fr/en/our-collections/afghanistan-pakistan/divinity-seating-royal-ease-position>,
+   <https://en.wikipedia.org/wiki/Fondukistan_monastery> ;
    :earliest-date 600 ;
    :latest-date 700 ;
    :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (34.969591 68.876891) ; # Kabul, Afghanistan
    :thumbnail-image <https://www.guimet.fr/sites/default/files/styles/width_1220px/public/2023-07/divinite-assise-en-delassement.jpg?itok=rlsorMb_> .
 
 :descent-of-the-ganges a :human-figure ;
@@ -1912,6 +1916,7 @@
    :earliest-date 600 ;
    :latest-date 700 ;
    :in-modern-country-note "India" ;
+   :representative-latlong-point (12.6175 80.198889) ; # Mahabalipuram, India
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg> .
 
 :afrasiab-murals a :group-of-human-figures ;
@@ -1920,6 +1925,7 @@
    :earliest-date 640 ;
    :latest-date 660 ;
    :in-modern-country-note "Uzbekistan" ;
+   :representative-latlong-point (39.6693 66.9934) ; # Samarkand, Uzbekistan
    :art-historical-culture-or-tradition :sogdian-art ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ambassadors_from_Chaganian_(central_figure,_inscription_of_the_neck),_and_Chach_(modern_Tashkent)_to_king_Varkhuman_of_Samarkand._648-651_CE,_Afrasiyab,_Samarkand.jpg> .
 
@@ -1929,6 +1935,8 @@
    :earliest-date 650 ;
    :latest-date 800 ;
    :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-13.163056 -74.224444) ; # Ayacucho
+   :note "The mapped location is only a general indication of origin region.." ;
    :art-historical-culture-or-tradition :wari-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Huari_-_Head_Pot_with_Painted_Design_-_Walters_482849_-_Three_Quarter_Right_(cropped).jpg> .
 
