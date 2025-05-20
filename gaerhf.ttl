@@ -2084,6 +2084,25 @@
    :representative-latlong-point (13.4125 103.866667) ; # Angkhor as contemporary capital
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
 
+:kneeling-figuring-natamatao a :human-figure ;
+   rdfs:label "Kneeling Figure from Natamatao" ;
+   :described-by <https://caravans.library.northwestern.edu/works/15/> ;
+   :earliest-date 1200 ;
+   :latest-date 1300 ;
+   :in-modern-country-note "Mali" ;
+   :representative-latlong-point (14.466646 -5.000955) ; 
+   :thumbnail-image <https://caravans.library.northwestern.edu/img/works/15/15_640x.jpg> .
+
+:seated-figurine-djenne-djenno a :human-figure ;
+   rdfs:label "Seated Figurine from Djenné-Djenno" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/314362> ;
+   :earliest-date 1200 ;
+   :latest-date 1300 ;
+   :in-modern-country-note "Mali" ;
+   :art-historical-culture-or-tradition :mopti-culture ;
+   :representative-latlong-point (13.890556 -4.540278) ; # Mali
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_figure_grom_Mali,_13th_century,_Djenné_peoples,_Metropolitan_Museum_of_Art,_1981.218.JPG> .
+
 :etowah-mound-marble-figures a :group-of-human-figures ;
    rdfs:label "Etowah Mound Marble Figures" ;
    :described-by <https://en.wikipedia.org/wiki/Etowah_mounds>,
