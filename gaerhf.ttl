@@ -1298,12 +1298,22 @@
    :earliest-date -900 ;
    :latest-date -200 .
 
+:statue-of-neo-hittite-ruler-suppiluliuma a :human-figure ;
+   rdfs:label "Statue of Neo-Hittite Ruler Suppiluliuma" ;
+   :described-by <https://www.worldhistory.org/image/13594/neo-hittite-king-suppiluliuma/> ;
+   :approximate-date -850 ;
+   :in-modern-country-note "Turkey" ;
+   :art-historical-culture-or-tradition :neo-hittite-empire ;
+   :representative-latlong-point (36.2475 36.376389) ; # ll for Turkey
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:SUPPILULIUMA.jpg> .
+
 :grevensvænge-figurines a :group-of-human-figures ;
    rdfs:label "Grevensvænge figurines" ;
    :described-by <https://en.wikipedia.org/wiki/Grevensvænge_figurines> ;
    :earliest-date -800 ;
    :latest-date -500 ;
    :in-modern-country-note "Denmark" ;
+   :representative-latlong-point (55.185 11.81) ; # from wiki page
    :art-historical-culture-or-tradition :nordic-bronze-age ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DO-10044-Figurer_Grevensvænge.jpg> .
 
@@ -1379,6 +1389,16 @@
    :material-note "Ceramic" ;
    :art-historical-culture-or-tradition :punic-culture ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/c5b0b252_b162_41a7_9e84_a3b7006d2c79/mid_00032498_001.jpg> .  
+
+:achaemenid-lapis-lazuli-head a :human-figure ;
+   rdfs:label "Achaemenid Lapis Lazuli Head" ;
+   :described-by <https://www.flickr.com/photos/28433765@N07/7109030547> ;
+   :earliest-date -500 ;
+   :latest-date -400 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (29.935 52.89) ; # ll for Iran
+   :art-historical-culture-or-tradition :achaemenid-empire ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Achaemenid_prince%27s_head_2.jpg> . 
 
 :warrior-of-mogente a :human-figure ;
    rdfs:label "Warrior of Mogente" ;
