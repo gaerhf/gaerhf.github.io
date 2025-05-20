@@ -408,3 +408,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+#figure-map-scale {
+    width: 100%;
+    min-width: 300px;
+    margin: 0 auto 10px auto;
+    position: relative;
+}
