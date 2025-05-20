@@ -539,6 +539,7 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
 }
 
 let leafletMap = null;
+let leafletMarkers = {}; // Place this at the top level
 
 function renderFiguresOnMap(figuresArray) {
     // Only initialize once
@@ -586,13 +587,11 @@ function renderFiguresOnMap(figuresArray) {
 
             const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
             marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
-            marker.on('click', () => {
-                showFigureDetails(figureId);
-            });
+            marker.on('click', () => showFigureDetails(figureId));
+            leafletMarkers[figureId] = marker; // Store marker
         }
     });
 
-    // Add this line to show the scale bar for the map
     renderMapScaleBar(minDate, maxDate);
 }
 
@@ -849,8 +848,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (leafletMap) {
                         leafletMap.invalidateSize();
                     }
+                    renderFiguresOnMap(currentSortedIndex);
+
+                    // Open popup for current figure if present
+                    if (currentFigureId && leafletMarkers[currentFigureId]) {
+                        leafletMarkers[currentFigureId].openPopup();
+                    }
                 }, 200); // Delay to allow the tab to become visible
-                renderFiguresOnMap(currentSortedIndex);
             }
             // ------------------------------------------------------
         });
