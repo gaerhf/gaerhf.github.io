@@ -527,6 +527,7 @@
    :earliest-date -7200 ;
    :latest-date -6250 ;
    :in-modern-country-note "Jordan" ;
+   :representative-latlong-point (31.988 35.976) ; 
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ain_Ghazal_Statue_Jordan_Archaeological_Museum_Amman_Jordan0821.jpg> .
 
@@ -648,6 +649,7 @@
    :earliest-date -5000 ;
    :latest-date -1000 ;
    :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (27.655561 -112.91611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_en_el_techo_de_la_cueva_%22El_Ratón%22.JPG> .
 
 :thessalian-neolithic-figurine a :human-figure ;
@@ -1026,6 +1028,7 @@
    :earliest-date -1800 ;
    :latest-date -1600 ;
    :in-modern-country-note "Israel" ;
+   :representative-latlong-point (32.033333 34.883333) ; # ll for Yehud
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/d/d6/Thinker_from_Yehud.jpeg?20230912000419> .
 
 :mycenaean-funerary-mask-grave-circle-b a :human-figure ;
@@ -1498,6 +1501,7 @@
    :described-by <https://en.wikipedia.org/wiki/Terracotta_Army> ;
    :art-historical-culture-or-tradition :qin-empire ;
    :in-modern-country-note "China" ;
+   :representative-latlong-point (34.385 109.273056) ; # ll for Xi'an, China
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerreros_de_Terracota,_Xi%27an_(15547299927).jpg>.
 
 :hopewell-mica-torso a :human-figure ;
@@ -1984,6 +1988,7 @@
    :latest-date 1140 ;
    :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :anasazi ;
+   :representative-latlong-point (36.0698 -107.9574) ;
    :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
 
 :dresden-codex a :group-of-human-figures ;
@@ -2011,7 +2016,9 @@
    :earliest-date 1050 ;
    :latest-date 1200 ;
    :in-modern-country-note "United States" ;
+   :representative-latlong-point (38.8275 -89.9355) ; # BBB site bounding box from TDAR
    :art-historical-culture-or-tradition :mississippian ;
+   :note "The mapped point is the approximate location of the BBB Motor Site. See the wikipedia page for more information." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
 
 :cahokiam-resting-warrior-figurine a :human-figure ;
