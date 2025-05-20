@@ -193,7 +193,7 @@ async function buildFiguresInfoDict($rdf) {
                     cultureDescribedBy: cultureDescribedBy,
                     inModernCountry: inModernCountry,
                     wikipediaImagePage: wikipediaImagePage,
-                    thumbnailURL: thumbnailURL ,
+                    thumbnailURL: thumbnailURL,
                     representativeLatLongPoint: representativeLatLongPoint,
                 };
             }));
@@ -377,36 +377,36 @@ function renderTimelineScale(minDate, maxDate) {
     const bar = document.createElement('div');
     bar.style.width = '100%';
     bar.style.height = '16px';
-    bar.style.background = '#eee'; // Or 'transparent' if you want no bar
+    bar.style.background = '#eee';
     bar.style.position = 'relative';
     bar.style.marginBottom = '6px';
     scaleDiv.appendChild(bar);
 
     // Decide tick values (years) based on range
     const ticks = [];
-    // Major ticks: threshold, min, max, and a few in between
     ticks.push(minDate);
 
     if (minDate < LOG_SCALE_THRESHOLD && maxDate > LOG_SCALE_THRESHOLD) {
+        const halfwayLog = Math.exp(
+            (Math.log(Math.abs(minDate - LOG_SCALE_THRESHOLD) + 1) + Math.log(Math.abs(LOG_SCALE_THRESHOLD - LOG_SCALE_THRESHOLD) + 1)) / 2
+        ) - 1 + LOG_SCALE_THRESHOLD;
+        ticks.push(Math.round(halfwayLog));
         ticks.push(LOG_SCALE_THRESHOLD);
     }
 
-    let stepBefore = 10000;
+    // Linear region ticks (after threshold), skip the first tick after threshold
     let stepAfter = 2000;
-    for (let y = Math.ceil(minDate / stepBefore) * stepBefore; y < LOG_SCALE_THRESHOLD; y += stepBefore) {
-        if (y > minDate && y < LOG_SCALE_THRESHOLD) ticks.push(y);
-    }
-    for (let y = LOG_SCALE_THRESHOLD; y < maxDate; y += stepAfter) {
+    let firstLinearTick = LOG_SCALE_THRESHOLD + stepAfter * 2; // skip first tick after threshold
+    for (let y = firstLinearTick; y < maxDate; y += stepAfter) {
         if (y > LOG_SCALE_THRESHOLD && y < maxDate) ticks.push(y);
     }
 
     ticks.push(maxDate);
 
-    // Remove duplicates and sort
     const uniqueTicks = Array.from(new Set(ticks)).sort((a, b) => a - b);
 
-    // Render ticks and labels
-    uniqueTicks.forEach(year => {
+    // Render ticks and labels (existing code)
+    uniqueTicks.forEach((year, i) => {
         const percent = timelineScale(year, minDate, maxDate) * 100;
         const tick = document.createElement('div');
         tick.style.position = 'absolute';
@@ -421,10 +421,21 @@ function renderTimelineScale(minDate, maxDate) {
         label.style.position = 'absolute';
         label.style.left = `${percent}%`;
         label.style.top = '18px';
-        label.style.transform = 'translateX(-50%)';
         label.style.fontSize = '11px';
         label.style.color = '#222';
         label.textContent = formatDateForDisplay(year);
+
+        if (i === 0) {
+            label.style.transform = 'translateX(0)';
+            label.style.textAlign = 'left';
+        } else if (i === uniqueTicks.length - 1) {
+            label.style.transform = 'translateX(-100%)';
+            label.style.textAlign = 'right';
+        } else {
+            label.style.transform = 'translateX(-50%)';
+            label.style.textAlign = 'center';
+        }
+
         bar.appendChild(label);
     });
 }
@@ -659,13 +670,13 @@ async function showFigureDetails(figureId) {
         if (figure.date !== null) {
             detailInfo.innerHTML += `<p><strong>Date:</strong> ${formatDateForDisplay(figure.date)}</p>`;
         }
-        if (figure.approximateDate !== null ) {
+        if (figure.approximateDate !== null) {
             detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
         }
         if (figure.earliestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Earliest Date:</strong> ${formatDateForDisplay(figure.earliestDate)}</p>`;
         }
-        
+
         if (figure.latestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Latest Date:</strong> ${formatDateForDisplay(figure.latestDate)}</p>`;
         }
@@ -894,7 +905,7 @@ function highlightTimelineFigure(figureId) {
     const currentDiv = document.getElementById(`timeline-${figureId}`);
     if (currentDiv) {
         currentDiv.classList.add('highlighted');
-        }
+    }
 }
 
 function startTimelinePlayback() {
@@ -973,20 +984,22 @@ function renderMapScaleBar(minDate, maxDate) {
     bar.style.marginBottom = '6px';
     scaleDiv.appendChild(bar);
 
-    // Use same tick logic as timeline
+    // --- Tick logic ---
     const ticks = [];
     ticks.push(minDate);
 
     if (minDate < LOG_SCALE_THRESHOLD && maxDate > LOG_SCALE_THRESHOLD) {
+        let halfwayLog = Math.exp(
+            (Math.log(Math.abs(minDate - LOG_SCALE_THRESHOLD) + 1) + Math.log(Math.abs(LOG_SCALE_THRESHOLD - LOG_SCALE_THRESHOLD) + 1)) / 2
+        ) - 1 + LOG_SCALE_THRESHOLD;
+        ticks.push(Math.round(halfwayLog));
         ticks.push(LOG_SCALE_THRESHOLD);
     }
 
-    let stepBefore = 10000;
+    // Only generate linear ticks after the threshold, skip the first tick after threshold
     let stepAfter = 2000;
-    for (let y = Math.ceil(minDate / stepBefore) * stepBefore; y < LOG_SCALE_THRESHOLD; y += stepBefore) {
-        if (y > minDate && y < LOG_SCALE_THRESHOLD) ticks.push(y);
-    }
-    for (let y = LOG_SCALE_THRESHOLD; y < maxDate; y += stepAfter) {
+    let firstLinearTick = LOG_SCALE_THRESHOLD + stepAfter;
+    for (let y = firstLinearTick; y < maxDate; y += stepAfter) {
         if (y > LOG_SCALE_THRESHOLD && y < maxDate) ticks.push(y);
     }
 
@@ -994,7 +1007,7 @@ function renderMapScaleBar(minDate, maxDate) {
 
     const uniqueTicks = Array.from(new Set(ticks)).sort((a, b) => a - b);
 
-    uniqueTicks.forEach(year => {
+    uniqueTicks.forEach((year, i) => {
         const percent = timelineScale(year, minDate, maxDate) * 100;
         const tick = document.createElement('div');
         tick.style.position = 'absolute';
@@ -1009,10 +1022,21 @@ function renderMapScaleBar(minDate, maxDate) {
         label.style.position = 'absolute';
         label.style.left = `${percent}%`;
         label.style.top = '18px';
-        label.style.transform = 'translateX(-50%)';
         label.style.fontSize = '11px';
         label.style.color = '#222';
         label.textContent = formatDateForDisplay(year);
+
+        if (i === 0) {
+            label.style.transform = 'translateX(0)';
+            label.style.textAlign = 'left';
+        } else if (i === uniqueTicks.length - 1) {
+            label.style.transform = 'translateX(-100%)';
+            label.style.textAlign = 'right';
+        } else {
+            label.style.transform = 'translateX(-50%)';
+            label.style.textAlign = 'center';
+        }
+
         bar.appendChild(label);
     });
 }

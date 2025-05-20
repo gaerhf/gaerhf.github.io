@@ -1937,6 +1937,7 @@
    :described-by <https://en.wikipedia.org/wiki/Jade_mask_of_Pakal> ;
    :date 683 ;
    :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (17.4836 -92.0468) ; # Temple of the Inscriptions, Palenque, Mexico
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palenque_-_Maske_des_Pakal.jpg> .
 
@@ -1946,6 +1947,7 @@
    :earliest-date 713 ;
    :latest-date 803 ;
    :in-modern-country-note "China" ;
+   :representative-latlong-point (29.544722 103.773333) ; # Leshan, China
    :art-historical-culture-or-tradition :tang-dynasty ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_View_from_below.jpg> .
 
@@ -1955,6 +1957,7 @@
    :earliest-date 800 ;
    :latest-date 810 ;
    :in-modern-country-note "Germany" ;
+   :representative-latlong-point (50.775036 6.082817) ; # Aachen
    :art-historical-culture-or-tradition :carolingian-renaissance ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karolingischer_Buchmaler_um_820_001.jpg> .
 
@@ -1965,6 +1968,7 @@
    :latest-date 1100;
    :art-historical-culture-or-tradition :kingdom-of-nri ;
    :in-modern-country-note "Nigeria" ;
+   :representative-latlong-point (6.016667 7.016667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Igbo_ukwu_face_pendant.png> .
 
 :banteay-srei-fight-between-sunda-upasunda a :group-of-human-figures ;
@@ -1975,6 +1979,7 @@
    :latest-date 1000 ;
    :in-modern-country-note "Cambodia" ;
    :art-historical-culture-or-tradition :khmer-empire ;
+   :representative-latlong-point (13.598889 103.962778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fronton_Cambodge_Musée_Guimet_9972.jpg> .
 
 # 1000 - 1100 https://commons.wikimedia.org/wiki/File:Avalokiteshvara,_the_Bodhisattva_of_Compassion,_Guge_kingdom,_1000-1050_AD,_Ngari,_west_Tibet,_brass_alloy,_copper_%26_tin_inlay,_colored_wax,_traces_of_gilding,_and_pigment_-_Freer_Gallery_of_Art_-_DSC04534.jpg
@@ -1997,6 +2002,7 @@
    :earliest-date 1000 ;
    :latest-date 1200 ;
    :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (20.683056 -88.568611) ; # Chichen Itza
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dresden_Codex_p09.jpg> .
 
@@ -2006,7 +2012,9 @@
    :earliest-date 1021 ;
    :latest-date 1152 ;
    :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (16.53 -92.45) ; # Chiapas from wikipedia page
    :art-historical-culture-or-tradition :maya-culture ;
+
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Grolier_Codex_in_HuffPo_2.jpg> .
 
 :keller-figurine a :human-figure ;
@@ -2028,6 +2036,7 @@
    :earliest-date 1100 ;
    :latest-date 1200 ;
    :in-modern-country-note "United States" ;
+   :representative-latlong-point (35.311944 -94.568611) ; # Spiro mounds
    :art-historical-culture-or-tradition :mississippian ;
    :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
 
@@ -2035,11 +2044,13 @@
 
 :bust-of-jayavarman-vii a :human-figure ;
    rdfs:label "Bust of Jayavarman VII" ;
-   :described-by <https://en.wikipedia.org/wiki/Jayavarman_VII> ;
+   :described-by <https://www.guimet.fr/fr/nos-collections/asie-du-sud-est/portrait-du-roi-jayavarman-vii>,
+      <https://en.wikipedia.org/wiki/Jayavarman_VII> ;
    :earliest-date 1181 ;
    :latest-date 1218 ;
    :in-modern-country-note "Cambodia" ;
    :art-historical-culture-or-tradition :khmer-empire ;
+   :representative-latlong-point (13.4125 103.866667) ; # Angkhor as contemporary capital
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
 
 :etowah-mound-marble-figures a :group-of-human-figures ;
