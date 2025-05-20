@@ -435,8 +435,9 @@
    rdfs:label "Neolithic Male Figure carved in Bench" ;
    :approximate-date -11000 ;
    :in-modern-country-note "Turkey" ;
-   :described-by <https://www.livescience.com/oldest-narrative-scene-neolithic-turkey> ;
-   :thumbnail-image <https://cdn.mos.cms.futurecdn.net/D4xTVuuwTUMF6NGQRNXuse-1200-80.jpg> .
+   :representative-latlong-point (37.110047 38.621842) ; # Sayburc, Turkey
+   :described-by <https://doi.org/10.15184/aqy.2022.125> ;
+   :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20221201181421541-0856:S0003598X22001259:S0003598X22001259_fig6.png?pub-status=live> .
 
 # https://en.wikipedia.org/wiki/Kel_Essuf_Period#Kel_Essuf_Rock_Art_and_Hunter-Gatherers
 
@@ -919,6 +920,7 @@
    :approximate-date -2250 ;
    :in-modern-country-note "England" ;
    :art-historical-culture-or-tradition :neolithic-britain ;
+   :representative-latlong-point (51.5397 0.1422) ; # ll for Dagenham, England
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Dagenham_Idol.jpg> .
 
 :victory-stele-naram-sin a :group-of-human-figures ;
@@ -1323,6 +1325,7 @@
    :earliest-date -800 ;
    :latest-date -1 ;
    :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.355928 -83.009061) ; # Adena mound
    :thumbnail-image <https://www.clevelandart.org/_next/image?url=https%3A%2F%2Fweb-drupal-cms-prod.clevelandart.org%2F%2Fsites%2Fdefault%2Ffiles%2FJuly-August2016_AdenaPipe_A.jpg&w=1920&q=75> .
 
 # :orim-dong-megalith-petroglyph a :human-figure ;
