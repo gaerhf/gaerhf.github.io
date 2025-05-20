@@ -2071,6 +2071,15 @@
    :art-historical-culture-or-tradition :mississippian ;
    :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
 
+:high-relief-statue-parakrama-samudraa-reservoir a :human-figure ;
+   rdfs:label "High Relief Statue near Parakrama Samudraa Reservoir" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Parakramabahu_I> ;
+   :earliest-date 1100 ;
+   :latest-date 1200 ;
+   :modern-country-note "Sri Lanka" ;
+   :representative-latlong-point (7.92627 80.99484) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Relief_of_Parakramabahu_in_Polonnaruwa.jpg> .
+
 # 1150 - 1250 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1968.75/
 
 :bust-of-jayavarman-vii a :human-figure ;
@@ -2095,7 +2104,8 @@
 
 :seated-figurine-djenne-djenno a :human-figure ;
    rdfs:label "Seated Figurine from Djenné-Djenno" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/314362> ;
+   :described-by <https://www.metmuseum.org/art/collection/search/314362>,
+   <https://en.wikipedia.org/wiki/Djenné-Djenno> ;
    :earliest-date 1200 ;
    :latest-date 1300 ;
    :in-modern-country-note "Mali" ;
