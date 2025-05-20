@@ -433,7 +433,7 @@
 
 :male-figure-on-bench-sayburc a :human-figure ;
    rdfs:label "Neolithic Male Figure carved in Bench" ;
-   :approximate-date -11000 ;
+   :approximate-date -8500 ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.110047 38.621842) ; # Sayburc, Turkey
    :described-by <https://doi.org/10.15184/aqy.2022.125> ;
