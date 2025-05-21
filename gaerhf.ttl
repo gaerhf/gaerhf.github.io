@@ -200,6 +200,10 @@
    :region :central-america ;
    :described-by <https://en.wikipedia.org/wiki/Olmecs> .
 
+:ancient-arabia a :culture ;
+   rdfs:label "Ancient Arabia" ;
+   :described-by <https://en.wikipedia.org/wiki/Pre-Islamic_Arabia> .
+
 :predynastic-egypt a :culture ;
    rdfs:label "Predynastic Egypt" ;
    :region :egypt ;
@@ -540,6 +544,8 @@
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> .
 
+
+# link to this from somewhere https://smarthistory.org/running-horned-woman-tassili-najjer-algeria-2/
 :round-head-figures-of-tassili-n-ajjer a :group-of-human-figures ;
    rdfs:label "Round Head Figures of Tassili n'Ajjer" ;
    :described-by <https://en.wikipedia.org/wiki/Round_Head_Period> ;
@@ -679,6 +685,16 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
 
 # -5000 - -4200 https://en.wikipedia.org/wiki/Jiroft_culture
+
+:anthropomorphic-stele-ha-il a :human-figure ;
+   rdfs:label "Anthropomorphic Stele from Ha'il" ;
+   :described-by <https://smarthistory.org/anthropomorphic-stele/> ;
+   :earliest-date -4000 ;
+   :latest-date -3000 ;
+   :in-modern-country-note "Saudi Arabia" ;
+   :representative-latlong-point (27.516667 41.683333) ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_stele_at_National_Museum_of_Korea_02.jpg> .
 
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
@@ -1350,6 +1366,7 @@
    :earliest-date -620 ;
    :latest-date -500 ;
    :material-note "Bronze" ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
    :in-modern-country-note "Yemen" ;
    :representative-latlong-point (13.716667 44.733333) ; # ll for  Al-Bayda, Yemen
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BronzeManNashqum.jpg> .
@@ -1500,6 +1517,18 @@
 
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
 
+:calcite-alabaster-head-yemen a :human-figure ;
+   rdfs:label "Calcite-Alabaster Headh from Yemen" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_2001-0401-1> ;
+   :earliest-date -300 ;
+   :latest-date -1 ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
+   :in-modern-country "Yemen" ;
+   :representative-latlong-point (13.039552 43.865330) ;
+   :note "Mapped point is generic as findspot not known." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
+
+
 :gudimallam-lingam a :human-figure ;
    :described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
    :period-note "Satavahanas ? (India)" ;
@@ -1534,6 +1563,8 @@
    :described-by <https://www.ohiohistory.org/hopewell-headhunters/> ;
    :earliest-date -200 ;
    :latest-date 500 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.361073 -83.085689) ;
    :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/A283-242a-mica-torso.jpg> .
 
 :hopewell-shaman-bear a :human-figure ;
@@ -1565,6 +1596,17 @@
    :described-by <https://en.wikipedia.org/wiki/Nazca_lines> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_46.JPG> .
 
+:qatabanian-calcite-relief a :human-figure ;
+   rdfs:label "Qatabanian Calcite Relief" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1951-0212-1> ;
+   :earliest-date -100 ;
+   :latest-date -1 ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
+   :in-modern-country-note "Yemen" ;
+   :representative-latlong-point (15.001667 45.815833) ;
+   :note "Reported to be from Timna." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/10_23/623cc4fa_d689_4182_a6aa_a3c00180839a/mid_00572725_001.jpg> .
+
 :alabaster-female-figurine-with-ruby-eyes a :human-figure ;
    rdfs:label "Alabaster Female Figurine with Ruby Eyes" ;
    :Described-by <https://collections.louvre.fr/en/ark:/53355/cl010144841> ;
@@ -1582,6 +1624,16 @@
    :described-by <https://en.wikipedia.org/wiki/Khalchayan> ;
    :representative-latlong-point (38.293611 67.978889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg> .
+
+:funerary-mask-thaj a :human-figure ;
+   rdfs:label "Funerary Mask from Thaj" ;
+   :described-by <https://www.flickr.com/photos/dandiffendale/49997602097> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
+   :in-modern-country-note "Saudi Arabia" ;
+   :representative-latlong-point (26.871235 48.720597) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pergamon-Museum_-_Totenmaske.jpg> .
 
 :san-agustin-megaliths a :group-of-human-figures ;
    rdfs:label "San Agustin Megaliths" ;
@@ -1618,8 +1670,20 @@
    :art-historical-culture-or-tradition :gandhara ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/as/original/DT8660.jpg> .
 
-:statue-of-absadmiya-hatra a :human-figure ;
-   rdfs:label "Statue of Absadmiya, Hatra" ;
+:bronze-statue-dhamar-ali-yahbur a :human-figure ;
+   rdfs:label "Bronze Statute of Dhamarʿalī Yuhabirr" ;
+   :desribed-by <https://en.wikipedia.org/wiki/Dhamar_Ali_Yahbur> ;
+   :approximate-date 150 ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
+   :in-modern-country-note "Yemen" ;
+   :representative-latlong-point (14.55 44.401667) ;
+   :note "Mapped point not the findspot but within region." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dhamar_Ali_Yahbur_(bust).jpg> .
+
+# https://in.pinterest.com/pin/918523286471789707/
+
+:statue-of-hatran-noble a :human-figure ;
+   rdfs:label "Statue of Hatran Noble" ;
    :described-by <https://www.worldhistory.org/image/10852/statue-of-prince-absadmiya-from-hatra/> ;
    :earliest-date 140 ;
    :latest-date 180 ;
@@ -1823,6 +1887,8 @@
    :representative-latlong-point (37.535384 67.115405) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_mural.jpg> .
 
+# :female-figure-holding-cornucopia 200 - 200 https://www.britishmuseum.org/collection/object/W_2012-6029-1
+
 :battle-scene-aberlemno-2 a :group-of-human-figures ;
    rdfs:label "Battle Scene on Stone Aberlemno 2" ;
    :described-by <https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones#The_battle_scene_on_Aberlemno_2> ;
@@ -1843,6 +1909,8 @@
    :representative-latlong-point (16.75 -89.15) ;
    :note "The mapped location is only a general indication of possilbe origin. See discussion on Met Museum page." ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-24340-001.jpg> .
+
+# 450 - 525 https://commons.wikimedia.org/wiki/File:Crowned_man,_Zafar.jpg
 
 :penjikent-murals a :group-of-human-figures ;
    rdfs:label "Penjikent Murals" ;
