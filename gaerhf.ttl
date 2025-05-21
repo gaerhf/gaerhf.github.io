@@ -447,6 +447,16 @@
 
 # -10000 https://en.wikipedia.org/wiki/Magura_Cave
 
+:lapa-do-santo-petroglyph a :human-figure ;
+   rdfs:label "Lapa do Santo Petroglyph" ;
+   :described-by <http://ahalenia.blogspot.com/2012/04/oldest-known-rock-art-in-americas.html> ,
+   <https://www.livescience.com/18602-horny-man-rock-carving-giant-phallus.html> ;
+   :earliest-date -10000 ;
+   :latest-date -7000 ;
+   :in-modern-country-note "Brazil" ;
+   :representative-latlong-point (-19.477183 -44.038056) ;
+   :thumbnail-image <https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7dWlsxvV8PM_rgRHYzdTAkKvwDNmNBf8X_L_dRQj0qwAIZHgLPL8zXfSM3GHnuNBJHNZ_B7v1lz-UGxuOK6u0rPlDWyQ-RS4sT_FTXRd6vw_pERBiRwCd5PP7d6e-nMx1lQKoVqS1dEg/s320/55_little_horny_man.jpg> .
+
 :pedra-furada-rock-art a :group-of-human-figures ;
    rdfs:label "Pedra Furada Rock Art" ;
    :described-by <https://www.bradshawfoundation.com/south_america/serra_da_capivara/pedra_furada/index.php> ;
@@ -471,6 +481,7 @@
    :described-by <https://en.wikipedia.org/wiki/Urfa_Man> ;
    :approximate-date -9000 ;
    :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.158333 38.791667) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> . 
 
@@ -479,6 +490,7 @@
    :described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> , <https://arachne.dainst.org/entity/2003369?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=212> ;
    :period-note "Gobekli Tepe (Turkey)" ;
    :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.223611 38.921667) ;
    :earliest-date -9500 ;
    :latest-date -8000 ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic .
