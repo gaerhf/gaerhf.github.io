@@ -1736,9 +1736,11 @@
 
 :bamiyan-buddhas a :group-of-human-figures ;
    rdfs:label "Bamiyan Buddhas" ;
+   :described-by <https://en.wikipedia.org/wiki/Buddhas_of_Bamiyan> ;
    :earliest-date 570 ;
    :latest-date 625 ;
-   :described-by <https://en.wikipedia.org/wiki/Buddhas_of_Bamiyan> ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (34.832 67.8267) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_of_Bamiyan.jpg> .
 
 :biamsa-temple-buddhist-stele a :human-figure ;
@@ -1875,6 +1877,8 @@
    :latest-date 300 ;
    :in-modern-country-note "Afghanistan and neighboring." ;
    :art-historical-culture-or-tradition :kushan-empire ;
+   :representative-latlong-point (36.756160 66.912596) ;
+   :note "Met Museum page suggests Balkh as possible findspot. Mapped point is proxy for Northern Afghanistan generally." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327830/711829/main-image> .
 
 :balalyk-tepe-murals a :group-of-human-figures ;
