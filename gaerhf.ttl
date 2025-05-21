@@ -1383,6 +1383,8 @@
    :representative-latlong-point (13.716667 44.733333) ; # ll for  Al-Bayda, Yemen
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BronzeManNashqum.jpg> .
 
+# -600 - -500 https://en.wikipedia.org/wiki/Kouros_of_Samos
+
 :capestrano-warrior a :human-figure ;
    rdfs:label "Capestrano Warrior" ;
    :described-by <https://en.wikipedia.org/wiki/Warrior_of_Capestrano> ;
@@ -1408,6 +1410,7 @@
    :described-by <https://en.wikipedia.org/wiki/Euphronios_Krater> ;
    :approximate-date -520 ;
    :in-modern-country-note "Made in Greece, found in Italy" ;
+   :representative-latlong-point (37.984167 23.728056) ; # Athens
    :art-historical-culture-or-tradition :archaic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Euphronios_krater_side_A_MET_L.2006.10.jpg> .
 
@@ -1417,6 +1420,7 @@
    :earliest-date -500 ;
    :latest-date -400 ;
    :in-modern-country-note "Italy" ;
+   :representative-latlong-point (39.8733 8.43972) ;
    :find-spot-note "Tharros" ;
    :material-note "Ceramic" ;
    :art-historical-culture-or-tradition :punic-culture ;
@@ -1481,6 +1485,7 @@
    :earliest-date -375 ;
    :latest-date -100 ;
    :in-modern-country-note "Germany" ;
+   :representative-latlong-point (54.1034 10.5931) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Braak_Bog_Figures.JPG> .
 
 :female-bust-from-elche a :human-figure ;
@@ -1509,14 +1514,14 @@
 
 # https://www.penn.museum/sites/expedition/the-vanishing-art-of-the-arctic/
 
-:figure-with-libyco-berber-script a :human-figure ;
-   rdfs:label "Figure with Libyco-Berber Script" ;
-   :described-by <https://en.wikipedia.org/wiki/Gundestrup_cauldron> ;
-   :earliest-date -200 ;
-   :latest-date 400 ;
-   :in-modern-country-note "Morocco" ;
-   :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
-   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> . 
+# :figure-with-libyco-berber-script a :human-figure ;
+#    rdfs:label "Figure with Libyco-Berber Script" ;
+#    :described-by <https://en.wikipedia.org/wiki/Gundestrup_cauldron> ;
+#    :earliest-date -200 ;
+#    :latest-date 400 ;
+#    :in-modern-country-note "Morocco" ;
+#    :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
+#    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> . 
 
 :laocoon-and-sons a :human-figure ;
    rdfs:label "Laocoön and His Sons" ;
@@ -1592,6 +1597,8 @@
    :earliest-date -200 ;
    :latest-date -100 ;
    :in-modern-country-note "China" ;
+   :representative-latlong-point (34.6197 112.4539) ; # Luoyang
+   :note "No specific findspot known." ;
    :art-historical-culture-or-tradition :han-dynasty ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/42178/151378/main-image> .
 
