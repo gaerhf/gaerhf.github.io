@@ -1479,6 +1479,14 @@
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
 
+:arbinus-seated-nereid-monument a :human-figure ;
+   rdfs:label "Arbinus Seated from the Nereid Monument" ;
+   :described-by <https://en.wikipedia.org/wiki/Nereid_Monument#Arbinas> ;
+   :approximate-date -375 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (36.356111 29.318611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Arbinas_in_Achaemenid_dress.jpg> .
+
 :braak-bog-figures a :group-of-human-figures ;
    rdfs:label "Braak Bog Figures" ;
    :described-by <https://en.wikipedia.org/wiki/Braak_Bog_Figures> ;
@@ -1530,6 +1538,7 @@
    :latest-date 75 ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :late-hellenistic ;
+   :representative-latlong-point (41.895393 12.495459) ; # between the Colosseum and Santa Maria Maggiore
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Laocoön_and_his_sons_group.jpg> .
 
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
@@ -1613,6 +1622,7 @@
    :earliest-date -200 ;
    :latest-date 500 ;
    :described-by <https://en.wikipedia.org/wiki/Nazca_lines> ;
+   :representative-latlong-point (-14.6975 -75.135) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_46.JPG> .
 
 :qatabanian-calcite-relief a :human-figure ;
