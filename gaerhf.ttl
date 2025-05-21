@@ -1385,6 +1385,18 @@
 
 # -600 - -500 https://en.wikipedia.org/wiki/Kouros_of_Samos
 
+# -600 - -400 https://en.wikipedia.org/wiki/Dar%27a
+
+:seated-figure-addi-galamo a :human-figure ;
+   rdfs:label "Seated Figure from Addi Galamo" ;
+   :described-by <https://en.wikipedia.org/wiki/Dar%27a> ;
+   :earliest-date -600 ;
+   :latest-date -400 ;
+   :in-modern-country-note "Ethiopia" ;
+   :representative-latlong-point (13.866667 39.733333) ;
+   :note "Location of Addi Galamo unclear. And it would be useful to have a better landing page for the figure itself." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Figurine,_National_Museum,_Addis_Ababa,_Ethiopia_(2130296832).jpg> .
+
 :capestrano-warrior a :human-figure ;
    rdfs:label "Capestrano Warrior" ;
    :described-by <https://en.wikipedia.org/wiki/Warrior_of_Capestrano> ;
