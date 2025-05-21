@@ -1555,6 +1555,16 @@
 
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
 
+:so-called-archer-king-tabo a :human-figure ;
+   rdfs:label "So-called Archer King from Tabo" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa.jpg> ;
+   :earliest-date -300 ;
+   :latest-date -200 ;
+   :in-modern-country-note "Sudan" ;
+   :representative-latlong-point (19.484667 30.426722) ;
+   :note "See museum label in the linked Wikimedia Commons page." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa_(cropped).jpg> .
+
 :calcite-alabaster-head-yemen a :human-figure ;
    rdfs:label "Calcite-Alabaster Headh from Yemen" ;
    :described-by <https://www.britishmuseum.org/collection/object/W_2001-0401-1> ;
