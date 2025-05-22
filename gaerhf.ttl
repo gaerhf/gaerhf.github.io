@@ -1035,8 +1035,9 @@
    :earliest-date -2000 ;
    :latest-date -1800 ;
    :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (31.287459 46.094633) ;
    :art-historical-culture-or-tradition :elamite-culture ;
-   :note "The date of this piece is uncertain and the findspot is unknown." ;
+   :note "The date of this piece is uncertain and the findspot is unknown. Mapped to ‘southern Iraq’." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/19d9f995_395f_4e0f_b9f7_a3b7006cfa12/mid_00032589_001.jpg> .
 
 :cypriot-red-polished-ware-plank-figure a :human-figure ;
@@ -1045,7 +1046,9 @@
    :earliest-date -2000 ;
    :latest-date -1900 ;
    :in-modern-country-note "Cyprus" ;
+   :representative-latlong-point (35.163819 33.666232) ;
    :art-historical-culture-or-tradition :philia-culture ;
+   :note "Specific findspot not known." ;
    :thumbnail-image <https://media.getty.edu/iiif/image/74715ced-ad1d-4f96-84b5-8070567edcd8/0,0,3249,4096/204,/0/default.jpg> .   
 
 :mohenjo-daro-priest-king a :human-figure ;
@@ -1116,6 +1119,16 @@
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.028222 21.695944) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
+
+:hittite-god-mace a :human-figure ;
+   rdfs:label "Hittite God holding Mace" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1939-0610-1> ;
+   :earliest-date -1400 ;
+   :latest-date -1200 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (40.019722 34.615278) ;
+   :note "Findspot unknown." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/b034bae1_724a_4131_855b_a3b700668aa8/mid_00030758_001.jpg> .
 
 :jade-statuette-standing-dignitary a :human-figure ;
    rdfs:label "Jade Statuette of a Standing Dignitary" ;
@@ -1355,6 +1368,14 @@
    :earliest-date -900 ;
    :latest-date -200 .
 
+:balawat-gates a :group-of-human-figures ;
+   rdfs:label "Balawat Gates" ;
+   :described-by <https://en.wikipedia.org/wiki/Balawat_Gates> ;
+   :approximate-date -860 ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (36.229444 43.403333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Detail_of_an_embossed_scene_on_bronze_plate_showing_Shalmaneser_III_in_a_chariot_and_Assyrian_archers._From_a_Balawat_gate,_Iraq,_859-824_BCE._Ancient_Orient_Museum,_Istanbul.jpg> .
+
 :statue-of-neo-hittite-ruler-suppiluliuma a :human-figure ;
    rdfs:label "Statue of Neo-Hittite Ruler Suppiluliuma" ;
    :described-by <https://www.worldhistory.org/image/13594/neo-hittite-king-suppiluliuma/> ;
@@ -1511,11 +1532,11 @@
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
 
-:deposit-figures-san-isidro a :group-of-human-figures ;
-   rdfs:label "Deposit of Figures from San Isidro" ;
+:deposit-figurines-san-isidro a :group-of-human-figures ;
+   rdfs:label "Deposit of Figurines from San Isidro" ;
    :described-by <https://doi.org/10.15184/aqy.2025.37> ;
    :earliest-date -410 ;
-   :lastest-date -380 ;
+   :latest-date -380 ;
    :in-modern-country-note "El Salvador" ;
    :representative-latlong-point (13.833882 -88.720227) ;
    :thumbnail-image <https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0003598X25000377/resource/name/S0003598X25000377_figAb.png?pub-status=live> .
@@ -1619,7 +1640,10 @@
    :described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
    :period-note "Satavahanas ? (India)" ;
    :earliest-date -200 ;
-   :latest-date 100 .
+   :latest-date 500 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (13.603425 79.576767) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudimallam_Lingam_in-situ_photograph.jpg> .
 
 :ceramic-whistle-in-the-form-of-a-standing-figure a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/313554> ;
@@ -1658,6 +1682,8 @@
    :described-by <https://www.ohiohistory.org/hopewell-headhunters/> ;
    :earliest-date -200 ;
    :latest-date 500 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (40.042167 -82.430111) ;
    :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/shaman-of-newark-color.jpg> .
 
 :han-female-dancer a :human-figure ;
