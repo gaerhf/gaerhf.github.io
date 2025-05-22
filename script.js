@@ -762,6 +762,17 @@ async function loadAndDisplayFigures($rdf) {
 
     renderFiguresAsList(currentSortedIndex);
     renderFiguresAsTimeline(currentSortedIndex);
+    setTimeout(() => {
+                    if (leafletMap) {
+                        leafletMap.invalidateSize();
+                    }
+                    renderFiguresOnMap(currentSortedIndex);
+
+                    // Open popup for current figure if present
+                    if (currentFigureId && leafletMarkers[currentFigureId]) {
+                        leafletMarkers[currentFigureId].openPopup();
+                    }
+                }, 200);
 
     // --- Add this block ---
     // Check for hash in URL and show that figure if present and valid
