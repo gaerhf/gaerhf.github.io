@@ -377,6 +377,7 @@
    :earliest-date -21000 ;
    :latest-date -20500 ;
    :in-modern-country-note "Russia" ;
+   :representative-latlong-point (52.850045 103.517383) ;
    :art-historical-culture-or-tradition :mal-ta-buret-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurines_from_central_Siberia_Mal%27ta_(grey_background).jpg> .
 
@@ -404,6 +405,8 @@
    :described-by <https://doi.org/10.1017/S0003598X00061998> , <https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf> ;
    :approximate-date -13000 ;
    :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (24.638719 32.960759) ;
+   :note "Mapped point very approximate. I have not found a linkable image." ;
    :art-historical-culture-or-tradition :saharan-rock-art .
 
 :gwion-gwion-rock-paintigs a :group-of-human-figures ;
