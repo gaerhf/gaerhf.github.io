@@ -714,6 +714,8 @@
 
 # -5000 - -4200 https://en.wikipedia.org/wiki/Jiroft_culture
 
+# https://saudipedia.com/en/article/875/history/landmarks-and-monuments/suffering-man-statue
+
 :anthropomorphic-stele-ha-il a :human-figure ;
    rdfs:label "Anthropomorphic Stele from Ha'il" ;
    :described-by <https://smarthistory.org/anthropomorphic-stele/> ;
@@ -905,6 +907,8 @@
    :latest-date -2350 ;
    :in-modern-country-note "Iraq" ;
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2023/07/Votive-figs4-1.jpg> .
+
+# -2800 - -2300 https://en.wikipedia.org/wiki/Jiroft_culture#/media/File:Chloritgefäße_aus_Iran,_Dschiroft,_2800-2300_v.C._(2).jpg
 
 :cycladic-figurine-spedos-type a :human-figure ;
    rdfs:label "Cycladic Figurine (Spedos Type)" ;
@@ -1519,6 +1523,16 @@
    :representative-latlong-point (38.875556 -0.753056) ; # ll for Mogente, Spain
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerrer_de_Moixent,_Museu_de_Prehistòria_de_València.jpg> .
 
+:lihyanite-colossal-statue a :human-figure ;
+   rdfs:label "Lihyanite Colossal Statute" ;
+   :described-by <https://www.afalula.com/en/a-monumental-lihyanite-statue-from-saudi-arabia-deposited-from-the-royal-commission-for-alula-rcu-to-the-musee-du-louvre/>,
+   <https://en.wikipedia.org/wiki/Lihyan> ;
+   :earliest-date -500 ;
+   :latest-date -200 ;
+   :in-modern-country-note "Saudi Arabia" ;
+   :representative-latlong-point (26.646980 37.916142) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_a_man_at_National_Museum_of_Korea_01.jpg> .
+
 :nok-head-and-torso-of-a-female-figure a :human-figure ;
    :described-by <https://emuseum.mfah.org/objects/31704/head-and-torso-of-a-female-figure> ;
    :period-note "Nok (Nigeria)" ;
@@ -1754,6 +1768,14 @@
    :representative-latlong-point (38.293611 67.978889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg> .
 
+:augustus-portrait-meroe a :human-figure ;
+   rdfs:label "Portrait of Augustus from Meroë" ;
+   :described-by <https://en.wikipedia.org/wiki/Meroë_Head> ;
+   :date -27 ;
+   :in-modern-country-note "Sudan" ;
+   :representative-latlong-point (16.933333 33.726389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_head_from_an_over-life-sized_statue_of_Augustus.jpg> .
+
 :funerary-mask-thaj a :human-figure ;
    rdfs:label "Funerary Mask from Thaj" ;
    :described-by <https://www.flickr.com/photos/dandiffendale/49997602097> ;
@@ -1942,6 +1964,8 @@
 
 # https://en.wikipedia.org/wiki/Jayavarman_VII
 
+# -62 https://en.wikipedia.org/wiki/Mount_Nemrut
+
 :kankali-tila-tablet a :group-of-human-figures ;
    rdfs:label "Kankali Tila tablet of Sodasa" ;
    :described-by <https://en.wikipedia.org/wiki/Kankali_Tila_tablet_of_Sodasa> ;
@@ -1985,6 +2009,16 @@
    :art-historical-culture-or-tradition :gandhara ;
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
+
+:goddess-of-hayan a :human-figure ;
+   rdfs:label "Goddess of Hayan" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/757642>,
+    <https://universes.art/en/art-destinations/jordan/petra/winged-lions-temple/view-2> ;
+   :earliest-date 100 ;
+   :latest-date 300;
+   :in-modern-country-note "Jordan" ;
+   :representative-latlong-point (30.33036 35.44254) ;
+    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/757642/1824427/restricted> .
 
 :birthing-scene-from-ostia a :group-of-human-figures ;
    rdfs:label "Birthing Scene from Ostia" ;
@@ -2031,6 +2065,15 @@
    :representative-latlong-point (36.756160 66.912596) ;
    :note "Met Museum page suggests Balkh as possible findspot. Mapped point is proxy for Northern Afghanistan generally." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327830/711829/main-image> .
+
+:palmyrene-mother-daughter a :group-of-human-figures ;
+   rdfs:label "Palmyrene Mother and Daughter" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1891-0113-E-2?selectedImageId=1613275915> ,
+     <https://en.wikipedia.org/wiki/Palmyrene_funerary_reliefs> ;
+   :date 184 ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (34.551389 38.268056) ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2017_1/9_14/70d4cad4_283e_4484_9eb1_a6f600efbc02/mid_WCO24972_a.jpg> .
 
 :balalyk-tepe-murals a :group-of-human-figures ;
    rdfs:label "Balalyk Tepe Murals" ;
