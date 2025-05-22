@@ -1246,6 +1246,8 @@
    :art-historical-culture-or-tradition :tlatico-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tlatilco_culture_figurines.jpg> .
 
+# https://collections.louvre.fr/en/ark:/53355/cl010132589
+
 :jinsha-figurine a :human-figure ;
    rdfs:label "Jinsha Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Jinsha_site> ;
@@ -1308,8 +1310,19 @@
    :earliest-date -900 ;
    :latest-date -700 ;
    :in-modern-country-note "Italy" ;
+   :representative-latlong-point (39.965778 8.448278) ;
    :art-historical-culture-or-tradition :nuragic-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Età_nuragica,_giganti_di_monte_prama,_xiii-ix_secolo_ac_ca.,_da_cabras,_guerriero_05,_01.jpg> .
+
+:neo-babylonian-woman-infant-figurine a :group-of-human-figures ;
+   rdfs:label "Neo-Babylonian Woman Nursing Infant" ;
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010132589> ;
+   :earliest-date -900 ;
+   :latest-date -540 ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (32.4795 44.431689) ;
+   :thumbnail-image <https://collections.louvre.fr/media/cache/small/0000000021/0000132589/0000225642_OG.JPG> .
+
 
 :olmec-standing-figure a :human-figure ;
    rdfs:label "Jadeite Standing Figure" ;
@@ -1728,6 +1741,7 @@
    :earliest-date -100 ;
    :latest-date 100 ;
    :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (32.4775 44.431389) ;
    :art-historical-culture-or-tradition :parthian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statuette_Goddess_Louvre_AO20127.jpg> .
 
@@ -1978,6 +1992,7 @@
    :earliest-date 100 ;
    :latest-date 300 ;
    :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.733244 12.278939) ;
    :art-historical-culture-or-tradition :roman-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Marble_plaque_showing_parturition_scene,_Ostia,_Italy,_400_B_Wellcome_L0065025.jpg> . 
 
@@ -1994,6 +2009,7 @@
    :earliest-date 120 ;
    :latest-date 160 ;
    :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.9041 12.4704) ;
    :art-historical-culture-or-tradition :roman-empire ;
    :thumbnail-image <https://www.centralemontemartini.org/sites/default/files/styles/large/public/storage/images/musei/centrale_montemartini/collezioni/percorsi_per_sale/sala_colonne/crepereia_tryphaena/corredo_di_crepereia_tryphaena_bambola/745590-1-ita-IT/corredo_di_crepereia_tryphaena_bambola.jpg> .
 
