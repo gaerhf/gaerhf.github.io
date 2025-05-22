@@ -894,7 +894,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function scrollToListFigure(figureId) {
     const currentDiv = document.getElementById(`list-${figureId}`);
     if (currentDiv) {
-        currentDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        currentDiv.scrollIntoView({ behavior: 'auto', block: 'center' });
     } else {
         console.warn(`Element with ID list-${figureId} not found.`);
     }
@@ -903,7 +903,7 @@ function scrollToListFigure(figureId) {
 function scrollToTimelineFigure(figureId) {
     const currentDiv = document.getElementById(`timeline-${figureId}`);
     if (currentDiv) {
-        currentDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        currentDiv.scrollIntoView({ behavior: 'auto', block: 'center' });
     } else {
         console.warn(`Element with ID list-${figureId} not found.`);
     }
