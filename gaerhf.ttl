@@ -2218,6 +2218,15 @@
    :note "The mapped point is the approximate location of the BBB Motor Site. See the wikipedia page for more information." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
 
+:pilling-figurines a :group-of-human-figures ;
+   rdfs:label "So-called Pilling Figurines" ;
+   :described-by <https://en.wikipedia.org/wiki/Pilling_Figurines>,
+   <https://eastern.usu.edu/prehistoric-museum/exhibits/archaeology/pilling-figurines> ;
+   :approximate-date 1050 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.3075 -110.057222) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PillingFigurines01.jpg> .
+
 :manuscript-covers-buddhit-deities a :group-of-human-figures ;
    rdfs:label "Manuscript Covers with Buddhist Deities" ;
    :described-by <https://www.metmuseum.org/art/collection/search/37791> ;
