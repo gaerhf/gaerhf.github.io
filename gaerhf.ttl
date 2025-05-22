@@ -1002,7 +1002,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_female_MET_DT867.jpg> . 
 
 :bmac-standing-male a :human-figure ;
-   rdfs:label "BMAC Stanging Male" ;
+   rdfs:label "BMAC Standing Male" ;
    :described-by <https://www.metmuseum.org/art/collection/search/328593> ;
    :earliest-date -2200 ;
    :latest-date -1700 ;
@@ -2242,6 +2242,15 @@
 # 1000 - 1100 https://commons.wikimedia.org/wiki/File:Avalokiteshvara,_the_Bodhisattva_of_Compassion,_Guge_kingdom,_1000-1050_AD,_Ngari,_west_Tibet,_brass_alloy,_copper_%26_tin_inlay,_colored_wax,_traces_of_gilding,_and_pigment_-_Freer_Gallery_of_Art_-_DSC04534.jpg
 
 # 1000 - 1100 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F2001.2a-d/ https://commons.wikimedia.org/wiki/File:Avalokiteshvara,_the_Bodhisattva_of_Compassion,_Guge_kingdom,_1000-1050_AD,_Ngari,_west_Tibet,_brass_alloy,_copper_%26_tin_inlay,_colored_wax,_traces_of_gilding,_and_pigment_-_Freer_Gallery_of_Art_-_DSC04534.jpg
+
+:taino-stand-human-form a :human-figure ;
+   rdfs:label "Taino Stand in Human Form" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/312602> ;
+   :approximate-date 1000 ;
+   :in-modern-country-note "Dominican Republic" ;
+   :representative-latlong-point (19 -70.666667) ;
+   :note "Findspot unknown" ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-17678-001.jpg> .
 
 :chaco-clay-figurines a :group-of-human-figures ;
    rdfs:label "Chaco Clay Figurines" ;
