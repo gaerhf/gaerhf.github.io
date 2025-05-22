@@ -919,7 +919,7 @@
    :described-by <https://en.wikipedia.org/wiki/Chemurchek_culture#Gallery> ;
    :earliest-date -2750 ;
    :latest-date -1900 ;
-   :in-modern-country-note "Mongolia" ;
+   :in-modern-country-note "China" ;
    :art-historical-culture-or-tradition :chemurchek-culture ;
    :representative-latlong-point (47.780636 87.860069) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Statue_0.jpg> .
@@ -997,15 +997,17 @@
    :earliest-date -2200 ;
    :latest-date -1700 ;
    :in-modern-country-note "Turkmenistan or Neighboring" ;
+   :representative-latlong-point (37.30111 64.15531) ;
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_female_MET_DT867.jpg> . 
 
-:bamc-standing-male a :human-figure ;
+:bmac-standing-male a :human-figure ;
    rdfs:label "BMAC Stanging Male" ;
    :described-by <https://www.metmuseum.org/art/collection/search/328593> ;
    :earliest-date -2200 ;
    :latest-date -1700 ;
    :in-modern-country-note "Turkmenistan or Neighboring" ;
+   :representative-latlong-point (37.3028 64.153) ;
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monstrous_male_figure_MET_dp22227.jpg> .
 
