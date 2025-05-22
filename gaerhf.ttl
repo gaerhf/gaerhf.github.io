@@ -1803,6 +1803,7 @@
    :described-by <https://en.wikipedia.org/wiki/Gupta_art#Sarnath_school> ;
    :date 448 ;
    :in-modern-country-note "India" ;
+   :representative-latlong-point (25.435833 81.846389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mankuwar_Buddha_with_background.jpg> .
 
 # 550 https://en.wikipedia.org/wiki/Head_of_Eutropius
