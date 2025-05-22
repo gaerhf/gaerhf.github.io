@@ -2002,6 +2002,14 @@
    :earliest-date 100 ;
    :latest-date 400 .
 
+:tropaeum-traiani a :group-of-human-figures ;
+   rdfs:label "Tropaeum Traiani" ;
+   :described-by <https://en.wikipedia.org/wiki/Tropaeum_Traiani> ;
+   :date 109 ;
+   :in-modern-country-note "Romania" ;
+   :representative-latlong-point (44.102 27.955) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AdamclisiMetope36.jpg> .
+
 :doll-tomb-crepereia-tryphaena a :human-figure ;
    rdfs:label "Doll from the Tomb of Crepereia Tryphaena" ;
    :described-by <https://en.wikipedia.org/wiki/Crepereia_Tryphaena>,
