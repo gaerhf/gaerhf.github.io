@@ -2190,6 +2190,8 @@
    :note "The mapped point is the approximate location of the BBB Motor Site. See the wikipedia page for more information." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
 
+# 1075 - 1100 https://www.metmuseum.org/art/collection/search/37791
+
 :cahokiam-resting-warrior-figurine a :human-figure ;
    rdfs:label "Cahokian Resting Warrior Figurine" ;
    :described-by <https://archeology.uark.edu/restingwarrior3d/> ;
