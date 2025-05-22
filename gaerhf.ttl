@@ -687,6 +687,7 @@
    :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
    :approximate-date -5000 ;
    :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (23.653333 25.159722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestias2.JPG> .
 
 :hamangia-seated-figures a :group-of-human-figures ;
@@ -1538,14 +1539,15 @@
 
 # https://www.penn.museum/sites/expedition/the-vanishing-art-of-the-arctic/
 
-# :figure-with-libyco-berber-script a :human-figure ;
-#    rdfs:label "Figure with Libyco-Berber Script" ;
-#    :described-by <https://en.wikipedia.org/wiki/Gundestrup_cauldron> ;
-#    :earliest-date -200 ;
-#    :latest-date 400 ;
-#    :in-modern-country-note "Morocco" ;
-#    :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
-#    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> . 
+:figure-with-libyco-berber-script a :human-figure ;
+   rdfs:label "Figure with Libyco-Berber Script" ;
+   :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-9338> ;
+   :earliest-date -200 ;
+   :latest-date 400 ;
+   :in-modern-country-note "Niger" ;
+   :representative-latlong-point (18.368989 9.727394) ;
+   :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> . 
 
 :laocoon-and-sons a :human-figure ;
    rdfs:label "Laocoön and His Sons" ;
@@ -2190,7 +2192,14 @@
    :note "The mapped point is the approximate location of the BBB Motor Site. See the wikipedia page for more information." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Keller_figurine.jpg> .
 
-# 1075 - 1100 https://www.metmuseum.org/art/collection/search/37791
+:manuscript-covers-buddhit-deities a :group-of-human-figures ;
+   rdfs:label "Manuscript Covers with Buddhist Deities" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/37791> ;
+   :earliest-date 1075 ;
+   :latest-date 1100 ;
+   :in-modern-country-note "Nepal" ;
+   :representative-latlong-point (27.666314 85.353615) ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/as/web-additional/DP-30181-001.jpg> .
 
 :cahokiam-resting-warrior-figurine a :human-figure ;
    rdfs:label "Cahokian Resting Warrior Figurine" ;
