@@ -1109,9 +1109,10 @@
 
 :pylos-combat-agate a :group-of-human-figures ;
    rdfs:label "Pylos Combat Agate" ;
+   :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
    :approximate-date -1450 ;
    :in-modern-country-note "Greece" ;
-   :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
+   :representative-latlong-point (37.028222 21.695944) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
 
 :jade-statuette-standing-dignitary a :human-figure ;
@@ -1120,8 +1121,10 @@
    :earliest-date -1200 ;
    :latest-date -1000 ;
    :in-modern-country-note "China" ;
+   :representative-latlong-point (36.099 114.392) ;
+   :note "Findspot not known. Mapped at generic point." ;
    :art-historical-culture-or-tradition :shang-dynasty ;
-   :thumbnail-images <https://ids.hvrd.art/ids/view/17386315?width=250&height=250> .
+   :thumbnail-image <https://ids.hvrd.art/ids/view/17386315?width=250&height=250> .
 
 :deer-stones-funerary-marker a :human-figure ;
    rdfs:label "Deer Stones Culture Funerary Marker" ;
@@ -1158,6 +1161,7 @@
    :art-historical-culture-or-tradition :pharaonic-egypt ;
    :approximate-date -1323 ;
    :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.740389 32.601417) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CairoEgMuseumTaaMaskMostlyPhotographed.jpg> .
 
 :sanxingdui-standing-figure a :human-figure ;
@@ -1504,6 +1508,15 @@
    :earliest-date -500 ;
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
+
+:deposit-figures-san-isidro a :group-of-human-figures ;
+   rdfs:label "Deposit of Figures from San Isidro" ;
+   :described-by <https://doi.org/10.15184/aqy.2025.37> ;
+   :earliest-date -410 ;
+   :lastest-date -380 ;
+   :in-modern-country-note "El Salvador" ;
+   :representative-latlong-point (13.833882 -88.720227) ;
+   :thumbnail-image <https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0003598X25000377/resource/name/S0003598X25000377_figAb.png?pub-status=live> .
 
 :esteros-standing-figure a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/317724> ;
@@ -1978,6 +1991,17 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_mural.jpg> .
 
 # :female-figure-holding-cornucopia 200 - 200 https://www.britishmuseum.org/collection/object/W_2012-6029-1
+
+# https://en.wikipedia.org/wiki/Cheng-Han (figurines of e4th)
+
+:cheng-han-figurine a :human-figure ;
+   rdfs:label "Cheng-Han Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Cheng-Han#Cheng_(304–338)> ;
+   :earliest-date 304 ;
+   :latest-date 338 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (30.66 104.063333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cheng-Han_Human_Figurine.png> .
 
 :battle-scene-aberlemno-2 a :group-of-human-figures ;
    rdfs:label "Battle Scene on Stone Aberlemno 2" ;

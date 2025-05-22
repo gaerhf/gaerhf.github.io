@@ -335,9 +335,9 @@ async function renderFiguresAsList(figuresArray) {
 }
 
 // Timeline display settings
-const LOG_SCALE_THRESHOLD = -9500; // Dates before this will be compressed logarithmically
-const LOG_SCALE_FACTOR = 6;         // Higher = more compression for early dates
-const LOG_REGION_PROPORTION = 0.25;  // 0.4 = 40% of width for log region, adjust as needed
+const LOG_SCALE_THRESHOLD = -8500; // Dates before this will be compressed logarithmically
+const LOG_SCALE_FACTOR = 4;         // Higher = more compression for early dates
+const LOG_REGION_PROPORTION = 0.2;  // 0.4 = 40% of width for log region, adjust as needed
 
 
 function timelineScale(date, minDate, maxDate) {
