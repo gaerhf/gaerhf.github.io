@@ -387,6 +387,7 @@
    :earliest-date -20000 ;
    :latest-date -17000 ;
    :in-modern-country-note "France" ;
+   :representative-latlong-point (45.053611 1.17) ;
    :art-historical-culture-or-tradition :magdalenian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lascaux_01.jpg> .
 
@@ -427,6 +428,7 @@
    :latest-date -8000 ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :epigravettian ;
+   :representative-latlong-point (38.1875 13.352222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palermo-Museo-Archeologico-bjs-11.jpg> .
 
 :shigir-anthropomorphic-figure a :human-figure ;
@@ -475,6 +477,7 @@
    :earliest-date -10000 ;
    :latest-date -3000 ;
    :in-modern-country-note "Bulgaria" ;
+   :representative-latlong-point (43.727778 22.582778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Magura_-_drawings.jpg> .
 
 # -10000?? https://en.wikipedia.org/wiki/El_Abra
@@ -510,6 +513,7 @@
    :latest-date -6500 ;
    :in-modern-country-note "Jordan" ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :representative-latlong-point (32.203889 36.008889) ;
    :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20210127172904183-0208:S0003598X20000782:S0003598X20000782_fig4.png> .
 
 :ceramic-anthropoid-figurines-kharaysin a :group-of-human-figures ;
@@ -518,6 +522,7 @@
    :earliest-date -8500 ;
    :latest-date -6500 ;
    :in-modern-country-note "Jordan" ;
+   :representative-latlong-point (32.203891 36.008884) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20210127172904183-0208:S0003598X20000782:S0003598X20000782_fig6.png> .
 
@@ -526,6 +531,7 @@
    :described-by <https://virtual-museum-syria.org/aleppo/female-figurine-2/> ;
    :approximate-date -8000 ;
    :in-modern-country-note "Syria" ;
+   :representative-latlong-point (36.0434 38.1287) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :thumbnail-image <https://virtual-museum-syria.org/aleppo/wp-content/uploads/sites/2/2021/06/fINbasiC-2-800x1574.jpg> .
 
@@ -536,6 +542,7 @@
    :earliest-date -8000 ;
    :latest-date -7000 ;
    :in-modern-country-note "Syria" ;
+   :representative-latlong-point (36.822300 41.461109) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2014/06/JA14-Artifact-Syrian-Neolithic-Face-Wand.jpg> .
 
@@ -554,6 +561,7 @@
 :ppnb-stone-mask a :human-figure ;
    rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
    :in-modern-country-note "West Bank, Palestinian Territories" ;
+   :representative-latlong-point (31.528611 35.096944) ;
    :earliest-date -7500 ;
    :latest-date -6500 ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -577,6 +585,7 @@
    :earliest-date -7500 ;
    :latest-date -4000 ;
    :in-modern-country-note "Algeria" ;
+   :representative-latlong-point (24.684509 9.693714) ;
    :art-historical-culture-or-tradition :saharan-rock-art ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_11/10_21/eeb44702_ca7b_451c_ba84_a3df015a47d5/mid_01548817_001.jpg> .
 
@@ -591,11 +600,12 @@
    :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/EdiLRvytYRYjtQGSL7yf9I68uWM=/fit-in/1072x0/filters:focal(931x560:932x561)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b8/65/b865d6a9-bbc1-44ec-9f4b-8b885aa6c83b/rock_art_3a.jpeg> .
 
 :neolithic-stone-mask a :human-figure ;
-   rdfs:label "Pre-pottery Neolithic Stone Mask" ;
+   rdfs:label "Pre-pottery Neolithic Stone Mask from Nahel Hemer" ;
    :described-by <https://www.imj.org.il/en/collections/197936-0> ;
    :earliest-date -7000 ;
    :latest-date -6000 ;
    :in-modern-country-note "Israel" ;
+   :representative-latlong-point (31.1392 35.2939) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
 
 :anthropoid-object-engraved-hair-damjili-cave a :human-figure ;
@@ -658,7 +668,7 @@
    :art-historical-culture-or-tradition :halaf-culture ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327066/711765/main-image> .
 
-:halag-culture-painted-female-figurine a :human-figure ;
+:halaf-culture-painted-female-figurine a :human-figure ;
    rdfs:label "Halaf Culture Painted Female Figurine" ;
    :described-by <https://art.thewalters.org/object/48.2741/> ;
    :earliest-date -5000 ;
@@ -730,6 +740,7 @@
    :earliest-date -4500 ;
    :latest-date -4000 ;
    :in-modern-country-note "Bulgaria" ;
+   :representative-latlong-point (43.213056 27.864444) ;
    :art-historical-culture-or-tradition :varna-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human-sized_clay_head_found_at_Varna_necropolis.png> .
 
@@ -773,6 +784,7 @@
    :earliest-date -3650 ;
    :latest-date -3300 ;
    :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.121757 32.735297) ;
    :art-historical-culture-or-tradition :predynastic-egypt ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/07.447.502_SL1.jpg?width=256&quality=75> .
 
@@ -793,6 +805,7 @@
    :earliest-date -3500 ;
    :latest-date -3000 ;
    :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (31.324167 45.637222) ;
    :art-historical-culture-or-tradition :sumerian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_vase_(background_retouched).jpg> .
 
@@ -1754,6 +1767,14 @@
    :art-historical-culture-or-tradition :hatra ;
    :thumbnail-image <https://www.worldhistory.org/uploads/images/10852.jpg> .
 
+:white-elephant-cave-figure a :human-figure ;
+   rdfs:label "White Elephant Cave Human Figure" ;
+   :described-by <https://www.sahumanities.org/index.php/sah/article/view/158> ;
+   :note "Figure 6 in the linked publication shows a portion of a ‘human figure’ dated to approximately 200 CE. Mapped point is very approximate." ;
+   :approximate-date 200 ;
+   :in-modern-country-note "South Africa" ;
+   :representative-latlong-point (-29.380719 29.527825) .
+
 :gandhara-standing-buddha a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/38820> ;
    :period-note "Gandhara Region (Pakistan)" ;
@@ -1774,6 +1795,7 @@
    :earliest-date 400 ;
    :latest-date 600 ;
    :in-modern-country-note "Sweden" ;
+   :representative-latlong-point (57.25 18.583333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Snake-witch.JPG> .
 
 :mankuwar-buddha a :human-figure ;
