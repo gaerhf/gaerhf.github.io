@@ -668,6 +668,15 @@
    :art-historical-culture-or-tradition :halaf-culture ;
    :thumbnail-image <https://art.thewalters.org/images/art/PS1_48.2741_3Qtr_DD_T09.jpg> .
 
+:female-figurine-saliagos a :human-figure ;
+   rdfs:label "Female Figureine from Saliagos" ;
+   :described-by <https://en.wikipedia.org/wiki/Fat_Lady_of_Saliagos> ;
+   :earliest-date -5000 ;
+   :latest-date -4000 ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (37.048 25.094) ; # Saliagos
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PAM_Pomos_2857.jpg> .
+
 :ennedi-plateau-archaic-rock-art a :group-of-human-figures ;
    rdfs:label "Ennedi Plateau Archaic Rock Art" ;
    :representative-latlong-point (17.038890 21.862235) ;
