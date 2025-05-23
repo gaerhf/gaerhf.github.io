@@ -1089,10 +1089,11 @@
 
 :wandjina-rock-art-mount-elizabeth-station a :group-of-human-figures ;
    rdfs:label "Wandjina Rock Art" ;
-   :described-by <https://en.wikipedia.org/wiki/Wandjina> ;
+   :described-by <https://en.wikipedia.org/wiki/Mount_Elizabeth_Station> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aboriginal_rock_art_on_the_Barnett_River,_Mount_Elizabeth_Station.jpg> ;
    :art-historical-culture-or-tradition :australian-first-nations ;
    :in-modern-country-note "Australia" ;
+   :representative-latlong-point (-16.4185 126.1028) ;
    :earliest-date -2000 ;
    :latest-date -1800 .
 
@@ -1119,6 +1120,7 @@
    :earliest-date -1700 ;
    :latest-date -1600 ;
    :in-modern-country-note "Greece" ;
+   :representative-latlong-point (37.730833 22.755) ;
    :described-by <https://en.wikipedia.org/wiki/Grave_Circle_B,_Mycenae> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funeral_mask_from_Mycenae_NAMA_080841.jpg> .
 
@@ -1128,6 +1130,7 @@
    :earliest-date -1600 ;
    :latest-date -1500 ;
    :in-modern-country-note "Greece" ;
+   :representative-latlong-point (36.351389 25.403611) ;
    :art-historical-culture-or-tradition :minoan ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cueilleuse_de_safran,_fresque,_Akrotiri,_Grèce.jpg> .
 
@@ -1137,6 +1140,7 @@
    :earliest-date -1550 ;
    :latest-date -1500 ;
    :in-modern-country-note "Greece" ;
+   :representative-latlong-point (37.730278 22.756111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:594px-MaskeAgamemnon-MOD.jpg> .
 
 :pylos-combat-agate a :group-of-human-figures ;
@@ -1146,6 +1150,14 @@
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.028222 21.695944) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
+
+:bull-leaping-fresco-knossos a :group-of-human-figures ;
+   rdfs:label "Bull Leaping Fresco from Knossos" ;
+   :described-by <https://en.wikipedia.org/wiki/Bull-Leaping_Fresco> ;
+   :approximate-date -1450 ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (35.298056 25.163056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Knossos_bull_leaping_fresco.jpg> .
 
 :hittite-god-mace a :human-figure ;
    rdfs:label "Hittite God holding Mace" ;
@@ -1241,6 +1253,7 @@
    :earliest-date -1200 ;
    :latest-date -900 ;
    :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (19.5 -99.25) ;
    :art-historical-culture-or-tradition :olmec ;
    :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
 
@@ -1281,6 +1294,7 @@
    :earliest-date -1000 ;
    :latest-date -500 ;
    :in-modern-country-note "China" ;
+   :representative-latlong-point (0.681183 104.012602) ;
    :art-historical-culture-or-tradition :jinsha-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum.jpg> .
 
@@ -1290,6 +1304,7 @@
    :earliest-date -1000 ;
    :latest-date -500 ;
    :in-modern-country-note "China" ;
+   :representative-latlong-point (0.682183 104.013102) ;
    :art-historical-culture-or-tradition :jinsha-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum_-_51131523226.jpg> .
 
@@ -1815,6 +1830,7 @@
    :earliest-date 1 ;
    :latest-date 900 ;
    :in-modern-country-note "Colombia" ;
+   :representative-latlong-point (1.916667 -76.233333) ;
    :art-historical-culture-or-tradition :andean ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CO_San_Agustín_0802_002_(17248622975).jpg> .
 
@@ -1833,6 +1849,7 @@
    :approximate-date 30 ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :roman-empire ;
+   :representative-latlong-point (40.75 14.486111) ; # update with house ll
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pompeii-couple.jpg> .
 
 # approx 50 https://en.wikipedia.org/wiki/Natakamani
@@ -1864,6 +1881,7 @@
    :earliest-date 140 ;
    :latest-date 180 ;
    :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (35.588056 42.718333) ;
    :art-historical-culture-or-tradition :hatra ;
    :thumbnail-image <https://www.worldhistory.org/uploads/images/10852.jpg> .
 
@@ -1874,6 +1892,16 @@
    :approximate-date 200 ;
    :in-modern-country-note "South Africa" ;
    :representative-latlong-point (-29.380719 29.527825) .
+
+:colossal-shapur-i a :human-figure ;
+   rdfs:label "Colossal Statue of Shapur I" ;
+   :described-by <https://en.wikipedia.org/wiki/Colossal_statue_of_Shapur_I> ;
+   :earliest-date 240 ;
+   :latest-date 272 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (29.777778 51.570833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shapur_statue_with_a_man_standing_in_front_of_it.JPG> .
+
 
 :gandhara-standing-buddha a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/38820> ;
@@ -1995,6 +2023,7 @@
    :earliest-date 1 ;
    :latest-date 100 ;
    :in-modern-country-note "India" ;
+   :representative-latlong-point (27.491389 77.673889) ;
    :art-historical-culture-or-tradition :northern-satraps-of-india  ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Amohini_relief,_Mathura,_circa_15_CE.jpg> .
 
@@ -2150,6 +2179,7 @@
    :earliest-date 480 ;
    :latest-date 722 ;
    :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (39.486792 67.620477) ;
    :art-historical-culture-or-tradition :sogdian-art ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_painting,_1st_half_of_7th_century_CE.jpg> .
 
@@ -2184,6 +2214,7 @@
    :earliest-date 500 ;
    :latest-date 600 ;
    :in-modern-country-note "Japan" ;
+   :representative-latlong-point (35.561389 139.716111) ;
    :art-historical-culture-or-tradition :kofun-period ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:岩戸山古墳出土_石人_(J-831).JPG> .
 
