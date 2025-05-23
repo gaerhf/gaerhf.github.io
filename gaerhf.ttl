@@ -835,6 +835,7 @@
    :earliest-date -3200 ;
    :latest-date -2800 ;
    :in-modern-country-note "France" ;
+   :representative-latlong-point (43.883171 2.604124) ;
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:La_statue-menhir_dite_%22La_Dame_de_Saint-Sernin%22.jpg> .
 
@@ -844,6 +845,7 @@
    :earliest-date -3200 ;
    :latest-date -2800 ;
    :in-modern-country-note "France" ;
+   :representative-latlong-point (43.961082 2.739499) ;
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(musée_fenaille,_rodez)_01.jpg> .
 
@@ -962,6 +964,7 @@
    :described-by <https://en.wikipedia.org/wiki/Kernosivsky_idol> ;
    :approximate-date -2500 ;
    :in-modern-country-note "Ukraine" ;
+   :representative-latlong-point (48.954315 35.632818) ;
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Керносовский_идол.png> .
 
@@ -980,6 +983,7 @@
    :earliest-date -2300 ;
    :latest-date -1750 ;
    :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (27.329167 68.138889) ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_girl_of_Mohenjo-daro.jpg> .
 
@@ -1080,6 +1084,7 @@
    :latest-date -1900 ;
    :in-modern-country-note "Pakistan" ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
+   :representative-latlong-point (27.335167 68.143889) ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Mohenjo-daro_Priesterkönig.jpeg> .
 
 :wandjina-rock-art-mount-elizabeth-station a :group-of-human-figures ;
