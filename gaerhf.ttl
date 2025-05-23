@@ -348,8 +348,6 @@
    :representative-latlong-point (43.6328 -0.6936) ; # ll for Brassempouy, France
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_de_Brassempouy.jpg> .
 
-# -25000 - -20000 https://en.wikipedia.org/wiki/Venus_figurines_of_Kostyonki
-
 :female-figurines-of-kostyonki a :group-of-human-figures ;
    rdfs:label  "Female Figurines of Kostyonki" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_figurines_of_Kostyonki> ;
@@ -450,8 +448,6 @@
 
 # https://en.wikipedia.org/wiki/Kel_Essuf_Period#Kel_Essuf_Rock_Art_and_Hunter-Gatherers
 
-# -10000 https://en.wikipedia.org/wiki/Magura_Cave
-
 :lapa-do-santo-petroglyph a :human-figure ;
    rdfs:label "Lapa do Santo Petroglyph" ;
    :described-by <http://ahalenia.blogspot.com/2012/04/oldest-known-rock-art-in-americas.html> ,
@@ -500,11 +496,6 @@
    :earliest-date -9500 ;
    :latest-date -8000 ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic .
-
-# https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf
-
-# -8000 https://virtual-museum-syria.org/aleppo/female-figurine-2/
-
 
 :flint-anthropoid-figurines-kharaysin a :group-of-human-figures ;
    rdfs:label "Flint Anthropoid Figurines from Kharaysin" ;
@@ -918,6 +909,15 @@
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2023/07/Votive-figs4-1.jpg> .
 
 # -2800 - -2300 https://en.wikipedia.org/wiki/Jiroft_culture#/media/File:Chloritgefäße_aus_Iran,_Dschiroft,_2800-2300_v.C._(2).jpg
+
+:jiroft-figure-felines a :human-figure ;
+   rdfs:label "Jiroft Bowl with Figure between Felines" ;
+   :described-by <https://en.wikipedia.org/wiki/Jiroft_culture#/media/File:Chloritgefäße_aus_Iran,_Dschiroft,_2800-2300_v.C._(2).jpg> ;
+   :earliest-date -2800 ;
+   :latest-date -2300 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (28.449372 57.778422) ; # konar sandal
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Chloritgefäße_aus_Iran,_Dschiroft,_2800-2300_v.C._(2).jpg> .
 
 :cycladic-figurine-spedos-type a :human-figure ;
    rdfs:label "Cycladic Figurine (Spedos Type)" ;
