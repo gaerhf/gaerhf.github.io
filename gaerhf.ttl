@@ -1797,6 +1797,16 @@
    :art-historical-culture-or-tradition :parthian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statuette_Goddess_Louvre_AO20127.jpg> .
 
+:miniature-head-pattanam a :human-figure ;
+   rdfs:label "Miniature Head from Pattanam" ;
+   :described-by <https://frontline.thehindu.com/arts-and-culture/heritage/first-ever-human-image-at-pattanam/article32611336.ece> ;
+   :earliest-date -100 ;
+   :latest-date 200 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (10.15654 76.208982) ;
+   :note "Paywalled article. Need better source." ;
+   :thumbnail-image <https://fl-i.thgim.com/public/arts-and-culture/heritage/hw0lwe/article32611335.ece/alternates/LANDSCAPE_1200/FL9ARCPtm-Head-Statute-2020-Photo-PAMA-2> .
+
 :terracotta-male-figure-from-kalchayan a :human-figure ;
    rdfs:label "Terracotta Male figure from Kalchayan" ;
    :art-historical-culture-or-tradition :kushan ;
@@ -1863,6 +1873,14 @@
    :art-historical-culture-or-tradition :gandhara ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/as/original/DT8660.jpg> .
 
+:seated-buddha-mathura-132 a :group-of-human-figures ;
+   rdfs:label "Seated Buddha from Mathura of 132 CE" ;
+   :described-by <https://smarthistory.org/buddha-mathura/> ;
+   :date 132 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (27.4925 77.673611) ;
+   :thumbnail-image <https://smarthistory.org/wp-content/uploads/2020/04/No-BG-Kimbell-Buddha-GA-1.jpg> .
+
 :bronze-statue-dhamar-ali-yahbur a :human-figure ;
    rdfs:label "Bronze Statute of Dhamarʿalī Yuhabirr" ;
    :desribed-by <https://en.wikipedia.org/wiki/Dhamar_Ali_Yahbur> ;
@@ -1901,7 +1919,6 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.777778 51.570833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shapur_statue_with_a_man_standing_in_front_of_it.JPG> .
-
 
 :gandhara-standing-buddha a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/38820> ;
