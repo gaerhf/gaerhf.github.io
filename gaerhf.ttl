@@ -1640,6 +1640,17 @@
    :art-historical-culture-or-tradition :iberian-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Escultura_ibérica_%22Dama_de_Elche%22._Museo_Arqueológico_Nacional_(España)._Spain.jpg> .
 
+:so-called-archer-king-tabo a :human-figure ;
+   rdfs:label "So-called Archer King from Tabo" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa.jpg> ,
+      <https://en.wikipedia.org/wiki/Tabo_(Nubia)> ;
+   :earliest-date -300 ;
+   :latest-date -200 ;
+   :in-modern-country-note "Sudan" ;
+   :representative-latlong-point (19.484667 30.426722) ;
+   :note "See museum label in the linked Wikimedia Commons page." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa_(cropped).jpg> .
+
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
    :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
@@ -1678,17 +1689,6 @@
 
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
 
-:so-called-archer-king-tabo a :human-figure ;
-   rdfs:label "So-called Archer King from Tabo" ;
-   :described-by <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa.jpg> ,
-      <https://en.wikipedia.org/wiki/Tabo_(Nubia)> ;
-   :earliest-date -300 ;
-   :latest-date -200 ;
-   :in-modern-country-note "Sudan" ;
-   :representative-latlong-point (19.484667 30.426722) ;
-   :note "See museum label in the linked Wikimedia Commons page." ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa_(cropped).jpg> .
-
 :calcite-alabaster-head-yemen a :human-figure ;
    rdfs:label "Calcite-Alabaster Headh from Yemen" ;
    :described-by <https://www.britishmuseum.org/collection/object/W_2001-0401-1> ;
@@ -1700,6 +1700,7 @@
    :note "Mapped point is generic as findspot not known." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
 
+# -300 - 300 ?? https://en.wikipedia.org/wiki/Didarganj_Yakshi
 
 :gudimallam-lingam a :human-figure ;
    :described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
@@ -1733,6 +1734,40 @@
    :representative-latlong-point (34.385 109.273056) ; # ll for Xi'an, China
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerreros_de_Terracota,_Xi%27an_(15547299927).jpg>.
 
+:han-female-dancer a :human-figure ;
+   rdfs:label "Han Female Dancer" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/42178> ;
+   :earliest-date -200 ;
+   :latest-date -100 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.6197 112.4539) ; # Luoyang
+   :note "No specific findspot known." ;
+   :art-historical-culture-or-tradition :han-dynasty ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/42178/151378/main-image> .
+
+:parkham-yaksha a :human-figure ;
+   rdfs:label "Parkham Yaksha" ;
+   :described-by <https://en.wikipedia.org/wiki/Parkham_Yaksha> ;
+   :earliest-date -200 ;
+   :latest-date -100 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (27.287358 77.717414) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yaksha_Manibhadra_-_Parkham_Mathura_circa_150_BCE.jpg> .
+
+:tolita-tumaco-seated-elder a :human-figure ;
+   :described-by <https://www.metmuseum.org/art/collection/search/314299> ;
+   :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
+   :earliest-date -200 ;
+   :latest-date 400 .
+
+:nazca-standing-figure a :human-figure ;
+   rdfs:label "Nazca Standing Figure" ;
+   :earliest-date -200 ;
+   :latest-date 500 ;
+   :described-by <https://en.wikipedia.org/wiki/Nazca_lines> ;
+   :representative-latlong-point (-14.6975 -75.135) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_46.JPG> .
+
 :hopewell-mica-torso a :human-figure ;
    rdfs:label "Hopewell Mica Torso" ;
    :described-by <https://www.ohiohistory.org/hopewell-headhunters/> ;
@@ -1750,31 +1785,6 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point (40.042167 -82.430111) ;
    :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/shaman-of-newark-color.jpg> .
-
-:han-female-dancer a :human-figure ;
-   rdfs:label "Han Female Dancer" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/42178> ;
-   :earliest-date -200 ;
-   :latest-date -100 ;
-   :in-modern-country-note "China" ;
-   :representative-latlong-point (34.6197 112.4539) ; # Luoyang
-   :note "No specific findspot known." ;
-   :art-historical-culture-or-tradition :han-dynasty ;
-   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/42178/151378/main-image> .
-
-:tolita-tumaco-seated-elder a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/314299> ;
-   :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
-   :earliest-date -200 ;
-   :latest-date 400 .
-
-:nazca-standing-figure a :human-figure ;
-   rdfs:label "Nazca Standing Figure" ;
-   :earliest-date -200 ;
-   :latest-date 500 ;
-   :described-by <https://en.wikipedia.org/wiki/Nazca_lines> ;
-   :representative-latlong-point (-14.6975 -75.135) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_46.JPG> .
 
 :qatabanian-calcite-relief a :human-figure ;
    rdfs:label "Qatabanian Calcite Relief" ;
