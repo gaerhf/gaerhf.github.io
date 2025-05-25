@@ -1294,7 +1294,7 @@
    :earliest-date -1000 ;
    :latest-date -500 ;
    :in-modern-country-note "China" ;
-   :representative-latlong-point (0.681183 104.012602) ;
+   :representative-latlong-point (30.681183 104.012602) ;
    :art-historical-culture-or-tradition :jinsha-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum.jpg> .
 
@@ -1304,7 +1304,7 @@
    :earliest-date -1000 ;
    :latest-date -500 ;
    :in-modern-country-note "China" ;
-   :representative-latlong-point (0.682183 104.013102) ;
+   :representative-latlong-point (30.682183 104.013102) ;
    :art-historical-culture-or-tradition :jinsha-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum_-_51131523226.jpg> .
 
@@ -2198,6 +2198,16 @@
    :note "The mapped location is only a general indication of possilbe origin. See discussion on Met Museum page." ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-24340-001.jpg> .
 
+
+:huqoq-mosaics a :group-of-human-figures ;
+   rdfs:label "Huqoq Mosaics" ;
+   :described-by <https://en.wikipedia.org/wiki/Huqoq#Ancient_synagogue>,
+      <https://www.biblicalarchaeology.org/wp-content/uploads/2019/05/BAR-MJ19-Huqoq.pdf> ;
+   :approximate-date 425 ;
+   :in-modern-country-note "Israel" ;
+   :representative-latlong-point (32.884722 35.478889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:פסיפס_מהתקופה.jpg> .
+
 # 450 - 525 https://commons.wikimedia.org/wiki/File:Crowned_man,_Zafar.jpg
 
 :penjikent-murals a :group-of-human-figures ;
@@ -2350,6 +2360,15 @@
    :art-historical-culture-or-tradition :carolingian-renaissance ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karolingischer_Buchmaler_um_820_001.jpg> .
 
+:intricately-carved-panel-box a :group-of-human-figures ;
+   rdfs:label "Intricately Carved Panel from Box" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/446285> ;
+   :earliest-date 900 ;
+   :latest-date 1025 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (37.89 -4.78) ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/is/web-additional/is13.141.R.jpg> .
+
 :igbo-ukwu-face-pendant a :human-figure ;
    rdfs:label "Igbo ukwu Face Pendant" ;
    :described-by <https://en.wikipedia.org/wiki/Archaeology_of_Igbo-Ukwu> ;
@@ -2403,6 +2422,17 @@
    :representative-latlong-point (20.683056 -88.568611) ; # Chichen Itza
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dresden_Codex_p09.jpg> .
+
+:hoa-hakananai-a a :human-figure ;
+   rdfs:label "Hoa Hakananai'a" ;
+   :described-by <https://www.britishmuseum.org/collection/object/E_Oc1869-1005-1?selectedImageId=585991001> ,
+      <https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/moai> ,
+      <https://en.wikipedia.org/wiki/Hoa_Hakananai%27a> ;
+   :earliest-date 1000 ;
+   :latest-date 1200 ;
+   :in-modern-country-note "Chile" ;
+   :representative-latlong-point (-27.12 -109.35) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Basalt_statue,_Hoa_Hakananai%27a_(hidden_or_stolen_friend)._Moai;_an_ancestor_figure,_made_by_the_Rapanui_people._1000-1200_CE._From_Orongo_(Polynesia,_Easter_Island);_probably_made_in_Rano_Kao._British_Museum.jpg> .
 
 :maya-codex-of-mexico a :group-of-human-figures ;
    rdfs:label "Maya Codex of Mexico" ;
@@ -2464,6 +2494,15 @@
    :modern-country-note "Sri Lanka" ;
    :representative-latlong-point (7.92627 80.99484) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Relief_of_Parakramabahu_in_Polonnaruwa.jpg> .
+
+:lewis-chessmen a :group-of-human-figures ;
+   rdfs:label "Lewis Chessmen" ;
+   :described-by <https://en.wikipedia.org/wiki/Lewis_chessmen> ;
+   :earliest-date 1100 ;
+   :latest-date 1200 ;
+   :in-modern-country-note "Scotland" ;
+   :representative-latlong-point (58.185987 -7.021909) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lewis_chessmen_23.JPG> .
 
 # 1150 - 1250 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1968.75/
 
