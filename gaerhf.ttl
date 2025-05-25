@@ -869,6 +869,8 @@
    :earliest-date -3000 ;
    :latest-date -2800 ;
    :in-modern-country-note "Greece" ;
+   :representative-latlong-point (37.066667 25.2) ;
+   :note "The findspot is not known. Mapped at Paros for time being." ;
    :art-historical-culture-or-tradition :cycladic-art ;
    :thumbnail-image <https://media.getty.edu/iiif/image/de65363a-8e1f-4d5b-bf31-9cf4fe423948/0,0,2640,4096/165,/0/default.jpg> .
 
