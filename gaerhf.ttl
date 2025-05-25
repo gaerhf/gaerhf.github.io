@@ -1651,6 +1651,8 @@
    :note "See museum label in the linked Wikimedia Commons page." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa_(cropped).jpg> .
 
+# -300 - -124 https://en.wikipedia.org/wiki/Roquepertuse
+
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
    :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
@@ -1785,6 +1787,15 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point (40.042167 -82.430111) ;
    :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/shaman-of-newark-color.jpg> .
+
+:msecke-zehrovice-head a :human-figure ;
+   rdfs:label "Mšecké Žehrovice Head" ;
+   :earliest-date -150 ;
+   :latest-date -50 ;
+   :in-modern-country-note "Czech Republic" ;
+   :representative-latlong-point (50.1698 13.9213) ;
+   :art-historical-culture-or-tradition :la-tene ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_sculpture_of_celtic_hero.jpg> .
 
 :qatabanian-calcite-relief a :human-figure ;
    rdfs:label "Qatabanian Calcite Relief" ;
