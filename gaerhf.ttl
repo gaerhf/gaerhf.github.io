@@ -2218,6 +2218,12 @@
    :representative-latlong-point (38.449131 125.508131) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Man_-_Anak_Tomb_No._3.jpg> .
 
+# :terracotta-ganges-and-attendant a :human-figure ;
+#    :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
+#    :period-note "Gupta (India)" ;
+#    :earliest-date 400 ;
+#    :latest-date 600 .
+
 :mayan-wooden-kneeling-figure a :human-figure ;
    rdfs:label "Mayan Wooden Kneeling Figure" ;
    :described-by <https://www.metmuseum.org/art/collection/search/313256> ;
@@ -2229,7 +2235,6 @@
    :note "The mapped location is only a general indication of possilbe origin. See discussion on Met Museum page." ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-24340-001.jpg> .
 
-
 :huqoq-mosaics a :group-of-human-figures ;
    rdfs:label "Huqoq Mosaics" ;
    :described-by <https://en.wikipedia.org/wiki/Huqoq#Ancient_synagogue>,
@@ -2240,12 +2245,6 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:פסיפס_מהתקופה.jpg> .
 
 # 450 - 525 https://commons.wikimedia.org/wiki/File:Crowned_man,_Zafar.jpg
-
-:terracotta-ganges-and-attendant a :human-figure ;
-   :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
-   :period-note "Gupta (India)" ;
-   :earliest-date 400 ;
-   :latest-date 600 .
 
 :penjikent-murals a :group-of-human-figures ;
    rdfs:label "Penjikent Murals" ;
@@ -2267,10 +2266,21 @@
    :representative-latlong-point (28.555556 33.976111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay.jpg> .
 
+:gilt-bronze-buddha-goguryeo-kingdom a :human-figure ;
+   rdfs:label "Gilt Bronze Buddha from Goguryeo Kingdom" ;
+   :described-by <https://www.worldhistory.org/image/5764/gilt-bronze-buddha-goguryeo-kingdom/> ;
+   :earliest-date 500 ;
+   :latest-date 600 ;
+   :in-modern-country-note "North Koreia" ;
+   :representative-latlong-point (39.016667 125.7475) ;
+   :art-historical-culture-or-tradition :goguryeo ;
+   :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/5764.jpg.webp> .
+
 :haniwa-warrior-keiko-armor a :human-figure ;
    rdfs:label "Haniwa Warrior in Keiko Armor" ;
    :described-by <https://en.wikipedia.org/wiki/Haniwa_Warrior_in_Keiko_Armor> ;
    :in-modern-country-note "Japan" ;
+   :representative-latlong-point (36.29114 139.37536) ; # Ota City, Japan
    :art-historical-culture-or-tradition :kofun-period ;
    :earliest-date 500 ;
    :latest-date 600 ;
