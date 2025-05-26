@@ -2208,15 +2208,15 @@
    :representative-latlong-point (30.66 104.063333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cheng-Han_Human_Figurine.png> .
 
-:battle-scene-aberlemno-2 a :group-of-human-figures ;
-   rdfs:label "Battle Scene on Stone Aberlemno 2" ;
-   :described-by <https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones#The_battle_scene_on_Aberlemno_2> ;
-   :earliest-date 600 ;
-   :latest-date 800 ;
-   :in-modern-country-note "Scotland" ;
-   :art-historical-culture-or-tradition :pictish-art ;
-   :representative-latlong-point (56.689167 -2.781389) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pictish_Stone_at_Aberlemno_Church_Yard_-_Battle_Scene_Detail.jpg> .
+:dong-shu-funerary-portrait a :human-figure ;
+   rdfs:label "Dong Shu Funerary Portrait" ;
+   :described-by <https://en.wikipedia.org/wiki/Anak_Tomb_No._3>,
+      <https://en.wikipedia.org/wiki/Goguryeo_tombs> ,
+      <https://www.worldhistory.org/article/966/the-tombs-of-goguryeo/> ;
+   :date 357 ;
+   :in-modern-country-note "North Korea" ;
+   :representative-latlong-point (38.449131 125.508131) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Man_-_Anak_Tomb_No._3.jpg> .
 
 :mayan-wooden-kneeling-figure a :human-figure ;
    rdfs:label "Mayan Wooden Kneeling Figure" ;
@@ -2241,6 +2241,12 @@
 
 # 450 - 525 https://commons.wikimedia.org/wiki/File:Crowned_man,_Zafar.jpg
 
+:terracotta-ganges-and-attendant a :human-figure ;
+   :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
+   :period-note "Gupta (India)" ;
+   :earliest-date 400 ;
+   :latest-date 600 .
+
 :penjikent-murals a :group-of-human-figures ;
    rdfs:label "Penjikent Murals" ;
    :described-by <https://en.wikipedia.org/wiki/Penjikent_murals> ;
@@ -2250,12 +2256,6 @@
    :representative-latlong-point (39.486792 67.620477) ;
    :art-historical-culture-or-tradition :sogdian-art ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_painting,_1st_half_of_7th_century_CE.jpg> .
-
-:terracotta-ganges-and-attendant a :human-figure ;
-   :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
-   :period-note "Gupta (India)" ;
-   :earliest-date 400 ;
-   :latest-date 600 .
 
 :christ-pantokrator-saint-catherines a :human-figure ;
    rdfs:label "Christ Pantokrator, Saint Catherine's Monastery" ;
@@ -2321,6 +2321,16 @@
    :in-modern-country-note "Bolivia" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bol-tihuanaco-el-fr.jpg> .
 
+:qajartalik-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Qajartalik Petroglyphs" ;
+   :described-by <https://www.historymuseum.ca/blog/qajartalik-2022-collaborative-community-based-archaeological-fieldwork-in-nunavik>,
+      <https://en.wikipedia.org/wiki/Qajartalik> ;
+   :earliest-date 500 ;
+   :latest-date 1250 ;
+   :in-modern-country-note "Canada" ;
+   :representative-latlong-point (61.331574 -71.499644) ;
+   :thumbnail-image <https://www.historymuseum.ca/wp-content/uploads/2022/09/Blog-KRyan-09-2022_Fig567-1024x512.png>  .
+
 :fondukistan-monastery-divintity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
    :described-by <https://www.guimet.fr/en/our-collections/afghanistan-pakistan/divinity-seating-royal-ease-position>,
@@ -2340,6 +2350,16 @@
    :in-modern-country-note "India" ;
    :representative-latlong-point (12.6175 80.198889) ; # Mahabalipuram, India
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg> .
+
+:battle-scene-aberlemno-2 a :group-of-human-figures ;
+   rdfs:label "Battle Scene on Stone Aberlemno 2" ;
+   :described-by <https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones#The_battle_scene_on_Aberlemno_2> ;
+   :earliest-date 600 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Scotland" ;
+   :art-historical-culture-or-tradition :pictish-art ;
+   :representative-latlong-point (56.689167 -2.781389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pictish_Stone_at_Aberlemno_Church_Yard_-_Battle_Scene_Detail.jpg> .
 
 :afrasiab-murals a :group-of-human-figures ;
    rdfs:label "Afrasiab Murals" ;
@@ -2380,6 +2400,26 @@
    :representative-latlong-point (29.544722 103.773333) ; # Leshan, China
    :art-historical-culture-or-tradition :tang-dynasty ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_View_from_below.jpg> .
+
+:panel-borobudu-hidden-foot a :group-of-human-figures ;
+   rdfs:label "Panel from from Borobudur ‘Hidden Foot’" ;
+   :described-by <https://en.wikipedia.org/wiki/Borobudur#Reliefs> ;
+   :earliest-date 750 ;
+   :latest-date 850 ;
+   :in-modern-country-note "Indonesia" ;
+   :representative-latlong-point (-7.608 110.204) ; # Borobudur, Indonesia
+   :art-historical-culture-or-tradition :sailendra-dynasty ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Reliëf_O_89_op_de_verborgen_voet_van_de_Borobudur_TMnr_10015826.jpg> . # https://www.bbc.co.uk/ahistoryoftheworld/objects/CPbWMMoFSnmUlSHF3dkf5A
+
+:musician-bomampak-murals a :group-of-human-figures ;
+   rdfs:label "Procession from the Bonampak Murals" ;
+   :described-by <https://en.wikipedia.org/wiki/Bonampak#Temple_of_the_Murals> ;
+   :earliest-date 790 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (16.704 -91.065) ; # Site
+   :art-historical-culture-or-tradition :maya-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bonampak_painting.jpg> .
 
 :four-evangelists-aachen-gospel a :group-of-human-figures ;
    rdfs:label "Four Evangelists, Aachen Gospel" ;
@@ -2434,16 +2474,6 @@
    :note "Findspot unknown" ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-17678-001.jpg> .
 
-:chaco-clay-figurines a :group-of-human-figures ;
-   rdfs:label "Chaco Clay Figurines" ;
-   :described-by <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600_full.html> ;
-   :earliest-date 1020 ;
-   :latest-date 1140 ;
-   :in-modern-country-note "United States" ;
-   :art-historical-culture-or-tradition :anasazi ;
-   :representative-latlong-point (36.0698 -107.9574) ;
-   :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
-
 :dresden-codex a :group-of-human-figures ;
    rdfs:label "Dresden Codex" ;
    :described-by <https://en.wikipedia.org/wiki/Dresden_Codex> ;
@@ -2464,6 +2494,17 @@
    :in-modern-country-note "Chile" ;
    :representative-latlong-point (-27.12 -109.35) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Basalt_statue,_Hoa_Hakananai%27a_(hidden_or_stolen_friend)._Moai;_an_ancestor_figure,_made_by_the_Rapanui_people._1000-1200_CE._From_Orongo_(Polynesia,_Easter_Island);_probably_made_in_Rano_Kao._British_Museum.jpg> .
+
+:chaco-clay-figurines a :group-of-human-figures ;
+   rdfs:label "Chaco Clay Figurines" ;
+   :described-by <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600_full.html> ;
+   :earliest-date 1020 ;
+   :latest-date 1140 ;
+   :in-modern-country-note "United States" ;
+   :art-historical-culture-or-tradition :anasazi ;
+   :representative-latlong-point (36.0698 -107.9574) ;
+   :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
+
 
 :maya-codex-of-mexico a :group-of-human-figures ;
    rdfs:label "Maya Codex of Mexico" ;
