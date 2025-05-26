@@ -1642,6 +1642,16 @@
    :art-historical-culture-or-tradition :iberian-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Escultura_ibérica_%22Dama_de_Elche%22._Museo_Arqueológico_Nacional_(España)._Spain.jpg> .
 
+:didarganj-yakshi a :human-figure ;
+   rdfs:label "Didarganj Yakshi" ;
+   :described-by <https://en.wikipedia.org/wiki/Didarganj_Yakshi> ,
+    <https://smarthistory.org/yaksha-yakshi/> ;
+   :earliest-date -300 ;
+   :latest-date -200 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (25.571667 85.2625) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Didarganj_Yakshi_statue_in_the_Bihar_Museum.jpg> .
+
 :so-called-archer-king-tabo a :human-figure ;
    rdfs:label "So-called Archer King from Tabo" ;
    :described-by <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa.jpg> ,
