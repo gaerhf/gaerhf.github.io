@@ -1800,6 +1800,14 @@
    :representative-latlong-point (40.042167 -82.430111) ;
    :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/shaman-of-newark-color.jpg> .
 
+:great-altar-pergamon a :group-of-human-figures ;
+   rdfs:label "Great Altar at Pergamon" ;
+   :earliest-date -170 ;
+   :latest-date -150 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (39.131051 27.183931) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pergamonmuseum_-_Antikensammlung_-_Pergamonaltar_13.jpg> .
+
 :msecke-zehrovice-head a :human-figure ;
    rdfs:label "Mšecké Žehrovice Head" ;
    :earliest-date -150 ;
