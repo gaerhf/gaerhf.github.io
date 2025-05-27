@@ -1691,6 +1691,15 @@
    :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> . 
 
+:lakshmi-stupa-2-sanchi a :human-figure ;
+   rdfs:label "Lakshmi from Stupa 2 at Sanchi" ;
+   :described-by <https://en.wikipedia.org/wiki/Sanchi_Stupa_No._2#Early_period_(circa_115_BCE)> ;
+   :earliest-date -150 ;
+   :latest-date -100 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (23.48 77.73) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lakshmi_Sanchi_Stupa_2.jpg> .
+
 :laocoon-and-sons a :human-figure ;
    rdfs:label "Laocoön and His Sons" ;
    :described-by <https://en.wikipedia.org/wiki/Laocoön_and_His_Sons> ;
@@ -1713,8 +1722,6 @@
    :representative-latlong-point (13.039552 43.865330) ;
    :note "Mapped point is generic as findspot not known." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
-
-# -300 - 300 ?? https://en.wikipedia.org/wiki/Didarganj_Yakshi
 
 :gudimallam-lingam a :human-figure ;
    :described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
