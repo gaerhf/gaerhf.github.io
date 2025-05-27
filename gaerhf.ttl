@@ -2216,6 +2216,7 @@
    :date 357 ;
    :in-modern-country-note "North Korea" ;
    :representative-latlong-point (38.449131 125.508131) ;
+   :note "Mapped point is only approximate at large scale." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Man_-_Anak_Tomb_No._3.jpg> .
 
 # :terracotta-ganges-and-attendant a :human-figure ;
@@ -2223,6 +2224,28 @@
 #    :period-note "Gupta (India)" ;
 #    :earliest-date 400 ;
 #    :latest-date 600 .
+
+:quimbaya-poporo-female-figure a :human-figure ;
+   rdfs:label "Quimbaya Poporo with Female Figure" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/316682> ;
+   :earliest-date 1 ;
+   :latest-date 600 ;
+   :in-modern-country-note "Colombia" ;
+   :representative-latlong-point (4.841 -75.632) ;
+   :note "Mapped point is only approximate at large scale." ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DT1262.jpg> .
+
+:quimbaya-gold-funerary-urn a :human-figure ;
+   rdfs:label "Quimbaya Gold Funerary URn" ;
+   :described-by <https://doi.org/10.1016/j.jas.2012.12.03> ,
+      <https://digital.csic.es/bitstream/10261/196200/3/Pre-Hispanic_goldwork.pdf> ,
+      <https://en.wikipedia.org/wiki/Quimbaya_artifacts> ,
+      <https://artsandculture.google.com/asset/quimbaya-cacique/CQEKpJRhsNmrDQ?hl=en>;
+   :earliest-date 400 ;
+   :latest-date 600 ;
+   :in-modern-country-note "Colombia" ;
+   :representative-latlong-point (4.839 -75.631) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Museo_de_América_Quimbaya_treasure_02.jpg> .
 
 :mayan-wooden-kneeling-figure a :human-figure ;
    rdfs:label "Mayan Wooden Kneeling Figure" ;
@@ -2271,7 +2294,7 @@
    :described-by <https://www.worldhistory.org/image/5764/gilt-bronze-buddha-goguryeo-kingdom/> ;
    :earliest-date 500 ;
    :latest-date 600 ;
-   :in-modern-country-note "North Koreia" ;
+   :in-modern-country-note "North Korea" ;
    :representative-latlong-point (39.016667 125.7475) ;
    :art-historical-culture-or-tradition :goguryeo ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/5764.jpg.webp> .
