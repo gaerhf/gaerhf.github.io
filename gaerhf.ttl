@@ -1775,6 +1775,15 @@
    :representative-latlong-point (27.287358 77.717414) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yaksha_Manibhadra_-_Parkham_Mathura_circa_150_BCE.jpg> .
 
+:reclining-female-figure-alabaster a :human-figure ;
+   rdfs:label "Reclining Female Figure in Alabaster" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/322114> ;
+   :earliest-date -200 ;
+   :latest-date 200 ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (33.093611 44.580556) ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/an/web-additional/DP-15732-009.jpg> .
+
 :tolita-tumaco-seated-elder a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/314299> ;
    :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
@@ -1881,6 +1890,15 @@
    :in-modern-country-note "Saudi Arabia" ;
    :representative-latlong-point (26.871235 48.720597) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pergamon-Museum_-_Totenmaske.jpg> .
+
+:bimaran-casket a :group-of-human-figures ;
+   rdfs:label "Bimaran Casket" ;
+   :described-by <https://en.wikipedia.org/wiki/Bimaran_casket> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (34.458544 70.349792) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BimaranCasket2.JPG> .
 
 :san-agustin-megaliths a :group-of-human-figures ;
    rdfs:label "San Agustin Megaliths" ;
