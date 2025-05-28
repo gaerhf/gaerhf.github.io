@@ -1654,6 +1654,14 @@
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
 
+:tomb-darius-i a :group-of-human-figures ;
+   rdfs:label "Tomb of Darius I" ;
+   :described-by <https://en.wikipedia.org/wiki/Tomb_of_Darius_the_Great> ;
+   :approximate-date -486 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (29.988889 52.874722) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tomb_of_Darius_I_Image_of_Darius_I.jpg> .
+
 :deposit-figurines-san-isidro a :group-of-human-figures ;
    rdfs:label "Deposit of Figurines from San Isidro" ;
    :described-by <https://doi.org/10.15184/aqy.2025.37> ;
@@ -2006,6 +2014,16 @@
    :art-historical-culture-or-tradition :gandhara ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/as/original/DT8660.jpg> .
 
+:paired-male-female-figures-takht-i-bahi a :group-of-human-figures ;
+   rdfs:label "Paired Male and Femlae Figures from Takht-i-Bahi" ;
+   :described-by <https://www.britishmuseum.org/collection/object/A_1950-0726-2> ,
+      <https://en.wikipedia.org/wiki/Takht-i-Bahi> ;
+   :earliest-date 100 ;
+   :latest-date 300 ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (34.286111 71.946667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PharroAndArdoxsho.jpg> .
+
 :seated-buddha-mathura-132 a :group-of-human-figures ;
    rdfs:label "Seated Buddha from Mathura of 132 CE" ;
    :described-by <https://smarthistory.org/buddha-mathura/> ;
@@ -2217,6 +2235,15 @@
    :representative-latlong-point (27.491389 77.673889) ;
    :art-historical-culture-or-tradition :northern-satraps-of-india  ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Amohini_relief,_Mathura,_circa_15_CE.jpg> .
+
+:sampul-tapestry a :group-of-human-figures ;
+   rdfs:label "Sampul Tapestry" ;
+   :described-by <https://en.wikipedia.org/wiki/Sampul_tapestry> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (37.020199 80.113078) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:UrumqiWarrior.jpg> .
 
 :tyara-maskette a :human-figure ;
    rdfs:label "Tyara Maskette" ;
