@@ -1763,6 +1763,15 @@
    :representative-latlong-point (23.48 77.73) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lakshmi_Sanchi_Stupa_2.jpg> .
 
+:winged-figure-tillya-tepe a :human-figure ;
+   rdfs:label "Winged Figure from Tillya Tepe" ;
+   :described-by <https://en.wikipedia.org/wiki/Tillya_Tepe> ;
+   :earliest-date -100 ;
+   :latest-date 50 ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (36.694444 65.789444) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Applique,_Tillia_tepe,_tombeVI,_Musée_national_d%27Afghanistan.jpg> .
+
 :laocoon-and-sons a :human-figure ;
    rdfs:label "Laocoön and His Sons" ;
    :described-by <https://en.wikipedia.org/wiki/Laocoön_and_His_Sons> ;
