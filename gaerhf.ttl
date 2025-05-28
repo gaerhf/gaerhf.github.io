@@ -1773,6 +1773,15 @@
    :representative-latlong-point (23.48 77.73) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lakshmi_Sanchi_Stupa_2.jpg> .
 
+:pillar-jagannath-tekri-stupa a :group-of-human-figures ;
+   rdfs:label "Pillar from Jagannath Tekri Stupa" ;
+   :described-by <https://en.wikipedia.org/wiki/Pauni#Archaeological_sites> ;
+   :earliest-date -100 ;
+   :latest-date -1 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (20.7835 79.6357) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pillar_with_Naga_Muchalinda_over_the_throne_of_the_Buddha._Pauni_(Bhandara_District)._Railing_pillar_from_Jagannath_Tekri._2nd-1st_century_BCE.jpg> .
+
 :winged-figure-tillya-tepe a :human-figure ;
    rdfs:label "Winged Figure from Tillya Tepe" ;
    :described-by <https://en.wikipedia.org/wiki/Tillya_Tepe> ;
@@ -2023,6 +2032,15 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pompeii-couple.jpg> .
 
 # approx 50 https://en.wikipedia.org/wiki/Natakamani
+
+:buddha-berenike a :human-figure ;
+   rdfs:label "Buddha Statue from Berenike" ;
+   :described-by <https://en.wikipedia.org/wiki/Berenike_Buddha> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (23.908611 35.4725) ;
+   :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Berenike_Buddha.jpg/500px-Berenike_Buddha.jpg> .
 
 :gift-of-anathapindada-relief a :human-figure ;
    rdfs:label "Gift of Anathapindada Relief" ;
