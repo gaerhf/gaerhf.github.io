@@ -368,7 +368,7 @@
    :representative-latlong-point (44.9447 1.1347) ; # ll for Marquay, Dordogne
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_de_Laussel_expo_Art_et_Prehistoire.jpg> .
 
-:mal-ta-female-figurine a :group-of-human-figures ;
+:mal-ta-female-figurines a :group-of-human-figures ;
    rdfs:label "Figurines from Mal'ta (Siberia)" ;
    :described-by <http://malta.artemiris.org/category/view/9> ;
    :period-note "Mal'ta-Buret' Culture (Siberia)" ;
@@ -378,6 +378,16 @@
    :representative-latlong-point (52.850045 103.517383) ;
    :art-historical-culture-or-tradition :mal-ta-buret-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurines_from_central_Siberia_Mal%27ta_(grey_background).jpg> .
+
+:female-figurine-renancourt a :human-figure ;
+   rdfs:label "Female Figurine from Renancourt" ;
+   :described-by <https://archaeology.org/issues/march-april-2020/artifacts/artifact-france-gravettian-venus-figurine/> ,
+    <https://www.world-archaeology.com/features/object-lesson-venus-of-renancourt/> ;
+   :approximate-date -21000 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (49.893932 2.261113) ;
+   :note "Mapped at approximate point." ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2020/02/Artifact-France-Gravettian-Venus-Figurine.jpg> .
 
 :lascaux-ithyphallic-figure a :human-figure ;
    rdfs:label "Lascaux Ithyphallic Figure" ;
@@ -725,6 +735,21 @@
 
 # https://saudipedia.com/en/article/875/history/landmarks-and-monuments/suffering-man-statue
 
+# no image of original ??
+# :female-figurine-langenzersdorf a :human-figure ;
+#    rdfs:label "Female Figure from Langenzersdorf" ;
+#    :described-by <https://en.wikipedia.org/wiki/Venus_of_Langenzersdorf> ;
+#    :approximate-date -4825 .
+
+:rock-art-alta a :group-of-human-figures ;
+   rdfs:label "Rock Art at Alta" ;
+   :described-by <https://en.wikipedia.org/wiki/Rock_carvings_at_Alta> ;
+   :earliest-date -4200 ;
+   :latest-date -500 ;
+   :in-modern-country-note "Norway" ;
+   :representative-latlong-point (69.946944 23.187778) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:RockCarvings_in_Alta.jpg> .
+
 :anthropomorphic-stele-ha-il a :human-figure ;
    rdfs:label "Anthropomorphic Stele from Ha'il" ;
    :described-by <https://smarthistory.org/anthropomorphic-stele/> ;
@@ -757,7 +782,8 @@
 
 :cucuteni-trypillia-figurine a :human-figure ;
    rdfs:label "Cucuteni-Trypillia Figurine" ;
-   :described-by <https://en.wikipedia.org/wiki/Cucuteni–Trypillia_culture#Early_period_(5800–5000_BC)> ;
+   :described-by <https://en.wikipedia.org/wiki/Cucuteni–Trypillia_culture#Early_period_(5800–5000_BC)>,
+   <https://archaeology.org/issues/november-december-2013/collection/cucuteni-figurine-romania-neolithic/ancient-tattoos/> ;
    :earliest-date -4050 ;
    :latest-date -3900 ;
    :in-modern-country-note "Romania" ;
@@ -874,6 +900,16 @@
    :art-historical-culture-or-tradition :cycladic-art ;
    :thumbnail-image <https://media.getty.edu/iiif/image/de65363a-8e1f-4d5b-bf31-9cf4fe423948/0,0,2640,4096/165,/0/default.jpg> .
 
+:late-cucuteni-trypillia-figurines-verteba-cave a :group-of-human-figures ;
+   rdfs:label "Late Cucuteni-Trypillia Figurines from Verteba Cave" ;
+   :described-by <https://archaeology.org/news/2023/05/12/230512-ukraine-verteba-cave/> ,
+   <https://arkeonews.net/5000-year-old-female-figurines-found-in-a-ukrainian-cave/>  ,
+   <https://en.wikipedia.org/wiki/Verteba_Cave> ;
+   :earliest-date -3000 ;
+   :latest-date -2600 ;
+   :in-modern-country-note "Ukraine" ;
+   :representative-latlong-point (48.788889 25.871389) ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2023/05/Ukraine-Trypillia-Figurines.webp> .
 
 :merhgarh-female-figurine a :human-figure ;
    rdfs:label "Mehrgarh Female Figurine" ;
@@ -960,6 +996,17 @@
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Valdivia_culture#/media/File:Valdivia_Female_Figurine_2600-1500_BCE_Brooklyn_Museum.jpg> .
 
 # -2250 - -2000 https://commons.wikimedia.org/wiki/File:Elam_cool.jpg
+
+:standard-royal-tombs-ur a :group-of-human-figures ;
+   rdfs:label "So-called ‘Standard’ from Royal Tombs at Ur" ;
+   :described-by <https://en.wikipedia.org/wiki/Standard_of_Ur> ,
+    <https://www.britishmuseum.org/collection/object/W_1928-1010-3?selectedImageId=8056001>,
+    <https://smarthistory.org/standard-of-ur-2/> ;
+   :earliest-date -2600 ;
+   :latest-date -2400 ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (30.9615 46.1061) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Standard_of_Ur_-_peace_side.jpg> .
 
 :kernosivsky-idol a :human-figure ;
    rdfs:label "Kernosivsky Idol" ;
@@ -1530,6 +1577,14 @@
    :representative-latlong-point (37.984167 23.728056) ; # Athens
    :art-historical-culture-or-tradition :archaic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Euphronios_krater_side_A_MET_L.2006.10.jpg> .
+
+:rock-art-sayram-lake a :group-of-human-figures ;
+   rdfs:label "Rock Art near Sayram Lake" ;
+   :described-by <https://english.news.cn/20250527/78f909d4820b47f28a2a0b32406af62d/c.html> ;
+   :approximate-date -500 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (44.554887 80.882147) ;
+   :thumbnail-image <https://english.news.cn/20250527/78f909d4820b47f28a2a0b32406af62d/3d866704c5804302a5e316daeba63eac.jpg> .
 
 :phoenecian-apotropaic-mask a :human-figure ;
    rdfs:label "Phoenician Apotropaic Mask" ;
