@@ -555,7 +555,7 @@ let leafletMarkers = {}; // Place this at the top level
 function renderFiguresOnMap(figuresArray) {
     // Only initialize once
     if (!leafletMap) {
-        leafletMap = L.map('figure-map').setView([20, 0], 1.8); // World view
+        leafletMap = L.map('figure-map', { worldCopyJump: true }).setView([20, 0], 1.8); // World view
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(leafletMap);

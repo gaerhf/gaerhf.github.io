@@ -1864,6 +1864,18 @@
    :note "Paywalled article. Need better source." ;
    :thumbnail-image <https://fl-i.thgim.com/public/arts-and-culture/heritage/hw0lwe/article32611335.ece/alternates/LANDSCAPE_1200/FL9ARCPtm-Head-Statute-2020-Photo-PAMA-2> .
 
+:pegtymel-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Pegtymel’ Petroglyphs" ;
+   :described-by <https://www.jstor.org/stable/25780681?seq=1> ,
+    <http://dx.doi.org/10.17746/2658-6193.2024.30.0568-0573>  ,
+    <https://www.heritagedaily.com/2021/10/reindeer-petroglyph-discovered-during-mapping-expedition-of-ancient-rock-art/141550>;
+    :earliest-date -200 ;
+    :latest-date 1000 ;
+    :in-modern-country-note "Russia" ;
+    :representative-latlong-point (69.9031 173.8675) ;
+    :note "While the chronology is wide ranging, these petroglyphs do overlap with the GAERHF's chronological scope." ;
+    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:4_Пегтымель_петроглиф_3.jpg> .
+
 :terracotta-male-figure-from-kalchayan a :human-figure ;
    rdfs:label "Terracotta Male figure from Kalchayan" ;
    :art-historical-culture-or-tradition :kushan ;
@@ -1968,6 +1980,27 @@
    :representative-latlong-point (35.588056 42.718333) ;
    :art-historical-culture-or-tradition :hatra ;
    :thumbnail-image <https://www.worldhistory.org/uploads/images/10852.jpg> .
+
+:gold-bust-marcus-aurelius a :human-figure ;
+   rdfs:label "Gold Bust of Marchus Aurelius" ;
+   :described-by <https://en.wikipedia.org/wiki/Golden_Bust_of_Marcus_Aurelius> ,
+   <https://www.getty.edu/art/exhibitions/aurelius/> ;
+   :earliest-date 176 ;
+   :latest-date 180 ;
+   :in-modern-country-note "Switzerland" ;
+   :representative-latlong-point (46.88 7.049) ;
+   :note "The bust is sometimes identified as Antoninus Pius." ;
+   :thumbnail-image <https://www.getty.edu/art/exhibitions/aurelius/images/6_gm_391470EX10.jpg> .
+
+:gold-bust-septimius-severus a :human-figure ;
+   rdfs:label "Gold Bust of Septimius Severus" ;
+   :described-by <https://en.wikipedia.org/wiki/Golden_Bust_of_Septimius_Severus> ;
+   :earliest-date 194 ;
+   :latest-date 197 ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (41.35 26.5) ;
+   :note "Approximate location of findspot." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:20130518_Septimius_Severus_Archeological_Museum_Komotini_Thrace_Greece.jpg> .
 
 :white-elephant-cave-figure a :human-figure ;
    rdfs:label "White Elephant Cave Human Figure" ;
@@ -2079,6 +2112,26 @@
    :art-historical-culture-or-tradition :mauryan-empire ;
    :in-modern-country-note "India" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MauryanStatuette2ndCenturyBCE.jpg> .
+
+:okvik-figurine a :human-figure ;
+   rdfs:label "Okvik Figurine" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/717575> ;
+   :earliest-date -200 ;
+   :latest-date 100 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (65.639361 -167.071716) ;
+   :note "Specific findspot not known." ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/717575/1591782/restricted> .
+
+:old-bering-sea-figure a :human-figure ;
+   rdfs:label "Old Bearing Sea Figure" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/312882> ;
+   :earliest-date -150 ;
+   :latest-date 100 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (63.362222 -170.267222) ;
+   :note "Specific findspot not known." ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312882/666902/main-image> .
 
 :mudgarpani-yaksha a :human-figure ;
    :described-by <https://commons.wikimedia.org/wiki/File:Mudgarpani_Yaksha,_Mathura,_100_BCE.jpg> ;
@@ -2419,6 +2472,8 @@
    :representative-latlong-point (56.689167 -2.781389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pictish_Stone_at_Aberlemno_Church_Yard_-_Battle_Scene_Detail.jpg> .
 
+# 600 - 900 https://www.metmuseum.org/art/collection/search/309503
+
 :afrasiab-murals a :group-of-human-figures ;
    rdfs:label "Afrasiab Murals" ;
    :described-by <https://en.wikipedia.org/wiki/Afrasiab_murals> ;
@@ -2497,6 +2552,16 @@
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (37.89 -4.78) ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/is/web-additional/is13.141.R.jpg> .
+
+:beaker-figure-shell a :human-figure ;
+   rdfs:label "Beaker with Figure displaying Shell" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/316431> ;
+   :earliest-date 900 ;
+   :latest-date 1100 ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-6.435556 -79.933889) ;
+   :note "Exact findspot not known." ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-25952-001.jpg> .
 
 :igbo-ukwu-face-pendant a :human-figure ;
    rdfs:label "Igbo ukwu Face Pendant" ;
