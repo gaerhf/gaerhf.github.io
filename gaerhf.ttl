@@ -1315,6 +1315,8 @@
    :representative-latlong-point (53.957838 -6.911619) ; # ll for Ralaghan, Ireland
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_antropomorfa_probabilmente_segnacolo_di_confine,_da_una_torbiera_presso_ralaghan,_co._di_cavan,_1100-1000_ac_ca.jpg> .
 
+# -1000 ???? https://en.wikipedia.org/wiki/Tanbaly petroglyphs
+
 :lapita-sherd-face a :human-figure ;
    rdfs:label "Lapita Sherd with Face" ;
    :described-by <https://smarthistory.org/lapita/>,
@@ -1743,6 +1745,14 @@
 # -200 - 100 https://scva-artsobjects-images.s3.eu-west-2.amazonaws.com/675/RLS-1_Alaska-Americas_Figure-Ivory.jpg
 
 # https://www.penn.museum/sites/expedition/the-vanishing-art-of-the-arctic/
+
+:carpet-pazyryk-5 a :group-of-human-figures ;
+   rdfs:label "Carpet from Pazyryk Burial 5" ;
+   :described-by <https://en.wikipedia.org/wiki/Pazyryk_burials#Pazyryk-5> ;
+   :approximate-date -250 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (50.746389 88.0725) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Siberian_tapestry,_Hermitage_Museum,_St._Petersburg.jpg> .
 
 :figure-with-libyco-berber-script a :human-figure ;
    rdfs:label "Figure with Libyco-Berber Script" ;
@@ -2179,6 +2189,8 @@
    :earliest-date 200 ;
    :latest-date 300 .
 
+# :funerary-stele-tylos 100 - 300 https://commons.wikimedia.org/wiki/File:Stele_funeraria_figurativa,_tardo_periodo_di_tylos,_bahrain,_II-III_secolo_circa.JPG
+
 :patna-yakshas a :human-figure ;
    :described-by <https://commons.wikimedia.org/wiki/File:Patna_Yakshas_and_inscriptions.jpg> ;
    :period-note "Mauryan Empire (India)" ;
@@ -2314,6 +2326,15 @@
    :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
    :earliest-date 100 ;
    :latest-date 400 .
+
+:female-statuette-dharmarajika-stupa a :human-figure ;
+   rdfs:label "Female Statuette from Dharmarajika Stupa" ;
+   :described-by <https://en.wikipedia.org/wiki/Dharmarajika_Stupa> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (33.73 72.78) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dharmarajika_statuette.jpg> .
 
 :tropaeum-traiani a :group-of-human-figures ;
    rdfs:label "Tropaeum Traiani" ;
