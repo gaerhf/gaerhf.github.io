@@ -1768,6 +1768,15 @@
 
 # -300 - -124 https://en.wikipedia.org/wiki/Roquepertuse
 
+:ai-khanoum-disk a :group-of-human-figures ;
+   rdfs:label "Ai-Khanoum Disk" ;
+   :described-by <https://en.wikipedia.org/wiki/Ai-Khanoum_plaque> ;
+   :earliest-date -200 ;
+   :latest-date -145 ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (37.164722 69.408611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AiKhanoumPlateSharp.jpg> .
+
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
    :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
@@ -2062,7 +2071,8 @@
 
 :couple-from-pompeii a :group-of-human-figures ;
    rdfs:label "Couple from Pompeii" ;
-   :described-by <https://en.wikipedia.org/wiki/Portrait_of_Terentius_Neo> ;
+   :described-by <https://en.wikipedia.org/wiki/Portrait_of_Terentius_Neo> ,
+   <https://palp.art/browse/ARC_059708> ;
    :approximate-date 30 ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :roman-empire ;
@@ -2166,6 +2176,16 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.777778 51.570833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shapur_statue_with_a_man_standing_in_front_of_it.JPG> .
+
+:triumph-shapur-i a :group-of-human-figures ;
+   rdfs:label "Triumph of Shapur I" ;
+   :described-by <https://en.wikipedia.org/wiki/Naqsh-e_Rostam#Triumph_of_Shapur_I,_c._241–272> ;
+   :earliest-date 249 ;
+   :latest-date 272 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (29.988889 52.874722) ;
+   :wikimedia-commons-image-pate <https://commons.wikimedia.org/wiki/File:Naghsh-e_rostam,_Irán,_2016-09-24,_DD_12.jpg> .
+
 
 :gandhara-standing-buddha a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/38820> ;
