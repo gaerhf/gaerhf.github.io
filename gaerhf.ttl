@@ -793,6 +793,16 @@
 
 # -4000 - -3000 https://en.wikipedia.org/wiki/Chasséen_culture "Stele de Lauris"
 
+:yangshao-vessel-head a :human-figure ;
+   rdfs:label "Yangshao Vessel with Human Head" ;
+   :described-by <https://en.wikipedia.org/wiki/Yangshao_culture#Crafts> ,
+    <https://en.wikipedia.org/wiki/List_of_Chinese_cultural_relics_forbidden_to_be_exhibited_abroad> ;
+   :earliest-date -4000 ;
+   :latest-date -3500 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (35.014992 105.926847) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Distant_dialogue_exhibition_of_Dadiwan_site,_2017-03-04_05.jpg> .
+
 :neolithic-figurine-karditsa a :human-figure ;
    rdfs:label "Neolithic Figurine from Karditsa" ;
    :described-by <https://en.wikipedia.org/wiki/Karditsa_Thinker> ;
@@ -854,6 +864,16 @@
    :in-modern-country-note "Iraq" ;
    :art-historical-culture-or-tradition :sumerian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_mask_(cropped).jpg> .
+
+:figure-majiayao-vessel a :human-figure ;
+   rdfs:label "Figure on Majiayao Vessel" ;
+   :described-by <https://en.wikipedia.org/wiki/Majiayao_culture#Pottery>,
+   <https://en.wikipedia.org/wiki/List_of_Chinese_cultural_relics_forbidden_to_be_exhibited_abroad> ;
+   :earliest-date -3200 ;
+   :latest-date -2000 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (36.516667 102.416667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_pottery_jar_with_nude_figure,_Majiayao_Culture,Qinghai,1974_(detail).jpg> .
 
 :stone-relief-figure-of-saint-sernin a :human-figure ;
    rdfs:label "Stone Relief Figure of Saint Sernin" ;
@@ -2186,6 +2206,16 @@
    :earliest-date 550 ;
    :latest-date 650 .
 
+:screen-tomb-sima-jinlong a :group-of-human-figures ;
+   rdfs:label "Screen from Tomb of Sima Jinlong" ;
+   :described-by <https://en.wikipedia.org/wiki/Sima_Jinlong> ;
+   :earliest-date 450 ;
+   :latest-date 484 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (40.097 113.367) ;
+   :note "On the list of objects that cannot be removed from China for display." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funerary_panels,_from_the_tomb_of_Sima_Jinlong,_484_CE._Datong,_Shanxi_Province.jpg> .
+
 :horse-rider-shaped-vessels a :human-figure ;
    :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519710> ;
    :period-note "Silla Kingdom (Korea)" ;
@@ -2262,6 +2292,15 @@
    :representative-latlong-point (63.362222 -170.267222) ;
    :note "Specific findspot not known." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312882/666902/main-image> .
+
+:jade-burial-suit-liu-sheng a :human-figure ;
+   rdfs:label "Jade Burial Suit of Liu Sheng" ;
+   :described-by <https://en.wikipedia.org/wiki/Liu_Sheng,_Prince_of_Zhongshan> ;
+   :earliest-date -110 ;
+   :latest-date -113 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (38.949 115.322) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jin_Lv_Yu_Yi_of_Liusheng,_Han_Dynasty,China_(Hebei_Museum).jpg> .
 
 :mudgarpani-yaksha a :human-figure ;
    :described-by <https://commons.wikimedia.org/wiki/File:Mudgarpani_Yaksha,_Mathura,_100_BCE.jpg> ;
