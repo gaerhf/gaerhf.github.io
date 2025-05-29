@@ -1267,6 +1267,14 @@
    :representative-latlong-point (25.740389 32.601417) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CairoEgMuseumTaaMaskMostlyPhotographed.jpg> .
 
+:da-he-ding-faces a :group-of-human-figures ;
+   rdfs:label "Faces on Da He Ding" ;
+   :described-by <https://en.wikipedia.org/wiki/Da_He_ding> ;
+   :approximate-date -1300 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (28.152564 112.11281) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Da_He_ding_side.jpg> .
+
 :sanxingdui-standing-figure a :human-figure ;
    rdfs:label "Sanxingdui Standing Figure" ;
    :described-by <https://en.wikipedia.org/wiki/Sanxingdui> ;
@@ -1296,6 +1304,8 @@
    :art-historical-culture-or-tradition :shu-kingdom ;
    :representative-latlong-point (30.993 104.2) ; # ll for Sanxingdui, China
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gold_Mask_(黄金面罩).jpg> .
+
+# -1200 https://en.wikipedia.org/wiki/Tomb_of_Fu_Hao
 
 :olmec-stone-yuguito a :human-figure ;
    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
@@ -1663,6 +1673,14 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.988889 52.874722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tomb_of_Darius_I_Image_of_Darius_I.jpg> .
+
+:support-zenghouyi-bells a :human-figure ;
+   rdfs:label "Support for Zenghouyi Bells" ;
+   :described-by <https://en.wikipedia.org/wiki/Bianzhong_of_Marquis_Yi_of_Zeng> ;
+   :date -433 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (31.720900 113.355795) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Two_Tone_Set-bells_of_Marquis_Yi_of_Zeng_(statuette).jpg> .
 
 :deposit-figurines-san-isidro a :group-of-human-figures ;
    rdfs:label "Deposit of Figurines from San Isidro" ;
@@ -2571,6 +2589,16 @@
    :in-modern-country-note "Canada" ;
    :representative-latlong-point (61.331574 -71.499644) ;
    :thumbnail-image <https://www.historymuseum.ca/wp-content/uploads/2022/09/Blog-KRyan-09-2022_Fig567-1024x512.png>  .
+
+:anyang-funerary-bed a :group-of-human-figures ;
+   rdfs:label "Anyang Funerary Bed" ;
+   :described-by <https://en.wikipedia.org/wiki/Anyang_funerary_bed> ;
+   :earliest-date 550 ;
+   :latest-date 577 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (36.099 114.392) ;
+   :note "Dispersed on art market after discovery. Said to be from Anyang." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anyang_funerary_bed,_Museum_of_Fine_Arts,_Boston,_1.jpg> .
 
 :fondukistan-monastery-divintity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
