@@ -1212,6 +1212,15 @@
    :representative-latlong-point (37.730278 22.756111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:594px-MaskeAgamemnon-MOD.jpg> .
 
+:paired-petroglyphs-valcamonica a :group-of-human-figures ;
+   rdfs:label "Paired Petroglyphs from Valcamonica" ;
+   :described-by <https://en.wikipedia.org/wiki/Rock_Drawings_in_Valcamonica> ;
+   :earliest-date -1500 ;
+   :latest-date -500 ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (45.957056 10.297333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antropomorfi_detti_astronauti_(a)_-_R_1_-_Area_di_Zurla_-_Nadro_(ph_Luca_Giarelli).jpg> .
+
 :pylos-combat-agate a :group-of-human-figures ;
    rdfs:label "Pylos Combat Agate" ;
    :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
