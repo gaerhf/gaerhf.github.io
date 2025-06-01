@@ -1581,6 +1581,14 @@
    :representative-latlong-point (38.5 22.5) ; # ll for Thebes, Greece
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Collection_MfA_Boston_0198-2.jpg> .
 
+:victory-stele-esarhaddon a :group-of-human-figures ;
+   rdfs:label "Victory stele of Esarhaddon" ;
+   :described-by <https://en.wikipedia.org/wiki/Victory_stele_of_Esarhaddon> ;
+   :approximate-date -670 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.103611 36.678611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Victory_stele_of_Esarhaddon.jpg> .
+
 :hawtar-athat-statue a :human-figure ;
    rdfs:label "Hawtar'athat Statue" ;
    :described-by <https://www.researchgate.net/figure/The-Hawtarathat-statue-discovered-in-Nashqum-present-day-al-Bayda-end-of-the_fig1_340635269> ;
