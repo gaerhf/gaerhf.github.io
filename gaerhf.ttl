@@ -1006,6 +1006,14 @@
    :representative-latlong-point (47.780636 87.860069) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Statue_0.jpg> .
 
+:panel-1426-mastaba-hesy-re a :human-figure ;
+   rdfs:label "Panel 1426 from Mastaba of Hesy-Re" ;
+   :described-by <https://en.wikipedia.org/wiki/Mastaba_of_Hesy-Re#CG_1426> ;
+   :approximate-date -2650 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (29.8685 31.218633) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hesy-Ra_CG1426.jpg> .
+
 :valdiva-culture-female-figurine a :human-figure ;
    rdfs:label "Valdiva Culture Female Figurine" ;
    :described-by <https://www.brooklynmuseum.org/en-GB/objects/102869> ;
@@ -1463,7 +1471,6 @@
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (32.4795 44.431689) ;
    :thumbnail-image <https://collections.louvre.fr/media/cache/small/0000000021/0000132589/0000225642_OG.JPG> .
-
 
 :olmec-standing-figure a :human-figure ;
    rdfs:label "Jadeite Standing Figure" ;
