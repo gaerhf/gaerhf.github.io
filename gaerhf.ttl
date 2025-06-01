@@ -1356,6 +1356,15 @@
 
 # -1000 ???? https://en.wikipedia.org/wiki/Tanbaly petroglyphs
 
+:sarcophagus-ahiram a :group-of-human-figures ;
+   rdfs:label "Ahiram Sarcophagus" ;
+   :described-by <https://en.wikipedia.org/wiki/Ahiram_sarcophagus> ,
+    <https://www.worldhistory.org/image/174/sarcophagus-of-ahiram/> ;
+   :approximate-date -1000 ;
+   :in-modern-country-note "Lebanon" ;
+   :representative-latlong-point (34.119444 35.645278) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ahiram_sarcophag_from_Biblos_XIII-XBC.jpg> .
+
 :lapita-sherd-face a :human-figure ;
    rdfs:label "Lapita Sherd with Face" ;
    :described-by <https://smarthistory.org/lapita/>,
@@ -1589,6 +1598,16 @@
    :representative-latlong-point (13.866667 39.733333) ;
    :note "Location of Addi Galamo unclear. And it would be useful to have a better landing page for the figure itself." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Figurine,_National_Museum,_Addis_Ababa,_Ethiopia_(2130296832).jpg> .
+
+:ushabti-neferibresaneith a :human-figure ;
+   rdfs:label "Ushabti for Neferibresaneith" ;
+   :described-by <https://www.getty.edu/art/collection/object/1143JJ> ,
+   <https://smarthistory.org/ushabti-ancient-egyptian-afterlife/> ;
+   :earliest-date -570 ;
+   :latest-date -526 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (29.871111 31.216389) ;
+   :thumbnail-image <https://media.getty.edu/iiif/image/afdc1e79-9284-4756-958d-2e3f61377f07/full/400,/0/default.jpg> .
 
 :capestrano-warrior a :human-figure ;
    rdfs:label "Capestrano Warrior" ;
