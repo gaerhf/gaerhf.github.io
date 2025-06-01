@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
     <script src="https://unpkg.com/rdflib@2.2.19/dist/rdflib.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -24,10 +25,11 @@
         </div>
         <div id="header-bottom">
             <div id="tabs">
-                <button class="tab-button active" data-tab="figure-map">Map (Some figures not shown yet)</button>
-                <button class="tab-button" data-tab="figure-list">List (All)</button>
-                <button class="tab-button" data-tab="figure-timeline">Timeline</button>
-                <button id="timeline-play-btn" title="Play Timeline" style="display:none;">▶️</button>
+                <button type="button" class="tab-button active" data-tab="figure-map">Map (Some figures not shown yet)</button>
+                <button type="button" class="tab-button" data-tab="figure-list">List (All)</button>
+                <button type="button" class="tab-button" data-tab="figure-timeline">Timeline</button>
+                <button type="button" id="timeline-play-btn" title="Play Timeline" style="display:none;">▶️</button>
+                <button type="button" class="tab-button" data-tab="about">About</button>
             </div>
             <div id="figure-timeline-scale" class="tab-scale"></div>
             <div id="figure-map-scale" class="tab-scale"></div>
@@ -53,6 +55,14 @@
                     <div id="figure-timeline"></div>
                 </div>
             </div>
+            <div id="about-container" class="tab-content">
+                <div class="about-wrapper">
+                    <div id="about">
+                        <p>GAERHF is intended to provide a long-term and global perspective on the widespread practive of creating images of ourselves, of human figures. It adopts the concept of 'early' quite loosely and will include representations created through approximately the middle of the thirteenth century CE. The global scope is taken literally, any relevant image created anywhere. GAERHF's content is not, however, a proxy for all of art history. The earliest creations that can be considered as “art” consist of geometric designs. The majority of earliest known art in caves is far more focussed on animals, with humans appearing as stick figures. Many cultures have rich visual traditions that more or less explicitly avoid representing people. Nonetheless, the urge to create images of ourselves is clearly a widespread and early phenomenon. The Sulawesi caves in Indonesia show that the humans who had arrived there by perhaps as early as 40,000 BCE had the general capacity to paint and at least some interest in showing human figures amongst the animals that drew more of their attention. This means that is already reasonably considered global by this stage of human migration. Art in caves in North and South America demonstrates the same point. Accordingly, the capacity for artistic representation is a universal human quality. The long history of rock art in Africa and Europe, along with the appearance of palaeolithic figurines in Europe, is a continuation of this observation. Again, at the scale of millennia, the representation of human figures is quite quickly a global phenomenon.</p>
+                        <p>GAERHF intends to make it easy to discover and consider this record of human artistic output. While it has a goal of allowing users to decide what this record means, GAERHF does allow the spatial and chronological context of any one representation to be explored in the form of other representations that are near by either of those aspects. The GAERHF interface will develop over time with a focus on integrating visual content, spatial representation, and chronological display. Other aspects such as material, dimensions, and characterization of content will be added.</p>    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
