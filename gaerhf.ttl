@@ -560,6 +560,8 @@
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ain_Ghazal_Statue_Jordan_Archaeological_Museum_Amman_Jordan0821.jpg> .
 
+# https://www.antiquities.org.il/t/item_en.aspx?CurrentPageKey=112&q=human
+
 :ppnb-stone-mask a :human-figure ;
    rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
    :in-modern-country-note "West Bank, Palestinian Territories" ;
@@ -669,6 +671,14 @@
    :in-modern-country-note "Syria and Neighboring" ;
    :art-historical-culture-or-tradition :halaf-culture ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327066/711765/main-image> .
+
+:male-figurine-cerje a :human-figure ;
+   rdfs:label "Male Figurine from Cerje" ;
+   :described-by <https://en.wikipedia.org/wiki/Adam_of_Macedonia> ;
+   :approximate-date -5500 ;
+   :in-modern-country-note "Macedonia" ;
+   :representative-latlong-point (41.991 21.4289) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adam_of_macedonia_-_1.jpg> .
 
 :halaf-culture-painted-female-figurine a :human-figure ;
    rdfs:label "Halaf Culture Painted Female Figurine" ;
