@@ -1202,6 +1202,8 @@
    :described-by <https://en.wikipedia.org/wiki/Grave_Circle_B,_Mycenae> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funeral_mask_from_Mycenae_NAMA_080841.jpg> .
 
+# -2000 - -1500 https://www.antiquities.org.il/t/item_en.aspx?CurrentPageKey=49&q=human
+
 :akrotiri-woman-gathering-saffron a :human-figure ;
    rdfs:label "Akrotiri Woman Gathering Plant" ;
    :described-by <https://en.wikipedia.org/wiki/Wall_Paintings_of_Thera> ;
@@ -1411,6 +1413,15 @@
    :in-modern-country-note "Mexico" ;
    :art-historical-culture-or-tradition :tlatico-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tlatilco_culture_figurines.jpg> .
+
+:female-figurine-tel-akhziv a :human-figure ;
+   rdfs:label "Female Figure from Tel Akhziv" ;
+   :described-by <https://www.antiquities.org.il/t/item_en.aspx?CurrentPageKey=3307_1> ;
+   :earliest-date -1000 ;
+   :latest-date -856 ;
+   :in-modern-country-note "Israel" ;
+   :representative-latlong-point (33.048286 35.102234) ;
+   :thumbnail-image <https://www.antiquities.org.il/t/images/125/1142282.jpg> .
 
 # https://collections.louvre.fr/en/ark:/53355/cl010132589
 
@@ -2791,6 +2802,8 @@
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palenque_-_Maske_des_Pakal.jpg> .
 
+# 694 https://en.wikipedia.org/wiki/Takamatsuzuka_Tomb
+
 :leshan-giant-buddha a :human-figure ;
    rdfs:label "Leshan Giant Buddha" ;
    :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
@@ -3018,6 +3031,8 @@
    :art-historical-culture-or-tradition :mopti-culture ;
    :representative-latlong-point (13.890556 -4.540278) ; # Mali
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_figure_grom_Mali,_13th_century,_Djenné_peoples,_Metropolitan_Museum_of_Art,_1981.218.JPG> .
+
+# 1221 https://en.wikipedia.org/wiki/Emperor_Go-Toba
 
 :etowah-mound-marble-figures a :group-of-human-figures ;
    rdfs:label "Etowah Mound Marble Figures" ;
