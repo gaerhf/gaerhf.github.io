@@ -680,6 +680,15 @@
    :representative-latlong-point (41.991 21.4289) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adam_of_macedonia_-_1.jpg> .
 
+:thessalian-neolithic-figurine a :human-figure ;
+   rdfs:label "Neolithic Figurine from Thessaly" ;
+   :described-by <https://en.wikipedia.org/wiki/Neolithic_Greece#Middle_Neolithic_(MN)_5800–5300_BC> ;
+   :earliest-date -5300 ;
+   :latest-date -3300 ;
+   :in-modern-country-note "Greece" ;
+   :art-historical-culture-or-tradition :neolithic-greece ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_marble_Thessaly_5300-3300_BC,_NAMA_8772_080802x.jpg> .  
+
 :halaf-culture-painted-female-figurine a :human-figure ;
    rdfs:label "Halaf Culture Painted Female Figurine" ;
    :described-by <https://art.thewalters.org/object/48.2741/> ;
@@ -716,15 +725,6 @@
    :representative-latlong-point (27.655561 -112.91611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_en_el_techo_de_la_cueva_%22El_Ratón%22.JPG> .
 
-:thessalian-neolithic-figurine a :human-figure ;
-   rdfs:label "Neolithic Figurine from Thessaly" ;
-   :described-by <https://en.wikipedia.org/wiki/Neolithic_Greece#Middle_Neolithic_(MN)_5800–5300_BC> ;
-   :earliest-date -5300 ;
-   :latest-date -3300 ;
-   :in-modern-country-note "Greece" ;
-   :art-historical-culture-or-tradition :neolithic-greece ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_marble_Thessaly_5300-3300_BC,_NAMA_8772_080802x.jpg> .  
-
 :mestikawi-cave-group-scenes a :group-of-human-figures ;
    rdfs:label "Mestikawi Cave Group Scenes" ;
    :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
@@ -751,6 +751,15 @@
 #    rdfs:label "Female Figure from Langenzersdorf" ;
 #    :described-by <https://en.wikipedia.org/wiki/Venus_of_Langenzersdorf> ;
 #    :approximate-date -4825 .
+
+:seated-female-pazardzik a :human-figure ;
+   rdfs:label "Seated Female Figurine from Pazardzik" ;
+   :described-by <https://artsandculture.google.com/asset/seated-idol-of-pazarzhik/1AHnWfBp7WALdg> ,
+    <https://en.wikipedia.org/wiki/Karanovo_culture> ;
+   :approximate-date -4500 ;
+   :in-modern-country-note "Bulgaria" ;
+   :representative-latlong-point (42.2 24.333333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:NHM_-_Pazardzik_Sitzidol.jpg> .
 
 :rock-art-alta a :group-of-human-figures ;
    rdfs:label "Rock Art at Alta" ;
