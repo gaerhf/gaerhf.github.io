@@ -2539,7 +2539,7 @@
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (41.9041 12.4704) ;
    :art-historical-culture-or-tradition :roman-empire ;
-   :thumbnail-image <https://www.centralemontemartini.org/sites/default/files/styles/large/public/storage/images/musei/centrale_montemartini/collezioni/percorsi_per_sale/sala_colonne/crepereia_tryphaena/corredo_di_crepereia_tryphaena_bambola/745590-1-ita-IT/corredo_di_crepereia_tryphaena_bambola.jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Crepereia_Tryphaena_2.jpg> .
 
 :kushan-plaque-with-two-figures a :group-of-human-figures ;
    rdfs:label "Kushan Plaque with Two Figures" ;
