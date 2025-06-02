@@ -603,6 +603,16 @@
    :art-historical-culture-or-tradition :australian-first-nations ;
    :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/EdiLRvytYRYjtQGSL7yf9I68uWM=/fit-in/1072x0/filters:focal(931x560:932x561)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b8/65/b865d6a9-bbc1-44ec-9f4b-8b885aa6c83b/rock_art_3a.jpeg> .
 
+:plaster-head-jericho a :human-figure ;
+   rdfs:label "Plaster Head from Jericho" ;
+   :described-by <https://www.antiquities.org.il/t/item_en.aspx?CurrentPageKey=126&q=jericho>,
+   <https://en.wikipedia.org/wiki/Pre-Pottery_Neolithic_B>;
+   :approximate-date -7000 ;
+   :in-modern-country-note "West Bank, Palestinian Territories" ;
+   :representative-latlong-point (31.856111 35.46) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jericho_Statue.png> ;
+   :note "The images of the head on the IAA and Wiki Commons pages are horizontally flipped." .
+
 :neolithic-stone-mask a :human-figure ;
    rdfs:label "Pre-pottery Neolithic Stone Mask from Nahel Hemer" ;
    :described-by <https://www.imj.org.il/en/collections/197936-0> ;
