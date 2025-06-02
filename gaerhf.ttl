@@ -268,6 +268,7 @@
 # stelae of Tutu Fella https://www.theguardian.com/science/punctuated-equilibrium/2011/sep/03/2
    # https://www.britishmuseum.org/collection/object/E_2013-2034-16206
 
+# ?? https://en.wikipedia.org/wiki/Carpentras_Stele
 
 :sulawesi-cave-hunting-scene a :group-of-human-figures ;
    rdfs:label "Sulawesi Cave Hunting Scene" ;
@@ -1229,6 +1230,14 @@
    :representative-latlong-point (45.957056 10.297333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antropomorfi_detti_astronauti_(a)_-_R_1_-_Area_di_Zurla_-_Nadro_(ph_Luca_Giarelli).jpg> .
 
+:dogu-hands-together a :human-figure ;
+   rdfs:label "Dogū with palms pressed together" ;
+   :described-by <https://en.wikipedia.org/wiki/Dogū_with_palms_pressed_together> ;
+   :approximate-date -1500 ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (40.512278 141.488389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Late_Jomon_clay_statue_Kazahari_I_Aomoriken_1500BCE_-_1000BCE.jpg> .
+
 :pylos-combat-agate a :group-of-human-figures ;
    rdfs:label "Pylos Combat Agate" ;
    :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
@@ -1244,6 +1253,14 @@
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (35.298056 25.163056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Knossos_bull_leaping_fresco.jpg> .
+
+:hollow-dogu a :human-figure ;
+   rdfs:label "Hollow Dogū" ;
+   :described-by <https://en.wikipedia.org/wiki/Hollow_Dogū> ;
+   :approximate-date -1400 ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (41.768611 140.728889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:中空土偶.jpg> .
 
 :hittite-god-mace a :human-figure ;
    rdfs:label "Hittite God holding Mace" ;
@@ -1321,6 +1338,8 @@
    :art-historical-culture-or-tradition :shu-kingdom ;
    :representative-latlong-point (30.993 104.2) ; # ll for Sanxingdui, China
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg> .
+
+# -1208 https://en.wikipedia.org/wiki/Merneptah_Stele
 
 :sanxingdui-bronze-head-protuding-eyes a :human-figure ;
    rdfs:label "Sanxingdui Bronze Head with Protuding Eyes" ;
@@ -1545,6 +1564,14 @@
    :art-historical-culture-or-tradition :neo-hittite-empire ;
    :representative-latlong-point (36.2475 36.376389) ; # ll for Turkey
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:SUPPILULIUMA.jpg> .
+
+# approx -850 https://en.wikipedia.org/wiki/Stele_of_Ördek-Burnu
+
+# approx -824 https://en.wikipedia.org/wiki/Black_Obelisk_of_Shalmaneser_III
+
+# approx -800 https://en.wikipedia.org/wiki/Saba%27a_Stele
+
+# -800 - -700 https://en.wikipedia.org/wiki/Melqart_stele
 
 :grevensvænge-figurines a :group-of-human-figures ;
    rdfs:label "Grevensvænge figurines" ;
