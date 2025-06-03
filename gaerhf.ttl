@@ -2000,11 +2000,11 @@
    :representative-latlong-point (13.603425 79.576767) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudimallam_Lingam_in-situ_photograph.jpg> .
 
-:ceramic-whistle-in-the-form-of-a-standing-figure a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/313554> ;
-   :period-note "Chorrera or Bahia (Ecuador)" ;
-   :earliest-date -200 ;
-   :latest-date 300 .
+# :ceramic-whistle-in-the-form-of-a-standing-figure a :human-figure ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/313554> ;
+#    :period-note "Chorrera or Bahia (Ecuador)" ;
+#    :earliest-date -200 ;
+#    :latest-date 300 .
 
 :hopewell-head-in-profile a :human-figure ;
    rdfs:label "Hopewell Head in Profile" ;
@@ -2012,6 +2012,8 @@
    :material-note "Mica" ;
    :earliest-date -200 ;
    :latest-date 500 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.142561 -84.316145) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human_face_effigy,_Hopewell_culture,_Turner_Group,_Mound_3,_altar,_Little_Miami_Valley,_Ohio,_200_BC_to_500_AD,_mica_-_Native_American_collection_-_Peabody_Museum,_Harvard_University_-_DSC06093.jpg> .
 
 :qin-terracotta-army a :group-of-human-figures ;
