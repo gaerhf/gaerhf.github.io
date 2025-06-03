@@ -1005,6 +1005,7 @@
    :earliest-date -3000 ;
    :latest-date -2000 ;
    :in-modern-country-note "Japan" ;
+   :representative-latlong-point (38.691218 140.312831) ;
    :art-historical-culture-or-tradition :jomon ;
    :note "This particular dōgu does not have its own landing page on Wikipedia or the internet generally. It should." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> .
