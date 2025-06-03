@@ -593,6 +593,16 @@
    :art-historical-culture-or-tradition :saharan-rock-art ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_11/10_21/eeb44702_ca7b_451c_ba84_a3df015a47d5/mid_01548817_001.jpg> .
 
+:tell-aswad-plastered-skulls a :group-of-human-figures ;
+   rdfs:label "Tell Aswad Plastered Skulls" ;
+   :described-by <https://whitelevy.fas.harvard.edu/publication-neolithic-site-tell-aswad-damascus-region-syria> ,
+    <https://en.wikipedia.org/wiki/Tell_Aswad#Culture> ,
+    <https://youtu.be/taoczmLPC6U> ;
+    :approximate-date -7500 ;
+    :in-modern-country-note "Syria" ;
+    :representative-latlong-point (33.4 36.55) ;
+    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PPNB_Plastered_Skulls_from_the_Levant.jpg> .
+
 :maliwawa-figures a :group-of-human-figures ;
    rdfs:label "Maliwawa Figures" ;
    :described-by <https://www.smithsonianmag.com/smart-news/ancient-australian-aboriginal-art-unlike-anything-seen-180975984/> ,
@@ -1727,6 +1737,15 @@
    :in-modern-country-note "China" ;
    :representative-latlong-point (44.554887 80.882147) ;
    :thumbnail-image <https://english.news.cn/20250527/78f909d4820b47f28a2a0b32406af62d/3d866704c5804302a5e316daeba63eac.jpg> .
+
+:tomb-diver a :group-of-human-figures ;
+   rdfs:label "Tomb of the Diver" ;
+   :described-by <https://en.wikipedia.org/wiki/Tomb_of_the_Diver> ;
+   :earliest-date -500 ;
+   :latest-date -475 ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.422222 15.005278) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PaestumTaucher.jpg> .
 
 :phoenecian-apotropaic-mask a :human-figure ;
    rdfs:label "Phoenician Apotropaic Mask" ;
@@ -3029,6 +3048,15 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lewis_chessmen_23.JPG> .
 
 # 1150 - 1250 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1968.75/
+
+:mary-seated-christ a :group-of-human-figures ;
+   rdfs:label "Mary Seated with Christ Child" ;
+   :described-by <https://www.metmuseum.org/collection/the-collection-online/search/463795> ;
+   :earliest-date 1175 ;
+   :latest-date 1200 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (45.333333 3) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/463795/953347/main-image> .
 
 :bust-of-jayavarman-vii a :human-figure ;
    rdfs:label "Bust of Jayavarman VII" ;
