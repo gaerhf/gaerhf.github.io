@@ -2589,6 +2589,15 @@
    :art-historical-culture-or-tradition :roman-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Crepereia_Tryphaena_2.jpg> .
 
+:palmyrene-mother-daughter a :group-of-human-figures ;
+   rdfs:label "Palmyrene Mother and Daughter" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1891-0113-E-2?selectedImageId=1613275915> ,
+     <https://en.wikipedia.org/wiki/Palmyrene_funerary_reliefs> ;
+   :date 184 ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (34.551389 38.268056) ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2017_1/9_14/70d4cad4_283e_4484_9eb1_a6f600efbc02/mid_WCO24972_a.jpg> .
+
 :kushan-plaque-with-two-figures a :group-of-human-figures ;
    rdfs:label "Kushan Plaque with Two Figures" ;
    :described-by <https://www.metmuseum.org/art/collection/search/327830> ;
@@ -2600,15 +2609,6 @@
    :note "Met Museum page suggests Balkh as possible findspot. Mapped point is proxy for Northern Afghanistan generally." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327830/711829/main-image> .
 
-:palmyrene-mother-daughter a :group-of-human-figures ;
-   rdfs:label "Palmyrene Mother and Daughter" ;
-   :described-by <https://www.britishmuseum.org/collection/object/W_1891-0113-E-2?selectedImageId=1613275915> ,
-     <https://en.wikipedia.org/wiki/Palmyrene_funerary_reliefs> ;
-   :date 184 ;
-   :in-modern-country-note "Syria" ;
-   :representative-latlong-point (34.551389 38.268056) ;
-   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2017_1/9_14/70d4cad4_283e_4484_9eb1_a6f600efbc02/mid_WCO24972_a.jpg> .
-
 :balalyk-tepe-murals a :group-of-human-figures ;
    rdfs:label "Balalyk Tepe Murals" ;
    :described-by <https://en.wikipedia.org/wiki/Balalyk_Tepe> ;
@@ -2618,6 +2618,16 @@
    :art-historical-culture-or-tradition :kushan-empire ;
    :representative-latlong-point (37.535384 67.115405) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_mural.jpg> .
+
+:fasting-buddha a :human-figure ;
+   rdfs:label "Fasting Buddha" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/38119> ;
+   :earliest-date 200 ;
+   :latest-date 500 ;
+   :in-modern-country-note "Pakistan or India" ;
+   :representative-latlong-point (33.756 72.8291) ;
+   :note "No specific findspot." ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/38119/146374/main-image> .
 
 # :female-figure-holding-cornucopia 200 - 200 https://www.britishmuseum.org/collection/object/W_2012-6029-1
 
