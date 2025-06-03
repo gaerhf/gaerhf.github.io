@@ -270,6 +270,10 @@
 
 # ?? https://en.wikipedia.org/wiki/Carpentras_Stele
 
+# https://collections.peabody.harvard.edu/objects/details/718505?ctx=fca67ed745c84b026c1daf2626036dbe70d167d7&idx=46
+
+# https://en.wikipedia.org/wiki/Mundigak#Artifacts_found
+
 :sulawesi-cave-hunting-scene a :group-of-human-figures ;
    rdfs:label "Sulawesi Cave Hunting Scene" ;
    :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ;
@@ -2113,6 +2117,15 @@
    :representative-latlong-point (15.001667 45.815833) ;
    :note "Reported to be from Timna." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/10_23/623cc4fa_d689_4182_a6aa_a3c00180839a/mid_00572725_001.jpg> .
+
+:embroidered-carpets-noin-ula-burials a :group-of-human-figures ;
+   rdfs:label "Embroidered Carpets from Noin-Ula Burials" ;
+   :described-by <https://en.wikipedia.org/wiki/Noin-Ula_burial_site#Embroidered_carpets> ;
+   :earliest-date -100 ;
+   :latest-date 100 ;
+   :in-modern-country-note "Mongolia" ;
+   :representative-latlong-point (48.386222 106.754972) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Noin-Ula_carpet,_fighting_sceneNoin-Ula_carpet,_fighting_scene.jpg> .
 
 :alabaster-female-figurine-with-ruby-eyes a :human-figure ;
    rdfs:label "Alabaster Female Figurine with Ruby Eyes" ;
