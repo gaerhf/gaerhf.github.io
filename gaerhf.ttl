@@ -2113,7 +2113,8 @@
 
 :alabaster-female-figurine-with-ruby-eyes a :human-figure ;
    rdfs:label "Alabaster Female Figurine with Ruby Eyes" ;
-   :Described-by <https://collections.louvre.fr/en/ark:/53355/cl010144841> ;
+   :Described-by <https://collections.louvre.fr/en/ark:/53355/cl010144841> ,
+   <https://doi.org/10.1086/723488> ;
    :earliest-date -100 ;
    :latest-date 100 ;
    :in-modern-country-note "Iraq" ;
@@ -2237,6 +2238,15 @@
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (34.286111 71.946667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PharroAndArdoxsho.jpg> .
+
+:kushan-ruler-surkh-kotal a :human-figure ;
+   rdfs:label "Kushan Ruler from Surkh Kotal" ;
+   :described-by <https://en.wikipedia.org/wiki/Surkh_Kotal#The_ancient_name_of_the_site> ;
+   :note "Frequently identified as Kanishka" ;
+   :approximate-date 125 ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (36.036083 68.58905) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Probable_statue_of_Kanishka,_Surkh_Kotal._Kabul_Museum_(2nd_century_CE).jpg> .
 
 :seated-buddha-mathura-132 a :group-of-human-figures ;
    rdfs:label "Seated Buddha from Mathura of 132 CE" ;
@@ -2872,6 +2882,15 @@
    :art-historical-culture-or-tradition :sailendra-dynasty ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Reliëf_O_89_op_de_verborgen_voet_van_de_Borobudur_TMnr_10015826.jpg> . # https://www.bbc.co.uk/ahistoryoftheworld/objects/CPbWMMoFSnmUlSHF3dkf5A
 
+:colossal-toltec-warriors a :group-of-human-figures ;
+   rdfs:label "Colossal Toltec Warriors" ;
+   :described-by <https://en.wikipedia.org/wiki/Atlantean_figures#Tula> ;
+   :earliest-date 750 ;
+   :latest-date 950 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (20.064156 -99.340803) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Telamones_Tula.jpg> .
+
 :musician-bomampak-murals a :group-of-human-figures ;
    rdfs:label "Procession from the Bonampak Murals" ;
    :described-by <https://en.wikipedia.org/wiki/Bonampak#Temple_of_the_Murals> ;
@@ -3018,7 +3037,7 @@
    :representative-latlong-point (27.666314 85.353615) ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/as/web-additional/DP-30181-001.jpg> .
 
-:cahokiam-resting-warrior-figurine a :human-figure ;
+:cahokian-resting-warrior-figurine a :human-figure ;
    rdfs:label "Cahokian Resting Warrior Figurine" ;
    :described-by <https://archeology.uark.edu/restingwarrior3d/> ;
    :period-note "Cahokia (Illinois)" ;
