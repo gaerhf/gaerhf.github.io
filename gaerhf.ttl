@@ -2162,10 +2162,11 @@
 
 :terracotta-male-figure-from-kalchayan a :human-figure ;
    rdfs:label "Terracotta Male figure from Kalchayan" ;
+   :described-by <https://en.wikipedia.org/wiki/Khalchayan> ;
    :art-historical-culture-or-tradition :kushan ;
    :earliest-date -50 ;
    :latest-date 50;
-   :described-by <https://en.wikipedia.org/wiki/Khalchayan> ;
+   :in-modern-country-note "Uzbekistan" ;
    :representative-latlong-point (38.293611 67.978889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg> .
 
