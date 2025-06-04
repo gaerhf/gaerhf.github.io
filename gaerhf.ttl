@@ -1003,6 +1003,16 @@
    :art-historical-culture-or-tradition :saharan-rock-art ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_11/10_22/9aeb1cc8_a698_40ee_97cd_a3df01714a90/mid_01556626_001.jpg> .
 
+:figurine-mundigak a :human-figure ;
+   rdfs:label "Figurine from Mundigak" ;
+   :described-by <https://en.wikipedia.org/wiki/Mundigak#Artifacts_found> ;
+   :earliest-date -3000 ;
+   :latest-date -2000 ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (31.9039 65.5246) ;
+   :note "The left-hand figurine in image is from Mundigak." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Afgh02-02-02.jpg> .
+
 :dogu-female-abstract-figurine a :human-figure ;
    rdfs:label "Dōgu Female Abstract Figurine" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> ;
