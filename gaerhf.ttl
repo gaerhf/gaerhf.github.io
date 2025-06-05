@@ -1091,6 +1091,15 @@
    :representative-latlong-point (30.9615 46.1061) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Standard_of_Ur_-_peace_side.jpg> .
 
+:figure-chanhu-daro a :human-figure ;
+   rdfs:label "Figure from Chanhu-Daro" ;
+   :described-by <https://collections.mfa.org/objects/29151> ;
+   :earliest-date -2600 ;
+   :latest-date -1900 ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (26.173611 68.323055) ;
+   :thumbnail-image <https://collections.mfa.org/internal/media/dispatcher/1009998/preview;jsessionid=5011406B5D52C99D2E461B5490D30889> .
+
 :kernosivsky-idol a :human-figure ;
    rdfs:label "Kernosivsky Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Kernosivsky_idol> ;
@@ -1111,7 +1120,8 @@
 
 :mohenjo-daro-female-figurine a :human-figure ;
    rdfs:label "Mohenjo daro Female Figurine" ;
-   :described-by <https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)> ;
+   :described-by <https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)> ,
+   <https://smarthistory.org/dancing-girl-mohenjodaro/> ;
    :earliest-date -2300 ;
    :latest-date -1750 ;
    :in-modern-country-note "Pakistan" ;
@@ -1211,7 +1221,8 @@
 
 :mohenjo-daro-priest-king a :human-figure ;
    rdfs:label "Mohenjo daro Priest King" ;
-   :described-by <https://en.wikipedia.org/wiki/Priest-King_(Mohenjo-daro)> ;
+   :described-by <https://en.wikipedia.org/wiki/Priest-King_(Mohenjo-daro)> ,
+   <https://smarthistory.org/the-priest-king-sculpture-from-the-indus-valley-civilization/> ;
    :earliest-date -2000 ;
    :latest-date -1900 ;
    :in-modern-country-note "Pakistan" ;
