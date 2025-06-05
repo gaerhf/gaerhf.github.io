@@ -274,6 +274,8 @@
 
 # https://en.wikipedia.org/wiki/Mundigak#Artifacts_found
 
+# https://en.wikipedia.org/wiki/Indian_rock-cut_architecture
+
 :sulawesi-cave-hunting-scene a :group-of-human-figures ;
    rdfs:label "Sulawesi Cave Hunting Scene" ;
    :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ;
@@ -1872,6 +1874,15 @@
    :earliest-date -400 ;
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
+
+:hermes-infant-dionysos a :group-of-human-figures ;
+   rdfs:label "Hermes with Infact Dionysos" ;
+   :described-by <https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus> ;
+   :earliest-date -375 ;
+   :latest-date 100 ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (37.638889 21.629722) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%2B_1975_wurde_das_neue_Gebäude_des_archäologischen_Museums_in_Olympia_eröffnet._41.jpg> .
 
 :arbinus-seated-nereid-monument a :human-figure ;
    rdfs:label "Arbinus Seated from the Nereid Monument" ;
