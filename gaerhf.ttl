@@ -2659,6 +2659,15 @@
    :art-historical-culture-or-tradition :roman-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Crepereia_Tryphaena_2.jpg> .
 
+:la-mojarra-stela-1 a :human-figure ;
+   rdfs:label "La Mojarra Stela 1" ;
+   :described-by <https://en.wikipedia.org/wiki/La_Mojarra_Stela_1> ;
+   :date 156 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (18.6153 -95.7417) ;
+   :note "While the content and meaning of the text are disputed, I believe the dates are not." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:La_Mojarra_Estela_1_(Detalle).jpg> .
+
 :palmyrene-mother-daughter a :group-of-human-figures ;
    rdfs:label "Palmyrene Mother and Daughter" ;
    :described-by <https://www.britishmuseum.org/collection/object/W_1891-0113-E-2?selectedImageId=1613275915> ,
