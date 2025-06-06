@@ -2677,8 +2677,8 @@
       <https://collections.nmnh.si.edu/search/anth/?ark=ark:/65665/3d509babb24e74e989f371e4e9da45ee6> ;
    :date 162 ;
    :in-modern-country-note "Mexico" ;
-   :note "Mapped point is approximate." ;
-   :representative-latlong-point (18.335238 -94.992024) ;
+   :note "See Smithsonian page for findspot." ;
+   :representative-latlong-point (18.466667 -95.433333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Estatuilla_de_Tuxtla.jpg> .
 
 # 162 https://en.wikipedia.org/wiki/Tuxtla_Statuette
