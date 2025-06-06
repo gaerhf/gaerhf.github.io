@@ -2672,7 +2672,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:La_Mojarra_Estela_1_(Detalle).jpg> .
 
 :tuxtla-statuette a :human-figure ;
-   rdfs:label "Tuxtla_Statuette" ;
+   rdfs:label "Tuxtla Statuette" ;
    :described-by <https://en.wikipedia.org/wiki/Tuxtla_Statuette> ,
       <https://collections.nmnh.si.edu/search/anth/?ark=ark:/65665/3d509babb24e74e989f371e4e9da45ee6> ;
    :date 162 ;
