@@ -2659,6 +2659,9 @@
    :art-historical-culture-or-tradition :roman-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Crepereia_Tryphaena_2.jpg> .
 
+# ??? https://artgallery.yale.edu/collections/objects/196592
+# https://collections.nmnh.si.edu/search/anth/?ark=ark:/65665/3d509babb24e74e989f371e4e9da45ee6
+
 :la-mojarra-stela-1 a :human-figure ;
    rdfs:label "La Mojarra Stela 1" ;
    :described-by <https://en.wikipedia.org/wiki/La_Mojarra_Stela_1> ;
@@ -2667,6 +2670,18 @@
    :representative-latlong-point (18.6153 -95.7417) ;
    :note "While the content and meaning of the text are disputed, I believe the dates are not." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:La_Mojarra_Estela_1_(Detalle).jpg> .
+
+:tuxtla-statuette a :human-figure ;
+   rdfs:label "Tuxtla_Statuette" ;
+   :described-by <https://en.wikipedia.org/wiki/Tuxtla_Statuette> ,
+      <https://collections.nmnh.si.edu/search/anth/?ark=ark:/65665/3d509babb24e74e989f371e4e9da45ee6> ;
+   :date 162 ;
+   :in-modern-country-note "Mexico" ;
+   :note "Mapped point is approximate." ;
+   :representative-latlong-point (18.335238 -94.992024) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Estatuilla_de_Tuxtla.jpg> .
+
+# 162 https://en.wikipedia.org/wiki/Tuxtla_Statuette
 
 :palmyrene-mother-daughter a :group-of-human-figures ;
    rdfs:label "Palmyrene Mother and Daughter" ;
