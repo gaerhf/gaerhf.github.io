@@ -1709,6 +1709,15 @@
 
 # -600 - -400 https://en.wikipedia.org/wiki/Dar%27a
 
+:monument-3-danzante a :human-figure ;
+   rdfs:label "Monument 3 (“Danzante”)" ;
+   :described-by  <https://en.wikipedia.org/wiki/San_José_Mogote#Monument_3>,
+      <https://en.wikipedia.org/wiki/Zapotec_script#San_Jose_Mogote_Monument_3_(%22Danzante%22)> ;
+   :approximate-date -600 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (17.1675 -96.803333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monument_3,_San_Jose_Mogote.JPG> .
+
 :seated-figure-addi-galamo a :human-figure ;
    rdfs:label "Seated Figure from Addi Galamo" ;
    :described-by <https://en.wikipedia.org/wiki/Dar%27a> ;
@@ -2681,8 +2690,6 @@
    :representative-latlong-point (18.466667 -95.433333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Estatuilla_de_Tuxtla.jpg> .
 
-# 162 https://en.wikipedia.org/wiki/Tuxtla_Statuette
-
 :palmyrene-mother-daughter a :group-of-human-figures ;
    rdfs:label "Palmyrene Mother and Daughter" ;
    :described-by <https://www.britishmuseum.org/collection/object/W_1891-0113-E-2?selectedImageId=1613275915> ,
@@ -2724,8 +2731,6 @@
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/38119/146374/main-image> .
 
 # :female-figure-holding-cornucopia 200 - 200 https://www.britishmuseum.org/collection/object/W_2012-6029-1
-
-# https://en.wikipedia.org/wiki/Cheng-Han (figurines of e4th)
 
 :cheng-han-figurine a :human-figure ;
    rdfs:label "Cheng-Han Figurine" ;
@@ -3089,7 +3094,6 @@
    :representative-latlong-point (36.0698 -107.9574) ;
    :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
 
-
 :maya-codex-of-mexico a :group-of-human-figures ;
    rdfs:label "Maya Codex of Mexico" ;
    :described-by <https://en.wikipedia.org/wiki/Maya_Codex_of_Mexico> ;
@@ -3098,7 +3102,6 @@
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (16.53 -92.45) ; # Chiapas from wikipedia page
    :art-historical-culture-or-tradition :maya-culture ;
-
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Grolier_Codex_in_HuffPo_2.jpg> .
 
 :keller-figurine a :human-figure ;
