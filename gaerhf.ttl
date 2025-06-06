@@ -2570,7 +2570,7 @@
    :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DT1262.jpg> .
 
 :figure-regalia-19th-unnamed-cave a :human-figure ;
-   rdfs:label "Figure in Regalia from 19th Unnamed Cave";
+   rdfs:label "Figure in “Regalia” from 19th Unnamed Cave";
    :described-by <https://doi.org/10.15184/aqy.2022.24> ,
       <https://www.smithsonianmag.com/history/3-d-scans-reveal-gigantic-native-american-cave-art-in-alabama-180980004/> ;
    :earliest-date 1 ;
