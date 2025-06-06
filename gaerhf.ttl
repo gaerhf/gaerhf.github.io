@@ -2559,6 +2559,27 @@
    :representative-latlong-point (62 -70) ; # hudson strait
    :thumbnail-image <https://collections.historymuseum.ca/public/objects/common/webmedia.php?irn=45090> .
 
+:quimbaya-poporo-female-figure a :human-figure ;
+   rdfs:label "Quimbaya Poporo with Female Figure" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/316682> ;
+   :earliest-date 1 ;
+   :latest-date 600 ;
+   :in-modern-country-note "Colombia" ;
+   :representative-latlong-point (4.841 -75.632) ;
+   :note "Mapped point is only approximate at large scale." ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DT1262.jpg> .
+
+:figure-regalia-19th-unnamed-cave a :human-figure ;
+   rdfs:label "Figure in Regalia from 19th Unnamed Cave";
+   :described-by <https://doi.org/10.15184/aqy.2022.24> ,
+      <https://www.smithsonianmag.com/history/3-d-scans-reveal-gigantic-native-american-cave-art-in-alabama-180980004/> ;
+   :earliest-date 1 ;
+   :latest-date 1000 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (34.6 -86.4) ;
+   :note "The actual location of the cave is undisclosed so the point is only a loose indication." ;
+   :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/Dv8f31kLl10lTcf26vzcZvHtNFA=/fit-in/1072x0/filters:focal(1631x746:1632x747)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/cc/41/cc4153f8-c421-4d57-8106-de2b5a5fc119/screen_shot_2022-05-02_at_115404_am.png> .
+
 :han-pottery-storyteller-beating-a-drum a :human-figure ;
    :described-by <https://en.chnmuseum.cn/collections_577/collection_highlights_608/archaeological_discoveries_609/202008/t20200831_247541.html> ;
    :period-note "Eastern Han Dynasty (China)" ;
@@ -2707,16 +2728,6 @@
 #    :period-note "Gupta (India)" ;
 #    :earliest-date 400 ;
 #    :latest-date 600 .
-
-:quimbaya-poporo-female-figure a :human-figure ;
-   rdfs:label "Quimbaya Poporo with Female Figure" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/316682> ;
-   :earliest-date 1 ;
-   :latest-date 600 ;
-   :in-modern-country-note "Colombia" ;
-   :representative-latlong-point (4.841 -75.632) ;
-   :note "Mapped point is only approximate at large scale." ;
-   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DT1262.jpg> .
 
 :quimbaya-gold-funerary-urn a :human-figure ;
    rdfs:label "Quimbaya Gold Funerary URn" ;
