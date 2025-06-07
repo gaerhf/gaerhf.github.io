@@ -276,6 +276,11 @@
 
 # https://en.wikipedia.org/wiki/Indian_rock-cut_architecture
 
+# Dunbar Cave http://doi.org/10.4311/2011AN0219 https://www.caves.org/wp-content/uploads/Publications/JCKS/v74/cave-74-01-19.pdf
+#     https://www.researchgate.net/publication/265009540_The_Prehistoric_Cave_Art_and_Archaeology_of_Dunbar_Cave_Montgomery_County_Tennessee
+# 1300?? https://archaeology.org/issues/november-december-2019/features/america-southeast-cherokee-caves/ 
+
+
 :sulawesi-cave-hunting-scene a :group-of-human-figures ;
    rdfs:label "Sulawesi Cave Hunting Scene" ;
    :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ;
@@ -1323,6 +1328,14 @@
    :representative-latlong-point (35.298056 25.163056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Knossos_bull_leaping_fresco.jpg> .
 
+:palaikastro-kouros a :human-figure ;
+   rdfs:label "Palaikastro Kouros" ;
+   :described-by <https://en.wikipedia.org/wiki/Palaikastro_Kouros> ;
+   :approximate-date -1450 ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (35.2 26.25) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palaikastro_Kouros_08.jpg> .
+
 :hollow-dogu a :human-figure ;
    rdfs:label "Hollow Dogū" ;
    :described-by <https://en.wikipedia.org/wiki/Hollow_Dogū> ;
@@ -1340,27 +1353,6 @@
    :representative-latlong-point (40.019722 34.615278) ;
    :note "Findspot unknown." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/b034bae1_724a_4131_855b_a3b700668aa8/mid_00030758_001.jpg> .
-
-:jade-statuette-standing-dignitary a :human-figure ;
-   rdfs:label "Jade Statuette of a Standing Dignitary" ;
-   :described-by <https://harvardartmuseums.org/collections/object/204810> ;
-   :earliest-date -1200 ;
-   :latest-date -1000 ;
-   :in-modern-country-note "China" ;
-   :representative-latlong-point (36.099 114.392) ;
-   :note "Findspot not known. Mapped at generic point." ;
-   :art-historical-culture-or-tradition :shang-dynasty ;
-   :thumbnail-image <https://ids.hvrd.art/ids/view/17386315?width=250&height=250> .
-
-:deer-stones-funerary-marker a :human-figure ;
-   rdfs:label "Deer Stones Culture Funerary Marker" ;
-   :described-by <https://en.wikipedia.org/wiki/Deer_stones_culture#Type_I:_Classic_Mongolian> ;
-   :earliest-date -1200 ;
-   :latest-date -800 ;
-   :in-modern-country-note "Mongolia" ;
-   :art-historical-culture-or-tradition :deer-stone-culture ;
-   :representative-latlong-point (49.654763 99.929315) ; # ll for Uushigiin Övör, Mongolia
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_deer_stone._Uushigiin_Övör_site,_Deer_Stone_14,_near_Mörön,_northern_Mongolia.jpg> .
 
 :tlatico-so-called-acrobat a :human-figure ;
    rdfs:label "Tlatilco Acrobat" ;
@@ -1440,6 +1432,28 @@
    :representative-latlong-point (19.5 -99.25) ;
    :art-historical-culture-or-tradition :olmec ;
    :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
+
+:jade-statuette-standing-dignitary a :human-figure ;
+   rdfs:label "Jade Statuette of a Standing Dignitary" ;
+   :described-by <https://harvardartmuseums.org/collections/object/204810> ;
+   :earliest-date -1200 ;
+   :latest-date -1000 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (36.099 114.392) ;
+   :note "Findspot not known. Mapped at generic point." ;
+   :art-historical-culture-or-tradition :shang-dynasty ;
+   :thumbnail-image <https://ids.hvrd.art/ids/view/17386315?width=250&height=250> .
+
+:deer-stones-funerary-marker a :human-figure ;
+   rdfs:label "Deer Stones Culture Funerary Marker" ;
+   :described-by <https://en.wikipedia.org/wiki/Deer_stones_culture#Type_I:_Classic_Mongolian> ;
+   :earliest-date -1200 ;
+   :latest-date -800 ;
+   :in-modern-country-note "Mongolia" ;
+   :art-historical-culture-or-tradition :deer-stone-culture ;
+   :representative-latlong-point (49.654763 99.929315) ; # ll for Uushigiin Övör, Mongolia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_deer_stone._Uushigiin_Övör_site,_Deer_Stone_14,_near_Mörön,_northern_Mongolia.jpg> .
+
 
 :ralaghan-idol a :human-figure ;
    rdfs:label "Ralaghan Idol" ;
@@ -1559,6 +1573,15 @@
    :representative-latlong-point (39.965778 8.448278) ;
    :art-historical-culture-or-tradition :nuragic-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Età_nuragica,_giganti_di_monte_prama,_xiii-ix_secolo_ac_ca.,_da_cabras,_guerriero_05,_01.jpg> .
+
+:altar-4-la-venta a :human-figure ;
+   rdfs:label "Altar 4 at La Venta" ;
+   :described-by <https://en.wikipedia.org/wiki/La_Venta#Altars_4_&_5> ;
+   :earliest-date -900 ;
+   :latest-date -700 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (18.103299 -94.040192) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Altar_4_La_Venta_(Ruben_Charles).jpg> .
 
 :neo-babylonian-woman-infant-figurine a :group-of-human-figures ;
    rdfs:label "Neo-Babylonian Woman Nursing Infant" ;
@@ -2842,6 +2865,17 @@
    :art-historical-culture-or-tradition :kofun-period ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:岩戸山古墳出土_石人_(J-831).JPG> .
 
+:figure-carved-bone-orkney a :human-figure ;
+   rdfs:label "Figure Carved on Cattle Bone from Orkney" ;
+   :described-by <https://doi.org/10.9750/PSAS.135.309.318> ,
+      <https://commons.wikimedia.org/wiki/File:%27Peedie_Pict%27_Pictish_carved_figure_on_ox_bone_from_Bu_Sands,_Burray,_Orkney.jpg> ;
+   :earliest-date 500 ;
+   :latest-date 700 ;
+   :note "Colloquially know as the ‘Peedie Pict’. Mapped point is approximate." ;
+   :in-modern-country-note "Scotland" ;
+   :representative-latlong-point (58.856747 -2.891810) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%27Peedie_Pict%27_Pictish_carved_figure_on_ox_bone_from_Bu_Sands,_Burray,_Orkney.jpg> .
+
 :moche-head-shaped-vessel a :human-figure ;
    rdfs:label "Moche Head-shaped Vessel" ;
    :described-by <https://www.metmuseum.org/art/collection/search/308528> ;
@@ -3164,6 +3198,14 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lewis_chessmen_23.JPG> .
 
 # 1150 - 1250 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1968.75/
+
+:bayeux-tapestry a :group-of-human-figures ;
+   rdfs:label "Bayeaux Tapestry" ;
+   :described-by <https://en.wikipedia.org/wiki/Bayeux_Tapestry> ;
+   :approximate-date 1120 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (49.2744 0.7003) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Odo_bayeux_tapestry.png> .
 
 :mary-seated-christ a :group-of-human-figures ;
    rdfs:label "Mary Seated with Christ Child" ;
