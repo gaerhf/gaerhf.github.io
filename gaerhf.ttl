@@ -411,6 +411,16 @@
    :art-historical-culture-or-tradition :magdalenian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lascaux_01.jpg> .
 
+:female-figure-1-zaraysk a :human-figure ;
+   rdfs:label "Female Figureine No. 1 from Zaraysk" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_figurines_of_Zaraysk> ,
+      <https://donsmaps.com/zarayskvenus.html> ;
+   :earliest-date -22000 ;
+   :latest-date -16000 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (54.766667 38.883333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Палеолитическая_Венера_Зарайская_стоянка_верхний_палеолит_(2).jpg> .
+
 :lubang-jeriji-saleh-cave-hunting-group a :group-of-human-figures ;
    rdfs:label "Lubang Jeriji Saleh Cave Hunting Group" ;
    :described-by <https://www.smithsonianmag.com/science-nature/worlds-oldest-known-figurative-paintings-discovered-borneo-cave-180970747/>,
@@ -421,14 +431,14 @@
    :representative-latlong-point (1.241472 117.329111) ;
    :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/z-zenrrnbTxRMap28ZLM2TeAF60=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d3/70/d370e4f4-292a-4ca6-8010-f1f27a15b433/humans-3.jpg> .
 
-:qurta-rock-art-figures a :group-of-human-figures ;
-   rdfs:label "Qurta Rock Art Figures" ;
-   :described-by <https://doi.org/10.1017/S0003598X00061998> , <https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf> ;
-   :approximate-date -13000 ;
-   :in-modern-country-note "Egypt" ;
-   :representative-latlong-point (24.638719 32.960759) ;
-   :note "Mapped point very approximate. I have not found a linkable image." ;
-   :art-historical-culture-or-tradition :saharan-rock-art .
+:female-figurine-eliseevichi a :human-figure ;
+   rdfs:label "Female Figurine from Eliseevichi" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_of_Eliseevichi> ;
+   :approximate-date -16000 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (52.95 33.4) ;
+   :note "Mapped point very approximate." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Frauenstatuette_Eliseevichi_1.jpg> .
 
 :gwion-gwion-rock-paintigs a :group-of-human-figures ;
    rdfs:label "Gwion Gwion Rock Paintings" ;
@@ -440,6 +450,15 @@
    :representative-latlong-point (-17.49145 124.53265) ;
    :note "Location is approximate, as the exact location is not readily available to protect the site." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
+
+:qurta-rock-art-figures a :group-of-human-figures ;
+   rdfs:label "Qurta Rock Art Figures" ;
+   :described-by <https://doi.org/10.1017/S0003598X00061998> , <https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf> ;
+   :approximate-date -13000 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (24.638719 32.960759) ;
+   :note "Mapped point very approximate. I have not found a linkable image." ;
+   :art-historical-culture-or-tradition :saharan-rock-art .
 
 :grotta-dell-addaura-inscribed-petroglyphs a :group-of-human-figures ;
    rdfs:label "Grotta dell'Addaura Inscribed Petroglyphs" ;
@@ -1698,6 +1717,8 @@
 #    :period-note "Middle Mumun Pottery Period (Korea)" ;
 #    :earliest-date -700 ;
 #    :latest-date -550 .
+
+# -712 calcite and bronze sculpture from circa 712–525 BCE in the Brooklyn Museum. https://www.brooklynmuseum.org/objects/4035
 
 :mantiklos-apollo a :human-figure ;
    rdfs:label "Mantiklos Apollo" ;
@@ -3179,8 +3200,8 @@
    :art-historical-culture-or-tradition :mississippian ;
    :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2019/04/RestingWarriorFiguring_lg.jpg> .
 
-:high-relief-statue-parakrama-samudraa-reservoir a :human-figure ;
-   rdfs:label "High Relief Statue near Parakrama Samudraa Reservoir" ;
+:high-relief-figure-parakrama-samudraa-reservoir a :human-figure ;
+   rdfs:label "High Relief Figure near Parakrama Samudraa Reservoir" ;
    :described-by <https://en.wikipedia.org/wiki/Statue_of_Parakramabahu_I> ;
    :earliest-date 1100 ;
    :latest-date 1200 ;
