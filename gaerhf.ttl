@@ -1762,6 +1762,15 @@
    :representative-latlong-point (17.1675 -96.803333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monument_3,_San_Jose_Mogote.JPG> .
 
+:warrior-hirschlanden a :human-figure ;
+   rdfs:label "Warrior from Hirschlanden" ;
+   :described-by <https://en.wikipedia.org/wiki/Warrior_of_Hirschlanden> ;
+   :earliest-date -600 ;
+   :latest-date -500 ;
+   :in-modern-country-note "Germany" ;
+   :representative-latlong-point (48.833056 9.011111) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Krieger_Hirschlanden_Vs.jpg> .
+
 :seated-figure-addi-galamo a :human-figure ;
    rdfs:label "Seated Figure from Addi Galamo" ;
    :described-by <https://en.wikipedia.org/wiki/Dar%27a> ;
@@ -1771,6 +1780,15 @@
    :representative-latlong-point (13.866667 39.733333) ;
    :note "Location of Addi Galamo unclear. And it would be useful to have a better landing page for the figure itself." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Figurine,_National_Museum,_Addis_Ababa,_Ethiopia_(2130296832).jpg> .
+
+:holzgerlingen-figure a :human-figure ;
+   rdfs:label "Holzgerlingen Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Holzgerlingen_figure> ;
+   :earliest-date -600 ;
+   :latest-date -100 ;
+   :in-modern-country-note "Germany" ;
+   :representative-latlong-point (48.639167 9.010833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Holzgerlingen,_Googles_Arts_%26_Culture_(cropped).png> .
 
 :ushabti-neferibresaneith a :human-figure ;
    rdfs:label "Ushabti for Neferibresaneith" ;
@@ -1858,7 +1876,7 @@
    :in-modern-country-note "Spain" ;
    :art-historical-culture-or-tradition :iberian-culture ;
    :representative-latlong-point (38.875556 -0.753056) ; # ll for Mogente, Spain
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerrer_de_Moixent,_Museu_de_Prehistòria_de_València.jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerrero_de_Mogente.jpg> .
 
 :lihyanite-colossal-statue a :human-figure ;
    rdfs:label "Lihyanite Colossal Statute" ;
@@ -2134,6 +2152,16 @@
    :representative-latlong-point (27.287358 77.717414) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yaksha_Manibhadra_-_Parkham_Mathura_circa_150_BCE.jpg> .
 
+:tandragee-idol a :human-figure ;
+   rdfs:label "So-Called Tandragee Idol" ;
+   :described-by <https://en.wikipedia.org/wiki/Tandragee_Idol> ;
+   :earliest-date -200 ;
+   :latest-date 100 ;
+   :note "The figure has been dated both earlier and later than the range given here." ;
+   :in-modern-country-note "Northen Ireland" ;
+   :representative-latlong-point (54.3478 -6.6562) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Armagh_St._Patrick%27s_Cathedral_of_the_Church_of_Ireland_North_Aisle_“Tandragee_Man“_2019_09_09_(cropped).jpg> .
+   
 :reclining-female-figure-alabaster a :human-figure ;
    rdfs:label "Reclining Female Figure in Alabaster" ;
    :described-by <https://www.metmuseum.org/art/collection/search/322114> ;
@@ -2281,6 +2309,15 @@
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.458544 70.349792) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BimaranCasket2.JPG> .
+
+:corleck-head a :human-figure ;
+   rdfs:label "Corleck Head" ;
+   :described-by <https://en.wikipedia.org/wiki/Corleck_Head> ;
+   :earliest-date 1 ;
+   :latest-date 200 ;
+   :in-modern-country-note "Ireland" ;
+   :representative-latlong-point (53.9726 -6.9975) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Corleck_Head_A4.jpg> .
 
 :san-agustin-megaliths a :group-of-human-figures ;
    rdfs:label "San Agustin Megaliths" ;
