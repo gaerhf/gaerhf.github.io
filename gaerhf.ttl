@@ -1314,6 +1314,14 @@
    :representative-latlong-point (37.730278 22.756111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:594px-MaskeAgamemnon-MOD.jpg> .
 
+:reliefs-burial-mound-kivik a :group-of-human-figures ;
+   rdfs:label "Reliefs from Burial Mound at Kivik" ;
+   :described-by <https://en.wikipedia.org/wiki/The_King%27s_Grave> ;
+   :approximate-date -1500 ;
+   :in-modern-country-note "Sweden" ;
+   :representative-latlong-point (55.683333 14.233333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_carving_Kivik_Sweden.jpg>.
+
 :paired-petroglyphs-valcamonica a :group-of-human-figures ;
    rdfs:label "Paired Petroglyphs from Valcamonica" ;
    :described-by <https://en.wikipedia.org/wiki/Rock_Drawings_in_Valcamonica> ;
