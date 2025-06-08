@@ -281,6 +281,8 @@
 # 1300?? https://archaeology.org/issues/november-december-2019/features/america-southeast-cherokee-caves/ 
 
 
+# https://archaeologymag.com/2024/07/bronze-age-human-face-carving-in-kazakhstan/
+
 :sulawesi-cave-hunting-scene a :group-of-human-figures ;
    rdfs:label "Sulawesi Cave Hunting Scene" ;
    :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ;
@@ -2064,6 +2066,16 @@
    :in-modern-country-note "India" ;
    :representative-latlong-point (23.48 77.73) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lakshmi_Sanchi_Stupa_2.jpg> .
+
+:funeray-masks-oglakhty a :group-of-human-figures ;
+   rdfs:label "Funerary Masks from Oglakhty" ;
+   :described-by <https://en.wikipedia.org/wiki/Oglakhty> ,
+    <https://en.wikipedia.org/wiki/Tashtyk_culture> ;
+   :earliest-date -100 ;
+   :latest-date -1 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (53.99377 91.489391) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tashtyk_culture_funeral_masks.jpg> .
 
 :pillar-jagannath-tekri-stupa a :group-of-human-figures ;
    rdfs:label "Pillar from Jagannath Tekri Stupa" ;
