@@ -283,9 +283,12 @@
 
 # https://archaeologymag.com/2024/07/bronze-age-human-face-carving-in-kazakhstan/
 
+# https://en.wikipedia.org/wiki/Tagar_culture
+
 :sulawesi-cave-hunting-scene a :group-of-human-figures ;
    rdfs:label "Sulawesi Cave Hunting Scene" ;
-   :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ;
+   :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ,
+      <https://smarthistory.org/earliest-hunting-scene-in-sulawesi-indonesia/> ;
    :earliest-date -45000 ;
    :latest-date -35000 ;
    :in-modern-country-note "Indonesia" ;
@@ -471,6 +474,17 @@
    :art-historical-culture-or-tradition :epigravettian ;
    :representative-latlong-point (38.1875 13.352222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palermo-Museo-Archeologico-bjs-11.jpg> .
+
+:bhimbetka-cave-war-painting a :group-of-human-figures ;
+   rdfs:label "Bhimbetka Cave “War” Scene Painting" ;
+   :described-by <https://smarthistory.org/bhimbetka-cave-paintings/> ,
+   <https://en.wikipedia.org/wiki/Bhimbetka_rock_shelters#Rock_art_and_paintings> ;
+   :earliest-date -12000 ;
+   :latest-date -8000 ;
+   :note "The dates are approximate and the scene could be earlier." ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (22.938415 77.613085) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bhimbetka_war_scene.jpg> .
 
 :shigir-anthropomorphic-figure a :human-figure ;
    rdfs:label "Shigir Anthropomorphic Figure" ;
