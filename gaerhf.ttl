@@ -285,6 +285,8 @@
 
 # https://en.wikipedia.org/wiki/Tagar_culture
 
+# https://goaprehistory.wordpress.com/wp-content/uploads/2018/07/earth-mothers-of-curdi-and-usgalimal3.pdf
+
 :sulawesi-cave-hunting-scene a :group-of-human-figures ;
    rdfs:label "Sulawesi Cave Hunting Scene" ;
    :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ,
@@ -1786,6 +1788,15 @@
    :representative-latlong-point (17.1675 -96.803333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monument_3,_San_Jose_Mogote.JPG> .
 
+:strettweg-wagon a :group-of-human-figures ;
+   rdfs:label "Strettweg Wagon" ;
+   :described-by <https://en.wikipedia.org/wiki/Strettweg_cult_wagon> ;
+   :approximate-date -600 ;
+   :in-modern-country-note "Austria" ;
+   :representative-latlong-point (47.07614 15.39274) ; 
+   :art-historical-culture-or-tradition :hallstatt-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kultwagen_von_Strettweg_02.jpg> .
+
 :warrior-hirschlanden a :human-figure ;
    rdfs:label "Warrior from Hirschlanden" ;
    :described-by <https://en.wikipedia.org/wiki/Warrior_of_Hirschlanden> ;
@@ -1794,6 +1805,17 @@
    :in-modern-country-note "Germany" ;
    :representative-latlong-point (48.833056 9.011111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Krieger_Hirschlanden_Vs.jpg> .
+
+:ballachulish-figure a :human-figure ;
+   rdfs:label "Ballachulish Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Ballachulish_figure> ,
+   <https://www.nms.ac.uk/search-our-collections/collection-search-results?entry=15095> ;
+   :earliest-date -600 ;
+   :latest-date -400 ;
+   :in-modern-country-note "Scotland" ;
+   :note "The National Museum of Scotland page has an image of the figure before it warped from drying." ;
+   :representative-latlong-point (56.675512 -5.133898) ; # ll for Ballachulish, Scotland
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ballachulish_figure.jpg> .
 
 :seated-figure-addi-galamo a :human-figure ;
    rdfs:label "Seated Figure from Addi Galamo" ;
@@ -1945,6 +1967,15 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.988889 52.874722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tomb_of_Darius_I_Image_of_Darius_I.jpg> .
+
+:kingsteignton-figure a :human-figure ;
+   rdfs:label "Kingsteignton Figure" ;
+   :described-by <https://www.devonheritage.org/Places/Kingsteignton/TheKingsteigntonIdolbyRichardHarris.htm> ;
+   :earliest-date -450 ;
+   :latest-date -350 ;
+   :in-modern-country-note "Britain " ;
+   :representative-latlong-point (50.5458 -3.5962) ; # ll for Kingsteignton, UK
+   :thumbnail-image <https://www.devonheritage.org/Places/Kingsteignton/images/KingsteigntonIdolHarris.jpg> .
 
 :support-zenghouyi-bells a :human-figure ;
    rdfs:label "Support for Zenghouyi Bells" ;
