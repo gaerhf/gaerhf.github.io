@@ -303,6 +303,7 @@
    :earliest-date -40000 ;
    :latest-date -35000 ;
    :in-modern-country-note "Germany" ;
+   :material-note "Mammoth ivory" ;
    :art-historical-culture-or-tradition :aurignacian ;
    :representative-latlong-point (48.379167 9.755556) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:VenusHohlefels2.jpg> .
@@ -313,6 +314,7 @@
    :approximate-date -36000 ;
    :in-modern-country-note "Austria" ;
    :art-historical-culture-or-tradition :aurignacian ;
+   :material-note "Serpentine (Stone)" ;
    :representative-latlong-point (48.45 15.6) ; # ll for Stratzing, Austria
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_vom_Galgenberg.JPG> .
 
@@ -321,6 +323,7 @@
    :described-by <https://en.wikipedia.org/wiki/Adorant_from_the_Geißenklösterle_cave> ;
    :earliest-date -35000 ;
    :latest-date -30000 ;
+   :material-note "Mammoth ivory" ;
    :in-modern-country-note "Germany" ;
    :representative-latlong-point (48.398333 9.772222) ; # ll for cave
    :art-historical-culture-or-tradition :aurignacian ;
@@ -332,6 +335,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Doln%C3%AD_V%C4%9Bstonice> ;
    :earliest-date -31000 ;
    :latest-date -27000 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Czech Republic" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (48.877778 16.652222) ; # ll for Dolní Věstonice
@@ -342,6 +346,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Willendorf> ;
    :earliest-date -29000 ;
    :latest-date -27000 ;
+   :material-note "Oolitic limestone" ;
    :in-modern-country-note "Austria" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (48.3225 15.404722) ; # ll for Willendorf, Austria
@@ -362,6 +367,7 @@
     rdfs:label "Brassempouy Gravettian Head" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Brassempouy> ;
    :approximate-date -25000 ;
+   :material-note "Mammoth ivory" ;
    :in-modern-country-note "France" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (43.6328 -0.6936) ; # ll for Brassempouy, France
@@ -372,6 +378,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_figurines_of_Kostyonki> ;
    :earliest-date -25000 ;
    :latest-date -20000 ;
+   :material-note "Ivory" ;
    :in-modern-country-note "Russia" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (51.385833 39.051667) ; # ll for Kostyonki, Russia
@@ -382,6 +389,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Laussel> ;
    :earliest-date -23000 ;
    :latest-date -22000 ;
+   :material-note "Limestone; red ochre paint." ;
    :in-modern-country-note "France" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (44.9447 1.1347) ; # ll for Marquay, Dordogne
@@ -403,6 +411,7 @@
    :described-by <https://archaeology.org/issues/march-april-2020/artifacts/artifact-france-gravettian-venus-figurine/> ,
     <https://www.world-archaeology.com/features/object-lesson-venus-of-renancourt/> ;
    :approximate-date -21000 ;
+   :material-note "Chalk" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (49.893932 2.261113) ;
    :note "Mapped at approximate point." ;
@@ -493,6 +502,7 @@
    :described-by <https://en.wikipedia.org/wiki/Shigir_Idol> ;
    :earliest-date -11000 ;
    :latest-date -9000 ;
+   :material-note "Wood" ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (57.3809 60.1407) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Большой_шигирский_идол.jpg> .
@@ -500,6 +510,7 @@
 :male-figure-on-bench-sayburc a :human-figure ;
    rdfs:label "Neolithic Male Figure carved in Bench" ;
    :approximate-date -8500 ;
+   :material-note "Limestone" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.110047 38.621842) ; # Sayburc, Turkey
    :described-by <https://doi.org/10.15184/aqy.2022.125> ;
@@ -542,6 +553,7 @@
    :described-by <https://en.wikipedia.org/wiki/Urfa_Man> ;
    :approximate-date -9000 ;
    :in-modern-country-note "Turkey" ;
+   :materia-note "Sandstone, obsidian (eyes)" ;
    :representative-latlong-point (37.158333 38.791667) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> . 
@@ -561,6 +573,7 @@
    :described-by <https://www.cambridge.org/core/journals/antiquity/article/flint-figurines-from-the-early-neolithic-site-of-kharaysin-jordan/FFEB57291718AF9FF216F1113844C61B> ;
    :earliest-date -8500 ;
    :latest-date -6500 ;
+   :materia-note "Flint" ;
    :in-modern-country-note "Jordan" ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :representative-latlong-point (32.203889 36.008889) ;
@@ -571,6 +584,7 @@
    :described-by <https://www.cambridge.org/core/journals/antiquity/article/flint-figurines-from-the-early-neolithic-site-of-kharaysin-jordan/FFEB57291718AF9FF216F1113844C61B> ;
    :earliest-date -8500 ;
    :latest-date -6500 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Jordan" ;
    :representative-latlong-point (32.203891 36.008884) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -580,6 +594,7 @@
    rdfs:label "Tell Mureybit Female Figurine" ;
    :described-by <https://virtual-museum-syria.org/aleppo/female-figurine-2/> ;
    :approximate-date -8000 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.0434 38.1287) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -591,6 +606,7 @@
    <https://doi.org/10.1017/S0003598X00050237> ;
    :earliest-date -8000 ;
    :latest-date -7000 ;
+   :material-note "Bone" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.822300 41.461109) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -1067,6 +1083,19 @@
    :art-historical-culture-or-tradition :jomon ;
    :note "This particular dōgu does not have its own landing page on Wikipedia or the internet generally. It should." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> .
+
+:standing-female-figure-necklace a :human-figure ;
+   rdfs:label "Standing Female Figure with Necklace" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/327544> ;
+   :earliest-date -3000 ;
+   :latest-date -2000 ;
+   :material-note "Sandstone" ;
+   :in-modern-country-note "Yemen" ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
+   :representative-latlong-point (16 49) ;
+   :note "Findspot not specifically known." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Standing_female_figure_wearing_a_strap_and_a_necklace_MET_DT868.jpg> .
+
 
 :petroglyph-warriors-iwellene a :group-of-human-figures ;
    rdfs:label "Petroglyph Warriors from Iwellene" ;
@@ -2623,11 +2652,11 @@
    :earliest-date 675 ;
    :latest-date 685 .
 
-:gandhara-bodhisattva a :human-figure ;
-   :described-by <https://csmvs.in/collections/bodhisattva/> ;
-   :period-note "Gandhara Region (Pakistan)" ;
-   :earliest-date 200 ;
-   :latest-date 300 .
+# :gandhara-bodhisattva a :human-figure ;
+#    :described-by <https://csmvs.in/collections/bodhisattva/> ;
+#    :period-note "Gandhara Region (Pakistan)" ;
+#    :earliest-date 200 ;
+#    :latest-date 300 .
 
 # :funerary-stele-tylos 100 - 300 https://commons.wikimedia.org/wiki/File:Stele_funeraria_figurativa,_tardo_periodo_di_tylos,_bahrain,_II-III_secolo_circa.JPG
 
@@ -2770,6 +2799,17 @@
    :art-historical-culture-or-tradition :gandhara ;
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
+
+:paired-figures-funerary-relief-tylos a :group-of-human-figures ;
+   rdfs:label "Paired Figures from Funerary Relief of Tylos" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Stele_funeraria_figurativa,_tardo_periodo_di_tylos,_bahrain,_II-III_secolo_circa.JPG>,
+      <https://en.wikipedia.org/wiki/Tylos> ;
+   :earliest-date 100 ;
+   :latest-date 300 ;
+   :in-modern-country-note "Bahrain" ;
+   :representative-latlong-point (25.983812 50.556783) ;
+   :note "Mapped generically to Bahrain." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stele_funeraria_figurativa,_tardo_periodo_di_tylos,_bahrain,_II-III_secolo_circa.JPG> .
 
 :goddess-of-hayan a :human-figure ;
    rdfs:label "Goddess of Hayan" ;
