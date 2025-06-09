@@ -1068,6 +1068,17 @@
    :note "This particular dōgu does not have its own landing page on Wikipedia or the internet generally. It should." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> .
 
+:petroglyph-warriors-iwellene a :group-of-human-figures ;
+   rdfs:label "Petroglyph Warriors from Iwellene" ;
+   :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-9729> ;
+   :earliest-date -3000 ;
+   :latest-date -1500 ;
+   :in-modern-country-note "Niger" ;
+   :representative-latlong-point (18.169189 8.642401) ; 
+   :art-historical-culture-or-tradition :saharan-rock-art ;
+   :note "Approximate location." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_6/19_10/e0c599ae_5457_4ceb_a629_a4bc00b1e524/mid_NIGNAM0010029.jpg> .
+
 :tel-asmar-temple-figures a :human-figure ;
    rdfs:label "Tel Asmar Temple Figures" ;
    :described-by <https://smarthistory.org/standing-male-worshipper-from-the-square-temple-at-eshnunna-tell-asmar/> ;
