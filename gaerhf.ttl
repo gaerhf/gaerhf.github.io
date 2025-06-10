@@ -1794,6 +1794,14 @@
 
 # -712 calcite and bronze sculpture from circa 712–525 BCE in the Brooklyn Museum. https://www.brooklynmuseum.org/objects/4035
 
+:standing-figure-cadiz a :human-figure ;
+   rdfs:label "Standing Figure from Cadiz" ;
+   :described-by <https://en.wikipedia.org/wiki/Priest_of_Cadiz> ;
+   :approximate-date -750 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (36.535 -6.2975) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sacerdote_de_Cádiz_-_M.A.N._02.jpg> .
+
 :mantiklos-apollo a :human-figure ;
    rdfs:label "Mantiklos Apollo" ;
    :described-by <https://collections.mfa.org/objects/152660> ;
@@ -2016,6 +2024,15 @@
    :representative-latlong-point (29.988889 52.874722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tomb_of_Darius_I_Image_of_Darius_I.jpg> .
 
+:female-figure-guardamar a :human-figure ;
+   rdfs:label "Female Figure from Guardamar" ;
+   :described-by <https://en.wikipedia.org/wiki/Lady_of_Guardamar> ;
+   :earliest-date -400 ;
+   :latest-date -300 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (38.089722 -0.655) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Guardamar,_MARQ.JPG> .
+
 :kingsteignton-figure a :human-figure ;
    rdfs:label "Kingsteignton Figure" ;
    :described-by <https://www.devonheritage.org/Places/Kingsteignton/TheKingsteigntonIdolbyRichardHarris.htm> ;
@@ -2041,6 +2058,15 @@
    :in-modern-country-note "El Salvador" ;
    :representative-latlong-point (13.833882 -88.720227) ;
    :thumbnail-image <https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0003598X25000377/resource/name/S0003598X25000377_figAb.png?pub-status=live> .
+
+:seated-femaale-figure-baza a :human-figure ;
+   rdfs:label "Seated Female Figure from Baza" ;
+   :described-by <https://en.wikipedia.org/wiki/Lady_of_Baza> ;
+   :earliest-date -400 ;
+   :latest-date -300 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (37.483333 -2.766667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Museo_Arqueológico_Nacional_-_1969-68-155-123A_-_Dama_de_Baza_01.jpg> .
 
 :esteros-standing-figure a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/317724> ;
@@ -2150,6 +2176,16 @@
    :representative-latlong-point (18.368989 9.727394) ;
    :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> . 
+
+:standing-female-cerro-santos a :human-figure ;
+   rdfs:label "Standing Female Figure from Cerros de los Santos" ;
+   :described-by <https://en.wikipedia.org/wiki/Lady_of_Cerro_de_los_Santos> , 
+      <https://en.wikipedia.org/wiki/Cerro_de_los_Santos> ;
+   :earliest-date -200 ;
+   :latest-date -100 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (38.733347 -1.269394) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_oferente_del_Cerro_de_los_Santos.jpg> .
 
 :lakshmi-stupa-2-sanchi a :human-figure ;
    rdfs:label "Lakshmi from Stupa 2 at Sanchi" ;
@@ -2326,6 +2362,8 @@
 
 :msecke-zehrovice-head a :human-figure ;
    rdfs:label "Mšecké Žehrovice Head" ;
+   :described-by <https://en.wikipedia.org/wiki/Mšecké_Žehrovice_Head>, 
+      <https://www.worldhistory.org/image/10826/msecke-zehrovice-hero/> ;
    :earliest-date -150 ;
    :latest-date -50 ;
    :in-modern-country-note "Czech Republic" ;
