@@ -960,6 +960,14 @@
    :art-historical-culture-or-tradition :sumerian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_vase_(background_retouched).jpg> .
 
+:statue-min-koptos a :human-figure ;
+   rdfs:label "Statue of Min from Koptos" ;
+   :described-by <https://www.ashmolean.org/collections-online#/item/ash-object-487742> ;
+   :approximate-date -3300 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.995556 32.815833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Predynastic_statue_of_Min_(Ashmolean_Museum,_Oxford).jpg> .
+
 :mask-of-warka a :human-figure ;
    rdfs:label "Mask of Warka" ;
    :described-by <https://en.wikipedia.org/wiki/Warka_mask> ;
@@ -2782,6 +2790,14 @@
    :latest-date 220 ;
    :in-modern-country-note "China" .
 
+:cato-volubulis a :human-figure ;
+   rdfs:label "Portrait of Cato from Volubulis" ;
+   :described-by <https://en.wikipedia.org/wiki/Volubilis#Houses_and_palaces> ;
+   :approximate-date 50 ;
+   :in-modern-country-note "Morrocco" ;
+   :representative-latlong-point (34.071111 -5.553611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cato_Volubilis_bronze_bust.jpg> .
+
 :roman-period-egyptian-funerary-portrait a :human-figure ;
    rdfs:label "Roman Period Egyptian Funerary Portrait" ;
    :described-by <https://www.metmuseum.org/art/collection/search/547951> ;
@@ -2966,6 +2982,15 @@
    :in-modern-country-note "Colombia" ;
    :representative-latlong-point (4.839 -75.631) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Museo_de_América_Quimbaya_treasure_02.jpg> .
+
+:boa-island-two-faced-marker a :human-figure ;
+   rdfs:label "Boa Island Two-Faced Marker" ;
+   :described-by <https://en.wikipedia.org/wiki/Boa_Island#Stone_figures> ;
+   :earliest-date 400 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Northern Ireland" ;
+   :representative-latlong-point (54.516667 -7.833333) ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:JanusFigureBoaIsland.jpg> .
 
 :mayan-wooden-kneeling-figure a :human-figure ;
    rdfs:label "Mayan Wooden Kneeling Figure" ;
@@ -3217,6 +3242,15 @@
    :representative-latlong-point (50.775036 6.082817) ; # Aachen
    :art-historical-culture-or-tradition :carolingian-renaissance ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karolingischer_Buchmaler_um_820_001.jpg> .
+
+:muiredachs-high-cross a :group-of-human-figures ;
+   rdfs:label "Muiredach High Cross" ;
+   :described-by <https://en.wikipedia.org/wiki/Muiredach%27s_High_Cross> ;
+   :earliest-date 800 ;
+   :latest-date 1000 ;
+   :in-modern-country-note "Ireland" ;
+   :representative-latlong-point (53.7775 -6.4175) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monasterboice_(52358533944).jpg> .
 
 :intricately-carved-panel-box a :group-of-human-figures ;
    rdfs:label "Intricately Carved Panel from Box" ;
