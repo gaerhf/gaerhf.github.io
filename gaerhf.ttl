@@ -1979,6 +1979,10 @@
    :art-historical-culture-or-tradition :achaemenid-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Achaemenid_prince%27s_head_2.jpg> . 
 
+# https://en.wikipedia.org/wiki/Pfalzfeld_obelisk
+# https://www.worldhistory.org/image/13484/the-pfalzfeld-pillar/
+# and "The Heidelberg head." https://de.wikipedia.org/wiki/Heidelberger_Kopf
+
 :warrior-of-mogente a :human-figure ;
    rdfs:label "Warrior of Mogente" ;
    :described-by <https://en.wikipedia.org/wiki/Warrior_of_Mogente> ;
