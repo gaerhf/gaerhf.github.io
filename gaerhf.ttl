@@ -1820,6 +1820,15 @@
    :representative-latlong-point (37.103611 36.678611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Victory_stele_of_Esarhaddon.jpg> .
 
+:female-flanked-sphinxes a :human-figure ;
+   rdfs:label "Seated Female Figure Flanked by Sphinxes" ;
+   :described-by <https://en.wikipedia.org/wiki/Lady_of_Galera> ;
+   :approximate-date -650 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (37.743056 -2.551389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Galera_(M.A.N._Madrid)_01.jpg> .
+
+
 :hawtar-athat-statue a :human-figure ;
    rdfs:label "Hawtar'athat Statue" ;
    :described-by <https://www.researchgate.net/figure/The-Hawtarathat-statue-discovered-in-Nashqum-present-day-al-Bayda-end-of-the_fig1_340635269> ;
@@ -2134,14 +2143,14 @@
 
 # -300 - -124 https://en.wikipedia.org/wiki/Roquepertuse
 
-:ai-khanoum-disk a :group-of-human-figures ;
-   rdfs:label "Ai-Khanoum Disk" ;
-   :described-by <https://en.wikipedia.org/wiki/Ai-Khanoum_plaque> ;
-   :earliest-date -200 ;
-   :latest-date -145 ;
-   :in-modern-country-note "Afghanistan" ;
-   :representative-latlong-point (37.164722 69.408611) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AiKhanoumPlateSharp.jpg> .
+:seated-figure-roquepertuse a :human-figure ;
+   rdfs:label "Seated Figure from Roquepertuse" ;
+   :described-by <https://en.wikipedia.org/wiki/Roquepertuse> ;
+   :earliest-date -400 ;
+   :latest-date -200 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.5328 5.2715) ;
+   :wikimedia-commons-image-page <4https://commons.wikimedia.org/wiki/File:Seated_warrior_8270_from_Roquepertuse_-_front_(Marseille,_Mus_d%27arch_med).jpg> .
 
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
@@ -2152,6 +2161,25 @@
    :art-historical-culture-or-tradition :maurya-empire ;
    :representative-latlong-point (25.606366 85.154401) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Patna_Museum_Lohanipur_torso.jpg> .
+
+
+:ai-khanoum-disk a :group-of-human-figures ;
+   rdfs:label "Ai-Khanoum Disk" ;
+   :described-by <https://en.wikipedia.org/wiki/Ai-Khanoum_plaque> ;
+   :earliest-date -200 ;
+   :latest-date -145 ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (37.164722 69.408611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AiKhanoumPlateSharp.jpg> .
+
+:heads-entremont a :group-of-human-figures ;
+   rdfs:label "Group of Heads at Entremont" ;
+   :described-by <https://en.wikipedia.org/wiki/Entremont_(oppidum)#Sculpture> ;
+   :earliest-date -200 ;
+   :latest-date -123 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.552222 5.439167) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Entremont_severed_heads_1-03_(Musée_Granet,_Aix).jpg> .
 
 # -150 - -1 https://en.wikipedia.org/wiki/Gundestrup_cauldron
 
@@ -2195,6 +2223,15 @@
    :in-modern-country-note "India" ;
    :representative-latlong-point (23.48 77.73) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lakshmi_Sanchi_Stupa_2.jpg> .
+
+:relief-figure-bharhut-stupa a :human-figure ;
+   rdfs:label "Relief Figure on Bahrhut Stupa Railing" ;
+   :described-by <https://en.wikipedia.org/wiki/Bharhut_Yavana> ;
+   :earliest-date -150 ;
+   :latest-date -50 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (24.446891 80.846041) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bharhut_Yavana.jpg> .
 
 :funeray-masks-oglakhty a :group-of-human-figures ;
    rdfs:label "Funerary Masks from Oglakhty" ;
@@ -3002,6 +3039,15 @@
    :representative-latlong-point (38.449131 125.508131) ;
    :note "Mapped point is only approximate at large scale." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Man_-_Anak_Tomb_No._3.jpg> .
+
+:mark-garima-2-gospel a :human-figure ;
+   rdfs:label "Mark the Evangelist from the Garima 2 Gospel" ;
+   :described-by <https://en.wikipedia.org/wiki/Garima_Gospels> ;
+   :earliest-date 390 ;
+   :latest-daet 570 ;
+   :in-modern-country-note "Ethiopia" ;
+   :representative-latlong-point (14.161667 38.952778) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Illumination-from-Abba-Garima-gospel.jpg> .
 
 # :terracotta-ganges-and-attendant a :human-figure ;
 #    :described-by <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:GangaTerracottaAhichchhatra.JPG> ;
