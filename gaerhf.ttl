@@ -2393,6 +2393,18 @@
    :representative-latlong-point (40.042167 -82.430111) ;
    :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/shaman-of-newark-color.jpg> .
 
+:pegtymel-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Pegtymel’ Petroglyphs" ;
+   :described-by <https://www.jstor.org/stable/25780681?seq=1> ,
+    <http://dx.doi.org/10.17746/2658-6193.2024.30.0568-0573>  ,
+    <https://www.heritagedaily.com/2021/10/reindeer-petroglyph-discovered-during-mapping-expedition-of-ancient-rock-art/141550>;
+    :earliest-date -200 ;
+    :latest-date 1000 ;
+    :in-modern-country-note "Russia" ;
+    :representative-latlong-point (69.9031 173.8675) ;
+    :note "While the chronology is wide ranging, these petroglyphs do overlap with the GAERHF's chronological scope." ;
+    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:4_Пегтымель_петроглиф_3.jpg> .
+
 :great-altar-pergamon a :group-of-human-figures ;
    rdfs:label "Great Altar at Pergamon" ;
    :earliest-date -170 ;
@@ -2453,17 +2465,15 @@
    :note "Paywalled article. Need better source." ;
    :thumbnail-image <https://fl-i.thgim.com/public/arts-and-culture/heritage/hw0lwe/article32611335.ece/alternates/LANDSCAPE_1200/FL9ARCPtm-Head-Statute-2020-Photo-PAMA-2> .
 
-:pegtymel-petroglyphs a :group-of-human-figures ;
-   rdfs:label "Pegtymel’ Petroglyphs" ;
-   :described-by <https://www.jstor.org/stable/25780681?seq=1> ,
-    <http://dx.doi.org/10.17746/2658-6193.2024.30.0568-0573>  ,
-    <https://www.heritagedaily.com/2021/10/reindeer-petroglyph-discovered-during-mapping-expedition-of-ancient-rock-art/141550>;
-    :earliest-date -200 ;
-    :latest-date 1000 ;
-    :in-modern-country-note "Russia" ;
-    :representative-latlong-point (69.9031 173.8675) ;
-    :note "While the chronology is wide ranging, these petroglyphs do overlap with the GAERHF's chronological scope." ;
-    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:4_Пегтымель_петроглиф_3.jpg> .
+:paried-male-female-figures-nayarit a :group-of-human-figures ;
+   rdfs:label "Paired Male and Female Figures from Nayarit Region" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/319063> ;
+   :earliest-date -100 ;
+   :latest-date 300 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (21.039722 -104.344722) ;
+   :note "Mapped to Ixtlán del Rio archaeological site." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancestor_Pair_MET_DT210536.jpg> .
 
 :terracotta-male-figure-from-kalchayan a :human-figure ;
    rdfs:label "Terracotta Male figure from Kalchayan" ;
@@ -2680,6 +2690,14 @@
    :representative-latlong-point (57.25 18.583333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Snake-witch.JPG> .
 
+:censer-burial-yax-nuun a :human-figure ;
+   rdfs:label "Censer from the Burial of Yax Nuun" ;
+   :described-by <https://en.wikipedia.org/wiki/Tikal#Burials> ;
+   :approximate-date 400 ;
+   :in-modern-country-note "Guatemala" ;
+   :representative-latlong-point (17.221944 -89.623611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Burial_10_vessel.jpg> .
+
 :mankuwar-buddha a :human-figure ;
    rdfs:label "Mankuwar Buddha" ;
    :described-by <https://en.wikipedia.org/wiki/Gupta_art#Sarnath_school> ;
@@ -2798,12 +2816,6 @@
    :earliest-date -110 ;
    :latest-date -90 .
 
-:pancika-and-hariti a :human-figure ;
-   :described-by <https://www.britishmuseum.org/collection/object/A_1950-0726-2> , <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#/media/File:PharroAndArdoxsho.jpg> ;
-   :period-note "Kushan (Pakistan)" ;
-   :earliest-date 100 ;
-   :latest-date 300 .
-
 # https://en.wikipedia.org/wiki/Mississippian_copper_plates
 
 # https://en.wikipedia.org/wiki/Mississippian_stone_statuary
@@ -2894,6 +2906,16 @@
    :art-historical-culture-or-tradition :gandhara ;
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
+
+:pancika-and-hariti a :human-figure ;
+   :described-by <https://www.britishmuseum.org/collection/object/A_1950-0726-2> ,
+   <https://en.wikipedia.org/wiki/Takht-i-Bahi#Works_of_art>  ;
+   :period-note "Kushan (Pakistan)" ;
+   :earliest-date 100 ;
+   :latest-date 300 ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (34.286111 71.946667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PharroAndArdoxsho.jpg> .
 
 :paired-figures-funerary-relief-tylos a :group-of-human-figures ;
    rdfs:label "Paired Figures from Funerary Relief of Tylos" ;
@@ -3368,6 +3390,17 @@
    :in-modern-country-note "Nigeria" ;
    :representative-latlong-point (6.016667 7.016667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Igbo_ukwu_face_pendant.png> .
+
+:huastec-life-death-figure a :human-figure ;
+   rdfs:label "Huastec Life and Death Figure" ;
+   :described-by <https://brooklynmuseum.org/objects/118927> ,
+      <https://smarthistory.org/huastec-life-death-figure/> ;
+   :earliest-date 900 ;
+   :latest-date 1250 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (21.956361 -99.591496) ;
+   :note "Mapped point approximate on basis of findspot description." ;
+   :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/37.2897PA_front_PS11.jpg?width=320&quality=75> .
 
 :banteay-srei-fight-between-sunda-upasunda a :group-of-human-figures ;
    rdfs:label "Banteay Srei - Fight between Sunda and Upasunda" ;
