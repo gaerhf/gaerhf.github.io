@@ -918,6 +918,8 @@
 
 # https://www.metmuseum.org/art/collection/search/547202
 
+# -3800 - -3600 https://www.brooklynmuseum.org/objects/3360
+
 :westray-figurine a :human-figure ;
    rdfs:label "Westray Figurine" ;
    :described-by <https://www.historicenvironment.scot/archives-and-research/archives-and-collections/properties-in-care-collections/object/figurine-3800-bc-2500-bc-neolithic-links-of-noltland-26222>,
@@ -938,6 +940,15 @@
    :representative-latlong-point (25.121757 32.735297) ;
    :art-historical-culture-or-tradition :predynastic-egypt ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/07.447.502_SL1.jpg?width=256&quality=75> .
+
+:predynastic-figurine-nubt a :human-figure ;
+   rdfs:label "Predynastic Female Figurines possibly from Naqada" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/547202> ;
+   :earliest-date -3500 ;
+   :latest-date -3300 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.9 32.716667) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/547202/1218864/main-image> .
 
 :gebel-el-arak-knife a :human-figure ;
    rdfs:label "Gebel el-Arak Knife" ;
@@ -1804,7 +1815,9 @@
 
 :mantiklos-apollo a :human-figure ;
    rdfs:label "Mantiklos Apollo" ;
-   :described-by <https://collections.mfa.org/objects/152660> ;
+   :described-by <https://collections.mfa.org/objects/152660>,
+    <https://en.wikipedia.org/wiki/Mantiklos_%22Apollo%22> ,
+    <https://smarthistory.org/mantiklos-apollo/>  ;
    :earliest-date -700 ;
    :latest-date -675 ;
    :in-modern-country-note "Greece" ;
@@ -2673,6 +2686,16 @@
    :earliest-date 300 ;
    :latest-date 400 .
 
+:standing-warrior-costa-veraguis a :human-figure ;
+   rdfs:label "Standing Warrior of the Veraquis Culture" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/312642> ;
+   :earliest-date 300 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Costa Rica" ;
+   :representative-latlong-point (9.426004 -84.067860) ;
+   :note "No specific findspot.";
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312642/2086067/main-image> .
+
 :tombstone-of-ertola a :human-figure ;
    rdfs:label "Tombstone of Ertola" ;
    :described-by
@@ -2697,6 +2720,16 @@
    :in-modern-country-note "Guatemala" ;
    :representative-latlong-point (17.221944 -89.623611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Burial_10_vessel.jpg> .
+
+:gold-pendant-panama a :human-figure ;
+   rdfs:label "Gold Pendant (Panama)" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/312492> ;
+   :earliest-date 400 ;
+   :lastest-date 1000 ;
+   :in-modern-country-note "Panama" ;
+   :representative-latlong-point (8.325777 -80.197059) ;
+   :note "No specific findspot known" ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312492/1291998/main-image> .
 
 :mankuwar-buddha a :human-figure ;
    rdfs:label "Mankuwar Buddha" ;
