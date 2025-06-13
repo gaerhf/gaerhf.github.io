@@ -526,6 +526,7 @@
    :latest-date -7000 ;
    :in-modern-country-note "Brazil" ;
    :representative-latlong-point (-19.477183 -44.038056) ;
+   :note "It is not clear that this figure is of a human." ;
    :thumbnail-image <https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7dWlsxvV8PM_rgRHYzdTAkKvwDNmNBf8X_L_dRQj0qwAIZHgLPL8zXfSM3GHnuNBJHNZ_B7v1lz-UGxuOK6u0rPlDWyQ-RS4sT_FTXRd6vw_pERBiRwCd5PP7d6e-nMx1lQKoVqS1dEg/s320/55_little_horny_man.jpg> .
 
 :pedra-furada-rock-art a :group-of-human-figures ;
