@@ -3165,6 +3165,7 @@
    :approximate-date 450 ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (28.909529 -82.628481) ;
+   :note "The date given here seems to be close to the consensus. But what is the basis?" ;
    :thumbnail-image <https://www.floridastateparks.org/sites/default/files/media/image/limestone_0.jpg> .
 
 :penjikent-murals a :group-of-human-figures ;
