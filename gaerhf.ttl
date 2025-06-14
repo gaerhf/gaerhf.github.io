@@ -2211,6 +2211,17 @@
    :representative-latlong-point (25.606366 85.154401) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Patna_Museum_Lohanipur_torso.jpg> .
 
+:calcite-alabaster-head-yemen a :human-figure ;
+   rdfs:label "Calcite-Alabaster Headh from Yemen" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_2001-0401-1> ;
+   :earliest-date -300 ;
+   :latest-date -1 ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
+   :in-modern-country "Yemen" ;
+   :representative-latlong-point (13.039552 43.865330) ;
+   :note "Mapped point is generic as findspot not known." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
+
 
 :ai-khanoum-disk a :group-of-human-figures ;
    rdfs:label "Ai-Khanoum Disk" ;
@@ -2321,17 +2332,6 @@
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Laocoön_and_his_sons_group.jpg> .
 
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
-
-:calcite-alabaster-head-yemen a :human-figure ;
-   rdfs:label "Calcite-Alabaster Headh from Yemen" ;
-   :described-by <https://www.britishmuseum.org/collection/object/W_2001-0401-1> ;
-   :earliest-date -300 ;
-   :latest-date -1 ;
-   :art-historical-culture-or-tradition :ancient-arabia ;
-   :in-modern-country "Yemen" ;
-   :representative-latlong-point (13.039552 43.865330) ;
-   :note "Mapped point is generic as findspot not known." ;
-   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
 
 :gudimallam-lingam a :human-figure ;
    :described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
@@ -2519,6 +2519,15 @@
    :representative-latlong-point (21.039722 -104.344722) ;
    :note "Mapped to Ixtlán del Rio archaeological site." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancestor_Pair_MET_DT210536.jpg> .
+
+:sierra-guadalupe-rock-paintings a :group-of-human-figures ;
+   rdfs:label "Sierra de Guadalupe Rock Art" ;
+   :described-by <https://en.wikipedia.org/wiki/Sierra_de_Guadalupe_cave_paintings> ;
+   :earliest-date -100 ;
+   :latest-date 1300 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (27.626963 -113.020427) ;
+   :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Sierra_de_Guadalupe_cave_paintings.jpeg/1600px-Sierra_de_Guadalupe_cave_paintings.jpeg> .
 
 :terracotta-male-figure-from-kalchayan a :human-figure ;
    rdfs:label "Terracotta Male figure from Kalchayan" ;
