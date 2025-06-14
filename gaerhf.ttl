@@ -526,7 +526,7 @@
    :latest-date -7000 ;
    :in-modern-country-note "Brazil" ;
    :representative-latlong-point (-19.477183 -44.038056) ;
-   :note "It is not clear that this figure is of a human." ;
+   :note "It is not clear that this figure represents a human." ;
    :thumbnail-image <https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7dWlsxvV8PM_rgRHYzdTAkKvwDNmNBf8X_L_dRQj0qwAIZHgLPL8zXfSM3GHnuNBJHNZ_B7v1lz-UGxuOK6u0rPlDWyQ-RS4sT_FTXRd6vw_pERBiRwCd5PP7d6e-nMx1lQKoVqS1dEg/s320/55_little_horny_man.jpg> .
 
 :pedra-furada-rock-art a :group-of-human-figures ;
@@ -1343,6 +1343,16 @@
    :representative-latlong-point (-16.4185 126.1028) ;
    :earliest-date -2000 ;
    :latest-date -1800 .
+
+:figurine-jefferson-country a :human-figure ;
+   rdfs:label "Jefferson County Figurines" ;
+   :described-by <https://archeology.uark.edu/artifacts/stone-figurine/> ;
+   :earliest-date -2000 ;
+   :latest-date -700 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (34.262373 -92.025230) ;
+   :note "Findspot is approximate: near Pine Bluff, Arkansas." ;
+   :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2018/07/JeffersonCoFigurine_detail.jpg> .
 
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
