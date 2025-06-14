@@ -142,7 +142,6 @@
    rdfs:label "Kingdom of Nri" ;
    :described-by <https://en.m.wikipedia.org/wiki/Kingdom_of_Nri> .
 
-
 :kofun-period a :culture ;
    rdfs:label "Kofun Period" ;
    :region :japan ;
@@ -466,6 +465,16 @@
    :representative-latlong-point (-17.49145 124.53265) ;
    :note "Location is approximate, as the exact location is not readily available to protect the site." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
+
+:female-figurine-laugerie-basse a :human-figure ;
+   rdfs:label "Female Figurines from Laugeri-Basse" ;
+   :described-by <https://en.wikipedia.org/wiki/Vénus_impudique> ,
+    <https://en.wikipedia.org/wiki/Laugerie-Basse> ;
+   :earliest-date -17000 ;
+   :latest-date -14000 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (44.570278 0.595556) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_of_Impudique_-_1.jpg> .
 
 :qurta-rock-art-figures a :group-of-human-figures ;
    rdfs:label "Qurta Rock Art Figures" ;
@@ -1222,6 +1231,8 @@
    :representative-latlong-point (35.995528 138.158806) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tanabatake_Venus._Middle_Jōmon.JPG> .
 
+# -2400 https://en.wikipedia.org/wiki/Shahdad#Archaeology Bronxe Flag
+
 :mohenjo-daro-female-figurine a :human-figure ;
    rdfs:label "Mohenjo daro Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)> ,
@@ -1371,6 +1382,8 @@
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.033333 34.883333) ; # ll for Yehud
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/d/d6/Thinker_from_Yehud.jpeg?20230912000419> .
+
+# -1750 https://en.wikipedia.org/wiki/Haft_Tepe
 
 :mycenaean-funerary-mask-grave-circle-b a :human-figure ;
    rdfs:label "Mycenaean Gold Mask from Grave Circle B" ;
@@ -1788,6 +1801,14 @@
 # approx -800 https://en.wikipedia.org/wiki/Saba%27a_Stele
 
 # -800 - -700 https://en.wikipedia.org/wiki/Melqart_stele
+
+:gold-cup-hasanlu a :group-of-human-figures ;
+   rdfs:label "Gold Cup from Hasanlu" ;
+   :described-by <https://en.wikipedia.org/wiki/Golden_bowl_of_Hasanlu> ;
+   :approximate-date -800 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (37.004566 45.45825) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hasanlu-gold-cup.jpg> .
 
 :grevensvænge-figurines a :group-of-human-figures ;
    rdfs:label "Grevensvænge figurines" ;
@@ -2715,6 +2736,15 @@
    :earliest-date 350 ;
    :latest-date 450 .
 
+:coronation-ardashir-ii-relief a :group-of-human-figures ;
+   rdfs:label "Coronation of Ardashir II Relief" ;
+   :described-by <https://en.wikipedia.org/wiki/Coronation_of_Ardashir_II> ;
+   :approximate-date 380 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (34.3874 47.1323) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:اهورا_مزدا_-_کرمانشاه.jpg> .
+   
+
 :smiss-stone-figure-snakes a :human-figure ;
    rdfs:label "Carved Stone with Figure Holding Snakes from Smiss" ;
    :described-by <https://en.wikipedia.org/wiki/Snake-witch_stone> ;
@@ -3456,6 +3486,28 @@
    :representative-latlong-point (21.956361 -99.591496) ;
    :note "Mapped point approximate on basis of findspot description." ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/37.2897PA_front_PS11.jpg?width=320&quality=75> .
+
+:great-hunt-panel-nine-mile-canyon a :group-of-human-figures ;
+   rdfs:label "Great Hunt Panel at Nine Mile Canyon" ;
+   :described-by <https://en.wikipedia.org/wiki/Ninemile_Canyon_(Utah)#Archaeology> ;
+   :earliest-date 950 ;
+   :latest-date 1250 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.816659 -110.319498) ;
+   :note "Approximate locatoin" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:HuntSceneNMC.JPG> .
+
+:horned-figures-capitol-reef a :group-of-human-figures ;
+   rdfs:label "" ;
+   :described-by <https://www.nps.gov/places/petroglyph-panel.htm> ,
+    <https://en.wikipedia.org/wiki/Capitol_Reef_National_Park#Native_Americans_and_Mormons> ,
+    <https://www.nps.gov/care/learn/historyculture/fremont-culture-petroglyphs.htm> ;
+   :earliest-date 950 ;
+   :latest-date 1250 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (38.087321 -111.135686) ;
+   :note "Approximate locatoin" ;
+   :thumbnail-image <https://www.nps.gov/common/uploads/cropped_image/primary/07C490B0-C60A-35DD-40E539E66DDF3F6F.jpg?width=400&quality=90&mode=crop> .
 
 :banteay-srei-fight-between-sunda-upasunda a :group-of-human-figures ;
    rdfs:label "Banteay Srei - Fight between Sunda and Upasunda" ;
