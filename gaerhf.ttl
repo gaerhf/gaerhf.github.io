@@ -566,7 +566,7 @@
    :materia-note "Sandstone, obsidian (eyes)" ;
    :representative-latlong-point (37.158333 38.791667) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> . 
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> .
 
 :gobeklitepe-figure-A2 a :human-figure ;
    rdfs:label "Gobeklitepe Male Figure A2" ;
@@ -1282,7 +1282,7 @@
    :in-modern-country-note "Turkmenistan or Neighboring" ;
    :representative-latlong-point (37.30111 64.15531) ;
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_female_MET_DT867.jpg> . 
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_female_MET_DT867.jpg> .
 
 :bmac-standing-male a :human-figure ;
    rdfs:label "BMAC Standing Male" ;
@@ -1820,6 +1820,18 @@
    :art-historical-culture-or-tradition :nordic-bronze-age ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DO-10044-Figurer_Grevensvænge.jpg> .
 
+:tagar-structure-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Figures between Structures at Boyarskaya Pisanitsa" ;
+   :described-by <https://en.wikipedia.org/wiki/Tagar_culture> ,
+      <https://commons.wikimedia.org/wiki/Category:Boyarskaya_Pisanitsa> ,
+      <https://doi.org/10.15184/aqy.2019.233> ;
+   :earliest-date -800 ;
+   :latest-date -100 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (54.2916 91.1884) ;
+   :note "Editorial note: Needs a better landing page and name." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Malaya_Boyarskaya_pisanitsa.JPG> .
+
 :adena-hopewell-pipe a :human-figure ;
    rdfs:label "Adena or Hopewell Pipe" ;
    :described-by <https://www.clevelandart.org/articles/centennial-loan-adena-pipe#> ;
@@ -2022,7 +2034,7 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.935 52.89) ; # ll for Iran
    :art-historical-culture-or-tradition :achaemenid-empire ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Achaemenid_prince%27s_head_2.jpg> . 
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Achaemenid_prince%27s_head_2.jpg> .
 
 # https://en.wikipedia.org/wiki/Pfalzfeld_obelisk
 # https://www.worldhistory.org/image/13484/the-pfalzfeld-pillar/
@@ -2263,7 +2275,7 @@
    :in-modern-country-note "Niger" ;
    :representative-latlong-point (18.368989 9.727394) ;
    :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
-   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> . 
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> .
 
 :standing-female-cerro-santos a :human-figure ;
    rdfs:label "Standing Female Figure from Cerros de los Santos" ;
@@ -2752,7 +2764,6 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (34.3874 47.1323) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:اهورا_مزدا_-_کرمانشاه.jpg> .
-   
 
 :smiss-stone-figure-snakes a :human-figure ;
    rdfs:label "Carved Stone with Figure Holding Snakes from Smiss" ;
@@ -3703,4 +3714,4 @@
    :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :mississippian ;
    :representative-latlong-point (34.125131 -84.807664) ;
-   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .  
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .
