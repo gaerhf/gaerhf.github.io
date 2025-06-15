@@ -1423,6 +1423,17 @@
    :representative-latlong-point (55.683333 14.233333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_carving_Kivik_Sweden.jpg>.
 
+:menhir-ix-filotisa a :human-figure ;
+   rdfs:label "Menhir IX at Filotisa" ;
+   :described-by <https://en.wikipedia.org/wiki/Filitosa> ,
+      <https://commons.wikimedia.org/wiki/Category:Filitosa> ,
+      <https://filitosa.fr/en/> ;
+   :approximate-date -1500 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (41.747222 8.871389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Filitosa_IX_Blejuez_2003.jpg> .
+
+
 :paired-petroglyphs-valcamonica a :group-of-human-figures ;
    rdfs:label "Paired Petroglyphs from Valcamonica" ;
    :described-by <https://en.wikipedia.org/wiki/Rock_Drawings_in_Valcamonica> ;
@@ -2093,6 +2104,15 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.988889 52.874722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tomb_of_Darius_I_Image_of_Darius_I.jpg> .
+
+:anthropoid-sarcophagus-female-cadiz a :human-figure ;
+   rdfs:label "Anthropoid Sarcophagus in Female Form from Cadiz" ;
+   :described-by <https://en.wikipedia.org/wiki/Lady_of_Cádiz> ;
+   :approximate-date -470 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (36.5359 -6.29755) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sarcófago_femenino_(21887254049).jpg> .
+   
 
 :female-figure-guardamar a :human-figure ;
    rdfs:label "Female Figure from Guardamar" ;
@@ -2823,6 +2843,18 @@
    :period-note "Silla Kingdom (Korea)" ;
    :earliest-date 500 ;
    :latest-date 500 .
+
+:balbal-burana-tower a :human-figure ;
+   rdfs:label "Stone Balbal near Burana Tower" ;
+   :described-by <https://en.wikipedia.org/wiki/Sculpture_of_Mongolia#Medieval_sculpture> ,
+      <https://en.wikipedia.org/wiki/Kurgan_stelae> ,
+      <https://en.wikipedia.org/wiki/Burana_Tower> ;
+   :earliest-date 500 ;
+   :latest-date 700 ;
+   :note "There is no specific landing page for this figure. What is basis for date?" ;
+   :in-modern-country-note "Kyrgyzstan" ;
+   :representative-latlong-point (42.746944 75.248611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balbal.jpg> .
 
 :bamiyan-buddhas a :group-of-human-figures ;
    rdfs:label "Bamiyan Buddhas" ;
