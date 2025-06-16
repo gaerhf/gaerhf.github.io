@@ -2779,6 +2779,16 @@
    :note "No specific findspot.";
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312642/2086067/main-image> .
 
+:man-carrying-man-barriles a :group-of-human-figures ;
+   rdfs:label "Man carrying another man from Barriles" ;
+   :described-by <https://en.wikipedia.org/wiki/Barriles#Chronology> ;
+   :earliest-date 300 ;
+   :latest-date 900 ;
+   :in-modern-country-note "Panama" ;
+   :representative-latlong-point (8.8 -82.7) ;
+   :note "The image is of a replica on site. And I am not sure of the chronology of this and the associated statues." ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Barriles#/media/File:Sitio_Barriles_Statue.png> .
+
 :tombstone-of-ertola a :human-figure ;
    rdfs:label "Tombstone of Ertola" ;
    :described-by
