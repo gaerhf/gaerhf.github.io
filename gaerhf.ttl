@@ -1028,8 +1028,8 @@
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(musée_fenaille,_rodez)_01.jpg> .
 
-:two-figures-animals-al-ain a :group-of-human-figures ;
-   rdfs:label "Two figures flanked by Animals from Al Ain" ;
+:two-figures-oryxes-al-ain a :group-of-human-figures ;
+   rdfs:label "Two figures flanked by Oryxes from Al Ain" ;
    :described-by <https://de.wikivoyage.org/wiki/Al-Ain> ,
       <https://en.wikipedia.org/wiki/Hili_Archaeological_Park> ,
       <https://web.archive.org/web/20091203154509/http://www.aam.gov.ae/related_sites/hili_grand_tomb.htm> ;
