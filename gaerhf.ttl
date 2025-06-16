@@ -1028,6 +1028,16 @@
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(musée_fenaille,_rodez)_01.jpg> .
 
+:two-figures-animals-al-ain a :group-of-human-figures ;
+   rdfs:label "Two figures flanked by Animals from Al Ain" ;
+   :described-by <https://de.wikivoyage.org/wiki/Al-Ain> ,
+      <https://en.wikipedia.org/wiki/Hili_Archaeological_Park> ,
+      <https://web.archive.org/web/20091203154509/http://www.aam.gov.ae/related_sites/hili_grand_tomb.htm> ;
+   :approximate-date -2500 ;
+   :in-modern-country-note "United Arab Emirates" ;
+   :note "The ‘Grand Tomb’ is reconstructed but I don't think the relief is a modern creation." ;
+   :representative-latlong-point (24.291689 55.793066) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Al-ain-rundgrab.jpg> .
 
 :narmer-palette a :human-figure ;
    rdfs:label "Narmer Palette" ;
