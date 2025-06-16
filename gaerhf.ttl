@@ -1366,7 +1366,7 @@
    :latest-date -1800 .
 
 :figurine-jefferson-country a :human-figure ;
-   rdfs:label "Jefferson County Figurines" ;
+   rdfs:label "Jefferson County Poverty-Point Culture Figurine" ;
    :described-by <https://archeology.uark.edu/artifacts/stone-figurine/> ;
    :earliest-date -2000 ;
    :latest-date -700 ;
