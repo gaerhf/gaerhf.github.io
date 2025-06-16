@@ -3461,6 +3461,14 @@
    :art-historical-culture-or-tradition :tang-dynasty ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_View_from_below.jpg> .
 
+:uaxaclajuun-ub-aah-k-awiil-stela-h-copan a :human-figure ;
+   rdfs:label "Uaxaclajuun Ub'aah K'awiil on Stela H at Copan" ;
+   :described-by <https://en.wikipedia.org/wiki/Copán#Monuments> ;
+   :approximate-date 720 ;
+   :in-modern-country-note "Honduras" ;
+   :representative-latlong-point (14.8375 -89.1425) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Copan_(3831024263).jpg> .
+
 :panel-borobudu-hidden-foot a :group-of-human-figures ;
    rdfs:label "Panel from from Borobudur ‘Hidden Foot’" ;
    :described-by <https://en.wikipedia.org/wiki/Borobudur#Reliefs> ;
@@ -3508,6 +3516,14 @@
    :in-modern-country-note "Ireland" ;
    :representative-latlong-point (53.7775 -6.4175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monasterboice_(52358533944).jpg> .
+
+:altar-13-caracol a :group-of-human-figures ;
+   rdfs:label "Altar 13 at Caracol" ;
+   :described-by <https://en.wikipedia.org/wiki/Caracol#Altar_13> ;
+   :date 820 ;
+   :in-modern-country-note "Belize" ;
+   :representative-latlong-point (16.763889 -89.1175) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/Category:Altar_13_of_Caracol#/media/File:Altar_13_Mesoamerican_Gallery.JPG> .
 
 :intricately-carved-panel-box a :group-of-human-figures ;
    rdfs:label "Intricately Carved Panel from Box" ;
