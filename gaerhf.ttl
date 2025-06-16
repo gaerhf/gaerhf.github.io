@@ -3451,7 +3451,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Huari_-_Head_Pot_with_Painted_Design_-_Walters_482849_-_Three_Quarter_Right_(cropped).jpg> .
 
 :partially-dressed-male-figure-jaina a :human-figure ;
-   rdfs:label "Paetially Dressed Male Figure from Jaina Island" ;
+   rdfs:label "Partially Dressed Male Figure from Jaina Island" ;
    :described-by <https://en.wikipedia.org/wiki/Jaina_Island> ;
    :earliest-date 650 ;
    :latest-date 800 ;
