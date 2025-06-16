@@ -3450,6 +3450,16 @@
    :art-historical-culture-or-tradition :wari-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Huari_-_Head_Pot_with_Painted_Design_-_Walters_482849_-_Three_Quarter_Right_(cropped).jpg> .
 
+:partially-dressed-male-figure-jaina a :human-figure ;
+   rdfs:label "Paetially Dressed Male Figure from Jaina Island" ;
+   :described-by <https://en.wikipedia.org/wiki/Jaina_Island> ;
+   :earliest-date 650 ;
+   :latest-date 800 ;
+   :in-modern-country-note "Mexixo" ;
+   :representative-latlong-point (20.208333 -90.485833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jaina_Island_type_figure,_Art_Institute.jpg> .
+
+
 :mask-of-k-inich-janaab-pakal a :human-figure ;
    rdfs:label "Mask of K'inich Janaab' Pakal" ;
    :described-by <https://en.wikipedia.org/wiki/Jade_mask_of_Pakal> ;
