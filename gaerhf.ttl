@@ -3397,6 +3397,17 @@
    :note "Dispersed on art market after discovery. Said to be from Anyang." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anyang_funerary_bed,_Museum_of_Fine_Arts,_Boston,_1.jpg> .
 
+:el-peru-waka-burial-39-funerary-ritual-scene a :group-of-human-figures ;
+   rdfs:label "El Perú-Waka Burial 39 Funerary Ritual Scence" ;
+   :described-by <https://unframed.lacma.org/2017/09/21/archaeology-el-%c3%ba-waka%e2%80%99-maya-ritual-resurrection-scene-broader-perspective> ,
+   <https://en.wikipedia.org/wiki/El_Perú_(Maya_site)#23_Ceramic_Figurines> ,
+   <https://vimeo.com/223731688> ;
+   :earliest-date 600 ;
+   :latest-date 650 ;
+   :in-modern-country-note "Guatemala" ;
+   :representative-latlong-point (17.2783 -90.3806) ;
+   :thumbnail-image <https://unframed.lacma.org/sites/default/files/attachments/AncientBodies_Grouping1.png> .
+
 :fondukistan-monastery-divintity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
    :described-by <https://www.guimet.fr/en/our-collections/afghanistan-pakistan/divinity-seating-royal-ease-position>,
