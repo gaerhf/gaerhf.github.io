@@ -3527,6 +3527,15 @@
    :representative-latlong-point (53.7775 -6.4175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monasterboice_(52358533944).jpg> .
 
+:standing-xipe-totec-tazumal a :human-figure ;
+   rdfs:label "Standing Figure of Xipe Totec from Tazumal" ;
+   :described-by <https://en.wikipedia.org/wiki/Tazumal#Sculpture> ;
+   :earliest-date 800 ;
+   :latest-date 1200 ;
+   :in-modern-country-note "El Salvador" ;
+   :representative-latlong-point (13.979444 -89.674167) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:ES_Tazumal_06_2011_Xipe_Totec_2292.jpg> .
+
 :altar-13-caracol a :group-of-human-figures ;
    rdfs:label "Altar 13 at Caracol" ;
    :described-by <https://en.wikipedia.org/wiki/Caracol#Altar_13> ;
