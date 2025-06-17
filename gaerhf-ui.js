@@ -125,6 +125,7 @@ async function buildFiguresInfoDict($rdf) {
     const noteProp = $rdf.sym('urn:gaerhf:id:note');
     const cultureProp = $rdf.sym('urn:gaerhf:id:art-historical-culture-or-tradition');
     const inModernCountryProp = $rdf.sym('urn:gaerhf:id:in-modern-country-note');
+    const materialNoteProp = $rdf.sym('urn:gaerhf:id:material-note');
     const wikipediaImagePageProp = $rdf.sym('urn:gaerhf:id:wikimedia-commons-image-page');
     const thumbnailImageProp = $rdf.sym('urn:gaerhf:id:thumbnail-image'); // New property
     const latLongProp = $rdf.sym('urn:gaerhf:id:representative-latlong-point');
@@ -160,6 +161,7 @@ async function buildFiguresInfoDict($rdf) {
                 let cultureDescribedBy = null;
 
                 const inModernCountry = tp.any(subject, inModernCountryProp);
+                const materialNote = tp.any(subject, materialNoteProp);
                 const wikipediaImagePage = tp.anyValue(subject, wikipediaImagePageProp);
                 const describedBy = tp.each(subject, describedByProp).map(val => val.value);
                 const thumbnailURL = tp.anyValue(subject, thumbnailImageProp); // Get explicit thumbnail
@@ -191,6 +193,7 @@ async function buildFiguresInfoDict($rdf) {
                     culture: cultureShortId,
                     cultureLabel: cultureLabel,
                     cultureDescribedBy: cultureDescribedBy,
+                    materialNote : materialNote ,
                     inModernCountry: inModernCountry,
                     wikipediaImagePage: wikipediaImagePage,
                     thumbnailURL: thumbnailURL,
@@ -301,10 +304,18 @@ async function renderFiguresAsList(figuresArray) {
 
         if (figure.cultureLabel || figure.culture) {
             const cultureDiv = document.createElement('div');
-            cultureDiv.classList.add('country-info');
+            cultureDiv.classList.add('culture-info');
             cultureDiv.style.fontSize = '0.8em';
             cultureDiv.textContent = `${figure.cultureLabel || figure.culture}`;
             textContainer.appendChild(cultureDiv);
+        }
+
+        if (figure.materialNote) {
+            const materialDiv = document.createElement('div');
+            materialDiv.classList.add('material-info');
+            materialDiv.style.fontSize = '0.8em';
+            materialDiv.textContent = `${figure.materialNote}`;
+            textContainer.appendChild(materialDiv);
         }
 
         if (figure.inModernCountry) {
@@ -667,19 +678,25 @@ async function showFigureDetails(figureId) {
             detailInfo.innerHTML += `<p><strong>Modern Country:</strong> ${figure.inModernCountry}</p>`;
         }
 
+        if (figure.materialNote) {
+            detailInfo.innerHTML += `<p><strong>Material:</strong> ${figure.materialNote}</p>`;
+        }
+
         if (figure.date !== null) {
             detailInfo.innerHTML += `<p><strong>Date:</strong> ${formatDateForDisplay(figure.date)}</p>`;
         }
         if (figure.approximateDate !== null) {
             detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
         }
-        if (figure.earliestDate !== null) {
-            detailInfo.innerHTML += `<p><strong>Earliest Date:</strong> ${formatDateForDisplay(figure.earliestDate)}</p>`;
-        }
 
         if (figure.latestDate !== null) {
-            detailInfo.innerHTML += `<p><strong>Latest Date:</strong> ${formatDateForDisplay(figure.latestDate)}</p>`;
+            append_to_date = ` to ${formatDateForDisplay(figure.latestDate)}`
         }
+
+        if (figure.earliestDate !== null) {
+            detailInfo.innerHTML += `<p><strong>Date Range:</strong> ${formatDateForDisplay(figure.earliestDate)}${append_to_date}</p>`;
+        }
+
 
         if (figure.describedBy && figure.describedBy.length > 0) {
             const morePara = document.createElement('p');

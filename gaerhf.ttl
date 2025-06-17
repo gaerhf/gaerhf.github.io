@@ -2073,7 +2073,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerrero_de_Mogente.jpg> .
 
 :lihyanite-colossal-statue a :human-figure ;
-   rdfs:label "Lihyanite Colossal Statute" ;
+   rdfs:label "Lihyanite Colossal Statue" ;
    :described-by <https://www.afalula.com/en/a-monumental-lihyanite-statue-from-saudi-arabia-deposited-from-the-royal-commission-for-alula-rcu-to-the-musee-du-louvre/>,
    <https://en.wikipedia.org/wiki/Lihyan> ;
    :earliest-date -500 ;
@@ -2697,7 +2697,7 @@
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2020/04/No-BG-Kimbell-Buddha-GA-1.jpg> .
 
 :bronze-statue-dhamar-ali-yahbur a :human-figure ;
-   rdfs:label "Bronze Statute of Dhamarʿalī Yuhabirr" ;
+   rdfs:label "Bronze Statue of Dhamarʿalī Yuhabirr" ;
    :desribed-by <https://en.wikipedia.org/wiki/Dhamar_Ali_Yahbur> ;
    :approximate-date 150 ;
    :art-historical-culture-or-tradition :ancient-arabia ;
@@ -3037,6 +3037,17 @@
    :in-modern-country-note "Morrocco" ;
    :representative-latlong-point (34.071111 -5.553611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cato_Volubilis_bronze_bust.jpg> .
+
+:parthian-standing-figure-shami a :human-figure ;
+   rdfs:label "Parthian Standing Figure from Shami" ;
+   :described-by <https://en.wikipedia.org/wiki/Shami_statue> ,
+      <https://www.iranicaonline.org/articles/shami-statue/> ;
+   :earliest-date 50 ;
+   :latest-date 150 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (32.326389 48.449722) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Parthian_Iran_Museum.jpg> .
 
 :roman-period-egyptian-funerary-portrait a :human-figure ;
    rdfs:label "Roman Period Egyptian Funerary Portrait" ;
