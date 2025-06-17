@@ -2329,6 +2329,16 @@
    :representative-latlong-point (38.733347 -1.269394) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_oferente_del_Cerro_de_los_Santos.jpg> .
 
+:human-face-petroglyphs-qajartalik a :group-of-human-figures ;
+   rdfs:label "Human Face Petroglyphs at Qajartalik" ;
+   :described-by <https://en.wikipedia.org/wiki/Qajartalik#Site> ;
+   :culture :dorset ;
+   :earliest-date -200 ;
+   :latest-date 1000 ;
+   :in-modern-country-note "Canada" ;
+   :representative-latlong-point (61.331574 -71.499644) ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:An_example_of_petroglyphs_at_Qajartalik.jpg> .
+
 :lakshmi-stupa-2-sanchi a :human-figure ;
    rdfs:label "Lakshmi from Stupa 2 at Sanchi" ;
    :described-by <https://en.wikipedia.org/wiki/Sanchi_Stupa_No._2#Early_period_(circa_115_BCE)> ;
