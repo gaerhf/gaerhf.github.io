@@ -2211,6 +2211,8 @@
    :art-historical-culture-or-tradition :iberian-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Escultura_ibérica_%22Dama_de_Elche%22._Museo_Arqueológico_Nacional_(España)._Spain.jpg> .
 
+# -300 -- https://commons.wikimedia.org/wiki/File:Majiayuan_tomb_figurines.jpg
+
 :didarganj-yakshi a :human-figure ;
    rdfs:label "Didarganj Yakshi" ;
    :described-by <https://en.wikipedia.org/wiki/Didarganj_Yakshi> ,
@@ -3158,6 +3160,9 @@
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (34.551389 38.268056) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2017_1/9_14/70d4cad4_283e_4484_9eb1_a6f600efbc02/mid_WCO24972_a.jpg> .
+
+# 200 - 400 https://en.wikipedia.org/wiki/Miran_(Xinjiang)
+# https://en.wikipedia.org/wiki/Loulan_Kingdom
 
 :kushan-plaque-with-two-figures a :group-of-human-figures ;
    rdfs:label "Kushan Plaque with Two Figures" ;
