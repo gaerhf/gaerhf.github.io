@@ -616,7 +616,7 @@
    <https://doi.org/10.1017/S0003598X00050237> ;
    :earliest-date -8000 ;
    :latest-date -7000 ;
-   :material-note "Bone" ;
+   :material-note "Rib bone, likely from an auroch." ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.822300 41.461109) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -629,6 +629,7 @@
    :described-by <https://en.wikipedia.org/wiki/Ayn_Ghazal_statues> ;
    :earliest-date -7200 ;
    :latest-date -6250 ;
+   :material-note "Limestone plaster and reed" ;
    :in-modern-country-note "Jordan" ;
    :representative-latlong-point (31.988 35.976) ; 
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -638,13 +639,13 @@
 
 :ppnb-stone-mask a :human-figure ;
    rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
+   :material-note "Stone" ;
    :in-modern-country-note "West Bank, Palestinian Territories" ;
    :representative-latlong-point (31.528611 35.096944) ;
    :earliest-date -7500 ;
    :latest-date -6500 ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> .
-
 
 # link to this from somewhere https://smarthistory.org/running-horned-woman-tassili-najjer-algeria-2/
 :round-head-figures-of-tassili-n-ajjer a :group-of-human-figures ;
@@ -673,6 +674,7 @@
     <https://en.wikipedia.org/wiki/Tell_Aswad#Culture> ,
     <https://youtu.be/taoczmLPC6U> ;
     :approximate-date -7500 ;
+    :material-note "Human skull modeled with lime plaster, paint " ;
     :in-modern-country-note "Syria" ;
     :representative-latlong-point (33.4 36.55) ;
     :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PPNB_Plastered_Skulls_from_the_Levant.jpg> .
@@ -692,6 +694,7 @@
    :described-by <https://www.antiquities.org.il/t/item_en.aspx?CurrentPageKey=126&q=jericho>,
    <https://en.wikipedia.org/wiki/Pre-Pottery_Neolithic_B>;
    :approximate-date -7000 ;
+   :material-note "Plaster, eyes made from shells, paint" ;
    :in-modern-country-note "West Bank, Palestinian Territories" ;
    :representative-latlong-point (31.856111 35.46) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jericho_Statue.png> ;
@@ -702,6 +705,7 @@
    :described-by <https://www.imj.org.il/en/collections/197936-0> ;
    :earliest-date -7000 ;
    :latest-date -6000 ;
+   :material-note "Limestone, paint, asphalt" ;
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (31.1392 35.2939) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
@@ -711,6 +715,7 @@
    :described-by <https://doi.org/10.1016/j.ara.2025.100611> ;
    :earliest-date -6200 ;
    :latest-date -6000 ;
+   :material-note "Stone" ;
    :in-modern-country-note "Azerbaijan" ;
    :representative-latlong-point (41.148056 45.241111) ;
    :note "From the linked publication, “The supposed head is decorated with several vertical lines from the top, likely representing hair.”" ;
@@ -720,6 +725,7 @@
    rdfs:label "Catalhoyuk Seated Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Catalhoyuk> ;
    :approximate-date -6000 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.666667 32.828056) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -752,6 +758,7 @@
    :described-by <https://en.wikipedia.org/wiki/Neolithic_Greece#Middle_Neolithic_(MN)_5800–5300_BC> ;
    :earliest-date -5800 ;
    :latest-date -5300 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (39.357 22.833) ;
    :art-historical-culture-or-tradition :neolithic-greece ;
@@ -762,6 +769,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/327066> ;
    :earliest-date -5600 ;
    :latest-date -5000 ;
+   :material-note "Clay" ;
    :in-modern-country-note "Syria and Neighboring" ;
    :art-historical-culture-or-tradition :halaf-culture ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327066/711765/main-image> .
@@ -1374,6 +1382,15 @@
    :representative-latlong-point (34.262373 -92.025230) ;
    :note "Findspot is approximate: near Pine Bluff, Arkansas." ;
    :thumbnail-image <https://archeology.uark.edu/wp-content/uploads/2018/07/JeffersonCoFigurine_detail.jpg> .
+
+:buckhorn-draw-pictographs a :group-of-human-figures ;
+   rdfs:label "Buckhorn Draw Pictographs" ;
+   :described-by <https://en.wikipedia.org/wiki/Buckhorn_Draw_Pictograph_Panel> ;
+   :earliest-date -2000 ;
+   :latest-date 500 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.123611 -110.693611) ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Buckhorn_Draw_Pictograph_Panel#/media/File:Buckhorn_02_2008.JPG> .
 
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
@@ -2177,7 +2194,7 @@
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
 
 :hermes-infant-dionysos a :group-of-human-figures ;
-   rdfs:label "Hermes with Infact Dionysos" ;
+   rdfs:label "Hermes with Infant Dionysos" ;
    :described-by <https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus> ;
    :earliest-date -375 ;
    :latest-date 100 ;
@@ -3640,6 +3657,18 @@
    :representative-latlong-point (21.956361 -99.591496) ;
    :note "Mapped point approximate on basis of findspot description." ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/37.2897PA_front_PS11.jpg?width=320&quality=75> .
+
+:figures-petroglyph-national-park-ontario a :group-of-human-figures ;
+   rdfs:label "Figures at Petroglyph Park Ontario" ;
+   :described-by <> ,
+      <https://en.wikipedia.org/wiki/Petroglyphs_Provincial_Park> ,
+      <https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=487> ;
+   :earliest-date 900 ;
+   :latest-date 1400 ;
+   :in-modern-country-note "Canada" ;
+   :representative-latlong-point (44.615225 -78.04076) ;
+   :thumbnail-image <https://www.pc.gc.ca/apps/dfhd/Resources/Images/Image.aspx?id=83668> .
+   
 
 :great-hunt-panel-nine-mile-canyon a :group-of-human-figures ;
    rdfs:label "Great Hunt Panel at Nine Mile Canyon" ;
