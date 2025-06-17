@@ -1628,7 +1628,8 @@
    rdfs:label "Lapita Sherd with Face" ;
    :described-by <https://smarthistory.org/lapita/>,
     <https://doi.org/10.1080/15564894.2012.726941>,
-    <https://www.jstor.org/stable/j.ctt24h9sg.17> ;
+    <https://www.jstor.org/stable/j.ctt24h9sg.17> ,
+    <https://archaeology.org/issues/november-december-2013/collection/lapita-tahiti-tatau-oceania-captain-cook/ancient-tattoos/> ;
    :approximate-date -1000 ;
    :in-modern-country-note "Solomon Islands" ;
    :art-historical-culture-or-tradition :lapita-culture ;
@@ -3164,6 +3165,15 @@
 # 200 - 400 https://en.wikipedia.org/wiki/Miran_(Xinjiang)
 # https://en.wikipedia.org/wiki/Loulan_Kingdom
 
+:buddha-disciples-miran a :group-of-human-figures ;
+   rdfs:label "Buddha with Disciples from Miran" ;
+   :described-by <https://en.wikipedia.org/wiki/Miran_(Xinjiang)#History> ;
+   :earliest-date 200 ;
+   :latest-date 400 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (39.234167 88.939444) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_with_Six_Disciples.png> .
+
 :kushan-plaque-with-two-figures a :group-of-human-figures ;
    rdfs:label "Kushan Plaque with Two Figures" ;
    :described-by <https://www.metmuseum.org/art/collection/search/327830> ;
@@ -3569,6 +3579,16 @@
    :in-modern-country-note "Belize" ;
    :representative-latlong-point (16.763889 -89.1175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/Category:Altar_13_of_Caracol#/media/File:Altar_13_Mesoamerican_Gallery.JPG> .
+
+:bowl--figure-vessel a :human-figure ;
+   rdfs:label "Bowl with Figure holding Vessel" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/449495> , 
+   <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> ;
+   :earliest-date 900 ;
+   :lastest-date 1000 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (36.206111 58.793333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> .
 
 :intricately-carved-panel-box a :group-of-human-figures ;
    rdfs:label "Intricately Carved Panel from Box" ;
