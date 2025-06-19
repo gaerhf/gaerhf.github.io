@@ -1525,6 +1525,16 @@
    :representative-latlong-point (19.5 -99.25) ; # Tlatilco, Mexico
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Acróbata_de_Tlatilco.JPG> .
 
+:akhenaten-nefertiti a :group-of-human-figures ;
+   rdfs:label "Statue of Akhenaten and Nefertiti" ;
+   :described-by <https://es.wikipedia.org/wiki/Akenatón_y_Nefertiti> , 
+      <https://egypt-museum.com/statue-of-akhenaten-and-nefertiti/> ;
+   :earliest-date -1352 ;
+   :latest-date -1335 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (27.661667 30.905556) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Akhenaton_et_Nefertiti_-_Musée_du_Louvre_Antiquités_égyptiennes_E_15593_;_E_22746.jpg> .
+
 :bust-of-nefertiti a :human-figure ;
    rdfs:label "Bust of Nefertiti" ;
    :art-historical-culture-or-tradition :pharaonic-egypt ;
@@ -2144,6 +2154,17 @@
    :representative-latlong-point (38.089722 -0.655) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Guardamar,_MARQ.JPG> .
 
+:condorhuasi-alamito-stone-mask a :human-figure ;
+   rdfs:label "Condorhuasi-Alamito Stone Mask" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/708743>,
+   <https://www.metmuseum.org/essays/stone-masks-and-figurines-from-northwest-argentina> ;
+   :earliest-date -400 ;
+   :latest-date 500 ;
+   :in-modern-country-note "Argentina" ;
+   :representative-latlong-point (-27.978864 -66.543650) ;
+   :note "Specific findspot not known." ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/708743/1696927/main-image> .  
+
 :kingsteignton-figure a :human-figure ;
    rdfs:label "Kingsteignton Figure" ;
    :described-by <https://www.devonheritage.org/Places/Kingsteignton/TheKingsteigntonIdolbyRichardHarris.htm> ;
@@ -2328,16 +2349,6 @@
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (38.733347 -1.269394) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_oferente_del_Cerro_de_los_Santos.jpg> .
-
-:human-face-petroglyphs-qajartalik a :group-of-human-figures ;
-   rdfs:label "Human Face Petroglyphs at Qajartalik" ;
-   :described-by <https://en.wikipedia.org/wiki/Qajartalik#Site> ;
-   :culture :dorset ;
-   :earliest-date -200 ;
-   :latest-date 1000 ;
-   :in-modern-country-note "Canada" ;
-   :representative-latlong-point (61.331574 -71.499644) ;
-   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:An_example_of_petroglyphs_at_Qajartalik.jpg> .
 
 :lakshmi-stupa-2-sanchi a :human-figure ;
    rdfs:label "Lakshmi from Stupa 2 at Sanchi" ;
@@ -2964,9 +2975,18 @@
    :earliest-date -200 ;
    :latest-date 100 ;
    :in-modern-country-note "United States" ;
-   :representative-latlong-point (65.639361 -167.071716) ;
+   :representative-latlong-point (65.639361 -167.05) ;
    :note "Specific findspot not known." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/717575/1591782/restricted> .
+
+:old-bering-sea-standing-figure a :human-figure ;
+   rdfs:label "Old Bering Sea Standing Figure" ;
+   :earliest-date -200 ;
+   :latest-date 100 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (65.65 -167.5) ;
+   :note "Specific findspot not known." ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/316642/678217/main-image> .
 
 :old-bering-sea-figure a :human-figure ;
    rdfs:label "Old Bearing Sea Figure" ;
@@ -3618,6 +3638,7 @@
    :in-modern-country-note "El Salvador" ;
    :representative-latlong-point (13.979444 -89.674167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:ES_Tazumal_06_2011_Xipe_Totec_2292.jpg> .
+
 
 :altar-13-caracol a :group-of-human-figures ;
    rdfs:label "Altar 13 at Caracol" ;

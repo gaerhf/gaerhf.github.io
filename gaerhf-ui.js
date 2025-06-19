@@ -53,7 +53,6 @@ async function getWikimediaImageUrl(pageUrl, width = 200) {
     }
 }
 
-
 // Sorting and Filtering functions
 function filterFiguresByDateRange(startYear, endYear) {
 
@@ -208,7 +207,6 @@ async function buildFiguresInfoDict($rdf) {
     }
 }
 
-
 // Filter figures based on the selected date range
 function filterFiguresByDateRange(startYear, endYear) {
     if (!figuresDict || Object.keys(figuresDict).length === 0) {
@@ -264,12 +262,15 @@ async function renderFiguresAsList(figuresArray) {
         }
 
         if (thumbnailUrl) {
-            const thumbnail = document.createElement('img');
-            thumbnail.src = thumbnailUrl;
-            thumbnail.style.width = '50px';
-            thumbnail.style.height = 'auto';
-            thumbnail.style.marginRight = '10px';
-            figureItem.appendChild(thumbnail);
+            const thumbnailImg = document.createElement('img');
+            thumbnailImg.src = thumbnailUrl;
+            thumbnailImg.style.width = '50px';
+            thumbnailImg.style.height = 'auto';
+            thumbnailImg.style.marginRight = '10px';
+
+            figureItem.appendChild(thumbnailImg);
+
+
         }
 
         const textContainer = document.createElement('div');
@@ -349,7 +350,6 @@ async function renderFiguresAsList(figuresArray) {
 const LOG_SCALE_THRESHOLD = -8500; // Dates before this will be compressed logarithmically
 const LOG_SCALE_FACTOR = 4;         // Higher = more compression for early dates
 const LOG_REGION_PROPORTION = 0.2;  // 0.4 = 40% of width for log region, adjust as needed
-
 
 function timelineScale(date, minDate, maxDate) {
     // If all dates are after threshold, use linear only
@@ -651,10 +651,18 @@ async function showFigureDetails(figureId) {
         }
 
         if (detailImageUrl) {
-            const thumbnail = document.createElement('img');
-            thumbnail.src = detailImageUrl;
-            thumbnail.classList.add('detail-image-style');
-            detailImageDiv.appendChild(thumbnail);
+            const detailImg = document.createElement('img');
+            detailImg.src = detailImageUrl;
+            detailImg.classList.add('detail-image-style');
+
+            detailA = document.createElement('a');
+            detailA.href = `https://lens.google.com/uploadbyurl?url=${detailImageUrl}` ;
+            detailA.appendChild(detailImg)
+            detailA.setAttribute('title', "Click for Google Image Search")
+
+            detailImageDiv.appendChild(detailA);
+
+
         }
 
         if (figure.cultureLabel && figure.cultureDescribedBy) {
@@ -696,7 +704,6 @@ async function showFigureDetails(figureId) {
         if (figure.earliestDate !== null) {
             detailInfo.innerHTML += `<p><strong>Date Range:</strong> ${formatDateForDisplay(figure.earliestDate)}${append_to_date}</p>`;
         }
-
 
         if (figure.describedBy && figure.describedBy.length > 0) {
             const morePara = document.createElement('p');
@@ -808,7 +815,6 @@ async function loadAndDisplayFigures($rdf) {
     }
 }
 
-
 // Initialization sequence
 //const $rdf = require('rdflib'); // Ensure rdflib is available
 // Initialize the RDF store
@@ -839,7 +845,6 @@ async function initializeStore($rdf) {
     }
     loadAndDisplayFigures($rdf);
 })();
-
 
 // Tab functionality for the UI
 // Ensure the DOM is fully loaded before attaching event listeners
@@ -1068,6 +1073,4 @@ function renderMapScaleBar(minDate, maxDate) {
         bar.appendChild(label);
     });
 }
-
-
 
