@@ -22,6 +22,48 @@ let currentFigureId = null;
 let currentTab = null;
 
 // Convenience functions
+/**
+ * @param {L.Map} leafletMap - The Leaflet map instance.
+ * @param {Object.<string, L.Marker>} leafletMarkers - A key-value object where keys are figureIds and values are Leaflet marker instances.
+ * @returns {Array<string>} An array of keys (figureIds) for markers currently visible on the map.
+ */
+function getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) {
+  // Ensure both map and markers object are provided
+  if (!leafletMap || !leafletMarkers) {
+    console.error("Error: leafletMap and leafletMarkers are required.");
+    return [];
+  }
+
+  // Get the current geographical bounds of the visible map area
+  const mapBounds = leafletMap.getBounds();
+
+  // Initialize an array to store the keys of visible markers
+  const visibleMarkerKeys = [];
+
+  // Iterate over each key-value pair in the leafletMarkers object
+  for (const figureId in leafletMarkers) {
+    // Ensure the property belongs to the object itself and not its prototype chain
+    if (Object.prototype.hasOwnProperty.call(leafletMarkers, figureId)) {
+      const marker = leafletMarkers[figureId];
+
+      // Check if the marker is a valid Leaflet marker and has a getLatLng method
+      if (marker && typeof marker.getLatLng === 'function') {
+        const markerLatLng = marker.getLatLng();
+
+        // Check if the marker's geographical coordinates are within the map's bounds
+        if (mapBounds.contains(markerLatLng)) {
+          // If visible, add its key (figureId) to the results array
+          visibleMarkerKeys.push(figureId);
+        }
+      } else {
+        console.warn(`Warning: Object with key '${figureId}' is not a valid Leaflet marker.`);
+      }
+    }
+  }
+
+  return visibleMarkerKeys;
+}
+
 function formatDateForDisplay(date) {
     if (date === null) {
         return '';
@@ -1007,20 +1049,9 @@ function startPlayback() {
     playBtn.textContent = '⏸️';
     playBtn.dataset.playing = "true";
 
-    // const timelineTab = document.getElementById('figure-timeline-container');
-    // let figures = [];
-    // if (timelineTab && timelineTab.classList.contains('active')) {
-    //     figures = Array.from(document.querySelectorAll('.timeline-figure')).map(div => div.dataset.figureId);
-    //     if (!figures.length && typeof currentSortedIndex !== "undefined") {
-    //         figures = currentSortedIndex;
-    //     }
-    // } else if (typeof currentSortedIndex !== "undefined") {
-    //     figures = currentSortedIndex;
-    // }
-
-    // if (!figures.length) return;
 
     figures = currentSortedIndex ;
+
 
     // Start from the current figure if available
     let startIndex = 0;
@@ -1028,6 +1059,14 @@ function startPlayback() {
         const idx = figures.indexOf(currentFigureId);
         if (idx !== -1) startIndex = idx;
     }
+
+    // override if map
+    if (currentTab = "figure-map") {
+        startIndex = 0;
+        visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers)
+        figures = sortFigures(visibleMarkers, 'date');
+    }
+
 
     playIndex = startIndex;
 

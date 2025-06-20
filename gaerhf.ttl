@@ -1737,9 +1737,10 @@
 
 :giants-of-mont-e-prama a :group-of-human-figures ;
    rdfs:label "Giants of Mont'e Prama, Sardinia" ;
-   :described-by <https://en.wikipedia.org/wiki/Giants_of_Mont%27e_Prama> ;
+   :described-by <https://en.wikipedia.org/wiki/Giants_of_Mont%27e_Prama>,
+      <https://www.metmuseum.org/perspectives/sardinian-giants> ;
    :earliest-date -900 ;
-   :latest-date -700 ;
+   :latest-date -750 ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (39.965778 8.448278) ;
    :art-historical-culture-or-tradition :nuragic-culture ;
