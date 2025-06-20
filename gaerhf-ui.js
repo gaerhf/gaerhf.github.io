@@ -1049,9 +1049,7 @@ function startPlayback() {
     playBtn.textContent = '⏸️';
     playBtn.dataset.playing = "true";
 
-
     figures = currentSortedIndex ;
-
 
     // Start from the current figure if available
     let startIndex = 0;
@@ -1066,7 +1064,6 @@ function startPlayback() {
         visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers)
         figures = sortFigures(visibleMarkers, 'date');
     }
-
 
     playIndex = startIndex;
 
@@ -1097,7 +1094,6 @@ function startPlayback() {
 
     }, 2000);
     }
-
 
 function stopPlayback() {
     const playBtn = document.getElementById('play-btn');
