@@ -1059,7 +1059,7 @@ function startPlayback() {
     }
 
     // override if map
-    if (currentTab = "figure-map") {
+    if (currentTab == "figure-map") {
         startIndex = 0;
         visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers)
         figures = sortFigures(visibleMarkers, 'date');

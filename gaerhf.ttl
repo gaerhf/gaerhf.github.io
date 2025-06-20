@@ -3639,7 +3639,7 @@
    :representative-latlong-point (16.763889 -89.1175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/Category:Altar_13_of_Caracol#/media/File:Altar_13_Mesoamerican_Gallery.JPG> .
 
-:bowl--figure-vessel a :human-figure ;
+:bowl-figure-vessel a :human-figure ;
    rdfs:label "Bowl with Figure holding Vessel" ;
    :described-by <https://www.metmuseum.org/art/collection/search/449495> , 
    <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> ;
