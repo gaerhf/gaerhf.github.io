@@ -1717,13 +1717,13 @@
    :note "Mapped point is generic for Chorrera culture, not the specific findspot of this piece." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/316443/655595/main-image> .
 
-:chorrera-ceramic-figure-pendant a :human-figure ;
-   rdfs:label "Chorrera Ceramic Figure Pendant" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/314168> ;
-   :art-historical-culture-or-tradition :chorrera ;
-   :in-modern-country-note "Ecuador" ;
-   :earliest-date -1000 ;
-   :latest-date -200 .
+# :chorrera-ceramic-figure-pendant a :human-figure ;
+#    rdfs:label "Chorrera Ceramic Figure Pendant" ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/314168> ;
+#    :art-historical-culture-or-tradition :chorrera ;
+#    :in-modern-country-note "Ecuador" ;
+#    :earliest-date -1000 ;
+#    :latest-date -200 .
 
 :dong-son-kneeling-figure a :human-figure ;
    rdfs:label "Dong Son Kneeling Figure" ;
@@ -1763,62 +1763,62 @@
    :representative-latlong-point (32.4795 44.431689) ;
    :thumbnail-image <https://collections.louvre.fr/media/cache/small/0000000021/0000132589/0000225642_OG.JPG> .
 
-:olmec-standing-figure a :human-figure ;
-   rdfs:label "Jadeite Standing Figure" ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/14-standing-figure> ;
-   :earliest-date -900 ;
-   :latest-date -300 ;
-   :art-historical-culture-or-tradition :olmec .
+# :olmec-standing-figure a :human-figure ;
+#    rdfs:label "Jadeite Standing Figure" ;
+#    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/14-standing-figure> ;
+#    :earliest-date -900 ;
+#    :latest-date -300 ;
+#    :art-historical-culture-or-tradition :olmec .
 
-:olmec-ballplayer-figure a :human-figure ;
-   rdfs:label "Jadeite Ballplayer" ;
-   :described-by <https://art.thewalters.org/detail/80383/ballplayer-figure/> ;
-   :earliest-date -900 ;
-   :latest-date -600 ;
-   :art-historical-culture-or-tradition :olmec .
+# :olmec-ballplayer-figure a :human-figure ;
+#    rdfs:label "Jadeite Ballplayer" ;
+#    :described-by <https://art.thewalters.org/detail/80383/ballplayer-figure/> ;
+#    :earliest-date -900 ;
+#    :latest-date -600 ;
+#    :art-historical-culture-or-tradition :olmec .
 
-:olmec-standing-male-statuette a :human-figure ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/08-standing-male-statuette> ;
-   :earliest-date -900 ;
-   :latest-date -300 ;
-   :art-historical-culture-or-tradition :olmec .
+# :olmec-standing-male-statuette a :human-figure ;
+#    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/08-standing-male-statuette> ;
+#    :earliest-date -900 ;
+#    :latest-date -300 ;
+#    :art-historical-culture-or-tradition :olmec .
 
-:olmec-transformation-figure-in-combat-stance a :human-figure ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/06-transformation-figure-in-combat-stance> ;
-   :earliest-date -900 ;
-   :latest-date -300 ;
-   :art-historical-culture-or-tradition :olmec .
+# :olmec-transformation-figure-in-combat-stance a :human-figure ;
+#    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/06-transformation-figure-in-combat-stance> ;
+#    :earliest-date -900 ;
+#    :latest-date -300 ;
+#    :art-historical-culture-or-tradition :olmec .
 
-:olmec-fragmentary-figure a :human-figure ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/15-fragmentary-figure> ;
-   :earliest-date -900 ;
-   :latest-date -300 ;
-   :art-historical-culture-or-tradition :olmec .
+# :olmec-fragmentary-figure a :human-figure ;
+#    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/15-fragmentary-figure> ;
+#    :earliest-date -900 ;
+#    :latest-date -300 ;
+#    :art-historical-culture-or-tradition :olmec .
 
-:olmec-seated-old-man a :human-figure ;
-   rdfs:label "Olmec seated old man" ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/17-seated-old-man> ;
-   :earliest-date -900 ;
-   :latest-date -300 ;
-   :art-historical-culture-or-tradition :olmec .
+# :olmec-seated-old-man a :human-figure ;
+#    rdfs:label "Olmec seated old man" ;
+#    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/17-seated-old-man> ;
+#    :earliest-date -900 ;
+#    :latest-date -300 ;
+#    :art-historical-culture-or-tradition :olmec .
 
-:olmec-seated-figure a :human-figure ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/18-seated-figure> ;
-   :earliest-date -900 ;
-   :latest-date -300 ;
-   :art-historical-culture-or-tradition :olmec .
+# :olmec-seated-figure a :human-figure ;
+#    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/18-seated-figure> ;
+#    :earliest-date -900 ;
+#    :latest-date -300 ;
+#    :art-historical-culture-or-tradition :olmec .
 
-:olmec-jade-mask a :human-figure ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/30-jade-mask> ;
-   :earliest-date -900 ;
-   :latest-date -300 ;
-   :art-historical-culture-or-tradition :olmec .
+# :olmec-jade-mask a :human-figure ;
+#    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/30-jade-mask> ;
+#    :earliest-date -900 ;
+#    :latest-date -300 ;
+#    :art-historical-culture-or-tradition :olmec .
 
-:chorrera-figure-vessel a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/315062> ;
-   :art-historical-culture-or-tradition :chorrera ;
-   :earliest-date -900 ;
-   :latest-date -200 .
+# :chorrera-figure-vessel a :human-figure ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/315062> ;
+#    :art-historical-culture-or-tradition :chorrera ;
+#    :earliest-date -900 ;
+#    :latest-date -200 .
 
 :balawat-gates a :group-of-human-figures ;
    rdfs:label "Balawat Gates" ;
@@ -2481,11 +2481,11 @@
    :representative-latlong-point (33.093611 44.580556) ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/an/web-additional/DP-15732-009.jpg> .
 
-:tolita-tumaco-seated-elder a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/314299> ;
-   :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
-   :earliest-date -200 ;
-   :latest-date 400 .
+# :tolita-tumaco-seated-elder a :human-figure ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/314299> ;
+#    :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
+#    :earliest-date -200 ;
+#    :latest-date 400 .
 
 :nazca-standing-figure a :human-figure ;
    rdfs:label "Nazca Standing Figure" ;
@@ -2793,7 +2793,7 @@
    :latest-date 272 ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.988889 52.874722) ;
-   :wikimedia-commons-image-pate <https://commons.wikimedia.org/wiki/File:Naghsh-e_rostam,_Irán,_2016-09-24,_DD_12.jpg> .
+   :wikimedia-commons-image-pate <https://en.wikipedia.org/wiki/File:Naghsh-e_rostam,_Irán,_2016-09-24,_DD_12.jpg> .
 
 :gandhara-standing-buddha a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/38820> ;
@@ -3007,11 +3007,11 @@
    :representative-latlong-point (38.949 115.322) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jin_Lv_Yu_Yi_of_Liusheng,_Han_Dynasty,China_(Hebei_Museum).jpg> .
 
-:mudgarpani-yaksha a :human-figure ;
-   :described-by <https://commons.wikimedia.org/wiki/File:Mudgarpani_Yaksha,_Mathura,_100_BCE.jpg> ;
-   :period-note "Mathura (India)" ;
-   :earliest-date -110 ;
-   :latest-date -90 .
+# :mudgarpani-yaksha a :human-figure ;
+#    :described-by <https://commons.wikimedia.org/wiki/File:Mudgarpani_Yaksha,_Mathura,_100_BCE.jpg> ;
+#    :period-note "Mathura (India)" ;
+#    :earliest-date -110 ;
+#    :latest-date -90 .
 
 # https://en.wikipedia.org/wiki/Mississippian_copper_plates
 
@@ -3115,16 +3115,6 @@
    :in-modern-country-note "Pakistan" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
 
-:pancika-and-hariti a :human-figure ;
-   :described-by <https://www.britishmuseum.org/collection/object/A_1950-0726-2> ,
-   <https://en.wikipedia.org/wiki/Takht-i-Bahi#Works_of_art>  ;
-   :period-note "Kushan (Pakistan)" ;
-   :earliest-date 100 ;
-   :latest-date 300 ;
-   :in-modern-country-note "Pakistan" ;
-   :representative-latlong-point (34.286111 71.946667) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PharroAndArdoxsho.jpg> .
-
 :paired-figures-funerary-relief-tylos a :group-of-human-figures ;
    rdfs:label "Paired Figures from Funerary Relief of Tylos" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Stele_funeraria_figurativa,_tardo_periodo_di_tylos,_bahrain,_II-III_secolo_circa.JPG>,
@@ -3156,11 +3146,11 @@
    :art-historical-culture-or-tradition :roman-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Marble_plaque_showing_parturition_scene,_Ostia,_Italy,_400_B_Wellcome_L0065025.jpg> . 
 
-:tolita-tumaco-bench-figure a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/316449> ;
-   :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
-   :earliest-date 100 ;
-   :latest-date 400 .
+# :tolita-tumaco-bench-figure a :human-figure ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/316449> ;
+#    :period-note "Tolita-Tumaco (Ecuador or Colombia)" ;
+#    :earliest-date 100 ;
+#    :latest-date 400 .
 
 :female-statuette-dharmarajika-stupa a :human-figure ;
    rdfs:label "Female Statuette from Dharmarajika Stupa" ;
