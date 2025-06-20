@@ -3503,6 +3503,17 @@
    :representative-latlong-point (56.689167 -2.781389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pictish_Stone_at_Aberlemno_Church_Yard_-_Battle_Scene_Detail.jpg> .
 
+:nazca-tunic-panel-three-figures a :group-of-human-figures ;
+   rdfs:label "Nazca Culture Tunic Panel with Three Figures" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/319523> ;
+   :earliest-date 600 ;
+   :latest-date 1000 ;
+   :material-note "Cotton, Feathers" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-14.07 -75.73) ;
+   :note "No specific origin or findspot." ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/319523/662866/main-image> .
+
 # 600 - 900 https://www.metmuseum.org/art/collection/search/309503
 
 :afrasiab-murals a :group-of-human-figures ;
