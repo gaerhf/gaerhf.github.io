@@ -19,7 +19,7 @@ let playInterval = null;
 let playIndex = 0;
 
 let currentFigureId = null;
-let currentTab = null;
+let currentTab = "figure-map";
 
 // Convenience functions
 /**
