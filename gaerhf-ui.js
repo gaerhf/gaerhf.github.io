@@ -846,6 +846,55 @@ async function initializeStore($rdf) {
     loadAndDisplayFigures($rdf);
 })();
 
+document.addEventListener('keydown', (event) => {
+
+  if (event.key === 'ArrowLeft') {
+
+    console.log("prev")
+
+    figures = currentSortedIndex ;
+    if (currentFigureId) {
+        const idx = figures.indexOf(currentFigureId);
+        if (idx !== -1) startIndex = idx;
+    }
+
+    if (startIndex > 0) { startIndex-- }
+
+    showFigureDetails(figures[startIndex]);
+    highlightTimelineFigure(figures[startIndex]) ;
+    scrollToTimelineFigure(figures[startIndex]) ;
+
+    highlightListFigure(figures[startIndex]) ;
+    scrollToListFigure(figures[startIndex]) ;
+
+    leafletMarkers[figures[startIndex]].openPopup();
+
+  }
+  if (event.key === 'ArrowRight') {
+
+    console.log("next")
+
+    figures = currentSortedIndex ;
+    if (currentFigureId) {
+        const idx = figures.indexOf(currentFigureId);
+        if (idx !== -1) startIndex = idx;
+    }
+
+    if (startIndex < figures.length) { startIndex++ }
+
+    showFigureDetails(figures[startIndex]);
+    highlightTimelineFigure(figures[startIndex]) ;
+    scrollToTimelineFigure(figures[startIndex]) ;
+
+    highlightListFigure(figures[startIndex]) ;
+    scrollToListFigure(figures[startIndex]) ;
+
+    leafletMarkers[figures[startIndex]].openPopup();
+
+  }
+
+});
+
 // Tab functionality for the UI
 // Ensure the DOM is fully loaded before attaching event listeners
 document.addEventListener('DOMContentLoaded', () => {
