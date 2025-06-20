@@ -15,10 +15,11 @@ let currentSortedIndex = [];
 let tp;
 
 // Playback variables
-let timelinePlayInterval = null;
-let timelinePlayIndex = 0;
+let playInterval = null;
+let playIndex = 0;
 
 let currentFigureId = null;
+let currentTab = null;
 
 // Convenience functions
 function formatDateForDisplay(date) {
@@ -270,7 +271,6 @@ async function renderFiguresAsList(figuresArray) {
 
             figureItem.appendChild(thumbnailImg);
 
-
         }
 
         const textContainer = document.createElement('div');
@@ -330,6 +330,7 @@ async function renderFiguresAsList(figuresArray) {
         figureItem.appendChild(textContainer);
         figureItem.addEventListener('click', () => {
             showFigureDetails(figure.id);
+            highlightListFigure(figure.id) ;
         });
         figureListDiv.appendChild(figureItem);
     }
@@ -662,7 +663,6 @@ async function showFigureDetails(figureId) {
 
             detailImageDiv.appendChild(detailA);
 
-
         }
 
         if (figure.cultureLabel && figure.cultureDescribedBy) {
@@ -852,7 +852,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
     const timelineScale = document.getElementById('figure-timeline-scale');
-    const playBtn = document.getElementById('timeline-play-btn');
+    const playBtn = document.getElementById('play-btn');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -863,6 +863,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add 'active' to clicked button and corresponding content
             button.classList.add('active');
             const tabName = button.getAttribute('data-tab');
+            currentTab = tabName ;
             const activeContent = document.getElementById(`${tabName}-container`);
             if (activeContent) {
                 activeContent.classList.add('active');
@@ -873,16 +874,17 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('figure-map-scale').style.display = (tabName === 'figure-map') ? 'block' : 'none';
 
             // Show/hide the play button
-            if (button.getAttribute('data-tab') === 'figure-timeline') {
-                playBtn.style.display = '';
-            } else {
-                playBtn.style.display = 'none';
-                stopTimelinePlayback();
-            }
+            // if (button.getAttribute('data-tab') === 'figure-timeline') {
+            //     playBtn.style.display = '';
+            // } else {
+            //     playBtn.style.display = 'none';
+            //     stopTimelinePlayback();
+            // }
 
             // --- Scroll to current figure in the relevant view ---
             if (tabName === 'figure-list' && currentFigureId) {
                 scrollToListFigure(currentFigureId);
+                highlightListFigure(currentFigureId);
             } else if (tabName === 'figure-timeline' && currentFigureId) {
                 scrollToTimelineFigure(currentFigureId);
                 highlightTimelineFigure(currentFigureId);
@@ -906,9 +908,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     playBtn.addEventListener('click', () => {
         if (playBtn.dataset.playing === "true") {
-            stopTimelinePlayback();
+            stopPlayback();
         } else {
-            startTimelinePlayback();
+            startPlayback();
         }
     });
 });
@@ -919,6 +921,16 @@ function scrollToListFigure(figureId) {
         currentDiv.scrollIntoView({ behavior: 'auto', block: 'center' });
     } else {
         console.warn(`Element with ID list-${figureId} not found.`);
+    }
+}
+
+function highlightListFigure(figureId) {
+    document.querySelectorAll('.figure-item.highlighted').forEach(div => {
+        div.classList.remove('highlighted');
+    });
+    const currentDiv = document.getElementById(`list-${figureId}`);
+    if (currentDiv) {
+        currentDiv.classList.add('highlighted');
     }
 }
 
@@ -941,23 +953,25 @@ function highlightTimelineFigure(figureId) {
     }
 }
 
-function startTimelinePlayback() {
-    const playBtn = document.getElementById('timeline-play-btn');
+function startPlayback() {
+    const playBtn = document.getElementById('play-btn');
     playBtn.textContent = '⏸️';
     playBtn.dataset.playing = "true";
 
-    const timelineTab = document.getElementById('figure-timeline-container');
-    let figures = [];
-    if (timelineTab && timelineTab.classList.contains('active')) {
-        figures = Array.from(document.querySelectorAll('.timeline-figure')).map(div => div.dataset.figureId);
-        if (!figures.length && typeof currentSortedIndex !== "undefined") {
-            figures = currentSortedIndex;
-        }
-    } else if (typeof currentSortedIndex !== "undefined") {
-        figures = currentSortedIndex;
-    }
+    // const timelineTab = document.getElementById('figure-timeline-container');
+    // let figures = [];
+    // if (timelineTab && timelineTab.classList.contains('active')) {
+    //     figures = Array.from(document.querySelectorAll('.timeline-figure')).map(div => div.dataset.figureId);
+    //     if (!figures.length && typeof currentSortedIndex !== "undefined") {
+    //         figures = currentSortedIndex;
+    //     }
+    // } else if (typeof currentSortedIndex !== "undefined") {
+    //     figures = currentSortedIndex;
+    // }
 
-    if (!figures.length) return;
+    // if (!figures.length) return;
+
+    figures = currentSortedIndex ;
 
     // Start from the current figure if available
     let startIndex = 0;
@@ -965,31 +979,45 @@ function startTimelinePlayback() {
         const idx = figures.indexOf(currentFigureId);
         if (idx !== -1) startIndex = idx;
     }
-    timelinePlayIndex = startIndex;
 
-    showFigureDetails(figures[timelinePlayIndex]);
-    scrollToTimelineFigure(figures[timelinePlayIndex]);
-    highlightTimelineFigure(figures[timelinePlayIndex]);
+    playIndex = startIndex;
 
-    timelinePlayInterval = setInterval(() => {
-        timelinePlayIndex++;
-        if (timelinePlayIndex >= figures.length) {
-            stopTimelinePlayback();
+    showFigureDetails(figures[playIndex]);
+    highlightTimelineFigure(figures[playIndex]) ;
+    scrollToTimelineFigure(figures[playIndex]) ;
+
+    highlightListFigure(figures[playIndex]) ;
+    scrollToListFigure(figures[playIndex]) ;
+
+    leafletMarkers[figures[playIndex]].openPopup();
+
+    playInterval = setInterval(() => {
+        playIndex++;
+        if (playIndex >= figures.length) {
+            stopPlayback();
             return;
         }
-        showFigureDetails(figures[timelinePlayIndex]);
-        highlightTimelineFigure(figures[timelinePlayIndex]);
-        scrollToTimelineFigure(figures[timelinePlayIndex]);
-    }, 2000);
-}
+        showFigureDetails(figures[playIndex]);
+        highlightTimelineFigure(figures[playIndex]) ;
+        scrollToTimelineFigure(figures[playIndex]) ;
 
-function stopTimelinePlayback() {
-    const playBtn = document.getElementById('timeline-play-btn');
+        highlightListFigure(figures[playIndex]) ;
+        scrollToListFigure(figures[playIndex]) ;
+
+        console.log(figures[playIndex]) ;
+        leafletMarkers[figures[playIndex]].openPopup();
+
+    }, 2000);
+    }
+
+
+function stopPlayback() {
+    const playBtn = document.getElementById('play-btn');
     playBtn.textContent = '▶️';
     playBtn.dataset.playing = "false";
-    if (timelinePlayInterval) {
-        clearInterval(timelinePlayInterval);
-        timelinePlayInterval = null;
+    if (playInterval) {
+        clearInterval(playInterval);
+        playInterval = null;
     }
     // Remove highlight when stopped
     document.querySelectorAll('.timeline-figure.highlighted').forEach(div => {
