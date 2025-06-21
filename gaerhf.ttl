@@ -1256,7 +1256,26 @@
    :representative-latlong-point (35.995528 138.158806) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tanabatake_Venus._Middle_Jōmon.JPG> .
 
-# -2400 https://en.wikipedia.org/wiki/Shahdad#Archaeology Bronxe Flag
+
+# -2400 https://commons.wikimedia.org/wiki/File:Qijia_Culture_Pottery_Head_(10096558193).jpg
+
+:qijia-culture-ceramic-head a :human-figure ;
+   rdfs:label "Qijia Culture Ceramic Head" ;
+   :described-by <https://en.wikipedia.org/wiki/Qijia_culture#Pottery> ;
+   :earliest-date -2400 ;
+   :latest-date -1600 ;
+   :in-modern-country-note "China" ;
+   :note "Specific findspot may be known." ;
+   :representative-latlong-point (36.0606 103.8268) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Qijia_Culture_Pottery_Head_(10096558193).jpg> .
+
+:two-figures-bronze-flag a :group-of-human-figures ;
+   rdfs:label "Two Figures on Bronze Flag" ;
+   :described-by <https://en.wikipedia.org/wiki/Shahdad#Archaeology> ;
+   :approximate-date -2400 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (30.417222 57.706389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_flag,_Shadad_Kerman,_Iran.JPG> .
 
 :mohenjo-daro-female-figurine a :human-figure ;
    rdfs:label "Mohenjo daro Female Figurine" ;
