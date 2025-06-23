@@ -420,6 +420,6 @@ body {
     position: relative;
 }
 
-#about {
+.about-wrapper {
  margin:3em ;
 }

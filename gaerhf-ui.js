@@ -962,15 +962,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Show/hide the timeline scale
             document.getElementById('figure-timeline-scale').style.display = (tabName === 'figure-timeline') ? 'block' : 'none';
-            document.getElementById('figure-map-scale').style.display = (tabName === 'figure-map') ? 'block' : 'none';
-
-            // Show/hide the play button
-            // if (button.getAttribute('data-tab') === 'figure-timeline') {
-            //     playBtn.style.display = '';
-            // } else {
-            //     playBtn.style.display = 'none';
-            //     stopTimelinePlayback();
-            // }
+            document.getElementById('figure-map-scale').style.display = (tabName === 'figure-map') ? 'block' : 'none'; 
 
             // --- Scroll to current figure in the relevant view ---
             if (tabName === 'figure-list' && currentFigureId) {

@@ -880,6 +880,16 @@
    :representative-latlong-point (69.946944 23.187778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:RockCarvings_in_Alta.jpg> .
 
+:female-figurine-kolobrzeg a :human-figure ;
+   rdfs:label "Female Figurine from Kołobrzeg" ;
+   :described-by <https://archaeology.org/news/2025/06/20/6000-year-old-polish-venus-figurine-studied/> ,
+   <https://www.theartnewspaper.com/2025/06/19/archaeologists-confirm-that-limestone-venus-found-by-a-farmer-in-poland-is-6000-years-old> ;
+   :approximate-date -4000 ;
+   :in-modern-country-note "Poland" ;
+   :note "Mapped to approximate point." ;
+   :representative-latlong-point (54.176111 15.576111) ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/06/News-20250620-Poland-Kolobrzeg-Venus.jpg> .
+
 :anthropomorphic-stele-ha-il a :human-figure ;
    rdfs:label "Anthropomorphic Stele from Ha'il" ;
    :described-by <https://smarthistory.org/anthropomorphic-stele/> ;
@@ -1356,6 +1366,15 @@
    :representative-latlong-point (31.562028 46.177583) ; # ll for Girsu, Iraq
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg> .
 
+:karakol-funerary-marker-face a :human-figure ;
+   rdfs:label "Karakol Culture Funerary Marker with Face" ;
+   :described-by <https://en.wikipedia.org/wiki/Karakol_culture> ;
+   :approximate-date -2000 ;
+   :note "Mapped point and chronology only approximate." ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (52.375930 84.937368) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karakol_culture_stone_sculpture._Anokhin_Museum,_Gorno-Altaysk,_Altai_Republic,_Siberia,_Russia.jpg> .
+
 :figure-riding-animal a :human-figure ;
    rdfs:label "Figure Riding Animal" ;
    :described-by <https://www.britishmuseum.org/collection/object/W_1897-0511-104> ;
@@ -1417,6 +1436,16 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.123611 -110.693611) ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Buckhorn_Draw_Pictograph_Panel#/media/File:Buckhorn_02_2008.JPG> .
+
+:kangjiashimenzi-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Kangjiashimenzi Petroglyphs" ;
+   :described-by <http://benedante.blogspot.com/2011/06/some-really-weird-bronze-age.html> ;
+   :earliest-date -1900 ;
+   :latest-date -1500 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (35.974859 76.5559) ;
+   :note "Needs a better landing page and overall documentation." ;
+   :thumbnail-image <https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqs1XBjeoqEDOISh-Y30t8nddz7teOux11AQQsWwoCRRIh-r7bd9FkGqfgwCPyOzZ8W-Jpsz6HcHprD2q9Y_6LRauj4Hg6EWhf5pDnnUbqF0Cb8uVFNKZSBkq8Eh_tMB94FQRGcsHPCXTk/s400/tienshan4.jpg> .
 
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
@@ -1958,6 +1987,18 @@
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (37.743056 -2.551389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Galera_(M.A.N._Madrid)_01.jpg> .
+
+:pomeranian-face-urn a :human-figure ;
+   rdfs:label "Pomeranian Face Urn" ;
+   :described-by <https://en.wikipedia.org/wiki/Pomeranian_culture> ,
+   <https://www.enapp.muzeum.lebork.pl/archeology/pomeranian-cult-face-urns/> ,
+   <https://en.wikipedia.org/wiki/Bronze_and_Iron_Age_Poland#Pomeranian_culture,_Western_Baltic_Kurgans_culture> ;
+   :earliest-date -650 ;
+   :latest-date -150 ;
+   :note "Specific findspot not known at this time." ;
+   :in-modern-country-note "Poland" ;
+   :representative-latlong-point (54.29 18.15) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MuseumGrudziadzA5149.JPG> .
 
 :hawtar-athat-statue a :human-figure ;
    rdfs:label "Hawtar'athat Statue" ;
@@ -2711,6 +2752,16 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pompeii-couple.jpg> .
 
 # approx 50 https://en.wikipedia.org/wiki/Natakamani
+
+:fugoppe-cave-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Fugoppe Cave Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Fugoppe_Cave> ;
+   :earliest-date 100 ;
+   :latest-date 400 ;
+   :note "Image is a reproduction in onsite museum." ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (43.1946 140.8387) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fugoppe-2.jpg> .
 
 :buddha-berenike a :human-figure ;
    rdfs:label "Buddha Statue from Berenike" ;
