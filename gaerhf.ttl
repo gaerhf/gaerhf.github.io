@@ -3702,6 +3702,17 @@
    :art-historical-culture-or-tradition :carolingian-renaissance ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karolingischer_Buchmaler_um_820_001.jpg> .
 
+:figure-horned-animal-effigy-bowl a :human-figure ;
+   rdfs:label "Human-like figure on Effigy Bowl in form a Horned Animal" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Bighorn_sheep_effigy_bowl,_Hohokam_culture,_Arizona,_c._800-1000_AD,_ceramic_-_Dallas_Museum_of_Art_-_DSC04540.jpg> ,
+    <https://en.wikipedia.org/wiki/Hohokam> ;
+   :earliest-date 800 ;
+   :latest-date 1000 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (32.997005 -111.532069) ;
+   :note "Needs landing page. Mapped to Casa Grande, AZ for time being." ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bighorn_sheep_effigy_bowl,_Hohokam_culture,_Arizona,_c._800-1000_AD,_ceramic_-_Dallas_Museum_of_Art_-_DSC04540.jpg> .
+
 :muiredachs-high-cross a :group-of-human-figures ;
    rdfs:label "Muiredach High Cross" ;
    :described-by <https://en.wikipedia.org/wiki/Muiredach%27s_High_Cross> ;
