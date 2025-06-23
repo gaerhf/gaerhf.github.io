@@ -2200,6 +2200,16 @@
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
 
+:standing-figure-sulawesi a :human-figure ;
+   rdfs:label "Standing Figure from Sulawesi" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/38484> ;
+   :earliest-date -500 ;
+   :latest-date 300 ;
+   :in-modern-country-note "Indonesia" ;
+   :representative-latlong-point (-2 121) ;
+   :note "Mapped to approximate location." ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/38484/2290747/main-image> .
+
 :tomb-darius-i a :group-of-human-figures ;
    rdfs:label "Tomb of Darius I" ;
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_Darius_the_Great> ;
