@@ -880,26 +880,6 @@
    :representative-latlong-point (69.946944 23.187778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:RockCarvings_in_Alta.jpg> .
 
-:female-figurine-kolobrzeg a :human-figure ;
-   rdfs:label "Female Figurine from Kołobrzeg" ;
-   :described-by <https://archaeology.org/news/2025/06/20/6000-year-old-polish-venus-figurine-studied/> ,
-   <https://www.theartnewspaper.com/2025/06/19/archaeologists-confirm-that-limestone-venus-found-by-a-farmer-in-poland-is-6000-years-old> ;
-   :approximate-date -4000 ;
-   :in-modern-country-note "Poland" ;
-   :note "Mapped to approximate point." ;
-   :representative-latlong-point (54.176111 15.576111) ;
-   :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/06/News-20250620-Poland-Kolobrzeg-Venus.jpg> .
-
-:anthropomorphic-stele-ha-il a :human-figure ;
-   rdfs:label "Anthropomorphic Stele from Ha'il" ;
-   :described-by <https://smarthistory.org/anthropomorphic-stele/> ;
-   :earliest-date -4000 ;
-   :latest-date -3000 ;
-   :in-modern-country-note "Saudi Arabia" ;
-   :representative-latlong-point (27.516667 41.683333) ;
-   :art-historical-culture-or-tradition :ancient-arabia ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_stele_at_National_Museum_of_Korea_02.jpg> .
-
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
    :described-by <https://www.namuseum.gr/en/monthly_artefact/beautiful-young-lady-of-the-neolithic-age/C> ;
@@ -933,6 +913,17 @@
 
 # -4000 - -3000 https://en.wikipedia.org/wiki/Chasséen_culture "Stele de Lauris"
 
+
+:female-figurine-kolobrzeg a :human-figure ;
+   rdfs:label "Female Figurine from Kołobrzeg" ;
+   :described-by <https://archaeology.org/news/2025/06/20/6000-year-old-polish-venus-figurine-studied/> ,
+   <https://www.theartnewspaper.com/2025/06/19/archaeologists-confirm-that-limestone-venus-found-by-a-farmer-in-poland-is-6000-years-old> ;
+   :approximate-date -4000 ;
+   :in-modern-country-note "Poland" ;
+   :note "Mapped to approximate point." ;
+   :representative-latlong-point (54.176111 15.576111) ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/06/News-20250620-Poland-Kolobrzeg-Venus.jpg> .
+
 :yangshao-vessel-head a :human-figure ;
    rdfs:label "Yangshao Vessel with Human Head" ;
    :described-by <https://en.wikipedia.org/wiki/Yangshao_culture#Crafts> ,
@@ -942,6 +933,27 @@
    :in-modern-country-note "China" ;
    :representative-latlong-point (35.014992 105.926847) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Distant_dialogue_exhibition_of_Dadiwan_site,_2017-03-04_05.jpg> .
+
+:anthropomorphic-stele-ha-il a :human-figure ;
+   rdfs:label "Anthropomorphic Stele from Ha'il" ;
+   :described-by <https://smarthistory.org/anthropomorphic-stele/> ;
+   :earliest-date -4000 ;
+   :latest-date -3000 ;
+   :in-modern-country-note "Saudi Arabia" ;
+   :representative-latlong-point (27.516667 41.683333) ;
+   :art-historical-culture-or-tradition :ancient-arabia ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_stele_at_National_Museum_of_Korea_02.jpg> .
+
+:reclining-figure-hal-saflieni a :human-figure ;
+   rdfs:label "Reclining Figure from Hal Saflieni Hypogeum" ;
+   :described-by <https://www.worldhistory.org/image/245/the-sleeping-lady/> ,
+   <https://en.wikipedia.org/wiki/Ħal_Saflieni_Hypogeum> ,
+   <https://artsandculture.google.com/story/the-sleeping-lady-a-unique-maltese-icon-national-museum-of-archaeology/VAWR7KPNk-UDKw> ;
+   :earliest-date -4000 ;
+   :latest-date -2000 ;
+   :in-modern-country-note "Malta" ;
+   :representative-latlong-point (35.869583 14.506806) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Sleeping_Lady,_2009.jpg> .
 
 :neolithic-figurine-karditsa a :human-figure ;
    rdfs:label "Neolithic Figurine from Karditsa" ;
@@ -2199,6 +2211,9 @@
    :earliest-date -500 ;
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
+
+# also https://www.metmuseum.org/art/collection/search?q=Indonesia+%28Sulawesi%29&sortBy=Relevance
+# https://www.metmuseum.org/art/collection/search/39205
 
 :standing-figure-sulawesi a :human-figure ;
    rdfs:label "Standing Figure from Sulawesi" ;
