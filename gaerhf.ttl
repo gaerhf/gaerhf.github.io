@@ -1912,6 +1912,15 @@
 #    :earliest-date -900 ;
 #    :latest-date -200 .
 
+:funerary-jar-figures-boat a :group-of-human-figures ;
+   rdfs:label "Funerary Jar with Two Figures in Boat" ;
+   :described-by <https://en.wikipedia.org/wiki/Manunggul_Jar> ;
+   :earliest-date -890 ;
+   :latest-date -710 ;
+   :in-modern-country-note "Philippines" ;
+   :representative-latlong-point (9.279882 117.9814) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Manunggul_Jar.jpg> .
+
 :balawat-gates a :group-of-human-figures ;
    rdfs:label "Balawat Gates" ;
    :described-by <https://en.wikipedia.org/wiki/Balawat_Gates> ;
