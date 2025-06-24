@@ -655,6 +655,16 @@
    :representative-latlong-point (25.5 9) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fondazione_Passaré_V1_056.jpg> .
 
+:tambun-rock-art a :group-of-human-figures ;
+   rdfs:label "Tambun Rock Art" ;
+   :described-by <https://en.wikipedia.org/wiki/Tambun_rock_art> ;
+   :earliest-date -8000 ;
+   :latest-date -2000 ;
+   :note "The chronology needs confirmation" ;
+   :in-modern-country-note "Malaysia" ;
+   :representative-latlong-point (4.602 101.1305) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gua_Tambun5.jpg> .
+
 :pastoral-period-hunter-tin-aboteka a :human-figure ;
    rdfs:label "Pastoral Period Hunter from Tin Aboteka" ;
    :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-4191> ;
