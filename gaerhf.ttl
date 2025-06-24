@@ -2263,6 +2263,16 @@
    :art-historical-culture-or-tradition :nok-culture ;
    :in-modern-country-note "Nigeria" .
 
+:brandskogen-ship-petroglyph a :group-of-human-figures ;
+   rdfs:label "Brandskogen Ship Petroglyph" ;
+   :described-by <https://en.wikipedia.org/wiki/Rock_Carvings_of_Boglösa#Brandskogen> ;
+   :earliest-date -500 ;
+   :latest-date -1 ;
+   :note "Dates are loosely those of the Nordic Iron Age." ;
+   :in-modern-country-note "Sweden" ;
+   :representative-latlong-point (59.596944 17.177222) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Brandskogsskeppet_(Raä-nr_Boglösa_109-1)_0753.jpg> .
+
 :esteros-female-figurine a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/317723> ;
    :period-note "Esteros or Bahia (Ecuador)" ;
