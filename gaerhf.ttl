@@ -983,6 +983,16 @@
    :representative-latlong-point (35.869583 14.506806) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Sleeping_Lady,_2009.jpg> .
 
+:twyfelfontein-rock-painting a :human-figure ;
+   rdfs:label "Twyfelfontein Rock Painting" ;
+   :described-by <https://en.wikipedia.org/wiki/Twyfelfontein> ;
+   :earliest-date -4000 ;
+   :latest-date -1 ;
+   :note "The site has mostly petroglyphs. The paintings seems to have more clear chronology? All to be confirmed" ;
+   :in-modern-country-note "Namibia" ;
+   :representative-latlong-point (-20.590556 14.372222) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_painting_in_Twyfelfontein3.jpg> .
+
 :neolithic-figurine-karditsa a :human-figure ;
    rdfs:label "Neolithic Figurine from Karditsa" ;
    :described-by <https://en.wikipedia.org/wiki/Karditsa_Thinker> ;
@@ -3437,7 +3447,7 @@
    rdfs:label "Mark the Evangelist from the Garima 2 Gospel" ;
    :described-by <https://en.wikipedia.org/wiki/Garima_Gospels> ;
    :earliest-date 390 ;
-   :latest-daet 570 ;
+   :latest-date 570 ;
    :in-modern-country-note "Ethiopia" ;
    :representative-latlong-point (14.161667 38.952778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Illumination-from-Abba-Garima-gospel.jpg> .
@@ -3626,6 +3636,8 @@
    :in-modern-country-note "Guatemala" ;
    :representative-latlong-point (17.2783 -90.3806) ;
    :thumbnail-image <https://unframed.lacma.org/sites/default/files/attachments/AncientBodies_Grouping1.png> .
+
+# 600 https://en.wikipedia.org/wiki/Mahlac_Pictograph_Cave (see PDF report)
 
 :fondukistan-monastery-divintity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
