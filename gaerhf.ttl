@@ -816,7 +816,6 @@
    :representative-latlong-point (34.273 109.051) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Banpo_motif.jpg> .
 
-
 :ennedi-plateau-archaic-rock-art a :group-of-human-figures ;
    rdfs:label "Ennedi Plateau Archaic Rock Art" ;
    :representative-latlong-point (17.038890 21.862235) ;
@@ -825,6 +824,15 @@
    :in-modern-country-note "Chad" ;
    :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-6807> ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/13_15/a3ea69af_4d22_4a65_94ff_a45a00ffeb2c/mid_CHAENP0210005.jpg> .
+
+:angono-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Angono Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Angono_Petroglyphs> ;
+   :earliest-date -5000 ;
+   :latest-date -2000 ;
+   :in-modern-country-note "Philippines" ;
+   :representative-latlong-point (14.532872 121.18679) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Angono_Petroglyphs1.jpg> .
 
 :rock-art-of-sierra-de-san-francisco a :group-of-human-figures ;
    rdfs:label "Rock Art of Sierra de San Francisco" ;
@@ -1917,6 +1925,7 @@
    :described-by <https://en.wikipedia.org/wiki/Manunggul_Jar> ;
    :earliest-date -890 ;
    :latest-date -710 ;
+   :note "Known as the ‘Manunggul Jar’." ;
    :in-modern-country-note "Philippines" ;
    :representative-latlong-point (9.279882 117.9814) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Manunggul_Jar.jpg> .
