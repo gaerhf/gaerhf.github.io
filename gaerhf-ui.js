@@ -912,7 +912,7 @@ document.addEventListener('keydown', (event) => {
     leafletMarkers[figures[startIndex]].openPopup();
 
   }
-  if (event.key === 'ArrowRight') {
+  if (event.key === 'Tab' || event.key === 'ArrowRight') {
 
     console.log("next")
 

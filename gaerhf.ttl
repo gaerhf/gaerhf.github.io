@@ -934,6 +934,16 @@
    :representative-latlong-point (35.014992 105.926847) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Distant_dialogue_exhibition_of_Dadiwan_site,_2017-03-04_05.jpg> .
 
+:miaodigou-phase-ceramic-head a :human-figure ;
+   rdfs:label "Miaodigou Phase Ceramic Head" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Pottery_human_head,_excavated_in_Liujiahe_(柳家河),_Ankang_city,_Shaanxi._5000-3000_BCE._Shaanxi_Provincial_Institute_of_Archaeology.jpg> ;
+   :earliest-date -4000 ;
+   :latest-date -3500 ;
+   :note "The Wikimedia Commons image page quotes a full description." ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (33.553938 106.216909) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pottery_human_head,_excavated_in_Liujiahe_(柳家河),_Ankang_city,_Shaanxi._5000-3000_BCE._Shaanxi_Provincial_Institute_of_Archaeology.jpg> .
+
 :anthropomorphic-stele-ha-il a :human-figure ;
    rdfs:label "Anthropomorphic Stele from Ha'il" ;
    :described-by <https://smarthistory.org/anthropomorphic-stele/> ;
@@ -1706,6 +1716,16 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_antropomorfa_probabilmente_segnacolo_di_confine,_da_una_torbiera_presso_ralaghan,_co._di_cavan,_1100-1000_ac_ca.jpg> .
 
 # -1000 ???? https://en.wikipedia.org/wiki/Tanbaly petroglyphs
+
+:clamshell-carved-face a :human-figure ;
+   rdfs:label "Clamshell with Carved Face" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Human_figurine_number_1,_from_Zhouyuan_in_Fufeng._Western_Zhou_palace_complex_(1045–771_BCE)._Baoji_Zhouyuan_Museum.jpg> ;
+   :earliest-date -1045 ;
+   :latest-date -771 ;
+   :note "The Commons Image page has a full description." ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.496363 107.843119) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human_figurine_number_1,_from_Zhouyuan_in_Fufeng._Western_Zhou_palace_complex_(1045–771_BCE)._Baoji_Zhouyuan_Museum.jpg> .
 
 :sarcophagus-ahiram a :group-of-human-figures ;
    rdfs:label "Ahiram Sarcophagus" ;
