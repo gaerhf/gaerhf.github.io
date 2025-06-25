@@ -988,7 +988,7 @@
    :described-by <https://en.wikipedia.org/wiki/Twyfelfontein> ;
    :earliest-date -4000 ;
    :latest-date -1 ;
-   :note "The site has mostly petroglyphs. The paintings seems to have more clear chronology? All to be confirmed" ;
+   :note "The site has mostly petroglyphs. The paintings seem to have more clear chronology? All to be confirmed" ;
    :in-modern-country-note "Namibia" ;
    :representative-latlong-point (-20.590556 14.372222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_painting_in_Twyfelfontein3.jpg> .
@@ -2102,6 +2102,15 @@
    :representative-latlong-point (47.07614 15.39274) ; 
    :art-historical-culture-or-tradition :hallstatt-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kultwagen_von_Strettweg_02.jpg> .
+
+:funerary-mask-trebenista a :human-figure ;
+   rdfs:label "Funerary Mask from Trebeništa" ;
+   :described-by <https://en.wikipedia.org/wiki/Trebeništa> ;
+   :earliest-date -600 ;
+   :latest-date -500 ;
+   :in-modern-country-note "North Macedonia" ;
+   :representative-latlong-point (41.206389 20.755) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Trebenishta_mask_Grave_1.JPG> .
 
 :warrior-hirschlanden a :human-figure ;
    rdfs:label "Warrior from Hirschlanden" ;

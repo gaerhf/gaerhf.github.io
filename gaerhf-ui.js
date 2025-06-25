@@ -917,6 +917,7 @@ document.addEventListener('keydown', (event) => {
     console.log("next")
 
     figures = currentSortedIndex ;
+
     if (currentFigureId) {
         const idx = figures.indexOf(currentFigureId);
         if (idx !== -1) startIndex = idx;
