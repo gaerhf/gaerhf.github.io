@@ -1047,6 +1047,15 @@
    :art-historical-culture-or-tradition :predynastic-egypt ; # can be more specific
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gebel_el-Arak_Knife_ivory_handle_(front_top_part_detail).jpg> .
 
+:face-pot-manehoj a :human-figure ;
+   rdfs:label "Face Pot from Månehøj Tomb" ;
+   :described-by <https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-neolithic-period/the-megalithic-tombs-of-the-stone-age/the-mysterious-face-pots-of-themegalithic-period/> ;
+   :earliest-date -3500 ;
+   :latest-datae -3000 ;
+   :in-modern-country-note "Denmark" ;
+   :representative-latlong-point (55.114887 11.740591) ;
+   :thumbnail-image <https://en.natmus.dk/typo3temp/assets/images/csm_Ansigtskar_fra_Svinoe__f_fbd0fecaf2_47be4b397e.jpg> .
+
 :warka-vase a :group-of-human-figures ;
    rdfs:label "Warka Vase" ;
    :described-by <https://smarthistory.org/warka-vase/>,<https://en.wikipedia.org/wiki/Warka_Vase> ;
