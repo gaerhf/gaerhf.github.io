@@ -2738,6 +2738,16 @@
    :art-historical-culture-or-tradition :la-tene ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_sculpture_of_celtic_hero.jpg> .
 
+:carved-stone-figure-illinois a :human-figure ;
+   rdfs:label "Carved Stone Figure from Illinois" ;
+   :described-by <https://www.nprillinois.org/arts-life/2008-12-01/prehistoric-art-in-stone-clay-and-metal> ;
+   :earliest-date -150 ;
+   :latest-date 150 ;
+   :note "Specific findspot not known. Gathering more info." ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.585614 -88.432402) ;
+   :thumbnail-image <https://npr.brightspotcdn.com/dims4/default/e1c0078/2147483647/strip/true/crop/439x412+0+0/resize/1760x1652!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwuis%2Ffiles%2F201502%2FScreen_Shot_2015-02-10_at_2.54.48_PM.png> .
+
 :qatabanian-calcite-relief a :human-figure ;
    rdfs:label "Qatabanian Calcite Relief" ;
    :described-by <https://www.britishmuseum.org/collection/object/W_1951-0212-1> ;
