@@ -2591,6 +2591,17 @@
 
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
 
+:seip-earhworks-effigy-head a :human-figure ;
+   rdfs:label "Seip Mounds Effigy Head" ;
+   :described-by <https://ohiomemory.org/digital/collection/p267401coll7/id/1084/> ,
+      <https://www.nps.gov/hocu/learn/historyculture/seip-earthworks.htm> ,
+      <https://hopewellearthworks.org/site/seip-earthworks/> ;
+   :earliest-date -500 ;
+   :latest-date 100 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.238393 -83.221035) ;
+   :thumbnail-image <https://www.nps.gov/hocu/learn/historyculture/images/SeipEx-450.jpg?maxwidth=650&autorotate=false&quality=78&format=webp> .
+
 :gudimallam-lingam a :human-figure ;
    :described-by <https://en.wikipedia.org/wiki/Gudimallam_Lingam> ;
    :period-note "Satavahanas ? (India)" ;
@@ -3676,6 +3687,8 @@
 
 # 600 https://en.wikipedia.org/wiki/Mahlac_Pictograph_Cave (see PDF report)
 
+# 600 see head https://en.wikipedia.org/wiki/Hariharalaya
+
 :fondukistan-monastery-divintity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
    :described-by <https://www.guimet.fr/en/our-collections/afghanistan-pakistan/divinity-seating-royal-ease-position>,
@@ -3823,6 +3836,15 @@
    :representative-latlong-point (50.775036 6.082817) ; # Aachen
    :art-historical-culture-or-tradition :carolingian-renaissance ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karolingischer_Buchmaler_um_820_001.jpg> .
+
+:avalokisteshvara-statue-nalanda a :human-figure ;
+   rdfs:label "Avalokisteshvara from Nalanda" ;
+   :described-by <https://en.wikipedia.org/wiki/Nalanda_mahavihara#Pala_dynasty_(750–1200_CE)> ;
+   :earliest-date 800 ;
+   :latest-date 900 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (25.13662 85.442608) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Khasarpana_Lokesvara.jpg> .
 
 :figure-horned-animal-effigy-bowl a :human-figure ;
    rdfs:label "Human-like figure on Effigy Bowl in form a Horned Animal" ;
