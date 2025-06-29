@@ -1477,6 +1477,17 @@
    :earliest-date -2000 ;
    :latest-date -1800 .
 
+:poverty-point-figurines a :group-of-human-figures ;
+   rdfs:label "Poverty Point Figurines" ;
+   :described-by <https://www.crt.state.la.us/dataprojects/archaeology/povertypoint/ceremonial-life.html> ,
+      <https://heartoflouisiana.com/the-ancient-city-at-poverty-point/> ,
+      <https://sketchfab.com/frankmcmains/collections/poverty-point-figurines-f1a72a0be9554d4199d4cd979ae704c1> ;
+   :earliest-date -2000 ;
+   :latest-date -1000 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (32.636667 -91.411389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Poverty_Point_female_figurines_HRoe_2009.jpg> .
+
 :figurine-jefferson-country a :human-figure ;
    rdfs:label "Jefferson County Poverty-Point Culture Figurine" ;
    :described-by <https://archeology.uark.edu/artifacts/stone-figurine/> ;
