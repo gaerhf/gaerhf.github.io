@@ -555,6 +555,17 @@
 
 # -10000?? https://en.wikipedia.org/wiki/El_Abra
 
+:gilgal-figurine a :human-figure ;
+   rdfs:label "Gilgal Figurine" ;
+   :described-by <https://www.imj.org.il/en/collections/334604-0> , 
+      <https://en.wikipedia.org/wiki/Gilgal_I> ,
+      <https://en.wikipedia.org/wiki/Khiamian_culture> ;
+   :earliest-date -9700 ;
+   :latest-date -8600 ;
+   :in-modern-country-note "West Bank, Palestinian Territories" ;
+   :representative-latlong-point (32.032778 35.475556) ;
+   :thumbnail-image <https://www.imj.org.il/sites/default/files/collections/Human%20Statue,%20Gilgal,%20PPNA~K10343_2.jpg> .
+
 :balikligol-life-size-figure a :human-figure ;
    rdfs:label "Balıklıgöl Life-Size Figure" ;
    :described-by <https://en.wikipedia.org/wiki/Urfa_Man> ;
@@ -781,6 +792,17 @@
    :art-historical-culture-or-tradition :halaf-culture ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327066/711765/main-image> .
 
+:female-figurines-hacilar a :group-of-human-figures ;
+   rdfs:label "Female Figurines from Hacilar" ;
+   :described-by <https://en.wikipedia.org/wiki/Hacilar> ,
+      <https://www.metmuseum.org/art/collection/search/325701> ;
+   :earliest-date -5600 ;
+   :latest-date -5000 ;
+   :note "It is likely that individual figurines can be more closely dated." ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.584833 30.084472) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Frauenstatuetten_Hacilar.jpg> .
+
 :male-figurine-cerje a :human-figure ;
    rdfs:label "Male Figurine from Cerje" ;
    :described-by <https://en.wikipedia.org/wiki/Adam_of_Macedonia> ;
@@ -815,6 +837,15 @@
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.048 25.094) ; # Saliagos
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PAM_Pomos_2857.jpg> .
+
+:female-figurine-yarim-tepe a :human-figure ;
+   rdfs:label "Female Figurine from Yarim Tepe" ;
+   :described-by <https://en.wikipedia.org/wiki/Yarim_Tepe#Yarim_Tepe_II> ;
+   :earliest-date -5000 ;
+   :latest-date -4000 ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (36.32045 42.3675) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Painted_vessel_figurine_of_a_nude_woman_from_Yarim_Tepe_II_settlement,_Iraq._Halaf_culture,_5th_millennium_BCE._Iraq_Museum.jpg> .
 
 :anthropomorphic-design-ceramic-banpo a :human-figure ;
    rdfs:label "Anthropomorphic Design on Ceramic Vessel from Banpo" ;
@@ -899,6 +930,16 @@
    :representative-latlong-point (42.2 24.333333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:NHM_-_Pazardzik_Sitzidol.jpg> .
 
+:kilia-type-figurine a :human-figure ;
+   rdfs:label "Kilia-type Figurine" ;
+   :described-by <https://www.getty.edu/art/collection/object/103WGQ> ;
+   :earliest-date -4500 ;
+   :latest-date -3500 ;
+   :note "Findspot not known. Mapped to Kulaksizlar, location of a related workshop." ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (38.812 27.896) ;
+   :thumbnail-image <https://media.getty.edu/iiif/image/d74f9f56-a5b4-4af7-bef0-9a7391548daa/full/400,/0/default.jpg> .
+
 :rock-art-alta a :group-of-human-figures ;
    rdfs:label "Rock Art at Alta" ;
    :described-by <https://en.wikipedia.org/wiki/Rock_carvings_at_Alta> ;
@@ -927,6 +968,16 @@
    :representative-latlong-point (43.213056 27.864444) ;
    :art-historical-culture-or-tradition :varna-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human-sized_clay_head_found_at_Varna_necropolis.png> .
+
+:karpathos-female-figurine a :human-figure ;
+   rdfs:label "Karpathos Female Figurine" ;
+   :described-by <https://www.britishmuseum.org/collection/object/G_1886-0310-1> ;
+   :earliest-date -4500 ;
+   :latest-date -3200 ;
+   :in-modernp-country-note "Greece" ;
+   :note "Mapped generically to the Island of Karpathos for now." ;
+   :representative-latlong-point (35.764416 27.180286) ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_7/f3b0083f_2e76_490b_9fa3_a3b70074cb10/mid_00034725_001.jpg> .
 
 :cucuteni-trypillia-figurine a :human-figure ;
    rdfs:label "Cucuteni-Trypillia Figurine" ;
@@ -1123,6 +1174,28 @@
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(musée_fenaille,_rodez)_01.jpg> .
 
+:narmer-palette a :human-figure ;
+   rdfs:label "Narmer Palette" ;
+   :approximate-date -3000 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.097222 32.779444) ; # ll for Hierakonpolis, Egypt
+   :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
+   :art-historical-culture-or-tradition :pharaonic-egypt .
+
+:skara-brae-buddo a :human-figure ;
+   rdfs:label "Skara Brae Buddo" ;
+   :described-by <https://www.stromnessmuseum.org.uk/collections/objects/axxx> ,
+      <https://archaeology.org/news/2016/06/15/160615-skara-brae-buddo/> ,
+      <https://skfb.ly/NKDt> ,
+      <https://en.wikipedia.org/wiki/Skara_Brae> ;
+   :earliest-date -2900 ;
+   :latest-date -2400 ;
+   :in-modern-country-note "Scotland" ;
+   :representative-latlong-point (59.048714 -3.34175) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Skara_Brae_Buddo,_Stromness_Museum_(49586200708).jpg> .
+   
+
 :two-figures-oryxes-al-ain a :group-of-human-figures ;
    rdfs:label "Two figures flanked by Oryxes from Al Ain" ;
    :described-by <https://de.wikivoyage.org/wiki/Al-Ain> ,
@@ -1134,14 +1207,14 @@
    :representative-latlong-point (24.291689 55.793066) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Al-ain-rundgrab.jpg> .
 
-:narmer-palette a :human-figure ;
-   rdfs:label "Narmer Palette" ;
-   :approximate-date -3000 ;
-   :in-modern-country-note "Egypt" ;
-   :representative-latlong-point (25.097222 32.779444) ; # ll for Hierakonpolis, Egypt
-   :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
-   :art-historical-culture-or-tradition :pharaonic-egypt .
+:stele-vado-all-arancio a :human-figure ;
+   rdfs:label "Stele from Vado all'Arancio" ;
+   :described-by <https://it.wikipedia.org/wiki/Stele_di_Vado_all%27Arancio> ;
+   :earliest-date -3000 ;
+   :latest-date -2000 ;
+   :in-modernp-country-note "Italy" ;
+   :representative-latlong-point (43.051036 10.893427) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stele_di_vado_all%27arancio,_III_millennio_a.c._circa_02.JPG> .
 
 # -3000 - -2500 https://en.wikipedia.org/wiki/Astuvansalmi_rock_paintings
 
@@ -2828,6 +2901,14 @@
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (27.626963 -113.020427) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Sierra_de_Guadalupe_cave_paintings.jpeg/1600px-Sierra_de_Guadalupe_cave_paintings.jpeg> .
+
+:colossal-statues-nemrut-dag a :group-of-human-figures ;
+   rdfs:label "Colossal Statues from Nemrut Dag" ;
+   :described-by <https://en.wikipedia.org/wiki/Mount_Nemrut#Ancient_history> ;
+   :approximate-date -62 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.980556 38.740833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mount_Nemrut_(4).jpg> .
 
 :terracotta-male-figure-from-kalchayan a :human-figure ;
    rdfs:label "Terracotta Male figure from Kalchayan" ;
