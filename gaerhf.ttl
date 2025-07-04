@@ -1191,6 +1191,7 @@
       <https://en.wikipedia.org/wiki/Skara_Brae> ;
    :earliest-date -2900 ;
    :latest-date -2400 ;
+   :material-note "Whale Bone" ;
    :in-modern-country-note "Scotland" ;
    :representative-latlong-point (59.048714 -3.34175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Skara_Brae_Buddo,_Stromness_Museum_(49586200708).jpg> .
