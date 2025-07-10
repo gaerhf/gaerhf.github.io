@@ -884,6 +884,16 @@
    :representative-latlong-point (27.655561 -112.91611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_en_el_techo_de_la_cueva_%22El_Ratón%22.JPG> .
 
+:gamigaya-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Gamigaya Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Gamigaya_Petroglyphs> ;
+   :earliest-date -5000 ;
+   :latest-date -1000 ;
+   :note "Is there a more specigic chronology for individual human figures?" ;
+   :in-modern-country-note "Azerbaijan" ;
+   :representative-latlong-point (39.16 45.92) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_art_in_Ordubad.jpg> .
+
 :mestikawi-cave-group-scenes a :group-of-human-figures ;
    rdfs:label "Mestikawi Cave Group Scenes" ;
    :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
@@ -4001,7 +4011,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/449495> , 
    <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> ;
    :earliest-date 900 ;
-   :lastest-date 1000 ;
+   :latest-date 1000 ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (36.206111 58.793333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> .
