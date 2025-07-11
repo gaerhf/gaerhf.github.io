@@ -940,7 +940,6 @@
    :representative-latlong-point (38.812 27.896) ;
    :thumbnail-image <https://media.getty.edu/iiif/image/d74f9f56-a5b4-4af7-bef0-9a7391548daa/full/400,/0/default.jpg> .
 
-
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
    :described-by <https://www.namuseum.gr/en/monthly_artefact/beautiful-young-lady-of-the-neolithic-age/C> ;
@@ -1002,7 +1001,6 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Goddess_figurine_with_Tattoos.jpg> .
 
 # -4000 - -3000 https://en.wikipedia.org/wiki/Chasséen_culture "Stele de Lauris"
-
 
 :female-figurine-kolobrzeg a :human-figure ;
    rdfs:label "Female Figurine from Kołobrzeg" ;
@@ -1215,6 +1213,17 @@
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(musée_fenaille,_rodez)_01.jpg> .
 
+:thinite-female-figurine a :human-figure ;
+   rdfs:label "Thinite Female Figurine" ;
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010007468> ,
+   <https://en.wikipedia.org/wiki/Thinis> ;
+   :earliest-date -3100 ;
+   :latest-date -2700 ;
+   :note "Mapped to the site of Thinis" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (26.333333 31.9) ;
+   :thumbnail-image <https://collections.louvre.fr/media/cache/large/0000000021/0000007468/0000058872_OG.JPG> .
+
 :narmer-palette a :human-figure ;
    rdfs:label "Narmer Palette" ;
    :approximate-date -3000 ;
@@ -1223,20 +1232,6 @@
    :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
    :art-historical-culture-or-tradition :pharaonic-egypt .
-
-:skara-brae-buddo a :human-figure ;
-   rdfs:label "Skara Brae Buddo" ;
-   :described-by <https://www.stromnessmuseum.org.uk/collections/objects/axxx> ,
-      <https://archaeology.org/news/2016/06/15/160615-skara-brae-buddo/> ,
-      <https://skfb.ly/NKDt> ,
-      <https://en.wikipedia.org/wiki/Skara_Brae> ;
-   :earliest-date -2900 ;
-   :latest-date -2400 ;
-   :material-note "Whale Bone" ;
-   :in-modern-country-note "Scotland" ;
-   :representative-latlong-point (59.048714 -3.34175) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Skara_Brae_Buddo,_Stromness_Museum_(49586200708).jpg> .
-   
 
 :two-figures-oryxes-al-ain a :group-of-human-figures ;
    rdfs:label "Two figures flanked by Oryxes from Al Ain" ;
@@ -1356,6 +1351,19 @@
    :note "Approximate location." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_6/19_10/e0c599ae_5457_4ceb_a629_a4bc00b1e524/mid_NIGNAM0010029.jpg> .
 
+:skara-brae-buddo a :human-figure ;
+   rdfs:label "Skara Brae Buddo" ;
+   :described-by <https://www.stromnessmuseum.org.uk/collections/objects/axxx> ,
+      <https://archaeology.org/news/2016/06/15/160615-skara-brae-buddo/> ,
+      <https://skfb.ly/NKDt> ,
+      <https://en.wikipedia.org/wiki/Skara_Brae> ;
+   :earliest-date -2900 ;
+   :latest-date -2400 ;
+   :material-note "Whale Bone" ;
+   :in-modern-country-note "Scotland" ;
+   :representative-latlong-point (59.048714 -3.34175) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Skara_Brae_Buddo,_Stromness_Museum_(49586200708).jpg> .
+
 :tel-asmar-temple-figures a :human-figure ;
    rdfs:label "Tel Asmar Temple Figures" ;
    :described-by <https://smarthistory.org/standing-male-worshipper-from-the-square-temple-at-eshnunna-tell-asmar/> ;
@@ -1449,7 +1457,6 @@
    :art-historical-culture-or-tradition :jomon ;
    :representative-latlong-point (35.995528 138.158806) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tanabatake_Venus._Middle_Jōmon.JPG> .
-
 
 # -2400 https://commons.wikimedia.org/wiki/File:Qijia_Culture_Pottery_Head_(10096558193).jpg
 
