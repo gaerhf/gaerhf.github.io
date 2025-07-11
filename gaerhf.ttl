@@ -1023,6 +1023,16 @@
    :representative-latlong-point (35.014992 105.926847) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Distant_dialogue_exhibition_of_Dadiwan_site,_2017-03-04_05.jpg> .
 
+:figure-laying-vessel a :human-figure ;
+   rdfs:label "Figure Laying Down in Vessel" ;
+   :described-by <https://www.rmo.nl/museumkennis/egypte/de-voorwerpen/schip-voor-na-de-dood/> ;
+   :earliest-date -4000 ;
+   :latest-date -3500 ;
+   :note "It is not clear what the figure lies in. Boat and womb have been suggested." ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.9 32.716667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Clay_figure_%28RMO_Leiden,_Egypt_Naqada_I_period,_~4000bc_25cm%29_%285097140487%29.jpg> .
+
 :miaodigou-phase-ceramic-head a :human-figure ;
    rdfs:label "Miaodigou Phase Ceramic Head" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Pottery_human_head,_excavated_in_Liujiahe_(柳家河),_Ankang_city,_Shaanxi._5000-3000_BCE._Shaanxi_Provincial_Institute_of_Archaeology.jpg> ;
