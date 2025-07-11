@@ -921,16 +921,6 @@
 #    :described-by <https://en.wikipedia.org/wiki/Venus_of_Langenzersdorf> ;
 #    :approximate-date -4825 .
 
-:figurine-oltenita a :human-figure ;
-   rdfs:label "Figurine from Oltenița" ;
-   :described-by <https://en.wikipedia.org/wiki/Gumelnița_culture#Gallery> ;
-   :earliest-date -4200 ;
-   :latest-date -3900 ;
-   :note "Mapped to modern town." ;
-   :in-modern-country-note "Romania" ;
-   :representative-latlong-point (44.086667 26.636667) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Oltenita_deity_holding_pot_gurnelnita_4600-3900_mnir.jpg> .
-
 :seated-female-pazardzik a :human-figure ;
    rdfs:label "Seated Female Figurine from Pazardzik" ;
    :described-by <https://artsandculture.google.com/asset/seated-idol-of-pazarzhik/1AHnWfBp7WALdg> ,
@@ -950,14 +940,6 @@
    :representative-latlong-point (38.812 27.896) ;
    :thumbnail-image <https://media.getty.edu/iiif/image/d74f9f56-a5b4-4af7-bef0-9a7391548daa/full/400,/0/default.jpg> .
 
-:rock-art-alta a :group-of-human-figures ;
-   rdfs:label "Rock Art at Alta" ;
-   :described-by <https://en.wikipedia.org/wiki/Rock_carvings_at_Alta> ;
-   :earliest-date -4200 ;
-   :latest-date -500 ;
-   :in-modern-country-note "Norway" ;
-   :representative-latlong-point (69.946944 23.187778) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:RockCarvings_in_Alta.jpg> .
 
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
@@ -988,6 +970,25 @@
    :note "Mapped generically to the Island of Karpathos for now." ;
    :representative-latlong-point (35.764416 27.180286) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_7/f3b0083f_2e76_490b_9fa3_a3b70074cb10/mid_00034725_001.jpg> .
+
+:figurine-oltenita a :human-figure ;
+   rdfs:label "Figurine from Oltenița" ;
+   :described-by <https://en.wikipedia.org/wiki/Gumelnița_culture#Gallery> ;
+   :earliest-date -4200 ;
+   :latest-date -3900 ;
+   :note "Mapped to modern town." ;
+   :in-modern-country-note "Romania" ;
+   :representative-latlong-point (44.086667 26.636667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Oltenita_deity_holding_pot_gurnelnita_4600-3900_mnir.jpg> .
+
+:rock-art-alta a :group-of-human-figures ;
+   rdfs:label "Rock Art at Alta" ;
+   :described-by <https://en.wikipedia.org/wiki/Rock_carvings_at_Alta> ;
+   :earliest-date -4200 ;
+   :latest-date -500 ;
+   :in-modern-country-note "Norway" ;
+   :representative-latlong-point (69.946944 23.187778) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:RockCarvings_in_Alta.jpg> .
 
 :cucuteni-trypillia-figurine a :human-figure ;
    rdfs:label "Cucuteni-Trypillia Figurine" ;
@@ -1025,13 +1026,14 @@
 
 :figure-laying-vessel a :human-figure ;
    rdfs:label "Figure Laying Down in Vessel" ;
-   :described-by <https://www.rmo.nl/museumkennis/egypte/de-voorwerpen/schip-voor-na-de-dood/> ;
+   :described-by <https://www.rmo.nl/museumkennis/egypte/de-voorwerpen/schip-voor-na-de-dood/> ,
+   <https://egypt-museum.com/model-boat-with-figurine-in-fetal-position/> ;
    :earliest-date -4000 ;
    :latest-date -3500 ;
    :note "It is not clear what the figure lies in. Boat and womb have been suggested." ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.9 32.716667) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Clay_figure_%28RMO_Leiden,_Egypt_Naqada_I_period,_~4000bc_25cm%29_%285097140487%29.jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Leiden_-_Rijksmuseum_van_Oudheden_-_Egyptian_antiquities_-_40.jpg> .
 
 :miaodigou-phase-ceramic-head a :human-figure ;
    rdfs:label "Miaodigou Phase Ceramic Head" ;
@@ -1052,6 +1054,15 @@
    :representative-latlong-point (27.516667 41.683333) ;
    :art-historical-culture-or-tradition :ancient-arabia ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_stele_at_National_Museum_of_Korea_02.jpg> .
+
+:merimde-clay-head a :human-figure ;
+   rdfs:label "Merimde Clay Head" ;
+   :described-by <https://en.wikipedia.org/wiki/Merimde_culture> ;
+   :earliest-date -4000 ;
+   :latest-date -3000 ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (30.316 30.85) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Merimde_clay_head,_Predynastic_Period,_Maadi_Era,_4th_millennium_BCE.jpg> .
 
 :reclining-figure-hal-saflieni a :human-figure ;
    rdfs:label "Reclining Figure from Hal Saflieni Hypogeum" ;
@@ -1107,6 +1118,16 @@
    :representative-latlong-point (25.121757 32.735297) ;
    :art-historical-culture-or-tradition :predynastic-egypt ;
    :thumbnail-image <https://imgsrv.brooklynmuseum.org/collections/objects/07.447.502_SL1.jpg?width=256&quality=75> .
+
+:predynastic-clay-mask a :human-figure ;
+   rdfs:label "Predynastic Clay Mask" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> ;
+   :earliest-date -3600 ;
+   :latest-date -3500 ;
+   :note "The Wiki Commons page quotes a description of findspot." ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.097222 32.779444) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> . 
 
 :predynastic-figurine-nubt a :human-figure ;
    rdfs:label "Predynastic Female Figurines possibly from Naqada" ;
