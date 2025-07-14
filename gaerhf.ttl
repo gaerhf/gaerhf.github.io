@@ -2333,6 +2333,15 @@
    :note "Mapped location is general for Glauberg, not specific for this figure." ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
 
+:behistun-relief-darius-i a :group-of-human-figures ;
+   rdfs:label "Behistun Relief of Darius I" ;
+   :described-by <https://en.wikipedia.org/wiki/Behistun_Inscription> ;
+   :earliest-date -522 ;
+   :latest-date -486 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (34.390556 47.435833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/Category:Behistun_Inscription#/media/File:39_Bistoun.jpg> .
+
 :euphronios-krater a :group-of-human-figures ;
    rdfs:label "Euphronios Krater" ;
    :described-by <https://en.wikipedia.org/wiki/Euphronios_Krater> ;
@@ -2381,9 +2390,16 @@
    :art-historical-culture-or-tradition :achaemenid-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Achaemenid_prince%27s_head_2.jpg> .
 
-# https://en.wikipedia.org/wiki/Pfalzfeld_obelisk
-# https://www.worldhistory.org/image/13484/the-pfalzfeld-pillar/
-# and "The Heidelberg head." https://de.wikipedia.org/wiki/Heidelberger_Kopf
+
+:pfalzfeld-obelisk a :group-of-human-figures ;
+   rdfs:label "Pfalzfeld Obelisk" ;
+   :described-by <https://en.wikipedia.org/wiki/Pfalzfeld_obelisk> ,
+   <https://www.worldhistory.org/image/13484/the-pfalzfeld-pillar/> ;
+   :earliest-date -500 ;
+   :latest-date -300 ;
+   :in-modern-country-note "Germany" ;
+   :representative-latlong-point (50.113889 7.579444) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:2018_Rheinisches_Landesmuseum_Bonn,_Pfalzfelder_Säule_1.jpg> .
 
 :warrior-of-mogente a :human-figure ;
    rdfs:label "Warrior of Mogente" ;
@@ -2469,7 +2485,17 @@
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (36.5359 -6.29755) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sarcófago_femenino_(21887254049).jpg> .
-   
+
+# and "The Heidelberg head." https://de.wikipedia.org/wiki/Heidelberger_Kopf
+
+:heidelberg-head a :human-figure ;
+   rdfs:label "Heidelberg Head" ;
+   :described-by <https://de.wikipedia.org/wiki/Heidelberger_Kopf> ;
+   :earliest-date -450 ;
+   :latest-date -380 ;
+   :in-modern-country-note "Germany" ;
+   :representative-latlong-point (49.407778 8.684167) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:20181124Heidelberger_Kopf.jpg> .
 
 :female-figure-guardamar a :human-figure ;
    rdfs:label "Female Figure from Guardamar" ;
@@ -2480,16 +2506,6 @@
    :representative-latlong-point (38.089722 -0.655) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Guardamar,_MARQ.JPG> .
 
-:condorhuasi-alamito-stone-mask a :human-figure ;
-   rdfs:label "Condorhuasi-Alamito Stone Mask" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/708743>,
-   <https://www.metmuseum.org/essays/stone-masks-and-figurines-from-northwest-argentina> ;
-   :earliest-date -400 ;
-   :latest-date 500 ;
-   :in-modern-country-note "Argentina" ;
-   :representative-latlong-point (-27.978864 -66.543650) ;
-   :note "Specific findspot not known." ;
-   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/708743/1696927/main-image> .  
 
 :kingsteignton-figure a :human-figure ;
    rdfs:label "Kingsteignton Figure" ;
@@ -2532,6 +2548,17 @@
    :earliest-date -400 ;
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317724/671376/main-image> .
+
+:condorhuasi-alamito-stone-mask a :human-figure ;
+   rdfs:label "Condorhuasi-Alamito Stone Mask" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/708743>,
+   <https://www.metmuseum.org/essays/stone-masks-and-figurines-from-northwest-argentina> ;
+   :earliest-date -400 ;
+   :latest-date 500 ;
+   :in-modern-country-note "Argentina" ;
+   :representative-latlong-point (-27.978864 -66.543650) ;
+   :note "Specific findspot not known." ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/708743/1696927/main-image> .  
 
 :hermes-infant-dionysos a :group-of-human-figures ;
    rdfs:label "Hermes with Infant Dionysos" ;
@@ -3556,6 +3583,17 @@
 
 # ??? https://artgallery.yale.edu/collections/objects/196592
 # https://collections.nmnh.si.edu/search/anth/?ark=ark:/65665/3d509babb24e74e989f371e4e9da45ee6
+
+:doshafri-simi-hatra a :group-of-human-figures ;
+   rdfs:label "Princess Doshafri and Princess Simi from Hatra" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Statues_of_princess_Doshafri_and_her_daughter_princess_Simi,_form_Hatra,_Iraq._2nd_century_CE._Iraq_Museum.jpg> ,
+   <https://www.worldhistory.org/image/10857/princess-doshafri-from-hatra/> ,
+   <https://www.worldhistory.org/image/10858/statue-of-princess-simi-from-hatra/> ;
+   :approximate-date 138 ;
+   :note "Simi statue is dated to 138 CE by its inscription." ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (35.588301 42.716673) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statues_of_princess_Doshafri_and_her_daughter_princess_Simi,_form_Hatra,_Iraq._2nd_century_CE._Iraq_Museum.jpg> .
 
 :la-mojarra-stela-1 a :human-figure ;
    rdfs:label "La Mojarra Stela 1" ;
