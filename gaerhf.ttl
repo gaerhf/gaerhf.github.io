@@ -2619,8 +2619,6 @@
    :note "See museum label in the linked Wikimedia Commons page." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa_(cropped).jpg> .
 
-# -300 - -124 https://en.wikipedia.org/wiki/Roquepertuse
-
 :seated-figure-roquepertuse a :human-figure ;
    rdfs:label "Seated Figure from Roquepertuse" ;
    :described-by <https://en.wikipedia.org/wiki/Roquepertuse> ;
@@ -3061,7 +3059,13 @@
    :representative-latlong-point (40.75 14.486111) ; # update with house ll
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pompeii-couple.jpg> .
 
-# approx 50 https://en.wikipedia.org/wiki/Natakamani
+:king-natakamani-queen-amanitore-naqa a :group-of-human-figures ;
+   rdfs:label "King Natakamani and Queen Amanitore Smiting Enemies" ;
+   :described-by <https://en.wikipedia.org/wiki/Naqa#Temple_of_Apedemak> ;
+   :approximate-date 50 ;
+   :in-modern-country-note "Sudan" ;
+   :representative-latlong-point (16.269444 33.275) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Naga_Löwentempel.jpg> .
 
 :fugoppe-cave-petroglyphs a :group-of-human-figures ;
    rdfs:label "Fugoppe Cave Petroglyphs" ;
@@ -3747,6 +3751,14 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:פסיפס_מהתקופה.jpg> .
 
 # 450 - 525 https://commons.wikimedia.org/wiki/File:Crowned_man,_Zafar.jpg
+
+:head-eutropios a :human-figure ;
+   rdfs:label "Head of Eutropius" ;
+   :described-by <https://en.wikipedia.org/wiki/Head_of_Eutropius> ;
+   :approximate-date 430 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.941111 27.341944) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:KHM_Wien_I_880_-_Büste_des_Eutropios.jpg> .
 
 :crystal-river-petroglyph a :human-figure ;
    rdfs:label "Crystal River Petroglyph" ;
