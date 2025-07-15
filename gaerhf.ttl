@@ -4000,6 +4000,14 @@
    :representative-latlong-point (34.462222 135.806472) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Takamat1.jpg> .
 
+:gullgubber-embracing-couple a :group-of-human-figures ;
+   rdfs:label "Gullgubber depicting Embracing Couple" ;
+   :described-by <https://en.wikipedia.org/wiki/Gullgubber> ;
+   :approximate-date 700 ;
+   :in-modern-country-note "Sweden" ;
+   :representative-latlong-point (58.4502349 14.9766312) ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Aska_in_Hagebyh%C3%B6ga_gold_foil_figure_2020-12_photo_Bj%C3%B6rn_Falkevik.jpg> .
+
 :leshan-giant-buddha a :human-figure ;
    rdfs:label "Leshan Giant Buddha" ;
    :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
