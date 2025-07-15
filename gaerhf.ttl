@@ -4103,6 +4103,14 @@
    :representative-latlong-point (16.763889 -89.1175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/Category:Altar_13_of_Caracol#/media/File:Altar_13_Mesoamerican_Gallery.JPG> .
 
+:cross-legged-figure-bucket a :human-figure ;
+   rdfs:label "Cross-legged Figure Bucket Ornament" ;
+   :described-by <https://en.wikipedia.org/wiki/Oseberg_Ship#Grave_goods> ;
+   :approximate-date 830 ;
+   :in-modern-country-note "Norway" ;
+   :representative-latlong-point (59.905 10.6844) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buckle_from_Oseberg_Vikingship_Buddha.JPG> .
+
 :bowl-figure-vessel a :human-figure ;
    rdfs:label "Bowl with Figure holding Vessel" ;
    :described-by <https://www.metmuseum.org/art/collection/search/449495> , 
