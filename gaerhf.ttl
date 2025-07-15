@@ -3973,6 +3973,15 @@
    :representative-latlong-point (20.208333 -90.485833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jaina_Island_type_figure,_Art_Institute.jpg> .
 
+:rinnegan-crucifixion-plaque a :group-of-human-figures ;
+   rdfs:label "Rinnegan Crucifixion Plaque" ;
+   :described-by <https://en.wikipedia.org/wiki/Rinnegan_Crucifixion_Plaque> ;
+   :earliest-date 675 ;
+   :latest-date 775 ;
+   :in-modern-country-note "Ireland" ;
+   :representative-latlong-point (53.5 -7.966667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Placca_della_crocifissione,_in_bronzo,_da_st._john%27s_rinnagan,_contea_di_roscommon,_viii_secolo.jpg> .
+
 :mask-of-k-inich-janaab-pakal a :human-figure ;
    rdfs:label "Mask of K'inich Janaab' Pakal" ;
    :described-by <https://en.wikipedia.org/wiki/Jade_mask_of_Pakal> ;
