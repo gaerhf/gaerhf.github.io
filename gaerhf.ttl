@@ -4340,6 +4340,15 @@
    :representative-latlong-point (13.4125 103.866667) ; # Angkhor as contemporary capital
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
 
+:anthropomorphic-helmet-visor a :human-figure ;
+   rdfs:label "Anthropomorphic Helmet Visor" ;
+   :described-by <https://nav.shm.ru/en/exhibits/1442/> ;
+   :earliest-date 1200 ;
+   :latest-date 1250 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (54.30441 35.56885) ;
+   :thumbnail-image <https://nav.shm.ru/upload/resize_cache/iblock/80b/862_630_1d7a58ff99b324185ccb5ad5dfbdb5e85/80b414d38f2daabb814baba685de1a96.png> .
+
 :kneeling-figuring-natamatao a :human-figure ;
    rdfs:label "Kneeling Figure from Natamatao" ;
    :described-by <https://caravans.library.northwestern.edu/works/15/> ;
