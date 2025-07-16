@@ -3478,6 +3478,7 @@
 
 :nijmegen-helmet a :group-of-human-figures ;
    rdfs:label "Nijmegen Helmet" ;
+   :described-by <https://en.wikipedia.org/wiki/Nijmegen_Helmet> ;
    :earliest-date 25 ;
    :latest-date 125 ;
    :in-modern-country-note "Netherlands" ;
@@ -3592,6 +3593,15 @@
    :representative-latlong-point (33.73 72.78) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dharmarajika_statuette.jpg> .
 
+:nola-helmet a :human-figure ;
+   rdfs:label "Nola Helmet" ;
+   :described-by <https://www.britishmuseum.org/collection/object/G_1824-0407-10?selectedImageId=308154001> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.926111 14.5275) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_parade_helmet_with_the_face_of_Amazon_from_Nola_100-200_AD_%2851233372856%29.jpg> .
+
 :tropaeum-traiani a :group-of-human-figures ;
    rdfs:label "Tropaeum Traiani" ;
    :described-by <https://en.wikipedia.org/wiki/Tropaeum_Traiani> ;
@@ -3643,6 +3653,16 @@
    :note "See Smithsonian page for findspot." ;
    :representative-latlong-point (18.466667 -95.433333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Estatuilla_de_Tuxtla.jpg> .
+
+:crosby-garrett-helmet a :human-figure ;
+   rdfs:label "Crosby Garrett Helmet" ;
+   :described-by <https://en.wikipedia.org/wiki/Crosby_Garrett_Helmet> ;
+   :earliest-date 175 ;
+   :latest-date 225 ;
+   :material-note "Copper Alloy" ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (54.479 -2.42) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Crosby_Garrett_Roman_cavalry_helmet.jpg> .
 
 :palmyrene-mother-daughter a :group-of-human-figures ;
    rdfs:label "Palmyrene Mother and Daughter" ;
