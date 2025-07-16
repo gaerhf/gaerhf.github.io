@@ -2996,11 +2996,20 @@
 
 :augustus-portrait-meroe a :human-figure ;
    rdfs:label "Portrait of Augustus from Meroë" ;
-   :described-by <https://en.wikipedia.org/wiki/Meroë_Head> ;
+   :described-by <https://en.wikipedia.org/wiki/Meroë_Head> ,
+   <https://www.bbc.co.uk/ahistoryoftheworld/objects/z0_uHq1TSnWMEHR_sZDc8g> ;
    :date -27 ;
    :in-modern-country-note "Sudan" ;
    :representative-latlong-point (16.933333 33.726389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_head_from_an_over-life-sized_statue_of_Augustus.jpg> .
+
+:emesa-helmet a :human-figure ;
+   rdfs:label "Emesa Helmet" ;
+   :described-by <https://en.wikipedia.org/wiki/Emesa_helmet> ;
+   :approximate-date 25 ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (34.73 36.697778) ;
+   :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/a/a5/Emesa_helmet.png?20180213011333> .
 
 :funerary-mask-thaj a :human-figure ;
    rdfs:label "Funerary Mask from Thaj" ;
@@ -3467,6 +3476,14 @@
    :note "The actual location of the cave is undisclosed so the point is only a loose indication." ;
    :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/Dv8f31kLl10lTcf26vzcZvHtNFA=/fit-in/1072x0/filters:focal(1631x746:1632x747)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/cc/41/cc4153f8-c421-4d57-8106-de2b5a5fc119/screen_shot_2022-05-02_at_115404_am.png> .
 
+:nijmegen-helmet a :group-of-human-figures ;
+   rdfs:label "Nijmegen Helmet" ;
+   :earliest-date 25 ;
+   :latest-date 125 ;
+   :in-modern-country-note "Netherlands" ;
+   :representative-latlong-point (51.8475 5.8625) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Nijmegen_cavalry_helmet,_an_iron_mask_sheathed_in_bronze_and_silver_discovered_in_1915_on_the_left_bank_of_the_Waal_river_near_Nijmegen,_second_half_of_the_first_century,_Museum_het_Valkhof,_Nijmegen_(Netherlands)_(9567074631).jpg> .
+
 :han-pottery-storyteller-beating-a-drum a :human-figure ;
    :described-by <https://en.chnmuseum.cn/collections_577/collection_highlights_608/archaeological_discoveries_609/202008/t20200831_247541.html> ;
    :period-note "Eastern Han Dynasty (China)" ;
@@ -3501,6 +3518,15 @@
    :in-modern-country-note "Philippines" ;
    :representative-latlong-point (6.03 124.48) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mindanao_Burial_Pottery_-_32843892691.jpg> .
+
+:ribcheter-helmet a :human-figure ;
+   rdfs:label "Ribchester Helmet" ;
+   :described-by <https://en.wikipedia.org/wiki/Ribchester_Helmet> ;
+   :earliest-date 75 ;
+   :latest-date 125 ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (53.813 -2.532) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ribchester_Helmet_c.jpg> .
 
 :roman-period-egyptian-funerary-portrait a :human-figure ;
    rdfs:label "Roman Period Egyptian Funerary Portrait" ;
@@ -3752,7 +3778,7 @@
 
 # 450 - 525 https://commons.wikimedia.org/wiki/File:Crowned_man,_Zafar.jpg
 
-:head-eutropios a :human-figure ;
+:head-eutropius a :human-figure ;
    rdfs:label "Head of Eutropius" ;
    :described-by <https://en.wikipedia.org/wiki/Head_of_Eutropius> ;
    :approximate-date 430 ;
@@ -3884,6 +3910,15 @@
    :representative-latlong-point (36.099 114.392) ;
    :note "Dispersed on art market after discovery. Said to be from Anyang." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anyang_funerary_bed,_Museum_of_Fine_Arts,_Boston,_1.jpg> .
+
+:sutton-hoo-helmet a :human-figure ;
+   rdfs:label "Sutton Hoo Helmet" ;
+   :described-by <https://en.wikipedia.org/wiki/Sutton_Hoo_helmet> ;
+   :earliest-date 600 ;
+   :latest-date 700 ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (52.089167 1.338056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sutton_Hoo_helmet_2016.png> .
 
 :el-peru-waka-burial-39-funerary-ritual-scene a :group-of-human-figures ;
    rdfs:label "El Perú-Waka Burial 39 Funerary Ritual Scence" ;
