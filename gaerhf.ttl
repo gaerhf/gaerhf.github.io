@@ -3520,7 +3520,7 @@
    :representative-latlong-point (6.03 124.48) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mindanao_Burial_Pottery_-_32843892691.jpg> .
 
-:ribcheter-helmet a :human-figure ;
+:ribchester-helmet a :human-figure ;
    rdfs:label "Ribchester Helmet" ;
    :described-by <https://en.wikipedia.org/wiki/Ribchester_Helmet> ;
    :earliest-date 75 ;
