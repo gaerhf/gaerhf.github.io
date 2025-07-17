@@ -930,6 +930,27 @@
    :representative-latlong-point (42.2 24.333333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:NHM_-_Pazardzik_Sitzidol.jpg> .
 
+:sesklo-figurine-with-child a :human-figure ;
+   rdfs:label "Sesklo Figurine with Child" ;
+   :described-by <https://www.namuseum.gr/en/monthly_artefact/beautiful-young-lady-of-the-neolithic-age/C> ;
+   :earliest-date -4800 ;
+   :latest-date -4500 ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (39.355 22.835) ;
+   :art-historical-culture-or-tradition :neolithic-greece ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_with_child_small_painted_terracott_neolithic,_NAMA_5937_080804.jpg> .
+
+:female-figurine-el-badari-louvre a :human-figure ;
+   rdfs:label "Female Figurine possibly from El-Badaari" ;
+   :described-by <https://collections.louvre.fr/ark:/53355/cl010007469> ,
+   <https://en.wikipedia.org/wiki/Badarian_culture> ;
+   :earliest-date -4500 ;
+   :latest-date -3600 ;
+   :in-modern-country-note "Egypt" ;
+   :note "It is not certain that El-Badari is the findspot." ;
+   :representative-latlong-point (26.9925 31.4156) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Egypte_louvre_314.jpg> .
+
 :kilia-type-figurine a :human-figure ;
    rdfs:label "Kilia-type Figurine" ;
    :described-by <https://www.getty.edu/art/collection/object/103WGQ> ;
@@ -940,15 +961,15 @@
    :representative-latlong-point (38.812 27.896) ;
    :thumbnail-image <https://media.getty.edu/iiif/image/d74f9f56-a5b4-4af7-bef0-9a7391548daa/full/400,/0/default.jpg> .
 
-:sesklo-figurine-with-child a :human-figure ;
-   rdfs:label "Sesklo Figurine with Child" ;
-   :described-by <https://www.namuseum.gr/en/monthly_artefact/beautiful-young-lady-of-the-neolithic-age/C> ;
-   :earliest-date -4800 ;
-   :latest-date -4500 ;
-   :in-modern-country-note "Greece" ;
-   :representative-latlong-point (39.355 22.835) ;
-   :art-historical-culture-or-tradition :neolithic-greece ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_with_child_small_painted_terracott_neolithic,_NAMA_5937_080804.jpg> .
+:female-figurine-el-badari-bm a :human-figure ;
+   rdfs:label "Female Figurine from El-Badari" ;
+   :described-by <https://www.britishmuseum.org/collection/object/Y_EA59648> ;
+   :earliest-date -4400 ;
+   :latest-date -4000 ;
+   :material-note "Hippopotamus Ivory" ;
+   :in-modern-country-note "Egypt" ;
+   :represenative-latlong-point (26.9925 31.4156) ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/50f5be40_b3f9_4600_8e01_a3b7006b9b66/mid_00032161_001.jpg> .
 
 :head-from-lake-varna a :human-figure ;
    rdfs:label "Head from Varna" ;
@@ -1126,6 +1147,14 @@
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.097222 32.779444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> . 
+
+:female-figurine-niuheliang a :human-figure ;
+   rdfs:label "Female Figurines from Niuheliang" ;
+   :described-by <https://en.wikipedia.org/wiki/Niuheliang> ;
+   :approximate-date -3500 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (41.322015 119.51319) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_pottery_pregnant_woman,_Hongshan_Culture,_Liaoning,_1982.JPG> .
 
 :predynastic-figurine-nubt a :human-figure ;
    rdfs:label "Predynastic Female Figurines possibly from Naqada" ;
@@ -1757,6 +1786,15 @@
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (35.2 26.25) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palaikastro_Kouros_08.jpg> .
+
+:cypriote-female-statuette-met a :human-figure ;
+   rdfs:label "Cypriote Female Statuette" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/241099> ;
+   :earliest-date -1450 ;
+   :latest-date 1200 ;
+   :in-modern-country-note "Cyprus" ;
+   :representative-latlong-point (35.1725 33.365) ;
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/gr/web-additional/DP105447.jpg> .
 
 :hollow-dogu a :human-figure ;
    rdfs:label "Hollow Dogū" ;
@@ -2390,7 +2428,6 @@
    :art-historical-culture-or-tradition :achaemenid-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Achaemenid_prince%27s_head_2.jpg> .
 
-
 :pfalzfeld-obelisk a :group-of-human-figures ;
    rdfs:label "Pfalzfeld Obelisk" ;
    :described-by <https://en.wikipedia.org/wiki/Pfalzfeld_obelisk> ,
@@ -2505,7 +2542,6 @@
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (38.089722 -0.655) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Guardamar,_MARQ.JPG> .
-
 
 :kingsteignton-figure a :human-figure ;
    rdfs:label "Kingsteignton Figure" ;
