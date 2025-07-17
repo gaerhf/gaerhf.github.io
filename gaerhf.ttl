@@ -1083,6 +1083,17 @@
    :representative-latlong-point (30.316 30.85) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Merimde_clay_head,_Predynastic_Period,_Maadi_Era,_4th_millennium_BCE.jpg> .
 
+:stone-amulet-dornod-mongolia a :human-figure ;
+   rdfs:label "Stone amulet from Dornod Region, Mongolia" ;
+   :decribed-by <https://en.wikipedia.org/wiki/Prehistoric_Mongolia> , 
+   <https://www.flickr.com/photos/101561334@N08/35545137942/in/photostream/> ;
+   :earliest-date -4000 ;
+   :latest-date -3000 ;
+   :in-modern-country-note "Mongolia" ;
+   :representative-latlong-point (48.066667 114.5) ;
+   :note "Generic point within Dornod Province" ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_stone_amulet,_Dornod,_Mongolia,_4000-3000_BCE.jpg> .
+
 :reclining-figure-hal-saflieni a :human-figure ;
    rdfs:label "Reclining Figure from Hal Saflieni Hypogeum" ;
    :described-by <https://www.worldhistory.org/image/245/the-sleeping-lady/> ,
