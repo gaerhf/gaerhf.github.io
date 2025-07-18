@@ -1223,6 +1223,15 @@
    :art-historical-culture-or-tradition :sumerian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_mask_(cropped).jpg> .
 
+:idol-garrovillas a :human-figure ;
+   rdfs:label "So-called Idol of Garrovillas" ;
+   :described-by <https://es.m.wikipedia.org/wiki/Ídolo_de_Garrovillas> ;
+   :earliest-date -3200 ;
+   :latest-date -2200 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (39.7131229 -6.5494671) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Garrovillas_de_Alconétar-Idolo_oculado_de_arenisca.jpg> .
+
 :figure-majiayao-vessel a :human-figure ;
    rdfs:label "Figure on Majiayao Vessel" ;
    :described-by <https://en.wikipedia.org/wiki/Majiayao_culture#Pottery>,
@@ -1606,17 +1615,6 @@
    :representative-latlong-point (52.375930 84.937368) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karakol_culture_stone_sculpture._Anokhin_Museum,_Gorno-Altaysk,_Altai_Republic,_Siberia,_Russia.jpg> .
 
-:figure-riding-animal a :human-figure ;
-   rdfs:label "Figure Riding Animal" ;
-   :described-by <https://www.britishmuseum.org/collection/object/W_1897-0511-104> ;
-   :earliest-date -2000 ;
-   :latest-date -1800 ;
-   :in-modern-country-note "Iraq" ;
-   :representative-latlong-point (31.287459 46.094633) ;
-   :art-historical-culture-or-tradition :elamite-culture ;
-   :note "The date of this piece is uncertain and the findspot is unknown. Mapped to ‘southern Iraq’." ;
-   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/19d9f995_395f_4e0f_b9f7_a3b7006cfa12/mid_00032589_001.jpg> .
-
 :cypriot-red-polished-ware-plank-figure a :human-figure ;
    rdfs:label "Cypriot Red Polished Ware Figure" ;
    :described-by <https://www.getty.edu/art/collection/object/108J4B> ;
@@ -1639,6 +1637,17 @@
    :representative-latlong-point (27.335167 68.143889) ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Mohenjo-daro_Priesterkönig.jpeg> .
 
+:figure-riding-animal a :human-figure ;
+   rdfs:label "Figure Riding Animal" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1897-0511-104> ;
+   :earliest-date -2000 ;
+   :latest-date -1800 ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (31.287459 46.094633) ;
+   :art-historical-culture-or-tradition :elamite-culture ;
+   :note "The date of this piece is uncertain and the findspot is unknown. Mapped to ‘southern Iraq’." ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/19d9f995_395f_4e0f_b9f7_a3b7006cfa12/mid_00032589_001.jpg> .
+
 :wandjina-rock-art-mount-elizabeth-station a :group-of-human-figures ;
    rdfs:label "Wandjina Rock Art" ;
    :described-by <https://en.wikipedia.org/wiki/Mount_Elizabeth_Station> ;
@@ -1648,6 +1657,15 @@
    :representative-latlong-point (-16.4185 126.1028) ;
    :earliest-date -2000 ;
    :latest-date -1800 .
+
+:idol-ciudad-rodrigo a :human-figure ;
+   rdfs:label "So-called Idol of Ciudad Rodrigo" ;
+   :described-by <https://es.m.wikipedia.org/wiki/Ídolo_de_Ciudad_Rodrigo> ;
+   :earliest-date -2000 ;
+   :latest-date -1500 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (40.599167 -6.528889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ídolo_de_Ciudad_Rodrigo._Bronce_Antiguo-Medio.jpg> .
 
 :poverty-point-figurines a :group-of-human-figures ;
    rdfs:label "Poverty Point Figurines" ;
