@@ -943,6 +943,15 @@
    :art-historical-culture-or-tradition :neolithic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_with_child_small_painted_terracott_neolithic,_NAMA_5937_080804.jpg> .
 
+:female-figurine-caelic a :human-figure ;
+   rdfs:label "Female Figurines from Cealîc" ;
+   :described-by <https://www.nationalmuseum.md/en/news/arhive/march_2023/> ;
+   :earliest-date -4600 ;
+   :latest-date -4400 ;
+   :in-modern-country-note "Moldova" ;
+   :representative-latlong-point (45.994692 28.552875) ;
+   :thumbnail-image <https://www.nationalmuseum.md/files/2857.jpg> .
+
 :seated-female-pazardzik a :human-figure ;
    rdfs:label "Seated Female Figurine from Pazardzik" ;
    :described-by <https://artsandculture.google.com/asset/seated-idol-of-pazarzhik/1AHnWfBp7WALdg> ,
@@ -3125,6 +3134,18 @@
    :in-modern-country-note "Ireland" ;
    :representative-latlong-point (53.9726 -6.9975) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Corleck_Head_A4.jpg> .
+
+:figurine-temple-foret-halatte-belly a :human-figure ;
+   rdfs:label "Figurine from Temple of forêt d’Halatte with Prominent Belly" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Ex-voto_gallo-romain_Halatte_070908_05.jpg> ,
+      <https://commons.wikimedia.org/wiki/Category:Ex-voto_gallo-romain_de_Halatte> ,
+      <https://musees.ville-senlis.fr/ex-voto-du-temple-gallo-romain-de-la-foret-dhalatte/> ;
+   :note "This is one of a group. See links. This figure has been interpreted as representing a pregnant woman." ;
+   :earliest-date 1 ;
+   :latest-date 500 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (49.242222 2.625833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ex-voto_gallo-romain_Halatte_070908_05.jpg> .
 
 :san-agustin-megaliths a :group-of-human-figures ;
    rdfs:label "San Agustin Megaliths" ;
