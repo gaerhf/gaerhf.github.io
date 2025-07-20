@@ -443,6 +443,16 @@
    :representative-latlong-point (1.241472 117.329111) ;
    :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/z-zenrrnbTxRMap28ZLM2TeAF60=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d3/70/d370e4f4-292a-4ca6-8010-f1f27a15b433/humans-3.jpg> .
 
+:ignatievka-cave-paintings a :group-of-human-figures ;
+   rdfs:label "Ignatievka Cave Paintins" ;
+   :described-by <https://en.wikipedia.org/wiki/Ignatievka_Cave> ,
+      <https://pmc.ncbi.nlm.nih.gov/articles/PMC8048586/> ;
+   :earliest-date -16300 ;
+   :latest-date -13800 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (54.899167 57.780556) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Рисунок_первобытного_человека_в_Игнатьевской_пещере.jpg> .
+
 :female-figurine-eliseevichi a :human-figure ;
    rdfs:label "Female Figurine from Eliseevichi" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Eliseevichi> ;
@@ -505,7 +515,8 @@
 
 :shigir-anthropomorphic-figure a :human-figure ;
    rdfs:label "Shigir Anthropomorphic Figure" ;
-   :described-by <https://en.wikipedia.org/wiki/Shigir_Idol> ;
+   :described-by <https://en.wikipedia.org/wiki/Shigir_Idol> ,
+   <https://www.sciencedirect.com/science/article/abs/pii/S1040618220306455> ;
    :earliest-date -11000 ;
    :latest-date -9000 ;
    :material-note "Wood" ;
@@ -921,14 +932,6 @@
 #    :described-by <https://en.wikipedia.org/wiki/Venus_of_Langenzersdorf> ;
 #    :approximate-date -4825 .
 
-:seated-female-pazardzik a :human-figure ;
-   rdfs:label "Seated Female Figurine from Pazardzik" ;
-   :described-by <https://artsandculture.google.com/asset/seated-idol-of-pazarzhik/1AHnWfBp7WALdg> ,
-    <https://en.wikipedia.org/wiki/Karanovo_culture> ;
-   :approximate-date -4500 ;
-   :in-modern-country-note "Bulgaria" ;
-   :representative-latlong-point (42.2 24.333333) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:NHM_-_Pazardzik_Sitzidol.jpg> .
 
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
@@ -939,6 +942,25 @@
    :representative-latlong-point (39.355 22.835) ;
    :art-historical-culture-or-tradition :neolithic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_with_child_small_painted_terracott_neolithic,_NAMA_5937_080804.jpg> .
+
+:seated-female-pazardzik a :human-figure ;
+   rdfs:label "Seated Female Figurine from Pazardzik" ;
+   :described-by <https://artsandculture.google.com/asset/seated-idol-of-pazarzhik/1AHnWfBp7WALdg> ,
+    <https://en.wikipedia.org/wiki/Karanovo_culture> ;
+   :approximate-date -4500 ;
+   :in-modern-country-note "Bulgaria" ;
+   :representative-latlong-point (42.2 24.333333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:NHM_-_Pazardzik_Sitzidol.jpg> .
+
+:seated-figure-vinca a :human-figure ;
+   rdfs:label "Seated Figure from Vinča-Belo Brdo" ;
+   :described-by <https://en.wikipedia.org/wiki/Vinča-Belo_Brdo#Vinča_period,_c._5200–4500_BCE> ,
+   <https://www.britishmuseum.org/collection/object/H_1939-0704-1>  ;
+   :earliest-date -4500 ;
+   :latest-date -4000 ;
+   :in-modern-country-note "Serbia" ;
+   :representative-latlong-point (44.761944 20.623056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vinca_clay_figure_02.jpg> .
 
 :female-figurine-el-badari-louvre a :human-figure ;
    rdfs:label "Female Figurine possibly from El-Badaari" ;
