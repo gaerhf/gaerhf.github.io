@@ -2594,6 +2594,15 @@
    :representative-latlong-point (49.407778 8.684167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:20181124Heidelberger_Kopf.jpg> .
 
+:figures-dagger-filippovka-kurgan-4 a :group-of-human-figures ;
+   rdfs:label "Figures on Dagger from Kurgan 4 at Filippovka" ;
+   :described-by <https://en.wikipedia.org/wiki/Filippovka_kurgans#Anthropology> ;
+   :earliest-date -450 ;
+   :latest-date -300 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (51.342968 54.116974 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Filippovka_kurgan_dagger.jpg> .
+
 :female-figure-guardamar a :human-figure ;
    rdfs:label "Female Figure from Guardamar" ;
    :described-by <https://en.wikipedia.org/wiki/Lady_of_Guardamar> ;
@@ -3341,6 +3350,18 @@
 #    <https://romaninscriptionsofbritain.org/inscriptions/1181> ;
 #    :earliest-date 350 ;
 #    :latest-date 450 .
+
+:tenon-heads-tiwanaku a :group-of-human-figures ;
+   rdfs:label "Tenon Heads from Semi-subterranean Temple at Tiwanaki" ;
+   :described-by <https://smarthistory.org/semi-subterranean-court-tiwanaku/> ,
+      <https://www.worldhistory.org/image/2403/semi-subterranean-temple-tiwanaku/> ,
+      <https://commons.wikimedia.org/wiki/Category:Tiwanaku_Semi-subterranean_Temple> ;
+   :earliest-date 300 ;
+   :latest-date 1100 ;
+   :note "Date range may be too broad. THe heads were an ongoing additoin to the retaining walls." ;
+   :in-modern-country-note "Bolivia" ;
+   :representative-latlong-point (-16.554682 -68.672476 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BO_Tihuanako_(89)_(16608396853).jpg> .
 
 :coronation-ardashir-ii-relief a :group-of-human-figures ;
    rdfs:label "Coronation of Ardashir II Relief" ;
