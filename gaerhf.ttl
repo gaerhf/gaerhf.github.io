@@ -1637,6 +1637,16 @@
    :representative-latlong-point (31.562028 46.177583) ; # ll for Girsu, Iraq
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg> .
 
+:bowl-figures-bellapais-vounous a :group-of-human-figures ;
+   rdfs:label "Bowl with Figures from Bellapais Vounous" ;
+   :described-by <https://www.livescience.com/archaeology/vounous-bowl-a-4-000-year-old-basin-holding-4-miniature-cows-and-18-people-that-was-buried-for-mysterious-reasons-in-a-bronze-age-tomb-in-cyprus> ,
+      <https://www.ancientcyprus.com/sites/bellapais-vounous> ;
+   :earliest-date -2050 ;
+   :latest-date -1800 ;
+   :in-modern-country-note "Northern Cyprus" ;
+   :representative-latlong-point (35.3 33.35) ;
+   :thumbnail-image <https://d3rfecmxqkrsyb.cloudfront.net/sites/vounous.webp> .
+
 :karakol-funerary-marker-face a :human-figure ;
    rdfs:label "Karakol Culture Funerary Marker with Face" ;
    :described-by <https://en.wikipedia.org/wiki/Karakol_culture> ;
