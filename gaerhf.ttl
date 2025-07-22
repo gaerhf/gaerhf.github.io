@@ -2713,6 +2713,16 @@
 
 # -300 -- https://commons.wikimedia.org/wiki/File:Majiayuan_tomb_figurines.jpg
 
+:scultpures-tel-abrak a :group-of-human-figures ;
+   rdfs:label "Parthian(?) Sculptures from Tel Abrak" ;
+   :described-by <https://en.wikipedia.org/wiki/Tell_Abraq#Archaeology> ;
+   :earliest-date -300 ;
+   :latest-date -200 ;
+   :note "Date taken from wikipedia. Is it too narrow?" ;
+   :in-modern-country-note "United Arab Emirates" ;
+   :representative-latlong-point (25.483333 55.55) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Two_Hellenistic_or_Parthian_style_statues_found_at_the_Tell_Abraq_site_from_the_3rd_Century_BCE..jpg> .
+
 :didarganj-yakshi a :human-figure ;
    rdfs:label "Didarganj Yakshi" ;
    :described-by <https://en.wikipedia.org/wiki/Didarganj_Yakshi> ,
