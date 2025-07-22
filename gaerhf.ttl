@@ -2280,6 +2280,16 @@
    :representative-latlong-point (36.535 -6.2975) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sacerdote_de_Cádiz_-_M.A.N._02.jpg> .
 
+:figurine-xanab-chak a :human-figure ;
+   rdfs:label "Figurine from Xanab Chak" ;
+   :described-by <https://archaeology.org/issues/online/artifacts/maya-ceramic-figurine/> ;
+   :earliest-date -700 ;
+   :latest-date -500 ;
+   :note "Mapped point is approximate, need more precise coordinates for site." ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (20.304733 -89.775607) ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/05/JA25-Artifact-Maya-Figurine.jpg> .
+
 :mantiklos-apollo a :human-figure ;
    rdfs:label "Mantiklos Apollo" ;
    :described-by <https://collections.mfa.org/objects/152660>,
