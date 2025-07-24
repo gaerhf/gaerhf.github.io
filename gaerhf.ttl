@@ -3438,11 +3438,11 @@
 
 # 550 https://en.wikipedia.org/wiki/Head_of_Eutropius
 
-:maitreya-in-meditation a :human-figure ;
-   :described-by <https://www.metmuseum.org/perspectives/pensive-treasure>, <https://www.museum.go.kr/site/eng/relic/represent/view?relicId=1256> ;
-   :period-note "Three Kingdoms Period (Korea)" ;
-   :earliest-date 550 ;
-   :latest-date 650 .
+# :maitreya-in-meditation a :human-figure ;
+#    :described-by <https://www.metmuseum.org/perspectives/pensive-treasure>, <https://www.museum.go.kr/site/eng/relic/represent/view?relicId=1256> ;
+#    :period-note "Three Kingdoms Period (Korea)" ;
+#    :earliest-date 550 ;
+#    :latest-date 650 .
 
 :screen-tomb-sima-jinlong a :group-of-human-figures ;
    rdfs:label "Screen from Tomb of Sima Jinlong" ;
@@ -3454,11 +3454,11 @@
    :note "On the list of objects that cannot be removed from China for display." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funerary_panels,_from_the_tomb_of_Sima_Jinlong,_484_CE._Datong,_Shanxi_Province.jpg> .
 
-:horse-rider-shaped-vessels a :human-figure ;
-   :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519710> ;
-   :period-note "Silla Kingdom (Korea)" ;
-   :earliest-date 500 ;
-   :latest-date 500 .
+# :horse-rider-shaped-vessels a :human-figure ;
+#    :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519710> ;
+#    :period-note "Silla Kingdom (Korea)" ;
+#    :earliest-date 500 ;
+#    :latest-date 500 .
 
 :balbal-burana-tower a :human-figure ;
    rdfs:label "Stone Balbal near Burana Tower" ;
@@ -3477,15 +3477,17 @@
    :described-by <https://en.wikipedia.org/wiki/Buddhas_of_Bamiyan> ;
    :earliest-date 570 ;
    :latest-date 625 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.832 67.8267) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_of_Bamiyan.jpg> .
 
-:biamsa-temple-buddhist-stele a :human-figure ;
-   :described-by <https://www.worldhistory.org/image/6051/buddhist-stele-unified-silla-kingdom/> , <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=1818791> ;
-   :period-note "Unified Silla Kingdom (Korea)" ;
-   :earliest-date 650 ;
-   :latest-date 700 .
+# :biamsa-temple-buddhist-stele a :human-figure ;
+#    :described-by <https://www.worldhistory.org/image/6051/buddhist-stele-unified-silla-kingdom/> , <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=1818791> ;
+#    :period-note "Unified Silla Kingdom (Korea)" ;
+#    :material-note "Soapstone" ;
+#    :earliest-date 650 ;
+#    :latest-date 700 .
 
 :colossal-reclining-buddha-wat-dhammachaksemaram a :human-figure ;
    rdfs:label "Colossal Reclining Buddha at Wat Dhammachaksemaram" ;
@@ -3497,17 +3499,19 @@
    :representative-latlong-point (14.9723 102.1) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Wat_Dhammachaksemaram-HDR.jpg> .
 
-:gilt-bronze-bhaisajyaguru-buddha a :human-figure ;
-   :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=1818774> ;
-   :period-note "Unified Silla Kingdom (Korea)" ;
-   :earliest-date 676 ;
-   :latest-date 935 .
+# :gilt-bronze-bhaisajyaguru-buddha a :human-figure ;
+#    :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=1818774> ;
+#    :period-note "Unified Silla Kingdom (Korea)" ;
+#    :earliest-date 676 ;
+#    :latest-date 935 ;
+#    :material-note "Bronze" .
 
-:sarira-reliquaries a :human-figure ;
-   :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519700> ;
-   :period-note "Unified Silla Kingdom (Korea)" ;
-   :earliest-date 675 ;
-   :latest-date 685 .
+# :sarira-reliquaries a :human-figure ;
+#    :described-by <https://www.museum.go.kr/site/eng/relic/recommend/view?relicRecommendId=519700> ;
+#    :period-note "Unified Silla Kingdom (Korea)" ;
+#    :earliest-date 675 ;
+#    :latest-date 685 ;
+#    :material-note "Gilt bronze" .
 
 # :gandhara-bodhisattva a :human-figure ;
 #    :described-by <https://csmvs.in/collections/bodhisattva/> ;
@@ -4085,6 +4089,7 @@
    :described-by <https://en.wikipedia.org/wiki/Anyang_funerary_bed> ;
    :earliest-date 550 ;
    :latest-date 577 ;
+   :material-note "Marble" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (36.099 114.392) ;
    :note "Dispersed on art market after discovery. Said to be from Anyang." ;
@@ -4106,6 +4111,7 @@
    <https://vimeo.com/223731688> ;
    :earliest-date 600 ;
    :latest-date 650 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Guatemala" ;
    :representative-latlong-point (17.2783 -90.3806) ;
    :thumbnail-image <https://unframed.lacma.org/sites/default/files/attachments/AncientBodies_Grouping1.png> .
@@ -4120,6 +4126,7 @@
    <https://en.wikipedia.org/wiki/Fondukistan_monastery> ;
    :earliest-date 600 ;
    :latest-date 700 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.969591 68.876891) ; # Kabul, Afghanistan
    :thumbnail-image <https://www.guimet.fr/sites/default/files/styles/width_1220px/public/2023-07/divinite-assise-en-delassement.jpg?itok=rlsorMb_> .
@@ -4130,6 +4137,7 @@
    :period-note "Pallava Dynasty (India)" ;
    :earliest-date 600 ;
    :latest-date 700 ;
+   :material-note "Stone" ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (12.6175 80.198889) ; # Mahabalipuram, India
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg> .
@@ -4139,6 +4147,7 @@
    :described-by <https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones#The_battle_scene_on_Aberlemno_2> ;
    :earliest-date 600 ;
    :latest-date 800 ;
+   :material-note "Stone" ;
    :in-modern-country-note "Scotland" ;
    :art-historical-culture-or-tradition :pictish-art ;
    :representative-latlong-point (56.689167 -2.781389) ;
@@ -4162,6 +4171,7 @@
    :described-by <https://en.wikipedia.org/wiki/Afrasiab_murals> ;
    :earliest-date 640 ;
    :latest-date 660 ;
+   :material-note "Plaster, pain" ;
    :in-modern-country-note "Uzbekistan" ;
    :representative-latlong-point (39.6693 66.9934) ; # Samarkand, Uzbekistan
    :art-historical-culture-or-tradition :sogdian-art ;
@@ -4172,6 +4182,7 @@
    :described-by <https://art.thewalters.org/object/48.2849/> ;
    :earliest-date 650 ;
    :latest-date 800 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-13.163056 -74.224444) ; # Ayacucho
    :note "The mapped location is only a general indication of origin region.." ;
@@ -4183,6 +4194,7 @@
    :described-by <https://en.wikipedia.org/wiki/Jaina_Island> ;
    :earliest-date 650 ;
    :latest-date 800 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Mexixo" ;
    :representative-latlong-point (20.208333 -90.485833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jaina_Island_type_figure,_Art_Institute.jpg> .
@@ -4200,6 +4212,7 @@
    rdfs:label "Mask of K'inich Janaab' Pakal" ;
    :described-by <https://en.wikipedia.org/wiki/Jade_mask_of_Pakal> ;
    :date 683 ;
+   :material-note "Jade, shell, nacre, obsidian" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (17.4836 -92.0468) ; # Temple of the Inscriptions, Palenque, Mexico
    :art-historical-culture-or-tradition :maya-culture ;
@@ -4218,6 +4231,7 @@
    rdfs:label "Gullgubber depicting Embracing Couple" ;
    :described-by <https://en.wikipedia.org/wiki/Gullgubber> ;
    :approximate-date 700 ;
+   :material-note "Gold" ;
    :in-modern-country-note "Sweden" ;
    :representative-latlong-point (58.4502349 14.9766312) ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Aska_in_Hagebyh%C3%B6ga_gold_foil_figure_2020-12_photo_Bj%C3%B6rn_Falkevik.jpg> .
@@ -4227,6 +4241,7 @@
    :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
    :earliest-date 713 ;
    :latest-date 803 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (29.544722 103.773333) ; # Leshan, China
    :art-historical-culture-or-tradition :tang-dynasty ;
@@ -4236,6 +4251,7 @@
    rdfs:label "Uaxaclajuun Ub'aah K'awiil on Stela H at Copan" ;
    :described-by <https://en.wikipedia.org/wiki/Copán#Monuments> ;
    :approximate-date 720 ;
+   :material-note "Stone" ;
    :in-modern-country-note "Honduras" ;
    :representative-latlong-point (14.8375 -89.1425) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Copan_(3831024263).jpg> .
@@ -4245,6 +4261,7 @@
    :described-by <https://en.wikipedia.org/wiki/Borobudur#Reliefs> ;
    :earliest-date 750 ;
    :latest-date 850 ;
+   :material-note "Stone" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-7.608 110.204) ; # Borobudur, Indonesia
    :art-historical-culture-or-tradition :sailendra-dynasty ;
@@ -4255,6 +4272,7 @@
    :described-by <https://en.wikipedia.org/wiki/Atlantean_figures#Tula> ;
    :earliest-date 750 ;
    :latest-date 950 ;
+   :material-note "Limestone, sandstone, volcanic rock" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (20.064156 -99.340803) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Telamones_Tula.jpg> .
@@ -4264,6 +4282,7 @@
    :described-by <https://en.wikipedia.org/wiki/Bonampak#Temple_of_the_Murals> ;
    :earliest-date 790 ;
    :latest-date 800 ;
+   :material-note "Plaster" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (16.704 -91.065) ; # Site
    :art-historical-culture-or-tradition :maya-culture ;
@@ -4274,6 +4293,7 @@
    :described-by <https://en.wikipedia.org/wiki/Aachen_Gospels_(Ada_School)> ;
    :earliest-date 800 ;
    :latest-date 810 ;
+   :material-note "Animal parchment" ;
    :in-modern-country-note "Germany" ;
    :representative-latlong-point (50.775036 6.082817) ; # Aachen
    :art-historical-culture-or-tradition :carolingian-renaissance ;
@@ -4304,6 +4324,7 @@
    :described-by <https://en.wikipedia.org/wiki/Muiredach%27s_High_Cross> ;
    :earliest-date 800 ;
    :latest-date 1000 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "Ireland" ;
    :representative-latlong-point (53.7775 -6.4175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monasterboice_(52358533944).jpg> .
@@ -4313,6 +4334,7 @@
    :described-by <https://en.wikipedia.org/wiki/Tazumal#Sculpture> ;
    :earliest-date 800 ;
    :latest-date 1200 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "El Salvador" ;
    :representative-latlong-point (13.979444 -89.674167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:ES_Tazumal_06_2011_Xipe_Totec_2292.jpg> .
@@ -4321,6 +4343,7 @@
    rdfs:label "Altar 13 at Caracol" ;
    :described-by <https://en.wikipedia.org/wiki/Caracol#Altar_13> ;
    :date 820 ;
+   :material-note "Stone" ;
    :in-modern-country-note "Belize" ;
    :representative-latlong-point (16.763889 -89.1175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/Category:Altar_13_of_Caracol#/media/File:Altar_13_Mesoamerican_Gallery.JPG> .
@@ -4348,6 +4371,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/446285> ;
    :earliest-date 900 ;
    :latest-date 1025 ;
+   :material-note "Elephant Ivory" ;
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (37.89 -4.78) ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/is/web-additional/is13.141.R.jpg> .
@@ -4357,6 +4381,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/316431> ;
    :earliest-date 900 ;
    :latest-date 1100 ;
+   :material-note "Gold" ;
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-6.435556 -79.933889) ;
    :note "Exact findspot not known." ;
@@ -4367,6 +4392,7 @@
    :described-by <https://en.wikipedia.org/wiki/Archaeology_of_Igbo-Ukwu> ;
    :earliest-date 900 ;
    :latest-date 1100;
+   :material-note "Bronze" ;
    :art-historical-culture-or-tradition :kingdom-of-nri ;
    :in-modern-country-note "Nigeria" ;
    :representative-latlong-point (6.016667 7.016667) ;
@@ -4378,6 +4404,7 @@
       <https://smarthistory.org/huastec-life-death-figure/> ;
    :earliest-date 900 ;
    :latest-date 1250 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (21.956361 -99.591496) ;
    :note "Mapped point approximate on basis of findspot description." ;
@@ -4399,6 +4426,7 @@
    :described-by <https://en.wikipedia.org/wiki/Ninemile_Canyon_(Utah)#Archaeology> ;
    :earliest-date 950 ;
    :latest-date 1250 ;
+   :material-note "Stone" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.816659 -110.319498) ;
    :note "Approximate locatoin" ;
@@ -4411,6 +4439,7 @@
     <https://www.nps.gov/care/learn/historyculture/fremont-culture-petroglyphs.htm> ;
    :earliest-date 950 ;
    :latest-date 1250 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (38.087321 -111.135686) ;
    :note "Approximate locatoin" ;
@@ -4422,6 +4451,7 @@
    <https://www.guimet.fr/fr/nos-collections/asie-du-sud-est/le-combat-entre-les-demons-sunda-et-upasunda> ;
    :earliest-date 967 ;
    :latest-date 1000 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "Cambodia" ;
    :art-historical-culture-or-tradition :khmer-empire ;
    :representative-latlong-point (13.598889 103.962778) ;
@@ -4435,6 +4465,7 @@
    rdfs:label "Taino Stand in Human Form" ;
    :described-by <https://www.metmuseum.org/art/collection/search/312602> ;
    :approximate-date 1000 ;
+   :material-note "Guaiacum wood, Shell" ;
    :in-modern-country-note "Dominican Republic" ;
    :representative-latlong-point (19 -70.666667) ;
    :note "Findspot unknown" ;
@@ -4445,6 +4476,7 @@
    :described-by <https://en.wikipedia.org/wiki/Dresden_Codex> ;
    :earliest-date 1000 ;
    :latest-date 1200 ;
+   :material-note "Amate (bark paper), pigment" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (20.683056 -88.568611) ; # Chichen Itza
    :art-historical-culture-or-tradition :maya-culture ;
@@ -4457,6 +4489,7 @@
       <https://en.wikipedia.org/wiki/Hoa_Hakananai%27a> ;
    :earliest-date 1000 ;
    :latest-date 1200 ;
+   :material-note "Basalt stone" ;
    :in-modern-country-note "Chile" ;
    :representative-latlong-point (-27.12 -109.35) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Basalt_statue,_Hoa_Hakananai%27a_(hidden_or_stolen_friend)._Moai;_an_ancestor_figure,_made_by_the_Rapanui_people._1000-1200_CE._From_Orongo_(Polynesia,_Easter_Island);_probably_made_in_Rano_Kao._British_Museum.jpg> .
@@ -4466,6 +4499,7 @@
    :described-by <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600_full.html> ;
    :earliest-date 1020 ;
    :latest-date 1140 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :anasazi ;
    :representative-latlong-point (36.0698 -107.9574) ;
@@ -4476,6 +4510,7 @@
    :described-by <https://en.wikipedia.org/wiki/Maya_Codex_of_Mexico> ;
    :earliest-date 1021 ;
    :latest-date 1152 ;
+   :material-note "Tree bark" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (16.53 -92.45) ; # Chiapas from wikipedia page
    :art-historical-culture-or-tradition :maya-culture ;
@@ -4487,6 +4522,7 @@
    :period-note "Cahokia (Illinois)" ;
    :earliest-date 1050 ;
    :latest-date 1200 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (38.8275 -89.9355) ; # BBB site bounding box from TDAR
    :art-historical-culture-or-tradition :mississippian ;
@@ -4498,6 +4534,7 @@
    :described-by <https://en.wikipedia.org/wiki/Pilling_Figurines>,
    <https://eastern.usu.edu/prehistoric-museum/exhibits/archaeology/pilling-figurines> ;
    :approximate-date 1050 ;
+   :material-note "Unfired Clay" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.3075 -110.057222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PillingFigurines01.jpg> .
@@ -4507,6 +4544,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/37791> ;
    :earliest-date 1075 ;
    :latest-date 1100 ;
+   :material-note "Wood" ;
    :in-modern-country-note "Nepal" ;
    :representative-latlong-point (27.666314 85.353615) ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/as/web-additional/DP-30181-001.jpg> .
@@ -4517,6 +4555,7 @@
    :period-note "Cahokia (Illinois)" ;
    :earliest-date 1100 ;
    :latest-date 1200 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (35.311944 -94.568611) ; # Spiro mounds
    :art-historical-culture-or-tradition :mississippian ;
@@ -4527,6 +4566,7 @@
    :described-by <https://en.wikipedia.org/wiki/Statue_of_Parakramabahu_I> ;
    :earliest-date 1100 ;
    :latest-date 1200 ;
+   :material-note "Stone" ;
    :modern-country-note "Sri Lanka" ;
    :representative-latlong-point (7.92627 80.99484) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Relief_of_Parakramabahu_in_Polonnaruwa.jpg> .
@@ -4536,6 +4576,7 @@
    :described-by <https://en.wikipedia.org/wiki/Lewis_chessmen> ;
    :earliest-date 1100 ;
    :latest-date 1200 ;
+   :material-note "Walrus ivory, Whales’ teeth" ;
    :in-modern-country-note "Scotland" ;
    :representative-latlong-point (58.185987 -7.021909) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lewis_chessmen_23.JPG> .
@@ -4546,6 +4587,7 @@
    rdfs:label "Bayeaux Tapestry" ;
    :described-by <https://en.wikipedia.org/wiki/Bayeux_Tapestry> ;
    :approximate-date 1120 ;
+   :material-note "Embroidered Cloth" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (49.2744 0.7003) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Odo_bayeux_tapestry.png> .
@@ -4555,6 +4597,7 @@
    :described-by <https://www.metmuseum.org/collection/the-collection-online/search/463795> ;
    :earliest-date 1175 ;
    :latest-date 1200 ;
+   :material-note "Walnut wood, Paint, Tin relief, Lead white, Linen" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (45.333333 3) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/463795/953347/main-image> .
@@ -4565,6 +4608,7 @@
       <https://en.wikipedia.org/wiki/Jayavarman_VII> ;
    :earliest-date 1181 ;
    :latest-date 1218 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "Cambodia" ;
    :art-historical-culture-or-tradition :khmer-empire ;
    :representative-latlong-point (13.4125 103.866667) ; # Angkhor as contemporary capital
@@ -4584,6 +4628,7 @@
    :described-by <https://caravans.library.northwestern.edu/works/15/> ;
    :earliest-date 1200 ;
    :latest-date 1300 ;
+   :material-note "Terracotta" ;
    :in-modern-country-note "Mali" ;
    :representative-latlong-point (14.466646 -5.000955) ; 
    :thumbnail-image <https://caravans.library.northwestern.edu/img/works/15/15_640x.jpg> .
@@ -4595,6 +4640,7 @@
    :earliest-date 1200 ;
    :latest-date 1300 ;
    :in-modern-country-note "Mali" ;
+   :material-note "Terracotta" ;
    :art-historical-culture-or-tradition :mopti-culture ;
    :representative-latlong-point (13.890556 -4.540278) ; # Mali
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_figure_grom_Mali,_13th_century,_Djenné_peoples,_Metropolitan_Museum_of_Art,_1981.218.JPG> .
@@ -4608,6 +4654,7 @@
    :earliest-date 1250 ;
    :latest-date 1375 ;
    :in-modern-country-note "United States" ;
+   :material-note "Marble" ;
    :art-historical-culture-or-tradition :mississippian ;
    :representative-latlong-point (34.125131 -84.807664) ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .
