@@ -4549,7 +4549,8 @@
 :pilling-figurines a :group-of-human-figures ;
    rdfs:label "So-called Pilling Figurines" ;
    :described-by <https://en.wikipedia.org/wiki/Pilling_Figurines>,
-   <https://eastern.usu.edu/prehistoric-museum/exhibits/archaeology/pilling-figurines> ;
+   <https://eastern.usu.edu/prehistoric-museum/exhibits/archaeology/pilling-figurines> ,
+   <https://traffickingculture.org/encyclopedia/case-studies/pilling-collection-of-fremont-culture-figurines/> ;
    :approximate-date 1050 ;
    :material-note "Unfired Clay" ;
    :in-modern-country-note "United States" ;
