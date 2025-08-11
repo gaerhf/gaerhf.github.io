@@ -1768,6 +1768,17 @@
 
 # -1750 https://en.wikipedia.org/wiki/Haft_Tepe
 
+:phaistos-disk a :group-of-human-figures ;
+   rdfs:label "Phaistos Disk" ;
+   :described-by <https://en.wikipedia.org/wiki/Phaistos_Disc>,
+      <https://heraklionmuseum.gr/en/exhibit/the-phaistos-disc/> ;
+   :earliest-date -1700 ;
+   :latest-date -1650 ;
+   :note "The signs include a pedestrian, plumed head, tattoed head, captive, child, and woamn" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (35.051389 24.813611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Diskos.von.Phaistos_Detail.2_11-Aug-2004_asb_PICT3373.JPG> .
+
 :mycenaean-funerary-mask-grave-circle-b a :human-figure ;
    rdfs:label "Mycenaean Gold Mask from Grave Circle B" ;
    :earliest-date -1700 ;
@@ -4035,6 +4046,7 @@
    :earliest-date 500 ;
    :latest-date 700 ;
    :note "Colloquially know as the ‘Peedie Pict’. Mapped point is approximate." ;
+   :material-note "Cattle bone" ;
    :in-modern-country-note "Scotland" ;
    :representative-latlong-point (58.856747 -2.891810) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%27Peedie_Pict%27_Pictish_carved_figure_on_ox_bone_from_Bu_Sands,_Burray,_Orkney.jpg> .
@@ -4044,6 +4056,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/308528> ;
    :earliest-date 500 ;
    :latest-date 800 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Peru" ;
    :art-historical-culture-or-tradition :moche-culture ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/308528/2084843/main-image> .
@@ -4053,6 +4066,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/316330> ;
    :earliest-date 500 ;
    :latest-date 1000 ;
+   :material-note "Wood, copper allou" ;
    :in-modern-country-note "Peru" ;
    :art-historical-culture-or-tradition :wari-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Snuff_Tray_MET_DT1273_(cropped).jpg> .
@@ -4062,6 +4076,7 @@
    :described-by <https://en.wikipedia.org/wiki/Tiwanaku#Archaeology> ;
    :earliest-date 500 ;
    :latest-date 1100 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "Bolivia" ;
    :representative-latlong-point (-16.554722 -68.673333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antonio_Portugal_y_el_Monolito_Bennett.jpg> .
@@ -4071,7 +4086,9 @@
    :described-by <https://de.wikipedia.org/wiki/Ponce-Monolith> ;
    :earliest-date 500 ;
    :latest-date 1100 ;
+   :material-note "Andesite" ;
    :in-modern-country-note "Bolivia" ;
+   :representative-latlong-point (16.55479 -68.67312) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bol-tihuanaco-el-fr.jpg> .
 
 :qajartalik-petroglyphs a :group-of-human-figures ;
