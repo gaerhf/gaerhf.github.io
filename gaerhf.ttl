@@ -1774,7 +1774,7 @@
       <https://heraklionmuseum.gr/en/exhibit/the-phaistos-disc/> ;
    :earliest-date -1700 ;
    :latest-date -1650 ;
-   :note "The signs include: ‘pedestrian’, ‘plumed head’, “tattoed head’, ‘captive’, ‘child’, and ‘woman’." ;
+   :note "The signs include: ‘pedestrian’, ‘plumed head’, ‘tattooed head’, ‘captive’, ‘child’, and ‘woman’." ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (35.051389 24.813611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Diskos.von.Phaistos_Detail.2_11-Aug-2004_asb_PICT3373.JPG> .
