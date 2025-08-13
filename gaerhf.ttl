@@ -3161,6 +3161,17 @@
    :representative-latlong-point (39.653381 -90.487668) ;
    :thumbnail-image <https://www.museum.state.il.us/muslink/nat_amer/pre/images/MB125_158.jpg> .
 
+
+:seated-female-twenhafel-site a :human-figure ;
+   rdfs:label "Seated Female FIgure from Twenhafel Site" ;
+   :described-by <https://www.museum.state.il.us/muslink/nat_amer/pre/htmls/w_id.html> ;
+   :earliest-date -50 ;
+   :latest-date 400 ;
+   :note "Mapped point approximate" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (37.710950 -89.488517) ;
+   :thumbnail-image <https://www.museum.state.il.us/muslink/nat_amer/pre/images/MB137_181.jpg> .
+
 :augustus-portrait-meroe a :human-figure ;
    rdfs:label "Portrait of Augustus from Meroë" ;
    :described-by <https://en.wikipedia.org/wiki/Meroë_Head> ,
