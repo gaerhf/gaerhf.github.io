@@ -2462,6 +2462,17 @@
    :note "Mapped location is general for Glauberg, not specific for this figure." ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
 
+:yue-kneeling-figure a :human-figure ;
+   rdfs:label "Yue Kneeling Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Baiyue> ,
+      <https://en.wikipedia.org/wiki/Yue_(state)> ;
+   :earliest-date -525 ;
+   :latest-date -333 ;
+   :note "Date and mapped point approximate." ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (31.3 120.619444) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yue_statue.jpg> .
+
 :behistun-relief-darius-i a :group-of-human-figures ;
    rdfs:label "Behistun Relief of Darius I" ;
    :described-by <https://en.wikipedia.org/wiki/Behistun_Inscription> ;
@@ -3139,6 +3150,16 @@
    :in-modern-country-note "Uzbekistan" ;
    :representative-latlong-point (38.293611 67.978889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg> .
+
+:miniature-seated-figure-smiling-dan a :human-figure ;
+   rdfs:label "Miniature Seated Figure from Smiling Dan Site" ;
+   :described-by <https://www.museum.state.il.us/muslink/nat_amer/pre/htmls/woodland.html> ;
+   :earliest-date -50 ;
+   :latest-date 400 ;
+   :note "Mapped point approximate." ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.653381 -90.487668) ;
+   :thumbnail-image <https://www.museum.state.il.us/muslink/nat_amer/pre/images/MB125_158.jpg> .
 
 :augustus-portrait-meroe a :human-figure ;
    rdfs:label "Portrait of Augustus from Meroë" ;
