@@ -3124,6 +3124,18 @@
    :note "Mapped to Ixtlán del Rio archaeological site." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancestor_Pair_MET_DT210536.jpg> .
 
+:knight-mound-hopewell-figurine a :human-figure ;
+   rdfs:label "Knight Mound Hopewell Painted Figurine" ;
+   :described-by <https://adenaandhopewellart.tumblr.com/post/154227740374/hopewell-figurines?is_related_post=1> ,
+   <https://doi.org/10.2307/275132> ;
+   :earliest-date -100 ;
+   :latest-date 300 ;
+   :note "Mapped point approximate" ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.280115 -90.729286) ;
+   :thumbnail-image <https://64.media.tumblr.com/3b13a9fdae728113ba354ab7f3a4d0c9/tumblr_inline_oi1mpexMog1tse332_400.jpg> .
+
 :sierra-guadalupe-rock-paintings a :group-of-human-figures ;
    rdfs:label "Sierra de Guadalupe Rock Art" ;
    :described-by <https://en.wikipedia.org/wiki/Sierra_de_Guadalupe_cave_paintings> ;
