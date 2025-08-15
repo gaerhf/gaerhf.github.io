@@ -3161,7 +3161,6 @@
    :representative-latlong-point (39.653381 -90.487668) ;
    :thumbnail-image <https://www.museum.state.il.us/muslink/nat_amer/pre/images/MB125_158.jpg> .
 
-
 :seated-female-twenhafel-site a :human-figure ;
    rdfs:label "Seated Female FIgure from Twenhafel Site" ;
    :described-by <https://www.museum.state.il.us/muslink/nat_amer/pre/htmls/w_id.html> ;
@@ -3171,6 +3170,17 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point (37.710950 -89.488517) ;
    :thumbnail-image <https://www.museum.state.il.us/muslink/nat_amer/pre/images/MB137_181.jpg> .
+
+:crane-creek-site-figurines a :group-of-human-figures ;
+   rdfs:label "Crane Creek Site Figurines" ;
+   :described-by <https://doi.org/10.3389/fhumd.2024.1355421> ;
+   :earliest-date -50 ;
+   :latest-date 400 ;
+   :note "Mapped point approximate" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (40.042931 -90.528939) ;
+   :thumbnail-image <https://images-provider.frontiersin.org/api/ipx/w=654&f=webp/https://www.frontiersin.org/files/Articles/1355421/xml-images/fhumd-06-1355421-g003.webp> .
+
 
 :augustus-portrait-meroe a :human-figure ;
    rdfs:label "Portrait of Augustus from Meroë" ;
