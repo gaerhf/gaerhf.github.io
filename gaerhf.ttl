@@ -2916,13 +2916,14 @@
 
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
 
-:seip-earhworks-effigy-head a :human-figure ;
+:seip-mounds-effigy-head a :human-figure ;
    rdfs:label "Seip Mounds Effigy Head" ;
    :described-by <https://ohiomemory.org/digital/collection/p267401coll7/id/1084/> ,
       <https://www.nps.gov/hocu/learn/historyculture/seip-earthworks.htm> ,
       <https://hopewellearthworks.org/site/seip-earthworks/> ;
    :earliest-date -500 ;
    :latest-date 100 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.238393 -83.221035) ;
    :thumbnail-image <https://www.nps.gov/hocu/learn/historyculture/images/SeipEx-450.jpg?maxwidth=650&autorotate=false&quality=78&format=webp> .
@@ -3022,6 +3023,17 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.361073 -83.085689) ;
    :thumbnail-image <https://www.ohiohistory.org/wp-content/uploads/blog-images/A283-242a-mica-torso.jpg> .
+
+:hopewell-mounds-copper-face a :human-figure ;
+   rdfs:label "Hopewell Mounds Copper Face" ;
+   :described-by <https://ohiomemory.org/digital/collection/p267401coll7/id/1471/rec/85> ,
+    <https://adenaandhopewellart.tumblr.com/post/154227740374/hopewell-figurines> ;
+   :earliest-date -200 ;
+   :latest-dat 500 ;
+   :material-note "Copper" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (39.361104 -83.085157) ;
+   :thumbnail-image <https://64.media.tumblr.com/e30014faf78a6a0386203586516e54e0/tumblr_inline_oijabfTRbv1tse332_500.jpg> .
 
 :hopewell-shaman-bear a :human-figure ;
    rdfs:label "Hopewell Shaman Bear" ;
