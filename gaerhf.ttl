@@ -4391,6 +4391,19 @@
    :representative-latlong-point (25.13662 85.442608) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Khasarpana_Lokesvara.jpg> .
 
+:redhorn-panel-picture-cave a :group-of-human-figures ;
+   rdfs:label "“Redhorn” Panel Picture Cave" ;
+   :described-by <https://en.wikipedia.org/wiki/Red_Horn#Picture_Cave>,
+      <https://en.wikipedia.org/wiki/Picture_Cave> ,
+      <http://www.profmichaelfuller.com/picture-cave.html> ,
+      <https://archive.org/details/petroglyphspicto0000diaz/page/208> ;
+   :earliest-date 800 ;
+   :latest-date 950 ;
+   :note "Location of cave in Warren Country purposefully not publically available." ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (38.790844 -91.185091) ;
+   :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/d/d7/Image.pict.PictureCaveRH.jpg?20081025191205> .
+
 :figure-horned-animal-effigy-bowl a :human-figure ;
    rdfs:label "Human-like figure on Effigy Bowl in form a Horned Animal" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Bighorn_sheep_effigy_bowl,_Hohokam_culture,_Arizona,_c._800-1000_AD,_ceramic_-_Dallas_Museum_of_Art_-_DSC04540.jpg> ,
@@ -4730,6 +4743,18 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_figure_grom_Mali,_13th_century,_Djenné_peoples,_Metropolitan_Museum_of_Art,_1981.218.JPG> .
 
 # 1221 https://en.wikipedia.org/wiki/Emperor_Go-Toba
+
+:river-creek-tennessee-tablet a :group-of-human-figures ;
+   rdfs:label "River Creek Tennessee Tablet" ;
+   :described-by <https://tnmuseum.org/tn225/artifacts/001> ,
+      <https://rla.unc.edu/personal/vps/articles/Steponaitis%20et%20al%202011%20(Thruston).pdf> , 
+      <https://archive.org/details/antiquitiesoften00thru> ;
+   :earliest-date 1250 ;
+   :latest-date 1350 ;
+   :note "Mapped point is approximate. Also known as the “Thruston Tablet”." ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (36.344856 -86.261173) ;
+   :thumbnail-image <https://assets.speakcdn.com/assets/2588/4197_web.png> .
 
 :etowah-mound-marble-figures a :group-of-human-figures ;
    rdfs:label "Etowah Mound Marble Figures" ;

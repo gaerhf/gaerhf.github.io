@@ -9,6 +9,11 @@ const headerContainer = document.getElementById('header-container');
 const minYear = -50000; // Minimum year
 const maxYear = 1300;     // Maximum year
 
+// Check for 'play' CGI parameter in the URL
+const urlParams = new URLSearchParams(window.location.search);
+const playParam = urlParams.get('play');
+const viewParam = urlParams.get('view')
+
 // Initialize the figures dictionary
 let figuresDict = {};
 let currentSortedIndex = [];
@@ -997,7 +1002,16 @@ document.addEventListener('DOMContentLoaded', () => {
             startPlayback();
         }
     });
+
+    // Auto-start playback if 'play' parameter is present
+    if (playParam !== null) {
+        setTimeout(() => {
+            startPlayback();
+        }, 500);
+    }
 });
+
+
 
 function scrollToListFigure(figureId) {
     const currentDiv = document.getElementById(`list-${figureId}`);
