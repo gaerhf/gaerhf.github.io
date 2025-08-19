@@ -326,6 +326,16 @@
    :note "So-called “adorant” from the Geißenklösterle cave" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adorant,_Geisenklösterle,_Blaubeuren-Weiler,_Alb-Donau-Kreis,_Aurignacian_culture,_35,000_to_45,000_years_old,_ivory_-_Landesmuseum_Württemberg_-_Stuttgart,_Germany_-_DSC02709.jpg> .
 
+:anthropomorph-toca-da-bastiana a :human-figure ;
+   rdfs:label "Anthropomorph at Toca da Bastiana" ;
+   :described-by <https://journals.openedition.org/palethnologie/3170> ;
+   :earliest-date -31000 ;
+   :latest-date -15000 ;
+   :note "The earliest date is exceptionally early. See article for description of uncertainty." ;
+   :in-modern-country-note "Brazil" ;
+   :representative-latlong-point (-8.666667 -42.55) ;
+   :thumbnail-image <https://journals.openedition.org/palethnologie/docannexe/image/3170/img-1.jpg> .
+
 :dolni-vestonice-figurine a :human-figure ;
    rdfs:label "Dolní Věstonice Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Doln%C3%AD_V%C4%9Bstonice> ;
@@ -491,6 +501,15 @@
    :representative-latlong-point (24.638719 32.960759) ;
    :note "Mapped point very approximate. I have not found a linkable image." ;
    :art-historical-culture-or-tradition :saharan-rock-art .
+
+:toca-do-baixao-perna-i a :group-of-human-figures ;
+   rdfs:label "Toca do Baixao do Perna I Pictograms" ;
+   :described-by <https://www.mdpi.com/2076-0752/3/2/190> ;
+   :earliest-date -13500 ;
+   :latest-date -7500 ;
+   :in-modern-country-note "Brazil" ;
+   :representative-latlong-point (-8.666667 -42.55) ;
+   :thumbnail-image <https://www.mdpi.com/arts/arts-03-00190/article_deploy/html/images/arts-03-00190-g007-1024.png> .
 
 :grotta-dell-addaura-inscribed-petroglyphs a :group-of-human-figures ;
    rdfs:label "Grotta dell'Addaura Inscribed Petroglyphs" ;
