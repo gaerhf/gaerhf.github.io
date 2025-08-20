@@ -283,14 +283,24 @@
 
 # https://goaprehistory.wordpress.com/wp-content/uploads/2018/07/earth-mothers-of-curdi-and-usgalimal3.pdf
 
-:sulawesi-cave-hunting-scene a :group-of-human-figures ;
-   rdfs:label "Sulawesi Cave Hunting Scene" ;
-   :described-by <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ,
-      <https://smarthistory.org/earliest-hunting-scene-in-sulawesi-indonesia/> ;
-   :earliest-date -45000 ;
-   :latest-date -35000 ;
+:sulawesi-leang-karampuang-hunting-scene a :group-of-human-figures ;
+   rdfs:label "Leang Karampuang Hunting Scene" ;
+   :described-by <https://doi.org/10.1038/s41586-024-07541-7> ;
+   :approximate-date -49000 ;
+   :note "See H1-H3 in image. Approximate location." ;
    :in-modern-country-note "Indonesia" ;
-   :representative-latlong-point (-5.003056 119.694444) ;
+   :representative-latlong-point (-5.028238 119.758602) ;
+   :thumbnail-image <https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41586-024-07541-7/MediaObjects/41586_2024_7541_Fig3_HTML.png?as=webp> .
+
+:sulawesi-leang-bulu-sipong-4-hunting-scene a :group-of-human-figures ;
+   rdfs:label "Leang Bulu’ Sipong 4 Hunting Scene" ;
+   :described-by <https://doi.org/10.1038/s41586-024-07541-7>,
+      <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ,
+      <https://smarthistory.org/earliest-hunting-scene-in-sulawesi-indonesia/> ;
+   :approximate-date -46000 ;
+   :note "Approximate location." ;
+   :in-modern-country-note "Indonesia" ;
+   :representative-latlong-point (-4.796537 119.548710) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Maros_hunting_scene.png> .
 
 :hohle-fels-figurine a :human-figure ;
