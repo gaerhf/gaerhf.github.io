@@ -542,6 +542,15 @@
    :representative-latlong-point (22.938415 77.613085) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bhimbetka_war_scene.jpg> .
 
+:datu-saman-figures-sangkulirang-mangkalihat-peninsula a :group-of-human-figures ;
+   rdfs:label "‘Datu Saman’ Style Figures from the Sangkulirang–Mangkalihat Peninsula" ;
+   :described-by <https://doi.org/10.1038/s41586-018-0679-9> ;
+   :approximate-date -11000 ;
+   :note "The chronology is uncertain and the date here is for a single example. See article." ;
+   :in-modern-country-note "Indonesia" ;
+   :representative-latlong-point (0.943212 118.872765) ;
+   :thumbnail-image <https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41586-018-0679-9/MediaObjects/41586_2018_679_Fig6_ESM.jpg?as=webp> .
+
 :shigir-anthropomorphic-figure a :human-figure ;
    rdfs:label "Shigir Anthropomorphic Figure" ;
    :described-by <https://en.wikipedia.org/wiki/Shigir_Idol> ,
