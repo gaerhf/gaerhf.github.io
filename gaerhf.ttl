@@ -865,6 +865,7 @@
    :described-by <https://en.wikipedia.org/wiki/Neolithic_Greece#Middle_Neolithic_(MN)_5800–5300_BC> ;
    :earliest-date -5300 ;
    :latest-date -3300 ;
+   :material-note "Marble" ;
    :in-modern-country-note "Greece" ;
    :art-historical-culture-or-tradition :neolithic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_marble_Thessaly_5300-3300_BC,_NAMA_8772_080802x.jpg> .  
@@ -874,6 +875,7 @@
    :described-by <https://art.thewalters.org/object/48.2741/> ;
    :earliest-date -5000 ;
    :latest-date -4500 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Syria and Neighboring" ;
    :art-historical-culture-or-tradition :halaf-culture ;
    :thumbnail-image <https://art.thewalters.org/images/art/PS1_48.2741_3Qtr_DD_T09.jpg> .
@@ -883,6 +885,7 @@
    :described-by <https://en.wikipedia.org/wiki/Fat_Lady_of_Saliagos> ;
    :earliest-date -5000 ;
    :latest-date -4000 ;
+   :material-note "Marble" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.048 25.094) ; # Saliagos
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PAM_Pomos_2857.jpg> .
@@ -929,6 +932,7 @@
    :described-by <https://en.wikipedia.org/wiki/Rock_Paintings_of_Sierra_de_San_Francisco> ;
    :earliest-date -5000 ;
    :latest-date -1000 ;
+   :material-note "Paint on rock" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (27.655561 -112.91611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_en_el_techo_de_la_cueva_%22El_Ratón%22.JPG> .
@@ -955,6 +959,7 @@
    rdfs:label "Hamangia Seated Figures" ;
    :described-by <https://en.wikipedia.org/wiki/Thinker_of_Hamangia> ;
    :approximate-date -5000 ;
+   :materia-note "Ceramic" ;
    :in-modern-country-note "Romania" ;
    :representative-latlong-point (44.338056 28.033611) ; # ll for Cernavoda, Romania
    :art-historical-culture-or-tradition :hamangia-culture ;
@@ -977,6 +982,7 @@
    :earliest-date -4800 ;
    :latest-date -4500 ;
    :in-modern-country-note "Greece" ;
+   :material-note "Ceramic" ;
    :representative-latlong-point (39.355 22.835) ;
    :art-historical-culture-or-tradition :neolithic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_with_child_small_painted_terracott_neolithic,_NAMA_5937_080804.jpg> .
@@ -995,6 +1001,7 @@
    :described-by <https://artsandculture.google.com/asset/seated-idol-of-pazarzhik/1AHnWfBp7WALdg> ,
     <https://en.wikipedia.org/wiki/Karanovo_culture> ;
    :approximate-date -4500 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Bulgaria" ;
    :representative-latlong-point (42.2 24.333333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:NHM_-_Pazardzik_Sitzidol.jpg> .
@@ -1045,6 +1052,7 @@
    :described-by <https://en.wikipedia.org/wiki/Varna_Necropolis> ;
    :earliest-date -4500 ;
    :latest-date -4000 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Bulgaria" ;
    :representative-latlong-point (43.213056 27.864444) ;
    :art-historical-culture-or-tradition :varna-culture ;
