@@ -634,7 +634,8 @@
    :representative-latlong-point (37.223611 38.921667) ;
    :earliest-date -9500 ;
    :latest-date -8000 ;
-   :art-historical-culture-or-tradition :pre-pottery-neolithic .
+   :art-historical-culture-or-tradition :pre-pottery-neolithic  ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gobekli_Tepe_ithyphallic_statuette._Şanlıurfa_-_Archeology_Museum,_July_2025_(frontal).jpg> .
 
 :male-figure-on-bench-sayburc a :human-figure ;
    rdfs:label "Neolithic Male Figure carved in Bench" ;
