@@ -562,16 +562,17 @@
    :representative-latlong-point (57.3809 60.1407) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Большой_шигирский_идол.jpg> .
 
-:male-figure-on-bench-sayburc a :human-figure ;
-   rdfs:label "Neolithic Male Figure carved in Bench" ;
-   :approximate-date -8500 ;
-   :material-note "Limestone" ;
-   :in-modern-country-note "Turkey" ;
-   :representative-latlong-point (37.110047 38.621842) ; # Sayburc, Turkey
-   :described-by <https://doi.org/10.15184/aqy.2022.125> ;
-   :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20221201181421541-0856:S0003598X22001259:S0003598X22001259_fig6.png?pub-status=live> .
-
 # https://en.wikipedia.org/wiki/Kel_Essuf_Period#Kel_Essuf_Rock_Art_and_Hunter-Gatherers
+
+:stone-bowl-human-figure-kortik-tepe a :human-figure ;
+   rdfs:label "Stone bowl with Human Figure from Körtik Tepe" ;
+   :described-by <https://en.wikipedia.org/wiki/Körtik_Tepe#Art> ;
+   :earliest-date -10400 ;
+   :latest-date -9250 ;
+   :material-note "Stone" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.814417 40.983894) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_vessel_with_symbols_and_human_figure._Körtik_Tepe,_10,400-9250_BCE,_Diyarbakır_Archaeology_Museum.jpg> .
 
 :lapa-do-santo-petroglyph a :human-figure ;
    rdfs:label "Lapa do Santo Petroglyph" ;
@@ -634,6 +635,15 @@
    :earliest-date -9500 ;
    :latest-date -8000 ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic .
+
+:male-figure-on-bench-sayburc a :human-figure ;
+   rdfs:label "Neolithic Male Figure carved in Bench" ;
+   :approximate-date -8500 ;
+   :material-note "Limestone" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.110047 38.621842) ; # Sayburc, Turkey
+   :described-by <https://doi.org/10.15184/aqy.2022.125> ;
+   :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20221201181421541-0856:S0003598X22001259:S0003598X22001259_fig6.png?pub-status=live> .
 
 :flint-anthropoid-figurines-kharaysin a :group-of-human-figures ;
    rdfs:label "Flint Anthropoid Figurines from Kharaysin" ;
@@ -1416,6 +1426,7 @@
    <https://en.wikipedia.org/wiki/Verteba_Cave> ;
    :earliest-date -3000 ;
    :latest-date -2600 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Ukraine" ;
    :representative-latlong-point (48.788889 25.871389) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2023/05/Ukraine-Trypillia-Figurines.webp> .
@@ -1425,6 +1436,7 @@
    :described-by <https://en.wikipedia.org/wiki/Mehrgarh#Human_figurines> ;
    :earliest-date -3000 ;
    :latest-date -2500 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Pakistan" ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Mother_Goddess_,3000–2500_B.C._Pakistan_(Baluchistan)_Mehrgarh_style.jpg> .
@@ -1435,6 +1447,7 @@
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :earliest-date -3000 ;
    :latest-date -2500 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Pakistan" ;
    :material-note "Ceramic" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/61085/95936/main-image> .
@@ -1454,6 +1467,7 @@
    :earliest-date -3000 ;
    :latest-date -2000 ;
    :in-modern-country-note "Afghanistan" ;
+   :material-note "Ceramic" ;
    :representative-latlong-point (31.9039 65.5246) ;
    :note "The left-hand figurine in image is from Mundigak." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Afgh02-02-02.jpg> .
@@ -1464,6 +1478,7 @@
    :earliest-date -3000 ;
    :latest-date -2000 ;
    :in-modern-country-note "Japan" ;
+   :material-note "Ceramic" ;
    :representative-latlong-point (38.691218 140.312831) ;
    :art-historical-culture-or-tradition :jomon ;
    :note "This particular dōgu does not have its own landing page on Wikipedia or the internet generally. It should." ;
