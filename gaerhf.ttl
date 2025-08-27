@@ -1522,10 +1522,13 @@
 
 :tel-asmar-temple-figures a :human-figure ;
    rdfs:label "Tel Asmar Temple Figures" ;
-   :described-by <https://smarthistory.org/standing-male-worshipper-from-the-square-temple-at-eshnunna-tell-asmar/> ;
+   :described-by <https://smarthistory.org/standing-male-worshipper-from-the-square-temple-at-eshnunna-tell-asmar/> ,
+   <https://en.wikipedia.org/wiki/Tell_Asmar_Hoard>;
    :earliest-date -2900 ;
    :latest-date -2350 ;
+   :material-note " Gypsum alabaster, shell, black limestone, bitumen" ;
    :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (33.484167 44.728333 ) ;
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2023/07/Votive-figs4-1.jpg> .
 
 # -2800 - -2300 https://en.wikipedia.org/wiki/Jiroft_culture#/media/File:Chloritgefäße_aus_Iran,_Dschiroft,_2800-2300_v.C._(2).jpg
