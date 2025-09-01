@@ -287,7 +287,7 @@
    rdfs:label "Leang Karampuang Hunting Scene" ;
    :described-by <https://doi.org/10.1038/s41586-024-07541-7> ;
    :approximate-date -49000 ;
-   :note "See H1-H3 in image. Approximate location." ;
+   :note "See H1-H3 in image, which are taken to be anthropomorphic figures engaged with the oversized pig. Approximate location." ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-5.028238 119.758602) ;
    :thumbnail-image <https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41586-024-07541-7/MediaObjects/41586_2024_7541_Fig3_HTML.png?as=webp> .
@@ -298,7 +298,7 @@
       <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ,
       <https://smarthistory.org/earliest-hunting-scene-in-sulawesi-indonesia/> ;
    :approximate-date -46000 ;
-   :note "Approximate location." ;
+   :note "Approximate location. There are human figures to the left of the large bovine animal." ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-4.796537 119.548710) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Maros_hunting_scene.png> .
@@ -1380,7 +1380,8 @@
    :approximate-date -3000 ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.097222 32.779444) ; # ll for Hierakonpolis, Egypt
-   :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ;
+   :described-by <https://en.wikipedia.org/wiki/Narmer_Palette> ,
+      <https://smarthistory.org/palette-of-king-narmer/> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
    :art-historical-culture-or-tradition :pharaonic-egypt .
 
@@ -1527,7 +1528,7 @@
    <https://en.wikipedia.org/wiki/Tell_Asmar_Hoard>;
    :earliest-date -2900 ;
    :latest-date -2350 ;
-   :material-note " Gypsum alabaster, shell, black limestone, bitumen" ;
+   :material-note "Gypsum alabaster, shell, black limestone, bitumen" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (33.484167 44.728333 ) ;
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2023/07/Votive-figs4-1.jpg> .
@@ -1539,6 +1540,7 @@
    :described-by <https://en.wikipedia.org/wiki/Jiroft_culture#/media/File:Chloritgefäße_aus_Iran,_Dschiroft,_2800-2300_v.C._(2).jpg> ;
    :earliest-date -2800 ;
    :latest-date -2300 ;
+   :material-note "Chlorite" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (28.449372 57.778422) ; # konar sandal
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Chloritgefäße_aus_Iran,_Dschiroft,_2800-2300_v.C._(2).jpg> .
@@ -1547,6 +1549,7 @@
    rdfs:label "Cycladic Figurine (Spedos Type)" ;
    :earliest-date -2800 ;
    :latest-date -2300 ;
+   :material-note "Marble" ;
    :in-modern-country-note "Greece" ;
    :described-by <https://en.wikipedia.org/wiki/Cycladic_art> ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/Cycladic_art#/media/File:Cycladic_female_figurine_2.jpg> .
@@ -1556,6 +1559,7 @@
    :described-by <https://en.wikipedia.org/wiki/Chemurchek_culture#Gallery> ;
    :earliest-date -2750 ;
    :latest-date -1900 ;
+   :material-note "Stone" ;
    :in-modern-country-note "China" ;
    :art-historical-culture-or-tradition :chemurchek-culture ;
    :representative-latlong-point (47.780636 87.860069) ;
@@ -1565,6 +1569,7 @@
    rdfs:label "Panel 1426 from Mastaba of Hesy-Re" ;
    :described-by <https://en.wikipedia.org/wiki/Mastaba_of_Hesy-Re#CG_1426> ;
    :approximate-date -2650 ;
+   :material-note "Wood" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (29.8685 31.218633) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hesy-Ra_CG1426.jpg> .
@@ -1587,6 +1592,7 @@
     <https://smarthistory.org/standard-of-ur-2/> ;
    :earliest-date -2600 ;
    :latest-date -2400 ;
+   :material-note "Wood, shell, red limestone, lapis lazuli, bitumen" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (30.9615 46.1061) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Standard_of_Ur_-_peace_side.jpg> .
@@ -1596,6 +1602,7 @@
    :described-by <https://collections.mfa.org/objects/29151> ;
    :earliest-date -2600 ;
    :latest-date -1900 ;
+   :material-note "Copper" ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (26.173611 68.323055) ;
    :thumbnail-image <https://collections.mfa.org/internal/media/dispatcher/1009998/preview;jsessionid=5011406B5D52C99D2E461B5490D30889> .
@@ -1604,6 +1611,7 @@
    rdfs:label "Kernosivsky Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Kernosivsky_idol> ;
    :approximate-date -2500 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "Ukraine" ;
    :representative-latlong-point (48.954315 35.632818) ;
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
@@ -1613,6 +1621,7 @@
    rdfs:label "Jōmon Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Jōmon_Venus> ;
    :approximate-date -2500 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Japan" ;
    :art-historical-culture-or-tradition :jomon ;
    :representative-latlong-point (35.995528 138.158806) ;
@@ -1625,6 +1634,7 @@
    :described-by <https://en.wikipedia.org/wiki/Qijia_culture#Pottery> ;
    :earliest-date -2400 ;
    :latest-date -1600 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "China" ;
    :note "Specific findspot may be known." ;
    :representative-latlong-point (36.0606 103.8268) ;
@@ -1634,6 +1644,7 @@
    rdfs:label "Two Figures on Bronze Flag" ;
    :described-by <https://en.wikipedia.org/wiki/Shahdad#Archaeology> ;
    :approximate-date -2400 ;
+   :material-note "Bronze" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (30.417222 57.706389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_flag,_Shadad_Kerman,_Iran.JPG> .
@@ -1644,6 +1655,7 @@
    <https://smarthistory.org/dancing-girl-mohenjodaro/> ;
    :earliest-date -2300 ;
    :latest-date -1750 ;
+   :material-note "Bronze" ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (27.329167 68.138889) ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
@@ -1655,6 +1667,7 @@
    rdfs:label "Dagenham Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Dagenham_idol> ;
    :approximate-date -2250 ;
+   :material-note "Wood" ;
    :in-modern-country-note "England" ;
    :art-historical-culture-or-tradition :neolithic-britain ;
    :representative-latlong-point (51.5397 0.1422) ; # ll for Dagenham, England
@@ -1665,6 +1678,7 @@
    :described-by <https://en.wikipedia.org/wiki/Victory_Stele_of_Naram-Sin> ;
    :earliest-date -2250 ;
    :latest-date -2200 ;
+   :material-note "Sandstone" ;
    :in-modern-country-note "Iraq" ;
    :art-historical-culture-or-tradition :akkadian-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Victory_stele_of_Naram-Suen_(31064823690)_(cropped).jpg> .
@@ -1674,6 +1688,7 @@
    :described-by <https://en.wikipedia.org/wiki/Bassetki_Statue> ;
    :earliest-date -2250 ;
    :latest-date -2220 ;
+   :material-note "Copper" ;
    :in-modern-country-note "Iraq" ;
    :art-historical-culture-or-tradition :akkadian-empire ;
    :representative-latlong-point (36.958778 42.7215) ; # Bassetki, Iraq
@@ -1684,6 +1699,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/329073> ;
    :earliest-date -2200 ;
    :latest-date -1700 ;
+   :material-note "Steatite or chlorite, alabaster" ;
    :in-modern-country-note "Turkmenistan or Neighboring" ;
    :representative-latlong-point (37.30111 64.15531) ;
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
@@ -2372,6 +2388,16 @@
 #    :latest-date -550 .
 
 # -712 calcite and bronze sculpture from circa 712–525 BCE in the Brooklyn Museum. https://www.brooklynmuseum.org/objects/4035
+
+:roos-carr-figures a :group-of-human-figures ;
+   rdfs:label "Roos Carr Figures" ;
+   :described-by <https://en.wikipedia.org/wiki/Roos_Carr_figures> ;
+   :earliest-date -770 ;
+   :latest-date -409 ;
+   :material-note "Wood" ;
+   :in-modern-country-note "United Kingdom" ;
+   :representative-latlong-point (53.7285 0.0382) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Roos_Carr_figures_and_boat.jpg> .
 
 :standing-figure-cadiz a :human-figure ;
    rdfs:label "Standing Figure from Cadiz" ;
@@ -3285,7 +3311,6 @@
    :representative-latlong-point (40.042931 -90.528939) ;
    :thumbnail-image <https://images-provider.frontiersin.org/api/ipx/w=654&f=webp/https://www.frontiersin.org/files/Articles/1355421/xml-images/fhumd-06-1355421-g003.webp> .
 
-
 :augustus-portrait-meroe a :human-figure ;
    rdfs:label "Portrait of Augustus from Meroë" ;
    :described-by <https://en.wikipedia.org/wiki/Meroë_Head> ,
@@ -3302,6 +3327,16 @@
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (34.73 36.697778) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/a/a5/Emesa_helmet.png?20180213011333> .
+
+:copper-alloy-figurine-holding-torque a :human-figure ;
+   rdfs:label "Copper Alloy Figurine holding Torque" ;
+   :described-by <https://archaeology.org/issues/may-june-2021/digs-discoveries/digs-england-celtic-deity/> ;
+   :earliest-date 1 ;
+   :latest-date 40 ;
+   :material-note "Copper alloy" ;
+   :in-modern-country-note "United Kingdom" ;
+   :representative-latlong-point (52.142689 -0.050156) ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2021/04/Digs-England-Cernunno-Silo-Doubled.jpg> .
 
 :funerary-mask-thaj a :human-figure ;
    rdfs:label "Funerary Mask from Thaj" ;
