@@ -2557,6 +2557,17 @@
    :representative-latlong-point (42.269444 13.766667) ; # ll for Capestrano, Italy
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerriero_di_Capestrano_-_Museo_Archeologico_Nazionale_d%27Abruzzo_Villa_Frigerj_-_Chieti_-_Italy_-_6_Feb._2013.jpg> .
 
+:horseriders-frieze-bin-tepe a :group-of-human-figures ;
+   rdfs:label "Horseriders on Frieze from Bin Tepe" ;
+   :described-by <https://sardisexpedition.org/en/artifacts/r2-231> ,
+      <https://en.wikipedia.org/wiki/Bin_Tepe> ;
+   :earliest-date -500 ;
+   :latest-date -450 ;
+   :material-note "Marble" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (38.58 28.0072) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Britishmuseumbintepehorserelief_(cropped).jpg> .
+
 :prince-of-glauberg a :human-figure ;
    rdfs:label "So-called Prince of Glauberg" ;
    :described-by <https://www.worldhistory.org/image/9799/prince-of-glauberg/> ;
