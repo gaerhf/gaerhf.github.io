@@ -464,7 +464,7 @@
    :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/z-zenrrnbTxRMap28ZLM2TeAF60=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d3/70/d370e4f4-292a-4ca6-8010-f1f27a15b433/humans-3.jpg> .
 
 :ignatievka-cave-paintings a :group-of-human-figures ;
-   rdfs:label "Ignatievka Cave Paintins" ;
+   rdfs:label "Ignatievka Cave Paintings" ;
    :described-by <https://en.wikipedia.org/wiki/Ignatievka_Cave> ,
       <https://pmc.ncbi.nlm.nih.gov/articles/PMC8048586/> ;
    :earliest-date -16300 ;
@@ -1923,6 +1923,27 @@
    :representative-latlong-point (41.747222 8.871389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Filitosa_IX_Blejuez_2003.jpg> .
 
+:dogu-hands-together a :human-figure ;
+   rdfs:label "Dogū with palms pressed together" ;
+   :described-by <https://en.wikipedia.org/wiki/Dogū_with_palms_pressed_together> ;
+   :approximate-date -1500 ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (40.512278 141.488389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Late_Jomon_clay_statue_Kazahari_I_Aomoriken_1500BCE_-_1000BCE.jpg> .
+
+:idrimi-statue a :human-figure ;
+   rdfs:label "Statue of King Idrimi" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Idrimi> ,
+      <https://www.britishmuseum.org/collection/object/W_1939-0613-101> ;
+   :earliest-date -1500 ;
+   :latest-date -1400 ;
+   :material-note "Magnesite" ;
+   :note "Carries extensive Akkadian inscription describing Idrimi‘s reign." ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (36.237778 36.384722) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_King_Idrimi-IMG_4553-black.jpg> .
+
+
 :paired-petroglyphs-valcamonica a :group-of-human-figures ;
    rdfs:label "Paired Petroglyphs from Valcamonica" ;
    :described-by <https://en.wikipedia.org/wiki/Rock_Drawings_in_Valcamonica> ;
@@ -1931,14 +1952,6 @@
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (45.957056 10.297333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antropomorfi_detti_astronauti_(a)_-_R_1_-_Area_di_Zurla_-_Nadro_(ph_Luca_Giarelli).jpg> .
-
-:dogu-hands-together a :human-figure ;
-   rdfs:label "Dogū with palms pressed together" ;
-   :described-by <https://en.wikipedia.org/wiki/Dogū_with_palms_pressed_together> ;
-   :approximate-date -1500 ;
-   :in-modern-country-note "Japan" ;
-   :representative-latlong-point (40.512278 141.488389) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Late_Jomon_clay_statue_Kazahari_I_Aomoriken_1500BCE_-_1000BCE.jpg> .
 
 :pylos-combat-agate a :group-of-human-figures ;
    rdfs:label "Pylos Combat Agate" ;
