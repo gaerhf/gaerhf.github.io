@@ -1943,7 +1943,6 @@
    :representative-latlong-point (36.237778 36.384722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_King_Idrimi-IMG_4553-black.jpg> .
 
-
 :paired-petroglyphs-valcamonica a :group-of-human-figures ;
    rdfs:label "Paired Petroglyphs from Valcamonica" ;
    :described-by <https://en.wikipedia.org/wiki/Rock_Drawings_in_Valcamonica> ;
@@ -2362,6 +2361,17 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (37.004566 45.45825) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hasanlu-gold-cup.jpg> .
+
+:statue-panamuwa a :human-figure ;
+   rdfs:label "Statue of King Panamuwa I" ;
+   :described-by <https://en.wikipedia.org/wiki/Hadad_Statue> ,
+      <https://en.wikipedia.org/wiki/Samʾal> ;
+   :earliest-date -800 ;
+   :latext-date -700 ;
+   :material-nte "Basalt" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.103611 36.678611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Weather_God_Haddad.jpg> .
 
 :grevensvænge-figurines a :group-of-human-figures ;
    rdfs:label "Grevensvænge figurines" ;
