@@ -3038,6 +3038,16 @@
    :representative-latlong-point (24.446891 80.846041) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bharhut_Yavana.jpg> .
 
+:helmeted-head-nisa a :human-figure ;
+   rdfs:label "Helmeted Head from Nisa" ;
+   :described-by <https://en.wikipedia.org/wiki/Nisa_helmeted_warrior> ;
+   :earliest-date -125 ;
+   :latest-date -1 ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "Turkmenistan" ;
+   :representative-latlong-point (37.966667 58.195) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nisa_helmeted_warrior_(black_background).jpg> .
+
 :funeray-masks-oglakhty a :group-of-human-figures ;
    rdfs:label "Funerary Masks from Oglakhty" ;
    :described-by <https://en.wikipedia.org/wiki/Oglakhty> ,
