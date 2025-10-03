@@ -3720,7 +3720,7 @@
 #    :latest-date 500 .
 
 :buddha-helgo-island a :human-figure ;
-   rdfs:label "Buddha Statue at Helgö Island" ;
+   rdfs:label "Buddha Statuette from Helgö Island" ;
    :described-by <https://en.wikipedia.org/wiki/Helgö> ,
       <https://samlingar.shm.se/object/7B9D123A-0D6E-4C5E-B586-3A8495582833> ,
       <https://brentnongbri.com/2023/05/05/the-helgo-buddha/> ,
