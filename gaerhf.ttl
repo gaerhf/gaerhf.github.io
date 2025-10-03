@@ -1720,6 +1720,7 @@
    :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :approximate-date -2200 ;
+   :materia-note "Steatite" ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (27.329167 68.138889) ; # ll for Mohenjo-daro, Pakistan
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
@@ -1729,6 +1730,7 @@
    :described-by <https://en.wikipedia.org/wiki/Statues_of_Gudea> ;
    :earliest-date -2144 ;
    :latest-date -2124 ;
+   :material-note "Diorite" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (31.562028 46.177583) ; # ll for Girsu, Iraq
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg> .
@@ -1757,6 +1759,7 @@
    :described-by <https://www.getty.edu/art/collection/object/108J4B> ;
    :earliest-date -2000 ;
    :latest-date -1900 ;
+   :material-note "Ceramic, paint" ;
    :in-modern-country-note "Cyprus" ;
    :representative-latlong-point (35.163819 33.666232) ;
    :art-historical-culture-or-tradition :philia-culture ;
@@ -1769,6 +1772,7 @@
    <https://smarthistory.org/the-priest-king-sculpture-from-the-indus-valley-civilization/> ;
    :earliest-date -2000 ;
    :latest-date -1900 ;
+   :material-note "Steatite" ;
    :in-modern-country-note "Pakistan" ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :representative-latlong-point (27.335167 68.143889) ;
@@ -1779,6 +1783,7 @@
    :described-by <https://www.britishmuseum.org/collection/object/W_1897-0511-104> ;
    :earliest-date -2000 ;
    :latest-date -1800 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (31.287459 46.094633) ;
    :art-historical-culture-or-tradition :elamite-culture ;
@@ -1790,6 +1795,7 @@
    :described-by <https://en.wikipedia.org/wiki/Mount_Elizabeth_Station> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aboriginal_rock_art_on_the_Barnett_River,_Mount_Elizabeth_Station.jpg> ;
    :art-historical-culture-or-tradition :australian-first-nations ;
+   :material-note "Paint on rock" ;
    :in-modern-country-note "Australia" ;
    :representative-latlong-point (-16.4185 126.1028) ;
    :earliest-date -2000 ;
@@ -1849,6 +1855,7 @@
    :described-by <https://www.historymuseum.ca/collections/artifact/1295533> ;
    :earliest-date -1900 ;
    :latest-date -1600 ;
+   :material-note "Walrus ivory" ;
    :in-modern-country-note "Canada" ;
    :representative-latlong-point (75.171333 -88.975453) ; # devon island, Nunavut, Canada
    :thumbnail-image <https://www.historymuseum.ca/ke/_resources/120798/5050-1613-0243-094-base-cmhsize-small.jpg> .
@@ -1858,6 +1865,7 @@
    :described-by <https://en.wikipedia.org/wiki/Thinker_from_Yehud> ;
    :earliest-date -1800 ;
    :latest-date -1600 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.033333 34.883333) ; # ll for Yehud
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/d/d6/Thinker_from_Yehud.jpeg?20230912000419> .
@@ -1875,10 +1883,11 @@
    :representative-latlong-point (35.051389 24.813611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Diskos.von.Phaistos_Detail.2_11-Aug-2004_asb_PICT3373.JPG> .
 
-:mycenaean-funerary-mask-grave-circle-b a :human-figure ;
-   rdfs:label "Mycenaean Gold Mask from Grave Circle B" ;
+:funerary-mask-grave-circle-b-mycenae a :human-figure ;
+   rdfs:label "Funerary Mask from Grave Circle B at Mycenae" ;
    :earliest-date -1700 ;
    :latest-date -1600 ;
+   :material-note "Electrum" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.730833 22.755) ;
    :described-by <https://en.wikipedia.org/wiki/Grave_Circle_B,_Mycenae> ;
@@ -1891,16 +1900,18 @@
    :described-by <https://en.wikipedia.org/wiki/Wall_Paintings_of_Thera> ;
    :earliest-date -1600 ;
    :latest-date -1500 ;
+   :material-note "Paint on plaster" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (36.351389 25.403611) ;
    :art-historical-culture-or-tradition :minoan ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cueilleuse_de_safran,_fresque,_Akrotiri,_Grèce.jpg> .
 
-:mycenaean-funerary-mask-grave-circle-a a :human-figure ;
-   rdfs:label "Mycenaean Gold Mask from Grave Circle A";
+:unerary-mask-grave-circle-a-mycenae a :human-figure ;
+   rdfs:label "Mycenaean Gold Mask from Grave Circle A at Mycenae";
    :described-by <https://en.wikipedia.org/wiki/Mask_of_Agamemnon> ;
    :earliest-date -1550 ;
    :latest-date -1500 ;
+   :material-note "Gold" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.730278 22.756111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:594px-MaskeAgamemnon-MOD.jpg> .
@@ -1909,6 +1920,7 @@
    rdfs:label "Reliefs from Burial Mound at Kivik" ;
    :described-by <https://en.wikipedia.org/wiki/The_King%27s_Grave> ;
    :approximate-date -1500 ;
+   :material-note "Stone" ;
    :in-modern-country-note "Sweden" ;
    :representative-latlong-point (55.683333 14.233333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_carving_Kivik_Sweden.jpg>.
@@ -1927,6 +1939,7 @@
    rdfs:label "Dogū with palms pressed together" ;
    :described-by <https://en.wikipedia.org/wiki/Dogū_with_palms_pressed_together> ;
    :approximate-date -1500 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Japan" ;
    :representative-latlong-point (40.512278 141.488389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Late_Jomon_clay_statue_Kazahari_I_Aomoriken_1500BCE_-_1000BCE.jpg> .
@@ -1948,6 +1961,7 @@
    :described-by <https://en.wikipedia.org/wiki/Rock_Drawings_in_Valcamonica> ;
    :earliest-date -1500 ;
    :latest-date -500 ;
+   :material-note "Stone" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (45.957056 10.297333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antropomorfi_detti_astronauti_(a)_-_R_1_-_Area_di_Zurla_-_Nadro_(ph_Luca_Giarelli).jpg> .
@@ -1957,6 +1971,7 @@
    :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
    :approximate-date -1450 ;
    :in-modern-country-note "Greece" ;
+   :material-note "Agate" ;
    :representative-latlong-point (37.028222 21.695944) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
 
@@ -1964,6 +1979,7 @@
    rdfs:label "Bull Leaping Fresco from Knossos" ;
    :described-by <https://en.wikipedia.org/wiki/Bull-Leaping_Fresco> ;
    :approximate-date -1450 ;
+   :material-note "Paint on plaster" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (35.298056 25.163056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Knossos_bull_leaping_fresco.jpg> .
@@ -1972,6 +1988,7 @@
    rdfs:label "Palaikastro Kouros" ;
    :described-by <https://en.wikipedia.org/wiki/Palaikastro_Kouros> ;
    :approximate-date -1450 ;
+   :material-note "Hippopotamus ivory, gold foil, serpentinite, rock crystal, olive wood" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (35.2 26.25) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palaikastro_Kouros_08.jpg> .
@@ -1989,6 +2006,7 @@
    rdfs:label "Hollow Dogū" ;
    :described-by <https://en.wikipedia.org/wiki/Hollow_Dogū> ;
    :approximate-date -1400 ;
+   :material-note "Ceramic" ;
    :in-modern-country-note "Japan" ;
    :representative-latlong-point (41.768611 140.728889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:中空土偶.jpg> .
@@ -1999,6 +2017,7 @@
    :earliest-date -1400 ;
    :latest-date -1200 ;
    :in-modern-country-note "Turkey" ;
+   :material-note "Gold" ;
    :representative-latlong-point (40.019722 34.615278) ;
    :note "Findspot unknown." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/b034bae1_724a_4131_855b_a3b700668aa8/mid_00030758_001.jpg> .
@@ -2027,6 +2046,7 @@
    rdfs:label "Bust of Nefertiti" ;
    :art-historical-culture-or-tradition :pharaonic-egypt ;
    :approximate-date -1345 ;
+   :material-note "Limestone, stucco, paint" ;
    :in-modern-country-note "Egypt" ;
    :described-by <https://en.wikipedia.org/wiki/Nefertiti_Bust> ;
    :representative-latlong-point (27.645278 30.896389) ; # ll for Amarna, Egypt
@@ -2037,6 +2057,7 @@
    :described-by <https://en.wikipedia.org/wiki/Mask_of_Tutankhamun> ;
    :art-historical-culture-or-tradition :pharaonic-egypt ;
    :approximate-date -1323 ;
+   :material-note "Gold, lapis lazuli, carnelian, obsidian, turquoise, glass paste" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.740389 32.601417) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CairoEgMuseumTaaMaskMostlyPhotographed.jpg> .
@@ -2045,6 +2066,7 @@
    rdfs:label "Faces on Da He Ding" ;
    :described-by <https://en.wikipedia.org/wiki/Da_He_ding> ;
    :approximate-date -1300 ;
+   :material-note "Bronze" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (28.152564 112.11281) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Da_He_ding_side.jpg> .
@@ -2367,7 +2389,7 @@
    :described-by <https://en.wikipedia.org/wiki/Hadad_Statue> ,
       <https://en.wikipedia.org/wiki/Samʾal> ;
    :earliest-date -800 ;
-   :latext-date -700 ;
+   :latest-date -700 ;
    :material-nte "Basalt" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.103611 36.678611) ;
@@ -3035,6 +3057,17 @@
    :representative-latlong-point (20.7835 79.6357) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pillar_with_Naga_Muchalinda_over_the_throne_of_the_Buddha._Pauni_(Bhandara_District)._Railing_pillar_from_Jagannath_Tekri._2nd-1st_century_BCE.jpg> .
 
+:hendy-heath a :human-figure ;
+   rdfs:label "The Hendy Head" ;
+   :described-by <https://www.peoplescollection.wales/items/411849#?xywh=-1002%2C-200%2C4544%2C3983> ,
+      <https://www.peoplescollection.wales/items/12570#?xywh=-359%2C-12%2C1170%2C768> ;
+   :approximate-date 50 ;
+   :materia-note "Cheshire sandstone" ;
+   :note "Generally understood to be Late Iron Age/Celtic though that is not certain." ;
+   :in-modern-country-note "Wales" ;
+   :representative-latlong-point (53.127731 -4.280277) ;
+   :thumbnail-image <https://www.peoplescollection.wales/sites/default/files/images/2014/February/GTJ75768_2.jpg?itok=OopNNKRx> .
+
 :winged-figure-tillya-tepe a :human-figure ;
    rdfs:label "Winged Figure from Tillya Tepe" ;
    :described-by <https://en.wikipedia.org/wiki/Tillya_Tepe> ;
@@ -3685,6 +3718,19 @@
 #    :period-note "Silla Kingdom (Korea)" ;
 #    :earliest-date 500 ;
 #    :latest-date 500 .
+
+:buddha-helgo-island a :human-figure ;
+   rdfs:label "Buddha Statue at Helgö Island" ;
+   :described-by <https://en.wikipedia.org/wiki/Helgö> ,
+      <https://samlingar.shm.se/object/7B9D123A-0D6E-4C5E-B586-3A8495582833> ,
+      <https://brentnongbri.com/2023/05/05/the-helgo-buddha/> ,
+      <https://openbibart.fr/vibad/index.php?action=getRecordDetail&idt=oba_0444745> ;
+   :earliest-date 500 ;
+   :latest-date 600 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "Sweden" ;
+   :representative-latlong-point (59.278511 17.680435) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Helgö_Buddha_18194.jpg> .
 
 :balbal-burana-tower a :human-figure ;
    rdfs:label "Stone Balbal near Burana Tower" ;
