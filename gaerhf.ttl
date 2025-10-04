@@ -4176,6 +4176,17 @@
    :note "No specific findspot." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/38119/146374/main-image> .
 
+:bura-funerary-figure a :human-figure ;
+   rdfs:label "Bura Funerary Figure" ;
+   :described-by <https://artgallery.yale.edu/collections/objects/145085> ,
+      <https://en.wikipedia.org/wiki/Bura_archaeological_site> ;
+   :earliest-date 300 ;
+   :latest-date 1200 ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "Niger" ;
+   :representative-latlong-point (13.898 1.039) ;
+   :thumbnail-image <https://images.collections.yale.edu/iiif/2/yuag:bd85d735-38fe-4a4c-8804-342599d5a933/full/!200,200/0/default.jpg> .
+
 # :female-figure-holding-cornucopia 200 - 200 https://www.britishmuseum.org/collection/object/W_2012-6029-1
 
 # 200 - 600 ???? https://commons.wikimedia.org/wiki/File:Naked_prisoners_being_led_by_warrior_at_El_Brujo.JPG
