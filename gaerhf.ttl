@@ -2105,15 +2105,6 @@
 
 # -1200 https://en.wikipedia.org/wiki/Tomb_of_Fu_Hao
 
-:olmec-stone-yuguito a :human-figure ;
-   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
-   :earliest-date -1200 ;
-   :latest-date -900 ;
-   :in-modern-country-note "Mexico" ;
-   :representative-latlong-point (19.5 -99.25) ;
-   :art-historical-culture-or-tradition :olmec ;
-   :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
-
 :jade-statuette-standing-dignitary a :human-figure ;
    rdfs:label "Jade Statuette of a Standing Dignitary" ;
    :described-by <https://harvardartmuseums.org/collections/object/204810> ;
@@ -2125,6 +2116,15 @@
    :art-historical-culture-or-tradition :shang-dynasty ;
    :thumbnail-image <https://ids.hvrd.art/ids/view/17386315?width=250&height=250> .
 
+:olmec-stone-yuguito a :human-figure ;
+   :described-by <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito> ;
+   :earliest-date -1200 ;
+   :latest-date -900 ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (19.5 -99.25) ;
+   :art-historical-culture-or-tradition :olmec ;
+   :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
+
 :deer-stones-funerary-marker a :human-figure ;
    rdfs:label "Deer Stones Culture Funerary Marker" ;
    :described-by <https://en.wikipedia.org/wiki/Deer_stones_culture#Type_I:_Classic_Mongolian> ;
@@ -2134,6 +2134,19 @@
    :art-historical-culture-or-tradition :deer-stone-culture ;
    :representative-latlong-point (49.654763 99.929315) ; # ll for Uushigiin Övör, Mongolia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_deer_stone._Uushigiin_Övör_site,_Deer_Stone_14,_near_Mörön,_northern_Mongolia.jpg> .
+
+:gandhara-grave-culture-face-urn a :human-figure ;
+   rdfs:label "Gandhara Grave Culture Face Urn" ;
+   :described-by <https://collections.lacma.org/node/177356> , 
+      <https://en.wikipedia.org/wiki/Gandhara#History> ,
+      <https://en.wikipedia.org/wiki/Gandhara_grave_culture> ;
+   :earliest-date -1200 ;
+   :latest-date -800 ;
+   :material-note "Ceramic" ;
+   :note "Specific findspot not known." ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (35.2 72.483333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cremation_Urn_with_Lid_LACMA_AC1994.234.8a-b.jpg> .
 
 :ralaghan-idol a :human-figure ;
    rdfs:label "Ralaghan Idol" ;
