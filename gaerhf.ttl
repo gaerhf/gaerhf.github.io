@@ -512,6 +512,7 @@
    :note "Mapped point very approximate. I have not found a linkable image." ;
    :art-historical-culture-or-tradition :saharan-rock-art .
 
+
 :toca-do-baixao-perna-i a :group-of-human-figures ;
    rdfs:label "Toca do Baixao do Perna I Pictograms" ;
    :described-by <https://www.mdpi.com/2076-0752/3/2/190> ;
@@ -550,6 +551,16 @@
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (0.943212 118.872765) ;
    :thumbnail-image <https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41586-018-0679-9/MediaObjects/41586_2018_679_Fig6_ESM.jpg?as=webp> .
+
+:human-figure-petroglyph-jebel-arnan a :human-figure ;
+   rdfs:label "Human Figure Petroglyph at Jebel Arnan" ;
+   :described-by <https://www.nature.com/articles/s41467-025-63417-y> ;
+   :earliest-date -11000 ;
+   :latest-date -9000 ;
+   :note "Figure 2a in the article (top-left in thumbnail) shows a large human figure highlighted in yellow." ;
+   :in-modern-country-note "Saudi Arabia" ;
+   :representative-latlong-point (27.190099 39.641739) ;
+   :thumbnail-image <https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-025-63417-y/MediaObjects/41467_2025_63417_Fig2_HTML.png?as=webp> .
 
 :shigir-anthropomorphic-figure a :human-figure ;
    rdfs:label "Shigir Anthropomorphic Figure" ;
@@ -1027,7 +1038,7 @@
    :representative-latlong-point (44.761944 20.623056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vinca_clay_figure_02.jpg> .
 
-:female-figurine-el-badari-louvre a :human-figure ;
+:female-figurine-el-badari a :human-figure ;
    rdfs:label "Female Figurine possibly from El-Badaari" ;
    :described-by <https://collections.louvre.fr/ark:/53355/cl010007469> ,
    <https://en.wikipedia.org/wiki/Badarian_culture> ;
