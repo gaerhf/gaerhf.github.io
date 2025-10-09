@@ -1237,7 +1237,7 @@
       <https://sketchfab.com/3d-models/orkney-venus-links-of-noltland-dadacf3f95ad41a4ae0278a06ab12499>;
    :earliest-date -3800 ;
    :latest-date -2500 ;
-   :npte "Wikimedia Commons image is dark. See other sites." ;
+   :note "Wikimedia Commons image is dark. See other sites." ;
    :material-note "Sandstone" ;
    :in-modern-country-note "Scotland" ;
    :art-historical-culture-or-tradition :neolithic-europe ;
