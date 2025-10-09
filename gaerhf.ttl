@@ -3500,6 +3500,16 @@
    :representative-latlong-point (53.9726 -6.9975) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Corleck_Head_A4.jpg> .
 
+:female-khor-rori a :human-figure ;
+   rdfs:label "Female Figure from Khor Rori" ;
+   :described-by <https://isaw.nyu.edu/research/io-figures/sessions/march-4/info> ;
+   :earliest-date 1 ;
+   :latest-date 400 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "Oman" ;
+   :representative-latlong-point (17.039339 54.430478) ;
+   :thumbnail-image <https://isaw.nyu.edu/research/io-figures/sessions/march-4/info/leadImage> .
+
 :figurine-temple-foret-halatte-belly a :human-figure ;
    rdfs:label "Figurine from Temple of forêt d’Halatte with Prominent Belly" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Ex-voto_gallo-romain_Halatte_070908_05.jpg> ,
