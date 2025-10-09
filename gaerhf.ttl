@@ -1233,14 +1233,16 @@
 :westray-figurine a :human-figure ;
    rdfs:label "Westray Figurine" ;
    :described-by <https://www.historicenvironment.scot/archives-and-research/archives-and-collections/properties-in-care-collections/object/figurine-3800-bc-2500-bc-neolithic-links-of-noltland-26222>,
-      <https://en.wikipedia.org/wiki/Westray_Wife> ;
+      <https://en.wikipedia.org/wiki/Westray_Wife> ,
+      <https://sketchfab.com/3d-models/orkney-venus-links-of-noltland-dadacf3f95ad41a4ae0278a06ab12499>;
    :earliest-date -3800 ;
    :latest-date -2500 ;
+   :npte "Wikimedia Commons image is dark. See other sites." ;
    :material-note "Sandstone" ;
    :in-modern-country-note "Scotland" ;
    :art-historical-culture-or-tradition :neolithic-europe ;
    :representative-latlong-point (59.322778 -3) ; 
-   :thumbnail-image <https://vernonbrowser.historicenvironment.scot/records/images/xlarge/4886/6a20d0f81f14281c217fad52372a45859d6937ac.jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Westray_Wife_20110529.jpg> .
 
 :egyptian-predynastic-female-figurine a :human-figure ;
    rdfs:label "Egyptian Predynastic Female Figurine" ;
