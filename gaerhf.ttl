@@ -1132,6 +1132,15 @@
    :representative-latlong-point (54.176111 15.576111) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/06/News-20250620-Poland-Kolobrzeg-Venus.jpg> .
 
+:suffering-man a :human-figure ;
+   rdfs:label "Statue of So-Called Suffering Man" ;
+   :described-by <https://en.wikipedia.org/wiki/Suffering_Man_Statue_(Saudi_Arabia)> ;
+   :approximate-date -4000 ;
+   :material-note "Stone" ;
+   :in-modern-country-note "Saudi Arabia" ;
+   :representative-latlong-point (25.869334 42.050495 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:رجل_المعاناة_(قطعة_أثرية).png> .
+
 :yangshao-vessel-head a :human-figure ;
    rdfs:label "Yangshao Vessel with Human Head" ;
    :described-by <https://en.wikipedia.org/wiki/Yangshao_culture#Crafts> ,
@@ -3104,17 +3113,6 @@
    :representative-latlong-point (20.7835 79.6357) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pillar_with_Naga_Muchalinda_over_the_throne_of_the_Buddha._Pauni_(Bhandara_District)._Railing_pillar_from_Jagannath_Tekri._2nd-1st_century_BCE.jpg> .
 
-:hendy-heath a :human-figure ;
-   rdfs:label "The Hendy Head" ;
-   :described-by <https://www.peoplescollection.wales/items/411849#?xywh=-1002%2C-200%2C4544%2C3983> ,
-      <https://www.peoplescollection.wales/items/12570#?xywh=-359%2C-12%2C1170%2C768> ;
-   :approximate-date 50 ;
-   :materia-note "Cheshire sandstone" ;
-   :note "Generally understood to be Late Iron Age/Celtic though that is not certain." ;
-   :in-modern-country-note "Wales" ;
-   :representative-latlong-point (53.127731 -4.280277) ;
-   :thumbnail-image <https://www.peoplescollection.wales/sites/default/files/images/2014/February/GTJ75768_2.jpg?itok=OopNNKRx> .
-
 :winged-figure-tillya-tepe a :human-figure ;
    rdfs:label "Winged Figure from Tillya Tepe" ;
    :described-by <https://en.wikipedia.org/wiki/Tillya_Tepe> ;
@@ -3134,7 +3132,29 @@
    :representative-latlong-point (41.895393 12.495459) ; # between the Colosseum and Santa Maria Maggiore
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Laocoön_and_his_sons_group.jpg> .
 
+:pair-of-erotes-lions a :group-of-human-figures ;
+   rdfs:label "Pair of Erotes on Lions" ;
+   :described-by <https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_S2013.2.77.1/> ;
+   :earliest-date -100 ;
+   :latest-date 100 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "Yemen" ;
+   :representative-latlong-point (15.001667 45.815833) ;
+   :thumbnail-image <https://ids.si.edu/ids/iiif/FS-S2013.2.77.1-2/full/500,/0/default.jpg> .
+
+
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
+
+:hendy-heath a :human-figure ;
+   rdfs:label "The Hendy Head" ;
+   :described-by <https://www.peoplescollection.wales/items/411849#?xywh=-1002%2C-200%2C4544%2C3983> ,
+      <https://www.peoplescollection.wales/items/12570#?xywh=-359%2C-12%2C1170%2C768> ;
+   :approximate-date 50 ;
+   :materia-note "Cheshire sandstone" ;
+   :note "Generally understood to be Late Iron Age/Celtic though that is not certain." ;
+   :in-modern-country-note "Wales" ;
+   :representative-latlong-point (53.127731 -4.280277) ;
+   :thumbnail-image <https://www.peoplescollection.wales/sites/default/files/images/2014/February/GTJ75768_2.jpg?itok=OopNNKRx> .
 
 :seip-mounds-effigy-head a :human-figure ;
    rdfs:label "Seip Mounds Effigy Head" ;
