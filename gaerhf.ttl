@@ -1621,13 +1621,16 @@
 
 :figure-chanhu-daro a :human-figure ;
    rdfs:label "Figure from Chanhu-Daro" ;
-   :described-by <https://collections.mfa.org/objects/29151> ;
+   :described-by <https://collections.mfa.org/objects/29151> ,
+      <https://www.harappa.com/blog/male-indus-spear-thrower-or-dancer> ;
    :earliest-date -2600 ;
    :latest-date -1900 ;
    :material-note "Copper" ;
+   :note "MFA restricts access to images so thumbnail coming from harrapa.com." ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (26.173611 68.323055) ;
-   :thumbnail-image <https://collections.mfa.org/internal/media/dispatcher/1009998/preview;jsessionid=5011406B5D52C99D2E461B5490D30889> .
+   :thumbnail-image <https://www.harappa.com/sites/default/files/styles/galleryformatter_slide/public/chanhudaro-dancer-spear-thrower.jpg> ;
+   :alt-thumbnail-image <https://collections.mfa.org/internal/media/dispatcher/1009998/preview> .
 
 :kernosivsky-idol a :human-figure ;
    rdfs:label "Kernosivsky Idol" ;
@@ -3688,6 +3691,17 @@
 #    :period-note "Gandhara Region (Pakistan)" ;
 #    :earliest-date 300 ;
 #    :latest-date 400 .
+
+:male-figurine-adulis a :human-figure ;
+   rdfs:label "Male figurine from Adulis" ;
+   :described-by <https://isaw.nyu.edu/research/io-figures/images/fig-25-terracotta-figurine-from-adulis> ,
+      <https://isaw.nyu.edu/research/io-figures/sessions/march-11/info> ;
+   :earliest-date 300 ;
+   :latest-date 600 ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "Eritrea" ;
+   :representative-latlong-point (15.263611 39.660556) ;
+   :thumbnail-image <https://isaw.nyu.edu/research/io-figures/images/fig-25-terracotta-figurine-from-adulis/@@images/8f3ea8cc-a9b0-4afa-a8ec-516dd1ee8fd1.jpeg> .
 
 :standing-warrior-costa-veraguis a :human-figure ;
    rdfs:label "Standing Warrior of the Veraquis Culture" ;
