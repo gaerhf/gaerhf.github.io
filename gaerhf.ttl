@@ -3116,6 +3116,16 @@
    :representative-latlong-point (20.7835 79.6357) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pillar_with_Naga_Muchalinda_over_the_throne_of_the_Buddha._Pauni_(Bhandara_District)._Railing_pillar_from_Jagannath_Tekri._2nd-1st_century_BCE.jpg> .
 
+:shunga-vase-reliefs a :group-of-human-figures ;
+   rdfs:label "Shuna Period Vase with Reliefs" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/64487> ;
+   :earliest-date -100 ;
+   :latest-date -1 ;
+   :in-modern-country-note "India" ;
+   :note "Specific findspot not known. Object has been returned by Metropolitan Museum to India." ;
+   :representative-latlong-point (25.6125 85.128333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MET_2001_588_Strm1_(vertical).jpg> .
+
 :winged-figure-tillya-tepe a :human-figure ;
    rdfs:label "Winged Figure from Tillya Tepe" ;
    :described-by <https://en.wikipedia.org/wiki/Tillya_Tepe> ;
