@@ -648,6 +648,14 @@
    :art-historical-culture-or-tradition :pre-pottery-neolithic  ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gobekli_Tepe_ithyphallic_statuette._Şanlıurfa_-_Archeology_Museum,_July_2025_(frontal).jpg> .
 
+:column-face-karahan-tepe a :human-figure ;
+   rdfs:label "Column with Face from Karahan Tepe" ;
+   :described-by <https://www.theartnewspaper.com/2025/10/09/discovery-of-11000-year-old-carved-face-in-turkey-offers-new-insight-into-early-human-expression> ;
+   :approximate-date -9000 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.0925 39.303611) ;
+   :thumbnail-image <https://cdn.sanity.io/images/cxgd3urn/production/33e2eda96598f74fbaa720f7b745548860be3aa0-2048x1376.jpg?w=1200&h=806&q=85&fit=crop&auto=format> .
+
 :male-figure-on-bench-sayburc a :human-figure ;
    rdfs:label "Neolithic Male Figure carved in Bench" ;
    :approximate-date -8500 ;
