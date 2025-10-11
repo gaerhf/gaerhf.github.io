@@ -512,7 +512,6 @@
    :note "Mapped point very approximate. I have not found a linkable image." ;
    :art-historical-culture-or-tradition :saharan-rock-art .
 
-
 :toca-do-baixao-perna-i a :group-of-human-figures ;
    rdfs:label "Toca do Baixao do Perna I Pictograms" ;
    :described-by <https://www.mdpi.com/2076-0752/3/2/190> ;
@@ -627,15 +626,6 @@
    :representative-latlong-point (32.032778 35.475556) ;
    :thumbnail-image <https://www.imj.org.il/sites/default/files/collections/Human%20Statue,%20Gilgal,%20PPNA~K10343_2.jpg> .
 
-:balikligol-life-size-figure a :human-figure ;
-   rdfs:label "Balıklıgöl Life-Size Figure" ;
-   :described-by <https://en.wikipedia.org/wiki/Urfa_Man> ;
-   :approximate-date -9000 ;
-   :in-modern-country-note "Turkey" ;
-   :materia-note "Sandstone, obsidian (eyes)" ;
-   :representative-latlong-point (37.158333 38.791667) ;
-   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> .
 
 :gobeklitepe-figure-A2 a :human-figure ;
    rdfs:label "Gobeklitepe Male Figure A2" ;
@@ -654,16 +644,53 @@
    :approximate-date -9000 ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.0925 39.303611) ;
-   :thumbnail-image <https://cdn.sanity.io/images/cxgd3urn/production/33e2eda96598f74fbaa720f7b745548860be3aa0-2048x1376.jpg?w=1200&h=806&q=85&fit=crop&auto=format> .
+   :thumbnail-image <https://cdn.sanity.io/images/cxgd3urn/production/33e2eda96598f74fbaa720f7b745548860be3aa0-2048x1376.jpg?w=300&h=201&q=85&fit=crop&auto=format> .
+
+:balikligol-life-size-figure a :human-figure ;
+   rdfs:label "Balıklıgöl Life-Size Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Urfa_Man> ;
+   :approximate-date -9000 ;
+   :in-modern-country-note "Turkey" ;
+   :materia-note "Sandstone, obsidian (eyes)" ;
+   :representative-latlong-point (37.158333 38.791667) ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> .
 
 :male-figure-on-bench-sayburc a :human-figure ;
    rdfs:label "Neolithic Male Figure carved in Bench" ;
+   :described-by <https://doi.org/10.15184/aqy.2022.125> ;
    :approximate-date -8500 ;
    :material-note "Limestone" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.110047 38.621842) ; # Sayburc, Turkey
-   :described-by <https://doi.org/10.15184/aqy.2022.125> ;
    :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20221201181421541-0856:S0003598X22001259:S0003598X22001259_fig6.png?pub-status=live> .
+
+:inscribed-figure-pinhole-cave a :human-figure ;
+   rdfs:label "Inscribed Figure from Pinhole Cave" ;
+   :described-by <https://en.wikipedia.org/wiki/Pinhole_Cave_Man> ;
+   :approximate-date -9000 ;
+   :material-note "Wooly rhinoceros rib bone" ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (53.263611 -1.193889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pinhole_Cave_Man-1.jpg> .
+
+:female-gypsum-figurine-tell-fekheriye a :human-figure ;
+   rdfs:label "Female Figurine in Gypsum from Tell Fekheriye" ;
+   :described-by <https://en.wikipedia.org/wiki/Tell_Fekheriye> ;
+   :earliest-date -9000 ;
+   :latest-date -7000 ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (36.84 40.068611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_from_Fakhariyah_(female),_Tell_Fakhariyah,_Pre-pottery_Neolithic_B,_9000-7000_BC,_gypsum_with_bitumen_and_stone_inlays_-_Oriental_Institute_Museum,_University_of_Chicago_-_DSC07633.JPG> .
+
+:gypsum-figurine-tell-fekheriye a :human-figure ;
+   rdfs:label "Figurine in Gypsum from Tell Fekheriye" ;
+   :described-by <https://en.wikipedia.org/wiki/Tell_Fekheriye> ;
+   :earliest-date -9000 ;
+   :latest-date -7000 ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (36.84 40.068611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_from_Fakhariyah_(male),_Tell_Fakhariyah,_Pre-pottery_Neolithic_B,_9000-7000_BC,_gypsum_with_bitumen_and_stone_inlays_-_Oriental_Institute_Museum,_University_of_Chicago_-_DSC07636.JPG> .
 
 :flint-anthropoid-figurines-kharaysin a :group-of-human-figures ;
    rdfs:label "Flint Anthropoid Figurines from Kharaysin" ;
@@ -710,6 +737,15 @@
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2014/06/JA14-Artifact-Syrian-Neolithic-Face-Wand.jpg> .
 
 # -8000 https://en.wikipedia.org/wiki/Toquepala_Caves
+
+:phallic-figure-nemrik-9 a :human-figure ;
+   rdfs:label "Phallic figure with Human Face" ;
+   :described-by <https://en.wikipedia.org/wiki/Nemrik_9#Material_culture> ;
+   :earliest-date -7800 ;
+   :latest-date -6500 ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (36.716667 42.85) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_figurine,_a_primitive_representation_of_a_human_figure._From_Nimrik_village,_now_submerged,_Mosul_Dam,_Iraq._8000-5000_BCE._Iraq_Museum.jpg> .
 
 :ain-ghazal-statues a :group-of-human-figures ;
    rdfs:label "Ain Ghazal Statues" ;
