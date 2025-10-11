@@ -677,17 +677,24 @@
 :female-gypsum-figurine-tell-fekheriye a :human-figure ;
    rdfs:label "Female Figurine in Gypsum from Tell Fekheriye" ;
    :described-by <https://en.wikipedia.org/wiki/Tell_Fekheriye> ;
+   :described-by <https://en.wikipedia.org/wiki/Tell_Fekheriye> ,
+   <https://www.exoriente.org/downloads/neolithics.php> ,
+   <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C33&q=Anthropomorphic+Statuettes+from+Tell+Fakhariyah%3A+Arguments+for+Their+Possible+PPNB+Origin+Bernd+Müller-Neuhof&btnG=> ;
    :earliest-date -9000 ;
    :latest-date -7000 ;
+   :note "The article by B. Müller-Neuhof in ‘Neo-Lithics’ is not individually downloadablle other than via Academia.edu." ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.84 40.068611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_from_Fakhariyah_(female),_Tell_Fakhariyah,_Pre-pottery_Neolithic_B,_9000-7000_BC,_gypsum_with_bitumen_and_stone_inlays_-_Oriental_Institute_Museum,_University_of_Chicago_-_DSC07633.JPG> .
 
 :gypsum-figurine-tell-fekheriye a :human-figure ;
    rdfs:label "Figurine in Gypsum from Tell Fekheriye" ;
-   :described-by <https://en.wikipedia.org/wiki/Tell_Fekheriye> ;
+   :described-by <https://en.wikipedia.org/wiki/Tell_Fekheriye> ,
+   <https://www.exoriente.org/downloads/neolithics.php> ,
+   <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C33&q=Anthropomorphic+Statuettes+from+Tell+Fakhariyah%3A+Arguments+for+Their+Possible+PPNB+Origin+Bernd+Müller-Neuhof&btnG=> ;
    :earliest-date -9000 ;
    :latest-date -7000 ;
+   :note "The article by B. Müller-Neuhof in ‘Neo-Lithics’ is not individually downloadablle other than via Academia.edu." ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.84 40.068611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_from_Fakhariyah_(male),_Tell_Fakhariyah,_Pre-pottery_Neolithic_B,_9000-7000_BC,_gypsum_with_bitumen_and_stone_inlays_-_Oriental_Institute_Museum,_University_of_Chicago_-_DSC07636.JPG> .
@@ -713,6 +720,15 @@
    :representative-latlong-point (32.203891 36.008884) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20210127172904183-0208:S0003598X20000782:S0003598X20000782_fig6.png> .
+
+:bowl-figures-turtle-nevali-cori a :group-of-human-figures ;
+   rdfs:label "Bowl with Human Figures and Turtle from Nevali Çori" ;
+   :described-by <https://en.wikipedia.org/wiki/Nevalı_Çori> ;
+   :earliest-date -8400 ;
+   :latest-date -8100 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.518333 38.605556) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_museum_Fragment_of_stone_vessel_Nevalı_Çori_-_Neolithic_age_4795.jpg> .
 
 :tell-mureybet-female-figurine a :human-figure ;
    rdfs:label "Tell Mureybit Female Figurine" ;
