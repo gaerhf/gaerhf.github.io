@@ -626,17 +626,36 @@
    :representative-latlong-point (32.032778 35.475556) ;
    :thumbnail-image <https://www.imj.org.il/sites/default/files/collections/Human%20Statue,%20Gilgal,%20PPNA~K10343_2.jpg> .
 
-
-:gobeklitepe-figure-A2 a :human-figure ;
-   rdfs:label "Gobeklitepe Male Figure A2" ;
-   :described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> , <https://arachne.dainst.org/entity/2003369?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=212> ;
-   :period-note "Gobekli Tepe (Turkey)" ;
-   :in-modern-country-note "Turkey" ;
-   :representative-latlong-point (37.223611 38.921667) ;
+:gobekli-tepe-figure-A2 a :human-figure ;
+   rdfs:label "Göbekli Tepe Male Figure A2" ;
+   :described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> ,
+    <https://arachne.dainst.org/entity/2003369?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=212> ;
    :earliest-date -9500 ;
    :latest-date -8000 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.223611 38.921667) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic  ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gobekli_Tepe_ithyphallic_statuette._Şanlıurfa_-_Archeology_Museum,_July_2025_(frontal).jpg> .
+
+:gobekli-tepe-figure-crossed-arm a :human-figure ;
+   rdfs:label "Göbekli Tepe Figure with Crossed Arms" ;
+   :described-by <https://en.wikipedia.org/wiki/Göbekli_Tepe> ;
+   :earliest-date -9500 ;
+   :latest-date -8000 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.223611 38.921667) ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic  ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_museum_Göbeklitepe_Human_statue_Neolithic_Age_in_2024_7338.jpg> .
+
+:gobekli-tepe-totem-figures a :human-figure ;
+   rdfs:label "Göbekli Tepe So-Called Totem with Human Figures" ;
+   :described-by <https://en.wikipedia.org/wiki/Göbekli_Tepe#Other_objects> ;
+   :earliest-date -9500 ;
+   :latest-date -8000 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.223611 38.921667) ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic  ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_museum_Totem_sept_2019_4806.jpg> .
 
 :column-face-karahan-tepe a :human-figure ;
    rdfs:label "Column with Face from Karahan Tepe" ;
@@ -723,12 +742,30 @@
 
 :bowl-figures-turtle-nevali-cori a :group-of-human-figures ;
    rdfs:label "Bowl with Human Figures and Turtle from Nevali Çori" ;
-   :described-by <https://en.wikipedia.org/wiki/Nevalı_Çori> ;
+   :described-by <https://en.wikipedia.org/wiki/Nevalı_Çori#Sculpture_and_clay_figurines> ;
    :earliest-date -8400 ;
    :latest-date -8100 ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.518333 38.605556) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_museum_Fragment_of_stone_vessel_Nevalı_Çori_-_Neolithic_age_4795.jpg> .
+
+:totem-pole-nevali-cori a :group-of-human-figures ;
+   rdfs:label "So-called Totem Pole from Nevali Çori" ;
+   :described-by <https://en.wikipedia.org/wiki/Nevalı_Çori#Sculpture_and_clay_figurines> ;
+   :earliest-date -8400 ;
+   :latest-date -8100 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.518333 38.605556) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Totemlike_head_from_Nevalı_Çori._Urfa_Museum_object,_with_tentative_reconstruction.jpg> .
+
+:head-nevali-cori a :group-of-human-figures ;
+   rdfs:label "Head from Nevali Çori" ;
+   :described-by <https://en.wikipedia.org/wiki/Nevalı_Çori#Sculpture_and_clay_figurines> ;
+   :earliest-date -8400 ;
+   :latest-date -8100 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.518333 38.605556) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nevalı_Çori_portrait,_Neolithic_age_(8400-8100_BCE),_Urfa_Museum.jpg> .
 
 :tell-mureybet-female-figurine a :human-figure ;
    rdfs:label "Tell Mureybit Female Figurine" ;
@@ -848,6 +885,15 @@
    :representative-latlong-point (31.856111 35.46) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jericho_Statue.png> ;
    :note "The images of the head on the IAA and Wiki Commons pages are horizontally flipped." .
+
+:seated-female-tepe-sarab a :human-figure ;
+   rdfs:label "Seated Female figure from Tepe Sarab" ;
+   :desribed-by <https://www.worldhistory.org/image/18287/neolithic-clay-figurine-from-west-iran/> ;
+   :earliest-date -7000 ;
+   :latest-date -6100 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (34.470195 47.725754) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Clay_human_figurine_(Fertility_goddess)_Tappeh_Sarab,_Kermanshah_ca._7000-6100_BCE_Neolithic_period,_National_Museum_of_Iran.jpg> .
 
 :neolithic-stone-mask a :human-figure ;
    rdfs:label "Pre-pottery Neolithic Stone Mask from Nahel Hemer" ;
@@ -1087,6 +1133,15 @@
    :in-modern-country-note "Bulgaria" ;
    :representative-latlong-point (42.2 24.333333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:NHM_-_Pazardzik_Sitzidol.jpg> .
+
+:bonu-ighinu-statuette a :human-figure ;
+   rdfs:label "Bonu Ighinu Statuette" ;
+   :described-by <https://en.wikipedia.org/wiki/Bonu_Ighinu_culture> ;
+   :approximate-date -4500 ;
+   :in-modern-country-note "Italy" ;
+   :note "Approximate location." ;
+   :representative-latlong-point (40.416667 8.633333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:R20S09-90_(52319225595).jpg> .
 
 :seated-figure-vinca a :human-figure ;
    rdfs:label "Seated Figure from Vinča-Belo Brdo" ;
@@ -1333,6 +1388,16 @@
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.097222 32.779444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> . 
+
+:corpulent-hagar-qim a :human-figure ;
+   rdfs:label "Corpulent Figure from Ħaġar Qim" ;
+   :described-by <https://en.wikipedia.org/wiki/Ħaġar_Qim> ,
+      <https://artsandculture.google.com/story/enigmatic-statuettes-from-the-temple-period-national-museum-of-archaeology/sQXRnxEqSHvuJg?hl=en> ;
+   :earliest-date -3600 ;
+   :latest-date -3200 ;
+   :in-modern-country-note "Malta" ;
+   :representative-latlong-point (35.827778 14.442222) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Complejo_de_Ħaġar_Qim,_isla_de_Malta,_Malta,_2021-08-25,_DD_54.jpg> .
 
 :female-figurine-niuheliang a :human-figure ;
    rdfs:label "Female Figurines from Niuheliang" ;
