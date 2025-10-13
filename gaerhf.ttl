@@ -844,6 +844,15 @@
    :representative-latlong-point (4.602 101.1305) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gua_Tambun5.jpg> .
 
+:kilisik-sculpture a :human-figure ;
+   rdfs:label "Kilisik Sculpture" ;
+   :described-by <https://en.wikipedia.org/wiki/Kilisik_sculpture> ;
+   :earliest-date -7500 ;
+   :latest-date -7000 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.804 38.541) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adiyaman-Kilisik_sculpture.jpg> .
+
 :pastoral-period-hunter-tin-aboteka a :human-figure ;
    rdfs:label "Pastoral Period Hunter from Tin Aboteka" ;
    :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-4191> ;
@@ -937,6 +946,25 @@
    :thumbnail-image <https://www.science.org/cms/10.1126/sciadv.adk4415/asset/c816897b-7a60-4e2f-865f-afdf49480a97/assets/images/large/sciadv.adk4415-f5.jpg> .
 
 # -6000 https://www.bradshawfoundation.com/africa/gilf_kebir_cave_of_swimmers/index.php
+
+:sha-ar-hagolan-seated-female-figure a :human-figure ;
+   rdfs:label "Sha'ar HaGolan Seated Female Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Sha%27ar_HaGolan_(archaeological_site)> ,
+      <https://arkeonews.net/8000-year-old-yarmukian-mother-goddess-figurine-discovered-in-israel/> ;
+   :earliest-date -6400 ;
+   :latest-date -6000 ;
+   :in-modern-country-note "Israel" ;
+   :representative-latlong-point (32.686389 35.603333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shaar_Hagolan_Mother_Goddess_clay_figurine.jpg> .
+
+:sha-ar-hagolan-pebble-figurines a :human-figure ;
+   rdfs:label "Sha'ar HaGolan Pebble Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Sha%27ar_HaGolan_(archaeological_site)> ;
+   :earliest-date -6400 ;
+   :latest-date -6000 ;
+   :in-modern-country-note "Israel" ;
+   :representative-latlong-point (32.686389 35.603333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yarmukian_Culture_-Sha%27ar_HaGolan,_pebble_Figurine.jpg> .
 
 :bangudae-petroglyphs a :group-of-human-figures ;
    rdfs:label "Bangudae Petroglyphs" ;
@@ -1532,16 +1560,13 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Narmer_Palette_smiting_side.jpg> ;
    :art-historical-culture-or-tradition :pharaonic-egypt .
 
-:two-figures-oryxes-al-ain a :group-of-human-figures ;
-   rdfs:label "Two figures flanked by Oryxes from Al Ain" ;
-   :described-by <https://de.wikivoyage.org/wiki/Al-Ain> ,
-      <https://en.wikipedia.org/wiki/Hili_Archaeological_Park> ,
-      <https://web.archive.org/web/20091203154509/http://www.aam.gov.ae/related_sites/hili_grand_tomb.htm> ;
-   :approximate-date -2500 ;
-   :in-modern-country-note "United Arab Emirates" ;
-   :note "The ‘Grand Tomb’ is reconstructed but I don't think the relief is a modern creation." ;
-   :representative-latlong-point (24.291689 55.793066) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Al-ain-rundgrab.jpg> .
+:cross-shaped-figure-pomos a :human-figure ;
+   rdfs:label "Cross-shaped Figure from Pomos" ;
+   :desribed-by <https://en.wikipedia.org/wiki/Idol_of_Pomos> ;
+   :approximate-date -3000 ;
+   :in-modern-country-note "Cyprus" ;
+   :representative-latlong-point (35.159722 32.545) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Idol_of_Pomos,_Cyprus_Archaeological_Museum.jpg> .
 
 :stele-vado-all-arancio a :human-figure ;
    rdfs:label "Stele from Vado all'Arancio" ;
@@ -1756,6 +1781,17 @@
    :representative-latlong-point (26.173611 68.323055) ;
    :thumbnail-image <https://www.harappa.com/sites/default/files/styles/galleryformatter_slide/public/chanhudaro-dancer-spear-thrower.jpg> ;
    :alt-thumbnail-image <https://collections.mfa.org/internal/media/dispatcher/1009998/preview> .
+
+:two-figures-oryxes-al-ain a :group-of-human-figures ;
+   rdfs:label "Two figures flanked by Oryxes from Al Ain" ;
+   :described-by <https://de.wikivoyage.org/wiki/Al-Ain> ,
+      <https://en.wikipedia.org/wiki/Hili_Archaeological_Park> ,
+      <https://web.archive.org/web/20091203154509/http://www.aam.gov.ae/related_sites/hili_grand_tomb.htm> ;
+   :approximate-date -2500 ;
+   :in-modern-country-note "United Arab Emirates" ;
+   :note "The ‘Grand Tomb’ is reconstructed but I don't think the relief is a modern creation." ;
+   :representative-latlong-point (24.291689 55.793066) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Al-ain-rundgrab.jpg> .
 
 :kernosivsky-idol a :human-figure ;
    rdfs:label "Kernosivsky Idol" ;

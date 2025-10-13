@@ -656,6 +656,12 @@ function renderFiguresOnMap(figuresArray) {
             });
 
             const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
+            let detailImageUrl = null;
+            // if (figure.thumbnailURL) {
+            //     detailImageUrl = figure.thumbnailURL;
+            // } else if (figure.wikipediaImagePage) {
+            //     detailImageUrl = getWikimediaImageUrl(figure.wikipediaImagePage, 200); // Await the async call
+            // }
             marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
             marker.on('click', () => showFigureDetails(figureId));
             leafletMarkers[figureId] = marker; // Store marker
