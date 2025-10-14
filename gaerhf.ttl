@@ -305,7 +305,8 @@
 
 :hohle-fels-figurine a :human-figure ;
    rdfs:label "Female Figurine from Hohle Fels" ;
-   :described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels> ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels>  ,
+      <https://www.urmu.de/digitale-sammlung/objekt/frauenstatuette-1977-0119-0030-9000> ;
    :earliest-date -40000 ;
    :latest-date -35000 ;
    :in-modern-country-note "Germany" ;
@@ -914,6 +915,16 @@
    :representative-latlong-point (31.1392 35.2939) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
 
+:marble-figurines-knossos a :human-figure ;
+   rdfs:label "Neolithic Marble Figurine from Knossos" ;
+   :described-by <https://fr.wikipedia.org/wiki/Préhistoire_de_la_Crète#Céramique_et_autres_objets_mobiliers> ;
+   :earliest-daate -6500 ;
+   :latest-date -5900 ;
+   :note "Possibly a Cycladic product. Found at Knossos." ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (35.298056 25.163056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_male_figurine_from_Knossos.jpg> .
+
 :anthropoid-object-engraved-hair-damjili-cave a :human-figure ;
    rdfs:label "Anthropoid Object with Engraved Hair from Damjili Cave" ;
    :described-by <https://doi.org/10.1016/j.ara.2025.100611> ;
@@ -1268,6 +1279,7 @@
 :female-figurine-kolobrzeg a :human-figure ;
    rdfs:label "Female Figurine from Kołobrzeg" ;
    :described-by <https://archaeology.org/news/2025/06/20/6000-year-old-polish-venus-figurine-studied/> ,
+      <https://archaeology.org/news/2025/06/20/6000-year-old-polish-venus-figurine-studied/> ,
    <https://www.theartnewspaper.com/2025/06/19/archaeologists-confirm-that-limestone-venus-found-by-a-farmer-in-poland-is-6000-years-old> ;
    :approximate-date -4000 ;
    :in-modern-country-note "Poland" ;
@@ -1367,7 +1379,7 @@
    :in-modern-country-note "Namibia" ;
    :representative-latlong-point (-20.590556 14.372222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_painting_in_Twyfelfontein3.jpg> .
-
+  
 :neolithic-figurine-karditsa a :human-figure ;
    rdfs:label "Neolithic Figurine from Karditsa" ;
    :described-by <https://en.wikipedia.org/wiki/Karditsa_Thinker> ;
@@ -3628,13 +3640,15 @@
    :representative-latlong-point (16.933333 33.726389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_head_from_an_over-life-sized_statue_of_Augustus.jpg> .
 
-:emesa-helmet a :human-figure ;
-   rdfs:label "Emesa Helmet" ;
-   :described-by <https://en.wikipedia.org/wiki/Emesa_helmet> ;
-   :approximate-date 25 ;
-   :in-modern-country-note "Syria" ;
-   :representative-latlong-point (34.73 36.697778) ;
-   :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/a/a5/Emesa_helmet.png?20180213011333> .
+:small-skeleton-bronze a :human-figure ;
+   rdfs:label "Small Skeleton in Bronze" ;
+   :described-by <https://www.getty.edu/art/collection/object/103TJM> ;
+   :earliest-date -25 ;
+   :latestdate 100 ;
+   :material-note "Bronze" ;
+   :note "Findspot not known. Mapped to Rome as unfortunate default." ;
+   :representative-latlong-point (41.8967 12.4822) ;
+   :thumbnail-image <https://media.getty.edu/iiif/image/d507b387-4bb5-4c42-b03d-317d2713e880/full/500,/0/default.jpg> .
 
 :copper-alloy-figurine-holding-torque a :human-figure ;
    rdfs:label "Copper Alloy Figurine holding Torque" ;
@@ -3645,6 +3659,14 @@
    :in-modern-country-note "United Kingdom" ;
    :representative-latlong-point (52.142689 -0.050156) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2021/04/Digs-England-Cernunno-Silo-Doubled.jpg> .
+
+:emesa-helmet a :human-figure ;
+   rdfs:label "Emesa Helmet" ;
+   :described-by <https://en.wikipedia.org/wiki/Emesa_helmet> ;
+   :approximate-date 25 ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (34.73 36.697778) ;
+   :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/a/a5/Emesa_helmet.png?20180213011333> .
 
 :funerary-mask-thaj a :human-figure ;
    rdfs:label "Funerary Mask from Thaj" ;
