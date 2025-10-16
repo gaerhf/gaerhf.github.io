@@ -306,7 +306,8 @@
 :hohle-fels-figurine a :human-figure ;
    rdfs:label "Female Figurine from Hohle Fels" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels>  ,
-      <https://www.urmu.de/digitale-sammlung/objekt/frauenstatuette-1977-0119-0030-9000> ;
+      <https://www.urmu.de/digitale-sammlung/objekt/frauenstatuette-1977-0119-0030-9000> ,
+      <https://www.nature.com/articles/nature07995> ;
    :earliest-date -40000 ;
    :latest-date -35000 ;
    :in-modern-country-note "Germany" ;
@@ -4876,6 +4877,14 @@
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bonampak_painting.jpg> .
 
+:female-sword-bearer-harby a :human-figure ;
+   rdfs:label "Female Sword Bearer from Hårby" ;
+   :described-by <https://en.wikipedia.org/wiki/Valkyrie_from_Hårby> ;
+   :approximate-date 800 ;
+   :in-modern-country-note "Denmark" ;
+   :representative-latlong-point (55.221667 10.1225) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Valkyrie_fra_Hårby.png> .
+
 :four-evangelists-aachen-gospel a :group-of-human-figures ;
    rdfs:label "Four Evangelists, Aachen Gospel" ;
    :described-by <https://en.wikipedia.org/wiki/Aachen_Gospels_(Ada_School)> ;
@@ -5071,6 +5080,33 @@
    :representative-latlong-point (19 -70.666667) ;
    :note "Findspot unknown" ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-17678-001.jpg> .
+
+:seated-figure-lejre a :human-figure ;
+   rdfs:label "Seated Figure from Lejre" ;
+   :described-by <https://en.wikipedia.org/wiki/Odin_from_Lejre> ;
+   :approximate-date 900 ;
+   :material-note "Silver" ;
+   :in-modern-country-note "Denmark" ;
+   :representative-latlong-point (55.604444 11.975) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Odin_fra_Lejre_(8423840948).jpg> .
+
+:rallinge-statuette a :human-figure ;
+   rdfs:label "Rällinge Statuette" ;
+   :described-by <https://en.wikipedia.org/wiki/Rällinge_statuette> ;
+   :approximate-date 1000 ;
+   :note "Mapped point is an approximation." ;
+   :in-modern-country-note "Sweden" ;
+   :representative-latlong-point (58.741402 16.738715) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Frejstatyett_från_Rällinge_SHM_14232-1.jpg> .
+
+:eyrarland-statue a :human-figure ;
+   rdfs:label "Eyrarland Statue " ;
+   :described-by <https://en.wikipedia.org/wiki/Eyrarland_Statue> ;
+   :approximate-date 1000 ;
+   :note "Mapped point is an approximation." ;
+   :in-modern-country-note "Iceland" ;
+   :representative-latlong-point (65.683333 -18.1);
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronzestatue_„Christ_or_Thor“_aus_dem_isländischen_Nationalmuseum_(cropped).jpg> .
 
 :dresden-codex a :group-of-human-figures ;
    rdfs:label "Dresden Codex" ;
