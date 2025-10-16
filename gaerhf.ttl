@@ -4411,6 +4411,15 @@
 # 200 - 400 https://en.wikipedia.org/wiki/Miran_(Xinjiang)
 # https://en.wikipedia.org/wiki/Loulan_Kingdom
 
+:apollo-cyrene a :human-figure ;
+   rdfs:label "Statue of Apollo from Cyrene" ;
+   :defined-by <https://en.wikipedia.org/wiki/Apollo_of_Cyrene> ;
+   :approximate-date 200 ;
+   :material-note "Marble" ;
+   :in-modern-country-note "Libya" ;
+   :representative-latlong-point (32.825 21.858056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Apollo_Kitharoidos_BM_1380.jpg> . 
+
 :buddha-disciples-miran a :group-of-human-figures ;
    rdfs:label "Buddha with Disciples from Miran" ;
    :described-by <https://en.wikipedia.org/wiki/Miran_(Xinjiang)#History> ;
@@ -5043,7 +5052,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:HuntSceneNMC.JPG> .
 
 :horned-figures-capitol-reef a :group-of-human-figures ;
-   rdfs:label "" ;
+   rdfs:label "Horned Anthropomorphic Figures from Captiol Reef" ;
    :described-by <https://www.nps.gov/places/petroglyph-panel.htm> ,
     <https://en.wikipedia.org/wiki/Capitol_Reef_National_Park#Native_Americans_and_Mormons> ,
     <https://www.nps.gov/care/learn/historyculture/fremont-culture-petroglyphs.htm> ;
