@@ -312,6 +312,7 @@ async function renderFiguresAsList(figuresArray) {
         // if (thumbnailUrl) {
         const thumbnailImg = document.createElement('img');
         thumbnailImg.src = "/thumbnails/" + figureId + ".png" ;
+        thumbnailImg.loading = "lazy" ;
         thumbnailImg.style.width = '50px';
         thumbnailImg.style.height = 'auto';
         thumbnailImg.style.marginRight = '10px';
@@ -658,7 +659,7 @@ function renderFiguresOnMap(figuresArray) {
 
 
             const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
-            marker.bindPopup(`<strong>${figure.label || figure.id}</strong><!-- <div><img style="max-width:50px" src="/thumbnails/${figure.id}.png"></div> -->`);
+            marker.bindPopup(`<strong>${figure.label || figure.id}</strong><!-- <div><img style="max-width:50px" src="/thumbnails/${figure.id}.png" loading="lazy"></div> -->`);
             marker.on('click', () => showFigureDetails(figureId));
             leafletMarkers[figureId] = marker; // Store marker
         }
