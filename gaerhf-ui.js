@@ -302,23 +302,23 @@ async function renderFiguresAsList(figuresArray) {
         figureItem.style.display = 'flex';
         figureItem.style.alignItems = 'center';
 
-        let thumbnailUrl = null;
-        if (figure.thumbnailURL) {
-            thumbnailUrl = figure.thumbnailURL;
-        } else if (figure.wikipediaImagePage) {
-            thumbnailUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 50); // Await the async call
-        }
+        // let thumbnailUrl = null;
+        // if (figure.thumbnailURL) {
+        //     thumbnailUrl = figure.thumbnailURL;
+        // } else if (figure.wikipediaImagePage) {
+        //     thumbnailUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 50); // Await the async call
+        // }
 
-        if (thumbnailUrl) {
-            const thumbnailImg = document.createElement('img');
-            thumbnailImg.src = thumbnailUrl;
-            thumbnailImg.style.width = '50px';
-            thumbnailImg.style.height = 'auto';
-            thumbnailImg.style.marginRight = '10px';
+        // if (thumbnailUrl) {
+        const thumbnailImg = document.createElement('img');
+        thumbnailImg.src = "/thumbnails/" + figureId + ".png" ;
+        thumbnailImg.style.width = '50px';
+        thumbnailImg.style.height = 'auto';
+        thumbnailImg.style.marginRight = '10px';
 
             figureItem.appendChild(thumbnailImg);
 
-        }
+        // }
 
         const textContainer = document.createElement('div');
 
@@ -655,14 +655,10 @@ function renderFiguresOnMap(figuresArray) {
                 html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
             });
 
+
+
             const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
-            let detailImageUrl = null;
-            // if (figure.thumbnailURL) {
-            //     detailImageUrl = figure.thumbnailURL;
-            // } else if (figure.wikipediaImagePage) {
-            //     detailImageUrl = getWikimediaImageUrl(figure.wikipediaImagePage, 200); // Await the async call
-            // }
-            marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
+            marker.bindPopup(`<strong>${figure.label || figure.id}</strong><!-- <div><img style="max-width:50px" src="/thumbnails/${figure.id}.png"></div> -->`);
             marker.on('click', () => showFigureDetails(figureId));
             leafletMarkers[figureId] = marker; // Store marker
         }
@@ -704,19 +700,18 @@ async function showFigureDetails(figureId) {
             detailImageUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 200); // Await the async call
         }
 
-        if (detailImageUrl) {
-            const detailImg = document.createElement('img');
-            detailImg.src = detailImageUrl;
-            detailImg.classList.add('detail-image-style');
+    
+        const detailImg = document.createElement('img');
+        detailImg.src = "/thumbnails/" + figure.id + ".png" ;
+        detailImg.classList.add('detail-image-style');
 
-            detailA = document.createElement('a');
-            detailA.href = `https://lens.google.com/uploadbyurl?url=${detailImageUrl}` ;
-            detailA.appendChild(detailImg)
-            detailA.setAttribute('title', "Click for Google Image Search")
+        detailA = document.createElement('a');
+        detailA.href = `https://lens.google.com/uploadbyurl?url=${detailImageUrl}` ;
+        detailA.appendChild(detailImg)
+        detailA.setAttribute('title', "Click for Google Image Search")
 
-            detailImageDiv.appendChild(detailA);
+        detailImageDiv.appendChild(detailA);
 
-        }
 
         if (figure.cultureLabel && figure.cultureDescribedBy) {
             const cultureLink = document.createElement('p');
