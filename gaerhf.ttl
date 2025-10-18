@@ -3222,6 +3222,16 @@
    :representative-latlong-point (43.552222 5.439167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Entremont_severed_heads_1-03_(Musée_Granet,_Aix).jpg> .
 
+:standing-female-cerro-santos a :human-figure ;
+   rdfs:label "Standing Female Figure from Cerros de los Santos" ;
+   :described-by <https://en.wikipedia.org/wiki/Lady_of_Cerro_de_los_Santos> , 
+      <https://en.wikipedia.org/wiki/Cerro_de_los_Santos> ;
+   :earliest-date -200 ;
+   :latest-date -100 ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (38.733347 -1.269394) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_oferente_del_Cerro_de_los_Santos.jpg> .
+
 # -150 - -1 https://en.wikipedia.org/wiki/Gundestrup_cauldron
 
 # -200 - 100 https://scva-artsobjects-images.s3.eu-west-2.amazonaws.com/675/RLS-1_Alaska-Americas_Figure-Ivory.jpg
@@ -3246,15 +3256,15 @@
    :note "It is not certain that the figure and insription were carved at the same time. The approximate dates given here are based on an association, however." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/9_15/2b5a5160_6b45_4613_9c5f_a4560105058a/mid_NIGEAM0040013.jpg> .
 
-:standing-female-cerro-santos a :human-figure ;
-   rdfs:label "Standing Female Figure from Cerros de los Santos" ;
-   :described-by <https://en.wikipedia.org/wiki/Lady_of_Cerro_de_los_Santos> , 
-      <https://en.wikipedia.org/wiki/Cerro_de_los_Santos> ;
+:pregnant-female-colima a :human-figure ;
+   rdfs:label "Pregnant Female Figurine from Colima" ;
+   :described-by <https://collections.lacma.org/node/253605> ;
    :earliest-date -200 ;
-   :latest-date -100 ;
-   :in-modern-country-note "Spain" ;
-   :representative-latlong-point (38.733347 -1.269394) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_oferente_del_Cerro_de_los_Santos.jpg> .
+   :latest-date 500 ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (19.239864 -103.712762) ;
+   :thumbnail-image <https://collections-images.lacma.org/remote_images/ma-47618-WEB.jpg> .
 
 :lakshmi-stupa-2-sanchi a :human-figure ;
    rdfs:label "Lakshmi from Stupa 2 at Sanchi" ;
@@ -5007,6 +5017,18 @@
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (36.206111 58.793333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> .
+
+:female-bodhisattva-dong-duong a :human-figure ;
+   rdfs:label "Female Bodhisattva from " ;
+   :described-by <https://smarthistory.org/dong-duong-buddhist-temple-complex-vietnam/> ,
+      <https://en.wikipedia.org/wiki/History_of_Vietnam#Golden_Age_of_Cham_Civilization_and_wars_with_Angkor_Empire_(7th_century–1203)> ,
+      <https://fr.wikipedia.org/wiki/Art_du_Champa#Métaux_et_bijoux> ;
+   :earliest-date 875 ;
+   :latest-date 925 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "Vietnam" ;
+   :representative-latlong-point (15.666944 108.383056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DaNang_Tara.jpg> .
 
 :intricately-carved-panel-box a :group-of-human-figures ;
    rdfs:label "Intricately Carved Panel from Box" ;
