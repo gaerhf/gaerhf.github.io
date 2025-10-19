@@ -748,7 +748,7 @@
    :earliest-date -8400 ;
    :latest-date -8100 ;
    :in-modern-country-note "Turkey" ;
-   :representative-latlong-point (37.518333 38.605556) ;
+   :representative-latlong-point (37.518433 38.605756) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_museum_Fragment_of_stone_vessel_Nevalı_Çori_-_Neolithic_age_4795.jpg> .
 
 :totem-pole-nevali-cori a :group-of-human-figures ;
@@ -766,7 +766,7 @@
    :earliest-date -8400 ;
    :latest-date -8100 ;
    :in-modern-country-note "Turkey" ;
-   :representative-latlong-point (37.518333 38.605556) ;
+   :representative-latlong-point (37.518233 38.605656) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nevalı_Çori_portrait,_Neolithic_age_(8400-8100_BCE),_Urfa_Museum.jpg> .
 
 :tell-mureybet-female-figurine a :human-figure ;
@@ -2676,7 +2676,7 @@
    :earliest-date -770 ;
    :latest-date -409 ;
    :material-note "Wood" ;
-   :in-modern-country-note "United Kingdom" ;
+   :in-modern-country-note "England" ;
    :representative-latlong-point (53.7285 0.0382) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Roos_Carr_figures_and_boat.jpg> .
 
@@ -4692,7 +4692,7 @@
    :latest-date 1100 ;
    :material-note "Andesite" ;
    :in-modern-country-note "Bolivia" ;
-   :representative-latlong-point (16.55479 -68.67312) ;
+   :representative-latlong-point (-16.55479 -68.67312) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bol-tihuanaco-el-fr.jpg> .
 
 :qajartalik-petroglyphs a :group-of-human-figures ;

@@ -659,8 +659,48 @@ function renderFiguresOnMap(figuresArray) {
 
 
             const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
-            marker.bindPopup(`<strong>${figure.label || figure.id}</strong><!-- <div><img style="max-width:50px" src="/thumbnails/${figure.id}.png" loading="lazy"></div> -->`);
-            marker.on('click', () => showFigureDetails(figureId));
+            marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
+            marker.on('click', () => { 
+                // Clear border on all markers (remove previous highlight)
+                Object.values(leafletMarkers).forEach(m => {
+                    const el = m.getElement && m.getElement();
+                    if (el) {
+                        const inner = el.querySelector && el.querySelector('div');
+                        if (inner) {
+                            inner.style.border = '1.5px solid #222';
+                            inner.style.borderRadius = '50%';
+                        }
+                    }
+                });
+
+                // Highlight this marker (give it the requested border)
+                const thisEl = marker.getElement && marker.getElement();
+                if (thisEl) {
+                    const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
+                    if (innerDiv) {
+                        innerDiv.style.borderRadius = '50%';
+                        innerDiv.style.border = '3px solid #ee0c0cff';
+                    }
+                }
+                showFigureDetails(figureId);
+                clickContent = `<strong>${figure.label || figure.id}</strong>`
+                marker.getPopup().setContent(clickContent);
+                marker.openPopup();
+            }); 
+            // show popup on hover, and close shortly after mouse leaves
+            marker.on('mouseover', () => {
+                mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:50px" src="/thumbnails/${figure.id}.png" loading="lazy"></div>`
+                marker.getPopup().setContent(mouseOverContent);
+                marker.openPopup();
+            });
+
+            marker.on('mouseout', () => {
+                // small delay so quick moves don't flicker
+                marker._hoverCloseTimer = setTimeout(() => {
+                    marker.closePopup();
+                    marker._hoverCloseTimer = null;
+                }, 250);
+            });
             leafletMarkers[figureId] = marker; // Store marker
         }
     });
@@ -843,6 +883,16 @@ async function loadAndDisplayFigures($rdf) {
 
                     // Open popup for current figure if present
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
+                        leafletMap.setView(leafletMarkers[currentFigureId].getLatLng(), 3)
+                        const thisEl = leafletMarkers[currentFigureId].getElement && leafletMarkers[currentFigureId].getElement();
+                        if (thisEl) {
+                            const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
+                            if (innerDiv) {
+                                innerDiv.style.borderRadius = '50%';
+                                innerDiv.style.border = '3px solid #ee0c0cff';
+                            }
+                        }
+                    
                         leafletMarkers[currentFigureId].openPopup();
                     }
                 }, 200);
@@ -938,6 +988,7 @@ document.addEventListener('keydown', (event) => {
 
     highlightListFigure(figures[startIndex]) ;
     scrollToListFigure(figures[startIndex]) ;
+
 
     leafletMarkers[figures[startIndex]].openPopup();
 
