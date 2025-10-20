@@ -3692,6 +3692,18 @@
    :representative-latlong-point (34.73 36.697778) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/a/a5/Emesa_helmet.png?20180213011333> .
 
+:indian-ivory-statuette-pompeii a :human-figure ;
+   rdfs:label "Indian Ivory Statue from Pompeii" ;
+   :described-by <https://en.wikipedia.org/wiki/Pompeii_Lakshmi> ,
+      <https://smarthistory.org/indian-ivory-statuette-pompeii/> ,
+      <https://palp.art/browse/r1-i8-p17> ;
+   :earliest-date 1 ;
+   :latest-date 50 ;
+   :material-note "Ivory" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.75036 14.4904 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statuetta_indiana_di_Lakshmi,_avorio,_da_pompei,_1-50_dc_ca.,_149425,_01.JPG> .
+
 :funerary-mask-thaj a :human-figure ;
    rdfs:label "Funerary Mask from Thaj" ;
    :described-by <https://www.flickr.com/photos/dandiffendale/49997602097> ;
