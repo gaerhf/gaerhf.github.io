@@ -1050,7 +1050,7 @@
    :thumbnail-image <https://art.thewalters.org/images/art/PS1_48.2741_3Qtr_DD_T09.jpg> .
 
 :female-figurine-saliagos a :human-figure ;
-   rdfs:label "Female Figureine from Saliagos" ;
+   rdfs:label "Female Figurine from Saliagos" ;
    :described-by <https://en.wikipedia.org/wiki/Fat_Lady_of_Saliagos> ;
    :earliest-date -5000 ;
    :latest-date -4000 ;
@@ -3778,6 +3778,15 @@
    :in-modern-country-note "Sudan" ;
    :representative-latlong-point (16.269444 33.275) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Naga_Löwentempel.jpg> .
+
+:atlas-figures-garni-temple a :group-of-human-figures ;
+   rdfs:label "Atlas Figures on the Garni Temple" ;
+   :described-by <https://en.wikipedia.org/wiki/Garni_Temple> ;
+   :earliest-date 75 ;
+   :latest-date 125 ;
+   :in-modern-country-note "Armenia" ;
+   :representative-latlong-point (40.112421 44.730277) ; 
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Գառնիի_Տաճար_31.jpg> .
 
 :fugoppe-cave-petroglyphs a :group-of-human-figures ;
    rdfs:label "Fugoppe Cave Petroglyphs" ;

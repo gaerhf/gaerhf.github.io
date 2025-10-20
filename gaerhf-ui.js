@@ -78,29 +78,6 @@ function formatDateForDisplay(date) {
     return `${year}${era}`;
 }
 
-async function getWikimediaImageUrl(pageUrl, width = 200) {
-    try {
-        const parts = pageUrl.split('/');
-        const filename = parts[parts.length - 1];
-        const apiUrlBase = 'https://commons.wikimedia.org/w/api.php';
-        const apiUrl = `${apiUrlBase}?action=query&prop=imageinfo&iiprop=url|thumburl&titles=${filename}&iiurlwidth=${width}&format=json&origin=*`;
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        const pages = data.query.pages;
-        const pageId = Object.keys(pages)[0];
-        if (pageId !== "-1" && pages[pageId].imageinfo && pages[pageId].imageinfo[0].thumburl) {
-            return String(pages[pageId].imageinfo[0].thumburl); // Explicitly return a string
-            //return "https://kaa-images.s3.us-east-2.amazonaws.com/thumbs/KA002-D03-001-Cf.png";
-        } else {
-            console.error("Could not retrieve thumbnail URL from the API response for:", pageUrl);
-            return null;
-        }
-    } catch (error) {
-        console.error("An error occurred while fetching Wikimedia image info:", error);
-        return null;
-    }
-}
-
 // Sorting and Filtering functions
 function filterFiguresByDateRange(startYear, endYear) {
 
@@ -689,7 +666,7 @@ function renderFiguresOnMap(figuresArray) {
             }); 
             // show popup on hover, and close shortly after mouse leaves
             marker.on('mouseover', () => {
-                mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:50px" src="/thumbnails/${figure.id}.png" loading="lazy"></div>`
+                mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="/thumbnails/${figure.id}.png" loading="lazy"></div>`
                 marker.getPopup().setContent(mouseOverContent);
                 marker.openPopup();
             });
