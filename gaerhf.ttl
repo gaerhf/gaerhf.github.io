@@ -2718,6 +2718,15 @@
    :representative-latlong-point (37.103611 36.678611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Victory_stele_of_Esarhaddon.jpg> .
 
+:statue-pharaoh-tantamani a :human-figure ;
+   rdfs:label "Statue of Pharaoh Tantamani from near Kerma" ;
+   :described-by <https://en.wikipedia.org/wiki/Tantamani> ;
+   :earliest-date -664 ;
+   :latest-date -656 ;
+   :in-modern-country-note "Sudan" ;
+   :representative-latlong-point (19.600803 30.409731 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tanotamun_statue_in_Kerma_Museum.jpg> .
+
 :female-flanked-sphinxes a :human-figure ;
    rdfs:label "Seated Female Figure Flanked by Sphinxes" ;
    :described-by <https://en.wikipedia.org/wiki/Lady_of_Galera> ;
