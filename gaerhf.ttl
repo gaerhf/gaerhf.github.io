@@ -3784,6 +3784,7 @@
    :described-by <https://en.wikipedia.org/wiki/Garni_Temple> ;
    :earliest-date 75 ;
    :latest-date 125 ;
+   :note "The Atlas figures are on the front face of the projecting portions of the podium that flank the stairway." ;
    :in-modern-country-note "Armenia" ;
    :representative-latlong-point (40.112421 44.730277) ; 
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Գառնիի_Տաճար_31.jpg> .
@@ -4927,6 +4928,15 @@
    :representative-latlong-point (16.704 -91.065) ; # Site
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bonampak_painting.jpg> .
+
+:panels-somapura-mahavihara a :group-of-human-figures ;
+   rdfs:label "Panels at Somapura Mahavihara Monastery" ;
+   :described-by <https://en.wikipedia.org/wiki/Somapura_Mahavihara#Gallery> ;
+   :earliest-date 781 ;
+   :latest-date 1043 ;
+   :in-modern-country-note "Bangladesh" ;
+   :representative-latlong-point (25.031111 88.976944) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sompura_Mahavihara_2024_17.jpg> .
 
 :female-sword-bearer-harby a :human-figure ;
    rdfs:label "Female Sword Bearer from Hårby" ;
