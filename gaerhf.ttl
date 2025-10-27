@@ -4967,6 +4967,16 @@
    :representative-latlong-point (55.221667 10.1225) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Valkyrie_fra_Hårby.png> .
 
+:bread-image-christ a :human-figure ;
+   rdfs:label "Circular Bread Loaf with Image of Christ" ;
+   :described-by <https://www.anatolianarchaeology.net/1300-year-old-communion-bread-unearthed-in-karaman-inscribed-with-gratitude-to-blessed-jesus/> ,
+      <https://www.facebook.com/helen.nguyen.725414/photos/archaeologists-have-uncovered-a-1200-year-old-loaf-of-bread-unlike-anything-seen/24782222468136927/> ;
+   :approximate-date 800 ;
+   :note "The find was announced on FaceBook, though I can't find original post and welcome a better long-term landing page. The mapped point is near the Karaman Museum." ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.182959 33.211578) ;
+   :thumbnail-image <https://www.anatolianarchaeology.net/wp-content/uploads/2025/10/1300-Year-Old-Communion-Bread-Unearthed-in-Karaman-Inscribed-With-Gratitude-to-Blessed-Jesus-1.webp> .
+
 :four-evangelists-aachen-gospel a :group-of-human-figures ;
    rdfs:label "Four Evangelists, Aachen Gospel" ;
    :described-by <https://en.wikipedia.org/wiki/Aachen_Gospels_(Ada_School)> ;
