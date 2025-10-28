@@ -3238,9 +3238,9 @@
       <https://en.wikipedia.org/wiki/Parthian_music> ;
    :earliest-date -250 ;
    :latest-date 224 ;
-   :note "Arbitrarily mapped to Ctesiphon" ;
+   :note "Arbitrarily mapped to Ecbatana" ;
    :in-modern-country-note "Iran" ;
-   :representative-latlong-point (33.093611 44.580556) ;
+   :representative-latlong-point (34.806389 48.516111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Parthian_lute_player.jpg> .
 
 :ai-khanoum-disk a :group-of-human-figures ;
