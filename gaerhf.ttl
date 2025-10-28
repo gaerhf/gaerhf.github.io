@@ -3169,6 +3169,15 @@
    :art-historical-culture-or-tradition :iberian-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Escultura_ibérica_%22Dama_de_Elche%22._Museo_Arqueológico_Nacional_(España)._Spain.jpg> .
 
+:seated-figure-roquepertuse a :human-figure ;
+   rdfs:label "Seated Figure from Roquepertuse" ;
+   :described-by <https://en.wikipedia.org/wiki/Roquepertuse> ;
+   :earliest-date -400 ;
+   :latest-date -200 ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.5328 5.2715) ;
+   :wikimedia-commons-image-page <4https://commons.wikimedia.org/wiki/File:Seated_warrior_8270_from_Roquepertuse_-_front_(Marseille,_Mus_d%27arch_med).jpg> .
+
 # -300 -- https://commons.wikimedia.org/wiki/File:Majiayuan_tomb_figurines.jpg
 
 :scultpures-tel-abrak a :group-of-human-figures ;
@@ -3202,15 +3211,6 @@
    :note "See museum label in the linked Wikimedia Commons page." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa_(cropped).jpg> .
 
-:seated-figure-roquepertuse a :human-figure ;
-   rdfs:label "Seated Figure from Roquepertuse" ;
-   :described-by <https://en.wikipedia.org/wiki/Roquepertuse> ;
-   :earliest-date -400 ;
-   :latest-date -200 ;
-   :in-modern-country-note "France" ;
-   :representative-latlong-point (43.5328 5.2715) ;
-   :wikimedia-commons-image-page <4https://commons.wikimedia.org/wiki/File:Seated_warrior_8270_from_Roquepertuse_-_front_(Marseille,_Mus_d%27arch_med).jpg> .
-
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
    :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
@@ -3231,6 +3231,17 @@
    :representative-latlong-point (13.039552 43.865330) ;
    :note "Mapped point is generic as findspot not known." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
+
+:parthian-lute-player a :human-figure ;
+   rdfs:label "Parthian Lute Player" ;
+   :described-by <https://www.rmo.nl/collectie/topstukken/beeld-muzikant-muziek-luitspeler-met-instrument/> ,
+      <https://en.wikipedia.org/wiki/Parthian_music> ;
+   :earliest-date -250 ;
+   :latest-date 224 ;
+   :note "Arbitrarily mapped to Ctesiphon" ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (33.093611 44.580556) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Parthian_lute_player.jpg> .
 
 :ai-khanoum-disk a :group-of-human-figures ;
    rdfs:label "Ai-Khanoum Disk" ;
