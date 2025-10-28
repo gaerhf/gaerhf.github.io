@@ -2316,6 +2316,15 @@
 
 # -1208 https://en.wikipedia.org/wiki/Merneptah_Stele
 
+:jade-figure-fu-hao a :human-figure ;
+   rdfs:label "Jade Figure from Tomb of Fu Hao" ;
+   :described-by <https://en.wikipedia.org/wiki/Tomb_of_Fu_Hao> ,
+      <https://commons.wikimedia.org/wiki/Category:Jade_figures_from_the_Tomb_of_Fu_Hao> ;
+   :approximate-date -1200 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (36.121031 114.316206) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shang_Jade_Figure_cropped,_highlighted.jpg> .
+
 :sanxingdui-bronze-head-protuding-eyes a :human-figure ;
    rdfs:label "Sanxingdui Bronze Head with Protuding Eyes" ;
    :described-by <https://en.wikipedia.org/wiki/Sanxingdui> ;
