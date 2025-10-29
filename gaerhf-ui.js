@@ -26,6 +26,11 @@ let playIndex = 0;
 let currentFigureId = null;
 let currentTab = "figure-map";
 
+let leafletMap = null;
+let leafletMarkers = {}; // Place this at the top level
+
+let visibleMarkers = null ;
+
 // Convenience functions
 /**
  * @param {L.Map} leafletMap - The Leaflet map instance.
@@ -586,9 +591,6 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
     timelineContainer.style.height = `${figuresDisplayIndex.length * 20 + 20}px`;
 }
 
-let leafletMap = null;
-let leafletMarkers = {}; // Place this at the top level
-
 function renderFiguresOnMap(figuresArray) {
     // Only initialize once
     if (!leafletMap) {
@@ -596,6 +598,12 @@ function renderFiguresOnMap(figuresArray) {
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(leafletMap);
+        leafletMap.on('zoomend', function() {
+            visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) ;
+            });
+        leafletMap.on('moveend', function () {
+            visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) ;
+            });
     }
 
     // Remove existing markers

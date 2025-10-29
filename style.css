@@ -183,10 +183,10 @@ body {
     margin-top: 20px;
 }
 
-#tabs {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#tab-buttons {
+    /* width: 100%; */
+    /* display: flex; */
+    /* justify-content: center; */
     margin-bottom: 0;
 }
 
@@ -196,6 +196,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold ;
     margin: 0 5px;
     transition: background-color 0.3s ease;
 }
@@ -391,7 +392,8 @@ body {
     text-align: center;
     margin: 0 0 6px 0;
     font-size: 1.2em;
-    display: block;
+    font-weight: bold ;
+    /* display: block; */
 }
 
 #figure-map-container {

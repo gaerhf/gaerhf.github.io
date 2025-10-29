@@ -15,7 +15,16 @@
 
 <body>
     <div id="header-container">
-        <h2 id="main-title">🚧 Global Approaches to Early Representations of the Human Figure (GAERHF) 🚧</h2>
+            <span style="float:left" id="main-title">🚧 Global Approaches to Early Representations of the Human Figure (GAERHF)  <!-- </span>
+            <span id="tab-buttons" style="float: right"> -->
+                <button type="button" id="play-btn" title="Play">▶️</button>
+                <button type="button" class="tab-button active" data-tab="figure-map">Map</button>
+                <button type="button" class="tab-button" data-tab="figure-list">List</button>
+                <button type="button" class="tab-button" data-tab="figure-timeline">Timeline</button>
+                <button type="button" class="tab-button" data-tab="about">About</button>
+                🚧
+            </span>
+        
 
         <h2 id="detail-label">Loading</h2>
         <div id="figure-details-wrapper">
@@ -23,13 +32,7 @@
             <div id="detail-image"></div>
         </div>
         <div id="header-bottom">
-            <div id="tabs">
-                <button type="button" id="play-btn" title="Play">▶️</button>
-                <button type="button" class="tab-button active" data-tab="figure-map">Map (Some figures not shown yet)</button>
-                <button type="button" class="tab-button" data-tab="figure-list">List (All)</button>
-                <button type="button" class="tab-button" data-tab="figure-timeline">Timeline</button>
-                <button type="button" class="tab-button" data-tab="about">About</button>
-            </div>
+            <!-- button were here -->
             <div id="figure-timeline-scale" class="tab-scale"></div>
             <div id="figure-map-scale" class="tab-scale"></div>
         </div>
