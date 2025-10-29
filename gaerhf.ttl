@@ -3245,6 +3245,17 @@
    :note "See museum label in the linked Wikimedia Commons page." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa_(cropped).jpg> .
 
+:painted-beardedhead-takht-i-sangin a :human-figure ;
+   rdfs:label "Painted Bearded Head from Takht-i Sangin" ;
+   :described-by <https://en.wikipedia.org/wiki/Takht-i_Sangin#Seleucid_and_Greco-Bactrian_periods_(4th-2nd_century_BC)> ;
+   :earliest-date -250 ;
+   :latest-date -130 ;
+   :note "Site also known as ‘The Oxus Temple’." ;
+   :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (37.098889 68.285) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Head_of_Bactrian_ruler_(Satrap),_Temple_of_the_Oxus,_Takht-i-Sangin,_3rd-2nd_century_BC.jpg> .
+
+
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
    :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
