@@ -159,7 +159,7 @@ body {
     text-align: left;
 }
 
-.sticky-footer {
+.marker-gallery {
     background-color: #f0f0f0;
     /* padding: 10px 20px; */
     text-align: center;
@@ -169,13 +169,36 @@ body {
     width: 100%;
 }
 
-.sticky-footer a {
+.marker-gallery a {
     color: #337ab7;
     text-decoration: none;
 }
 
-.sticky-footer a:hover {
+.marker-gallery a:hover {
     text-decoration: underline;
+}
+
+#gallery-container {
+    position: absolute ;
+    bottom: 3em ;
+    left: 50%;
+    transform: translateX(-50%);
+    height:1em;
+    z-index: 999 ;
+}
+
+#gallery {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#gallery img {
+    padding:5px;
+}
+
+.gallery-image:hover {
+    transform: scale(1.6); /* Slightly enlarge on hover */
+    cursor: pointer ;
 }
 
 /* Tab container styles */
@@ -188,6 +211,7 @@ body {
     /* display: flex; */
     /* justify-content: center; */
     margin-bottom: 0;
+    float: right ;
 }
 
 .tab-button {
@@ -390,7 +414,8 @@ body {
 #main-title {
     width: 100%;
     text-align: center;
-    margin: 0 0 6px 0;
+    /* margin: 0 0 6px 0; */
+    float:left ;
     font-size: 1.2em;
     font-weight: bold ;
     /* display: block; */

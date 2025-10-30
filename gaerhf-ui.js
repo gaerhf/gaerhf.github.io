@@ -47,8 +47,7 @@ function getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) {
   // Get the current geographical bounds of the visible map area
   const mapBounds = leafletMap.getBounds();
 
-  // Initialize an array to store the keys of visible markers
-  const visibleMarkerKeys = [];
+  const visibleMarkerKeys = []
 
   // Iterate over each key-value pair in the leafletMarkers object
   for (const figureId in leafletMarkers) {
@@ -599,10 +598,10 @@ function renderFiguresOnMap(figuresArray) {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(leafletMap);
         leafletMap.on('zoomend', function() {
-            visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) ;
+            renderGallery() ;
             });
         leafletMap.on('moveend', function () {
-            visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) ;
+            renderGallery() ;
             });
     }
 
@@ -1160,6 +1159,64 @@ window.addEventListener('hashchange', () => {
         showFigureDetails(hash.substring(1));
     }
 });
+
+function renderGallery() {
+
+            visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) ;
+            galleryDiv = document.getElementById('gallery') ;
+            galleryDiv.innerHTML = "" ;
+            visibleMarkers.forEach(function(figureId, index) {
+                galleryImg = document.createElement('img') ;
+                galleryImg.src = `/thumbnails/${figureId}.png` ;
+                galleryImg.className = "gallery-image" ;
+                galleryImg.style = "max-height:50px" ;
+
+                galleryImg.addEventListener('mouseover', () => {
+                    mouseOverContent = `<strong>${figuresDict[figureId].label}</strong> <!-- <div><img style="max-width:75px;max-height:150px" src="/thumbnails/.png" loading="lazy"></div> -->`
+                    leafletMarkers[figureId].getPopup().setContent(mouseOverContent);
+                    leafletMarkers[figureId].openPopup();
+                });
+
+                galleryImg.addEventListener('mouseout', () => {
+                // small delay so quick moves don't flicker
+                    leafletMarkers[figureId]._hoverCloseTimer = setTimeout(() => {
+                    leafletMarkers[figureId].closePopup();
+                    leafletMarkers[figureId]._hoverCloseTimer = null;
+                }, 250);
+                });
+
+                galleryImg.addEventListener('click', () => {
+                    Object.values(leafletMarkers).forEach(m => {
+                    const el = m.getElement && m.getElement();
+                    if (el) {
+                        const inner = el.querySelector && el.querySelector('div');
+                        if (inner) {
+                            inner.style.border = '1.5px solid #222';
+                            inner.style.borderRadius = '50%';
+                        }
+                    }
+                });
+
+                    // Highlight this marker (give it the requested border)
+                    const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
+                    if (thisEl) {
+                        const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
+                        if (innerDiv) {
+                            innerDiv.style.borderRadius = '50%';
+                            innerDiv.style.border = '3px solid #ee0c0cff';
+                        }
+                    }
+                    leafletMarkers[figureId].closePopup();
+                    leafletMarkers[figureId].setZIndexOffset(1000);
+                    showFigureDetails(figureId);
+                });
+                
+                galleryDiv.appendChild(galleryImg) ;
+            } ) ;
+
+
+    }   
+
 
 function renderMapScaleBar(minDate, maxDate) {
     const scaleDiv = document.getElementById('figure-map-scale');
