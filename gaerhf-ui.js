@@ -1169,7 +1169,13 @@ function renderGallery() {
                 galleryImg = document.createElement('img') ;
                 galleryImg.src = `/thumbnails/${figureId}.png` ;
                 galleryImg.className = "gallery-image" ;
-                galleryImg.style = "max-height:50px" ;
+
+                maxHeight = '70'
+                if (visibleMarkers.length > 25) {
+                    maxHeight *= (25/visibleMarkers.length) ;
+                    if (maxHeight < 30) { maxHeight = 30} 
+                }
+                galleryImg.style = `max-height:${maxHeight}px` ;
 
                 galleryImg.addEventListener('mouseover', () => {
                     mouseOverContent = `<strong>${figuresDict[figureId].label}</strong> <!-- <div><img style="max-width:75px;max-height:150px" src="/thumbnails/.png" loading="lazy"></div> -->`
