@@ -850,11 +850,7 @@ async function loadAndDisplayFigures($rdf) {
                         leafletMap.setView(leafletMarkers[currentFigureId].getLatLng(), 3)
                         const thisEl = leafletMarkers[currentFigureId].getElement && leafletMarkers[currentFigureId].getElement();
                         if (thisEl) {
-                            const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
-                            if (innerDiv) {
-                                innerDiv.style.borderRadius = '50%';
-                                innerDiv.style.border = '3px solid #ee0c0cff';
-                            }
+                            highlightMapFigure(currentFigureId) ;
                         }
                     
                         leafletMarkers[currentFigureId].openPopup();
