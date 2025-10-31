@@ -3827,6 +3827,15 @@
    :representative-latlong-point (17.039339 54.430478) ;
    :thumbnail-image <https://isaw.nyu.edu/research/io-figures/sessions/march-4/info/leadImage> .
 
+:panel-buddha-nude-jamal-garhi a :group-of-human-figures ;
+   rdfs:label "Panel with Buddha and Nude Figure from Jamal Garhi" ;
+   :described-by <https://en.wikipedia.org/wiki/Jamal_Garhi#Sculptural_remains> ;
+   :earliest-date 1 ;
+   :latest-date 400 ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (34.316667 72.066667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Buddha_and_nude_Vajrapani_at_Jamal_Garhi.jpg> .
+
 :figurine-temple-foret-halatte-belly a :human-figure ;
    rdfs:label "Figurine from Temple of forêt d’Halatte with Prominent Belly" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Ex-voto_gallo-romain_Halatte_070908_05.jpg> ,
