@@ -3808,6 +3808,16 @@
    :representative-latlong-point (39.654722 66.975833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Orlat_plaques_(vertical_layout).jpg> .
 
+:ivory-female-statuette-begram a :human-figure ;
+   rdfs:label "Ivory Female Statuette from Begream" ;
+   :described-by <https://en.wikipedia.org/wiki/Begram_ivories> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :material-note "Ivory" ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (34.966667 69.3) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Indian_ivory_furniture_support_from_Begram,_1st_century_AD.jpg> .
+
 :corleck-head a :human-figure ;
    rdfs:label "Corleck Head" ;
    :described-by <https://en.wikipedia.org/wiki/Corleck_Head> ;

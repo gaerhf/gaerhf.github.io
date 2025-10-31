@@ -197,7 +197,7 @@ body {
 }
 
 .gallery-image:hover {
-    transform: scale(1.6); /* Slightly enlarge on hover */
+    transform: scale(1.6);
     cursor: pointer ;
 }
 
