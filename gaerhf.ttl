@@ -3416,6 +3416,16 @@
    :representative-latlong-point (36.694444 65.789444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Applique,_Tillia_tepe,_tombeVI,_Musée_national_d%27Afghanistan.jpg> .
 
+:kulu-vase a :group-of-human-figures ;
+   rdfs:label "Kulu Vase" ;
+   :described-by <https://en.wikipedia.org/wiki/Kulu_Vase> ;
+   :earliest-date -100 ;
+   :latest-date -1 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (32.509444 77.019444) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kulu_Vase-BM-2.JPG> .
+
 :laocoon-and-sons a :human-figure ;
    rdfs:label "Laocoön and His Sons" ;
    :described-by <https://en.wikipedia.org/wiki/Laocoön_and_His_Sons> ;
