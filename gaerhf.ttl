@@ -3418,7 +3418,9 @@
 
 :kulu-vase a :group-of-human-figures ;
    rdfs:label "Kulu Vase" ;
-   :described-by <https://en.wikipedia.org/wiki/Kulu_Vase> ;
+   :described-by <https://www.britishmuseum.org/collection/object/A_1880-22> ,
+      <https://en.wikipedia.org/wiki/Kulu_Vase>  ,
+      <https://artsandculture.google.com/asset/the-kulu-vase/mQGT9UKJEOHFiQ> ;
    :earliest-date -100 ;
    :latest-date -1 ;
    :material-note "Bronze" ;
