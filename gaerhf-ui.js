@@ -645,27 +645,7 @@ function renderFiguresOnMap(figuresArray) {
             const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
             marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
             marker.on('click', () => { 
-                // Clear border on all markers (remove previous highlight)
-                Object.values(leafletMarkers).forEach(m => {
-                    const el = m.getElement && m.getElement();
-                    if (el) {
-                        const inner = el.querySelector && el.querySelector('div');
-                        if (inner) {
-                            inner.style.border = '1.5px solid #222';
-                            inner.style.borderRadius = '50%';
-                        }
-                    }
-                });
-
-                // Highlight this marker (give it the requested border)
-                const thisEl = marker.getElement && marker.getElement();
-                if (thisEl) {
-                    const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
-                    if (innerDiv) {
-                        innerDiv.style.borderRadius = '50%';
-                        innerDiv.style.border = '3px solid #ee0c0cff';
-                    }
-                }
+                highlightMapFigure(figureId)
                 showFigureDetails(figureId);
                 clickContent = `<strong>${figure.label || figure.id}</strong>`
                 marker.getPopup().setContent(clickContent);
@@ -1025,6 +1005,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Open popup for current figure if present
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
                         leafletMarkers[currentFigureId].openPopup();
+                        highlightMapFigure(currentFigureId)
                     }
                 }, 200); // Delay to allow the tab to become visible
             }
@@ -1087,6 +1068,34 @@ function highlightTimelineFigure(figureId) {
         currentDiv.classList.add('highlighted');
     }
 }
+
+function highlightMapFigure(figureId) {
+
+                    Object.values(leafletMarkers).forEach(m => {
+                    m.setZIndexOffset(1);
+                    const el = m.getElement && m.getElement();
+                    if (el) {
+                        const inner = el.querySelector && el.querySelector('div');
+                        if (inner) {
+                            inner.style.border = '1.5px solid #222';
+                            inner.style.borderRadius = '50%';
+                        }
+                    }
+                });
+
+                    // Highlight this marker (give it the requested border)
+                    const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
+                    if (thisEl) {
+                        const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
+                        if (innerDiv) {
+                            innerDiv.style.borderRadius = '50%';
+                            innerDiv.style.border = '3px solid #ee0c0cff';
+                        }
+                    }
+
+                    leafletMarkers[figureId].setZIndexOffset(1000);
+                    
+    }
 
 function startPlayback() {
     const playBtn = document.getElementById('play-btn');
@@ -1192,28 +1201,8 @@ function renderGallery() {
                 });
 
                 galleryImg.addEventListener('click', () => {
-                    Object.values(leafletMarkers).forEach(m => {
-                    const el = m.getElement && m.getElement();
-                    if (el) {
-                        const inner = el.querySelector && el.querySelector('div');
-                        if (inner) {
-                            inner.style.border = '1.5px solid #222';
-                            inner.style.borderRadius = '50%';
-                        }
-                    }
-                });
-
-                    // Highlight this marker (give it the requested border)
-                    const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
-                    if (thisEl) {
-                        const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
-                        if (innerDiv) {
-                            innerDiv.style.borderRadius = '50%';
-                            innerDiv.style.border = '3px solid #ee0c0cff';
-                        }
-                    }
+                    highlightMapFigure(figureId)
                     leafletMarkers[figureId].closePopup();
-                    leafletMarkers[figureId].setZIndexOffset(1000);
                     showFigureDetails(figureId);
                 });
                 
