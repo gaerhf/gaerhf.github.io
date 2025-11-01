@@ -1761,6 +1761,17 @@
    :in-modern-country-note "Greece" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cycladic_female_figurine_2.jpg> .
 
+:anthropomorphic-copper-plate-bisauli a :group-of-human-figures ;
+   rdfs:label "Anthropomorphic Copper Plates fro Bisauli" ;
+   :described-by <https://en.wikipedia.org/wiki/Copper_Hoard_culture> ;
+   :earliest-date -2800 ;
+   :latest-date -1500 ;
+   :material-note "Copper" ;
+   :note "Not necessarily ‘human’." ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (28.32 78.93) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_figures,_chalcolithic,Yamuna-Ganga.BKB.jpg> .
+
 :chemurchek-funerary-marker a :human-figure ;
    rdfs:label "Chemurchek Funerary Marker" ;
    :described-by <https://en.wikipedia.org/wiki/Chemurchek_culture#Gallery> ;
