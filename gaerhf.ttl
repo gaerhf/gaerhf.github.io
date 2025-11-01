@@ -3846,6 +3846,14 @@
    :representative-latlong-point (34.316667 72.066667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Buddha_and_nude_Vajrapani_at_Jamal_Garhi.jpg> .
 
+:kahaum-pillar a :human-figure ;
+   rdfs:label "Kahaum Pillar" ;
+   :defined-by <https://en.wikipedia.org/wiki/Kahaum_pillar> ;
+   :approximate-date 460 ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (26.394639 83.838056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kakandi.jpg> .
+
 :figurine-temple-foret-halatte-belly a :human-figure ;
    rdfs:label "Figurine from Temple of forêt d’Halatte with Prominent Belly" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Ex-voto_gallo-romain_Halatte_070908_05.jpg> ,
