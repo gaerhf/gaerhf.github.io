@@ -3005,7 +3005,7 @@
    :earliest-date -500 ;
    :latest-date -300 ;
    :materia-note "Gold" ;
-   :in-modern-country-note "Tajikistant" ;
+   :in-modern-country-note "Tajikistan" ;
    :representative-latlong-point (37.054553 68.281994) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Chopped_gold_pieces_from_the_Oxus_Treasure_by_Nickmard_Khoey213.jpg> .
 
