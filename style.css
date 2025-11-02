@@ -7,10 +7,6 @@ body {
     position: relative; /* Needed for absolute positioning of the footer */
 }
 
-#figure-list-container {
-    /* padding: 15px; */
-}
-
 #figure-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -184,7 +180,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     height:1em;
-    z-index: 999 ;
+    z-index: 1000 ;
 }
 
 #gallery {
@@ -200,6 +196,53 @@ body {
 .gallery-image:hover {
     transform: scale(1.6);
     cursor: pointer ;
+}
+/* Container is the reference point for the absolute list */
+.autocomplete-container {
+    /* Critical: Allows the dropdown to be positioned relative to the input */
+    position: relative; 
+    display: inline-block; /* Keeps the container size tight to the input */
+}
+
+/* The actual dropdown list styling */
+.autocomplete-dropdown {
+    /* Critical: Takes the list out of the normal flow and positions it */
+    position: absolute; 
+    /* Position the dropdown right below the input */
+    top: 100%; 
+    left: 0;
+    z-index: 100; /* Ensures it sits above other content */
+    
+    width: 100%; /* Make the dropdown the same width as the input */
+    max-height: 300px; /* Max height before scrolling */
+    overflow-y: auto;
+    
+    /* General styling for a menu appearance */
+    border: 1px solid #ccc;
+    background-color: white;
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for each suggestion item */
+.autocomplete-dropdown li {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #eee; /* Visual separator */
+}
+
+/* Hover state for better user experience */
+.autocomplete-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Clear the border on the last item */
+.autocomplete-dropdown li:last-child {
+    border-bottom: none;
 }
 
 /* Tab container styles */
@@ -413,10 +456,10 @@ body {
 }
 
 #main-title {
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
     /* margin: 0 0 6px 0; */
-    float:left ;
+    /* float:left ; */
     font-size: 1.2em;
     font-weight: bold ;
     /* display: block; */

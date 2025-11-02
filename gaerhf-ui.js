@@ -856,7 +856,7 @@ async function loadAndDisplayFigures($rdf) {
                         leafletMarkers[currentFigureId].openPopup();
                     }
                 }, 200);
-
+    renderKeywordSearch();
     // --- Add this block ---
     // Check for hash in URL and show that figure if present and valid
     const hash = window.location.hash;
@@ -1067,31 +1067,56 @@ function highlightTimelineFigure(figureId) {
 
 function highlightMapFigure(figureId) {
 
-                    Object.values(leafletMarkers).forEach(m => {
-                    m.setZIndexOffset(1);
-                    const el = m.getElement && m.getElement();
-                    if (el) {
-                        const inner = el.querySelector && el.querySelector('div');
-                        if (inner) {
-                            inner.style.border = '1.5px solid #222';
-                            inner.style.borderRadius = '50%';
-                        }
-                    }
-                });
+        Object.values(leafletMarkers).forEach(m => {
+        m.setZIndexOffset(1);
+        const el = m.getElement && m.getElement();
+        if (el) {
+            const inner = el.querySelector && el.querySelector('div');
+            if (inner) {
+                inner.style.border = '1.5px solid #222';
+                inner.style.borderRadius = '50%';
+            }
+        }
+    });
 
-                    // Highlight this marker (give it the requested border)
-                    const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
-                    if (thisEl) {
-                        const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
-                        if (innerDiv) {
-                            innerDiv.style.borderRadius = '50%';
-                            innerDiv.style.border = '3px solid #ee0c0cff';
-                        }
-                    }
+        // Highlight this marker (give it the requested border)
+        const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
+        if (thisEl) {
+            const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
+            if (innerDiv) {
+                innerDiv.style.borderRadius = '50%';
+                innerDiv.style.border = '3px solid #ee0c0cff';
+            }
+        }
 
-                    leafletMarkers[figureId].setZIndexOffset(1000);
-                    
+        leafletMarkers[figureId].setZIndexOffset(1000);
+        
     }
+
+function highlightKeywordMarkers(ids) {
+        console.log(ids) ;
+        Object.values(leafletMarkers).forEach(m => {
+        const el = m.getElement && m.getElement();
+        if (el) {
+            const inner = el.querySelector && el.querySelector('div');
+            if (inner) {
+                inner.style.boxShadow = '';
+            }
+        }
+    });
+
+    ids.forEach( figureId => {
+
+        const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
+        if (thisEl) {
+            const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
+            if (innerDiv) {
+                innerDiv.style.boxShadow = '0px 0px 5px 5px rgba(15, 235, 19, 1)';
+            }
+        }
+
+    });
+} 
 
 function startPlayback() {
     const playBtn = document.getElementById('play-btn');
@@ -1164,6 +1189,157 @@ window.addEventListener('hashchange', () => {
         showFigureDetails(hash.substring(1));
     }
 });
+
+function tokenizer(input) {
+
+    const wordRegex = /\w+/g;
+
+    const tokens = input
+        .match(wordRegex);
+
+    return tokens;
+}
+
+function makeFiguresKWDocsArray() {
+    documents_dict = {} ;
+    Object.values(figuresDict).forEach( figure => {
+        tokens = tokenizer(figure.label) ;
+        tokens.forEach(token => {
+            if (documents_dict.hasOwnProperty(token)) {
+                documents_dict[token] = documents_dict[token] + " " + figure.id;
+            } else {
+            documents_dict[token] = figure.id;
+            }
+        });
+
+        if (figure.materialNote) {
+            tokens = tokenizer(figure.materialNote['value']) ;
+            tokens.forEach(token => {
+                if (documents_dict.hasOwnProperty(token)) {
+                    documents_dict[token] = documents_dict[token] + " " + figure.id;
+                } else {
+                documents_dict[token] = figure.id;
+                }
+            });
+        }
+ 
+        if (figure.inModernCountry) {
+            tokens = tokenizer(figure.inModernCountry['value']) ;
+            tokens.forEach(token => {
+                if (documents_dict.hasOwnProperty(token)) {
+                    documents_dict[token] = documents_dict[token] + " " + figure.id;
+                } else {
+                documents_dict[token] = figure.id;
+                }
+            });
+        }
+
+    });
+
+    documents_array = [] ;
+    Object.keys(documents_dict).forEach( doc => {
+        documents_array.push({id:doc , ids: documents_dict[doc]}) ;
+    });
+    return {array: documents_array, dictionary: documents_dict}
+}
+
+
+
+// ** Render Keyword Serch **
+function renderKeywordSearch() {
+    const miniSearch = new MiniSearch({
+        fields: ['id'], // Fields to search in
+        storeFields: ['ids'], // Fields to return in results
+        searchOptions: {
+            // Allows searching for partial matches, great for typeahead
+            prefix: true,
+            // Increase weight for matches in the title field
+        }
+    });
+
+    kwCombined = makeFiguresKWDocsArray() ;
+    figuresKWArray = kwCombined['array'] ;
+    figuresKWDict = kwCombined['dictionary'] ;
+
+    miniSearch.addAll(figuresKWArray);
+
+    const searchInput = document.getElementById('search-input');
+    const suggestionsList = document.getElementById('suggestions-list');
+
+    // Start hidden
+    suggestionsList.style.display = 'none';
+
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+        suggestionsList.innerHTML = ''; // Clear previous results
+
+        if (query.length === 0) {
+            suggestionsList.style.display = 'none';
+            return;
+        }
+
+            // Use search (with stored fields) for reliable suggestion objects
+            const results = miniSearch.search(query, { prefix: true, limit: 5 });
+
+            if (!results || results.length === 0) {
+                suggestionsList.style.display = 'none';
+                return;
+            }
+
+            // Helper to safely extract a display string from various MiniSearch result shapes
+            function extractKw(item) {
+                if (!item) return '';
+                if (typeof item === 'string') return item;
+                if (item.id) return item.id;
+                if (item.suggestion) return item.suggestion;
+                if (item.doc && item.doc.id) return item.doc.id;
+                // Some builds return stored fields directly on the result
+                if (item.document && item.document.id) return item.document.id;
+                // As a last resort, try id or stringify
+                if (item.id) return String(item.id);
+                try { return JSON.stringify(item); } catch { return String(item); }
+            }
+
+            // Render the suggestions
+            results.forEach(result => {
+                const kwText = extractKw(result);
+                if (!kwText) return; // skip empty
+                const li = document.createElement('li');
+                li.textContent = kwText;
+                li.tabIndex = 0;
+                li.addEventListener('click', () => {
+                    searchInput.value = kwText;
+                    suggestionsList.innerHTML = '';
+                    suggestionsList.style.display = 'none';
+                    highlightKeywordMarkers(figuresKWDict[kwText].split(' '));
+                });
+                li.addEventListener('keydown', (ev) => {
+                    if (ev.key === 'Enter') {
+                        li.click();
+                    }
+                });
+                suggestionsList.appendChild(li);
+            });
+
+        // Show the dropdown now that we have items
+        suggestionsList.style.display = 'block';
+    });
+
+    // Hide suggestions when input loses focus (small delay keeps click working)
+    searchInput.addEventListener('blur', () => {
+        setTimeout(() => {
+            suggestionsList.style.display = 'none';
+        }, 150);
+    });
+
+    // Optional: show suggestions when input gains focus if it already has text
+    searchInput.addEventListener('focus', () => {
+        if (searchInput.value.trim().length > 0 && suggestionsList.children.length > 0) {
+            suggestionsList.style.display = 'block';
+        }
+    });
+
+}
 
 function renderGallery() {
 

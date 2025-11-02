@@ -3961,7 +3961,7 @@
    :thumbnail-image <https://images.metmuseum.org/CRDImages/as/original/DT8660.jpg> .
 
 :paired-male-female-figures-takht-i-bahi a :group-of-human-figures ;
-   rdfs:label "Paired Male and Femlae Figures from Takht-i-Bahi" ;
+   rdfs:label "Paired Male and Female Figures from Takht-i-Bahi" ;
    :described-by <https://www.britishmuseum.org/collection/object/A_1950-0726-2> ,
       <https://en.wikipedia.org/wiki/Takht-i-Bahi> ;
    :earliest-date 100 ;

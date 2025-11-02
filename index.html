@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Global Approaches to Early Representations of the Human Figure</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
@@ -12,18 +11,23 @@
     <script src="https://unpkg.com/rdflib@2.2.19/dist/rdflib.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js"></script>
 </head>
 
 <body>
     <div id="header-container">
-            <span id="main-title">🚧 Global Approaches to Early Representations of the Human Figure (GAERHF)  <!-- </span>
-            <span id="tab-buttons" > -->
-                <button type="button" id="play-btn" title="Play">▶️</button>
-                <button type="button" class="tab-button active" data-tab="figure-map">Map</button>
-                <button type="button" class="tab-button" data-tab="figure-list">List</button>
-                <button type="button" class="tab-button" data-tab="figure-timeline">Timeline</button>
-                🚧
-                <button type="button" class="tab-button" data-tab="about">About</button>
+            <span id="main-title">
+            <span class="autocomplete-container">
+                <input id="search-input" type="text" placeholder="Keyword highlight...">
+                <ul class="autocomplete-dropdown" id="suggestions-list"></ul>
+            </span>
+            🚧 Global Approaches to Early Representations of the Human Figure (GAERHF) 
+            <button type="button" id="play-btn" title="Play">▶️</button>
+            <button type="button" class="tab-button active" data-tab="figure-map">Map</button>
+            <button type="button" class="tab-button" data-tab="figure-list">List</button>
+            <button type="button" class="tab-button" data-tab="figure-timeline">Timeline</button>
+            🚧
+            <button type="button" class="tab-button" data-tab="about">About</button>
             </span>
         
 
@@ -71,6 +75,7 @@
             </div>
         </div>
     </div>
+
     <div id="gallery-container">
         <div id="gallery">Loading</div>
     </div>
