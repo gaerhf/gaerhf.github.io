@@ -858,7 +858,7 @@ async function loadAndDisplayFigures($rdf) {
                 }, 200);
     renderKeywordSearch();
     // --- Add this block ---
-    // Check for hash in URL and show that figure if present and valid
+    // Check for hash in URL and show that figure is present and valid
     const hash = window.location.hash;
     if (hash && hash.length > 1) {
         const figureId = hash.substring(1);
@@ -908,8 +908,6 @@ async function initializeStore($rdf) {
 document.addEventListener('keydown', (event) => {
 
   if (event.key === 'ArrowLeft') {
-
-    console.log("prev")
 
     figures = currentSortedIndex ;
     if (currentFigureId) {
@@ -1094,19 +1092,25 @@ function highlightMapFigure(figureId) {
     }
 
 function highlightKeywordMarkers(ids) {
-        console.log(ids) ;
-        Object.values(leafletMarkers).forEach(m => {
-        const el = m.getElement && m.getElement();
-        if (el) {
-            const inner = el.querySelector && el.querySelector('div');
-            if (inner) {
-                inner.style.boxShadow = '';
-            }
+    // Object.values(leafletMarkers).forEach(m => {
+    //     const el = m.getElement && m.getElement();
+    //     if (el) {
+    //         const inner = el.querySelector && el.querySelector('div');
+    //         if (inner) {
+    //             inner.style.boxShadow = '';
+    //         }
+    //     }
+    // });
+
+    Object.keys(leafletMarkers).forEach( figureId => {
+        markerDiv = leafletMarkers[figureId].getElement().querySelector('div') ;
+        markerDiv.style.boxShadow = '' ;
+        if (figureId != currentFigureId ) {
+            leafletMarkers[figureId].setZIndexOffset(1);
         }
     });
 
     ids.forEach( figureId => {
-
         const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
         if (thisEl) {
             const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
@@ -1114,7 +1118,9 @@ function highlightKeywordMarkers(ids) {
                 innerDiv.style.boxShadow = '0px 0px 5px 5px rgba(15, 235, 19, 1)';
             }
         }
-
+        if (figureId != currentFigureId) {
+            leafletMarkers[figureId].setZIndexOffset(900);
+        }
     });
 } 
 
@@ -1348,6 +1354,7 @@ function renderGallery() {
             galleryDiv.innerHTML = "" ;
             visibleMarkers.forEach(function(figureId, index) {
                 galleryImg = document.createElement('img') ;
+                galleryImg.id = `gi-${figureId}` ;
                 galleryImg.src = `/thumbnails/${figureId}.png` ;
                 galleryImg.className = "gallery-image" ;
 
