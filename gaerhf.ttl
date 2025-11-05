@@ -4132,6 +4132,16 @@
    :representative-latlong-point (34.3874 47.1323) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:اهورا_مزدا_-_کرمانشاه.jpg> .
 
+:figure-inscribed-cerro-patlachique a :human-figure ;
+   rdfs:label "Figure inscribed on Stone from Cerro Patlachique" ;
+   :described-by <https://doi.org/10.15184/aqy.2025.10221> ;
+   :earliest-date 350 ;
+   :latest-date 650 ;
+   :material-note "Stone" ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (19.606910 -98.861352) ;
+   :thumbnail-image <https://static.cambridge.org//content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0003598X25102214/resource/name/optimisedImage-png-S0003598X25102214_figAb.jpg?pub-status=live> .
+
 :smiss-stone-figure-snakes a :human-figure ;
    rdfs:label "Carved Stone with Figure Holding Snakes from Smiss" ;
    :described-by <https://en.wikipedia.org/wiki/Snake-witch_stone> ;
