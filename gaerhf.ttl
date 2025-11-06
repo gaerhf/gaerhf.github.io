@@ -629,6 +629,15 @@
    :representative-latlong-point (32.032778 35.475556) ;
    :thumbnail-image <https://www.imj.org.il/sites/default/files/collections/Human%20Statue,%20Gilgal,%20PPNA~K10343_2.jpg> .
 
+:petroglyphs-grotta-del-genovese a :group-of-human-figures ;
+   rdfs:label "Petroglyphys from the Grotta del Genovese" ;
+   :described-by <https://en.wikipedia.org/wiki/Grotta_del_Genovese> ,
+      <https://www.grottadelgenovese.it/> ;
+   :approximate-date -9500 ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (38.001689 12.321625) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Grotta_de_Levanzo.jpg> .
+
 :gobekli-tepe-figure-A2 a :human-figure ;
    rdfs:label "Göbekli Tepe Male Figure A2" ;
    :described-by <https://arachne.dainst.org/entity/2003368?fq=facet_kategorie:%22Bilder%22&offset=200&fl=20&q=gobekli%20tepe&resultIndex=211> ,
@@ -4335,6 +4344,14 @@
    :note "Specific findspot not known." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312882/666902/main-image> .
 
+:hercules-behistun a :human-figure ;
+   rdfs:label "Hercules in High Relief at Behistun" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Hercules_in_Behistun> ;
+   :approximate-date -148 ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (34.3833 47.4333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bistoon_Kermanshah.jpg> .
+
 :jade-burial-suit-liu-sheng a :human-figure ;
    rdfs:label "Jade Burial Suit of Liu Sheng" ;
    :described-by <https://en.wikipedia.org/wiki/Liu_Sheng,_Prince_of_Zhongshan> ;
@@ -4358,6 +4375,17 @@
 # https://en.wikipedia.org/wiki/Jayavarman_VII
 
 # -62 https://en.wikipedia.org/wiki/Mount_Nemrut
+
+:youth-flowers-haddad a :human-figure ;
+   rdfs:label "Youth with Flowers from Hadda" ;
+   :described-by <https://www.guimet.fr/en/our-collections/afghanistan-pakistan/flower-genie> ,
+      <https://en.wikipedia.org/wiki/Hadda,_Afghanistan> ;
+   :earliest-date -50 ;
+   :latest-date 300 ;
+   :note "Frequently dated within the first two centures CE." ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (34.361685 70.470752) ;
+   :thumbnail-image <https://www.guimet.fr/sites/default/files/styles/width_1220px/public/2023-09/genie-aux-fleurs_0.jpg> .
 
 :kankali-tila-tablet a :group-of-human-figures ;
    rdfs:label "Kankali Tila tablet of Sodasa" ;
