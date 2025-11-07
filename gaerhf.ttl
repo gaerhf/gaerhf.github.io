@@ -4686,6 +4686,15 @@
    :note "No specific findspot." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/38119/146374/main-image> .
 
+:hoxne-hoard-pepper-pot a :human-figure ;
+   rdfs:label "Hoxne Hoard Pepper Pot" ;
+   :described-by <https://en.wikipedia.org/wiki/Empress_pepper_pot> ;
+   :earliest-date 300 ;
+   :latest-date 400 ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (52.3425 1.1875) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:British_Museum_Hoxne_Hoard_Empress_Pepper_Pot.png> .
+
 :bura-funerary-figure a :human-figure ;
    rdfs:label "Bura Funerary Figure" ;
    :described-by <https://artgallery.yale.edu/collections/objects/145085> ,
