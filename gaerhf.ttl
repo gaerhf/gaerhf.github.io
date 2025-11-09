@@ -2738,6 +2738,19 @@
    :representative-latlong-point (36.535 -6.2975) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sacerdote_de_Cádiz_-_M.A.N._02.jpg> .
 
+:nordic-figure-tollense-valley a :human-figure ;
+   rdfs:label "Nordic Figure from Tollense Valley" ;
+   :described-by <https://doi.org/10.1515/pz-2022-2035> ,
+      <https://archaeology.org/issues/september-october-2022/artifacts/artifact-germany-bronze-age-figurine/> ,
+      <https://arkeonews.net/2700-year-old-bronze-figurine-found-in-germanys-torrence-river-goddess-or-weight/> ;
+   :earliest-date -750 ;
+   :latest-date -450 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "Germany" ;
+   :representative-latlong-point ( 54.024095 13.296299 ) ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2022/08/SO22-Artifact-Germany-Bronze-Figurine.jpg> .
+
+
 :figurine-xanab-chak a :human-figure ;
    rdfs:label "Figurine from Xanab Chak" ;
    :described-by <https://archaeology.org/issues/online/artifacts/maya-ceramic-figurine/> ;
