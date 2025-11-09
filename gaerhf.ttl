@@ -957,15 +957,6 @@
    :note "From the linked publication, “The supposed head is decorated with several vertical lines from the top, likely representing hair.”" ;
    :thumbnail-image <https://ars.els-cdn.com/content/image/1-s2.0-S2352226725000212-gr2.jpg> .
 
-:catalhoyuk-seated-female-figurine a :human-figure ;
-   rdfs:label "Catalhoyuk Seated Female Figurine" ;
-   :described-by <https://en.wikipedia.org/wiki/Catalhoyuk> ;
-   :approximate-date -6000 ;
-   :material-note "Ceramic" ;
-   :in-modern-country-note "Turkey" ;
-   :representative-latlong-point (37.666667 32.828056) ;
-   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Woman_of_Çatalhöyük_on_black_background.jpg> .
 
 :cueva-huenul-1-rock-art a :group-of-human-figures ;
    rdfs:label "Cueva Huenul 1 Rock Art" ;
@@ -997,6 +988,26 @@
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.686389 35.603333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yarmukian_Culture_-Sha%27ar_HaGolan,_pebble_Figurine.jpg> .
+
+:catalhoyuk-seated-female-figurine a :human-figure ;
+   rdfs:label "Catalhoyuk Seated Female Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Catalhoyuk> ;
+   :approximate-date -6000 ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.666667 32.828056) ;
+   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Woman_of_Çatalhöyük_on_black_background.jpg> .
+
+:kayseri-rock-paintings a :group-of-human-figures ;
+   rdfs:label "Kayseri Rock Paintings" ;
+   :described-by <https://www.anatolianarchaeology.net/before-the-hittites-8000-year-old-rock-art-discovered-in-central-anatolia/> ;
+   :approximate-date -6000 ;
+   :in-modern-country-note "Turkey" ;
+   :note "Approximate location." ;
+   :representative-latlong-point (38.304952 35.554091) ;
+   :thumbnail-image <https://www.anatolianarchaeology.net/wp-content/uploads/2025/11/Before-the-Hittites-8000-Year-Old-Rock-Art-Discovered-in-Central-Anatolia.webp> .
+
 
 :bangudae-petroglyphs a :group-of-human-figures ;
    rdfs:label "Bangudae Petroglyphs" ;
