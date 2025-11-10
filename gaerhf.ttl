@@ -1008,7 +1008,6 @@
    :representative-latlong-point (38.304952 35.554091) ;
    :thumbnail-image <https://www.anatolianarchaeology.net/wp-content/uploads/2025/11/Before-the-Hittites-8000-Year-Old-Rock-Art-Discovered-in-Central-Anatolia.webp> .
 
-
 :bangudae-petroglyphs a :group-of-human-figures ;
    rdfs:label "Bangudae Petroglyphs" ;
    :described-by <https://en.wikipedia.org/wiki/Bangudae_Petroglyphs#Human_figures> ;
@@ -2127,7 +2126,8 @@
 
 :seated-figure-on-vessel a :human-figure ;
    rdfs:label "Seated Figure on Vessel" ;
-   :described-by <https://en.wikipedia.org/wiki/Thinker_from_Yehud> ;
+   :described-by <https://en.wikipedia.org/wiki/Thinker_from_Yehud> ,
+      <https://archaeology.org/issues/march-april-2017/artifacts/israel-bronze-age-jug/> ;
    :earliest-date -1800 ;
    :latest-date -1600 ;
    :material-note "Ceramic" ;
@@ -3975,6 +3975,18 @@
    :in-modern-country-note "Armenia" ;
    :representative-latlong-point (40.112421 44.730277) ; 
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Գառնիի_Տաճար_31.jpg> .
+
+:roman-bust-polychromy a :human-figure ;
+   rdfs:label "Roman-period Bust with Well Preserved Polychromy" ;
+   :described-by <https://en.wikipedia.org/wiki/Bolu_Museum> ,
+      <https://arkeonews.net/the-surprising-fact-about-the-roman-era-female-bust/> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :material-note "Marble, beeswax." ;
+   :in-modern-country-note "Turkey" ;
+   :note "Approximate findsport." ;
+   :representative-latlong-point (40.728078 31.601947) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bolu_museum_Cult_statue_head_june_2019_2979.jpg> .
 
 :fugoppe-cave-petroglyphs a :group-of-human-figures ;
    rdfs:label "Fugoppe Cave Petroglyphs" ;
