@@ -5214,6 +5214,16 @@
    :representative-latlong-point (25.13662 85.442608) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Khasarpana_Lokesvara.jpg> .
 
+:gilded-silver-pendant-revninge a :human-figure ;
+   rdfs:label "Gilded Silver Pendant from Revninge" ;
+   :described-by <https://archaeology.org/issues/september-october-2014/artifacts/denmark-viking-figurine/> ;
+   :earliest-date 800 ;
+   :latest-date 900 ;
+   :material-note "Gold gilt, silver" ;
+   :in-modern-country-note "Denmark" ;
+   :representative-latlong-point (55.419375 10.652358) ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2014/08/SO14-Artifact-Viking-Silver-Figurine-2.jpg> .
+
 :redhorn-panel-picture-cave a :group-of-human-figures ;
    rdfs:label "“Redhorn” Panel Picture Cave" ;
    :described-by <https://en.wikipedia.org/wiki/Red_Horn#Picture_Cave>,
