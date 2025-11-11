@@ -2749,6 +2749,15 @@
    :representative-latlong-point (36.535 -6.2975) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sacerdote_de_Cádiz_-_M.A.N._02.jpg> .
 
+:man-centaur a :group-of-human-figures ;
+   rdfs:label "Man and Centaur" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/249228> ;
+   :approximate-date -750 ;
+   :material-note "Bronze" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (37.638889 21.629722) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/249228/2063150/main-image> .
+
 :nordic-figure-tollense-valley a :human-figure ;
    rdfs:label "Nordic Figure from Tollense Valley" ;
    :described-by <https://doi.org/10.1515/pz-2022-2035> ,
@@ -2760,7 +2769,6 @@
    :in-modern-country-note "Germany" ;
    :representative-latlong-point ( 54.024095 13.296299 ) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2022/08/SO22-Artifact-Germany-Bronze-Figurine.jpg> .
-
 
 :figurine-xanab-chak a :human-figure ;
    rdfs:label "Figurine from Xanab Chak" ;
