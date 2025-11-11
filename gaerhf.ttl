@@ -2140,7 +2140,7 @@
 :elamite-funerary-mask-haft-tepe a :human-figure ;
    rdfs:label "Elamite Funerary Mask from Haft Tepe" ;
    :described-by <https://en.wikipedia.org/wiki/Haft_Tepe#Archaeology> ;
-   :approximte-date -1750 ;
+   :approximate-date -1750 ;
    :material-note "Ceramic" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (32.078889 48.326389) ;
