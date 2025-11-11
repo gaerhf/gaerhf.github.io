@@ -5388,6 +5388,16 @@
    :representative-latlong-point (44.615225 -78.04076) ;
    :thumbnail-image <https://www.pc.gc.ca/apps/dfhd/Resources/Images/Image.aspx?id=92664> .
 
+:viking-gaming-piece a :human-figure ;
+   rdfs:label "Viking Gaming Piece" ;
+   :described-by <https://archaeology.org/issues/november-december-2025/artifacts/viking-chess-piece/> ;
+   :earliest-date 950 ;
+   :latest-date 1000 ;
+   :mateial-note "Walrus Ivory" ;
+   :in-modern-country-note "Norway" ;
+   :representative-latlong-point (59.785901 10.478906) ;
+   :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/09/ND25-Artifact-Norway-Viking-Chess-Piece-1.jpg> .
+
 :great-hunt-panel-nine-mile-canyon a :group-of-human-figures ;
    rdfs:label "Great Hunt Panel at Nine Mile Canyon" ;
    :described-by <https://en.wikipedia.org/wiki/Ninemile_Canyon_(Utah)#Archaeology> ;
