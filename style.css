@@ -61,7 +61,8 @@ body {
     z-index: 100;
     background-color: #f0f0f0;
     /* padding: 8px 0 4px 0; */
-    height: 22em;
+    height: 33vh;
+    min-height: 5em;
 }
 
 #header-bottom {
@@ -155,6 +156,11 @@ body {
     text-align: left;
 }
 
+#timescale-container {
+    width:100% ;
+    height:3vh
+}
+
 .marker-gallery {
     background-color: #f0f0f0;
     /* padding: 10px 20px; */
@@ -245,11 +251,6 @@ body {
     border-bottom: none;
 }
 
-/* Tab container styles */
-#tab-container {
-    margin-top: 20px;
-}
-
 #tab-buttons {
     /* width: 100%; */
     /* display: flex; */
@@ -295,34 +296,6 @@ body {
     margin-right: .5em;
 }
 
-#figure-timeline-scale {
-    width: 100%;
-}
-
-#figure-timeline-scale {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: #fff;
-    border-bottom: 1px solid #ccc;
-    height: 24px;
-    width: 100%;
-    font-size: 0.85em;
-    user-select: none;
-    margin-bottom: 0;
-}
-
-#figure-timeline-scale {
-    display: none;
-}
-
-#figure-timeline-scale.active {
-    display: block;
-}
-
-#figure-timeline-scale.active {
-    display: block;
-}
 
 #figure-timeline {
     position: relative;
@@ -494,4 +467,47 @@ body {
 
 .about-wrapper {
  margin:3em ;
+}
+
+/* Threshold slider control */
+#threshold-control {
+    position: absolute;        /* place relative to #header-container (which is positioned) */
+    top: 8px;                  /* small offset from top of header */
+    right: 12px;               /* aligned to right */
+    z-index: 1100;             /* well above header/tab z-index 100 */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.95);
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* label and value tidying */
+#threshold-control label { font-weight: 600; margin-right: 6px; }
+#threshold-control > span { margin-left: 6px; font-size: 0.9rem; color: #333; }
+
+/* range input sizing */
+#threshold-control input[type="range"] {
+    width: 220px;
+    height: 26px;
+    vertical-align: middle;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+/* smaller screens: reduce width and move to lower-right inside header */
+@media (max-width: 640px) {
+    #threshold-control {
+        right: 8px;
+        top: 6px;
+        padding: 6px 8px;
+    }
+    #threshold-control input[type="range"] {
+        width: 120px;
+    }
 }

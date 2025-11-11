@@ -30,6 +30,7 @@ let leafletMap = null;
 let leafletMarkers = {}; // Place this at the top level
 
 let visibleMarkers = null ;
+let thresholdDebounceTimer = null;
 
 // Convenience functions
 /**
@@ -377,108 +378,71 @@ async function renderFiguresAsList(figuresArray) {
 }
 
 // Timeline display settings
-const LOG_SCALE_THRESHOLD = -8500; // Dates before this will be compressed logarithmically
+let LOG_SCALE_THRESHOLD = -4000; // Dates before this will be compressed logarithmically (user-adjustable)
 const LOG_SCALE_FACTOR = 4;         // Higher = more compression for early dates
-const LOG_REGION_PROPORTION = 0.2;  // 0.4 = 40% of width for log region, adjust as needed
+const LOG_REGION_PROPORTION = 0.15;  // 0.4 = 40% of width for log region, adjust as needed
 
 function timelineScale(date, minDate, maxDate) {
-    // If all dates are after threshold, use linear only
-    if (minDate >= LOG_SCALE_THRESHOLD) {
-        return (date - minDate) / (maxDate - minDate);
-    }
-    // If all dates are before threshold, use log only
-    if (maxDate < LOG_SCALE_THRESHOLD) {
-        const logMin = Math.log(Math.abs(minDate - LOG_SCALE_THRESHOLD) + 1);
-        const logMax = Math.log(Math.abs(maxDate - LOG_SCALE_THRESHOLD) + 1);
-        const logVal = Math.log(Math.abs(date - LOG_SCALE_THRESHOLD) + 1);
-        return (logVal - logMin) / (logMax - logMin);
+    // Defensive conversion
+    const d = Number(date);
+    const minN = Number(minDate);
+    const maxN = Number(maxDate);
+    if (!isFinite(d) || !isFinite(minN) || !isFinite(maxN) || minN === maxN) {
+        // fallback to a simple clamp in case of bad inputs
+        if (!isFinite(d) || !isFinite(minN) || !isFinite(maxN)) return 0.5;
+        return 0; // degenerate range
     }
 
-    // Hybrid: allocate LOG_REGION_PROPORTION to log region, rest to linear
-    if (date < LOG_SCALE_THRESHOLD) {
-        // Log region: scale to [0, LOG_REGION_PROPORTION]
-        const logMin = Math.log(Math.abs(minDate - LOG_SCALE_THRESHOLD) + 1);
-        const logMax = Math.log(1); // at threshold
-        const logVal = Math.log(Math.abs(date - LOG_SCALE_THRESHOLD) + 1);
-        return ((logVal - logMin) / (logMax - logMin)) * LOG_REGION_PROPORTION;
-    } else {
-        // Linear region: scale to [LOG_REGION_PROPORTION, 1]
-        const linearMin = LOG_SCALE_THRESHOLD;
-        const linearMax = maxDate;
-        if (linearMax === linearMin) return 1; // avoid division by zero
-        return LOG_REGION_PROPORTION + ((date - linearMin) / (linearMax - linearMin)) * (1 - LOG_REGION_PROPORTION);
-    }
-}
-
-function renderTimelineScale(minDate, maxDate) {
-    const scaleDiv = document.getElementById('figure-timeline-scale');
-    scaleDiv.innerHTML = '';
-
-    // Create a plain bar (optional, or just use ticks)
-    const bar = document.createElement('div');
-    bar.style.width = '100%';
-    bar.style.height = '16px';
-    bar.style.background = '#eee';
-    bar.style.position = 'relative';
-    bar.style.marginBottom = '6px';
-    scaleDiv.appendChild(bar);
-
-    // Decide tick values (years) based on range
-    const ticks = [];
-    ticks.push(minDate);
-
-    if (minDate < LOG_SCALE_THRESHOLD && maxDate > LOG_SCALE_THRESHOLD) {
-        const halfwayLog = Math.exp(
-            (Math.log(Math.abs(minDate - LOG_SCALE_THRESHOLD) + 1) + Math.log(Math.abs(LOG_SCALE_THRESHOLD - LOG_SCALE_THRESHOLD) + 1)) / 2
-        ) - 1 + LOG_SCALE_THRESHOLD;
-        ticks.push(Math.round(halfwayLog));
-        ticks.push(LOG_SCALE_THRESHOLD);
-    }
-
-    // Linear region ticks (after threshold), skip the first tick after threshold
-    let stepAfter = 2000;
-    let firstLinearTick = LOG_SCALE_THRESHOLD + stepAfter * 2; // skip first tick after threshold
-    for (let y = firstLinearTick; y < maxDate; y += stepAfter) {
-        if (y > LOG_SCALE_THRESHOLD && y < maxDate) ticks.push(y);
-    }
-
-    ticks.push(maxDate);
-
-    const uniqueTicks = Array.from(new Set(ticks)).sort((a, b) => a - b);
-
-    // Render ticks and labels (existing code)
-    uniqueTicks.forEach((year, i) => {
-        const percent = timelineScale(year, minDate, maxDate) * 100;
-        const tick = document.createElement('div');
-        tick.style.position = 'absolute';
-        tick.style.left = `${percent}%`;
-        tick.style.top = '0';
-        tick.style.width = '1px';
-        tick.style.height = '16px';
-        tick.style.background = '#222';
-        bar.appendChild(tick);
-
-        const label = document.createElement('div');
-        label.style.position = 'absolute';
-        label.style.left = `${percent}%`;
-        label.style.top = '18px';
-        label.style.fontSize = '11px';
-        label.style.color = '#222';
-        label.textContent = formatDateForDisplay(year);
-
-        if (i === 0) {
-            label.style.transform = 'translateX(0)';
-            label.style.textAlign = 'left';
-        } else if (i === uniqueTicks.length - 1) {
-            label.style.transform = 'translateX(-100%)';
-            label.style.textAlign = 'right';
-        } else {
-            label.style.transform = 'translateX(-50%)';
-            label.style.textAlign = 'center';
+    try {
+        // If all dates are after the threshold, use linear scaling only
+        if (minN >= LOG_SCALE_THRESHOLD) {
+            return (d - minN) / (maxN - minN);
         }
 
-        bar.appendChild(label);
-    });
+        // If all dates are before the threshold, use log-only scaling with optional compression
+        if (maxN < LOG_SCALE_THRESHOLD) {
+            const logMin = Math.log(Math.abs(minN - LOG_SCALE_THRESHOLD) + 1);
+            const logMax = Math.log(Math.abs(maxN - LOG_SCALE_THRESHOLD) + 1);
+            const logVal = Math.log(Math.abs(d - LOG_SCALE_THRESHOLD) + 1);
+            const denom = (logMax - logMin);
+            if (!isFinite(denom) || denom === 0) {
+                // fallback to linear inside the available span
+                return Math.max(0, Math.min(1, (d - minN) / (maxN - minN)));
+            }
+            let normalized = (logVal - logMin) / denom;
+            normalized = Math.max(0, Math.min(1, normalized));
+            // Apply power-based compression inside the log-space
+            return Math.pow(normalized, LOG_SCALE_FACTOR);
+        }
+
+        // Hybrid case: allocate LOG_REGION_PROPORTION of the width to the compressed log region,
+        // and the remainder to linear scaling for recent dates.
+        if (d < LOG_SCALE_THRESHOLD) {
+            // Log region: normalize in log-space to [0,1], then compress and scale into the reserved proportion
+            const logMin = Math.log(Math.abs(minN - LOG_SCALE_THRESHOLD) + 1);
+            const logMax = Math.log(1); // at threshold -> log(1) == 0
+            const logVal = Math.log(Math.abs(d - LOG_SCALE_THRESHOLD) + 1);
+            const denom = (logMax - logMin);
+            if (!isFinite(denom) || denom === 0) {
+                // fallback: map proportionally into the log region based on distance
+                const fallback = Math.max(0, Math.min(1, (d - minN) / (LOG_SCALE_THRESHOLD - minN)));
+                return Math.pow(fallback, LOG_SCALE_FACTOR) * LOG_REGION_PROPORTION;
+            }
+            let normalized = (logVal - logMin) / denom;
+            normalized = Math.max(0, Math.min(1, normalized));
+            const compressed = Math.pow(normalized, LOG_SCALE_FACTOR);
+            return compressed * LOG_REGION_PROPORTION;
+        } else {
+            // Linear region: map to [LOG_REGION_PROPORTION, 1]
+            const linearMin = LOG_SCALE_THRESHOLD;
+            const linearMax = maxN;
+            if (linearMax === linearMin) return 1; // avoid division by zero
+            return LOG_REGION_PROPORTION + ((d - linearMin) / (linearMax - linearMin)) * (1 - LOG_REGION_PROPORTION);
+        }
+    } catch (err) {
+        // Unexpected error: fallback to simple linear mapping
+        return Math.max(0, Math.min(1, (d - minN) / (maxN - minN)));
+    }
 }
 
 async function renderFiguresAsTimeline(figuresDisplayIndex) {
@@ -507,8 +471,6 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
     const latestDate = Math.max(
         ...validDates.map(figure => figure.latestDate || figure.date || figure.approximateDate)
     );
-
-    renderTimelineScale(earliestDate, latestDate);
 
     if (isNaN(earliestDate) || isNaN(latestDate) || earliestDate === latestDate) {
         timelineContainer.textContent = 'No valid dates found for the selected range.';
@@ -605,12 +567,9 @@ function renderFiguresOnMap(figuresArray) {
             });
     }
 
-    // Remove existing markers
-    if (leafletMap._layers) {
-        Object.values(leafletMap._layers)
-            .filter(layer => layer instanceof L.Marker)
-            .forEach(marker => leafletMap.removeLayer(marker));
-    }
+    // We'll update markers in-place where possible to preserve highlight styles
+    // Do NOT recreate all markers — update existing markers' background color, create missing ones,
+    // and remove markers that are no longer needed. This avoids losing border/boxShadow highlights.
 
     // Find min/max date for scaling
     const validFigures = figuresArray
@@ -619,57 +578,106 @@ function renderFiguresOnMap(figuresArray) {
     const minDate = Math.min(...validFigures.map(f => f.earliestDate ?? f.date ?? f.approximateDate));
     const maxDate = Math.max(...validFigures.map(f => f.latestDate ?? f.date ?? f.approximateDate));
 
-    // Add markers shaded by chronology
+    // Update existing markers in-place where possible (to preserve highlight borders/shadows),
+    // create markers for figures that don't yet have one, and remove any leftover markers
+    // that are not in the current figuresArray.
+    const toKeep = new Set();
+
     figuresArray.forEach(figureId => {
         const figure = figuresDict[figureId];
-        if (figure && figure.representativeLatLongPoint) {
-            const [lat, lng] = figure.representativeLatLongPoint;
-            const date = figure.earliestDate ?? figure.date ?? figure.approximateDate;
-            let scale = 0.5;
-            if (date !== null && !isNaN(date)) {
-                scale = timelineScale(date, minDate, maxDate);
+        if (!figure || !figure.representativeLatLongPoint) return;
+
+        const [lat, lng] = figure.representativeLatLongPoint;
+        const date = figure.earliestDate ?? figure.date ?? figure.approximateDate;
+        let scale = 0.5;
+        if (date !== null && !isNaN(date)) {
+            scale = timelineScale(date, minDate, maxDate);
+        }
+        const gray = Math.round(scale * 255);
+        const color = `rgb(${gray},${gray},${gray})`;
+
+        // If a marker already exists for this figure, update its inner div background color
+        // and keep it. This preserves styles like border and boxShadow applied by highlight
+        // functions.
+        if (leafletMarkers[figureId]) {
+            const existingMarker = leafletMarkers[figureId];
+            const el = existingMarker.getElement && existingMarker.getElement();
+            if (el) {
+                const inner = el.querySelector && el.querySelector('div');
+                if (inner) {
+                    inner.style.backgroundColor = color;
+                }
+            } else {
+                // If element isn't available, ensure the icon is set so it will render when visible
+                const icon = L.divIcon({
+                    className: 'custom-gray-marker',
+                    iconSize: [10, 10],
+                    iconAnchor: [6, 6],
+                    popupAnchor: [0, -6],
+                    html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
+                });
+                existingMarker.setIcon(icon);
             }
-            const gray = Math.round(scale * 255);
-            const color = `rgb(${gray},${gray},${gray})`;
+            toKeep.add(figureId);
+            return;
+        }
 
-            const icon = L.divIcon({
-                className: 'custom-gray-marker',
-                iconSize: [10, 10],
-                iconAnchor: [6, 6],
-                popupAnchor: [0, -6],
-                html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
-            });
+        // Otherwise create a new marker (first time seen)
+        const icon = L.divIcon({
+            className: 'custom-gray-marker',
+            iconSize: [10, 10],
+            iconAnchor: [6, 6],
+            popupAnchor: [0, -6],
+            html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
+        });
 
+        const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
+        marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
+        marker.on('click', () => { 
+            highlightMapFigure(figureId);
+            showFigureDetails(figureId);
+            clickContent = `<strong>${figure.label || figure.id}</strong>`;
+            marker.getPopup().setContent(clickContent);
+            marker.openPopup();
+        });
+        marker.on('mouseover', () => {
+            mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="/thumbnails/${figure.id}.png" loading="lazy"></div>`;
+            marker.getPopup().setContent(mouseOverContent);
+            marker.openPopup();
+        });
 
+        marker.on('mouseout', () => {
+            marker._hoverCloseTimer = setTimeout(() => {
+                marker.closePopup();
+                marker._hoverCloseTimer = null;
+            }, 250);
+        });
 
-            const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
-            marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
-            marker.on('click', () => { 
-                highlightMapFigure(figureId)
-                showFigureDetails(figureId);
-                clickContent = `<strong>${figure.label || figure.id}</strong>`
-                marker.getPopup().setContent(clickContent);
-                marker.openPopup();
-            }); 
-            // show popup on hover, and close shortly after mouse leaves
-            marker.on('mouseover', () => {
-                mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="/thumbnails/${figure.id}.png" loading="lazy"></div>`
-                marker.getPopup().setContent(mouseOverContent);
-                marker.openPopup();
-            });
+        leafletMarkers[figureId] = marker; // Store marker
+        toKeep.add(figureId);
+    });
 
-            marker.on('mouseout', () => {
-                // small delay so quick moves don't flicker
-                marker._hoverCloseTimer = setTimeout(() => {
-                    marker.closePopup();
-                    marker._hoverCloseTimer = null;
-                }, 250);
-            });
-            leafletMarkers[figureId] = marker; // Store marker
+    // Remove any markers that were not kept (i.e., not present in figuresArray)
+    Object.keys(leafletMarkers).forEach(existingId => {
+        if (!toKeep.has(existingId)) {
+            const m = leafletMarkers[existingId];
+            try {
+                if (m && leafletMap && leafletMap.removeLayer) leafletMap.removeLayer(m);
+            } catch (e) { /* ignore */ }
+            delete leafletMarkers[existingId];
         }
     });
 
-    renderMapScaleBar(minDate, maxDate);
+    // Reapply selected figure highlight if present (we preserved boxShadow for keyword highlights
+    // by updating colors in-place, but ensure the selected figure has its border applied)
+    try {
+        if (currentFigureId && leafletMarkers[currentFigureId]) {
+            highlightMapFigure(currentFigureId);
+        }
+    } catch (err) {
+        // ignore
+    }
+
 }
 
 async function showFigureDetails(figureId) {
@@ -837,6 +845,9 @@ async function loadAndDisplayFigures($rdf) {
 
     currentSortedIndex = sortedFiguresIndex;
 
+
+    renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
+
     renderFiguresAsList(currentSortedIndex);
     renderFiguresAsTimeline(currentSortedIndex);
     setTimeout(() => {
@@ -959,7 +970,6 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
-    const timelineScale = document.getElementById('figure-timeline-scale');
     const playBtn = document.getElementById('play-btn');
 
     tabButtons.forEach(button => {
@@ -976,10 +986,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activeContent) {
                 activeContent.classList.add('active');
             }
-
-            // Show/hide the timeline scale
-            document.getElementById('figure-timeline-scale').style.display = (tabName === 'figure-timeline') ? 'block' : 'none';
-            document.getElementById('figure-map-scale').style.display = (tabName === 'figure-map') ? 'block' : 'none'; 
 
             // --- Scroll to current figure in the relevant view ---
             if (tabName === 'figure-list' && currentFigureId) {
@@ -1020,6 +1026,137 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             startPlayback();
         }, 500);
+    }
+
+    // --- Threshold slider control (allow user to slide the log threshold) ---
+    try {
+    // Threshold control: hidden by default. Toggle visibility with Ctrl/Cmd+Shift+L.
+    const thresholdControl = document.createElement('div');
+    thresholdControl.id = 'threshold-control';
+    // Default hidden so it doesn't cover tab content; positioned absolutely in the header when shown.
+    thresholdControl.style.display = 'none';
+    thresholdControl.style.position = 'absolute';
+    thresholdControl.style.top = '8px';
+    thresholdControl.style.right = '8px';
+    thresholdControl.style.zIndex = '1200';
+    thresholdControl.style.background = 'rgba(255,255,255,0.95)';
+    thresholdControl.style.padding = '6px 8px';
+    thresholdControl.style.borderRadius = '6px';
+    thresholdControl.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+    thresholdControl.setAttribute('aria-hidden', 'true');
+
+        const label = document.createElement('label');
+        label.textContent = 'Log threshold:';
+        label.style.fontSize = '0.9em';
+        label.style.marginRight = '0.4em';
+        thresholdControl.appendChild(label);
+
+        const thresholdSlider = document.createElement('input');
+        thresholdSlider.type = 'range';
+        thresholdSlider.min = String(minYear);
+        thresholdSlider.max = String(maxYear);
+        thresholdSlider.step = '100';
+        thresholdSlider.value = String(LOG_SCALE_THRESHOLD);
+        thresholdSlider.title = 'Slide to change log threshold (years)';
+        thresholdSlider.style.verticalAlign = 'middle';
+        thresholdControl.appendChild(thresholdSlider);
+
+        const thresholdValue = document.createElement('span');
+        thresholdValue.style.marginLeft = '0.5em';
+        thresholdValue.style.fontSize = '0.9em';
+        thresholdValue.textContent = formatDateForDisplay(LOG_SCALE_THRESHOLD);
+        thresholdControl.appendChild(thresholdValue);
+
+        // Insert into headerContainer if available, otherwise append to document.body
+        const mainTitle = document.getElementById('main-title');
+        if (mainTitle) {
+            mainTitle.style.position = 'relative'; // ensures absolute children position correctly if needed
+            mainTitle.appendChild(thresholdControl);
+        } else if (headerContainer) {
+            headerContainer.appendChild(thresholdControl);
+        } else {
+            document.body.appendChild(thresholdControl);
+        }
+
+        // Toggle function and keyboard shortcut (Ctrl+Shift+L)
+        function toggleThresholdControlVisibility() {
+            const el = document.getElementById('threshold-control');
+            if (!el) return;
+            const hidden = el.style.display === 'none' || el.getAttribute('aria-hidden') === 'true';
+            if (hidden) {
+                el.style.display = 'inline-block';
+                el.setAttribute('aria-hidden', 'false');
+            } else {
+                el.style.display = 'none';
+                el.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        // Toggle with Ctrl (Windows/Linux) OR Cmd (macOS) + Shift + L.
+        // Ignore when focus is in an editable field.
+        document.addEventListener('keydown', (e) => {
+          try {
+            const target = e.target;
+            const editing = target && (
+              target.tagName === 'INPUT' ||
+              target.tagName === 'TEXTAREA' ||
+              target.isContentEditable
+            );
+            if (editing) return; // don't toggle while typing
+
+            const modifier = e.ctrlKey || e.metaKey; // Ctrl or Cmd
+            if (modifier && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
+              toggleThresholdControlVisibility();
+              e.preventDefault();
+            }
+          } catch (err) {
+            // defensive: ignore errors
+          }
+        });
+
+        // (duplicate old listener removed)
+
+        // Live update while sliding; debounce final action (rerender timeline/map) when user stops
+        thresholdSlider.addEventListener('input', (e) => {
+            const val = Number(e.target.value);
+            if (Number.isFinite(val)) {
+                LOG_SCALE_THRESHOLD = val;
+                thresholdValue.textContent = formatDateForDisplay(LOG_SCALE_THRESHOLD);
+                // update the timescale immediately
+                renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
+                // If the map tab is visible, apply lightweight in-place recolor so we don't overwrite highlight styles
+                if (currentTab === 'figure-map') {
+                    // updateMarkerColors updates only backgroundColor on existing markers
+                    try { updateMarkerColors(currentSortedIndex); } catch (e) { /* ignore */ }
+                }
+            }
+            if (thresholdDebounceTimer) clearTimeout(thresholdDebounceTimer);
+            thresholdDebounceTimer = setTimeout(() => {
+                // When sliding stops, rerender the timeline if visible
+                if (currentTab === 'figure-timeline') {
+                    renderFiguresAsTimeline(currentSortedIndex);
+                }
+                // Also update the map markers if map is visible
+                if (currentTab === 'figure-map') {
+                    renderFiguresOnMap(currentSortedIndex);
+                }
+                thresholdDebounceTimer = null;
+            }, 300);
+        });
+
+        // On change ensure final state is rendered
+        thresholdSlider.addEventListener('change', (e) => {
+            const val = Number(e.target.value);
+            if (Number.isFinite(val)) {
+                LOG_SCALE_THRESHOLD = val;
+                thresholdValue.textContent = formatDateForDisplay(LOG_SCALE_THRESHOLD);
+            }
+            if (thresholdDebounceTimer) { clearTimeout(thresholdDebounceTimer); thresholdDebounceTimer = null; }
+            if (currentTab === 'figure-timeline') renderFiguresAsTimeline(currentSortedIndex);
+            if (currentTab === 'figure-map') renderFiguresOnMap(currentSortedIndex);
+        });
+    } catch (err) {
+        console.warn('Could not create threshold control:', err);
     }
 });
 
@@ -1392,44 +1529,107 @@ function renderGallery() {
     }   
 
 
-function renderMapScaleBar(minDate, maxDate) {
-    const scaleDiv = document.getElementById('figure-map-scale');
+function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
+    const scaleDiv = document.getElementById('figure-timescale');
+    if (!scaleDiv) return;
     scaleDiv.innerHTML = '';
 
-    // Create gradient bar
+    // Coerce numeric dates and validate
+    const minN = Number(minDate);
+    const maxN = Number(maxDate);
+    if (!isFinite(minN) || !isFinite(maxN) || minN === maxN) {
+        // Nothing sensible to render
+        return;
+    }
+
+    // Create gradient bar. If the LOG_SCALE_THRESHOLD lies inside the range,
+    // show a subtle mid-stop so users can see the visual split.
     const bar = document.createElement('div');
     bar.style.width = '100%';
     bar.style.height = '16px';
-    bar.style.background = 'linear-gradient(to right, black, white)';
     bar.style.position = 'relative';
+    // Reserve room above the bar for labels
+    bar.style.marginTop = '22px';
     bar.style.marginBottom = '6px';
+
+    // Compute threshold position, but be defensive: timelineScale may still misbehave
+    let threshPos = timelineScale(LOG_SCALE_THRESHOLD, minN, maxN);
+    if (!isFinite(threshPos)) {
+        // fallback to linear interpolation of the threshold within [minN, maxN]
+        threshPos = (LOG_SCALE_THRESHOLD - minN) / (maxN - minN);
+    }
+    // clamp
+    threshPos = Math.max(0, Math.min(1, threshPos));
+
+    if (threshPos > 0 && threshPos < 1) {
+        // Use a three-stop gradient with threshold highlighted by a mid tone
+        const p = Math.round(threshPos * 100);
+        const grad = `linear-gradient(to right, black 0%, #666 ${p}%, white 100%)`;
+        // Set both background and backgroundImage to maximize cross-browser support
+        bar.style.backgroundImage = grad;
+        bar.style.background = grad;
+    } else {
+        const grad = `linear-gradient(to right, black, white)`;
+        bar.style.backgroundImage = grad;
+        bar.style.background = grad;
+    }
     scaleDiv.appendChild(bar);
 
-    // --- Tick logic ---
+    // --- Tick generation ---
     const ticks = [];
-    ticks.push(minDate);
+    ticks.push(minN);
 
-    if (minDate < LOG_SCALE_THRESHOLD && maxDate > LOG_SCALE_THRESHOLD) {
-        let halfwayLog = Math.exp(
-            (Math.log(Math.abs(minDate - LOG_SCALE_THRESHOLD) + 1) + Math.log(Math.abs(LOG_SCALE_THRESHOLD - LOG_SCALE_THRESHOLD) + 1)) / 2
-        ) - 1 + LOG_SCALE_THRESHOLD;
-        ticks.push(Math.round(halfwayLog));
+    // If range crosses the log threshold, add a log-midpoint and the threshold tick
+    if (minN < LOG_SCALE_THRESHOLD && maxN > LOG_SCALE_THRESHOLD) {
+        const logMin = Math.log(Math.abs(minN - LOG_SCALE_THRESHOLD) + 1);
+        const logThresh = Math.log(1); // 0 -> log(1) = 0
+        const logHalf = Math.exp((logMin + logThresh) / 2) - 1 + LOG_SCALE_THRESHOLD;
+        ticks.push(Math.round(logHalf));
         ticks.push(LOG_SCALE_THRESHOLD);
     }
 
-    // Only generate linear ticks after the threshold, skip the first tick after threshold
+    // Adaptive linear ticks for the post-threshold region
+    const linearStart = Math.max(LOG_SCALE_THRESHOLD + 1, minN);
+    const linearRange = Math.max(0, maxN - linearStart);
     let stepAfter = 2000;
-    let firstLinearTick = LOG_SCALE_THRESHOLD + stepAfter;
-    for (let y = firstLinearTick; y < maxDate; y += stepAfter) {
-        if (y > LOG_SCALE_THRESHOLD && y < maxDate) ticks.push(y);
+    if (linearRange > 0) {
+        // choose roughly 5-8 ticks for the linear region
+        let approx = linearRange / 6;
+        // round approx to a sensible magnitude (100, 500, 1000, etc.)
+        const magnitude = Math.pow(10, Math.max(0, Math.floor(Math.log10(Math.max(approx, 1)))));
+        const roundTo = magnitude >= 1000 ? 1000 : (magnitude >= 100 ? 100 : 10);
+        stepAfter = Math.max(100, Math.round(approx / roundTo) * roundTo);
+        if (stepAfter === 0) stepAfter = 1000;
     }
 
-    ticks.push(maxDate);
+    // Generate linear ticks after threshold (skip those <= threshold)
+    if (stepAfter > 0) {
+        // start at the first multiple of stepAfter greater than LOG_SCALE_THRESHOLD
+        let start = Math.ceil((LOG_SCALE_THRESHOLD + 1) / stepAfter) * stepAfter;
+        for (let y = start; y < maxN; y += stepAfter) {
+            if (y > LOG_SCALE_THRESHOLD && y < maxN) ticks.push(y);
+            // safety guard to avoid infinite loops
+            if (ticks.length > 200) break;
+        }
+    }
 
-    const uniqueTicks = Array.from(new Set(ticks)).sort((a, b) => a - b);
+    ticks.push(maxN);
+
+    // Unique & sorted
+    const uniqueTicks = Array.from(new Set(ticks.map(Number))).filter(v => isFinite(v)).sort((a, b) => a - b);
+
+    // Render ticks, skipping labels that would collide
+    let lastLabelPos = -Infinity;
+    const minLabelGapPct = 4; // minimum percent separation between labels
 
     uniqueTicks.forEach((year, i) => {
-        const percent = timelineScale(year, minDate, maxDate) * 100;
+        const p = timelineScale(year, minN, maxN);
+        if (!isFinite(p) || Number.isNaN(p)) return;
+        let percent = p * 100;
+        // clamp
+        percent = Math.max(0, Math.min(100, percent));
+
+        // Tick line
         const tick = document.createElement('div');
         tick.style.position = 'absolute';
         tick.style.left = `${percent}%`;
@@ -1437,28 +1637,72 @@ function renderMapScaleBar(minDate, maxDate) {
         tick.style.width = '1px';
         tick.style.height = '16px';
         tick.style.background = '#222';
+        tick.style.transform = 'translateX(-0.5px)';
         bar.appendChild(tick);
 
-        const label = document.createElement('div');
-        label.style.position = 'absolute';
-        label.style.left = `${percent}%`;
-        label.style.top = '18px';
-        label.style.fontSize = '11px';
-        label.style.color = '#222';
-        label.textContent = formatDateForDisplay(year);
+        // Label (may be skipped if too close)
+        const labelNeeded = (i === 0) || (i === uniqueTicks.length - 1) || ((percent - lastLabelPos) >= minLabelGapPct);
+        if (labelNeeded) {
+            const label = document.createElement('div');
+            label.style.position = 'absolute';
+            label.style.left = `${percent}%`;
+            // Place labels above the timescale bar (negative top) and rely on bar.marginTop for spacing
+            label.style.top = '-18px';
+            label.style.fontSize = '11px';
+            label.style.color = '#222';
+            label.textContent = formatDateForDisplay(year);
 
-        if (i === 0) {
-            label.style.transform = 'translateX(0)';
-            label.style.textAlign = 'left';
-        } else if (i === uniqueTicks.length - 1) {
-            label.style.transform = 'translateX(-100%)';
-            label.style.textAlign = 'right';
-        } else {
-            label.style.transform = 'translateX(-50%)';
-            label.style.textAlign = 'center';
+            if (i === 0) {
+                label.style.transform = 'translateX(0)';
+                label.style.textAlign = 'left';
+            } else if (i === uniqueTicks.length - 1) {
+                label.style.transform = 'translateX(-100%)';
+                label.style.textAlign = 'right';
+            } else {
+                label.style.transform = 'translateX(-50%)';
+                label.style.textAlign = 'center';
+            }
+
+            bar.appendChild(label);
+            lastLabelPos = percent;
         }
-
-        bar.appendChild(label);
     });
 }
 
+function updateMarkerColors(figuresArray) {
+    const ids = Array.isArray(figuresArray) && figuresArray.length > 0 ? figuresArray : currentSortedIndex || Object.keys(figuresDict);
+
+    const validFigures = ids
+        .map(id => figuresDict[id])
+        .filter(f => f && (f.earliestDate != null || f.date != null || f.approximateDate != null));
+
+    if (validFigures.length === 0) return;
+
+    const minDate = Math.min(...validFigures.map(f => f.earliestDate ?? f.date ?? f.approximateDate));
+    const maxDate = Math.max(...validFigures.map(f => f.latestDate ?? f.date ?? f.approximateDate));
+
+    // Guard: avoid division by zero, timelineScale already guards but keep defensive
+    if (!isFinite(minDate) || !isFinite(maxDate) || minDate === maxDate) return;
+
+    Object.keys(leafletMarkers).forEach(figureId => {
+        const marker = leafletMarkers[figureId];
+        if (!marker) return;
+        const el = marker.getElement && marker.getElement();
+        if (!el) return;
+        const inner = el.querySelector && el.querySelector('div');
+        if (!inner) return;
+
+        const figure = figuresDict[figureId];
+        const date = figure ? (figure.earliestDate ?? figure.date ?? figure.approximateDate) : null;
+        let color = 'rgb(128,128,128)'; // fallback neutral
+        if (date !== null && !isNaN(date)) {
+            const scale = timelineScale(date, minDate, maxDate);
+            const gray = Math.round(Math.max(0, Math.min(1, scale)) * 255);
+            color = `rgb(${gray},${gray},${gray})`;
+        }
+
+        // IMPORTANT: only set the background color property to avoid overwriting border/boxShadow
+        inner.style.backgroundColor = color;
+        // Do NOT touch inner.style.border, inner.style.boxShadow, inner.style.borderRadius, or inner.style.cssText
+    });
+}

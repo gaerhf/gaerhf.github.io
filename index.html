@@ -16,7 +16,7 @@
 
 <body>
     <div id="header-container">
-            <span id="main-title">
+        <span id="main-title">
             <span class="autocomplete-container">
                 <input id="search-input" type="text" placeholder="Keyword highlight...">
                 <ul class="autocomplete-dropdown" id="suggestions-list"></ul>
@@ -28,20 +28,22 @@
             <button type="button" class="tab-button" data-tab="figure-timeline">Timeline</button>
             🚧
             <button type="button" class="tab-button" data-tab="about">About</button>
-            </span>
+        </span>
         
-
+        <div id="detail-container"></div>
         <h2 id="detail-label">Loading</h2>
         <div id="figure-details-wrapper">
             <div id="detail-info"></div>
             <div id="detail-image"></div>
         </div>
-        <div id="header-bottom">
-            <!-- button were here -->
-            <div id="figure-timeline-scale" class="tab-scale"></div>
-            <div id="figure-map-scale" class="tab-scale"></div>
+    
+
+        <div id="timescale-container">
+            <div id="figure-timescale" class="tab-scale">Loading</div>
         </div>
     </div>
+
+    
 
     <!-- Tabbed interface -->
     <div id="tab-container">
