@@ -3993,6 +3993,17 @@
    :representative-latlong-point (16.269444 33.275) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Naga_Löwentempel.jpg> .
 
+:sulis-minerva-bath a :human-figure ;
+   rdfs:label "Sulis Minerva from Bath" ;
+   :desribed-by <https://www.romanbaths.co.uk/minervas-head> ,
+      <https://en.wikipedia.org/wiki/Sulis> ;
+   :earliest-date 75 ;
+   :latest-date 100 ;
+   :material-note "Bronze, Gold gilt" ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (51.3809 -2.3595) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bath_England_0400_139.jpg> .
+
 :atlas-figures-garni-temple a :group-of-human-figures ;
    rdfs:label "Atlas Figures on the Garni Temple" ;
    :described-by <https://en.wikipedia.org/wiki/Garni_Temple> ;
