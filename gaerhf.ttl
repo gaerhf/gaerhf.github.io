@@ -3322,7 +3322,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Patna_Museum_Lohanipur_torso.jpg> .
 
 :calcite-alabaster-head-yemen a :human-figure ;
-   rdfs:label "Calcite-Alabaster Headh from Yemen" ;
+   rdfs:label "Calcite-Alabaster Head from Yemen" ;
    :described-by <https://www.britishmuseum.org/collection/object/W_2001-0401-1> ;
    :earliest-date -300 ;
    :latest-date -1 ;
@@ -3331,6 +3331,16 @@
    :representative-latlong-point (13.039552 43.865330) ;
    :note "Mapped point is generic as findspot not known." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
+
+:bone-figurine-articulated-limbs a :human-figure ;
+   rdfs:label "Bone figurine with Articulated Limbs" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/248624> ;
+   :earliest-date -325 ;
+   :latest-date -200 ;
+   :material-note "Bone" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.473750 17.233083) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/248624/531687/main-image> .
 
 :parthian-lute-player a :human-figure ;
    rdfs:label "Parthian Lute Player" ;
