@@ -2702,6 +2702,17 @@
    :art-historical-culture-or-tradition :nordic-bronze-age ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DO-10044-Figurer_Grevensvænge.jpg> .
 
+:vessel-elderly-person a :human-figure ;
+   rdfs:label "Vessel with Fave of Elderly Person" ;
+   :described-by <https://coleccion.museolarco.org/detail/43718> ;
+   :earliest-date -800 ;
+   :latest-date -200 ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "Peru" ;
+   :note "Findspot not specific. Figure usually identified as female." ;
+   :representative-latlong-point (-7.773488 -78.967438) ;
+   :thumbnail-image <https://coleccion.museolarco.org/public/uploads/ML040338/ML040338_SF3_1734121607.webp> .
+
 :tagar-structure-petroglyphs a :group-of-human-figures ;
    rdfs:label "Figures between Structures at Boyarskaya Pisanitsa" ;
    :described-by <https://en.wikipedia.org/wiki/Tagar_culture> ,

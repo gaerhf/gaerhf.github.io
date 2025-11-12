@@ -63,7 +63,7 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1000; /* keep header on top */
+    z-index: 1100; /* keep header on top of everything including fixed map */
     background-color: #f0f0f0;
     /* padding: 8px 0 4px 0; */
     height: var(--header-height);
@@ -174,7 +174,7 @@ body {
     height: 3vh;
     background: #fff; /* solid background so content underneath doesn't show through */
     box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-    z-index: 900; /* sit above map tiles but below header */
+    z-index: 1099; /* sit below header (1100) but above map container */
     position: sticky; /* keep visible while scrolling */
     top: var(--header-height); /* stick directly below the header using centralized value */
 }

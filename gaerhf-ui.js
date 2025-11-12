@@ -1871,9 +1871,9 @@ function showTimescaleOverlay(bar, figureId, color, prefix, minN, maxN) {
             span.style.width = `${widthPct}%`;
             span.style.height = '16px';
             const fill = hexToRgba(color, 0.16) || color;
-            const border = hexToRgba(color, 0.36) || color;
+            const border = hexToRgba(color, 0.6) || color;
             span.style.background = fill;
-            span.style.border = `1px solid ${border}`;
+            span.style.border = `2px solid ${border}`;
             span.style.boxSizing = 'border-box';
             span.style.zIndex = '1250';
             bar.appendChild(span);
