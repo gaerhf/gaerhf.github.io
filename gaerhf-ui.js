@@ -550,6 +550,8 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
     // Optional: set container to relative positioning for absolute bars
     timelineContainer.style.position = 'relative';
     timelineContainer.style.height = `${figuresDisplayIndex.length * 20 + 20}px`;
+
+    // (tick rendering belongs in the timescale renderer; nothing more to do here)
 }
 
 function renderFiguresOnMap(figuresArray) {
@@ -644,9 +646,12 @@ function renderFiguresOnMap(figuresArray) {
             mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="/thumbnails/${figure.id}.png" loading="lazy"></div>`;
             marker.getPopup().setContent(mouseOverContent);
             marker.openPopup();
+            try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
 
         marker.on('mouseout', () => {
+            // Hide hover overlay immediately and close popup after a short delay
+            try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
             marker._hoverCloseTimer = setTimeout(() => {
                 marker.closePopup();
                 marker._hoverCloseTimer = null;
@@ -800,6 +805,12 @@ async function showFigureDetails(figureId) {
 
     } else {
         console.error("Figure details not found for ID:", figureId);
+    }
+    // Rerender the timescale so the selected figure's span/line is shown
+    try {
+        renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
+    } catch (err) {
+        // defensive: ignore
     }
 }
 
@@ -1506,10 +1517,12 @@ function renderGallery() {
                     mouseOverContent = `<strong>${figuresDict[figureId].label}</strong> <!-- <div><img style="max-width:75px;max-height:150px" src="/thumbnails/.png" loading="lazy"></div> -->`
                     leafletMarkers[figureId].getPopup().setContent(mouseOverContent);
                     leafletMarkers[figureId].openPopup();
+                    try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
                 });
 
                 galleryImg.addEventListener('mouseout', () => {
                 // small delay so quick moves don't flicker
+                    try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
                     leafletMarkers[figureId]._hoverCloseTimer = setTimeout(() => {
                     leafletMarkers[figureId].closePopup();
                     leafletMarkers[figureId]._hoverCloseTimer = null;
@@ -1551,6 +1564,12 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
     // Reserve room above the bar for labels
     bar.style.marginTop = '22px';
     bar.style.marginBottom = '6px';
+    // Store the numeric timescale range on the bar so overlay helpers can use the
+    // exact same coordinate space (prevents hover vs selected mismatch).
+    try {
+        bar.dataset.timescaleMin = String(minN);
+        bar.dataset.timescaleMax = String(maxN);
+    } catch (e) { /* ignore if dataset not writable */ }
 
     // Compute threshold position, but be defensive: timelineScale may still misbehave
     let threshPos = timelineScale(LOG_SCALE_THRESHOLD, minN, maxN);
@@ -1667,6 +1686,17 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
             lastLabelPos = percent;
         }
     });
+
+    // --- Selected-figure overlay (render via shared helper) ---
+    try {
+        // Use the shared overlay helper so hovered and selected overlays share behaviour/style logic
+        if (currentFigureId) {
+            // red: use hex for line, helper will compute translucent fill
+            showTimescaleOverlay(bar, currentFigureId, '#ee0c0c', 'timescale-selected', minN, maxN);
+        }
+    } catch (err) {
+        console.warn('Could not render selected-figure overlay on timescale:', err);
+    }
 }
 
 function updateMarkerColors(figuresArray) {
@@ -1705,4 +1735,169 @@ function updateMarkerColors(figuresArray) {
         inner.style.backgroundColor = color;
         // Do NOT touch inner.style.border, inner.style.boxShadow, inner.style.borderRadius, or inner.style.cssText
     });
+}
+
+// --- Timescale hover overlay helpers (blue) ---
+function getTimescaleRange() {
+    // Prefer the currently-sorted index range, otherwise fall back to all figures
+    const ids = Array.isArray(currentSortedIndex) && currentSortedIndex.length > 0 ? currentSortedIndex : Object.keys(figuresDict || {});
+    const valid = ids.map(id => figuresDict[id]).filter(f => f && (f.earliestDate != null || f.date != null || f.approximateDate != null));
+    if (!valid || valid.length === 0) return [minYear, maxYear];
+    const minN = Math.min(...valid.map(f => f.earliestDate ?? f.date ?? f.approximateDate));
+    const maxN = Math.max(...valid.map(f => f.latestDate ?? f.date ?? f.approximateDate));
+    if (!isFinite(minN) || !isFinite(maxN) || minN === maxN) return [minYear, maxYear];
+    return [minN, maxN];
+}
+
+// Shared timescale overlay utilities -------------------------------------------------
+function hexToRgba(hex, alpha) {
+    try {
+        if (!hex) return null;
+        hex = String(hex).trim();
+        // Handle rgb(...) input by injecting alpha
+        if (hex.startsWith('rgb(')) {
+            const parts = hex.replace(/rgba?\(/, '').replace(')', '').split(',').map(s => s.trim());
+            if (parts.length >= 3) {
+                return `rgba(${parts[0]},${parts[1]},${parts[2]},${alpha})`;
+            }
+        }
+        if (hex.startsWith('#')) {
+            const h = hex.slice(1);
+            if (h.length === 3) {
+                const r = parseInt(h[0] + h[0], 16);
+                const g = parseInt(h[1] + h[1], 16);
+                const b = parseInt(h[2] + h[2], 16);
+                return `rgba(${r},${g},${b},${alpha})`;
+            } else if (h.length === 6) {
+                const r = parseInt(h.slice(0,2), 16);
+                const g = parseInt(h.slice(2,4), 16);
+                const b = parseInt(h.slice(4,6), 16);
+                return `rgba(${r},${g},${b},${alpha})`;
+            }
+        }
+        // fallback: attempt to use the color string directly (may not support alpha)
+        return hex;
+    } catch (e) {
+        return hex;
+    }
+}
+
+function clearTimescaleOverlay(prefix) {
+    try {
+        const overlayId = `${prefix}-overlay`;
+        const lineId = `${prefix}-line`;
+        const existing = document.getElementById(overlayId);
+        if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+        const existingLine = document.getElementById(lineId);
+        if (existingLine && existingLine.parentNode) existingLine.parentNode.removeChild(existingLine);
+    } catch (err) {
+        // ignore
+    }
+}
+
+function showTimescaleOverlay(bar, figureId, color, prefix, minN, maxN) {
+    try {
+        if (!bar || !figureId || !figuresDict || !figuresDict[figureId]) return;
+
+        // If caller didn't provide min/max, prefer the range stored on the bar element
+        // (set by renderFiguresAsTimescale). Fall back to the computed range.
+        if (!isFinite(minN) || !isFinite(maxN)) {
+            let dmin = NaN, dmax = NaN;
+            try {
+                if (bar && bar.dataset) {
+                    dmin = Number(bar.dataset.timescaleMin);
+                    dmax = Number(bar.dataset.timescaleMax);
+                }
+            } catch (e) { /* ignore */ }
+            if (isFinite(dmin) && isFinite(dmax) && dmin !== dmax) {
+                minN = dmin; maxN = dmax;
+            } else {
+                const rng = getTimescaleRange();
+                minN = rng[0]; maxN = rng[1];
+            }
+        }
+
+        let figStart = figuresDict[figureId].earliestDate ?? figuresDict[figureId].date ?? figuresDict[figureId].approximateDate;
+        let figEnd = figuresDict[figureId].latestDate ?? figuresDict[figureId].date ?? figuresDict[figureId].approximateDate;
+        if (figStart == null || figEnd == null) return;
+        figStart = Number(figStart); figEnd = Number(figEnd);
+        if (!isFinite(figStart) || !isFinite(figEnd)) return;
+        if (figEnd < figStart) { const t = figStart; figStart = figEnd; figEnd = t; }
+
+        const clampedStart = Math.max(minN, Math.min(maxN, figStart));
+        const clampedEnd = Math.max(minN, Math.min(maxN, figEnd));
+
+        let s = timelineScale(clampedStart, minN, maxN);
+        let e = timelineScale(clampedEnd, minN, maxN);
+        if (!isFinite(s) || Number.isNaN(s)) s = (clampedStart - minN) / (maxN - minN);
+        if (!isFinite(e) || Number.isNaN(e)) e = (clampedEnd - minN) / (maxN - minN);
+
+        let startPct = Math.max(0, Math.min(1, s)) * 100;
+        let endPct = Math.max(0, Math.min(1, e)) * 100;
+        if (endPct < startPct) { const t = startPct; startPct = endPct; endPct = t; }
+        const widthPct = Math.max(0, endPct - startPct);
+
+        // cleanup previous matching overlay
+        clearTimescaleOverlay(prefix);
+
+        const minVisiblePct = 0.5;
+        const lineId = `${prefix}-line`;
+        const overlayId = `${prefix}-overlay`;
+        if (widthPct <= minVisiblePct) {
+            const line = document.createElement('div');
+            line.id = lineId;
+            line.style.position = 'absolute';
+            const atLeftEdge = startPct <= minVisiblePct;
+            if (atLeftEdge) {
+                line.style.left = `0%`;
+                line.style.width = '5px';
+                line.style.transform = 'translateX(0)';
+            } else {
+                line.style.left = `${startPct}%`;
+                line.style.width = '3px';
+                line.style.transform = 'translateX(-1.5px)';
+            }
+            line.style.top = '0';
+            line.style.height = '16px';
+            line.style.background = color;
+            line.style.zIndex = '1300';
+            bar.appendChild(line);
+        } else {
+            const span = document.createElement('div');
+            span.id = overlayId;
+            span.style.position = 'absolute';
+            span.style.left = `${startPct}%`;
+            span.style.top = '0';
+            span.style.width = `${widthPct}%`;
+            span.style.height = '16px';
+            const fill = hexToRgba(color, 0.16) || color;
+            const border = hexToRgba(color, 0.36) || color;
+            span.style.background = fill;
+            span.style.border = `1px solid ${border}`;
+            span.style.boxSizing = 'border-box';
+            span.style.zIndex = '1250';
+            bar.appendChild(span);
+        }
+    } catch (err) {
+        console.warn('Could not render timescale overlay:', err);
+    }
+}
+
+// End shared overlay utilities -----------------------------------------------------
+
+function clearTimescaleHoverOverlay() {
+    clearTimescaleOverlay('timescale-hover');
+}
+
+function showTimescaleHoverOverlay(figureId) {
+    try {
+        if (!figureId) return;
+        const scaleDiv = document.getElementById('figure-timescale');
+        if (!scaleDiv) return;
+        const bar = scaleDiv.querySelector('div');
+        if (!bar) return;
+        showTimescaleOverlay(bar, figureId, '#0f96f0', 'timescale-hover');
+    } catch (err) {
+        console.warn('Could not render hover overlay:', err);
+    }
 }

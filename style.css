@@ -7,6 +7,11 @@ body {
     position: relative; /* Needed for absolute positioning of the footer */
 }
 
+:root {
+    /* Centralize header height so timescale can reference it in CSS without JS */
+    --header-height: 33vh;
+}
+
 #figure-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -58,11 +63,12 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000; /* keep header on top */
     background-color: #f0f0f0;
     /* padding: 8px 0 4px 0; */
-    height: 33vh;
+    height: var(--header-height);
     min-height: 5em;
+    overflow: hidden; /* prevent oversized children from spilling out and overlapping the timescale */
 }
 
 #header-bottom {
@@ -107,10 +113,17 @@ body {
 
 #detail-image img {
     display: block;
-    max-height: 200px;
-    max-width: 200px;
+    max-width: 100%;
+    /* limit image height so it never extends past the header area (header = 33vh) */
+    max-height: calc(33vh - 5rem);
+    width: auto;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    object-fit: contain;
+}
+
+#detail-image {
+    overflow: hidden; /* ensure the image is clipped if it still exceeds container */
 }
 
 .culture-info {
@@ -157,8 +170,13 @@ body {
 }
 
 #timescale-container {
-    width:100% ;
-    height:3vh
+    width: 100%;
+    height: 3vh;
+    background: #fff; /* solid background so content underneath doesn't show through */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    z-index: 900; /* sit above map tiles but below header */
+    position: sticky; /* keep visible while scrolling */
+    top: var(--header-height); /* stick directly below the header using centralized value */
 }
 
 .marker-gallery {
@@ -180,29 +198,52 @@ body {
     text-decoration: underline;
 }
 
+
+/* Gallery: horizontal scroller anchored to bottom of map container */
 #gallery-container {
-    position: absolute ;
-    bottom: 3em ;
-    left: 50%;
-    transform: translateX(-50%);
-    height:1em;
-    z-index: 1000 ;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* sit at the bottom of the map container */
+    margin: 0 auto;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden; /* don't allow it to expand past map */
+    z-index: 1000;
 }
 
+/* The scroller: flex row, horizontal scroll, no vertical overflow */
 #gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
     overflow-x: auto;
-    white-space: nowrap;
-    width: 100% ;
+    overflow-y: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 4px;
 }
 
 #gallery img {
-    padding:1px;
+    display: block;
+    height: 56px; /* fixed height for consistent row */
+    width: auto;
+    flex: 0 0 auto; /* don't shrink or grow */
+    border-radius: 4px;
+}
+
+/* Center thumbnails when total width is less than container; still allow horizontal scrolling when overflow */
+#gallery {
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery-image:hover {
     transform: scale(1.6);
     cursor: pointer ;
 }
+
 /* Container is the reference point for the absolute list */
 .autocomplete-container {
     /* Critical: Allows the dropdown to be positioned relative to the input */
@@ -353,21 +394,6 @@ body {
     padding: 0 2px;
     pointer-events: none;
 }
-
-#date-range-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 99;
-}
-
 /* date-range-slider styles */
 #date-range-slider {
     display: flex;
@@ -438,6 +464,17 @@ body {
     /* display: block; */
 }
 
+
+/* Tabbed interface and tab content use default block layout (no explicit rules) */
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 #figure-map-container {
     width: 100%;
     height: 500px;
@@ -450,13 +487,20 @@ body {
     display: block;
 }
 
+/* ensure absolutely-positioned children (gallery) position relative to the map container */
+#figure-map-container { position: relative; }
+
+/* Map itself should fill its container fully */
 #figure-map {
     width: 100%;
     height: 100%;
-    min-height: 300px;
+    min-height: 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 0; /* keep map behind header/timescale */
 }
+
+/* keep leaflet defaults; don't force z-index on leaflet panes */
 
 #figure-map-scale {
     width: 100%;
@@ -497,7 +541,30 @@ body {
     height: 26px;
     vertical-align: middle;
     background: transparent;
+    appearance: none;
     -webkit-appearance: none;
+}
+
+/* Minimal thumb styling: make the knob blue across browsers */
+#threshold-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #1976d2; /* blue */
+    border: 2px solid rgba(0,0,0,0.12);
+    cursor: pointer;
+    margin-top: -3px; /* vertically center on the track */
+}
+
+#threshold-control input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #1976d2;
+    border: 2px solid rgba(0,0,0,0.12);
+    cursor: pointer;
 }
 
 /* smaller screens: reduce width and move to lower-right inside header */
