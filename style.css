@@ -477,8 +477,12 @@ body {
 
 #figure-map-container {
     width: 100%;
-    height: 500px;
-    min-height: 300px;
+    /* Fill from timescale to bottom of viewport */
+    position: fixed;
+    top: calc(var(--header-height) + 3vh); /* Start below header + timescale */
+    bottom: 0; /* Extend to bottom of viewport */
+    left: 0;
+    right: 0;
     background: #eaeaea;
     display: none; /* Hidden by default, shown when tab is active */
 }
@@ -487,17 +491,14 @@ body {
     display: block;
 }
 
-/* ensure absolutely-positioned children (gallery) position relative to the map container */
-#figure-map-container { position: relative; }
-
-/* Map itself should fill its container fully */
+/* Map itself fills the entire container - gallery overlays on top */
 #figure-map {
     width: 100%;
-    height: 100%;
+    height: 100%; /* Fill entire container */
     min-height: 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 0; /* keep map behind header/timescale */
+    z-index: 0; /* keep map behind gallery */
 }
 
 /* keep leaflet defaults; don't force z-index on leaflet panes */
