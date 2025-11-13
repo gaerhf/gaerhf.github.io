@@ -2271,7 +2271,7 @@
    rdfs:label "Cypriote Female Statuette" ;
    :described-by <https://www.metmuseum.org/art/collection/search/241099> ;
    :earliest-date -1450 ;
-   :latest-date 1200 ;
+   :latest-date -1200 ;
    :in-modern-country-note "Cyprus" ;
    :representative-latlong-point (35.1725 33.365) ;
    :thumbnail-image <https://images.metmuseum.org/CRDImages/gr/web-additional/DP105447.jpg> .
