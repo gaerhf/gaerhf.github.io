@@ -723,6 +723,16 @@ async function showFigureDetails(figureId) {
         detailImg.src = "/thumbnails/" + figure.id + ".png" ;
         detailImg.classList.add('detail-image-style');
 
+        // Swap to large image on hover
+        detailImg.addEventListener('mouseover', () => {
+            detailImg.src = "/large/" + figure.id + ".png";
+            detailImg.style.maxWidth = 500 ;
+        });
+        detailImg.addEventListener('mouseout', () => {
+            detailImg.src = "/thumbnails/" + figure.id + ".png";
+            detailImg.style.maxWidth = 200 ;
+        });
+
         detailA = document.createElement('a');
         detailA.href = `https://lens.google.com/uploadbyurl?url=${detailImageUrl}` ;
         detailA.appendChild(detailImg)
@@ -1011,6 +1021,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (leafletMap) {
                         leafletMap.invalidateSize();
                     }
+                    leafletMap.getPane('popupPane').style.zIndex = 3000; // Default is likely 650
                     renderFiguresOnMap(currentSortedIndex);
 
                     // Open popup for current figure if present

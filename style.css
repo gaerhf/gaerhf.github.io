@@ -68,7 +68,12 @@ body {
     /* padding: 8px 0 4px 0; */
     height: var(--header-height);
     min-height: 5em;
-    overflow: hidden; /* prevent oversized children from spilling out and overlapping the timescale */
+    overflow: hidden; /* default: keep layout tidy */
+}
+
+/* When hovering the detail image, allow it to overflow the header so the full image shows */
+#header-container:has(#detail-image img:hover) {
+    overflow: visible;
 }
 
 #header-bottom {
@@ -107,23 +112,30 @@ body {
 
 #detail-image {
     flex: 0 0 auto;
-    max-width: 200px;
     margin: 0;
 }
 
 #detail-image img {
     display: block;
-    max-width: 100%;
+    max-width: 200px;
     /* limit image height so it never extends past the header area (header = 33vh) */
     max-height: calc(33vh - 5rem);
     width: auto;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     object-fit: contain;
+    transition: max-width 0.2s ease-in-out, max-height 0.2s ease-in-out;
+}
+
+#detail-image img:hover {
+    max-width: 1000px; /* Allow expansion to large image size on hover */
+    max-height: 1000px; /* Allow height expansion as well */
+    position: relative; /* ensure z-index takes effect */
+    z-index: 5000;
 }
 
 #detail-image {
-    overflow: hidden; /* ensure the image is clipped if it still exceeds container */
+    overflow: visible; /* allow hover enlargement to extend beyond wrapper */
 }
 
 .culture-info {
