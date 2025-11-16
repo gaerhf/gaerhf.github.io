@@ -215,12 +215,12 @@ async function buildFiguresInfoDict($rdf) {
             await Promise.all(subjectsOfType.map(async subject => {
                 const shortId = subject.uri.replace('urn:gaerhf:id:', '');
 
-                const label = tp.anyValue(subject, rdfsLabelProp);
+                const label = tp.anyValue(subject, rdfsLabelProp) || shortId;
 
-                const dateStr = tp.anyValue(subject, dateProp);
-                const earliestDateStr = tp.anyValue(subject, earliestDateProp);
-                const latestDateStr = tp.anyValue(subject, latestDateProp);
-                const approximateDateStr = tp.anyValue(subject, approximateDateProp);
+                const dateStr = tp.anyValue(subject, dateProp) || null;
+                const earliestDateStr = tp.anyValue(subject, earliestDateProp) || null;
+                const latestDateStr = tp.anyValue(subject, latestDateProp) || null;
+                const approximateDateStr = tp.anyValue(subject, approximateDateProp) || null;
 
                 // Convert date strings to numbers
                 const date = dateStr ? parseFloat(dateStr) : null;
@@ -228,22 +228,24 @@ async function buildFiguresInfoDict($rdf) {
                 const latestDate = latestDateStr ? parseFloat(latestDateStr) : null;
                 const approximateDate = approximateDateStr ? parseFloat(approximateDateStr) : null;
 
-                const note = tp.anyValue(subject, noteProp);
+                const note = tp.anyValue(subject, noteProp) || null;
 
                 const culture = tp.any(subject, cultureProp);
                 let cultureShortId = null;
                 let cultureLabel = null;
                 let cultureDescribedBy = null;
 
-                const inModernCountry = tp.any(subject, inModernCountryProp);
-                const materialNote = tp.any(subject, materialNoteProp);
-                const wikipediaImagePage = tp.anyValue(subject, wikipediaImagePageProp);
+                // Extract all string/literal values consistently - no RDF nodes should reach figuresDict
+                const inModernCountry = tp.anyValue(subject, inModernCountryProp) || null;
+                const materialNote = tp.anyValue(subject, materialNoteProp) || null;
+                const wikipediaImagePage = tp.anyValue(subject, wikipediaImagePageProp) || null;
                 const describedBy = tp.each(subject, describedByProp).map(val => val.value);
-                const thumbnailURL = tp.anyValue(subject, thumbnailImageProp); // Get explicit thumbnail
+                const thumbnailURL = tp.anyValue(subject, thumbnailImageProp) || null;
+                
                 const latLongNode = tp.any(subject, latLongProp);
                 let representativeLatLongPoint = null;
                 if (latLongNode && latLongNode.termType === 'Collection') {
-                    // It's an RDF list/collection
+                    // It's an RDF list/collection - extract numeric values only
                     const items = latLongNode.elements.map(el => parseFloat(el.value));
                     if (items.length === 2 && items.every(v => !isNaN(v))) {
                         representativeLatLongPoint = items;
@@ -252,27 +254,28 @@ async function buildFiguresInfoDict($rdf) {
 
                 if (culture) {
                     cultureShortId = culture.uri.replace('urn:gaerhf:id:', '');
-                    cultureLabel = tp.anyValue(culture, rdfsLabelProp);
-                    cultureDescribedBy = tp.anyValue(culture, describedByProp);
+                    // Extract label and describedBy as plain strings
+                    cultureLabel = tp.anyValue(culture, rdfsLabelProp) || null;
+                    cultureDescribedBy = tp.anyValue(culture, describedByProp) || null;
                 }
 
                 processedDict[shortId] = {
                     id: shortId,
-                    label: label || shortId,
-                    date: date,
-                    earliestDate: earliestDate,
-                    latestDate: latestDate,
-                    approximateDate: approximateDate,
-                    describedBy: describedBy,
-                    note: note,
-                    culture: cultureShortId,
-                    cultureLabel: cultureLabel,
-                    cultureDescribedBy: cultureDescribedBy,
-                    materialNote : materialNote ,
-                    inModernCountry: inModernCountry,
-                    wikipediaImagePage: wikipediaImagePage,
-                    thumbnailURL: thumbnailURL,
-                    representativeLatLongPoint: representativeLatLongPoint,
+                    label: label,  // always a string
+                    date: date,  // number or null
+                    earliestDate: earliestDate,  // number or null
+                    latestDate: latestDate,  // number or null
+                    approximateDate: approximateDate,  // number or null
+                    describedBy: describedBy,  // array of strings
+                    note: note,  // string or null
+                    culture: cultureShortId,  // string or null
+                    cultureLabel: cultureLabel,  // string or null
+                    cultureDescribedBy: cultureDescribedBy,  // string or null
+                    materialNote: materialNote,  // string or null
+                    inModernCountry: inModernCountry,  // string or null
+                    wikipediaImagePage: wikipediaImagePage,  // string or null
+                    thumbnailURL: thumbnailURL,  // string or null
+                    representativeLatLongPoint: representativeLatLongPoint,  // [number, number] or null
                 };
             }));
         });
@@ -1347,37 +1350,45 @@ function highlightGalleryFigure(figureId) {
 }
 
 function highlightKeywordMarkers(ids) {
-    // Object.values(leafletMarkers).forEach(m => {
-    //     const el = m.getElement && m.getElement();
-    //     if (el) {
-    //         const inner = el.querySelector && el.querySelector('div');
-    //         if (inner) {
-    //             inner.style.boxShadow = '';
-    //         }
-    //     }
-    // });
+    // Normalize ids: dedupe, remove empties/nulls
+    const uniqueIds = Array.from(new Set((ids || []).filter(Boolean)));
 
-    Object.keys(leafletMarkers).forEach( figureId => {
-        markerDiv = leafletMarkers[figureId].getElement().querySelector('div') ;
-        markerDiv.style.boxShadow = '' ;
-        if (figureId != currentFigureId ) {
-            leafletMarkers[figureId].setZIndexOffset(1);
-        }
-    });
-
-    ids.forEach( figureId => {
-        const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
-        if (thisEl) {
-            const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
-            if (innerDiv) {
-                innerDiv.style.boxShadow = '0px 0px 5px 5px rgba(15, 235, 19, 1)';
+    // Clear existing keyword highlights safely
+    Object.keys(leafletMarkers).forEach((figureId) => {
+        try {
+            const m = leafletMarkers[figureId];
+            if (!m) return;
+            const el = m.getElement && m.getElement();
+            if (el) {
+                const inner = el.querySelector && el.querySelector('div');
+                if (inner) inner.style.boxShadow = '';
             }
-        }
-        if (figureId != currentFigureId) {
-            leafletMarkers[figureId].setZIndexOffset(900);
+            if (figureId !== currentFigureId) {
+                m.setZIndexOffset(1);
+            }
+        } catch (e) {
+            // ignore and continue
         }
     });
-} 
+
+    // Apply new keyword highlights
+    uniqueIds.forEach((figureId) => {
+        try {
+            const m = leafletMarkers[figureId];
+            if (!m) return;
+            const el = m.getElement && m.getElement();
+            if (el) {
+                const inner = el.querySelector && el.querySelector('div');
+                if (inner) inner.style.boxShadow = '0px 0px 5px 5px rgba(15, 235, 19, 1)';
+            }
+            if (figureId !== currentFigureId) {
+                m.setZIndexOffset(900);
+            }
+        } catch (e) {
+            // ignore and continue
+        }
+    });
+}
 
 function startPlayback() {
     const playBtn = document.getElementById('play-btn');
@@ -1452,57 +1463,64 @@ window.addEventListener('hashchange', () => {
 });
 
 function tokenizer(input) {
-
-    lc = input.toLowerCase() ;
-    const wordRegex = /\w+/g ;
-
-    const tokens = lc
-        .match(wordRegex);
-
+    const text = (input ?? '').toString().toLowerCase();
+    const wordRegex = /\w+/g;
+    const tokens = text.match(wordRegex) || [];
     return tokens;
 }
 
 function makeFiguresKWDocsArray() {
-    documents_dict = {} ;
-    Object.values(figuresDict).forEach( figure => {
-        tokens = tokenizer(figure.label) ;
-        tokens.forEach(token => {
-            if (documents_dict.hasOwnProperty(token)) {
-                documents_dict[token] = documents_dict[token] + " " + figure.id;
-            } else {
-            documents_dict[token] = figure.id;
-            }
+    // Map token -> Set of figure IDs (avoid duplicates)
+    const documents_dict = {};
+
+    const asText = (v) => {
+        if (v === null || v === undefined) return '';
+        if (typeof v === 'string') return v;
+        if (typeof v === 'object' && v && typeof v.value === 'string') return v.value;
+        return String(v);
+    };
+
+    Object.values(figuresDict).forEach((figure) => {
+        let tokens = tokenizer(figure.label);
+        tokens.forEach((token) => {
+            if (!documents_dict[token]) documents_dict[token] = new Set();
+            documents_dict[token].add(figure.id);
         });
 
+        if (figure.cultureLabel) {
+            tokens = tokenizer(asText(figure.cultureLabel));
+            tokens.forEach((token) => {
+                if (!documents_dict[token]) documents_dict[token] = new Set();
+                documents_dict[token].add(figure.id);
+            });
+        }
+
         if (figure.materialNote) {
-            tokens = tokenizer(figure.materialNote['value']) ;
-            tokens.forEach(token => {
-                if (documents_dict.hasOwnProperty(token)) {
-                    documents_dict[token] = documents_dict[token] + " " + figure.id;
-                } else {
-                documents_dict[token] = figure.id;
-                }
+            tokens = tokenizer(asText(figure.materialNote));
+            tokens.forEach((token) => {
+                if (!documents_dict[token]) documents_dict[token] = new Set();
+                documents_dict[token].add(figure.id);
             });
         }
- 
+
         if (figure.inModernCountry) {
-            tokens = tokenizer(figure.inModernCountry['value']) ;
-            tokens.forEach(token => {
-                if (documents_dict.hasOwnProperty(token)) {
-                    documents_dict[token] = documents_dict[token] + " " + figure.id;
-                } else {
-                documents_dict[token] = figure.id;
-                }
+            tokens = tokenizer(asText(figure.inModernCountry));
+            tokens.forEach((token) => {
+                if (!documents_dict[token]) documents_dict[token] = new Set();
+                documents_dict[token].add(figure.id);
             });
         }
-
     });
 
-    documents_array = [] ;
-    Object.keys(documents_dict).forEach( doc => {
-        documents_array.push({id:doc , ids: documents_dict[doc]}) ;
+    // Convert Sets to arrays for MiniSearch storage and for dictionary lookups
+    const documents_array = [];
+    const dict_out = {};
+    Object.keys(documents_dict).forEach((doc) => {
+        const idsArray = Array.from(documents_dict[doc]);
+        documents_array.push({ id: doc, ids: idsArray });
+        dict_out[doc] = idsArray;
     });
-    return {array: documents_array, dictionary: documents_dict}
+    return { array: documents_array, dictionary: dict_out };
 }
 
 
@@ -1573,7 +1591,10 @@ function renderKeywordSearch() {
                     searchInput.value = kwText;
                     suggestionsList.innerHTML = '';
                     suggestionsList.style.display = 'none';
-                    highlightKeywordMarkers(figuresKWDict[kwText].split(' '));
+                                        const ids = Array.isArray(figuresKWDict[kwText])
+                                            ? figuresKWDict[kwText]
+                                            : String(figuresKWDict[kwText] || '').split(' ').filter(Boolean);
+                                        highlightKeywordMarkers(ids);
                 });
                 li.addEventListener('keydown', (ev) => {
                     if (ev.key === 'Enter') {

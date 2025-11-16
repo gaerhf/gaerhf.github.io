@@ -1281,7 +1281,7 @@
    :described-by <https://www.britishmuseum.org/collection/object/G_1886-0310-1> ;
    :earliest-date -4500 ;
    :latest-date -3200 ;
-   :in-modernp-country-note "Greece" ;
+   :in-modern-country-note "Greece" ;
    :note "Mapped generically to the Island of Karpathos for now." ;
    :representative-latlong-point (35.764416 27.180286) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_7/f3b0083f_2e76_490b_9fa3_a3b70074cb10/mid_00034725_001.jpg> .
@@ -1628,7 +1628,7 @@
    :described-by <https://it.wikipedia.org/wiki/Stele_di_Vado_all%27Arancio> ;
    :earliest-date -3000 ;
    :latest-date -2000 ;
-   :in-modernp-country-note "Italy" ;
+   :in-modern-country-note "Italy" ;
    :representative-latlong-point (43.051036 10.893427) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stele_di_vado_all%27arancio,_III_millennio_a.c._circa_02.JPG> .
 
@@ -3102,7 +3102,8 @@
 
 :esteros-female-figurine a :human-figure ;
    :described-by <https://www.metmuseum.org/art/collection/search/317723> ;
-   :period-note "Esteros or Bahia (Ecuador)" ;
+   :note "Esteros or Bahia (Ecuador)" ;
+   :in-modern-country-note "Ecuador" ;
    :earliest-date -500 ;
    :latest-date -1 ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/317723/671375/main-image> .
@@ -3355,7 +3356,7 @@
    :earliest-date -300 ;
    :latest-date -1 ;
    :art-historical-culture-or-tradition :ancient-arabia ;
-   :in-modern-country "Yemen" ;
+   :in-modern-country-note "Yemen" ;
    :representative-latlong-point (13.039552 43.865330) ;
    :note "Mapped point is generic as findspot not known." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
@@ -3639,6 +3640,7 @@
    :earliest-date -200 ;
    :latest-date 500 ;
    :described-by <https://en.wikipedia.org/wiki/Nazca_lines> ;
+   :in-modern-country-note "Peru" ;
    :representative-latlong-point (-14.6975 -75.135) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_46.JPG> .
 
@@ -3847,6 +3849,7 @@
    :earliest-date -25 ;
    :latestdate 100 ;
    :material-note "Bronze" ;
+   :in-modern-country-note "Italy, by default." ;
    :note "Findspot not known. Mapped to Rome as unfortunate default." ;
    :representative-latlong-point (41.8967 12.4822) ;
    :thumbnail-image <https://media.getty.edu/iiif/image/d507b387-4bb5-4c42-b03d-317d2713e880/full/500,/0/default.jpg> .
@@ -3888,6 +3891,7 @@
    :described-by <https://en.wikipedia.org/wiki/Bimaran_casket> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :material-note "Gold" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.458544 70.349792) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BimaranCasket2.JPG> .
@@ -4115,7 +4119,7 @@
    :thumbnail-image <https://www.worldhistory.org/uploads/images/10852.jpg> .
 
 :gold-bust-marcus-aurelius a :human-figure ;
-   rdfs:label "Gold Bust of Marchus Aurelius" ;
+   rdfs:label "Gold Bust of Marcus Aurelius" ;
    :described-by <https://en.wikipedia.org/wiki/Golden_Bust_of_Marcus_Aurelius> ,
    <https://www.getty.edu/art/exhibitions/aurelius/> ;
    :earliest-date 176 ;
@@ -4376,7 +4380,7 @@
    :earliest-date -300 ;
    :latest-date -200 ;
    :material-note "Stone" ;
-   :modern-country-note "India" ;
+   :in-modern-country-note "India" ;
    :representative-latlong-point (25.594034 85.137553) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Patna_Yakshas_and_inscriptions.jpg> .
 
@@ -5603,7 +5607,7 @@
    :earliest-date 1100 ;
    :latest-date 1200 ;
    :material-note "Stone" ;
-   :modern-country-note "Sri Lanka" ;
+   :in-modern-country-note "Sri Lanka" ;
    :representative-latlong-point (7.92627 80.99484) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Relief_of_Parakramabahu_in_Polonnaruwa.jpg> .
 
