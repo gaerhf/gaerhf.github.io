@@ -630,7 +630,7 @@
    :thumbnail-image <https://www.imj.org.il/sites/default/files/collections/Human%20Statue,%20Gilgal,%20PPNA~K10343_2.jpg> .
 
 :petroglyphs-grotta-del-genovese a :group-of-human-figures ;
-   rdfs:label "Petroglyphys from the Grotta del Genovese" ;
+   rdfs:label "Petroglyphs from the Grotta del Genovese" ;
    :described-by <https://en.wikipedia.org/wiki/Grotta_del_Genovese> ,
       <https://www.grottadelgenovese.it/> ;
    :approximate-date -9500 ;
@@ -3902,7 +3902,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Orlat_plaques_(vertical_layout).jpg> .
 
 :ivory-female-statuette-begram a :human-figure ;
-   rdfs:label "Ivory Female Statuette from Begream" ;
+   rdfs:label "Ivory Female Statuette from Begram" ;
    :described-by <https://en.wikipedia.org/wiki/Begram_ivories> ;
    :earliest-date 1 ;
    :latest-date 100 ;

@@ -31,6 +31,52 @@ let leafletMarkers = {}; // Place this at the top level
 
 let visibleMarkers = null ;
 let thresholdDebounceTimer = null;
+let isOptionKeyDown = false;
+
+// Helper: open callout with adaptive behavior
+// Note: Leaflet's 'direction' option is for Tooltips (not Popups).
+// We use a tooltip styled like a popup when near the top, otherwise a normal popup.
+function openAdaptivePopup(marker, content) {
+    if (!leafletMap || !marker) return;
+    try {
+        const pt = leafletMap.latLngToContainerPoint(marker.getLatLng());
+        const topThreshold = 300; // px from top to trigger below placement
+
+        // Always ensure popup is bound for the normal case
+        marker.unbindPopup();
+        marker.bindPopup(content, { offset: [0, -6], autoPan: false });
+
+        if (pt.y < topThreshold) {
+            // Near top: use a tooltip that appears below the marker
+            // Close any popup that might be open
+            try { marker.closePopup(); } catch {}
+            // Rebind tooltip with bottom direction
+            marker.unbindTooltip();
+            marker.bindTooltip(content, {
+                direction: 'bottom',
+                offset: [0, 10],
+                opacity: 1,
+                permanent: false,
+                sticky: false,
+                interactive: true,
+                className: 'popup-like'
+            });
+            marker.openTooltip();
+        } else {
+            // Normal case: open actual popup above marker
+            marker.unbindTooltip();
+            marker.openPopup();
+        }
+    } catch (err) {
+        // Fallback to standard behavior
+        try {
+            marker.unbindTooltip();
+            marker.unbindPopup();
+            marker.bindPopup(content, { autoPan: false });
+            marker.openPopup();
+        } catch (e) { /* ignore */ }
+    }
+}
 
 // Convenience functions
 /**
@@ -557,15 +603,24 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
 function renderFiguresOnMap(figuresArray) {
     // Only initialize once
     if (!leafletMap) {
-        leafletMap = L.map('figure-map', { worldCopyJump: true }).setView([20, 0], 1.8); // World view
+        leafletMap = L.map('figure-map', { 
+            worldCopyJump: true,
+            keyboard: false  // CRITICAL: Disable Leaflet's keyboard handler completely
+        }).setView([20, 0], 1.8); // World view
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(leafletMap);
+        // Disable automatic map panning for ALL popups globally (simplifies hover behavior)
+        try { L.Popup.prototype.options.autoPan = false; } catch (e) { /* ignore if Leaflet not loaded */ }
+        // Explicitly raise popup pane z-index in JS in case CSS loads late or is overridden
+        try { leafletMap.getPanes().popupPane.style.zIndex = '20000'; } catch (e) { /* ignore */ }
         leafletMap.on('zoomend', function() {
             renderGallery() ;
+            highlightGalleryFigure(currentFigureId)
             });
         leafletMap.on('moveend', function () {
             renderGallery() ;
+            highlightGalleryFigure(currentFigureId)
             });
     }
 
@@ -637,15 +692,14 @@ function renderFiguresOnMap(figuresArray) {
         marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
         marker.on('click', () => { 
             highlightMapFigure(figureId);
+            highlightGalleryFigure(figureId) ;
             showFigureDetails(figureId);
             clickContent = `<strong>${figure.label || figure.id}</strong>`;
-            marker.getPopup().setContent(clickContent);
-            marker.openPopup();
+            openAdaptivePopup(marker, clickContent);
         });
         marker.on('mouseover', () => {
             mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="/thumbnails/${figure.id}.png" loading="lazy"></div>`;
-            marker.getPopup().setContent(mouseOverContent);
-            marker.openPopup();
+            openAdaptivePopup(marker, mouseOverContent);
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
 
@@ -653,7 +707,8 @@ function renderFiguresOnMap(figuresArray) {
             // Hide hover overlay immediately and close popup after a short delay
             try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
             marker._hoverCloseTimer = setTimeout(() => {
-                marker.closePopup();
+                try { marker.closePopup(); } catch {}
+                try { marker.closeTooltip && marker.closeTooltip(); } catch {}
                 marker._hoverCloseTimer = null;
             }, 250);
         });
@@ -677,7 +732,8 @@ function renderFiguresOnMap(figuresArray) {
     // by updating colors in-place, but ensure the selected figure has its border applied)
     try {
         if (currentFigureId && leafletMarkers[currentFigureId]) {
-            highlightMapFigure(currentFigureId);
+            highlightMapFigure(currentFigureId) ;
+            highlightGalleryFigure(currentFigureId)
         }
     } catch (err) {
         // ignore
@@ -883,6 +939,7 @@ async function loadAndDisplayFigures($rdf) {
                         const thisEl = leafletMarkers[currentFigureId].getElement && leafletMarkers[currentFigureId].getElement();
                         if (thisEl) {
                             highlightMapFigure(currentFigureId) ;
+                            highlightGalleryFigure(currentFigureId) ;
                         }
                     
                         leafletMarkers[currentFigureId].openPopup();
@@ -937,51 +994,70 @@ async function initializeStore($rdf) {
     loadAndDisplayFigures($rdf);
 })();
 
+// Track Option/Alt key state globally
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Alt') {
+    isOptionKeyDown = true;
+  }
+});
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'Alt') {
+    isOptionKeyDown = false;
+  }
+});
+
+// Reset on window blur (in case user releases key while window not focused)
+window.addEventListener('blur', () => {
+  isOptionKeyDown = false;
+});
+
 document.addEventListener('keydown', (event) => {
 
-  if (event.key === 'ArrowLeft') {
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === "Tab" ) {
+    // Prevent default scrolling behavior
+    event.preventDefault();
+    
+    // Get visible markers on the map
+    const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+    if (!visibleFigures || visibleFigures.length === 0) return;
 
-    figures = currentSortedIndex ;
-    if (currentFigureId) {
-        const idx = figures.indexOf(currentFigureId);
-        if (idx !== -1) startIndex = idx;
+    // Sort them by date for consistent navigation
+    const sortedVisibleFigures = sortFigures(visibleFigures, 'date');
+
+    let targetIndex = 0;
+
+    // Check if currentFigureId is in the visible set (test via gallery element)
+    const isCurrentVisible = document.getElementById(`gi-${currentFigureId}`);
+    
+    if (isCurrentVisible && currentFigureId) {
+      // Current figure is visible, move to next/previous
+      const idx = sortedVisibleFigures.indexOf(currentFigureId);
+      if (idx !== -1) {
+        if (event.key === 'ArrowLeft') {
+          targetIndex = idx > 0 ? idx - 1 : sortedVisibleFigures.length - 1;
+        } else { // ArrowRight
+          targetIndex = idx < sortedVisibleFigures.length - 1 ? idx + 1 : 0;
+        }
+      }
+    } else {
+      // Current figure not visible, go to first visible figure
+      targetIndex = 0;
     }
 
-    if (startIndex > 0) { startIndex-- }
+    const targetFigureId = sortedVisibleFigures[targetIndex];
 
-    showFigureDetails(figures[startIndex]);
-    highlightTimelineFigure(figures[startIndex]) ;
-    scrollToTimelineFigure(figures[startIndex]) ;
+    showFigureDetails(targetFigureId);
+    highlightTimelineFigure(targetFigureId);
+    scrollToTimelineFigure(targetFigureId);
+    highlightListFigure(targetFigureId);
+    scrollToListFigure(targetFigureId);
+    highlightMapFigure(targetFigureId);
+    highlightGalleryFigure(targetFigureId);
 
-    highlightListFigure(figures[startIndex]) ;
-    scrollToListFigure(figures[startIndex]) ;
-
-    leafletMarkers[figures[startIndex]].openPopup();
-
-  }
-  if (event.key === 'Tab' || event.key === 'ArrowRight') {
-
-    console.log("next")
-
-    figures = currentSortedIndex ;
-
-    if (currentFigureId) {
-        const idx = figures.indexOf(currentFigureId);
-        if (idx !== -1) startIndex = idx;
+    if (leafletMarkers[targetFigureId]) {
+      leafletMarkers[targetFigureId].openPopup();
     }
-
-    if (startIndex < figures.length) { startIndex++ }
-
-    showFigureDetails(figures[startIndex]);
-    highlightTimelineFigure(figures[startIndex]) ;
-    scrollToTimelineFigure(figures[startIndex]) ;
-
-    highlightListFigure(figures[startIndex]) ;
-    scrollToListFigure(figures[startIndex]) ;
-
-
-    leafletMarkers[figures[startIndex]].openPopup();
-
   }
 
 });
@@ -1027,7 +1103,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Open popup for current figure if present
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
                         leafletMarkers[currentFigureId].openPopup();
-                        highlightMapFigure(currentFigureId)
+                        highlightMapFigure(currentFigureId) ;
+                        highlightGalleryFigure(currentFigureId)
                     }
                 }, 200); // Delay to allow the tab to become visible
             }
@@ -1248,7 +1325,26 @@ function highlightMapFigure(figureId) {
 
         leafletMarkers[figureId].setZIndexOffset(1000);
         
+        // Center map on this marker only if Option/Alt key is held
+        if (isOptionKeyDown && leafletMap && leafletMarkers[figureId]) {
+            leafletMap.panTo(leafletMarkers[figureId].getLatLng());
+        }
     }
+
+function highlightGalleryFigure(figureId) {
+    // Clear borders from all gallery images
+    document.querySelectorAll('.gallery-image').forEach(img => {
+        img.style.border = '';
+    });
+    
+    // Add red border to the selected figure's gallery image
+    const selectedImg = document.getElementById(`gi-${figureId}`);
+    if (selectedImg) {
+        selectedImg.style.border = '3px solid #ee0c0cff';
+        // Scroll to make the highlighted image visible
+        selectedImg.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+}
 
 function highlightKeywordMarkers(ids) {
     // Object.values(leafletMarkers).forEach(m => {
@@ -1357,9 +1453,10 @@ window.addEventListener('hashchange', () => {
 
 function tokenizer(input) {
 
-    const wordRegex = /\w+/g;
+    lc = input.toLowerCase() ;
+    const wordRegex = /\w+/g ;
 
-    const tokens = input
+    const tokens = lc
         .match(wordRegex);
 
     return tokens;
@@ -1541,7 +1638,8 @@ function renderGallery() {
                 });
 
                 galleryImg.addEventListener('click', () => {
-                    highlightMapFigure(figureId)
+                    highlightMapFigure(figureId) ;
+                    highlightGalleryFigure(figureId) ;
                     leafletMarkers[figureId].closePopup();
                     showFigureDetails(figureId);
                 });
@@ -1571,10 +1669,9 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
     const bar = document.createElement('div');
     bar.style.width = '100%';
     bar.style.height = '16px';
-    bar.style.position = 'relative';
-    // Reserve room above the bar for labels
-    bar.style.marginTop = '22px';
-    bar.style.marginBottom = '6px';
+    bar.style.position = 'absolute';
+    bar.style.bottom = '4px'; // 4px from bottom of container
+    bar.style.left = '0';
     // Store the numeric timescale range on the bar so overlay helpers can use the
     // exact same coordinate space (prevents hover vs selected mismatch).
     try {
@@ -1663,7 +1760,7 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
         const tick = document.createElement('div');
         tick.style.position = 'absolute';
         tick.style.left = `${percent}%`;
-        tick.style.top = '0';
+        tick.style.bottom = '4px'; // Align with bar bottom
         tick.style.width = '1px';
         tick.style.height = '16px';
         tick.style.background = '#222';
@@ -1676,8 +1773,7 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
             const label = document.createElement('div');
             label.style.position = 'absolute';
             label.style.left = `${percent}%`;
-            // Place labels above the timescale bar (negative top) and rely on bar.marginTop for spacing
-            label.style.top = '-18px';
+            label.style.top = '2px'; // Position labels at top of container
             label.style.fontSize = '11px';
             label.style.color = '#222';
             label.textContent = formatDateForDisplay(year);
@@ -1693,7 +1789,7 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
                 label.style.textAlign = 'center';
             }
 
-            bar.appendChild(label);
+            scaleDiv.appendChild(label); // Append to scaleDiv, not bar
             lastLabelPos = percent;
         }
     });
