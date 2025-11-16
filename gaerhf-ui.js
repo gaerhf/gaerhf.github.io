@@ -32,6 +32,7 @@ let leafletMarkers = {}; // Place this at the top level
 let visibleMarkers = null ;
 let thresholdDebounceTimer = null;
 let isOptionKeyDown = false;
+let currentKeywordHighlightIds = [];
 
 // Helper: open callout with adaptive behavior
 // Note: Leaflet's 'direction' option is for Tooltips (not Popups).
@@ -1503,6 +1504,14 @@ function makeFiguresKWDocsArray() {
             });
         }
 
+        if (figure.note) {
+            tokens = tokenizer(asText(figure.note));
+            tokens.forEach((token) => {
+                if (!documents_dict[token]) documents_dict[token] = new Set();
+                documents_dict[token].add(figure.id);
+            });
+        }
+
         if (figure.inModernCountry) {
             tokens = tokenizer(asText(figure.inModernCountry));
             tokens.forEach((token) => {
@@ -1545,20 +1554,25 @@ function renderKeywordSearch() {
 
     const searchInput = document.getElementById('search-input');
     const suggestionsList = document.getElementById('suggestions-list');
+    let searchDebounceTimer = null; // debounce timer for typeahead
 
     // Start hidden
     suggestionsList.style.display = 'none';
 
-    searchInput.addEventListener('input', (e) => {
-        const query = e.target.value.trim();
-        suggestionsList.innerHTML = ''; // Clear previous results
+    searchInput.addEventListener('input', () => {
+        // Debounce to only search after user pauses typing
+        if (searchDebounceTimer) clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = setTimeout(() => {
+            const query = searchInput.value.trim();
+            suggestionsList.innerHTML = '';
+            // Restore persistent highlight when regenerating list
+            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
 
-        if (query.length === 0) {
-            suggestionsList.style.display = 'none';
-            return;
-        }
+            if (query.length === 0) {
+                suggestionsList.style.display = 'none';
+                return;
+            }
 
-            // Use search (with stored fields) for reliable suggestion objects
             const results = miniSearch.search(query, { prefix: true, limit: 5 });
 
             if (!results || results.length === 0) {
@@ -1566,35 +1580,39 @@ function renderKeywordSearch() {
                 return;
             }
 
-            // Helper to safely extract a display string from various MiniSearch result shapes
             function extractKw(item) {
                 if (!item) return '';
                 if (typeof item === 'string') return item;
                 if (item.id) return item.id;
                 if (item.suggestion) return item.suggestion;
                 if (item.doc && item.doc.id) return item.doc.id;
-                // Some builds return stored fields directly on the result
                 if (item.document && item.document.id) return item.document.id;
-                // As a last resort, try id or stringify
                 if (item.id) return String(item.id);
                 try { return JSON.stringify(item); } catch { return String(item); }
             }
 
-            // Render the suggestions
             results.forEach(result => {
                 const kwText = extractKw(result);
-                if (!kwText) return; // skip empty
+                if (!kwText) return;
                 const li = document.createElement('li');
                 li.textContent = kwText;
                 li.tabIndex = 0;
+                const ids = Array.isArray(figuresKWDict[kwText])
+                  ? figuresKWDict[kwText]
+                  : String(figuresKWDict[kwText] || '').split(' ').filter(Boolean);
+                // Hover preview: temporarily highlight matching markers
+                li.addEventListener('mouseover', () => {
+                    try { highlightKeywordMarkers(ids); } catch {}
+                });
+                li.addEventListener('mouseout', () => {
+                    try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
+                });
                 li.addEventListener('click', () => {
                     searchInput.value = kwText;
                     suggestionsList.innerHTML = '';
                     suggestionsList.style.display = 'none';
-                                        const ids = Array.isArray(figuresKWDict[kwText])
-                                            ? figuresKWDict[kwText]
-                                            : String(figuresKWDict[kwText] || '').split(' ').filter(Boolean);
-                                        highlightKeywordMarkers(ids);
+                    currentKeywordHighlightIds = ids;
+                    highlightKeywordMarkers(ids);
                 });
                 li.addEventListener('keydown', (ev) => {
                     if (ev.key === 'Enter') {
@@ -1604,14 +1622,16 @@ function renderKeywordSearch() {
                 suggestionsList.appendChild(li);
             });
 
-        // Show the dropdown now that we have items
-        suggestionsList.style.display = 'block';
+            suggestionsList.style.display = 'block';
+        }, 450); // ~0.5s debounce
     });
 
     // Hide suggestions when input loses focus (small delay keeps click working)
     searchInput.addEventListener('blur', () => {
         setTimeout(() => {
             suggestionsList.style.display = 'none';
+            // Restore persistent highlight when suggestions close
+            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
         }, 150);
     });
 

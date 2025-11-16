@@ -766,6 +766,7 @@
    :described-by <https://en.wikipedia.org/wiki/Nevalı_Çori#Sculpture_and_clay_figurines> ;
    :earliest-date -8400 ;
    :latest-date -8100 ;
+   :note "The human figures have been interpreted as dancers." ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.518433 38.605756) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_museum_Fragment_of_stone_vessel_Nevalı_Çori_-_Neolithic_age_4795.jpg> .
