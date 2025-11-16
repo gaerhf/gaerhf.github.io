@@ -1703,7 +1703,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Afgh02-02-02.jpg> .
 
 :dogu-female-abstract-figurine a :human-figure ;
-   rdfs:label "Dōgu Female Abstract Figurine" ;
+   rdfs:label "Dogū Female Abstract Figurine" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> ;
    :earliest-date -3000 ;
    :latest-date -2000 ;
@@ -1844,7 +1844,7 @@
    :earliest-date -2600 ;
    :latest-date -1900 ;
    :material-note "Copper" ;
-   :note "MFA restricts access to images so thumbnail coming from harrapa.com." ;
+   :note "Described by MFA as “Male spear thrower or dancer.” MFA restricts access to images so thumbnail coming from harrapa.com." ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (26.173611 68.323055) ;
    :thumbnail-image <https://www.harappa.com/sites/default/files/styles/galleryformatter_slide/public/chanhudaro-dancer-spear-thrower.jpg> ;
@@ -1872,7 +1872,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Керносовский_идол.png> .
 
 :jomon-female-figurine a :human-figure ;
-   rdfs:label "Jōmon Female Figurine" ;
+   rdfs:label "Jōmon Female Figurine (Dogū)" ;
    :described-by <https://en.wikipedia.org/wiki/Jōmon_Venus> ;
    :approximate-date -2500 ;
    :material-note "Ceramic" ;
@@ -2515,7 +2515,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum_-_51131523226.jpg> .
 
 :jomon-doju-statuette a :human-figure ;
-   rdfs:label "Jōmon dogū statuette" ;
+   rdfs:label "Jōmon Dogū Statuette" ;
    :described-by <https://en.wikipedia.org/wiki/Dogū#Shakōkidogū> ;
    :earliest-date -1000 ;
    :latest-date -400 ;
@@ -5146,7 +5146,7 @@
    :described-by <https://en.wikipedia.org/wiki/Takamatsuzuka_Tomb> ;
    :earliest-date 694 ;
    :latest-date 710 ;
-   :in-modern-country-note "Japen" ;
+   :in-modern-country-note "Japan" ;
    :representative-latlong-point (34.462222 135.806472) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Takamat1.jpg> .
 

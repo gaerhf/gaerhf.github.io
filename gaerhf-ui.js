@@ -1465,7 +1465,9 @@ window.addEventListener('hashchange', () => {
 
 function tokenizer(input) {
     const text = (input ?? '').toString().toLowerCase();
-    const wordRegex = /\w+/g;
+    // Unicode-aware word boundary regex: matches any Unicode letter/number sequences
+    // \p{L} = any Unicode letter, \p{N} = any Unicode number
+    const wordRegex = /[\p{L}\p{N}]+/gu;
     const tokens = text.match(wordRegex) || [];
     return tokens;
 }
