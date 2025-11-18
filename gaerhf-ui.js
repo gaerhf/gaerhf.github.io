@@ -621,10 +621,14 @@ function renderFiguresOnMap(figuresArray) {
         leafletMap.on('zoomend', function() {
             renderGallery() ;
             highlightGalleryFigure(currentFigureId)
+            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
+            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
             });
         leafletMap.on('moveend', function () {
             renderGallery() ;
             highlightGalleryFigure(currentFigureId)
+            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
+            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
             });
     }
 
@@ -696,7 +700,7 @@ function renderFiguresOnMap(figuresArray) {
         marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
         marker.on('click', () => { 
             highlightMapFigure(figureId);
-            highlightGalleryFigure(figureId) ;
+            highlightGalleryFigure(figureIds) ;
             showFigureDetails(figureId);
             clickContent = `<strong>${figure.label || figure.id}</strong>`;
             openAdaptivePopup(marker, clickContent);
@@ -737,7 +741,7 @@ function renderFiguresOnMap(figuresArray) {
     try {
         if (currentFigureId && leafletMarkers[currentFigureId]) {
             highlightMapFigure(currentFigureId) ;
-            highlightGalleryFigure(currentFigureId)
+            highlightGalleryFigure(currentFigureIds)
         }
     } catch (err) {
         // ignore
@@ -1391,6 +1395,32 @@ function highlightKeywordMarkers(ids) {
     });
 }
 
+function highlightKeywordGalleryImages(ids) {
+    // Normalize ids: dedupe, remove empties/nulls
+    const uniqueIds = Array.from(new Set((ids || []).filter(Boolean)));
+
+    // Clear existing keyword highlights from all gallery images
+    document.querySelectorAll('.gallery-image').forEach(img => {
+        try {
+            img.style.boxShadow = '';
+        } catch (e) {
+            // ignore and continue
+        }
+    });
+
+    // Apply new keyword highlights with green boxShadow
+    uniqueIds.forEach((figureId) => {
+        try {
+            const img = document.getElementById(`gi-${figureId}`);
+            if (img && figureId !== currentFigureId) {
+                img.style.boxShadow = '0px 0px 5px 5px rgba(15, 235, 19, 1)';
+            }
+        } catch (e) {
+            // ignore and continue
+        }
+    });
+}
+
 function startPlayback() {
     const playBtn = document.getElementById('play-btn');
     playBtn.textContent = '⏸️';
@@ -1569,6 +1599,7 @@ function renderKeywordSearch() {
             suggestionsList.innerHTML = '';
             // Restore persistent highlight when regenerating list
             try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
+            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
 
             if (query.length === 0) {
                 suggestionsList.style.display = 'none';
@@ -1605,9 +1636,11 @@ function renderKeywordSearch() {
                 // Hover preview: temporarily highlight matching markers
                 li.addEventListener('mouseover', () => {
                     try { highlightKeywordMarkers(ids); } catch {}
+                    try { highlightKeywordGalleryImages(ids); } catch {}
                 });
                 li.addEventListener('mouseout', () => {
                     try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
+                    try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
                 });
                 li.addEventListener('click', () => {
                     searchInput.value = kwText;
@@ -1615,6 +1648,7 @@ function renderKeywordSearch() {
                     suggestionsList.style.display = 'none';
                     currentKeywordHighlightIds = ids;
                     highlightKeywordMarkers(ids);
+                    highlightKeywordGalleryImages(ids);
                 });
                 li.addEventListener('keydown', (ev) => {
                     if (ev.key === 'Enter') {
@@ -1634,6 +1668,7 @@ function renderKeywordSearch() {
             suggestionsList.style.display = 'none';
             // Restore persistent highlight when suggestions close
             try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
+            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
         }, 150);
     });
 
@@ -1683,6 +1718,7 @@ function renderGallery() {
                 galleryImg.addEventListener('click', () => {
                     highlightMapFigure(figureId) ;
                     highlightGalleryFigure(figureId) ;
+                    try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
                     leafletMarkers[figureId].closePopup();
                     showFigureDetails(figureId);
                 });
@@ -1690,6 +1726,8 @@ function renderGallery() {
                 galleryDiv.appendChild(galleryImg) ;
             } ) ;
 
+            // Apply keyword highlights to gallery images
+            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
 
     }   
 
