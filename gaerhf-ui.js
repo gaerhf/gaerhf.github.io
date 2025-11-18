@@ -1610,6 +1610,20 @@ function renderKeywordSearch() {
     // Start hidden
     suggestionsList.style.display = 'none';
 
+    // Handle Enter key to clear highlights when input is empty
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const query = searchInput.value.trim();
+            if (query.length === 0) {
+                // Clear keyword highlights
+                currentKeywordHighlightIds = [];
+                try { highlightKeywordMarkers([]); } catch {}
+                try { highlightKeywordGalleryImages([]); } catch {}
+                suggestionsList.style.display = 'none';
+            }
+        }
+    });
+
     searchInput.addEventListener('input', () => {
         // Debounce to only search after user pauses typing
         if (searchDebounceTimer) clearTimeout(searchDebounceTimer);
