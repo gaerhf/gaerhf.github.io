@@ -700,7 +700,7 @@ function renderFiguresOnMap(figuresArray) {
         marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
         marker.on('click', () => { 
             highlightMapFigure(figureId);
-            highlightGalleryFigure(figureIds) ;
+            highlightGalleryFigure(figureId) ;
             showFigureDetails(figureId);
             clickContent = `<strong>${figure.label || figure.id}</strong>`;
             openAdaptivePopup(marker, clickContent);
@@ -1663,7 +1663,7 @@ function renderKeywordSearch() {
     });
 
 
-    
+
     // Hide suggestions when input loses focus (small delay keeps click working)
     searchInput.addEventListener('blur', () => {
         setTimeout(() => {
