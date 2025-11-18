@@ -1036,15 +1036,18 @@ document.addEventListener('keydown', (event) => {
       // On map tab, filter to only visible keyword figures
       if (currentTab === 'figure-map') {
         const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-        if (!visibleFigures || visibleFigures.length === 0) return;
-        const visibleSet = new Set(visibleFigures);
-        navigationSet = keywordSet.filter(id => visibleSet.has(id));
+        if (visibleFigures && visibleFigures.length > 0) {
+          const visibleSet = new Set(visibleFigures);
+          navigationSet = keywordSet.filter(id => visibleSet.has(id));
+        } else {
+          navigationSet = keywordSet; // fallback to all keyword highlights if no visible figures
+        }
       } else {
         // On other tabs (list, timeline), use all keyword figures
         navigationSet = keywordSet;
       }
     } else {
-      // No keyword highlights: use visible figures (map tab only makes sense here)
+      // No keyword highlights: use visible figures
       const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
       if (!visibleFigures || visibleFigures.length === 0) return;
       navigationSet = sortFigures(visibleFigures, 'date');
