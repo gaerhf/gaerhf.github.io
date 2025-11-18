@@ -741,7 +741,7 @@ function renderFiguresOnMap(figuresArray) {
     try {
         if (currentFigureId && leafletMarkers[currentFigureId]) {
             highlightMapFigure(currentFigureId) ;
-            highlightGalleryFigure(currentFigureIds)
+            highlightGalleryFigure(currentFigureId)
         }
     } catch (err) {
         // ignore
@@ -1026,34 +1026,50 @@ document.addEventListener('keydown', (event) => {
     // Prevent default scrolling behavior
     event.preventDefault();
     
-    // Get visible markers on the map
-    const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-    if (!visibleFigures || visibleFigures.length === 0) return;
+    // Decide navigation set: keyword highlights if present, otherwise visible figures
+    let navigationSet = [];
+    
+    if (currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0) {
+      // Navigate through keyword-highlighted figures
+      let keywordSet = sortFigures(currentKeywordHighlightIds, 'date');
+      
+      // On map tab, filter to only visible keyword figures
+      if (currentTab === 'figure-map') {
+        const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+        if (!visibleFigures || visibleFigures.length === 0) return;
+        const visibleSet = new Set(visibleFigures);
+        navigationSet = keywordSet.filter(id => visibleSet.has(id));
+      } else {
+        // On other tabs (list, timeline), use all keyword figures
+        navigationSet = keywordSet;
+      }
+    } else {
+      // No keyword highlights: use visible figures (map tab only makes sense here)
+      const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+      if (!visibleFigures || visibleFigures.length === 0) return;
+      navigationSet = sortFigures(visibleFigures, 'date');
+    }
 
-    // Sort them by date for consistent navigation
-    const sortedVisibleFigures = sortFigures(visibleFigures, 'date');
+    if (!navigationSet || navigationSet.length === 0) return;
 
     let targetIndex = 0;
 
-    // Check if currentFigureId is in the visible set (test via gallery element)
-    const isCurrentVisible = document.getElementById(`gi-${currentFigureId}`);
+    // Check if currentFigureId is in the navigation set
+    const idx = navigationSet.indexOf(currentFigureId);
     
-    if (isCurrentVisible && currentFigureId) {
-      // Current figure is visible, move to next/previous
-      const idx = sortedVisibleFigures.indexOf(currentFigureId);
-      if (idx !== -1) {
-        if (event.key === 'ArrowLeft') {
-          targetIndex = idx > 0 ? idx - 1 : sortedVisibleFigures.length - 1;
-        } else { // ArrowRight
-          targetIndex = idx < sortedVisibleFigures.length - 1 ? idx + 1 : 0;
-        }
+    if (idx !== -1) {
+      // Current figure is in the set, move to next/previous
+      if (event.key === 'ArrowLeft') {
+        targetIndex = idx > 0 ? idx - 1 : navigationSet.length - 1;
+      } else { // ArrowRight or Tab
+        targetIndex = idx < navigationSet.length - 1 ? idx + 1 : 0;
       }
     } else {
-      // Current figure not visible, go to first visible figure
+      // Current figure not in set, go to first
       targetIndex = 0;
     }
 
-    const targetFigureId = sortedVisibleFigures[targetIndex];
+    const targetFigureId = navigationSet[targetIndex];
 
     showFigureDetails(targetFigureId);
     highlightTimelineFigure(targetFigureId);
