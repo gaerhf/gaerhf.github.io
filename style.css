@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    margin: 10px 0 0 0;
+    margin: 0;
     background-color: #f4f4f4;
     color: #333;
     min-height: 100vh; /* Ensure the body is at least the height of the viewport */
@@ -10,6 +10,7 @@ body {
 :root {
     /* Centralize header height so timescale can reference it in CSS without JS */
     --header-height: 33vh;
+    --actual-header-height: auto; /* Dynamic based on content */
 }
 
 #figure-list {
@@ -63,17 +64,30 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1100; /* keep header on top of everything including fixed map */
+    z-index: 1100;
     background-color: #f0f0f0;
-    /* padding: 8px 0 4px 0; */
-    height: var(--header-height);
-    min-height: 5em;
-    overflow: hidden; /* default: keep layout tidy */
+    padding: 4px 0 2px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: fit-content;
 }
 
-/* When hovering the detail image, allow it to overflow the header so the full image shows */
-#header-container:has(#detail-image img:hover) {
+#detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 4px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1099;
+    overflow: hidden;
+    height: 33vh;
+}
+
+#detail-container:has(#detail-image img:hover) {
     overflow: visible;
+    z-index: 10001;
 }
 
 #header-bottom {
@@ -91,17 +105,17 @@ body {
     align-items: flex-start;
     width: 70%;
     background-color: #eee;
-    padding: 6px 12px;
+    padding: 4px 12px;
     position: relative;
-    min-height: 60px;
+    min-height: 50px;
     gap: 12px;
 }
 
 #detail-label {
     text-align: center;
-    margin-left: 4em;
-    font-size: 1.2em;
-    line-height: 1.3;
+    margin: 0 0 4px 0;
+    font-size: 1.1em;
+    line-height: 1.2;
 }
 
 #detail-info {
@@ -188,9 +202,9 @@ body {
     height: 44px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-    z-index: 1099;
+    z-index: 1098;
     position: sticky;
-    top: var(--header-height);
+    top: 0;
     overflow: hidden;
 }
 
