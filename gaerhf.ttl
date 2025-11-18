@@ -587,6 +587,16 @@
    :representative-latlong-point (37.814417 40.983894) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_vessel_with_symbols_and_human_figure._Körtik_Tepe,_10,400-9250_BCE,_Diyarbakır_Archaeology_Museum.jpg> .
 
+:figure-goose a :human-figure ;
+   rdfs:label "Figurine of Female with Bird" ;
+   :described-by <https://www.sciencenews.org/article/figurine-goose-woman-storytelling-shift> ,
+      <https://www.pnas.org/doi/abs/10.1073/pnas.2517509122> ;
+   :approximate-date -10000 ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "Israel" ;
+   :representative-latlong-point (32.779709 35.667810) ;
+   :thumbnail-image <https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/11/111725_BB_figurine_inlinedesktop.jpg?w=680&ssl=1> .
+
 :lapa-do-santo-petroglyph a :human-figure ;
    rdfs:label "Lapa do Santo Petroglyph" ;
    :described-by <http://ahalenia.blogspot.com/2012/04/oldest-known-rock-art-in-americas.html> ,
@@ -5018,15 +5028,6 @@
    :note "Dispersed on art market after discovery. Said to be from Anyang." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anyang_funerary_bed,_Museum_of_Fine_Arts,_Boston,_1.jpg> .
 
-:sutton-hoo-helmet a :human-figure ;
-   rdfs:label "Sutton Hoo Helmet" ;
-   :described-by <https://en.wikipedia.org/wiki/Sutton_Hoo_helmet> ;
-   :earliest-date 600 ;
-   :latest-date 700 ;
-   :in-modern-country-note "England" ;
-   :representative-latlong-point (52.089167 1.338056) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sutton_Hoo_helmet_2016.png> .
-
 :el-peru-waka-burial-39-funerary-ritual-scene a :group-of-human-figures ;
    rdfs:label "El Perú-Waka Burial 39 Funerary Ritual Scence" ;
    :described-by <https://unframed.lacma.org/2017/09/21/archaeology-el-%c3%ba-waka%e2%80%99-maya-ritual-resurrection-scene-broader-perspective> ,
@@ -5038,6 +5039,15 @@
    :in-modern-country-note "Guatemala" ;
    :representative-latlong-point (17.2783 -90.3806) ;
    :thumbnail-image <https://unframed.lacma.org/sites/default/files/attachments/AncientBodies_Grouping1.png> .
+
+:sutton-hoo-helmet a :human-figure ;
+   rdfs:label "Sutton Hoo Helmet" ;
+   :described-by <https://en.wikipedia.org/wiki/Sutton_Hoo_helmet> ;
+   :earliest-date 600 ;
+   :latest-date 700 ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (52.089167 1.338056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sutton_Hoo_helmet_2016.png> .
 
 # 600 https://en.wikipedia.org/wiki/Mahlac_Pictograph_Cave (see PDF report)
 
@@ -5075,6 +5085,15 @@
    :art-historical-culture-or-tradition :pictish-art ;
    :representative-latlong-point (56.689167 -2.781389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pictish_Stone_at_Aberlemno_Church_Yard_-_Battle_Scene_Detail.jpg> .
+
+:palm-sunday-qocho a :group-of-human-figures ;
+   rdfs:label "Palm Sunday Mural from Qocho" ;
+   :described-by <https://en.wikipedia.org/wiki/Murals_from_the_Christian_temple_at_Qocho> ;
+   :earliest-date 600 ;
+   :latest-date 900 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (42.852778 89.529167) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nestorian_Temple_-_Palm_Sunday.jpg> .
 
 :nazca-tunic-panel-three-figures a :group-of-human-figures ;
    rdfs:label "Nazca Culture Tunic Panel with Three Figures" ;
