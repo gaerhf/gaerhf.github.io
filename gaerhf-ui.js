@@ -1662,6 +1662,8 @@ function renderKeywordSearch() {
         }, 450); // ~0.5s debounce
     });
 
+
+    
     // Hide suggestions when input loses focus (small delay keeps click working)
     searchInput.addEventListener('blur', () => {
         setTimeout(() => {
