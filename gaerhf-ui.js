@@ -1605,6 +1605,7 @@ function renderKeywordSearch() {
 
     const searchInput = document.getElementById('search-input');
     const suggestionsList = document.getElementById('suggestions-list');
+    const zoomBtn = document.getElementById('zoom-keyword-btn');
     let searchDebounceTimer = null; // debounce timer for typeahead
 
     // Start hidden
@@ -1620,6 +1621,7 @@ function renderKeywordSearch() {
                 try { highlightKeywordMarkers([]); } catch {}
                 try { highlightKeywordGalleryImages([]); } catch {}
                 suggestionsList.style.display = 'none';
+                updateZoomKeywordButtonVisibility();
             }
         }
     });
@@ -1682,6 +1684,7 @@ function renderKeywordSearch() {
                     currentKeywordHighlightIds = ids;
                     highlightKeywordMarkers(ids);
                     highlightKeywordGalleryImages(ids);
+                    updateZoomKeywordButtonVisibility();
                 });
                 li.addEventListener('keydown', (ev) => {
                     if (ev.key === 'Enter') {
@@ -1704,6 +1707,7 @@ function renderKeywordSearch() {
             // Restore persistent highlight when suggestions close
             try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
+            updateZoomKeywordButtonVisibility();
         }, 150);
     });
 
@@ -1712,8 +1716,48 @@ function renderKeywordSearch() {
         if (searchInput.value.trim().length > 0 && suggestionsList.children.length > 0) {
             suggestionsList.style.display = 'block';
         }
+        updateZoomKeywordButtonVisibility();
     });
 
+    // Zoom button click handler
+    if (zoomBtn) {
+        zoomBtn.addEventListener('click', () => {
+            zoomToKeywordHighlightedFigures();
+        });
+    }
+
+    // Initial visibility
+    updateZoomKeywordButtonVisibility();
+
+
+// Helper: update visibility of zoom button
+function updateZoomKeywordButtonVisibility() {
+    try {
+        const zoomBtn = document.getElementById('zoom-keyword-btn');
+        if (!zoomBtn) return;
+        const shouldShow = currentTab === 'figure-map' && currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0;
+        zoomBtn.style.display = shouldShow ? 'inline-block' : 'none';
+    } catch (e) { /* ignore */ }
+}
+
+// Helper: zoom map to bounds of highlighted keyword figures
+function zoomToKeywordHighlightedFigures() {
+    try {
+        if (!leafletMap) return;
+        const ids = (currentKeywordHighlightIds || []).filter(id => leafletMarkers[id]);
+        if (!ids.length) return;
+        const latLngs = ids.map(id => leafletMarkers[id].getLatLng()).filter(Boolean);
+        if (!latLngs.length) return;
+        const bounds = L.latLngBounds(latLngs);
+        if (!bounds.isValid()) return;
+        if (latLngs.length === 1) {
+            // Single marker: choose a zoom level that gives some context
+            leafletMap.setView(latLngs[0], Math.max(leafletMap.getZoom(), 6));
+        } else {
+            leafletMap.fitBounds(bounds, { padding: [40, 40] });
+        }
+    } catch (e) { /* ignore */ }
+}
 }
 
 function renderGallery() {
