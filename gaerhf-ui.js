@@ -1129,6 +1129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Open popup for current figure if present
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
+                        leafletMap.setView(leafletMarkers[currentFigureId].getLatLng(), 3)
                         leafletMarkers[currentFigureId].openPopup();
                         highlightMapFigure(currentFigureId) ;
                         highlightGalleryFigure(currentFigureId)

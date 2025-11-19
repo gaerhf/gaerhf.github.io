@@ -2323,6 +2323,7 @@
       <https://egypt-museum.com/statue-of-akhenaten-and-nefertiti/> ;
    :earliest-date -1352 ;
    :latest-date -1335 ;
+   :gender-note "Female" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (27.661667 30.905556) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Egypt_Painted_Statue_(28314649872).jpg> .
