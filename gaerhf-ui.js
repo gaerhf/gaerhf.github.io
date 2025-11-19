@@ -1336,6 +1336,7 @@ function highlightMapFigure(figureId) {
             if (inner) {
                 inner.style.border = '1.5px solid #222';
                 inner.style.borderRadius = '50%';
+                inner.style.transform = 'scale(1)';
             }
         }
     });
@@ -1346,11 +1347,12 @@ function highlightMapFigure(figureId) {
             const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
             if (innerDiv) {
                 innerDiv.style.borderRadius = '50%';
-                innerDiv.style.border = '3px solid #0072B2';
+                innerDiv.style.border = '5px solid #CC79A7';
+                innerDiv.style.transform = 'scale(1.8)';
             }
         }
 
-        leafletMarkers[figureId].setZIndexOffset(1000);
+        leafletMarkers[figureId].setZIndexOffset(2000);
         
         // Center map on this marker only if Option/Alt key is held
         if (isOptionKeyDown && leafletMap && leafletMarkers[figureId]) {
@@ -1367,7 +1369,7 @@ function highlightGalleryFigure(figureId) {
     // Add red border to the selected figure's gallery image
     const selectedImg = document.getElementById(`gi-${figureId}`);
     if (selectedImg) {
-        selectedImg.style.border = '3px solid #0072B2';
+        selectedImg.style.border = '6px solid #CC79A7';
         // Scroll to make the highlighted image visible
         selectedImg.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
