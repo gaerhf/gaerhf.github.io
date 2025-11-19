@@ -3638,7 +3638,7 @@
    :latest-date 200 ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (33.093611 44.580556) ;
-   :thumbnail-image <https://images.metmuseum.org/CRDImages/an/web-additional/DP-15732-009.jpg> .
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/322114/1825368/main-image> .
 
 # :tolita-tumaco-seated-elder a :human-figure ;
 #    :described-by <https://www.metmuseum.org/art/collection/search/314299> ;
@@ -3912,6 +3912,7 @@
    :described-by <https://en.wikipedia.org/wiki/Orlat_plaques> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :material-note "Bone" ;
    :in-modern-country-note "Uzbekistan" ;
    :representative-latlong-point (39.654722 66.975833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Orlat_plaques_(vertical_layout).jpg> .
@@ -4439,6 +4440,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/312882> ;
    :earliest-date -150 ;
    :latest-date 100 ;
+   :material-note "Walrus ivory" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (63.362222 -170.267222) ;
    :note "Specific findspot not known." ;

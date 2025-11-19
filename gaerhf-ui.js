@@ -1346,7 +1346,7 @@ function highlightMapFigure(figureId) {
             const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
             if (innerDiv) {
                 innerDiv.style.borderRadius = '50%';
-                innerDiv.style.border = '3px solid #ee0c0cff';
+                innerDiv.style.border = '3px solid #0072B2';
             }
         }
 
@@ -1367,7 +1367,7 @@ function highlightGalleryFigure(figureId) {
     // Add red border to the selected figure's gallery image
     const selectedImg = document.getElementById(`gi-${figureId}`);
     if (selectedImg) {
-        selectedImg.style.border = '3px solid #ee0c0cff';
+        selectedImg.style.border = '3px solid #0072B2';
         // Scroll to make the highlighted image visible
         selectedImg.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
@@ -1403,7 +1403,7 @@ function highlightKeywordMarkers(ids) {
             const el = m.getElement && m.getElement();
             if (el) {
                 const inner = el.querySelector && el.querySelector('div');
-                if (inner) inner.style.boxShadow = '0px 0px 5px 5px rgba(15, 235, 19, 1)';
+                if (inner) inner.style.boxShadow = '0px 0px 6px 6px rgba(230, 159, 0, 1)';
             }
             if (figureId !== currentFigureId) {
                 m.setZIndexOffset(900);
@@ -1432,7 +1432,7 @@ function highlightKeywordGalleryImages(ids) {
         try {
             const img = document.getElementById(`gi-${figureId}`);
             if (img && figureId !== currentFigureId) {
-                img.style.boxShadow = '0px 0px 5px 5px rgba(15, 235, 19, 1)';
+                img.style.boxShadow = '0px 0px 6px 6px rgba(230, 159, 0, 1)';
             }
         } catch (e) {
             // ignore and continue
@@ -1958,8 +1958,8 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
     try {
         // Use the shared overlay helper so hovered and selected overlays share behaviour/style logic
         if (currentFigureId) {
-            // red: use hex for line, helper will compute translucent fill
-            showTimescaleOverlay(bar, currentFigureId, '#ee0c0c', 'timescale-selected', minN, maxN);
+            // accessible blue for selection (consistent with map/gallery)
+            showTimescaleOverlay(bar, currentFigureId, '#0072B2', 'timescale-selected', minN, maxN);
         }
     } catch (err) {
         console.warn('Could not render selected-figure overlay on timescale:', err);
