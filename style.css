@@ -138,6 +138,7 @@ body {
         0 8px 24px rgba(204, 121, 167, 0.32),          /* purple glow */
         0 0 0 3px rgba(204, 121, 167, 0.15);           /* subtle ring */
     width: auto;
+    max-height: 18em;
     border-radius: 6px;
     /* Subtle neutral + coordinated purple drop shadow */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.757),
@@ -203,12 +204,12 @@ body {
 
 #timescale-container {
     width: 100%;
-    height: 44px;
+    height: 42px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.06);
     z-index: 1098;
     position: sticky;
-    top: calc(60px + 33vh + 8px);
+    top: calc(60px + 33vh + 7px);
     overflow: hidden;
 }
 
@@ -516,7 +517,7 @@ body {
 #figure-map-container {
     width: 100%;
     position: fixed;
-    top: calc(var(--header-height) + 44px);
+    top: calc(60px + 33vh + 55px);
     bottom: 0;
     left: 0;
     right: 0;

@@ -3927,6 +3927,17 @@
    :representative-latlong-point (34.966667 69.3) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Indian_ivory_furniture_support_from_Begram,_1st_century_AD.jpg> .
 
+:isis-temple-200-naga a :human-figure ;
+   rdfs:label "Isis statue from Temple 200 at Naqa" ;
+   :described-by <https://naga-projekt.de/funde-befunde/statue-der-goettin-isis/> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :material-note "Faience" ;
+   :in-modern-country-note "Sudan" ;
+   :representative-latlong-point (16.269444 33.275) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aegyptisches_Museum_Berlin_InvNrKA_20080313_Goettin_Isis_aus_Naga.jpg> .
+
+
 :corleck-head a :human-figure ;
    rdfs:label "Corleck Head" ;
    :described-by <https://en.wikipedia.org/wiki/Corleck_Head> ;
