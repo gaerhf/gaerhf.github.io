@@ -299,7 +299,7 @@
       <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ,
       <https://smarthistory.org/earliest-hunting-scene-in-sulawesi-indonesia/> ;
    :approximate-date -46000 ;
-   :note "Approximate location. There are human figures to the left of the large bovine animal." ;
+   :note "Approximate location. There are human figures to the left of the large bovine animal. From linked article abstract: “We show that a hunting scene from Leang Bulu’ Sipong 4, which was originally dated using the previous approach to a minimum of 43,900 thousand years ago (ka)3, has a minimum age of 50.2 ± 2.2 ka, and so is at least 4,040 years older than thought.”" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-4.796537 119.548710) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Maros_hunting_scene.png> .
