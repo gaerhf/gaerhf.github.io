@@ -287,7 +287,7 @@
    rdfs:label "Leang Karampuang Hunting Scene" ;
    :described-by <https://doi.org/10.1038/s41586-024-07541-7> ;
    :approximate-date -49000 ;
-   :note "See H1-H3 in image, which are taken to be anthropomorphic figures engaged with the oversized pig. Approximate location." ;
+   :note "See H1-H3 in image, which are taken to be anthropomorphic figures engaged with the oversized pig. Approximate location. From linked article abstract: “... we also assign a minimum age of 53.5 ± 2.3 ka to a newly described cave art scene at Leang Karampuang. Painted at least 51,200 years ago, this narrative composition, which depicts human-like figures interacting with a pig, is now the earliest known surviving example of representational art, and visual storytelling, in the world. Our findings show that figurative portrayals of anthropomorphic figures and animals have a deeper origin in the history of modern human (Homo sapiens) image-making than recognized to date, as does their representation in composed scenes.”" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-5.028238 119.758602) ;
    :thumbnail-image <https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41586-024-07541-7/MediaObjects/41586_2024_7541_Fig3_HTML.png?as=webp> .
