@@ -1960,8 +1960,8 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
     try {
         // Use the shared overlay helper so hovered and selected overlays share behaviour/style logic
         if (currentFigureId) {
-            // accessible blue for selection (consistent with map/gallery)
-            showTimescaleOverlay(bar, currentFigureId, '#0072B2', 'timescale-selected', minN, maxN);
+            // selection: coordinated purple to match current figure styling
+            showTimescaleOverlay(bar, currentFigureId, '#CC79A7', 'timescale-selected', minN, maxN);
         }
     } catch (err) {
         console.warn('Could not render selected-figure overlay on timescale:', err);

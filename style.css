@@ -132,12 +132,16 @@ body {
 
 #detail-image img {
     display: block;
-    max-width: 200px;
-    /* limit image height so it never extends past the header area (header = 33vh) */
-    max-height: calc(33vh - 5rem);
+    /* More visible, coordinated drop shadow (neutral + purple + soft ring) */
+    box-shadow: 
+        0 3px 12px rgba(0, 0, 0, 0.12),               /* neutral ambient */
+        0 8px 24px rgba(204, 121, 167, 0.32),          /* purple glow */
+        0 0 0 3px rgba(204, 121, 167, 0.15);           /* subtle ring */
     width: auto;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    /* Subtle neutral + coordinated purple drop shadow */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.757),
+                0 6px 16px rgba(204, 121, 167, 0.859);
     object-fit: contain;
     transition: max-width 0.2s ease-in-out, max-height 0.2s ease-in-out;
 }
