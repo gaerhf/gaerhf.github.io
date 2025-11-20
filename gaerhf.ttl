@@ -5372,8 +5372,10 @@
 
 :cross-legged-figure-bucket a :human-figure ;
    rdfs:label "Cross-legged Figure Bucket Ornament" ;
-   :described-by <https://en.wikipedia.org/wiki/Oseberg_Ship#Grave_goods> ;
+   :described-by <https://en.wikipedia.org/wiki/Oseberg_Ship#Grave_goods> ,
+   <https://no.wikipedia.org/wiki/Buddha-bøtta>;
    :approximate-date 830 ;
+   :note "Translated from the Norwegian Wikipedia page using Google Translate: “The “Buddha Bucket”, often more neutrally referred to as the “Celtic Bucket’, is a bucket from the Oseberg find with two small male figures that superficially resemble traditional representations of Buddha. The bucket was found aboard the “Oseberg Ship”, a Viking ship that was excavated from the Oseberg Mound near Tønsberg in 1904. The mound was a ship grave from the Viking Age where two unknown female bodies were placed in the ship along with many animals and very rich grave goods in the year 834. The craftsmanship on the bucket is different from the Oseberg style on much of the other grave goods, and it was probably made in Ireland in the 7th–8th centuries, like other magnificent buckets in the find.”" ;
    :in-modern-country-note "Norway" ;
    :representative-latlong-point (59.905 10.6844) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buckle_from_Oseberg_Vikingship_Buddha.JPG> .
