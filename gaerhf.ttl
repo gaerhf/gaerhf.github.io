@@ -1557,6 +1557,18 @@
    :art-historical-culture-or-tradition :sumerian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_vase_(background_retouched).jpg> .
 
+:niuheliang-figure-jade-eyes a :human-figure ;
+   rdfs:label "Niuheliang Temple figure with Jade Eyes" ;
+   :described-by <https://www.ancient-origins.net/ancient-places-asia/relics-niuheliang-goddess-temple-most-mysterious-site-ancient-hongshan-002594> ,
+      <https://en.wikipedia.org/wiki/Niuheliang> ;
+   :earliest-date -3500 ;
+   :latest-date -3000 ;
+   :materia-note "Jade, ceramic" ;
+   :note "I have not found a good, discrete page for this object The *Ancient Origins* has many adds." ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (41.322015 119.51319) ;
+   :thumbnail-image <https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Painted-clay-Niuheliang.jpg?itok=LGS_MNqe> .
+
 :statue-min-koptos a :human-figure ;
    rdfs:label "Statue of Min from Koptos" ;
    :described-by <https://www.ashmolean.org/collections-online#/item/ash-object-487742> ;
@@ -1945,6 +1957,7 @@
    :earliest-date -2300 ;
    :latest-date -1750 ;
    :material-note "Bronze" ;
+   :note "From SmartHistory: “This small bronze statuette (only 4 inches in height), depicts a nude young woman, with a coiled hairstyle and bangles adorning her arms. The figure stands with her feet apart and her weight distributed unevenly (often referred to by art historians as contrapposto). She props one arm at her waist and her other arm hangs by her side. The title of the sculpture, *Dancing Girl*, comes from the archaeologist who unearthed it in 1926 who thought the ancient figure recalled images of dancing nautch girls (female dancers who often performed at royal courts and in salons, especially in colonial India).‘" ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (27.329167 68.138889) ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
@@ -2537,7 +2550,7 @@
    :in-modern-country-note "China" ;
    :representative-latlong-point (30.682183 104.013102) ;
    :art-historical-culture-or-tradition :jinsha-culture ;
-   :wikimedia-commons-image-page <https://collectionapi.metmuseum.org/api/collection/v1/iiif/313256/2104028/main-image> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum_-_51131523226.jpg> .
 
 :jomon-doju-statuette a :human-figure ;
    rdfs:label "Jōmon Dogū Statuette" ;
@@ -3956,6 +3969,7 @@
    :earliest-date 1 ;
    :latest-date 100 ;
    :material-note "Faience" ;
+   :note "Translated from German text on the Naqa Projekt website: “Numerous iconographic parallels place this Isis statue within the context of Ptolemaic-Roman sculpture, in which Egyptian formal principles are clothed in Hellenistic garb. While it might initially appear that this statue could be an import from Roman Egypt, the stylistic rendering of the figure leaves no doubt that it is the work of Meroitic artists. A comparison with late Ptolemaic and Roman female figures reveals that the statue's thick arms, short legs, and powerfully developed thighs and hips represent the ideal of female beauty that also characterizes the female figures on the temple reliefs and stelae of Naga. Thus, aspects of Egyptian, Hellenistic-Roman, and Meroitic art combine in this statue to form an artistically autonomous work.”" ;
    :in-modern-country-note "Sudan" ;
    :representative-latlong-point (16.269444 33.275) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aegyptisches_Museum_Berlin_InvNrKA_20080313_Goettin_Isis_aus_Naga.jpg> .
@@ -4912,7 +4926,7 @@
    :art-historical-culture-or-tradition :mayan-culture ;
    :representative-latlong-point (16.75 -89.15) ;
    :note "The mapped location is only a general indication of possilbe origin. See discussion on Met Museum page." ;
-   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-24340-001.jpg> .
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/313256/2104028/main-image> .
 
 :huqoq-mosaics a :group-of-human-figures ;
    rdfs:label "Huqoq Mosaics" ;
@@ -5174,7 +5188,7 @@
    :earliest-date 650 ;
    :latest-date 800 ;
    :material-note "Ceramic" ;
-   :in-modern-country-note "Mexixo" ;
+   :in-modern-country-note "Mexico" ;
    :representative-latlong-point (20.208333 -90.485833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jaina_Island_type_figure,_Art_Institute.jpg> .
 
@@ -5635,6 +5649,7 @@
    <https://eastern.usu.edu/prehistoric-museum/exhibits/archaeology/pilling-figurines> ,
    <https://traffickingculture.org/encyclopedia/case-studies/pilling-collection-of-fremont-culture-figurines/> ;
    :approximate-date 1050 ;
+   :note "From Wikipedia: “The Pilling Figurines are all around 4 to 6 inches (roughly 10 to 15 cm) in height. They are constructed of unbaked clay and are decorated with applied clay ornaments. The figurines also show evidence of red, buff, and black paint. These markings and colors have offered insight and revealed how ancient Fremont people dressed and adorned themselves. Each one is distinctive in both appearance and gender. The female figurines have breasts, wider hips, and wear aprons while the male figurines wear loincloths (except for one which has a kilt of sorts). They appear to have been made in matching male and female pairs leaving an unmatched female figurine. They are considered to be among the most important pieces of ancient portable art that have been discovered in the Southwest.[3] All eleven figurines, can now be viewed at the USU Eastern Prehistoric Museum.”" ;
    :material-note "Unfired Clay" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.3075 -110.057222) ;
