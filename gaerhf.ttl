@@ -5731,6 +5731,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 1181 ;
    :latest-date 1218 ;
    :material-note "Sandstone" ;
+   :note "From the English version of the musée Guimet website: “The king is represented at a mature age, his face slightly chubby in a posture of humble meditation with lowered eyes. His lips showcase the serene smile famously associated with Angkor. This sculpture is in the Bayon style, (late 12th century - early 13th century) a departure from the somewhat impersonal ideal standard of youth and beauty previously in favour. Bayon sculptors adopted a more naturalistic and human-like approach, modelling more sensitive faces sometimes inspired by the King and his contemporaries. These works are very expressive, even while showing great restraint, and reflect the serenity of the soul and of the royal grandeur through devotion.”" ;
    :in-modern-country-note "Cambodia" ;
    :art-historical-culture-or-tradition :khmer-empire ;
    :representative-latlong-point (13.4125 103.866667) ; # Angkhor as contemporary capital
