@@ -4338,6 +4338,7 @@
    :earliest-date 500 ;
    :latest-date 600 ;
    :material-note "Bronze" ;
+   :note "From Wikipedia: “The island is perhaps best known for a major archaeological area. The old trading town on Helgö began to emerge around the year 200 AD, 500 years before Birka at Björkö. The first archaeological dig in 1954 uncovered the remains of the early settlement, including a workshop area which attracted international interest. The most notable finds included a small Buddha statuette from North India and a christening scoop from Egypt, both dating from the 6th century. The Indian Buddha statuette, the Irish crozier and the Egyptian Coptic scoop which were found on Helgö, are presently on display in the Swedish History Museum in Stockholm.”" ;
    :in-modern-country-note "Sweden" ;
    :representative-latlong-point (59.278511 17.680435) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Helgö_Buddha_18194.jpg> .
@@ -5214,6 +5215,7 @@
    :earliest-date 713 ;
    :latest-date 803 ;
    :material-note "Sandstone" ;
+   :note "From Wikipedia: “The Leshan Giant Buddha (Chinese: 樂山大佛) is a 71-meter (233 ft) tall stone statue, built between 713 and 803 (during the Tang dynasty). It is carved out of a cliff face of Cretaceous red bed sandstones that lies at the confluence of the Min River and Dadu River in the southern part of Sichuan Province in China, near the city of Leshan.[1] The stone sculpture faces Mount Emei, with the rivers flowing below its feet.”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (29.544722 103.773333) ; # Leshan, China
    :art-historical-culture-or-tradition :tang-dynasty ;
@@ -5570,6 +5572,7 @@
       <https://en.wikipedia.org/wiki/Hoa_Hakananai%27a> ;
    :earliest-date 1000 ;
    :latest-date 1200 ;
+   :note "From British Museum website: “Ancestor figure 'moai', called Hoa Hakananaiʻa (lost, hidden or stolen friend) made of basalt. The back of the figure features intricate petroglyphs associated with the bird man religion (tangata manu): birds, vulvas, dance paddles in the form of stylised human figures, a ring and a girdle design.”" ;
    :material-note "Basalt stone" ;
    :in-modern-country-note "Chile" ;
    :representative-latlong-point (-27.12 -109.35) ;
