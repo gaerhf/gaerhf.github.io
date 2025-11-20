@@ -3974,7 +3974,6 @@
    :representative-latlong-point (16.269444 33.275) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aegyptisches_Museum_Berlin_InvNrKA_20080313_Goettin_Isis_aus_Naga.jpg> .
 
-
 :corleck-head a :human-figure ;
    rdfs:label "Corleck Head" ;
    :described-by <https://en.wikipedia.org/wiki/Corleck_Head> ;
@@ -4332,6 +4331,11 @@
    :described-by <https://en.wikipedia.org/wiki/Gupta_art#Sarnath_school> ;
    :date 448 ;
    :in-modern-country-note "India" ;
+   :note """A translation of the inscription is availabel on the Wikemedia Commons page: “Om! Reverence to the Buddhas! This image of the Divine One, who thoroughly
+attained perfect knowledge, (and) who was never refuted in respect of his tenets, has been
+installed by the Bhikshu Buddhamitra, (in) the year 100 (and) 20 (and) 9; in the reign
+of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day 10
+(and) 8, — with the object of averting all Unhappiness.”""" ;
    :representative-latlong-point (25.435833 81.846389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mankuwar_Buddha_with_background.jpg> .
 
