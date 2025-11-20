@@ -312,6 +312,7 @@
    :earliest-date -40000 ;
    :latest-date -35000 ;
    :in-modern-country-note "Germany" ;
+   :note "Translated from the Museum Blaubeuren site: “The statuette is 40,000 years old and was carved from a mammoth tusk. It broke apart over time in the ground. Six fragments were pieced together to form an almost complete figure. Instead of a head, there is a loop in the neck area. The female figure was once worn as an amulet or piece of jewelry.”" ;
    :material-note "Mammoth ivory" ;
    :art-historical-culture-or-tradition :aurignacian ;
    :representative-latlong-point (48.379167 9.755556) ;
@@ -571,6 +572,7 @@
    :earliest-date -11000 ;
    :latest-date -9000 ;
    :material-note "Wood" ;
+   :note "From Wikipedia: “The sculpture is carved from larch. As identified from the annual rings, the tree was at least 159 years old when felled. Stone tools were used for carving the markings. The top portion is a head with a face with eyes, nose, and mouth. The body is flat and rectangular. Geometrical motifs decorate its surface, including zigzag lines and depictions of human faces and hands. Horizontal lines at the level of the thorax may represent ribs, and lines broken in chevrons cover the rest of what often is described as the body; however, along with the face at the top, several faces are visible at various points along the sculpture”" ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (57.3809 60.1407) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Большой_шигирский_идол.jpg> .
@@ -648,6 +650,15 @@
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (38.001689 12.321625) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Grotta_de_Levanzo.jpg> .
+
+:monolith-human-arms a :human-figure ;
+   rdfs:label "Monolith with Human Arms from Göbekli Tepe" ;
+   :described-by <https://en.wikipedia.org/wiki/Göbekli_Tepe#Pillars> ;
+   :earliest-date -9500 ;
+   :latest-date -8000 ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.223611 38.921667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Göbeklitepe_Building_D_5311.jpg> .
 
 :gobekli-tepe-figure-A2 a :human-figure ;
    rdfs:label "Göbekli Tepe Male Figure A2" ;
@@ -1432,7 +1443,7 @@
    :described-by <https://en.wikipedia.org/wiki/Twyfelfontein> ;
    :earliest-date -4000 ;
    :latest-date -1 ;
-   :note "The site has mostly petroglyphs. The paintings seem to have more clear chronology? All to be confirmed" ;
+   :note "From Wikipedia: “Twyfelfontein valley has been inhabited by Stone-age hunter-gatherers of the Wilton stone age culture group since approximately 6,000 years ago. They made most of the engravings and probably all the paintings.”" ;
    :in-modern-country-note "Namibia" ;
    :representative-latlong-point (-20.590556 14.372222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_painting_in_Twyfelfontein3.jpg> .
@@ -1458,7 +1469,7 @@
       <https://sketchfab.com/3d-models/orkney-venus-links-of-noltland-dadacf3f95ad41a4ae0278a06ab12499>;
    :earliest-date -3800 ;
    :latest-date -2500 ;
-   :note "Wikimedia Commons image is dark. See other sites." ;
+   :note "Wikimedia Commons image is dark. See other sites. From Historic Environment Scotland site: “Known both as the ‘Orkney Venus’ and the ‘Westray Wifie’, this Neolithic figurine is just 4cm tall. Made of stone, its rounded head has two eyeholes, a brow line and markings to suggest a nose and mouth. The long, lozenge-shaped torso looks a little like the exaggerated form of a woman, with wide hips.  The figurine was found in 2009 during a Historic Scotland dig at Links of Noltland. It’s the earliest depiction of a human form found in Scotland – and the earliest portrayal of a face found in the United Kingdom. The figurine is on loan from the Crown and is currently on display at Westray Heritage Centre.”" ;
    :material-note "Sandstone" ;
    :in-modern-country-note "Scotland" ;
    :art-historical-culture-or-tradition :neolithic-europe ;
@@ -1481,7 +1492,7 @@
    :described-by <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> ;
    :earliest-date -3600 ;
    :latest-date -3500 ;
-   :note "The Wiki Commons page quotes a description of findspot." ;
+   :note "From the Wikimedia Commons page, itself quoting a fuller description: “Tomb 16 is a large tomb of the Naqada IC–IIA period into which a bricklined tomb of the Naqada IIIA2 period had later been inserted in what now appears to be an act of respectful renovation rather than usurpation (Hendrickx 2008: fig. 5). (...) In all probability, the two famous ceramic masks also originate from this tomb (Fig. 2). Some fragments were found in the tomb fill, although the majority were collected in surface and subsurface levels to the west and especially to the south, where the beard to the smaller mask was recovered in 2010. Other finds from the tomb and its fill include carnelian ring beads, two biconical gold beads, ivory comb fragments, rock crystal blades, three transverse arrowheads and one tanged arrowhead.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.097222 32.779444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> . 
@@ -3405,6 +3416,7 @@
    :described-by <https://en.wikipedia.org/wiki/Ai-Khanoum_plaque> ;
    :earliest-date -200 ;
    :latest-date -145 ;
+   :note "From Wikipedia: “The Ay-Khanoum plaque is an ancient Greco-Bactrian disk discovered at the archaeological site of Ay-Khanoum in Takhar Province, Afghanistan. This Hellenistic city served as a military and economic center for the rulers of the Greco-Bactrian Kingdom until its destruction c. 145 BC. Rediscovered in 1961, the ruins of the city were excavated by the French Archaeological Delegation in Afghanistan (DAFA) until an outbreak of conflict in Afghanistan during the late 1970s. Among the structures excavated by the archaeologists was a sanctuary called the 'Temple of Indented Niches', (French: “temple à niches indentées”; alternatively “temple à redans”, meaning 'Stepped Temple')[1] in which the disk was found. The disk is held in the collection of the National Museum of Afghanistan in Kabul.”" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (37.164722 69.408611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AiKhanoumPlateSharp.jpg> .
@@ -3414,6 +3426,7 @@
    :described-by <https://en.wikipedia.org/wiki/Entremont_(oppidum)#Sculpture> ;
    :earliest-date -200 ;
    :latest-date -123 ;
+   :note "From Wikipedia: “Excavations at Entremont in the 1940s produced a large collection of fragmentary pre-Roman sculpture, most of which is now in the Musée Granet in Aix-en-Provence. The largest group of fragments consists of the heads and torsos of several male figures, usually interpreted as heroized warriors, depicted in a seated position with their legs folded beneath them and one hand resting on the severed head of an enemy. Heads and other pieces of a smaller number of female figures are also preserved, as are fragments of horses. Blocks from the architectural setting in which the figures were displayed are decorated with reliefs of additional severed heads and skull-shaped recesses, as well as horsemen and other figures. The sculptures were all carved from a fine-grained local limestone, and some of the fragments preserve traces of the original paint.”" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (43.552222 5.439167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Entremont_severed_heads_1-03_(Musée_Granet,_Aix).jpg> .
@@ -3906,10 +3919,12 @@
 
 :bimaran-casket a :group-of-human-figures ;
    rdfs:label "Bimaran Casket" ;
-   :described-by <https://en.wikipedia.org/wiki/Bimaran_casket> ;
+   :described-by <https://en.wikipedia.org/wiki/Bimaran_casket> ,
+      <https://www.britishmuseum.org/collection/object/A_1900-0209-1> ;
    :earliest-date 1 ;
    :latest-date 100 ;
    :material-note "Gold" ;
+   :note "From British Museum: “The casket tapers slightly towards the rim and lacks a lid. The arcading round the side consists of eight pointed caitya-arches resting on pilasters. Each arch has a plain recessed face and the pilaster capitals consist of a plain fillet above a torus and a fillet. The pilaster shafts have each a recessed oblong panel with an outlined border curved at the top and the base mouldings repeat those of the capitals in a contrary sequence. The compartments form two groups (A and B) of three at opposite sides to each other, each group having an almost identical central Buddha flanked by closely similar, worshipping deities in profile, and the three are separated at both ends by a single similar compartment containing the same frontal worshipping figure.”" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.458544 70.349792) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BimaranCasket2.JPG> .
@@ -3920,6 +3935,7 @@
    :earliest-date 1 ;
    :latest-date 100 ;
    :material-note "Bone" ;
+   :note "From the Wikipedia page: “The Orlat plaques are a series of bone plaques that were discovered in the mid-1980s in Uzbekistan. They were found during excavations led by Galina Pugachenkova at the cemetery of Orlat, by the bank of the Saganak River (a tributary of the Zeravshan), immediately north of Samarkand. Pugachenkova published her finds in 1989. The left half is decorated with an elaborated battle scene, while on the other side is depicted a hunting scene." ;
    :in-modern-country-note "Uzbekistan" ;
    :representative-latlong-point (39.654722 66.975833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Orlat_plaques_(vertical_layout).jpg> .
@@ -5658,9 +5674,11 @@
 
 :lewis-chessmen a :group-of-human-figures ;
    rdfs:label "Lewis Chessmen" ;
-   :described-by <https://en.wikipedia.org/wiki/Lewis_chessmen> ;
+   :described-by <https://en.wikipedia.org/wiki/Lewis_chessmen> ,
+   <https://www.nms.ac.uk/discover-catalogue/the-story-of-the-lewis-chess-pieces> ;
    :earliest-date 1100 ;
    :latest-date 1200 ;
+   :note "From Wikipedia: “The Lewis chessmen (Scottish Gaelic: Fir-thàilisg Leòdhais [fiɾʲˈhaːlɪʃkʲ loː.ɪʃ]) or Uig chessmen, named after the island or the bay where they were found, are a group of distinctive 12th-century chess pieces, along with other game pieces, most of which are carved from walrus ivory. Discovered in 1831 on the Isle of Lewis in the Outer Hebrides of Scotland, they may constitute some of the few complete, surviving medieval chess sets, although it is not clear if a single complete period-accurate set can be assembled from the pieces.”" ;
    :material-note "Walrus ivory, Whales’ teeth" ;
    :in-modern-country-note "Scotland" ;
    :representative-latlong-point (58.185987 -7.021909) ;
