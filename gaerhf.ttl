@@ -2537,7 +2537,7 @@
    :in-modern-country-note "China" ;
    :representative-latlong-point (30.682183 104.013102) ;
    :art-historical-culture-or-tradition :jinsha-culture ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum_-_51131523226.jpg> .
+   :wikimedia-commons-image-page <https://collectionapi.metmuseum.org/api/collection/v1/iiif/313256/2104028/main-image> .
 
 :jomon-doju-statuette a :human-figure ;
    rdfs:label "Jōmon Dogū Statuette" ;
