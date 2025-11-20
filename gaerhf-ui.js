@@ -618,6 +618,34 @@ function renderFiguresOnMap(figuresArray) {
         try { L.Popup.prototype.options.autoPan = false; } catch (e) { /* ignore if Leaflet not loaded */ }
         // Explicitly raise popup pane z-index in JS in case CSS loads late or is overridden
         try { leafletMap.getPanes().popupPane.style.zIndex = '20000'; } catch (e) { /* ignore */ }
+        
+        // Add zoom-to-all-markers button
+        L.Control.ZoomToAll = L.Control.extend({
+            onAdd: function(map) {
+                const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+                container.innerHTML = '🌐';
+                container.style.backgroundColor = 'white';
+                container.style.width = '30px';
+                container.style.height = '30px';
+                container.style.lineHeight = '30px';
+                container.style.textAlign = 'center';
+                container.style.cursor = 'pointer';
+                container.style.fontSize = '18px';
+                container.title = 'Zoom to all markers';
+                container.onclick = function() {
+                    const allMarkers = Object.values(leafletMarkers);
+                    if (allMarkers.length === 0) return;
+                    const bounds = L.latLngBounds(allMarkers.map(m => m.getLatLng()));
+                    // keep padding 0. Any other value zooms too far out.
+                    map.fitBounds(bounds, { padding: [0, 0] });
+                };
+                return container;
+            }
+        });
+        L.control.zoomToAll = function(opts) {
+            return new L.Control.ZoomToAll(opts);
+        }
+        L.control.zoomToAll({ position: 'topleft' }).addTo(leafletMap);
         leafletMap.on('zoomend', function() {
             renderGallery() ;
             highlightGalleryFigure(currentFigureId)

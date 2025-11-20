@@ -13,6 +13,23 @@ body {
     --actual-header-height: auto; /* Dynamic based on content */
 }
 
+#figure-list-container {
+    width: 100%;
+    position: fixed;
+    top: calc(48px + 33vh + 55px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eaeaea;
+    display: none;
+    z-index: 500;
+    overflow-y: auto;
+}
+
+#figure-list-container.active {
+    display: block;
+}
+
 #figure-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -371,16 +388,27 @@ body {
 
 /* Timeline-specific styles */
 #figure-timeline-container {
-    position: relative;
-    margin-left: .5em;
-    margin-right: .5em;
+    width: 100%;
+    position: fixed;
+    top: calc(48px + 33vh + 55px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eaeaea;
+    display: none;
+    z-index: 500;
+    overflow-y: auto;
+}
+
+#figure-timeline-container.active {
+    display: block;
 }
 
 
 #figure-timeline {
     position: relative;
-    height: 500px;
-    overflow-y: auto;
+    height: auto;
+    min-height: 100%;
     padding: .5em;
 }
 

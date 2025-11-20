@@ -593,6 +593,7 @@
       <https://www.pnas.org/doi/abs/10.1073/pnas.2517509122> ;
    :approximate-date -10000 ;
    :material-note "Ceramic" ;
+   :note "From PNAS article summary: “This paper introduces a 12,000-year-old clay figurine from Southwest Asia that pushes back the emergence of several fundamental innovations in human symbolic expression. This object is both the earliest naturalistic representation of a woman in Southwest Asia and the earliest figurine to depict a human–animal interaction. Notably, the depicted interaction is not related to hunting but presents a mythological scene between a human and a bird that is consistent with an animistic belief system. Finally, the figurine attests to artistic innovations including and manipulating clay volume and light to create perspective, foreshadowing techniques that become popular in the Early Neolithic that follows.”" ;
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.779709 35.667810) ;
    :thumbnail-image <https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/11/111725_BB_figurine_inlinedesktop.jpg?w=680&ssl=1> .
@@ -755,6 +756,7 @@
    :earliest-date -8500 ;
    :latest-date -6500 ;
    :materia-note "Flint" ;
+   :note "From article abstract: “This article presents a unique assemblage of flint artefacts from the Middle Pre-Pottery Neolithic B (eighth millennium BC) site of Kharaysin in Jordan. Contextual, morphological, statistical and use-wear analyses of these artefacts suggest that they are not tools but rather human figurines. Their close association with burial contexts suggests that they were manufactured and discarded during mortuary rituals and remembrance ceremonies that included the extraction, manipulation and redeposition of human remains.”" ;
    :in-modern-country-note "Jordan" ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :representative-latlong-point (32.203889 36.008889) ;
@@ -816,6 +818,7 @@
    :earliest-date -8000 ;
    :latest-date -7000 ;
    :material-note "Rib bone, likely from an auroch." ;
+   :note "From article abstract: “New light is thrown on the social context of these changes by the discovery of a bone wand displaying two engraved human faces from the Early Neolithic site of Tell Qarassa in Syria, dating from the late ninth millennium BC.”" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.822300 41.461109) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -3229,12 +3232,15 @@
 
 :deposit-figurines-san-isidro a :group-of-human-figures ;
    rdfs:label "Deposit of Figurines from San Isidro" ;
-   :described-by <https://doi.org/10.15184/aqy.2025.37> ;
+   :described-by <https://doi.org/10.15184/aqy.2025.37> ,
+      <https://archaeology.org/news/2025/03/07/mysterious-2400-year-old-puppets-unearthed-in-el-salvador/> ,
+      <https://www.livescience.com/archaeology/2-400-year-old-puppets-with-dramatic-facial-expression-discovered-atop-pyramid-in-el-salvador> ;
    :earliest-date -410 ;
    :latest-date -380 ;
+   :note "From Antiquity article abstract: “The discovery of a rare tableau of ‘Bolinas’-type clay figurines dating to 410–380 BC at San Isidro, El Salvador, now permits the theoretical reconstruction of a less stratified Preclassic society in south-east Mesoamerica and the exploration of its spheres of interaction, which may have stretched along the coast from Guatemala to Costa Rica.”" ;
    :in-modern-country-note "El Salvador" ;
    :representative-latlong-point (13.833882 -88.720227) ;
-   :thumbnail-image <https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0003598X25000377/resource/name/S0003598X25000377_figAb.png?pub-status=live> .
+   :thumbnail-image <https://cdn.mos.cms.futurecdn.net/X3h5mJYSR8usRL3D76Yu28-1200-80.jpg.webp> .
 
 :seated-femaale-figure-baza a :human-figure ;
    rdfs:label "Seated Female Figure from Baza" ;
