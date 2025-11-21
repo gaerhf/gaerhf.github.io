@@ -5616,19 +5616,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :chaco-clay-figurines a :group-of-human-figures ;
    rdfs:label "Chaco Clay Figurines" ;
-   :described-by <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600_full.html> ;
+   :described-by <https://museum.nps.gov/ParkObjdet.aspx?rID=CHCU%20%20%2030600&db=objects&dir=CR%20AAWEB&page=2> ;
    :earliest-date 1020 ;
    :latest-date 1140 ;
    :material-note "Ceramic" ;
-   :note """The link into the Nationl Park Service website no longer works as of November 2025. Nor could I find a new URL for the same conent. The text there read: Site name, Pueblo Alto /
-AD 1020-1140 /
-Very uncommon. Representation of human figures among Anasazi was most uncommon. These are the only such figures in the Chaco Culture collection. /
-Unfired clay. Male [left]: L 10.2, W 4.8, T 2.4, Female [right]: L 11.5, W 4.9, T 2.8 cm /
-Chaco Culture National Historical Park, CHCU 30600""" ;
+   :note "From the NPS website: “Two unfired clay anthropomorphic figurines, one male, one female. Roughly modelled bodies and facial features. Inset charcoal for eyes. Black paint for hair. The female's hair is in whorls. Both of the female's arms and one of the male's arms have broken off.
+Representation of human figures among Anasazi was most uncommon. These are the only such figures in the Chaco Culture collection”" ;
    :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :anasazi ;
    :representative-latlong-point (36.0698 -107.9574) ;
-   :thumbnail-image <https://www.nps.gov/museum/exhibits/chcu/obj/fullres/effigy_figures_chcu30600.jpg> .
+   :thumbnail-image <https://museum.nps.gov/FullImages/CHCU//effigy_figures_chcu30600-jpg631653534960000000.jpg> .
 
 :maya-codex-of-mexico a :group-of-human-figures ;
    rdfs:label "Maya Codex of Mexico" ;
