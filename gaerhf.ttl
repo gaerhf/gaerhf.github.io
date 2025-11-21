@@ -5140,6 +5140,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :period-note "Pallava Dynasty (India)" ;
    :earliest-date 600 ;
    :latest-date 700 ;
+   :note "From Wikipedia: “Descent of the Ganges, known locally as Arjuna's Penance,[1][2] is a monument at Mamallapuram, on the Coromandel Coast of the Bay of Bengal, in the Chengalpattu district of the state of Tamil Nadu, India. Measuring 96 by 43 feet (29 m × 13 m), it is a giant open-air rock relief carved on two monolithic rock boulders. The legend depicted in the relief is the story of the descent of the sacred river Ganges to earth from the heavens led by Bhagiratha. The waters of the Ganges are believed to possess supernatural powers. The descent of the Ganges and Arjuna's Penance are portrayed in stone at the Pallava heritage site. The relief is more of a canvas of Indian rock cut sculpture at its best not seen anywhere else in India. It is one of the Group of Monuments at Mamallapuram that was designated as a UNESCO World Heritage Site since 1984.”" ;
    :material-note "Stone" ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (12.6175 80.198889) ; # Mahabalipuram, India
