@@ -320,7 +320,8 @@
 
 :galgenberg-figurine a :human-figure ;
    rdfs:label "Galgenberg Female Figurine" ;
-   :described-by <https://en.wikipedia.org/wiki/Venus_of_Galgenberg> ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_of_Galgenberg>  ,
+      <https://www.oeaw.ac.at/en/oeai/research/prehistory-wana-archaeology/quaternary-archaeology/stratzing> ;
    :approximate-date -36000 ;
    :in-modern-country-note "Austria" ;
    :art-historical-culture-or-tradition :aurignacian ;
@@ -1492,7 +1493,7 @@
    :described-by <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> ;
    :earliest-date -3600 ;
    :latest-date -3500 ;
-   :note "From the Wikimedia Commons page, itself quoting a fuller description: “Tomb 16 is a large tomb of the Naqada IC–IIA period into which a bricklined tomb of the Naqada IIIA2 period had later been inserted in what now appears to be an act of respectful renovation rather than usurpation (Hendrickx 2008: fig. 5). (...) In all probability, the two famous ceramic masks also originate from this tomb (Fig. 2). Some fragments were found in the tomb fill, although the majority were collected in surface and subsurface levels to the west and especially to the south, where the beard to the smaller mask was recovered in 2010. Other finds from the tomb and its fill include carnelian ring beads, two biconical gold beads, ivory comb fragments, rock crystal blades, three transverse arrowheads and one tanged arrowhead.”" ;
+   :note "From the Wikimedia Commons page, itself quoting a fuller description: “Tomb 16 is a large tomb of the Naqada IC–IIA period into which a bricklined tomb of the Naqada IIIA2 period had later been inserted in what now appears to be an act of respectful renovation rather than usurpation (Hendrickx 2008: fig. 5). (...) In all probability, the two famous ceramic masks also originate from this tomb (Fig. 2). Some fragments were found in the tomb fill, although the majority were collected in surface and subsurface levels to the west and especially to the south, where the beard to the smaller mask was recovered in 2010.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.097222 32.779444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> . 
@@ -3106,7 +3107,7 @@
       <https://en.wikipedia.org/wiki/Oxus_Treasure> ;
    :earliest-date -500 ;
    :latest-date -300 ;
-   :materia-note "Gold" ;
+   :material-note "Gold" ;
    :note "From British Museum website: “Rectangular gold plaque: with embossed and chased decoration showing a male figure facing right, in so-called “Median dress”, wearing a belted tunic with two vertical stripes with similar bands along the bottom and at the shoulders, hood (from which his hair projects above and below), trousers, long boots and a soft cap with neck-guard. His chin is covered. He wears, from his belt, an 'akinakes' with a lateral projection at the upper end, and a cinquefoil chape. The lower part of the scabbard is secured by a cord running around his leg. He carries a 'barsom' in his right hand.”" ;
    :in-modern-country-note "Tajikistan" ;
    :representative-latlong-point (37.054553 68.281994) ;
@@ -5619,6 +5620,11 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 1020 ;
    :latest-date 1140 ;
    :material-note "Ceramic" ;
+   :note """The link into the Nationl Park Service website no longer works as of November 2025. Nor could I find a new URL for the same conent. The text there read: Site name, Pueblo Alto /
+AD 1020-1140 /
+Very uncommon. Representation of human figures among Anasazi was most uncommon. These are the only such figures in the Chaco Culture collection. /
+Unfired clay. Male [left]: L 10.2, W 4.8, T 2.4, Female [right]: L 11.5, W 4.9, T 2.8 cm /
+Chaco Culture National Historical Park, CHCU 30600""" ;
    :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :anasazi ;
    :representative-latlong-point (36.0698 -107.9574) ;
