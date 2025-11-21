@@ -1182,10 +1182,11 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestias2.JPG> .
 
 :hamangia-seated-figures a :group-of-human-figures ;
-   rdfs:label "Hamangia Seated Figures" ;
+   rdfs:label "Hamangia Female and Male Seated Figures" ;
    :described-by <https://en.wikipedia.org/wiki/Thinker_of_Hamangia> ;
    :approximate-date -5000 ;
-   :materia-note "Ceramic" ;
+   :material-note "Ceramic" ;
+   :note "From Wikipedia: “UUnearthed in 1956 near Cernavodă, in southeastern Romania, these ceramic figures were discovered within a vast cemetery belonging to the Hamangia culture. This culture had a tradition of burying their deceased in designated areas known as necropolises, often accompanied by funerary items ... figurines like The Thinker. The Thinker and its companion, The Sitting Woman, were found within a necropolis containing approximately 400 graves." ;
    :in-modern-country-note "Romania" ;
    :representative-latlong-point (44.338056 28.033611) ; # ll for Cernavoda, Romania
    :art-historical-culture-or-tradition :hamangia-culture ;
@@ -1429,6 +1430,16 @@
    :representative-latlong-point (48.066667 114.5) ;
    :note "Generic point within Dornod Province" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_stone_amulet,_Dornod,_Mongolia,_4000-3000_BCE.jpg> .
+
+:sydney-area-rock-art a :group-of-human-figures ;
+   rdfs:label "Paired Male and Female from Syndey-area Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Sydney_rock_engravings> ;
+   :earliest-date -4000 ;
+   :latest-date -3000 ;
+   :note "From Wikipedia: “The engravings cannot be dated straightforwardly with contemporary archaeological methods, necessitating the use of indirect dating. The Sydney engravings are of a style known as “simple figurative”, which formulaic archaeology dates to around 3,000 BC and 4,000 BC, which is contemporaneous to the Neolithic period in Eurasia. Other engravings show European sailing ships, and so those cannot be more than about 200 years old. It is likely that some of the freshest engravings represent the later part of that time range, whilst the most worn represent the earliest part. However, the situation is complicated by the fact that the engravings were sometimes “re-grooved” during ceremonies.”" ;
+   :in-modern-country-note "Australia" ;
+   :representative-latlong-point (-33.630948 151.227760) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Petroglyphmanandwoman.jpg> .
 
 :reclining-figure-hal-saflieni a :human-figure ;
    rdfs:label "Reclining Figure from Hal Saflieni Hypogeum" ;
