@@ -716,6 +716,7 @@
    :approximate-date -9000 ;
    :in-modern-country-note "Turkey" ;
    :materia-note "Sandstone, obsidian (eyes)" ;
+   :note "From Wikipedia: ”The Urfa man, also known as the Balıklıgöl statue, is an ancient human shaped statue found during excavations in Balıklıgöl near Urfa, in the geographical area of Upper Mesopotamia, in the southeast of modern Turkey. It is dated c. 9000 BC to the period of the Pre-Pottery Neolithic... / The statue is nearly 1.90 meters tall.[9] The eyes form deep holes, in which are set segments of black obsidian.[3] It features a V-shaped collar or necklace. The hands are clasped in front, covering the genitals.”" ;
    :representative-latlong-point (37.158333 38.791667) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> .
@@ -737,7 +738,7 @@
    <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C33&q=Anthropomorphic+Statuettes+from+Tell+Fakhariyah%3A+Arguments+for+Their+Possible+PPNB+Origin+Bernd+Müller-Neuhof&btnG=> ;
    :earliest-date -9000 ;
    :latest-date -7000 ;
-   :note "The article by B. Müller-Neuhof in ‘Neo-Lithics’ is not individually downloadablle other than via Academia.edu." ;
+   :note "The article by B. Müller-Neuhof in ‘Neo-Lithics’ is not individually downloadablle other than via Academia.edu. From the conclusion: “Finally I would like to repeat my initial proposal for a PPNB date for the crafting of the statuettes from Tell Fakhariyah. In my opinion such a date is supported by stratigraphic evidence, especially the abundant amount of typical PPNB lithic artefacts, referring to a PPNB phase in the occupational sequence of Tell Fakhariyah. Additionally, a hiatus of occupation between the PPNB and the Late Bronze Age can most probably be assumed, according to the earliest pottery finds, which date into the Late Bronze Age (Mittani period). Connecting this stratigraphic information with the iconography of the two statuettes, the time frame in which both items can be dated becomes very narrow.”" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.84 40.068611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_from_Fakhariyah_(female),_Tell_Fakhariyah,_Pre-pottery_Neolithic_B,_9000-7000_BC,_gypsum_with_bitumen_and_stone_inlays_-_Oriental_Institute_Museum,_University_of_Chicago_-_DSC07633.JPG> .
@@ -749,7 +750,7 @@
    <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C33&q=Anthropomorphic+Statuettes+from+Tell+Fakhariyah%3A+Arguments+for+Their+Possible+PPNB+Origin+Bernd+Müller-Neuhof&btnG=> ;
    :earliest-date -9000 ;
    :latest-date -7000 ;
-   :note "The article by B. Müller-Neuhof in ‘Neo-Lithics’ is not individually downloadablle other than via Academia.edu." ;
+   :note "The article by B. Müller-Neuhof in ‘Neo-Lithics’ is not individually downloadablle other than via Academia.edu. From the conclusion: “Finally I would like to repeat my initial proposal for a PPNB date for the crafting of the statuettes from Tell Fakhariyah. In my opinion such a date is supported by stratigraphic evidence, especially the abundant amount of typical PPNB lithic artefacts, referring to a PPNB phase in the occupational sequence of Tell Fakhariyah. Additionally, a hiatus of occupation between the PPNB and the Late Bronze Age can most probably be assumed, according to the earliest pottery finds, which date into the Late Bronze Age (Mittani period). Connecting this stratigraphic information with the iconography of the two statuettes, the time frame in which both items can be dated becomes very narrow.”" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.84 40.068611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_from_Fakhariyah_(male),_Tell_Fakhariyah,_Pre-pottery_Neolithic_B,_9000-7000_BC,_gypsum_with_bitumen_and_stone_inlays_-_Oriental_Institute_Museum,_University_of_Chicago_-_DSC07636.JPG> .
