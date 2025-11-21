@@ -5620,8 +5620,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 1020 ;
    :latest-date 1140 ;
    :material-note "Ceramic" ;
-   :note "From the NPS website: “Two unfired clay anthropomorphic figurines, one male, one female. Roughly modelled bodies and facial features. Inset charcoal for eyes. Black paint for hair. The female's hair is in whorls. Both of the female's arms and one of the male's arms have broken off.
-Representation of human figures among Anasazi was most uncommon. These are the only such figures in the Chaco Culture collection”" ;
+   :note "From the NPS website: “Two unfired clay anthropomorphic figurines, one male, one female. Roughly modelled bodies and facial features. Inset charcoal for eyes. Black paint for hair. The female's hair is in whorls. Both of the female's arms and one of the male's arms have broken off. Representation of human figures among Anasazi was most uncommon. These are the only such figures in the Chaco Culture collection" ;
    :in-modern-country-note "United States" ;
    :art-historical-culture-or-tradition :anasazi ;
    :representative-latlong-point (36.0698 -107.9574) ;
