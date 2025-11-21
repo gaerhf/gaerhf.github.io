@@ -697,6 +697,7 @@
    :described-by <https://www.theartnewspaper.com/2025/10/09/discovery-of-11000-year-old-carved-face-in-turkey-offers-new-insight-into-early-human-expression> ;
    :approximate-date -9000 ;
    :in-modern-country-note "Turkey" ;
+   :note "From Art Newspaper coverage: “The discovery in southeast Turkey of an 11,000-year-old pillar carved with a face could reframe our understanding of how early humans expressed themselves. / The face staring out from a 135 cm-tall standing stone—featuring a prominent nose, deep-set eyes and a sharp, angular jawline—was unearthed last week by archaeologists at the Neolithic site of Karahan Tepe near the Syrian border, according to excavation director Necmi Karul of Istanbul University. / It is the first finding of a human face on a T-shaped pillar—a type of monolith found en masse within a constellation of prehistoric sanctuaries known as Taş Tepeler, or the Stone Mounds. This area includes Karahan Tepe as well as the World Heritage List-inscribed site of Göbekli Tepe, the world’s oldest known temple complex.”" ;
    :representative-latlong-point (37.0925 39.303611) ;
    :thumbnail-image <https://cdn.sanity.io/images/cxgd3urn/production/33e2eda96598f74fbaa720f7b745548860be3aa0-2048x1376.jpg?w=300&h=201&q=85&fit=crop&auto=format> .
 
