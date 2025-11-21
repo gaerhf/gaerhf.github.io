@@ -550,7 +550,7 @@
    rdfs:label "‘Datu Saman’ Style Figures from the Sangkulirang–Mangkalihat Peninsula" ;
    :described-by <https://doi.org/10.1038/s41586-018-0679-9> ;
    :approximate-date -11000 ;
-   :note "The chronology is uncertain and the date here is for a single example. See article." ;
+   :note "The depiction could be earlier. From article abstract: “... rare Pleistocene depiction of a human figure—also coloured dark purple—has a minimum date of 13.6 ka.”" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (0.943212 118.872765) ;
    :thumbnail-image <https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41586-018-0679-9/MediaObjects/41586_2018_679_Fig6_ESM.jpg?as=webp> .
@@ -3107,6 +3107,7 @@
    :earliest-date -500 ;
    :latest-date -300 ;
    :materia-note "Gold" ;
+   :note "From British Museum website: “Rectangular gold plaque: with embossed and chased decoration showing a male figure facing right, in so-called “Median dress”, wearing a belted tunic with two vertical stripes with similar bands along the bottom and at the shoulders, hood (from which his hair projects above and below), trousers, long boots and a soft cap with neck-guard. His chin is covered. He wears, from his belt, an 'akinakes' with a lateral projection at the upper end, and a cinquefoil chape. The lower part of the scabbard is secured by a cord running around his leg. He carries a 'barsom' in his right hand.”" ;
    :in-modern-country-note "Tajikistan" ;
    :representative-latlong-point (37.054553 68.281994) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Chopped_gold_pieces_from_the_Oxus_Treasure_by_Nickmard_Khoey213.jpg> .
