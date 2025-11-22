@@ -290,12 +290,6 @@ body {
     border-radius: 4px;
 }
 
-/* Center thumbnails when total width is less than container; still allow horizontal scrolling when overflow */
-#gallery {
-    justify-content: center;
-    align-items: center;
-}
-
 .gallery-image:hover {
     cursor: pointer ;
 }

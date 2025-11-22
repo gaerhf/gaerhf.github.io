@@ -1470,6 +1470,7 @@
    <https://artsandculture.google.com/story/the-sleeping-lady-a-unique-maltese-icon-national-museum-of-archaeology/VAWR7KPNk-UDKw> ;
    :earliest-date -4000 ;
    :latest-date -2000 ;
+   :note "From World History Encyclopedia: “Temple Period, 4000 - 2500 BCE. This clay figure of a reclining lady was found in one of the pits of the Hypogeum in Hal Saflieni in Malta. It has traces of red ochre paint and is thought to represent a “mother goddess”, even though she may equally be a representation of death or eternal sleep." ;
    :in-modern-country-note "Malta" ;
    :representative-latlong-point (35.869583 14.506806) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Sleeping_Lady,_2009.jpg> .
