@@ -608,7 +608,7 @@
       <https://journals.openedition.org/aaa/4036> ;
    :earliest-date -10000 ;
    :latest-date -7800 ;
-   :note "No clear indication of locatoin is given in *L’art rupestre africain* article. There is only a brief description of the group: “Human figures are often grouped together, some of these groupings perhaps representing social relations as a family (see figure 4) or, more evidently, a couple.”" ;
+   :note "No clear indication of location is given in *L’art rupestre africain* article. There is only a brief description of the group: “Human figures are often grouped together, some of these groupings perhaps representing social relations as a family (see figure 4) or, more evidently, a couple.”" ;
    :in-modern-country-note "Algeria or Libya" ;
    :representative-latlong-point (23.599340 11.538526) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gravures_de_Kel_Essuf_représentant_peut-être_une_famille.jpg> . 
@@ -619,7 +619,7 @@
       <https://journals.openedition.org/aaa/4036> ;
    :earliest-date -10000 ;
    :latest-date -7800 ;
-   :note "No clear indication of locatoin is given in *L’art rupestre africain* article. There is only a brief description of the group: “Human figures are often grouped together, some of these groupings perhaps representing social relations as a family (see figure 4) or, more evidently, a couple.”" ;
+   :note "No clear indication of location is given in *L’art rupestre africain* article. There is only a brief description of the pair: “Human figures are often grouped together, some of these groupings perhaps representing social relations as a family (see figure 4) or, more evidently, a couple.”" ;
    :in-modern-country-note "Algeria or Libya" ;
    :representative-latlong-point (23.599340 11.538526) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gravures_de_Kel_Essuf_représentant_un_couple,_peut-être_la_plus_ancienne_figuration_de_couple_connue_à_ce_jour.jpg> . 
@@ -5550,7 +5550,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :material-note "Stone" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.816659 -110.319498) ;
-   :note "Approximate locatoin" ;
+   :note "Approximate location" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:HuntSceneNMC.JPG> .
 
 :horned-figures-capitol-reef a :group-of-human-figures ;
@@ -5563,7 +5563,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :material-note "Sandstone" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (38.087321 -111.135686) ;
-   :note "Approximate locatoin" ;
+   :note "Approximate location" ;
    :thumbnail-image <https://www.nps.gov/common/uploads/cropped_image/primary/07C490B0-C60A-35DD-40E539E66DDF3F6F.jpg?width=400&quality=90&mode=crop> .
 
 :banteay-srei-fight-between-sunda-upasunda a :group-of-human-figures ;
