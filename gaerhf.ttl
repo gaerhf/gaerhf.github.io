@@ -542,7 +542,7 @@
    <https://en.wikipedia.org/wiki/Bhimbetka_rock_shelters#Rock_art_and_paintings> ;
    :earliest-date -12000 ;
    :latest-date -8000 ;
-   :note "The dates are approximate and the scene could be earlier." ;
+   :note "The dates are approximate and the selected scene could be earlier. From Smarthistory: “Widely acknowledged to be the earliest evidence of art in South Asia, the Bhimbetka cave paintings are Prehistoric paintings found on the Bhimbetka rock shelters in the Raisen district of present-day Madhya Pradesh. Bhimbetka comprises over 750 rock shelters, of which over a hundred have paintings depicting animal and human figures in shades of green, red, white, brown and black. / The earliest of these illustrate scenes from the lives of hunter-gatherers of the Upper Paleolithic and Mesolithic periods—a time when many animals were yet to be domesticated, humans were nomadic, and collective civilizations were not yet in existence.”" ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (22.938415 77.613085) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bhimbetka_war_scene.jpg> .
