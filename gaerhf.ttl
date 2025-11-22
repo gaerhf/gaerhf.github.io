@@ -521,10 +521,9 @@
    rdfs:label "Qurta Rock Art Figures" ;
    :described-by <https://doi.org/10.1017/S0003598X00061998> , <https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf> ;
    :approximate-date -13000 ;
-   :note "From Wikipedia: “Qurta's petroglyphs, incised in Nubian Sandstone formations along the Nile, were discovered by modern archaeologists in 2005. Using luminescence dating via optically stimulated luminescence (OSL), researchers at Ghent University in Belgium determined the petroglyphs to be a minimum of 15,000 years old, and possibly between 17,000 and 19,000 years old. / The Qurta petroglyphs depict aurochs, birds, hippopotamids, gazelle, hartebeest, fish, “some indeterminate creatures ('monsters' or hybrids)”, and stylised human figures. A total of 185 individual figures have been identified." ;
+   :note "Image here is Fig. 3 in archeonil.com article. It is difficult to see a human figure. From Wikipedia: “Qurta's petroglyphs, incised in Nubian Sandstone formations along the Nile, were discovered by modern archaeologists in 2005. Using luminescence dating via optically stimulated luminescence (OSL), researchers at Ghent University in Belgium determined the petroglyphs to be a minimum of 15,000 years old, and possibly between 17,000 and 19,000 years old. / The Qurta petroglyphs depict aurochs, birds, hippopotamids, gazelle, hartebeest, fish, “some indeterminate creatures ('monsters' or hybrids)”, and stylised human figures. A total of 185 individual figures have been identified." ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (24.638719 32.960759) ;
-   :note "Mapped point very approximate. I have not found a linkable image." ;
    :art-historical-culture-or-tradition :saharan-rock-art .
 
 :grotta-dell-addaura-inscribed-petroglyphs a :group-of-human-figures ;
@@ -1005,7 +1004,7 @@
    :material-note "Stone" ;
    :in-modern-country-note "Azerbaijan" ;
    :representative-latlong-point (41.148056 45.241111) ;
-   :note "From the linked publication, “The supposed head is decorated with several vertical lines from the top, likely representing hair.”" ;
+   :note "From the linked article, “The overall pattern suggests that the artifact represents a human figure. One of the wider surfaces with the most complicated engravings appears to be the front side (Fig. 2: 1b, 2b). The supposed head is decorated with several vertical lines from the top, likely representing hair. The vertical lines are rather short in the middle and depict short hair bangs. Interestingly, the ends of these lines are explicitly delineated by horizontal lines. Further, the face does not show any depiction of facial features such as the eyes and nose (Figs. 2: 2b; 3: 5). Moreover, the top of the head is unprocessed in an area approximately 4.7 mm in diameter. This area is encircled by 2–3 circular lines, which may represent a hairband or the edge of a cap. The top of the head is not decorated.”" ;
    :thumbnail-image <https://ars.els-cdn.com/content/image/1-s2.0-S2352226725000212-gr2.jpg> .
 
 
@@ -1631,6 +1630,7 @@
    :earliest-date -3200 ;
    :latest-date -2200 ;
    :material-note "Stone" ;
+   :note "Translated and adapted from Spanish Wikipedia; “The Idol of Garrovillas de Alconetar is a Chalcolithic, anthropomorphic with prominent eyes plaque idol... roughly rectangular, flat stone slab measuring 16.30 x 7.90 cm and 1.40 cm thick. On the obverse, a face is visible, formed by two perforations for eyes, eyebrows, and a nose created by indentations representing the eye sockets and cheeks. The lines on what would be the cheeks have been interpreted as facial tattoos. Below, two arms and what has been interpreted as the pubic triangle are visible. The reverse has zigzag lines, possibly representing a hairstyle.”" ;
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (39.7131229 -6.5494671) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Garrovillas_de_Alconétar-Idolo_oculado_de_arenisca.jpg> .
@@ -4241,7 +4241,7 @@
    rdfs:label "White Elephant Cave Human Figure" ;
    :described-by <https://www.sahumanities.org/index.php/sah/article/view/158> ;
    :note "Figure 6 in the linked publication shows a portion of a ‘human figure’ dated to approximately 200 CE. Mapped point is very approximate." ;
-   :approximate-date 200 ;
+   :approximate-date 100 ;
    :in-modern-country-note "South Africa" ;
    :representative-latlong-point (-29.380719 29.527825) .
 
