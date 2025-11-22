@@ -521,6 +521,7 @@
    rdfs:label "Qurta Rock Art Figures" ;
    :described-by <https://doi.org/10.1017/S0003598X00061998> , <https://archeonil.com/images/revue%202008%202010/AN2009-08-Huyge.pdf> ;
    :approximate-date -13000 ;
+   :note "From Wikipedia: “Qurta's petroglyphs, incised in Nubian Sandstone formations along the Nile, were discovered by modern archaeologists in 2005. Using luminescence dating via optically stimulated luminescence (OSL), researchers at Ghent University in Belgium determined the petroglyphs to be a minimum of 15,000 years old, and possibly between 17,000 and 19,000 years old. / The Qurta petroglyphs depict aurochs, birds, hippopotamids, gazelle, hartebeest, fish, “some indeterminate creatures ('monsters' or hybrids)”, and stylised human figures. A total of 185 individual figures have been identified." ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (24.638719 32.960759) ;
    :note "Mapped point very approximate. I have not found a linkable image." ;
@@ -600,6 +601,28 @@
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.779709 35.667810) ;
    :thumbnail-image <https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/11/111725_BB_figurine_inlinedesktop.jpg?w=680&ssl=1> .
+
+:kel-essuf-style-group a :group-of-human-figures ;
+   rdfs:label "Kel Essuf style Group of Figures in region of Algerian Tadrart" ;
+   :defined-by <https://en.wikipedia.org/wiki/Kel_Essuf_Period> ,
+      <https://journals.openedition.org/aaa/4036> ;
+   :earliest-date -10000 ;
+   :latest-date -7800 ;
+   :note "No clear indication of locatoin is given in *L’art rupestre africain* article. There is only a brief description of the group: “Human figures are often grouped together, some of these groupings perhaps representing social relations as a family (see figure 4) or, more evidently, a couple.”" ;
+   :in-modern-country-note "Algeria or Libya" ;
+   :representative-latlong-point (23.599340 11.538526) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gravures_de_Kel_Essuf_représentant_peut-être_une_famille.jpg> . 
+
+:kel-essuf-style-pair a :group-of-human-figures ;
+   rdfs:label "Kel Essuf style Pair of Figures in region of Algerian Tadrart" ;
+   :defined-by <https://en.wikipedia.org/wiki/Kel_Essuf_Period> ,
+      <https://journals.openedition.org/aaa/4036> ;
+   :earliest-date -10000 ;
+   :latest-date -7800 ;
+   :note "No clear indication of locatoin is given in *L’art rupestre africain* article. There is only a brief description of the group: “Human figures are often grouped together, some of these groupings perhaps representing social relations as a family (see figure 4) or, more evidently, a couple.”" ;
+   :in-modern-country-note "Algeria or Libya" ;
+   :representative-latlong-point (23.599340 11.538526) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gravures_de_Kel_Essuf_représentant_un_couple,_peut-être_la_plus_ancienne_figuration_de_couple_connue_à_ce_jour.jpg> . 
 
 :lapa-do-santo-petroglyph a :human-figure ;
    rdfs:label "Lapa do Santo Petroglyph" ;
@@ -3304,6 +3327,7 @@
    :earliest-date -400 ;
    :latest-date 500 ;
    :in-modern-country-note "Argentina" ;
+   :note "This stone mask features an anthropomorphic face with pronounced brow ridge, angular nose, and drilled perforations with raised carved ridges indicating the eyes and mouth. Additional drill holes line the outer edge of the mask, presumably to affix it with fibers to an armature. The mask was most likely attached to a funerary bundle." ;
    :representative-latlong-point (-27.978864 -66.543650) ;
    :note "Specific findspot not known." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/708743/1696927/main-image> .  
@@ -5140,7 +5164,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :period-note "Pallava Dynasty (India)" ;
    :earliest-date 600 ;
    :latest-date 700 ;
-   :note "From Wikipedia: “Descent of the Ganges, known locally as Arjuna's Penance,[1][2] is a monument at Mamallapuram, on the Coromandel Coast of the Bay of Bengal, in the Chengalpattu district of the state of Tamil Nadu, India. Measuring 96 by 43 feet (29 m × 13 m), it is a giant open-air rock relief carved on two monolithic rock boulders. The legend depicted in the relief is the story of the descent of the sacred river Ganges to earth from the heavens led by Bhagiratha. The waters of the Ganges are believed to possess supernatural powers. The descent of the Ganges and Arjuna's Penance are portrayed in stone at the Pallava heritage site. The relief is more of a canvas of Indian rock cut sculpture at its best not seen anywhere else in India. It is one of the Group of Monuments at Mamallapuram that was designated as a UNESCO World Heritage Site since 1984.”" ;
+   :note "From Wikipedia: “Descent of the Ganges, known locally as Arjuna's Penance, is a monument at Mamallapuram, on the Coromandel Coast of the Bay of Bengal, in the Chengalpattu district of the state of Tamil Nadu, India. Measuring 96 by 43 feet (29 m × 13 m), it is a giant open-air rock relief carved on two monolithic rock boulders. The legend depicted in the relief is the story of the descent of the sacred river Ganges to earth from the heavens led by Bhagiratha. The waters of the Ganges are believed to possess supernatural powers. The descent of the Ganges and Arjuna's Penance are portrayed in stone at the Pallava heritage site. The relief is more of a canvas of Indian rock cut sculpture at its best not seen anywhere else in India. It is one of the Group of Monuments at Mamallapuram that was designated as a UNESCO World Heritage Site since 1984.”" ;
    :material-note "Stone" ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (12.6175 80.198889) ; # Mahabalipuram, India
