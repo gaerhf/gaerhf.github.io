@@ -727,7 +727,7 @@
    rdfs:label "Stylized Female Figurine from Monruz" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Monruz> ;
    :approximate-date -9000 ;
-   :note "Very imprecise location." ;
+   :note "From Wikipedia page: “The Venus of Monruz (also Venus of Neuchâtel, Venus of Neuchâtel-Monruz) is a Venus figurine of the late Upper Paleolithic, or the beginning Epipaleolithic, dating to the end of the Magdalenian, some 11,000 years ago. It is a black jet pendant in the shape of a stylized human body, measuring 18 mm in height. It was discovered in 1991, at the construction of the N5 highway, at Monruz in the municipality of Neuchâtel, Switzerland.” Very imprecise location." ;
    :in-modern-country-note "Switzerland" ;
    :representative-latlong-point (47.003677 6.956833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Laténium-dame-Monruz.jpg> .
@@ -1032,9 +1032,11 @@
 
 :sha-ar-hagolan-pebble-figurines a :human-figure ;
    rdfs:label "Sha'ar HaGolan Pebble Figurine" ;
-   :described-by <https://en.wikipedia.org/wiki/Sha%27ar_HaGolan_(archaeological_site)> ;
+   :described-by <https://en.wikipedia.org/wiki/Sha%27ar_HaGolan_(archaeological_site)> ,
+      <https://www.myc.org.il/en/the-museum-of-yarmukian-culture/> ;
    :earliest-date -6400 ;
    :latest-date -6000 ;
+   :note "From the Museum of Yarmukian Culture website: “About a hundred figurines incised on limestone pebbles were found in the Yarmukian village at Shaar Hagolan. These are stylized human figures which may be divided into three groups: detailed figurines, face figurines and eye figurines. The difficulties of carving the hard pebbles led to increased schematization of garments and body features, the most common and important of which were the eyes.”" ;
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.686389 35.603333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yarmukian_Culture_-Sha%27ar_HaGolan,_pebble_Figurine.jpg> .
