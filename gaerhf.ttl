@@ -1036,7 +1036,7 @@
       <https://www.myc.org.il/en/the-museum-of-yarmukian-culture/> ;
    :earliest-date -6400 ;
    :latest-date -6000 ;
-   :note "From the Museum of Yarmukian Culture website: “About a hundred figurines incised on limestone pebbles were found in the Yarmukian village at Shaar Hagolan. These are stylized human figures which may be divided into three groups: detailed figurines, face figurines and eye figurines. The difficulties of carving the hard pebbles led to increased schematization of garments and body features, the most common and important of which were the eyes.”" ;
+   :note "From the Museum of Yarmukian Culture (MYC) website: “About a hundred figurines incised on limestone pebbles were found in the Yarmukian village at Shaar Hagolan. These are stylized human figures which may be divided into three groups: detailed figurines, face figurines and eye figurines. The difficulties of carving the hard pebbles led to increased schematization of garments and body features, the most common and important of which were the eyes.”" ;
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.686389 35.603333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yarmukian_Culture_-Sha%27ar_HaGolan,_pebble_Figurine.jpg> .
@@ -1559,6 +1559,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/547202> ;
    :earliest-date -3500 ;
    :latest-date -3300 ;
+   :note "From Met Museum website: “This limestone figurine is the finest preserved of unusual group of Predynastic statuettes. These seated women display beak-like noses and missing or schematized arms. The hair, narrow waist and wide hips are clearly shown to emphasize female sexuality. The light colored surface created an ideal canvas for painted details, including jewelry and animal figures that scholars now believe are associated with a ritual activity.”." ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.9 32.716667) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/547202/1218864/main-image> .
