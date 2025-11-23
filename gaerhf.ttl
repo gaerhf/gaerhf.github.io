@@ -2789,7 +2789,7 @@
    :latest-date -200 ;
    :material-note "Ceramic" ;
    :in-modern-country-note "Peru" ;
-   :note "Findspot not specific. Figure usually identified as female." ;
+   :note "Map of findspot not precise. From Museo Larco website (translated): “Sculptural pitcher depicting a wrinkled woman's head with pierced ears. The woman's face is on the front of the vessel, and the wrinkles are represented by incisions. This piece was excavated by Rafael Larco Hoyle from Tomb 19 of the Barbacoa A Cemetery in the Chicama Valley (Los Cupisnique, 1941).”" ;
    :representative-latlong-point (-7.773488 -78.967438) ;
    :thumbnail-image <https://coleccion.museolarco.org/public/uploads/ML040338/ML040338_SF3_1734121607.webp> .
 
@@ -5798,6 +5798,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 1200 ;
    :latest-date 1300 ;
    :material-note "Terracotta" ;
+   :note "From the Northwestern University Website: “This terracotta figure of a seated man was found at Natamatao, Mali, alongside skeletons of horses and humans. It was part of a widespread local terracotta sculpture tradition that stretched from the tenth to the fifteenth century. The Niger River’s fertile inland delta supported a thriving urbanism in the Middle Ages that included more than sixty interdependent communities.”" ;
    :in-modern-country-note "Mali" ;
    :representative-latlong-point (14.466646 -5.000955) ; 
    :thumbnail-image <https://caravans.library.northwestern.edu/img/works/15/15_640x.jpg> .
@@ -5823,7 +5824,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://archive.org/details/antiquitiesoften00thru> ;
    :earliest-date 1250 ;
    :latest-date 1350 ;
-   :note "Mapped point is approximate. Also known as the “Thruston Tablet”." ;
+   :note "Mapped point is approximate. Also known as the “Thruston Tablet”. From the Tennessee State Museum Website: “This prehistoric pictoglyph depicts images of people, their clothing, jewelry, and other ornamentation in a variety of scenes. It is a palimpsest, a piece of writing material that has been reused but still has traces of its earlier writings. It is also a storyboard. A recent study by a group of scholars revealed that three distinct layers of imagery could be identified. When examined separately, it was determined that the layers may represent a mythic story rather than a historical event, as was originally thought by those who first found the pictoglyph. The imagery depicted on the tablet is like that found on other forms of Mississippian Cultural Period art.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (36.344856 -86.261173) ;
    :thumbnail-image <https://assets.speakcdn.com/assets/2588/4197_web.png> .
