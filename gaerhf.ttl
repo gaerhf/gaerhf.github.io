@@ -379,6 +379,7 @@
    :earliest-date -29000 ;
    :latest-date -25000 ;
    :material-note "Mammoth ivory" ;
+   :note "The site Don's Maps has extensive information on the figure and also quotes other works, as here: “A man's head and body carved from mammoth ivory was found at Brno in Moravia. A portion of the neck is missing, and the legs are broken off. There once were arms and part of one survives, but whether the legs were ever complete is not known. If they were, and were long in proportion, then the figure would have stood some 17 inches (42 cm) tall. In spite of the ravaged condition of the face, enough survives to show that it was no caricature: the hair was cropped, the brow rather low but straight, the eyes deep-sunk. The body is too damaged to judge its degree of naturalism but it seems more schematic than the head. Both head and body are pierced lengthwise. The figure was found with the burial of a man who wore, in his prepared grave, a headdress or necklace made up of some 600 slivers of Dentalia shells, roundels cut from bone, and cut and polished beads of mammoth tooth, and finally a stone disc with a central hole, probably used in drilling and possibly connected with fire making”." ;
    :in-modern-country-note "Czech Republic" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (49.1925 16.608333) ; # ll for Brno, Czech Republic
@@ -1555,7 +1556,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_pottery_pregnant_woman,_Hongshan_Culture,_Liaoning,_1982.JPG> .
 
 :predynastic-figurine-nubt a :human-figure ;
-   rdfs:label "Predynastic Female Figurines possibly from Naqada" ;
+   rdfs:label "Predynastic Female Figurines, possibly from Naqada" ;
    :described-by <https://www.metmuseum.org/art/collection/search/547202> ;
    :earliest-date -3500 ;
    :latest-date -3300 ;
