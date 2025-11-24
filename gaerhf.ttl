@@ -4097,7 +4097,8 @@
    rdfs:label "Couple from Pompeii" ;
    :described-by <https://en.wikipedia.org/wiki/Portrait_of_Terentius_Neo> ,
    <https://palp.art/browse/ARC_059708> ;
-   :approximate-date 30 ;
+   :approximate-date 50 ;
+   :note "Adapted from Wikipedia: ”The Portrait of Terentius Neo and his wife is a Roman fresco, created circa 50 AD, depicting a couple holding objects important to literacy. It was found in Pompeii in the House of Terentius Neo in Regio 7, Insula 2, 6, and is now in the National Archaeological Museum, Naples.”" ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :roman-empire ;
    :representative-latlong-point (40.75 14.486111) ; # update with house ll
