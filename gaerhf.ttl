@@ -4159,6 +4159,7 @@
    :described-by <https://en.wikipedia.org/wiki/Berenike_Buddha> ;
    :earliest-date 100 ;
    :latest-date 200 ;
+   :note "From Wikipedia: “The Berenike Buddha is a statue of the Buddha, parts of which were discovered in January 2018 and January 2022 in an archaeological excavation in the ancient harbour of Berenike, Egypt, by an American-Polish archaeological mission. The statue was discovered in the forecourt of an early Roman period temple dedicated to the Goddess Isis. ... It was made from a stone that was extracted south of Istanbul, and may also have been carved in Berenike itself. The statue has a halo around the head of the Buddha, decorated with the rays of the sun, and has a lotus flower by his side. It is 71cm tall.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (23.908611 35.4725) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Berenike_Buddha.jpg/500px-Berenike_Buddha.jpg> .
