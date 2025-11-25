@@ -5830,7 +5830,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :latest-date 1300 ;
    :in-modern-country-note "Mali" ;
    :material-note "Terracotta" ;
-   :art-historical-culture-or-tradition :mopti-culture ;
+   :note "From Met Museum website: “ ... figure huddles with its leg hugged to its chest and its head dropped on its knee. It simultaneously suggests the knotted tension of anxiety and the sublime absorption of deep prayer. Created over 700 years ago, in the Inland Niger Delta region of present-day Mali, this elegant work's intense emotional immediacy blurs the boundaries of time and place. / This terracotta sculpture comes from a site called Jenne-jeno, the oldest known city in sub-Saharan Africa. Jenne-jeno flourished in the ninth century A.D., but declined and was abandoned by 1400. Items of cast brass and forged iron, clay vessels, and figures like this one survive. They testify to what scholars contend was a richly varied and highly sophisticated urban society." ;
+   # :art-historical-culture-or-tradition :mopti-culture ;
    :representative-latlong-point (13.890556 -4.540278) ; # Mali
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_figure_grom_Mali,_13th_century,_Djenné_peoples,_Metropolitan_Museum_of_Art,_1981.218.JPG> .
 
@@ -5856,6 +5857,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :latest-date 1375 ;
    :in-modern-country-note "United States" ;
    :material-note "Marble" ;
+   :note "From wikipedia: “Marble effigies from the Etowah Mound C, c. 1250–1375: kneeling woman on left, and man on right.”" ;
    :art-historical-culture-or-tradition :mississippian ;
    :representative-latlong-point (34.125131 -84.807664) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .
