@@ -338,7 +338,7 @@
    :in-modern-country-note "Germany" ;
    :representative-latlong-point (48.398333 9.772222) ; # ll for cave
    :art-historical-culture-or-tradition :aurignacian ;
-   :note "So-called “adorant” from the Geißenklösterle cave" ;
+   :note "From Wikipedia: “a 35,000–32,000 year-old carved section of mammoth ivory, with a depiction of a human figure. It was discovered in the Geißenklösterle cave in the Swabian Jura near Blaubeuren, Germany.”" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adorant,_Geisenklösterle,_Blaubeuren-Weiler,_Alb-Donau-Kreis,_Aurignacian_culture,_35,000_to_45,000_years_old,_ivory_-_Landesmuseum_Württemberg_-_Stuttgart,_Germany_-_DSC02709.jpg> .
 
 :anthropomorph-toca-da-bastiana a :human-figure ;
@@ -368,6 +368,7 @@
    :earliest-date -29000 ;
    :latest-date -27000 ;
    :material-note "Oolitic limestone" ;
+   :note "Adapted from Wikipedia: ” ... an 11.1-centimetre-tall (4.4 in) [female] figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 from an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria. [It] is carved from an oolitic limestone that is not local to the area, and tinted with red ochre.”" ;
    :in-modern-country-note "Austria" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (48.3225 15.404722) ; # ll for Willendorf, Austria
@@ -506,7 +507,7 @@
    :latest-date -3000 ;
    :in-modern-country-note "Australia" ;
    :representative-latlong-point (-17.49145 124.53265) ;
-   :note "Location is approximate, as the exact location is not readily available to protect the site." ;
+   :note "Location is approximate, as the exact location is not readily available to protect the site. Adapted from Wikipedia: “The Gwion Gwion rock paintings, Gwion figures, Kiro Kiro or Kujon (also known as the Bradshaw rock paintings, Bradshaw rock art, Bradshaw figures and the Bradshaws) are one of the two major regional traditions of rock art found in the north-west Kimberley region of Western Australia. Key traditional owners have published their own account of the meaning of the images.”" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
 
 :toca-do-baixao-perna-i a :group-of-human-figures ;
@@ -749,6 +750,7 @@
    :described-by <https://en.wikipedia.org/wiki/Pinhole_Cave_Man> ;
    :approximate-date -9000 ;
    :material-note "Wooly rhinoceros rib bone" ;
+   :note "From Wikipedia: “The Pinhole Cave Man or Pin Hole Cave Man is the common name for an engraving of a human figure on a woolly rhinoceros rib bone dating to the Upper Paleolithic that is now in the British Museum (cataloged as Palart 854). In 1926, a woolly rhinoceros rib (Coelodonta antiquitatis) that was broken at both ends was found in Pin Hole Cave, Creswell Crags, Derbyshire, England. / The bone is dated to the Late Upper Paleolithic, around 12,000 years old. Near one of the broken ends is engraved a male human figure. The drawing, 5 centimetres (2.0 in) tall, faces to the right; the whole bone is 20.8 centimetres (8.2 in) long. It is clearly a man as he has a penis – this may have been an earlier feature of the bone that was enhanced. His thin arm stretches out from his body. His head may be wearing a mask – or he is just drawn with a protruding nose and jaw. He has legs that appear incomplete, a crooked back, and a long engraved line across his upper body. The surface of the bone is scratched all over; on the reverse side of the bone there are two parallel engraved lines.”" ;
    :in-modern-country-note "England" ;
    :representative-latlong-point (53.263611 -1.193889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pinhole_Cave_Man-1.jpg> .
@@ -899,9 +901,10 @@
 :round-head-figures-of-tassili-n-ajjer a :group-of-human-figures ;
    rdfs:label "Round Head Figures of Tassili n'Ajjer" ;
    :described-by <https://en.wikipedia.org/wiki/Round_Head_Period> ;
-   :earliest-date -10000 ;
-   :latest-date -8000 ;
+   :earliest-date -9500 ;
+   :latest-date -7500 ;
    :in-modern-country-note "Algeria" ;
+   :note "From Wikipedia: “Round Head rock art is the earliest painted, monumental form of Central Saharan rock art, which was largely created from 9500 BP to 7500 BP and ceased being created by 3000 BP. The Round Head Period is preceded by the Kel Essuf Period and followed by the Pastoral Period. Round Head rock art number up to several thousand depictions in the Central Sahara. Human and undomesticated animal (e.g., Barbary sheep, antelope) artforms are usually portrayed, with a variety of details (e.g., dancing, ceremonies, masks, spiritual animal forms), in painted Round Head rock art.“" ;
    :art-historical-culture-or-tradition :saharan-rock-art ;
    :representative-latlong-point (25.5 9) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fondazione_Passaré_V1_056.jpg> .
@@ -2170,6 +2173,7 @@
    :described-by <https://archeology.uark.edu/artifacts/stone-figurine/> ;
    :earliest-date -2000 ;
    :latest-date -700 ;
+   :note "From U. of Arkansas website: “... 72mm in length with a maximum width of 42mm and average thickness of about 11mm. It has a rectangular cross section. The object is made of a dark grey shale or slate with a reddish-brown patina on its surface from weathering.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (34.262373 -92.025230) ;
    :note "Findspot is approximate: near Pine Bluff, Arkansas." ;
@@ -3332,7 +3336,7 @@
    :earliest-date -400 ;
    :latest-date 500 ;
    :in-modern-country-note "Argentina" ;
-   :note "This stone mask features an anthropomorphic face with pronounced brow ridge, angular nose, and drilled perforations with raised carved ridges indicating the eyes and mouth. Additional drill holes line the outer edge of the mask, presumably to affix it with fibers to an armature. The mask was most likely attached to a funerary bundle." ;
+   :note "From Met Museum website (first link): “This stone mask features an anthropomorphic face with pronounced brow ridge, angular nose, and drilled perforations with raised carved ridges indicating the eyes and mouth. Additional drill holes line the outer edge of the mask, presumably to affix it with fibers to an armature. The mask was most likely attached to a funerary bundle.”" ;
    :representative-latlong-point (-27.978864 -66.543650) ;
    :note "Specific findspot not known." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/708743/1696927/main-image> .  
@@ -4032,6 +4036,7 @@
    :described-by <https://isaw.nyu.edu/research/io-figures/sessions/march-4/info> ;
    :earliest-date 1 ;
    :latest-date 400 ;
+   :note "From ISAW Website: “The bronze is a fragmented female figure, but enough remains to identify her with a well-known iconographic type in Indian art—the salabhanjika (alt. salabhanjika), a divine or semi-divine female holding a tree branch. It was found at the port city of Khor Rori in Oman during an excavation sponsored by the American Foundation for the Study of Man. The Khor Rori bronze is part of a wider discourse on iconographic elements from South Asia visible in South Arabian art. It is important to acknowledge that South Arabian art has maintained a very strong autochthonous and original character over time, and that the external contributions are but evidence of its multicultural nature through the years. / The dating of the figure ranges from the 2nd to the 4th Centuries CE, based on its stylistic elements and comparisons with salabhanjika figures from the Indian subcontinent.”" ;
    :material-note "Bronze" ;
    :in-modern-country-note "Oman" ;
    :representative-latlong-point (17.039339 54.430478) ;
@@ -4098,7 +4103,7 @@
    :described-by <https://en.wikipedia.org/wiki/Portrait_of_Terentius_Neo> ,
    <https://palp.art/browse/ARC_059708> ;
    :approximate-date 50 ;
-   :note "Adapted from Wikipedia: ”The Portrait of Terentius Neo and his wife is a Roman fresco, created circa 50 AD, depicting a couple holding objects important to literacy. It was found in Pompeii in the House of Terentius Neo in Regio 7, Insula 2, 6, and is now in the National Archaeological Museum, Naples.”" ;
+   :note "Adapted from Wikipedia: ”The Portrait of Terentius Neo and his wife is a Roman fresco, created circa 50 CE, depicting a couple holding objects important to literacy. It was found in Pompeii in the House of Terentius Neo in Regio 7, Insula 2, 6, and is now in the National Archaeological Museum, Naples.”" ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :roman-empire ;
    :representative-latlong-point (40.75 14.486111) ; # update with house ll
@@ -4192,6 +4197,17 @@
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (36.036083 68.58905) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Probable_statue_of_Kanishka,_Surkh_Kotal._Kabul_Museum_(2nd_century_CE).jpg> .
+
+:coin-kanushka-boddo a :group-of-human-figures ;
+   rdfs:label "Coin of Kanushka with Buddha on Reverse" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Coin_of_Kanishka_I.jpg> ;
+   :earliest-date 127 ;
+   :latest-date 150 ;
+   :material-note "Gold" ;
+   :note "Found at the Ahin Posh Monastery. From Wikipedia: “Gold coin of Kanishka I with a representation of the Buddha (c. 120 AD).Obv: Kanishka standing.., clad in heavy Kushan coat and long boots, flames emanating from shoulders, holding standard in his left hand, and making a sacrifice over an altar. Kushan-language legend in Greek script (with the addition of the Kushan Ϸ “sh” letter): ϷΑΟΝΑΝΟϷΑΟ ΚΑΝΗϷΚΙ ΚΟϷΑΝΟ (“Shaonanoshao Kanishki Koshano”): “King of Kings, Kanishka the Kushan”. Rev: Standing Buddha in Hellenistic style, forming the gesture of “no fear” (abhaya mudra) with his right hand, and holding a pleat of his robe in his left hand. Legend in Greek script: ΒΟΔΔΟ “Boddo”, for the Buddha. Kanishka monogram (tamgha) to the right.”" ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (34.412045 70.45213) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Coin_of_Kanishka_I.jpg> .
 
 :seated-buddha-mathura-132 a :group-of-human-figures ;
    rdfs:label "Seated Buddha from Mathura of 132 CE" ;
