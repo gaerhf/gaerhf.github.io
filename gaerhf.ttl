@@ -1230,7 +1230,6 @@
 #    :described-by <https://en.wikipedia.org/wiki/Venus_of_Langenzersdorf> ;
 #    :approximate-date -4825 .
 
-
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
    :described-by <https://www.namuseum.gr/en/monthly_artefact/beautiful-young-lady-of-the-neolithic-age/C> ;
@@ -1238,6 +1237,7 @@
    :latest-date -4500 ;
    :in-modern-country-note "Greece" ;
    :material-note "Ceramic" ;
+   :note "Adapted from NM website: “Clay female figure seated on stool, supporting and feeding an infant held against her chest. The infant's face is partially obscured by the mother's chest. One of the child's hands is positioned on the mother's right breast, and the other is wrapped around her back. The mother's arms are wrapped around the child's torso, securing it in a position for nursing.”" ;
    :representative-latlong-point (39.355 22.835) ;
    :art-historical-culture-or-tradition :neolithic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_with_child_small_painted_terracott_neolithic,_NAMA_5937_080804.jpg> .
@@ -1257,6 +1257,7 @@
     <https://en.wikipedia.org/wiki/Karanovo_culture> ;
    :approximate-date -4500 ;
    :material-note "Ceramic" ;
+   :note "From Google Arts and Culture: “The figure from Pazardzhik has a hollow lower part and represents a woman sitting on a round stool, with her hands on her hips. The nostrils, mouth and lower body openings were made by piercing the damp clay. The body is decorated with scratches, leading to speculation about tattooing or body painting. The surface of the dried and leathery clay was brilliantly polished before firing.”" ;
    :in-modern-country-note "Bulgaria" ;
    :representative-latlong-point (42.2 24.333333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:NHM_-_Pazardzik_Sitzidol.jpg> .
@@ -1287,6 +1288,7 @@
    <https://www.britishmuseum.org/collection/object/H_1939-0704-1>  ;
    :earliest-date -4500 ;
    :latest-date -4000 ;
+   :note "From BM website: “Terracotta figurine, depicting a stylized figure. Incised decoration represents clothing and body ornament, and the ears, shoulders and elbows are pierced, possibly to hold other decorative elements.”" ;
    :in-modern-country-note "Serbia" ;
    :representative-latlong-point (44.761944 20.623056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vinca_clay_figure_02.jpg> .
@@ -1297,6 +1299,7 @@
    <https://en.wikipedia.org/wiki/Badarian_culture> ;
    :earliest-date -4500 ;
    :latest-date -3600 ;
+   :note "From Wikipedia image caption: “Clay anthropomorphic head, Late Chalcolithic period, c. 4250 BC, Hamangia Culture, found submerged in Varna Lake.”" ;
    :in-modern-country-note "Egypt" ;
    :note "It is not certain that El-Badari is the findspot." ;
    :representative-latlong-point (26.9925 31.4156) ;
@@ -1307,7 +1310,7 @@
    :described-by <https://www.getty.edu/art/collection/object/103WGQ> ;
    :earliest-date -4500 ;
    :latest-date -3500 ;
-   :note "Findspot not known. Mapped to Kulaksizlar, location of a related workshop." ;
+   :note "Findspot not known. Mapped to Kulaksizlar, location of a related workshop. From Getty website: “This figure represents a highly stylized standing nude female. Her bulbous head, long neck, and flat body are characteristic of the Kilia type of female figurines, named after the village in northwest Turkey where the first examples were found. Carved from translucent white marble, these figures typically have carefully detailed eyes, noses, and ears. Although the ears and nose of this statuette are defined by carving, the eyes originally would have been enhanced with paint. An incised triangle emphasizing the pubic area confirms the statuette’s identity as female. Additional incisions on the front of the figure outline the tops of the thighs, while a horizontal line accents the hips across the back.”" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (38.812 27.896) ;
    :thumbnail-image <https://media.getty.edu/iiif/image/d74f9f56-a5b4-4af7-bef0-9a7391548daa/full/400,/0/default.jpg> .
@@ -1339,7 +1342,7 @@
    :earliest-date -4500 ;
    :latest-date -3200 ;
    :in-modern-country-note "Greece" ;
-   :note "Mapped generically to the Island of Karpathos for now." ;
+   :note "Mapped generically to the Island of Karpathos for now. From BM website: “A thick slab worked flat, with beak nose, pointed breasts and vulva triangle left in high relief on the front. The eyebrows are marked by incised lines. Above the slit in the vulva triangle are four incised lines to represent the pubic hair; below is a horizontal groove.”" ;
    :representative-latlong-point (35.764416 27.180286) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_7/f3b0083f_2e76_490b_9fa3_a3b70074cb10/mid_00034725_001.jpg> .
 
@@ -2168,7 +2171,7 @@
    :representative-latlong-point (32.636667 -91.411389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Poverty_Point_female_figurines_HRoe_2009.jpg> .
 
-:figurine-jefferson-country a :human-figure ;
+:figurine-jefferson-county a :human-figure ;
    rdfs:label "Jefferson County Poverty-Point Culture Figurine" ;
    :described-by <https://archeology.uark.edu/artifacts/stone-figurine/> ;
    :earliest-date -2000 ;
