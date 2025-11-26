@@ -1232,7 +1232,7 @@
 
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
-   :described-by <https://www.namuseum.gr/en/monthly_artefact/beautiful-young-lady-of-the-neolithic-age/C> ;
+   :described-by <https://www.namuseum.gr/en/monthly_artefact/beautiful-young-lady-of-the-neolithic-age/> ;
    :earliest-date -4800 ;
    :latest-date -4500 ;
    :in-modern-country-note "Greece" ;
