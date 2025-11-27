@@ -2031,6 +2031,16 @@
    :representative-latlong-point (27.329167 68.138889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mohenje-daro_statuette,_Mackay.jpg> .
 
+:harrapan-inscribed-sherd a :human-figure ;
+   :described-by <https://en.wikipedia.org/wiki/Bhirrana#Dancing_girl_graffiti> ;
+   :earliest-date -2300 ;
+   :latest-date -1750 ;
+   :material-note "Bronze" ;
+   :note "From Wikipedia: “Pottery graffiti at Bhirrana show “mermaid” type deities and dancing girls; the latter have a posture similar to Mohenjo-daro's bronze “dancing girl”...”" ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (27.329167 68.138889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_Girl_engraving_on_a_potsherd.jpg> .
+
 :dagenham-idol a :human-figure ;
    rdfs:label "Dagenham Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Dagenham_idol> ;
