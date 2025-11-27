@@ -1140,6 +1140,7 @@
    :earliest-date -5000 ;
    :latest-date -4000 ;
    :material-note "Marble" ;
+   :note "Adapted from Wikipedia: “...marble figure from the Aegean Neolithic period from Saliagos between Paros and Antiparos. Missing head and left shoulder. Found during the excavations of Saliagos in 1964/65 by John Davies Evans and Colin Renfrew.”" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.048 25.094) ; # Saliagos
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PAM_Pomos_2857.jpg> .
@@ -1149,6 +1150,7 @@
    :described-by <https://en.wikipedia.org/wiki/Yarim_Tepe#Yarim_Tepe_II> ;
    :earliest-date -5000 ;
    :latest-date -4000 ;
+   :note "From Wikipedia: “Painted vessel figurine of a nude woman from Yarim Tepe II settlement. Halaf culture, 5th millennium BCE. Iraq Museum”" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (36.32045 42.3675) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Painted_vessel_figurine_of_a_nude_woman_from_Yarim_Tepe_II_settlement,_Iraq._Halaf_culture,_5th_millennium_BCE._Iraq_Museum.jpg> .
@@ -1159,17 +1161,19 @@
    :earliest-date -5000 ;
    :latest-date -3000 ;
    :material-note "Ceramic" ;
+   :note "From Wikipedia: “Banpo is known for a characteristic type of decorative pottery, with a red clay coating all over the body, and geometrical drawings in black, typically depicting a round human head with some fish around it. The round human head had a triangular design on top.”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (34.273 109.051) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Banpo_motif.jpg> .
 
 :ennedi-plateau-archaic-rock-art a :group-of-human-figures ;
    rdfs:label "Ennedi Plateau Archaic Rock Art" ;
-   :representative-latlong-point (17.038890 21.862235) ;
+   :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-6807> ;
    :earliest-date -5000 ;
    :latest-date -3000 ;
+   :note "From BM Website: “...painted rock art on a rock face showing eight human figures. To the left there are five human figures partially outlined in red, partially defined by series of red dots. Figures are depicted upright, facing front or right, with arms and legs in different positions (splayed, outstretched down or to the left).”" ;
    :in-modern-country-note "Chad" ;
-   :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-6807> ;
+   :representative-latlong-point (17.038890 21.862235) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/13_15/a3ea69af_4d22_4a65_94ff_a45a00ffeb2c/mid_CHAENP0210005.jpg> .
 
 :angono-petroglyphs a :group-of-human-figures ;
@@ -1177,6 +1181,7 @@
    :described-by <https://en.wikipedia.org/wiki/Angono_Petroglyphs> ;
    :earliest-date -5000 ;
    :latest-date -2000 ;
+   :note "From Wikipedia: “There are 127 drawings in the form of animate and static figures of circular or dome-like head on top of a V-shaped torso distributed on a horizontal plane on the rock wall area measuring 25 meters by 3 meters.”" ;
    :in-modern-country-note "Philippines" ;
    :representative-latlong-point (14.532872 121.18679) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Angono_Petroglyphs1.jpg> .
@@ -1205,6 +1210,7 @@
    rdfs:label "Mestikawi Cave Group Scenes" ;
    :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
    :approximate-date -5000 ;
+   :note "From Wikipedia: “The shelter is 17 m (56 ft) wide and almost 7 m (23 ft) high and contains over 5,000 well-preserved figures painted with red, yellow, white and black pigments. Hundreds of hand and foot stencil are over-painted with groups of human creatures and therianthropic and acephalic (headless) mythological creatures.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (23.653333 25.159722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestias2.JPG> .
@@ -1247,6 +1253,7 @@
    :described-by <https://www.nationalmuseum.md/en/news/arhive/march_2023/> ;
    :earliest-date -4600 ;
    :latest-date -4400 ;
+   :note "From National Museum of the History of Moldova website: The figurine is made of fine clay paste, mixed with crushed ceramic, and its surface is covered with a layer of light brown engobe. It is made in a realistic manner, traditional for the Gumelnița culture, and shows a female figure in a vertical position, with folded and raised arms, in the so-called “Oranta” pose, which is widespread in the Orthodox iconographic tradition, when the image of the Mother of God is depicted. The figure's head placed on a tall cylindrical neck has a flattened shape, the nose is represented by a vertical belt, and the eyes - by two holes. The body is flattened, widening sharply at the bottom. On the surface of the body, the chest and navel are well highlighted. The buttocks and legs are well contoured and decorated in a voluminous manner. The surface of the buttocks is decorated with spiral-shaped incisions, and the thighs - with vertical and oblique incisions. A horizontal belt can be seen below the knees, which possibly represents the upper part of the footwear of the type of high boots. On the arms and in the lower part of the body there are holes, intended for hanging some accessories.”" ;
    :in-modern-country-note "Moldova" ;
    :representative-latlong-point (45.994692 28.552875) ;
    :thumbnail-image <https://www.nationalmuseum.md/files/2857.jpg> .
@@ -2012,6 +2019,17 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_girl_of_Mohenjo-daro.jpg> .
 
 # -2200 https://commons.wikimedia.org/wiki/File:Abakan_-_Khakassia_-_Russia_Okunev_stela.jpg
+
+:mohenjo-daro-standing-female-figurine a :human-figure ;
+   rdfs:label "Mohenjo Daro standing Female Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)#Interpretations> ;
+   :earliest-date -2300 ;
+   :latest-date -1750 ;
+   :material-note "Bronze" ;
+   :note "Adapted from Wikipedia: “A similar bronze statuette to the so-called Dancing Girl was found by Mackay during his final full season of 1930–31 at DK-G area in a house at Mohenjo-daro.”" ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (27.329167 68.138889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mohenje-daro_statuette,_Mackay.jpg> .
 
 :dagenham-idol a :human-figure ;
    rdfs:label "Dagenham Idol" ;
