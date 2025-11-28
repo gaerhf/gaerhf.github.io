@@ -995,7 +995,7 @@
    :described-by <https://fr.wikipedia.org/wiki/Préhistoire_de_la_Crète#Céramique_et_autres_objets_mobiliers> ;
    :earliest-date -6500 ;
    :latest-date -5900 ;
-   :note "Possibly a Cycladic product. Found at Knossos." ;
+   :note "Possibly a Cycladic product. Found at Knossos. From Wikipedia: “Marble figurine of a standing man. The material and the naturalistic rendering of the anatomical details are unusual for the period.”" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (35.298056 25.163056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_male_figurine_from_Knossos.jpg> .
@@ -1137,6 +1137,18 @@
    :in-modern-country-note "Syria and Neighboring" ;
    :art-historical-culture-or-tradition :halaf-culture ;
    :thumbnail-image <https://art.thewalters.org/images/art/PS1_48.2741_3Qtr_DD_T09.jpg> .
+
+:figurines-arene-candide a :group-of-human-figures ;
+   rdfs:label "Figurines from the Arene Candide Cave" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/statuine-della-caverna-delle-arene-candide-finale-ligure-sv/> ,
+      <https://en.wikipedia.org/wiki/Arene_Candide> ;
+   :earliest-date -5000 ;
+   :latest-date -4200 ;
+   :material-note "Ceramic" ;
+   :note "From linked website: “20 statuettes, only some intact and most of them reduced to fragments, found inside the cave of the Arene Candide in the various layers of excavation, most of them on reworked ground and only a few of them come from levels dated with certainty to Middle Neolithic, precisely to the culture of square-mouthed vessels (5000-4200 BC); due to stylistic analogies, even the finds without context can be referred to the same chronological horizon.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (44.1618 8.326389) ;
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2022/12/01-ARENE-CANDIDE_Statuine.jpg> .
 
 :female-figurine-saliagos a :human-figure ;
    rdfs:label "Female Figurine from Saliagos" ;
