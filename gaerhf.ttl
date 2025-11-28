@@ -1047,9 +1047,10 @@
 
 :catalhoyuk-seated-female-figurine a :human-figure ;
    rdfs:label "Catalhoyuk Seated Female Figurine" ;
-   :described-by <https://en.wikipedia.org/wiki/Catalhoyuk> ;
+   :described-by <https://en.wikipedia.org/wiki/Seated_Woman_of_%C3%87atalh%C3%B6y%C3%BCk> ;
    :approximate-date -6000 ;
    :material-note "Ceramic" ;
+   :note "Adapted from Wikipedia: “The Seated Woman of Çatalhöyük (also Çatal Höyük) is a baked-clay nude female form seated between feline-headed arm-rests. The figurine is 17 centimeters (6.7 inches) long, 11 centimeters (4.3 inches) wide, 12 centimeters (4.7 inches) high, and weighs 1 kilogram (2.2 pounds).”" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.666667 32.828056) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -1060,7 +1061,7 @@
    :described-by <https://www.anatolianarchaeology.net/before-the-hittites-8000-year-old-rock-art-discovered-in-central-anatolia/> ;
    :approximate-date -6000 ;
    :in-modern-country-note "Turkey" ;
-   :note "Approximate location." ;
+   :note "Approximate location. From linked article: “... human-shaped motifs rendered in red pigment on the inner rock face, interpreted as one of the earliest symbolic scenes in Central Anatolia.”" ;
    :representative-latlong-point (38.304952 35.554091) ;
    :thumbnail-image <https://www.anatolianarchaeology.net/wp-content/uploads/2025/11/Before-the-Hittites-8000-Year-Old-Rock-Art-Discovered-in-Central-Anatolia.webp> .
 
@@ -1069,6 +1070,7 @@
    :described-by <https://en.wikipedia.org/wiki/Bangudae_Petroglyphs#Human_figures> ;
    :earliest-date -6000 ;
    :latest-date -1000 ;
+   :note "Better image needed. From Wikipedia: “The figures are side views of the whole body with a somewhat exaggerated penis or front images of people with mask-like faces spreading their four limbs. There are engravings of people hunting animals with a bow, raising their hands, and playing a long rod like a musical instrument, recalling hunting and religious acts.”" ;
    :in-modern-country-note "South Korea" ;
    :art-historical-culture-or-tradition :neolithic-korea ;
    :representative-latlong-point (35.5991 129.185) ;
@@ -1080,6 +1082,7 @@
    :earliest-date -5800 ;
    :latest-date -5300 ;
    :material-note "Ceramic" ;
+   :note "Torso of woman with hands on chest." ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (39.357 22.833) ;
    :art-historical-culture-or-tradition :neolithic-greece ;
@@ -1110,6 +1113,7 @@
    rdfs:label "Male Figurine from Cerje" ;
    :described-by <https://en.wikipedia.org/wiki/Adam_of_Macedonia> ;
    :approximate-date -5500 ;
+   :note "Adapted from Wikipedia: “Dating from the 6th millennium BC, the sculpture's creator represented a sitting male body, showing details of the spine, ribs and navel, and with erect phallus." ;
    :in-modern-country-note "Macedonia" ;
    :representative-latlong-point (41.991 21.4289) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adam_of_macedonia_-_1.jpg> .
@@ -1460,7 +1464,7 @@
 
 :stone-amulet-dornod-mongolia a :human-figure ;
    rdfs:label "Stone amulet from Dornod Region, Mongolia" ;
-   :decribed-by <https://en.wikipedia.org/wiki/Prehistoric_Mongolia> , 
+   :described-by <https://en.wikipedia.org/wiki/Prehistoric_Mongolia> , 
    <https://www.flickr.com/photos/101561334@N08/35545137942/in/photostream/> ;
    :earliest-date -4000 ;
    :latest-date -3000 ;
