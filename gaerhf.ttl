@@ -2052,11 +2052,23 @@
       <https://en.wikipedia.org/wiki/Bhirrana#Dancing_girl_graffiti> ;
    :earliest-date -2300 ;
    :latest-date -1750 ;
-   :material-note "Bronze" ;
+   :material-note "Ceramic" ;
    :note "From MAP Academy website: “A potsherd dating back to the Mature Phase of the Harappan Civilisation, the Dancing Girl was discovered at Bhirrana in present-day Haryana in 2004–05. The visual characteristics of the Dancing Girl from Bhirrana, especially her stance, the tilt of her head and the positioning of her arms bear a close resemblance to the Dancing Girl from Mohenjo-Daro...”" ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (29.548194 75.549479) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_Girl_engraving_on_a_potsherd.jpg> .
+
+:seated-figure-mohenjo-daro a :human-figure ;
+   rdfs:label "Seated Figure from Mohenjo-daro" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:The_Seated_Nobleman_with_head_missing._A_limestone_sculpture_excavated_from_Mohenjo_Daro_in_1925.png> ,
+      <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#Bronze_Age_sculpture> ;
+   :earliest-date -2300 ;
+   :latest-date -1750 ;
+   :material-note "Limestone" ;
+   :note "No good landing page." ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (27.329167 68.138889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Seated_Nobleman_with_head_missing._A_limestone_sculpture_excavated_from_Mohenjo_Daro_in_1925.png> .
 
 :dagenham-idol a :human-figure ;
    rdfs:label "Dagenham Idol" ;
