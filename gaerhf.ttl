@@ -2048,13 +2048,14 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mohenje-daro_statuette,_Mackay.jpg> .
 
 :harrapan-inscribed-sherd a :human-figure ;
-   :described-by <https://en.wikipedia.org/wiki/Bhirrana#Dancing_girl_graffiti> ;
+   :described-by <https://mapacademy.io/article/dancing-girl-bhirrana/> ,
+      <https://en.wikipedia.org/wiki/Bhirrana#Dancing_girl_graffiti> ;
    :earliest-date -2300 ;
    :latest-date -1750 ;
    :material-note "Bronze" ;
-   :note "From Wikipedia: “Pottery graffiti at Bhirrana show “mermaid” type deities and dancing girls; the latter have a posture similar to Mohenjo-daro's bronze “dancing girl”...”" ;
+   :note "From MAP Academy website: “A potsherd dating back to the Mature Phase of the Harappan Civilisation, the Dancing Girl was discovered at Bhirrana in present-day Haryana in 2004–05. The visual characteristics of the Dancing Girl from Bhirrana, especially her stance, the tilt of her head and the positioning of her arms bear a close resemblance to the Dancing Girl from Mohenjo-Daro...”" ;
    :in-modern-country-note "Pakistan" ;
-   :representative-latlong-point (27.329167 68.138889) ;
+   :representative-latlong-point (29.548194 75.549479) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_Girl_engraving_on_a_potsherd.jpg> .
 
 :dagenham-idol a :human-figure ;
@@ -2108,6 +2109,30 @@
    :representative-latlong-point (37.3028 64.153) ;
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monstrous_male_figure_MET_dp22227.jpg> .
+
+:red-jasper-male-torso-harappa a :human-figure ;
+   rdfs:label "Red Jasper Male Torso from Harappa" ;
+   rdfs:defined-by <https://mapacademy.io/article/red-jasper-male-torso/> ,
+      <https://en.wikipedia.org/wiki/Harappa> ;
+   :earliest-date -2200 ;
+   :latest-date -1900 ;
+   :material-note "Jasper" ;
+   :note "From Map Academy website: “Carved in red jasper stone, this statuette of a nude male torso with a missing head, arms and legs was excavated in Harappa in Punjab in present-day Pakistan in 1928-29 by Indian archeologist Madho Sarup Vats, who ascribed it to Stratum III of the Indus Valley Civilisation. The statuette is 9.2 centimetres tall, 5.5 centimetres wide and 3 centimetres deep. Most notably, it features naturalistic contours, denoting a deliberate stylistic choice in the shaping of a rounded midriff towards the bottom of the torso that was achieved using a sculptural technique rather than the use of lines or striations.”" ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (30.628889 72.863889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harappa_red_jasper_male_torso.jpg> .
+
+:steatite-torso-harappa a :human-figure ;
+   rdfs:label "Steatite Female Torso from Harappa" ;
+   rdfs:defined-by <https://commons.wikimedia.org/wiki/File:Harappa_13_grey_stone_male_dancer_statuette.jpg> ,
+      <https://en.wikipedia.org/wiki/Harappa> ;
+   :earliest-date -2200 ;
+   :latest-date -1900 ;
+   :material-note "Jasper" ;
+   :note "No specific landing page for this object. Wiki commons gives height as 9.9 cm." ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (30.628889 72.863889) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harappa_13_grey_stone_male_dancer_statuette.jpg> .
 
 :pashupati-seal a :human-figure ;
    rdfs:label "Pashupati Seal" ;
