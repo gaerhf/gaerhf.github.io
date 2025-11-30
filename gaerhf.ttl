@@ -1287,7 +1287,7 @@
 
 :figurine-slatino a :human-figure ;
    rdfs:label "Figurine from Slatino" ;
-   rdfs:described-by <https://en.wikipedia.org/wiki/Karanovo_culture> ,
+   :described-by <https://en.wikipedia.org/wiki/Karanovo_culture> ,
       <https://commons.wikimedia.org/wiki/File:Керамични_антропоморфни_и_зооморфни_фигурки_-_с._Слатино,_ранен_халколит_004.jpg> ;
    :approximate-date -4500 ;
    :note "The date is an estimate and may even be incorrect." ;
@@ -2124,7 +2124,7 @@
 
 :red-jasper-male-torso-harappa a :human-figure ;
    rdfs:label "Red Jasper Male Torso from Harappa" ;
-   rdfs:described-by <https://mapacademy.io/article/red-jasper-male-torso/> ,
+   :described-by <https://mapacademy.io/article/red-jasper-male-torso/> ,
       <https://en.wikipedia.org/wiki/Harappa> ;
    :earliest-date -2200 ;
    :latest-date -1900 ;
@@ -2136,7 +2136,7 @@
 
 :steatite-torso-harappa a :human-figure ;
    rdfs:label "Steatite Female Torso from Harappa" ;
-   rdfs:described-by <https://commons.wikimedia.org/wiki/File:Harappa_13_grey_stone_male_dancer_statuette.jpg> ,
+   :described-by <https://commons.wikimedia.org/wiki/File:Harappa_13_grey_stone_male_dancer_statuette.jpg> ,
       <https://en.wikipedia.org/wiki/Harappa> ;
    :earliest-date -2200 ;
    :latest-date -1900 ;
