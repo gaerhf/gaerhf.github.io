@@ -605,7 +605,7 @@
 
 :kel-essuf-style-group a :group-of-human-figures ;
    rdfs:label "Kel Essuf style Group of Figures in region of Algerian Tadrart" ;
-   :defined-by <https://en.wikipedia.org/wiki/Kel_Essuf_Period> ,
+   :described-by <https://en.wikipedia.org/wiki/Kel_Essuf_Period> ,
       <https://journals.openedition.org/aaa/4036> ;
    :earliest-date -10000 ;
    :latest-date -7800 ;
@@ -616,7 +616,7 @@
 
 :kel-essuf-style-pair a :group-of-human-figures ;
    rdfs:label "Kel Essuf style Pair of Figures in region of Algerian Tadrart" ;
-   :defined-by <https://en.wikipedia.org/wiki/Kel_Essuf_Period> ,
+   :described-by <https://en.wikipedia.org/wiki/Kel_Essuf_Period> ,
       <https://journals.openedition.org/aaa/4036> ;
    :earliest-date -10000 ;
    :latest-date -7800 ;
@@ -2124,7 +2124,7 @@
 
 :red-jasper-male-torso-harappa a :human-figure ;
    rdfs:label "Red Jasper Male Torso from Harappa" ;
-   rdfs:defined-by <https://mapacademy.io/article/red-jasper-male-torso/> ,
+   rdfs:described-by <https://mapacademy.io/article/red-jasper-male-torso/> ,
       <https://en.wikipedia.org/wiki/Harappa> ;
    :earliest-date -2200 ;
    :latest-date -1900 ;
@@ -2136,7 +2136,7 @@
 
 :steatite-torso-harappa a :human-figure ;
    rdfs:label "Steatite Female Torso from Harappa" ;
-   rdfs:defined-by <https://commons.wikimedia.org/wiki/File:Harappa_13_grey_stone_male_dancer_statuette.jpg> ,
+   rdfs:described-by <https://commons.wikimedia.org/wiki/File:Harappa_13_grey_stone_male_dancer_statuette.jpg> ,
       <https://en.wikipedia.org/wiki/Harappa> ;
    :earliest-date -2200 ;
    :latest-date -1900 ;
@@ -4139,7 +4139,7 @@
 
 :kahaum-pillar a :human-figure ;
    rdfs:label "Kahaum Pillar" ;
-   :defined-by <https://en.wikipedia.org/wiki/Kahaum_pillar> ;
+   :described-by <https://en.wikipedia.org/wiki/Kahaum_pillar> ;
    :approximate-date 460 ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (26.394639 83.838056) ;
@@ -4466,7 +4466,8 @@
 
 :avukana-buddha a :human-figure ;
    rdfs:label "Avukana Buddha" ;
-   :described-by <https://mapacademy.io/article/avukana-buddha/> ;
+   :described-by <https://mapacademy.io/article/avukana-buddha/> ,
+      <https://en.wikipedia.org/wiki/Avukana_Buddha_statue> ;
    :earliest-date 400 ;
    :latest-date 800 ;
    :material-note "Granite" ;
@@ -4953,7 +4954,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :apollo-cyrene a :human-figure ;
    rdfs:label "Statue of Apollo from Cyrene" ;
-   :defined-by <https://en.wikipedia.org/wiki/Apollo_of_Cyrene> ;
+   :described-by <https://www.britishmuseum.org/collection/object/G_1861-0725-1?selectedImageId=55934001> ,
+      <https://en.wikipedia.org/wiki/Apollo_of_Cyrene> ;
    :approximate-date 200 ;
    :material-note "Marble" ;
    :in-modern-country-note "Libya" ;
@@ -5856,7 +5858,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 :lewis-chessmen a :group-of-human-figures ;
    rdfs:label "Lewis Chessmen" ;
    :described-by <https://en.wikipedia.org/wiki/Lewis_chessmen> ,
-   <https://www.nms.ac.uk/discover-catalogue/the-story-of-the-lewis-chess-pieces> ;
+   <https://www.nms.ac.uk/discover-catalogue/the-story-of-the-lewis-chess-pieces> ,
+   <https://commons.wikimedia.org/wiki/File:Harappan_face_(Indus_Valley)_(cropped).jpg> ;
    :earliest-date 1100 ;
    :latest-date 1200 ;
    :note "From Wikipedia: “The Lewis chessmen (Scottish Gaelic: Fir-thàilisg Leòdhais [fiɾʲˈhaːlɪʃkʲ loː.ɪʃ]) or Uig chessmen, named after the island or the bay where they were found, are a group of distinctive 12th-century chess pieces, along with other game pieces, most of which are carved from walrus ivory. Discovered in 1831 on the Isle of Lewis in the Outer Hebrides of Scotland, they may constitute some of the few complete, surviving medieval chess sets, although it is not clear if a single complete period-accurate set can be assembled from the pieces.”" ;
