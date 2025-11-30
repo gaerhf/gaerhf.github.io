@@ -3482,16 +3482,6 @@
    :representative-latlong-point (25.483333 55.55) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Two_Hellenistic_or_Parthian_style_statues_found_at_the_Tell_Abraq_site_from_the_3rd_Century_BCE..jpg> .
 
-:didarganj-yakshi a :human-figure ;
-   rdfs:label "Didarganj Yakshi" ;
-   :described-by <https://en.wikipedia.org/wiki/Didarganj_Yakshi> ,
-    <https://smarthistory.org/yaksha-yakshi/> ;
-   :earliest-date -300 ;
-   :latest-date -200 ;
-   :in-modern-country-note "India" ;
-   :representative-latlong-point (25.571667 85.2625) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Didarganj_Yakshi_statue_in_the_Bihar_Museum.jpg> .
-
 :so-called-archer-king-tabo a :human-figure ;
    rdfs:label "So-called Archer King from Tabo" ;
    :described-by <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa.jpg> ,
@@ -3545,6 +3535,14 @@
    :representative-latlong-point (40.473750 17.233083) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/248624/531687/main-image> .
 
+:carpet-pazyryk-5 a :group-of-human-figures ;
+   rdfs:label "Carpet from Pazyryk Burial 5" ;
+   :described-by <https://en.wikipedia.org/wiki/Pazyryk_burials#Pazyryk-5> ;
+   :approximate-date -250 ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (50.746389 88.0725) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Siberian_tapestry,_Hermitage_Museum,_St._Petersburg.jpg> .
+
 :parthian-lute-player a :human-figure ;
    rdfs:label "Parthian Lute Player" ;
    :described-by <https://www.rmo.nl/collectie/topstukken/beeld-muzikant-muziek-luitspeler-met-instrument/> ,
@@ -3592,13 +3590,17 @@
 
 # https://www.penn.museum/sites/expedition/the-vanishing-art-of-the-arctic/
 
-:carpet-pazyryk-5 a :group-of-human-figures ;
-   rdfs:label "Carpet from Pazyryk Burial 5" ;
-   :described-by <https://en.wikipedia.org/wiki/Pazyryk_burials#Pazyryk-5> ;
-   :approximate-date -250 ;
-   :in-modern-country-note "Russia" ;
-   :representative-latlong-point (50.746389 88.0725) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Siberian_tapestry,_Hermitage_Museum,_St._Petersburg.jpg> .
+:didarganj-yakshi a :human-figure ;
+   rdfs:label "Didarganj Yakshi" ;
+   :described-by <https://en.wikipedia.org/wiki/Didarganj_Yakshi> ,
+    <https://smarthistory.org/yaksha-yakshi/> ,
+    <https://mapacademy.io/article/didarganj-yakshi/> ;
+   :earliest-date -200 ;
+   :latest-date 100 ;
+   :note "From MAP Academy website: “A life-sized Chunar stone statue of a female deity or guardian figure, possibly a yakshi, excavated from Didarganj, near present-day Patna, the Didarganj yakshi statue is widely celebrated for its intricacy, polished surface and overall symmetry, as well as naturalistic and standardised style. The figure is depicted carrying a fly-whisk in her right hand, while her left arm and nose are damaged. The statue rests on a 40-centimetre tall stand, bringing it to a total height of 203 centimetres — all of which was carved from a single block of stone.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (25.571667 85.2625) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Didarganj_Yakshi_statue_in_the_Bihar_Museum.jpg> .
 
 :figure-with-libyco-berber-script a :human-figure ;
    rdfs:label "Figure with Libyco-Berber Script" ;
@@ -4461,6 +4463,17 @@
    :in-modern-country-note "Guatemala" ;
    :representative-latlong-point (17.221944 -89.623611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Burial_10_vessel.jpg> .
+
+:avukana-buddha a :human-figure ;
+   rdfs:label "Avukana Buddha" ;
+   :described-by <https://mapacademy.io/article/avukana-buddha/> ;
+   :earliest-date 400 ;
+   :latest-date 800 ;
+   :material-note "Granite" ;
+   :note "From MAP Academy website: “Standing on a double-lotus pedestal a little under a metre tall, the Avukana Buddha rises to a height of a little over 13 metres. The statue is carved in high relief, with a good portion of it detached from the rock face; the head is carved fully in the round. The Buddha is depicted in the samabhanga pose — standing upright, perfectly balanced on both feet. The eyes, brows, nose and lips, as well as the short curly hair, are sharply defined; the eyes are half-closed eyes as if in deep meditation. He is shown with elongated earlobes to indicate the heavy earrings he would have worn as the prince Siddhartha Gautama.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (8.010719 80.513802) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Avukana_0444a.jpg> .
 
 :gold-pendant-panama a :human-figure ;
    rdfs:label "Gold Pendant (Panama)" ;
