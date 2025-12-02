@@ -1001,6 +1001,16 @@
    :representative-latlong-point (37.181603 39.495559) ;
    :thumbnail-image <https://img.turkiyetoday.com/images/2025/11/28/8500-year-old-carved-faces-and-tiny-double-faced-bead-reshape-sefertepes-role-in-tas-3210504.jpeg> .
 
+:head-base-pillar-sayburc a :human-figure ;
+   rdfs:label "Head Carved at Base of Pillar at Sayburc" ;
+   :described-by <https://www.turkiyetoday.com/culture/human-face-carved-on-pillar-base-discovered-at-sayburc-sheds-new-light-on-tas-tepeler-3210530> ;
+   :approximate-date -6500 ;
+   :material-note "Stone" ;
+   :note "Date estimtated. From Turkiye Today article: “A carved human face has been identified on the bedrock base of a standing pillar at Sayburc, one of the Neolithic settlements included in the Tas Tepeler (Stone Mounds) Project near the city of Sanliurfa in southeastern Türkiye.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.110316 38.621509) ;
+   :thumbnail-image <https://img.turkiyetoday.com/images/2025/11/28/human-face-carved-on-pillar-base-discovered-at-sayburc-sheds-new-light-on-tas-tepeler-3210530_202511281738_3.jpg> .
+
 :marble-figurines-knossos a :human-figure ;
    rdfs:label "Neolithic Marble Figurine from Knossos" ;
    :described-by <https://fr.wikipedia.org/wiki/Préhistoire_de_la_Crète#Céramique_et_autres_objets_mobiliers> ;
