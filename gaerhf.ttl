@@ -899,6 +899,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> .
 
 # link to this from somewhere https://smarthistory.org/running-horned-woman-tassili-najjer-algeria-2/
+
 :round-head-figures-of-tassili-n-ajjer a :group-of-human-figures ;
    rdfs:label "Round Head Figures of Tassili n'Ajjer" ;
    :described-by <https://en.wikipedia.org/wiki/Round_Head_Period> ;
@@ -1054,6 +1055,17 @@
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.686389 35.603333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yarmukian_Culture_-Sha%27ar_HaGolan,_pebble_Figurine.jpg> .
+
+:praroditeljka-lepenski-vir a :human-figure ;
+   rdfs:label "So-called Praroditeljka (“Foremother”) from Lepenski Vir" ;
+   :described-by <https://en.wikipedia.org/wiki/Lepenski_Vir#Sculptures> ;
+   :earliest-date -6300 ;
+   :latest-date -5900 ;
+   :material-note "Sandstone" ;
+   :note "From Wikipedia: “Probably the best known is the Praroditeljka, or “Foremother”, pictured above right. 51 cm × 39 cm (20 in × 15 in), the image is often exploited in the media and became a symbol of Lepenski Vir. Srejović and Babović considered it “impressive”, a possible embodiment of the female principle of the fishlike beings. She is thought to be equal to the opposite, male version, “Danubius”. Female elements and attributes appear canonical, symmetrical, rigid and though shaped like a figure, eventually quite reduced. She has two vents on her shoulders. Traces of the original red coating pigment are still visible.”" ;
+   :in-modern-country-note "Serbia" ;
+   :representative-latlong-point (44.561111 22.024167) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lepenski_vir_Praroditeljka_(Foremother,_cca_7000_BCE).jpg> .
 
 :catalhoyuk-seated-female-figurine a :human-figure ;
    rdfs:label "Catalhoyuk Seated Female Figurine" ;
