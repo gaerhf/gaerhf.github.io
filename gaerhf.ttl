@@ -346,7 +346,7 @@
    :described-by <https://journals.openedition.org/palethnologie/3170> ;
    :earliest-date -31000 ;
    :latest-date -15000 ;
-   :note "The earliest date is exceptionally early. See article for description of uncertainty." ;
+   :note "The earliest date is exceptionally early. See article for description of uncertainty. From article: “Toca da Bastiana: Anthropomorphic figures covered by a 0.2 cm layer of calcite, a sample of which was dated by EPR in 1991 to 17 000 years ago. At the site of Toca da Bastiana, red painted figures were covered with layers of calcite first dated to 17 000 ± 2 000 BP, while other samples were later dated to between 33 000 and 35 900 years ago.”" ;
    :in-modern-country-note "Brazil" ;
    :representative-latlong-point (-8.666667 -42.55) ;
    :thumbnail-image <https://journals.openedition.org/palethnologie/docannexe/image/3170/img-1.jpg> .
@@ -358,6 +358,7 @@
    :latest-date -27000 ;
    :material-note "Ceramic" ;
    :in-modern-country-note "Czech Republic" ;
+   :note "Adapted from Wikipedia: “ ... a ceramic statuette of a nude female figure dated to 31,000–27,000 years ago (Gravettian industry). It was found at the Paleolithic site Dolní Věstonice in the Moravian basin south of Brno, at the base of Děvín Mountain in what is today the Czech Republic.”" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (48.877778 16.652222) ; # ll for Dolní Věstonice
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vestonicka_venuse_edit.jpg> .
@@ -989,6 +990,15 @@
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (31.1392 35.2939) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
+
+:platform-heads-sefertepe a :group-of-human-figures ;
+   rdfs:label "Platform with Human Heads from Sefertepe" ;
+   :described-by <https://www.turkiyetoday.com/culture/8500-year-old-carved-faces-tiny-double-faced-bead-reshape-sefertepes-role-in-tas-tepe-3210504> ;
+   :approximate-date -6500 ;
+   :note "From Turkiye Today article: “... stone block that carries two different human faces side by side. According to the excavation team, one face is rendered in high relief, while the other appears in low relief, so the two images emerge from the same block with different depths.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.181603 39.495559) ;
+   :thumbnail-image <https://img.turkiyetoday.com/images/2025/11/28/8500-year-old-carved-faces-and-tiny-double-faced-bead-reshape-sefertepes-role-in-tas-3210504.jpeg> .
 
 :marble-figurines-knossos a :human-figure ;
    rdfs:label "Neolithic Marble Figurine from Knossos" ;
@@ -2101,26 +2111,15 @@
    :representative-latlong-point (36.958778 42.7215) ; # Bassetki, Iraq
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bassetki_Statue,_Akkadian_period,_23rd_century_BCE,_from_Bassetki,_Iraq._Iraq_Museum.jpg> .
 
-:bmac-seated-female a :human-figure ;
-   rdfs:label "BMAC Seated Female" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/329073> ;
-   :earliest-date -2200 ;
-   :latest-date -1700 ;
-   :material-note "Steatite or chlorite, alabaster" ;
-   :in-modern-country-note "Turkmenistan or Neighboring" ;
-   :representative-latlong-point (37.30111 64.15531) ;
-   :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_female_MET_DT867.jpg> .
-
-:bmac-standing-male a :human-figure ;
-   rdfs:label "BMAC Standing Male" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/328593> ;
-   :earliest-date -2200 ;
-   :latest-date -1700 ;
-   :in-modern-country-note "Turkmenistan or Neighboring" ;
-   :representative-latlong-point (37.3028 64.153) ;
-   :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monstrous_male_figure_MET_dp22227.jpg> .
+:pashupati-seal a :human-figure ;
+   rdfs:label "Pashupati Seal" ;
+   :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
+   :art-historical-culture-or-tradition :indus-valley-civilization ;
+   :approximate-date -2200 ;
+   :materia-note "Steatite" ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (27.329167 68.138889) ; # ll for Mohenjo-daro, Pakistan
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
 
 :red-jasper-male-torso-harappa a :human-figure ;
    rdfs:label "Red Jasper Male Torso from Harappa" ;
@@ -2146,15 +2145,26 @@
    :representative-latlong-point (30.628889 72.863889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harappa_13_grey_stone_male_dancer_statuette.jpg> .
 
-:pashupati-seal a :human-figure ;
-   rdfs:label "Pashupati Seal" ;
-   :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
-   :art-historical-culture-or-tradition :indus-valley-civilization ;
-   :approximate-date -2200 ;
-   :materia-note "Steatite" ;
-   :in-modern-country-note "Pakistan" ;
-   :representative-latlong-point (27.329167 68.138889) ; # ll for Mohenjo-daro, Pakistan
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
+:bmac-seated-female a :human-figure ;
+   rdfs:label "BMAC Seated Female" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/329073> ;
+   :earliest-date -2200 ;
+   :latest-date -1700 ;
+   :material-note "Steatite or chlorite, alabaster" ;
+   :in-modern-country-note "Turkmenistan or Neighboring" ;
+   :representative-latlong-point (37.30111 64.15531) ;
+   :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_female_MET_DT867.jpg> .
+
+:bmac-standing-male a :human-figure ;
+   rdfs:label "BMAC Standing Male" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/328593> ;
+   :earliest-date -2200 ;
+   :latest-date -1700 ;
+   :in-modern-country-note "Turkmenistan or Neighboring" ;
+   :representative-latlong-point (37.3028 64.153) ;
+   :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monstrous_male_figure_MET_dp22227.jpg> .
 
 :seated-statue-of-gudea-of-lagash a :human-figure ;
    rdfs:label "Seated Statue of Gudea of Lagash" ;
@@ -5722,7 +5732,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Dominican Republic" ;
    :representative-latlong-point (19 -70.666667) ;
    :note "Findspot unknown" ;
-   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/web-additional/DP-17678-001.jpg> .
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312602/1899468/main-image> .
 
 :seated-figure-lejre a :human-figure ;
    rdfs:label "Seated Figure from Lejre" ;
@@ -5823,7 +5833,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (39.3075 -110.057222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PillingFigurines01.jpg> .
 
-:manuscript-covers-buddhit-deities a :group-of-human-figures ;
+:manuscript-covers-buddhist-deities a :group-of-human-figures ;
    rdfs:label "Manuscript Covers with Buddhist Deities" ;
    :described-by <https://www.metmuseum.org/art/collection/search/37791> ;
    :earliest-date 1075 ;
@@ -5831,7 +5841,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :material-note "Wood" ;
    :in-modern-country-note "Nepal" ;
    :representative-latlong-point (27.666314 85.353615) ;
-   :thumbnail-image <https://images.metmuseum.org/CRDImages/as/web-additional/DP-30181-001.jpg> .
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/37791/2209705/main-image> .
 
 :cahokian-resting-warrior-figurine a :human-figure ;
    rdfs:label "Cahokian Resting Warrior Figurine" ;
