@@ -1701,6 +1701,17 @@
    :art-historical-culture-or-tradition :sumerian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_mask_(cropped).jpg> .
 
+:pair-gilded-male-statues-tell-el-farkha a :group-of-human-figures ;
+   rdfs:label "Pair of Gilded Male Statues from Tell el-Farkha" ;
+   :described-by <https://en.wikipedia.org/wiki/Tell_el-Farkha#Golden_figurines> ;
+   :earliest-date -3200 ;
+   :latest-date -3000 ;
+   :material-note "Gold foil" ;
+   :note "From Wikipedia: “... gold fragments formed two statues of naked men with lapis lazuli eyes. The statuettes represent standing naked males. The high is 60cm for the tallest, and 30cm for the other one. The statues featured “large protruding ears, unnaturally large phalluses, and carefully modeled fingernails and toenails”. The lapis lazuli came from what is now modern day Afghanistan. The figurines represent bald individuals, with no facial hair and large protruding ears. They are equipped with very large phallus sheaths, one of them decorated with a carved band around it. The larger figure also has a necklace. The core of the statuettes (now decomposed) was made of wood, which was covered with thin sheets of gold fastened by 140 golden rivets.”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (30.870556 31.6025) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tell_el-Farkha_golden_figurine_(60cm_tall).jpg> .
+
 :idol-garrovillas a :human-figure ;
    rdfs:label "So-called Idol of Garrovillas" ;
    :described-by <https://es.m.wikipedia.org/wiki/Ídolo_de_Garrovillas> ;
