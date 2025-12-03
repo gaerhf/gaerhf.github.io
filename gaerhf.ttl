@@ -2075,6 +2075,15 @@
    :representative-latlong-point (30.417222 57.706389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_flag,_Shadad_Kerman,_Iran.JPG> .
 
+:anubanini-rock-relief a :group-of-human-figures ;
+   rdfs:label "Anubanini Rock Relief" ;
+   :described-by <https://en.wikipedia.org/wiki/Anubanini_rock_relief> ;
+   :approximate-date -2300 ;
+   :note "From Wikipedia: “In the rock relief, Anubanini, the king of the Lullubi, puts his foot on the chest of a captive. There are eight other captives, two of them kneeling behind the Lullubian equivalent of the Akkadian goddess Ishtar (recognisable by the four pairs of horns on her headdress and the weapons over her shoulders) and six of them standing in a lower row at the bottom of the rock relief. He is bare-chested, only wearing a short skirt.”" ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (34.4633 45.8683) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anubanini_Rock_Relief_1.jpg> .
+
 :mohenjo-daro-female-figurine a :human-figure ;
    rdfs:label "Mohenjo daro Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)> ,
