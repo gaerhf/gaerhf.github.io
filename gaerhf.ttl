@@ -1223,6 +1223,16 @@
    :representative-latlong-point (17.038890 21.862235) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/13_15/a3ea69af_4d22_4a65_94ff_a45a00ffeb2c/mid_CHAENP0210005.jpg> .
 
+:golpayegan-region-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Golpayegan Region Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Rock_art_in_Iran> ;
+   :earliest-date -5000 ;
+   :latest-date -3000 ;
+   :note "No single landing page found." ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (33.450833 50.281667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Golpayegan.petroglyphs0101.jpg> .
+
 :angono-petroglyphs a :group-of-human-figures ;
    rdfs:label "Angono Petroglyphs" ;
    :described-by <https://en.wikipedia.org/wiki/Angono_Petroglyphs> ;
