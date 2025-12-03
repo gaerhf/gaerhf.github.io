@@ -5075,6 +5075,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :note "No specific findspot." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/38119/146374/main-image> .
 
+:victory-relief-vindolanda a :human-figure ;
+   rdfs:label "Victory Figure from Arch Relief at Vindolanda" ;
+   :described-by <https://www.vindolanda.com/news/victory> ;
+   :approximate-date 215 ;
+   :material-note "Stone" ;
+   :note "From Vindolanda Trust website: “stone is thought to be one side of a much larger relief which would have framed an inscription in its centre. These particular barracks at Vindolanda were built at the end of a tumultuous time for the Romans in Britain, in c AD 213, just after the end of the Severan wars.”" ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (54.9911 -2.3608) ;
+   :thumbnail-image <https://www.vindolanda.com/GetImage.aspx?IDMF=7def79ad-4186-4493-bff0-734c20b3fe4c&w=700&h=525&src=mc> .
+
 :hoxne-hoard-pepper-pot a :human-figure ;
    rdfs:label "Hoxne Hoard Pepper Pot" ;
    :described-by <https://en.wikipedia.org/wiki/Empress_pepper_pot> ;
