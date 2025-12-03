@@ -1032,7 +1032,6 @@
    :note "From the linked article, “The overall pattern suggests that the artifact represents a human figure. One of the wider surfaces with the most complicated engravings appears to be the front side (Fig. 2: 1b, 2b). The supposed head is decorated with several vertical lines from the top, likely representing hair. The vertical lines are rather short in the middle and depict short hair bangs. Interestingly, the ends of these lines are explicitly delineated by horizontal lines. Further, the face does not show any depiction of facial features such as the eyes and nose (Figs. 2: 2b; 3: 5). Moreover, the top of the head is unprocessed in an area approximately 4.7 mm in diameter. This area is encircled by 2–3 circular lines, which may represent a hairband or the edge of a cap. The top of the head is not decorated.”" ;
    :thumbnail-image <https://ars.els-cdn.com/content/image/1-s2.0-S2352226725000212-gr2.jpg> .
 
-
 :cueva-huenul-1-rock-art a :group-of-human-figures ;
    rdfs:label "Cueva Huenul 1 Rock Art" ;
    :described-by <https://www.science.org/doi/10.1126/sciadv.adk4415>, <https://doi.org/10.7183/1045-6635.26.3.304> ;
@@ -1576,6 +1575,18 @@
    :art-historical-culture-or-tradition :neolithic-europe ;
    :representative-latlong-point (59.322778 -3) ; 
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Westray_Wife_20110529.jpg> .
+
+:pecos-river-rock-art a :group-of-human-figures ;
+   rdfs:label "Pecos River Vallye Rock Art" ;
+   :described-by <https://www.science.org/doi/10.1126/sciadv.adx7205> ,
+      <https://www.livescience.com/archaeology/ancient-rock-art-along-us-mexico-border-persisted-for-more-than-4-000-years-and-it-depicts-indigenous-views-of-the-universe> ,
+      <https://archaeology.org/news/2025/12/02/new-dates-obtained-for-texas-rock-art/> ;
+   :earliest-date -3700 ;
+   :latest-date 1000 ;
+   :note "From Science Advances article: “The larger panels can measure 150 m long and 15 m high, requiring ladders or scaffolding to produce. Previous stratigraphic analyses using digital microscopy, coupled with iconographic studies, suggest that some of the murals are planned, narrative compositions, rather than random collections of images painted across time (8, 18, 35). They include anthropomorphic, zoomorphic, and enigmatic figures, as well as elaborate conflations of all three (Fig. 4). Anthropomorphs range in size from 10 cm to 8 m tall and are portrayed with an assemblage of accoutrements and paraphernalia.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (29.346464 -104.079871) ;
+   :thumbnail-image <https://cdn.mos.cms.futurecdn.net/YCGtzGK6JXqhj83s8AwRBX-1200-80.jpg.webp> .
 
 :egyptian-predynastic-female-figurine a :human-figure ;
    rdfs:label "Egyptian Predynastic Female Figurine" ;
