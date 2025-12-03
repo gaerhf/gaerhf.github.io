@@ -3938,8 +3938,10 @@
 
 :great-altar-pergamon a :group-of-human-figures ;
    rdfs:label "Great Altar at Pergamon" ;
+   :described-by <https://en.wikipedia.org/wiki/Pergamon_Altar> ;
    :earliest-date -170 ;
    :latest-date -150 ;
+   :note "From Wikipedia article: “35.74 metres (117 ft 3 in) wide and 33.4 metres (109 ft 7 in) deep; the front stairway alone was almost 20 metres (66 ft) wide. The base was decorated with a frieze in high relief showing the battle between the Giants and the Olympian gods known as the Gigantomachy. There was a second, smaller and less well-preserved high relief frieze on the inner court walls which surrounded the actual fire altar on the upper level of the structure at the top of the stairs. In a set of consecutive scenes, it depicts events from the life of Telephus, legendary founder of the city of Pergamon and son of the hero Heracles and Auge, one of Tegean king Aleus's daughters.”" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (39.131051 27.183931) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pergamonmuseum_-_Antikensammlung_-_Pergamonaltar_13.jpg> .
