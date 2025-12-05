@@ -1448,8 +1448,9 @@
       <https://archaeology.org/news/2025/06/20/6000-year-old-polish-venus-figurine-studied/> ,
    <https://www.theartnewspaper.com/2025/06/19/archaeologists-confirm-that-limestone-venus-found-by-a-farmer-in-poland-is-6000-years-old> ;
    :approximate-date -4000 ;
+   :material-note "Limestone" ;
    :in-modern-country-note "Poland" ;
-   :note "Mapped to approximate point." ;
+   :note "Mapped to approximate point. From Archaeology Magazine website: “ ... the figure is rather simplistically crafted and has no discernible facial features. The lower limbs seem to have been created by striking the stone with a hard tool.”" ;
    :representative-latlong-point (54.176111 15.576111) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/06/News-20250620-Poland-Kolobrzeg-Venus.jpg> .
 
