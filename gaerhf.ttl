@@ -997,6 +997,17 @@
    :representative-latlong-point (31.1392 35.2939) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
 
+:cave-swimmer-pictographs a :group-of-human-figures ;
+   rdfs:label "Cave of the Swimmers Pictographs" ;
+   :described-by <https://en.wikipedia.org/wiki/Cave_of_Swimmers> ,
+      <https://www.bradshawfoundation.com/africa/gilf_kebir_cave_of_swimmers/index.php> ;
+   :earliest-date -7000 ;
+   :latest-date -6000 ;
+   :note "Adapted from Wikipedia: “The rock shelter and rock art were discovered in October 1933 by the Hungarian explorer László Almásy. It contains Neolithic pictographs (rock painting images) and is named due to the depictions of people with their limbs bent as if they were swimming. The drawings include those of a giraffe and a hippopotamus. They are estimated to have been created as early as 8000 BC with the beginning of the African Humid Period, when the Sahara was significantly greener and wetter than it is today.”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (23.594719 25.2335) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:WadiSuraSwimmers.jpg> .
+
 :platform-heads-sefertepe a :group-of-human-figures ;
    rdfs:label "Platform with Human Heads from Sefertepe" ;
    :described-by <https://www.turkiyetoday.com/culture/8500-year-old-carved-faces-tiny-double-faced-bead-reshape-sefertepes-role-in-tas-tepe-3210504> ;
@@ -5839,7 +5850,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :rallinge-statuette a :human-figure ;
    rdfs:label "Rällinge Statuette" ;
-   :described-by <https://en.wikipedia.org/wiki/Rällinge_statuette> ;
+   :described-by <https://en.wikipedia.org/wiki/Rällinge_statuette> ,
+      <https://openarchaeologydata.metajnl.com/articles/10.5334/joad.180> ;
    :approximate-date 1000 ;
    :note "Mapped point is an approximation." ;
    :in-modern-country-note "Sweden" ;
