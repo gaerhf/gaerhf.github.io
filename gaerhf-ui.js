@@ -7,7 +7,7 @@ const detailImageDiv = document.getElementById('detail-image');
 const headerContainer = document.getElementById('header-container');
 
 const minYear = -50000; // Minimum year
-const maxYear = 1300;     // Maximum year
+const maxYear = 1500;     // Maximum year
 
 // Check for 'play' CGI parameter in the URL
 const urlParams = new URLSearchParams(window.location.search);

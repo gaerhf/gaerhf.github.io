@@ -642,6 +642,7 @@
    :described-by <https://www.bradshawfoundation.com/south_america/serra_da_capivara/pedra_furada/index.php> ;
    :earliest-date -10000 ;
    :latest-date -4000 ;
+   :note "From Bradshaw Foundation website: “The rock art of Pedra Furada depicts the use of spearthrowers and and traps to hunt. Archaeologists have found a lithic industry incorporating quartzite, flint, chalcedony, and quartz. The number of types of tools is limited and their design is not overly elaborate. / The paintings, termed 'Nordeste (Northeast) Tradition', date to approximately 12,000 years BP. The main characteristic of the Nordeste Tradition are narrative figures representing actions of daily life (leisure activity - 'actions ludiques'), hunting and ceremonial events, as well as abstract and geometrical designs.”" ;
    :in-modern-country-note "Brazil" ;
    :representative-latlong-point (-8.666667 -42.55) ; # national park
    :thumbnail-image <https://www.bradshawfoundation.com/south_america/serra_da_capivara/pedra_furada/photographs/5a.jpg> .
@@ -951,6 +952,7 @@
     <https://youtu.be/taoczmLPC6U> ;
     :approximate-date -7500 ;
     :material-note "Human skull modeled with lime plaster, paint " ;
+    :note "From Wikipedia: “A collection of nine technically and stylistically similar, overmodelled skulls were retrieved from two areas. Detailed study of the skulls is currently underway to provide insight into the traditions and social ties of the villagers. The residents of Tell Aswad reserved a very sophisticated treatment for the dead: skulls were removed and cleaned, with a face modelled directly onto the bone with lime plaster and then painted.””" ;
     :in-modern-country-note "Syria" ;
     :representative-latlong-point (33.4 36.55) ;
     :thumbnail-image <https://virtual-museum-syria.org/damascus/wp-content/uploads/sites/13/2021/05/241555304_361314845686225_7848441567817823173_n.jpg> .
@@ -1422,6 +1424,18 @@
    :in-modern-country-note "Romania" ;
    :representative-latlong-point (44.086667 26.636667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Oltenita_deity_holding_pot_gurnelnita_4600-3900_mnir.jpg> .
+
+:vessel-female-vidra a :human-figure ;
+   rdfs:label "Vessel in Female Form from Vidra" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:The_Goddess_from_Vidra.jpg> ,
+      <https://ca.wikipedia.org/wiki/Cultura_Gumelniţa–Karanovo> ;
+   :earliest-date -4200 ;
+   :latest-date -3900 ;
+   :material-note "Ceramic" ;
+   :note "No discrete landing page known. The current info here is very much a placeholder." ;
+   :in-modern-country-note "Romania" ;
+   :representative-latlong-point (46.352209 22.898067) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Goddess_from_Vidra.jpg> .
 
 :rock-art-alta a :group-of-human-figures ;
    rdfs:label "Rock Art at Alta" ;
@@ -1989,11 +2003,12 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hesy-Ra_CG1426.jpg> .
 
 :valdiva-culture-female-figurine a :human-figure ;
-   rdfs:label "Valdiva Culture Female Figurine" ;
+   rdfs:label "Valdivia Culture Female Figurine" ;
    :described-by <https://www.brooklynmuseum.org/en-GB/objects/102869> ;
    :earliest-date -2600 ;
    :latest-date -1500 ;
    :in-modern-country-note "Ecuador" ;
+   :note "From Brooklyn Museum website: “Small anthropomorphic ceramic figurines are the hallmark of the ancient Valdivia culture of the tropical lowlands of western Ecuador. They usually depict nude women with prominent breasts, short arms, elaborate hairstyles, and incised features. Because of their abundance and the fact that they appear to have been intentionally mutilated and discarded with common household rubbish, scholars have suggested two possible functions: as offerings in fertility rituals or as repositories for spirit helpers summoned by shamans during healing ceremonies.”" ;
    :representative-latlong-point ( -2.2267 -80.8583 ) ;
    :art-historical-culture-or-tradition :valdiva-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Valdivia_Female_Figurine_2600-1500_BCE_Brooklyn_Museum.jpg> .
