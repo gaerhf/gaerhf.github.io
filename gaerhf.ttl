@@ -673,6 +673,7 @@
    :described-by <https://en.wikipedia.org/wiki/Grotta_del_Genovese> ,
       <https://www.grottadelgenovese.it/> ;
    :approximate-date -9500 ;
+   :note "From Wikipedia: “The Grotta del Genovese (in English: Genovese Cave) is located on the island of Levanzo, in the Aegadian Islands, northwest of Sicily. The cave was discovered in 1949. The cave, which opens into the limestone rocks that form the island, preserves significant documentation of Sicilian prehistory, particularly from the Upper Paleolithic period. It provides images of Quaternary animals such as the red deer, aurochs, and hydrontin, as well as some human figures with bird-head masks and headdresses similar to those found in the Addaura caves.”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (38.001689 12.321625) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Grotta_de_Levanzo.jpg> .
@@ -846,6 +847,7 @@
    :described-by <https://virtual-museum-syria.org/aleppo/female-figurine-2/> ;
    :approximate-date -8000 ;
    :material-note "Ceramic" ;
+   :note "From Virtual Museum Syria website: “Most of the female figurines made during the Neolithic period were shaped out of clay that was slightly hardened by fire but not really baked. This figurine was one of eight discovered on the site of Tell Mureybet. It is clear that the artist sought to emphasize the part of the body linked to reproduction – the pelvic region, or maternal womb, and the breasts, or nourishing bosom. It is significant that all the figurines of this type lack facial features, since these were not directly related to the intended symbolism.”" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (36.0434 38.1287) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -926,6 +928,7 @@
    :described-by <https://en.wikipedia.org/wiki/Kilisik_sculpture> ;
    :earliest-date -7500 ;
    :latest-date -7000 ;
+:note "Adapted from Wikipedia: ”The statue is 80 cm high, and dates to the Pre-Pottery Neolithic B, tentatively to 7500-7000 BCE. The base is broken, and the complete statue could have been about 3 meters high, like the other T-shaped statues at Göbekli Tepe and Nevalı Çori. / The statue shares characteristics with the “T”-shaped stelae with arms on the sides excavated at sites like Göbekli Tepe and Nevalı Çori, and with the statues discovered at the “Taş Tepeler” sites of Göbekli Tepe, Nevalı Çori, Karahan Tepe, or Sanlıurfa-Yeni Mahalle. / The arms join at the front, with hands properly shaped with fingers, over a penis, or the small relief of a human, possibly a child. Below the “child” is a hole, which could symbolize a vagina. This may thus represent a woman or a goddess giving birth. There are some facial features, including a long broad nose." ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.804 38.541) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adiyaman-Kilisik_sculpture.jpg> .
