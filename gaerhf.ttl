@@ -1920,6 +1920,7 @@
    :earliest-date -3000 ;
    :latest-date -2000 ;
    :material-note "Sandstone" ;
+   :note "From Met Museum website: “This sculpture is one of a group of statues associated with the Bronze Age of Southwestern Arabia, present-day Yemen. It comes at the beginning of a figural tradition characterized by simplification of human forms into smooth and solid geometric shapes. The statue represents a standing female figure, with a deep groove emphasizing the belly and a clearly indicated pubic triangle. Her legs at first appear truncated but she is complete: her toes, like her hands and fingers, are indicated by incisions. Her face is represented schematically, with simplified eyes, nose, and chin. She wears a strap across her body and a necklace.”" ;
    :in-modern-country-note "Yemen" ;
    :art-historical-culture-or-tradition :ancient-arabia ;
    :representative-latlong-point (16 49) ;
