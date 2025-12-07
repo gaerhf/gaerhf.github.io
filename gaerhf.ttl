@@ -5719,6 +5719,24 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (15.666944 108.383056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:DaNang_Tara.jpg> .
 
+:fort-mojave-twins a :group-of-human-figures ;
+   rdfs:label "Fort Mojave Twins Geoglyphs" ;
+   :described-by <https://www.icp.org/browse/archive/objects/fort-mojave-twins-az> ;
+   :approximate-date 900 ;
+   :note "Chronology uncertain. Not in Wikipedia. But should be." ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (35.009388 -114.608283) ;
+   :thumbnail-image <https://s3.amazonaws.com/icptmsdata/b/r/i/d/bridges_marilyn_2008_2_15_crop_417029_displaysize.jpg> .
+
+:bouse-fisherman-geoglyph a :human-figure ;
+   rdfs:label "Bouse Fisherman Geoglyph" ;
+   :described-by <https://www.ancientartarchive.org/blythe-intaglios-geoglyphs/> ;
+   :approximate-date 900 ;
+   :note "Chronology speculative. Not in Wikipedia. But should be." ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (33.790690 -114.094457) ;
+   :thumbnail-image <https://d38zjy0x98992m.cloudfront.net/047e5148-8451-4088-98e7-f7650c8c8385/ALV200217009205_xgaplus.jpg> .
+
 :bowl-figure-vessel a :human-figure ;
    rdfs:label "Bowl with Figure holding Vessel" ;
    :described-by <https://www.metmuseum.org/art/collection/search/449495> , 
@@ -5762,9 +5780,10 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Igbo_ukwu_face_pendant.png> .
 
 :blythe-geoglyphs a :group-of-human-figures ;
-   rdfs:label "Blythe Geoglyps" ;
+   rdfs:label "Blythe Geoglyphs" ;
    :described-by <https://en.wikipedia.org/wiki/Blythe_Intaglios> ,
-      <https://www.ancientartarchive.org/blythe-intaglios-geoglyphs/> ;
+      <https://www.ancientartarchive.org/blythe-intaglios-geoglyphs/> ,
+      <https://www.blm.gov/visit/blythe-intaglios> ;
    :earliest-date 900 ;
    :latest-date 1200 ;
    :note "Adapted from Wikipedia: “The Blythe Intaglios contain three human figures, two four-legged animals, and a spiral ... The largest human figure in the Blythe Intaglio group is 52 m long.”" ;
@@ -6107,7 +6126,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.hawaiipublicradio.org/local-news/2025-07-25/hawaiian-petroglyphs-resurface-with-changing-tides-and-shifting-sands>,
     <https://www.smithsonianmag.com/smart-news/centuries-old-hawaiian-petroglyphs-emerge-from-the-sand-for-the-first-time-in-nine-years-180987080/> ;
    :approximate-date 1500 ;
-   :note "From Hawaii NPR website: “Archaeologists identified a total of 26 petroglyphs. Of the 18 anthropomorphic stick figures, eight are depicted with possible male genitalia and the remainder are of undetermined gender, the report said. / The entire panel stretches about 115 feet long, Gilda said." ;
+   :note "From Hawaii NPR website: “Archaeologists identified a total of 26 petroglyphs. Of the 18 anthropomorphic stick figures, eight are depicted with possible male genitalia and the remainder are of undetermined gender, the report said. / The entire panel stretches about 115 feet long ..." ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point ( 21.447081 -158.191729 ) ;
    :thumbnail-image <https://npr.brightspotcdn.com/dims4/default/06f2fb1/2147483647/strip/true/crop/3000x2000+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd8%2F01%2F90be35714bffa6f90ef1e9abb926%2Fap25204741938927.jpg> .
