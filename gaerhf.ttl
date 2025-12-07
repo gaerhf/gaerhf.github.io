@@ -4273,6 +4273,18 @@
    :art-historical-culture-or-tradition :andean ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CO_San_Agustín_0802_002_(17248622975).jpg> .
 
+:petroglyph-faces-manaus a :group-of-human-figures ;
+   rdfs:label "Petroglyphs Faces from Manaus" ;
+   :described-by <https://www.ancientartarchive.org/record-low-water-reveals-petroglyphs-in-brazil/> ,
+      <https://www.reuters.com/world/americas/ancient-amazon-river-rock-carvings-exposed-by-drought-2023-10-23/> ,
+      <https://www.theguardian.com/science/2023/oct/24/brazil-amazon-climate-change-rock-carvings-petroglyphs> ;
+   :earliest-date 1 ;
+   :latest-date 1000 ;
+   :note "Chronology uncertain. From Ancient Art Archive website: “Human faces and other figures etched in stone up to 2,000 years ago have been revealed on Amazon riverbanks as a historic drought in the Brazilian region has brought water levels to unprecedented lows.”" ;
+   :in-modern-country-note "Brazil" ;
+   :representative-latlong-point (-3.161182 -59.986566) ;
+   :thumbnail-image <https://www.ancientartarchive.org/wp-content/uploads/lowwater.png> .
+
 :prima-porta-augustus a :human-figure ;
    rdfs:label "Prima Porta Augustus" ;
    :described-by <https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta> ;
