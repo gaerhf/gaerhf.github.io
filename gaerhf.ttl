@@ -392,6 +392,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Brassempouy> ;
    :approximate-date -25000 ;
    :material-note "Mammoth ivory" ;
+   :note "Adapted from Wikipedia: “ ... a fragmentary ivory figurine from the Upper Palaeolithic, apparently broken from a larger figure at some time unknown. It was discovered in a cave at Brassempouy, France in 1894.”" ;
    :in-modern-country-note "France" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (43.6328 -0.6936) ; # ll for Brassempouy, France
@@ -414,6 +415,7 @@
    :earliest-date -23000 ;
    :latest-date -22000 ;
    :material-note "Limestone; red ochre paint." ;
+   :note "Adapted from Wikipedia: “... an 18.11-inch-high (46.0-centimetre) limestone bas-relief of a nude woman. It is painted with red ochre and was carved into the limestone of a rock shelter (Abri de Laussel) in the commune of Marquay, in the Dordogne department of south-western France.”" ;
    :in-modern-country-note "France" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (44.9447 1.1347) ; # ll for Marquay, Dordogne
@@ -431,10 +433,12 @@
 
 :mal-ta-female-figurines a :group-of-human-figures ;
    rdfs:label "Figurines from Mal'ta (Siberia)" ;
-   :described-by <http://malta.artemiris.org/category/view/9> ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_figurines_of_Mal%27ta> , 
+      <http://malta.artemiris.org/category/view/9> ;
    :period-note "Mal'ta-Buret' Culture (Siberia)" ;
    :earliest-date -21000 ;
    :latest-date -20500 ;
+   :note "Adapted from Wikipedia: “ ... 29 figurines altogether. They are about 23,000 years old and stem from the Gravettian. Most of these statuettes show stylized clothes. Quite often the face is depicted. They were discovered at Mal'ta, at the Angara River, near Lake Baikal in Irkutsk Oblast, Siberia ...”" ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (52.850045 103.517383) ;
    :art-historical-culture-or-tradition :mal-ta-buret-culture ;
@@ -446,6 +450,7 @@
     <https://www.world-archaeology.com/features/object-lesson-venus-of-renancourt/> ;
    :approximate-date -21000 ;
    :material-note "Chalk" ;
+   :note "From world-archaeology.com website: “Carved out of chalk and standing to a height of 4cm, the female figure has the prominent, fleshy thighs, buttocks, and breasts typical of these works from a late phase of the Gravettian culture (28,000-22,000 years ago). The face is undistinguishable and the arms barely there, but more clearly defined features include the figure’s navel and her hair, or headwear, marked out by a grid-like arrangement of thin incised lines.”" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (49.893932 2.261113) ;
    :note "Mapped at approximate point." ;
@@ -477,6 +482,7 @@
     <https://en.wikipedia.org/wiki/Laugerie-Basse> ;
    :earliest-date -17000 ;
    :latest-date -14000 ;
+   :note "Adapted from Wikipedia: “ ... headless, footless, armless but with a strongly incised vulva. The figurine is eight centimetres tall and carved from ivory.”" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (44.570278 0.595556) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_of_Impudique_-_1.jpg> .
@@ -3355,6 +3361,17 @@
    :in-modern-country-note "Saudi Arabia" ;
    :representative-latlong-point (26.646980 37.916142) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_a_man_at_National_Museum_of_Korea_01.jpg> .
+
+:silk-painting-man-riding-dragon a :human-figure ;
+   rdfs:label "Silk painting depicting a man riding a dragon" ;
+   :described-by <https://en.wikipedia.org/wiki/Silk_painting_depicting_a_man_riding_a_dragon> ;
+   :earliest-date -500 ;
+   :latest-date -200 ;
+   :material-note "Ink on silk" ;
+   :note "From Wikipedia: “ ... man with a sword is riding a dragon by holding the rein. The dragon's body was given the shape of a boat. A little egret is standing at the tail of the dragon. A carp under the dragon is leading the way. The umbrella in the top middle of the picture shows the owner's nobility.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (28.228 112.939) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Changshadragon.jpg> .
 
 :nok-male-head a :human-figure ;
    :described-by <https://www.slam.org/collection/objects/28893/> ;
