@@ -5523,6 +5523,15 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palenque_-_Maske_des_Pakal.jpg> .
 
+:renshou-giant-buddha a :human-figure ;
+   rdfs:label "Renshou Giant Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Renshou_Giant_Buddha> ;
+   :approximate-date 707 ;
+   :note "Location not precisely mapped. The Wikipedia article is a stub. Brief quote: “Renshou Giant Buddha (traditional Chinese: 仁壽大佛; simplified Chinese: 仁寿大佛; pinyin: Rénshòu Dàfó), also known as Niujiaozhai Giant Buddha (牛角寨大佛), is a large stone Buddha located within Renshou County, Sichuan”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (30.253091 104.174724) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Renshou_Giant_Buddha.webp> .
+
 :painting-women-takamatsuzuka-tomb a :group-of-human-figures ;
    rdfs:label "Painting of Women from Takamatsuzuka Tomb" ;
    :described-by <https://en.wikipedia.org/wiki/Takamatsuzuka_Tomb> ;
@@ -5704,6 +5713,15 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "El Salvador" ;
    :representative-latlong-point (13.979444 -89.674167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:ES_Tazumal_06_2011_Xipe_Totec_2292.jpg> .
+
+:rongxian-giant-buddha a :human-figure ;
+   rdfs:label "Rongxian Giant Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Rongxian_Giant_Buddha> ;
+   :approximate-date 817 ;
+   :note "Adapted from Wikipedia: “The Rongxian Giant Buddha (simplified Chinese: 荣县大佛; traditional Chinese: 榮縣大佛; pinyin: Róngxìan Dàfó) formerly romanized as Yong-hien or Hong-yien, is a 36.7-metre (120 ft) tall stone statue, built around 817 (during the Tang dynasty), depicting Maitreya.[citation needed] It is 90 kilometres east of the Leshan Giant Buddha. The Buddha is carved out of the cliff face of a stone hill that lies to the north east of Rongxian and the Rongxi River in the eastern part of Sichuan province in China. Standing 414 metres above sea level, the stone sculpture overlooks the town of Rongxian below its feet.”" ;
+   :in-moodern-country-note "China" ;
+   :representative-latlong-point (29.454722 104.431111) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rongxian_Dafo_2014.04.24_13-51-12.jpg> .
 
 :altar-13-caracol a :group-of-human-figures ;
    rdfs:label "Altar 13 at Caracol" ;
