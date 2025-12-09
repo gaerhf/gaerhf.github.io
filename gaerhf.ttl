@@ -501,6 +501,7 @@
    rdfs:label "Female Figurine from Eliseevichi" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Eliseevichi> ;
    :approximate-date -16000 ;
+   :note "From Wikipedia: “iscovered in 1930, near the Sudost River in the Bryansk region of Russia. It is 15 cm high and was carved from mammoth ivory.”" ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (52.95 33.4) ;
    :note "Mapped point very approximate." ;
@@ -658,6 +659,7 @@
    :described-by <https://en.wikipedia.org/wiki/Magura_Cave> ;
    :earliest-date -10000 ;
    :latest-date -3000 ;
+   :note "From Wikipedia: “Cave paintings dating from the Epipaleolithic, late Neolithic, Eneolithic and early Bronze Age decorate some of the cave's walls. The paintings have been estimated to be made between 10.000 and 8.000 years ago. The drawings represent important events of the society that had occupied the Magura Cave: religious ceremonies, hunting scenes and depictions of deities ...”" ;
    :in-modern-country-note "Bulgaria" ;
    :representative-latlong-point (43.727778 22.582778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Magura_-_drawings.jpg> .
@@ -5988,6 +5990,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Chile" ;
    :representative-latlong-point (-27.12 -109.35) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:British_Museum_(6424973639).jpg> .
+
+:castle-gardens-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Castle Gardens Petroglyph Site" ;
+   :described-by <https://en.wikipedia.org/wiki/Castle_Gardens_Petroglyph_Site> ;
+   :earliest-date 1000 ;
+   :latest-date 1250 ;
+   :note "From Wikipedia: “ ... a 6-mile (9.7 km) by 1-mile (1.6 km) region of vertical cliff faces in Fremont County, Wyoming, United States, with extensive petroglyph images incised in the rock faces. The glyphs include images of water turtles and circular shields, as well as human and animal figures.[2] The figures with circular shields are particular to the area, and are known as Castle Gardens Shield style images. A consensus of researchers is that the figures were carved by Athabaskans related to the Navajo and Apache, some time between 1000 AD and 1250 AD”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (42.9293 -107.6137) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:1205CastleGardens2.jpg> .
 
 :three-rivers-petroglyphs a :group-of-human-figures ;
    rdfs:label "Three Rivers Petroglyphs" ;
