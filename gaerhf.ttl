@@ -5742,6 +5742,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (59.905 10.6844) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buckle_from_Oseberg_Vikingship_Buddha.JPG> .
 
+:printed-diamond-sutra-mogao-caves a :group-of-human-figures ;
+   rdfs:label "Printed Diamond Sutra from Mogao Caves" ;
+   :described-by <https://en.wikipedia.org/wiki/Diamond_Sutra> ,
+      <https://en.wikipedia.org/wiki/Dunhuang_manuscripts> ;
+   :approximate-date 868 ;
+   :note "From “Diamond Sutra” Wikpedia page: “A copy of the Tang dynasty Diamond Sūtra was found among the Dunhuang manuscripts in 1900 by Daoist monk Wang Yuanlu and sold to Aurel Stein in 1907. It dates back to May 11, 868 CE and is broadly considered to be the oldest extant printed book, although other, earlier, printed materials on paper exist that predate this artifact. It is in the collection of the British Library.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (40.037222 94.804167) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jingangjing.jpg> .
+
 :female-bodhisattva-dong-duong a :human-figure ;
    rdfs:label "Female Bodhisattva from " ;
    :described-by <https://smarthistory.org/dong-duong-buddhist-temple-complex-vietnam/> ,
