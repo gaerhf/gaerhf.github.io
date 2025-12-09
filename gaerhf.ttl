@@ -5704,6 +5704,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (53.7775 -6.4175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monasterboice_(52358533944).jpg> .
 
+:cub-creek-petroglyph-panel a :group-of-human-figures ;
+   rdfs:label "Cub Creek Petroglyph Panel" ;
+   :described-by <https://www.nps.gov/places/cub-creek-petroglyphs-pullout-13.htm> ;
+   :earliest-date 800 ;
+   :latest-date 1100 ;
+   :note "From NPS website: “The petroglyph panels here at Cub Creek feature a variety of typical Fremont designs, including human and animal figures and abstract designs.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (40.419351 -109.188222) ;
+   :thumbnail-image <https://www.nps.gov/common/uploads/cropped_image/primary/8E9D0865-EA19-2221-BCD1C1928F7CB666.jpg?width=1600&quality=90&mode=crop> .
+
 :standing-xipe-totec-tazumal a :human-figure ;
    rdfs:label "Standing Figure of Xipe Totec from Tazumal" ;
    :described-by <https://en.wikipedia.org/wiki/Tazumal#Sculpture> ;
@@ -5978,6 +5988,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Chile" ;
    :representative-latlong-point (-27.12 -109.35) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:British_Museum_(6424973639).jpg> .
+
+:three-rivers-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Three Rivers Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Three_Rivers_Petroglyph_Site> ;
+   :earliest-date 1000 ;
+   :latest-date 1400 ;
+   :note "From Wikipedia: “There are over 21,000 petroglyphs at the Three Rivers Petroglyph Site at Three Rivers, New Mexico, located midway between Tularosa and Carrizozo in Otero County on Highway 54. Many of the petroglyphs can be easily viewed from a trail open to the public which winds through the rocks for about one mile. The petroglyphs are thought to be the product of the Jornada Mogollon people between about 1000 and 1400 AD.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (33.346944 -106.011667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Three_Rivers_Petroglyph_Site_12.jpeg> .
 
 :chaco-clay-figurines a :group-of-human-figures ;
    rdfs:label "Chaco Clay Figurines" ;
