@@ -3617,7 +3617,8 @@
 
 :scultpures-tel-abrak a :group-of-human-figures ;
    rdfs:label "Parthian(?) Sculptures from Tel Abrak" ;
-   :described-by <https://en.wikipedia.org/wiki/Tell_Abraq#Archaeology> ;
+   :described-by <https://en.wikipedia.org/wiki/Tell_Abraq#Archaeology> ,
+      <https://doi.org/10.15184/aqy.2025.10246> ;
    :earliest-date -300 ;
    :latest-date -200 ;
    :note "Date taken from wikipedia. Is it too narrow?" ;
@@ -4688,6 +4689,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 #    :period-note "Silla Kingdom (Korea)" ;
 #    :earliest-date 500 ;
 #    :latest-date 500 .
+
+:lydenburg-heads a :group-of-human-figures ;
+   rdfs:label "Lydenburg Heads" ;
+   :described-by <https://en.wikipedia.org/wiki/Lydenburg_heads> ,
+      <https://www.metmuseum.org/essays/lydenburg-heads-ca-500> ;
+   :approximate-date 500 ;
+   :note "From Wikipedia: “The heads share a basic pot like formation with subtle differences in the way they were each shaped. The base formed at the bottom of all the heads was completed like the rim of a pot. Parts of the rim are rounded, however some parts of the base reflects a flat squared shape. While the Basal rings may be incised or moulded the neck rings above these basal rings contain diagonally incised rings that circle the entire neck. The incised pattern constitutes hatch marks that alternate in direction producing a herringbone pattern. ”" ;
+   :in-modern-country-note "South Africa" ;
+   :representative-latlong-point (-25.087210 30.444041) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Iziko_Lydenburg_Heads_2.JPG> .
 
 :buddha-helgo-island a :human-figure ;
    rdfs:label "Buddha Statuette from Helgö Island" ;
@@ -5995,6 +6006,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Iceland" ;
    :representative-latlong-point (65.683333 -18.1);
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronzestatue_„Christ_or_Thor“_aus_dem_isländischen_Nationalmuseum_(cropped).jpg> .
+
+:luzira-head a :human-figure ;
+   rdfs:label "Luzira Head" ;
+   :described-by <https://en.wikipedia.org/wiki/Luzira_Head> ,
+      <https://doi.org/10.1017/S0003598X00096472> ;
+   :approximate-date 1000 ;
+   :note "From Wikipedia: “... the head has very narrow, protruding eyes and mouth with a diminutive nose. Along the forehead are three cicatrices. The hair is matted and falls either side of the head.”" ;
+   :in-modern-country-note "Uganda" ;
+   :representative-latlong-point (0.301667 32.645) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Luzira_Head_4.jpg> .
 
 :dresden-codex a :group-of-human-figures ;
    rdfs:label "Dresden Codex" ;
