@@ -1729,6 +1729,16 @@
    :representative-latlong-point (41.322015 119.51319) ;
    :thumbnail-image <https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Painted-clay-Niuheliang.jpg?itok=LGS_MNqe> .
 
+:bovine-human-laas-geel a :human-figure ;
+   rdfs:label "Bovine and Human from Laas Geel" ;
+   :described-by <https://en.wikipedia.org/wiki/Laas_Geel#Gallery> ;
+   :earliest-date -3500 ;
+   :latest-date -2500 ;
+   :note "From Wikipedia: “In an excellent state of preservation, the rock art depicts wild animals and decorated cattle (cows and bulls). They also feature herders, who are believed to be the creators of the paintings.[8] Laas Geel's rock art is executed in the same distinctive Ethiopian-Arabian style as the Dhambalin and Karinhegane cave paintings that are also situated in Somaliland.”" ;
+   :in-modern-country-note "Somaliland" ;
+   :representative-latlong-point (9.780911 44.443642) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Laas_Geel_cow_and_human.jpg> .
+
 :statue-min-koptos a :human-figure ;
    rdfs:label "Statue of Min from Koptos" ;
    :described-by <https://www.ashmolean.org/collections-online#/item/ash-object-487742> ;
@@ -1951,7 +1961,7 @@
    :described-by <https://en.wikipedia.org/wiki/Dhambalin> ;
    :earliest-date -3000 ;
    :latest-date -1000 ;
-   :note "From Wikipedia: “The polychrome paintings of the Neolithic or proto-historic Arabian–Ethiopian Style, depict the first sheep paintings in Somali archaeology and also many of antelopes, dogs, giraffes, snakes and a turtle with and also without humans.[3] There are eight to ten people represented, usually as part of hunting scenes, with bow and arrow; they are surrounded by wildlife. One of the hunters is depicted with hair down and with headgear, accompanied by two dogs. Another hunter sits on an animal, possibly a horse...”" ;
+   :note "From Wikipedia: “The polychrome paintings of the Neolithic or proto-historic Arabian–Ethiopian Style, depict the first sheep paintings in Somali archaeology and also many of antelopes, dogs, giraffes, snakes and a turtle with and also without humans. There are eight to ten people represented, usually as part of hunting scenes, with bow and arrow; they are surrounded by wildlife. One of the hunters is depicted with hair down and with headgear, accompanied by two dogs. Another hunter sits on an animal, possibly a horse...”" ;
    :in-modern-country-note "Somaliland" ;
    :representative-latlong-point (10.399768 45.900335) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human_figure_wearing_headgear_and_carrying_bow_and_arrow,_hunting_with_dogs_in_Dhambalin.jpg> .
