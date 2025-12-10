@@ -1946,6 +1946,16 @@
    :note "Approximate location." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_6/19_10/e0c599ae_5457_4ceb_a629_a4bc00b1e524/mid_NIGNAM0010029.jpg> .
 
+:dhambalin-rock-paintings a :group-of-human-figures ;
+   rdfs:label "Dhambalin Rock Paintings" ;
+   :described-by <https://en.wikipedia.org/wiki/Dhambalin> ;
+   :earliest-date -3000 ;
+   :latest-date -1000 ;
+   :note "From Wikipedia: “The polychrome paintings of the Neolithic or proto-historic Arabian–Ethiopian Style, depict the first sheep paintings in Somali archaeology and also many of antelopes, dogs, giraffes, snakes and a turtle with and also without humans.[3] There are eight to ten people represented, usually as part of hunting scenes, with bow and arrow; they are surrounded by wildlife. One of the hunters is depicted with hair down and with headgear, accompanied by two dogs. Another hunter sits on an animal, possibly a horse...”" ;
+   :in-modern-country-note "Somaliland" ;
+   :representative-latlong-point (10.399768 45.900335) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human_figure_wearing_headgear_and_carrying_bow_and_arrow,_hunting_with_dogs_in_Dhambalin.jpg> .
+
 :skara-brae-buddo a :human-figure ;
    rdfs:label "Skara Brae Buddo" ;
    :described-by <https://www.stromnessmuseum.org.uk/collections/objects/axxx> ,
@@ -4157,6 +4167,15 @@
    :representative-latlong-point (41.8967 12.4822) ;
    :thumbnail-image <https://media.getty.edu/iiif/image/d507b387-4bb5-4c42-b03d-317d2713e880/full/500,/0/default.jpg> .
 
+:white-lady-rock-painting a :group-of-human-figures ;
+   rdfs:label "So-called “While Lady” Rock Painting" ;
+   :described-by <https://en.wikipedia.org/wiki/The_White_Lady_(Namibia)> ;
+   :approximate-date 1 ;
+   :note "Adapted from Wikipedia: “The “White Lady Group” is found in a cave known as “Maack Shelter” and portrays several human figures as well as oryxes, on a rock panel measuring about 5.5 m x 1.5 m. The “White Lady” is the most detailed human figure in the group, and measures about 39.5 cm x 29 cm. / It is usually assumed that the painting shows some sort of ritual dance, and that the “White Lady” is a shaman. She has white legs and arms, which may suggest that her body was painted or that she was wearing some sort of decorative attachments on her legs and arms. She holds a bow in one hand and perhaps a goblet in the other.”" ;
+   :in-modern-country-note "Namibia" ;
+   :representative-latlong-point (-21.110556 14.662778) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Weiße_Dame_Brandberg.JPG> .
+
 :copper-alloy-figurine-holding-torque a :human-figure ;
    rdfs:label "Copper Alloy Figurine holding Torque" ;
    :described-by <https://archaeology.org/issues/may-june-2021/digs-discoveries/digs-england-celtic-deity/> ;
@@ -5993,7 +6012,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :castle-gardens-petroglyphs a :group-of-human-figures ;
    rdfs:label "Castle Gardens Petroglyph Site" ;
-   :described-by <https://en.wikipedia.org/wiki/Castle_Gardens_Petroglyph_Site> ;
+   :described-by <https://en.wikipedia.org/wiki/Castle_Gardens_Petroglyph_Site> ,
+      <https://www.blm.gov/visit/castle-gardens-petroglyph-site> ;
    :earliest-date 1000 ;
    :latest-date 1250 ;
    :note "From Wikipedia: “ ... a 6-mile (9.7 km) by 1-mile (1.6 km) region of vertical cliff faces in Fremont County, Wyoming, United States, with extensive petroglyph images incised in the rock faces. The glyphs include images of water turtles and circular shields, as well as human and animal figures.[2] The figures with circular shields are particular to the area, and are known as Castle Gardens Shield style images. A consensus of researchers is that the figures were carved by Athabaskans related to the Navajo and Apache, some time between 1000 AD and 1250 AD”" ;
