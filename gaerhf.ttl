@@ -5912,11 +5912,12 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 :male-anthropomorphic-figurine-schroda a :human-figure ;
    rdfs:label "Male Anthropomorphic Figurine from Schroda" ;
    :described-by <https://artsandculture.google.com/asset/schroda-figurines-zhizo-culture/kQEFCiLDERkXgQ?hl=en> ,
-    <https://www.academia.edu/38012781/A_Revised_Chronology_for_the_Zhizo_and_Leokwe_Horizons_at_Schroda> ;
+    <https://www.academia.edu/38012781/A_Revised_Chronology_for_the_Zhizo_and_Leokwe_Horizons_at_Schroda> ,
+    <https://en.wikipedia.org/wiki/Schroda,_South_Africa> ;
    :earliest-date 900 ;
    :latest-date 1100 ;
    :material-note "Ceramic" ;
-   :note "The chronology may be towards the later part of the 900 to 1100 range, see the linked article by A. Antonities. Image here is after Fig. 3 in that. From Google Arts and Culture: “ ... male figurine has an animal-like head, making it therianthropic or part-human, part animal. Many of the Schroda anthropomorphic figurines are clearly sexed. This figurine is covered in red ochre on the back and on the lower part of the front abdomen.”" ;
+   :note "The chronology may be towards the later part of the 900 to 1100 range, see the linked article by A. Antonities. Image here is after Fig. 3 in that. From Google Arts and Culture: “ ... male figurine has an animal-like head, making it therianthropic or part-human, part animal. Many of the Schroda anthropomorphic figurines are clearly sexed. This figurine is covered in red ochre on the back and on the lower part of the front abdomen.” The Wikipedia page needs improvement and it is hoped images of the figurines will make it to Wikimedia Commons." ;
    :in-mondern-country-note "South Africa" ;
    :representative-latlong-point (-22.183333 29.423611) .
 
