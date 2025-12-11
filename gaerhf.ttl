@@ -2437,6 +2437,16 @@
 
 # -1750 https://en.wikipedia.org/wiki/Haft_Tepe
 
+:figurine-lumna-gajiganna-i a :human-figure ;
+   rdfs:label "Figurine from Lumna (Gajiganna I)" ;
+   :described-by <https://doi.org/10.1017/S0003598X00096915> ;
+   :earliest-date -1800 ;
+   :latest-date -1500 ;
+   :material-note "Ceramic" ;
+   :note "Illustration is from fig. 3 in Antiquity article. From article: “In Phase I figurines, like other cultural remains, are rare due to the high mobility of the pastoral groups. The figurines are small and show very simple and stylised, asexual anthropomorphic representations...” (p. 426)" ;
+   :in-modern-country-note "Nigeria" ;
+   :representative-latlong-point (12.127645 13.162662) .
+
 :elamite-funerary-mask-haft-tepe a :human-figure ;
    rdfs:label "Elamite Funerary Mask from Haft Tepe" ;
    :described-by <https://en.wikipedia.org/wiki/Haft_Tepe#Archaeology> ;
@@ -2529,6 +2539,17 @@
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (36.237778 36.384722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_King_Idrimi-IMG_4553-black.jpg> .
+
+:figurines-gajiganna-a-b a :group-of-human-figures ;
+   rdfs:label "Figurines from Gajiganna (Gajiganna II)" ;
+   :described-by <https://doi.org/10.1017/S0003598X00096915> ;
+   :earliest-date -1500 ;
+   :latest-date -800 ;
+   :material-note "Ceramic" ;
+   :note "Illustration is from fig. 4 in Antiquity article. From article: “Phase II figurines are quite similar to those of the preceding phase, thus belonging to the same tradition. Fragments of anthropomorphic figurines are rare in comparison to zoomorphic types. While the two human figurines of Phase I are faceless, those of Phase II show anatomical details like eyes, nose, mouth and ears (Figure 4: 1-3 ), and even indicate hairstyles or head gear...” (p. 426)" ;
+   :in-modern-country-note "Nigeria" ;
+   :representative-latlong-point (12.256739 13.105106) .
+
 
 :paired-petroglyphs-valcamonica a :group-of-human-figures ;
    rdfs:label "Paired Petroglyphs from Valcamonica" ;
