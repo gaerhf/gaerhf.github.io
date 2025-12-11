@@ -1183,6 +1183,26 @@
    :art-historical-culture-or-tradition :neolithic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_marble_Thessaly_5300-3300_BC,_NAMA_8772_080802x.jpg> .  
 
+:mestikawi-cave-group-scenes a :group-of-human-figures ;
+   rdfs:label "Mestikawi Cave Group Scenes" ;
+   :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
+   :approximate-date -5000 ;
+   :note "From Wikipedia: “The shelter is 17 m (56 ft) wide and almost 7 m (23 ft) high and contains over 5,000 well-preserved figures painted with red, yellow, white and black pigments. Hundreds of hand and foot stencil are over-painted with groups of human creatures and therianthropic and acephalic (headless) mythological creatures.”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (23.653333 25.159722) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestias2.JPG> .
+
+:hamangia-seated-figures a :group-of-human-figures ;
+   rdfs:label "Hamangia Female and Male Seated Figures" ;
+   :described-by <https://en.wikipedia.org/wiki/Thinker_of_Hamangia> ;
+   :approximate-date -5000 ;
+   :material-note "Ceramic" ;
+   :note "From Wikipedia: “UUnearthed in 1956 near Cernavodă, in southeastern Romania, these ceramic figures were discovered within a vast cemetery belonging to the Hamangia culture. This culture had a tradition of burying their deceased in designated areas known as necropolises, often accompanied by funerary items ... figurines like The Thinker. The Thinker and its companion, The Sitting Woman, were found within a necropolis containing approximately 400 graves." ;
+   :in-modern-country-note "Romania" ;
+   :representative-latlong-point (44.338056 28.033611) ; # ll for Cernavoda, Romania
+   :art-historical-culture-or-tradition :hamangia-culture ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
+
 :halaf-culture-painted-female-figurine a :human-figure ;
    rdfs:label "Halaf Culture Painted Female Figurine" ;
    :described-by <https://art.thewalters.org/object/48.2741/> ;
@@ -1277,36 +1297,6 @@
    :representative-latlong-point (27.655561 -112.91611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figura_en_el_techo_de_la_cueva_%22El_Ratón%22.JPG> .
 
-:gamigaya-petroglyphs a :group-of-human-figures ;
-   rdfs:label "Gamigaya Petroglyphs" ;
-   :described-by <https://en.wikipedia.org/wiki/Gamigaya_Petroglyphs> ;
-   :earliest-date -5000 ;
-   :latest-date -1000 ;
-   :note "Is there a more specigic chronology for individual human figures?" ;
-   :in-modern-country-note "Azerbaijan" ;
-   :representative-latlong-point (39.16 45.92) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_art_in_Ordubad.jpg> .
-
-:mestikawi-cave-group-scenes a :group-of-human-figures ;
-   rdfs:label "Mestikawi Cave Group Scenes" ;
-   :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
-   :approximate-date -5000 ;
-   :note "From Wikipedia: “The shelter is 17 m (56 ft) wide and almost 7 m (23 ft) high and contains over 5,000 well-preserved figures painted with red, yellow, white and black pigments. Hundreds of hand and foot stencil are over-painted with groups of human creatures and therianthropic and acephalic (headless) mythological creatures.”" ;
-   :in-modern-country-note "Egypt" ;
-   :representative-latlong-point (23.653333 25.159722) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestias2.JPG> .
-
-:hamangia-seated-figures a :group-of-human-figures ;
-   rdfs:label "Hamangia Female and Male Seated Figures" ;
-   :described-by <https://en.wikipedia.org/wiki/Thinker_of_Hamangia> ;
-   :approximate-date -5000 ;
-   :material-note "Ceramic" ;
-   :note "From Wikipedia: “UUnearthed in 1956 near Cernavodă, in southeastern Romania, these ceramic figures were discovered within a vast cemetery belonging to the Hamangia culture. This culture had a tradition of burying their deceased in designated areas known as necropolises, often accompanied by funerary items ... figurines like The Thinker. The Thinker and its companion, The Sitting Woman, were found within a necropolis containing approximately 400 graves." ;
-   :in-modern-country-note "Romania" ;
-   :representative-latlong-point (44.338056 28.033611) ; # ll for Cernavoda, Romania
-   :art-historical-culture-or-tradition :hamangia-culture ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bucharest_-_The_Thinker_%26_The_Sitting_Woman_of_Cernavoda_-_no_bg.png> .
-
 # -5000 - -4200 https://en.wikipedia.org/wiki/Jiroft_culture
 
 # https://saudipedia.com/en/article/875/history/landmarks-and-monuments/suffering-man-statue
@@ -1316,6 +1306,16 @@
 #    rdfs:label "Female Figure from Langenzersdorf" ;
 #    :described-by <https://en.wikipedia.org/wiki/Venus_of_Langenzersdorf> ;
 #    :approximate-date -4825 .
+
+:gamigaya-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Gamigaya Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Gamigaya_Petroglyphs> ;
+   :earliest-date -5000 ;
+   :latest-date -1000 ;
+   :note "Is there a more specigic chronology for individual human figures?" ;
+   :in-modern-country-note "Azerbaijan" ;
+   :representative-latlong-point (39.16 45.92) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_art_in_Ordubad.jpg> .
 
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
