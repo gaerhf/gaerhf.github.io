@@ -2317,6 +2317,17 @@
    :representative-latlong-point (52.375930 84.937368) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karakol_culture_stone_sculpture._Anokhin_Museum,_Gorno-Altaysk,_Altai_Republic,_Siberia,_Russia.jpg> .
 
+:oxen-chariot-rider-daimabad a :human-figure ;
+   rdfs:label "Oxen-drawn Chariot and Rider from Daimabad" ;
+   :described-by <https://en.wikipedia.org/wiki/Daimabad#Phase_II:_Late_Harappan_culture> ,
+      <https://mapacademy.io/article/daimabad-bronzes/> ;
+   :approximate-date -2000 ;
+   :material-note "Bronze" ;
+   :note "From MAP Academy website: “A hoard of four bronze sculptures found in 1974 near Daimabad in Maharashtra, India, and dated to the second millennium BCE, the Daimabad bronzes depict a chariot yoked to oxen, an elephant, a rhinoceros, and a water buffalo. Noted for the complexity of their construction and attributed to the Late Harappan Culture, they have helped scholars to extend the Indus civilisation’s southward spread into the Deccan Plateau.“" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (19.510278 74.700833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Coach_driver_Indus_01.jpg> .
+
 :cypriot-red-polished-ware-plank-figure a :human-figure ;
    rdfs:label "Cypriot Red Polished Ware Figure" ;
    :described-by <https://www.getty.edu/art/collection/object/108J4B> ;
