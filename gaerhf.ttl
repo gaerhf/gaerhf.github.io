@@ -5472,7 +5472,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 600 ;
    :latest-date 650 ;
    :material-note "Ceramic" ;
-   :note "From LACMA website: “scene of 23 ceramic figurines, arranged by mourners in a circular configuration inside a royal tomb chamber, tells a story about the ritual life of the ancient Maya. This scene includes a deceased king accompanied by his animal spirit companion—a magical deer wearing an oval pendant with a motif in the shape of a capital “T” incised into it. For the ancient Maya, this was the Ik’ symbol, which represented breath, wind, and life.”" ;
+   :note "From LACMA website: “ ... scene of 23 ceramic figurines, arranged by mourners in a circular configuration inside a royal tomb chamber, tells a story about the ritual life of the ancient Maya. This scene includes a deceased king accompanied by his animal spirit companion—a magical deer wearing an oval pendant with a motif in the shape of a capital “T” incised into it. For the ancient Maya, this was the Ik’ symbol, which represented breath, wind, and life.”" ;
    :in-modern-country-note "Guatemala" ;
    :representative-latlong-point (17.2783 -90.3806) ;
    :thumbnail-image <https://unframed.lacma.org/sites/default/files/attachments/AncientBodies_Grouping1.png> .
@@ -5490,7 +5490,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 # 600 see head https://en.wikipedia.org/wiki/Hariharalaya
 
-:fondukistan-monastery-divintity a :human-figure ;
+:fondukistan-monastery-divinity a :human-figure ;
    rdfs:label "Fondukistan Monastery Divinity" ;
    :described-by <https://www.guimet.fr/en/our-collections/afghanistan-pakistan/divinity-seating-royal-ease-position>,
    <https://en.wikipedia.org/wiki/Fondukistan_monastery> ;
