@@ -5916,7 +5916,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 900 ;
    :latest-date 1100 ;
    :material-note "Ceramic" ;
-   :note "The chronology may be towards the later part of the 900 to 1100 range, see the linked article by A. Antonities. From Google Arts and Culture: “ ... male figurine has an animal-like head, making it therianthropic or part-human, part animal. Many of the Schroda anthropomorphic figurines are clearly sexed. This figurine is covered in red ochre on the back and on the lower part of the front abdomen.”" ;
+   :note "The chronology may be towards the later part of the 900 to 1100 range, see the linked article by A. Antonities. Image here is after Fig. 3 in that. From Google Arts and Culture: “ ... male figurine has an animal-like head, making it therianthropic or part-human, part animal. Many of the Schroda anthropomorphic figurines are clearly sexed. This figurine is covered in red ochre on the back and on the lower part of the front abdomen.”" ;
    :in-mondern-country-note "South Africa" ;
    :representative-latlong-point (-22.183333 29.423611) .
 
