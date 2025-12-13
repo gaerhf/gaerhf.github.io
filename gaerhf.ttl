@@ -536,6 +536,16 @@
    :representative-latlong-point (24.638719 32.960759) ;
    :art-historical-culture-or-tradition :saharan-rock-art .
 
+:face-figurine-afalou-bou-rhummel a :human-figure ;
+   rdfs:label "Figurine Head from Afalou Bou Rhummel" ;
+   :described-by <https://doi.org/10.1016/S0003-5521(02)01085-3> ;
+   :earliest-date -13000 ;
+   :latest-date -9000 ;
+   :material-note "Ceramic" ;
+   :note "Image is after fig. 10 in linked article. Catalog entry for this piece: “Tête regardant vers la droite, paraissant anthropomorphe, cassée au niveau du cou. La face est nettement située dans l’axe du cou, alors que les têtes zoomorphes sont plutôt perpendiculaires au cou. Le profil droit est le plus suggestif et le moins détérioré. Sur 2 ou 3 mm, on peut reconnaître, vers le haut du cou, le départ de la nuque, l’arrière du crâne se terminant en chignon et le haut du crâne, plutôt rectiligne. Le front est droit et le menton dégagé est plutôt prognathe.”" ;
+   :in-modern-country-not "Algeria" ;
+   :representative-latlong-point (36.644613 5.372751) .
+
 :grotta-dell-addaura-inscribed-petroglyphs a :group-of-human-figures ;
    rdfs:label "Grotta dell'Addaura Inscribed Petroglyphs" ;
    :described-by <https://en.wikipedia.org/wiki/Grotta_dell%27Addaura> ;
@@ -4580,7 +4590,8 @@
 :female-figurine-tin-hanan a :human-figure ;
    rdfs:label "Female Figurine from Tin Hinan Tomb" ;
    :described-by <https://collections.peabody.harvard.edu/objects/details/660300> ,
-      <https://en.wikipedia.org/wiki/Tin_Hinan_Tomb> ;
+      <https://en.wikipedia.org/wiki/Tin_Hinan_Tomb> , 
+      <https://www.wisconsinhistory.org/Records/Image/IM134925> ;
    :earliest-date 300 ;
    :latest-date 350 ;
    :material-note "Stone" ;
