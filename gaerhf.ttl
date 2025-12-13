@@ -4577,6 +4577,18 @@
 #    :earliest-date 300 ;
 #    :latest-date 400 .
 
+:female-figurine-tin-hanan a :human-figure ;
+   rdfs:label "Female Figurine from Tin Hinan Tomb" ;
+   :described-by <https://collections.peabody.harvard.edu/objects/details/660300> ,
+      <https://en.wikipedia.org/wiki/Tin_Hinan_Tomb> ;
+   :earliest-date 300 ;
+   :latest-date 350 ;
+   :material-note "Stone" ;
+   :note "The Peabody Museum link is to the record of a photograph of the figurine." ;
+   :in-modern-country-note "Algeria" ;
+   :representative-latlong-point (22.885533 4.86808) ;
+   :thumbnail-image <https://collections.peabody.harvard.edu/internal/media/dispatcher/497602/preview> .
+
 :male-figurine-adulis a :human-figure ;
    rdfs:label "Male figurine from Adulis" ;
    :described-by <https://isaw.nyu.edu/research/io-figures/images/fig-25-terracotta-figurine-from-adulis> ,
