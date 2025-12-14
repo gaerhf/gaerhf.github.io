@@ -6237,7 +6237,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 # 1150 - 1250 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1968.75/
 
 :horserider-attendants-bougouni a :group-of-human-figures ;
-   rdfs:label "Horserise with Four Attendants" ;
+   rdfs:label "Horserider with Four Attendants from Bougouni Region" ;
    :described-by <https://www.artic.edu/artworks/189597/equestrian-and-four-figures> ;
    :earliest-date 1100 ;
    :latest-date 1500 ;
