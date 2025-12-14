@@ -2431,6 +2431,7 @@
       <https://en.wikipedia.org/wiki/Dhar_Tichitt> ;
    :earliest-date -2000 ;
    :latest-date -500 ;
+   :note "Very approximate location." ;
    :in-modern-country-note "Mauretania" ;
    :representative-latlong-point (18.455944 -9.417171) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Homme_muni_d’un_bâton,_et_vaches_à_robe_marquée_du_village_v.72.jpg> .
