@@ -2425,6 +2425,16 @@
    :representative-latlong-point (39.123611 -110.693611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buckhorn_02_2008.JPG> .
 
+:cattle-attendant-dar-tichitt a :human-figure ;
+   rdfs:label "Cattle with attendant from Dar Tichitt" ;
+   :described-by <https://en.wikipedia.org/wiki/Tichitt_tradition> ,
+      <https://en.wikipedia.org/wiki/Dhar_Tichitt> ;
+   :earliest-date -2000 ;
+   :latest-date -500 ;
+   :in-modern-country-note "Mauretania" ;
+   :representative-latlong-point (18.455944 -9.417171) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Homme_muni_d’un_bâton,_et_vaches_à_robe_marquée_du_village_v.72.jpg> .
+
 :kangjiashimenzi-petroglyphs a :group-of-human-figures ;
    rdfs:label "Kangjiashimenzi Petroglyphs" ;
    :described-by <http://benedante.blogspot.com/2011/06/some-really-weird-bronze-age.html> ;
