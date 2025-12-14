@@ -6236,6 +6236,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 # 1150 - 1250 https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1968.75/
 
+:horserider-attendants-bougouni a :group-of-human-figures ;
+   rdfs:label "Horserise with Four Attendants" ;
+   :described-by <https://www.artic.edu/artworks/189597/equestrian-and-four-figures> ;
+   :earliest-date 1100 ;
+   :latest-date 1500 ;
+   :material-note "Ceramic" ;
+   :note "Mapped locatoin approximate: “Terracotta figures like this set might have served a ritual purpose. The adornment on the figures, including the hairstyles and possible scarification marks, suggest status and wealth. The horse-and-rider with a knife strapped to his left arm may evoke the significant role that cavalry played in the expansion of empires and control of trade routes in West Africa during past centuries.”" ;
+   :in-modern-country-note "Mali" ;
+   :representative-latlong-point (11.366424 -7.470627) ;
+   :thumbnail-image <https://www.artic.edu/iiif/2/3afb386b-1dfd-2264-8646-6d5cbb6f6b38/full/1686,/0/default.jpg> .
+
 :bayeux-tapestry a :group-of-human-figures ;
    rdfs:label "Bayeaux Tapestry" ;
    :described-by <https://en.wikipedia.org/wiki/Bayeux_Tapestry> ;
