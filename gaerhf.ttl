@@ -6136,7 +6136,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Three_Rivers_Petroglyph_Site> ;
    :earliest-date 1000 ;
    :latest-date 1400 ;
-   :note "From Wikipedia: “There are over 21,000 petroglyphs at the Three Rivers Petroglyph Site at Three Rivers, New Mexico, located midway between Tularosa and Carrizozo in Otero County on Highway 54. Many of the petroglyphs can be easily viewed from a trail open to the public which winds through the rocks for about one mile. The petroglyphs are thought to be the product of the Jornada Mogollon people between about 1000 and 1400 AD.”" ;
+   :note "Adapted from Wikipedia: “There are over 21,000 petroglyphs at the Three Rivers Petroglyph Site at Three Rivers, New Mexico, located midway between Tularosa and Carrizozo in Otero County on Highway 54. Many of the petroglyphs can be easily viewed from a trail open to the public which winds through the rocks for about one mile. The petroglyphs are thought to be the product of the Jornada Mogollon people between about 1000 and 1400 AD.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (33.346944 -106.011667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Three_Rivers_Petroglyph_Site_12.jpeg> .
