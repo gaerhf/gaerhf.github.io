@@ -3930,7 +3930,7 @@
       <https://www.peoplescollection.wales/items/12570#?xywh=-359%2C-12%2C1170%2C768> ;
    :approximate-date 50 ;
    :materia-note "Cheshire sandstone" ;
-   :note "Generally understood to be Late Iron Age/Celtic though that is not certain." ;
+   :note "From the People's Collection Wales website: “This enigmatic stone head, carved from quartz rich red sandstone, was discovered while ploughing a field at Hendy farm near Llanfairpwllgwyngyll on Anglesey during the 1950s. It is widely believed to date from the late Iron Age and that it depicts a Celtic deity or god. Its top is slightly flattened and the mouth has a drilled opening to one side; both features suggest that offerings were made to the head as part of a ritual or ceremony.”" ;
    :in-modern-country-note "Wales" ;
    :representative-latlong-point (53.127731 -4.280277) ;
    :thumbnail-image <https://www.peoplescollection.wales/sites/default/files/images/2014/February/GTJ75768_2.jpg?itok=OopNNKRx> .
@@ -4429,11 +4429,12 @@
 
 :sulis-minerva-bath a :human-figure ;
    rdfs:label "Sulis Minerva from Bath" ;
-   :desribed-by <https://www.romanbaths.co.uk/minervas-head> ,
+   :described-by <https://www.romanbaths.co.uk/minervas-head> ,
       <https://en.wikipedia.org/wiki/Sulis> ;
    :earliest-date 75 ;
    :latest-date 100 ;
    :material-note "Bronze, Gold gilt" ;
+   :note "From the Roman Baths Bath website: “The head is slightly larger than life size, suggesting that the original statue was an imposing sight. Hidden in the hair line are several small holes which once held rivets that fixed her tall Corinthian helmet to her head. / Examination of the head has revealed that it has six layers of gilding.  The first two use a technique known as fire gilding whilst the four later layers are applied as gold leaf.  The head has a number of imperfections. There is corrosion which has affected it in parts where it lay in the ground for over a thousand years.  There is also a strange rectangular cut beneath the chin.  It is thought that this may result from a flaw in the original casting process in which a bubble on the surface may have been cut out and filled with an inserted plate.  When gilded over it would not have been visible.  This plate has subsequently fallen out as a result of corrosion whilst in the ground.”" ;
    :in-modern-country-note "England" ;
    :representative-latlong-point (51.3809 -2.3595) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bath_England_0400_139.jpg> .
