@@ -5275,6 +5275,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 300 ;
    :latest-date 1200 ;
    :material-note "Ceramic" ;
+   :note "From Yale Art Gallery website: “ ... a necropolis at Bura-Asinda-Sikka with more than six hundred overturned ceramic urns dating from 300 to 1700. Some of the urns contained human remains, while others had remains buried underneath. Bura vessels are generally ovoid and tubular in shape, and some are surmounted by figures or heads. In some examples, like this one, the head is angled skyward.”" ;
    :in-modern-country-note "Niger" ;
    :representative-latlong-point (13.898 1.039) ;
    :thumbnail-image <https://images.collections.yale.edu/iiif/2/yuag:bd85d735-38fe-4a4c-8804-342599d5a933/full/!200,200/0/default.jpg> .
