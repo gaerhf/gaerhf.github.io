@@ -287,6 +287,7 @@
    rdfs:label "Leang Karampuang Hunting Scene" ;
    :described-by <https://doi.org/10.1038/s41586-024-07541-7> ;
    :approximate-date -49000 ;
+   :apparent-gender :unclear ;
    :note "See H1-H3 in image, which are taken to be anthropomorphic figures engaged with the oversized pig. Approximate location. From linked article abstract: “... we also assign a minimum age of 53.5 ± 2.3 ka to a newly described cave art scene at Leang Karampuang. Painted at least 51,200 years ago, this narrative composition, which depicts human-like figures interacting with a pig, is now the earliest known surviving example of representational art, and visual storytelling, in the world. Our findings show that figurative portrayals of anthropomorphic figures and animals have a deeper origin in the history of modern human (Homo sapiens) image-making than recognized to date, as does their representation in composed scenes.”" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-5.028238 119.758602) ;
@@ -806,6 +807,7 @@
    :described-by <https://doi.org/10.15184/aqy.2022.125> ;
    :approximate-date -8500 ;
    :material-note "Limestone" ;
+   :note "From linked article abstract: “A wall relief, comprising five figures carved on a bench in a communal building dating to the ninth millennium BC, was found in south-eastern Turkey in 2021. It constitutes the earliest known depiction of a narrative ‘scene’, and reflects the complex relationship between humans, the natural world and the animal life that surrounded them during the transition to a sedentary lifestyle." ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.110047 38.621842) ; # Sayburc, Turkey
    :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20221201181421541-0856:S0003598X22001259:S0003598X22001259_fig6.png?pub-status=live> .
@@ -902,6 +904,7 @@
    :earliest-date -7200 ;
    :latest-date -6250 ;
    :material-note "Limestone plaster and reed" ;
+   :note "he ʿAin Ghazal statues are large-scale lime plaster and reed statues discovered at the archaeological site of ʿAin Ghazal in Amman, Jordan, dating back to approximately 9,000 years ago (made between 7200 BC and 6250 BCE), from the Pre-Pottery Neolithic C period. A total of 15 statues and 15 busts were discovered in 1983 and 1985 in two underground caches, created about 200 years apart. / The statues are among the earliest large-scale representations of the human form and represent remarkable specimens of prehistoric art from the Pre-Pottery Neolithic B or C period." ;
    :in-modern-country-note "Jordan" ;
    :representative-latlong-point (31.988 35.976) ; 
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -1011,6 +1014,7 @@
    :earliest-date -7000 ;
    :latest-date -6000 ;
    :material-note "Limestone, paint, asphalt" ;
+   :note "From IMG Website: “Made of limestone, this is the largest of the four Neolithic stone masks found thus far in Israel and the only complete example found within a confirmed archaeological context. The back is hollowed out, and the thickness of the mask is uniform and symmetrical throughout. The chin is painted, the small mouth open, with four teeth in both the upper and lower jaw. The cheekbones are prominent and the high forehead is domed, producing a skeletal impression. A radial design has been made with red, green, and possibly white paint, while thin red and white lines outline the round eyes. Eighteen irregular holes are cut into the sides of the mask. Masks served many functions, but primarily invested the wearer with mystery and supernatural powers.”" ;
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (31.1392 35.2939) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Mask_Nahal_Hemar_Cave.JPG> .
