@@ -4457,7 +4457,7 @@
    :latest-date 200 ;
    :material-note "Marble, beeswax." ;
    :in-modern-country-note "Turkey" ;
-   :note "Approximate findsport." ;
+   :note "Approximate findspot." ;
    :representative-latlong-point (40.728078 31.601947) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bolu_museum_Cult_statue_head_june_2019_2979.jpg> .
 
@@ -4671,6 +4671,7 @@
    rdfs:label "Coronation of Ardashir II Relief" ;
    :described-by <https://en.wikipedia.org/wiki/Coronation_of_Ardashir_II> ;
    :approximate-date 380 ;
+   :note "Adapted from Wikipedia: “The relief shows three standing figures wearing regalia; Ardashir being in the middle, flanked by two male figures. The figure to the right, who is giving the diadem to Ardashir originally used to be recognized as the Zoroastrian supreme god Ahura Mazda, but is now agreed to be Shapur II due to the style of his crown, which also fits well due to Shapur being the one designating Ardashir as shah to begin with. The two shahs are standing on the body of a fallen enemy, unmistakably a Roman, whose crown indicates that he is an emperor. The fallen figure is most likely supposed to represent the Roman emperor Julian, who invaded Iran in 363 and was killed west of the Sasanian capital of Ctesiphon. The figure standing to the far left, perceived by some to be the Zoroastrian prophet Zoroaster, is most likely the angelic divinity Mithra. He is holding a raised barsom, thus sanctifying the investiture.”" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (34.3874 47.1323) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:اهورا_مزدا_-_کرمانشاه.jpg> .
@@ -6317,6 +6318,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    # :art-historical-culture-or-tradition :mopti-culture ;
    :representative-latlong-point (13.890556 -4.540278) ; # Mali
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_figure_grom_Mali,_13th_century,_Djenné_peoples,_Metropolitan_Museum_of_Art,_1981.218.JPG> .
+
+:effigy-mask-antlers a :human-figure ;
+   rdfs:label "Effigy Mask with Antlers from Spiro" ;
+   :described-by <https://www.spiromounds.com/collection/objects/human-face-effigy-with-deer-antlers-189306> ,
+   <https://en.wikipedia.org/wiki/Spiro_Mounds>;
+   :earliest-date 1200 ;
+   :latest-date 1450 ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (35.311146 -94.569449) ;
+   :thumbnail-image <https://www.spiromounds.com/img/figure-9.20.jpg?nf_resize=fit&w=1000&h=1000> .
 
 # 1221 https://en.wikipedia.org/wiki/Emperor_Go-Toba
 
