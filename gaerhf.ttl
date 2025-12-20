@@ -6263,6 +6263,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (49.2744 0.7003) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Odo_bayeux_tapestry.png> .
 
+:luohan-laundering-silk a :group-of-human-figures ;
+   rdfs:label "Luohan laundering 羅漢洗濯圖" ;
+   :described-by <https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1902.224/> ,
+   <https://en.wikipedia.org/wiki/Lin_Tinggui> ;
+   :earliest-date 1175 ;
+   :latest-date 1178 ;
+   :material-note "Ink on Silk" ;
+   :note "From Smithsonian website: “Illustrating a scene from the daily life of Buddhist monks, this painting belongs to a set of one hundred hanging scrolls depicting the five hundred luohan, or Buddhist saints. The set of paintings was commissioned by a Buddhist abbot in 1175 and completed by Lin Tinggui and another painter three years later. The paintings were transported to Japan in the thirteenth century and eventually became the property of the Daitokuji, a Buddhist temple in Kyoto. In 1894 the Daitokuji, in need of funds for repairs, exhibited forty-four of the scrolls in Boston, where 10 of the paintings were sold. The Japanese presented this painting in gratitude to the tour's American organizer, who sold it in 1902 to Charles Lang Freer.”" ;
+   :in-modern-country-note "China and Japan" ;
+   :representative-latlong-point (35.319722 139.5525) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Luohan_Laundering,_by_Lin_Tinggui,_1178_AD.jpg> .
+
 :mary-seated-christ a :group-of-human-figures ;
    rdfs:label "Mary Seated with Christ Child" ;
    :described-by <https://www.metmuseum.org/collection/the-collection-online/search/463795> ;
