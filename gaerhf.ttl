@@ -6325,6 +6325,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    <https://en.wikipedia.org/wiki/Spiro_Mounds>;
    :earliest-date 1200 ;
    :latest-date 1450 ;
+   :material-note "Wood" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (35.311146 -94.569449) ;
    :thumbnail-image <https://www.spiromounds.com/img/figure-9.20.jpg?nf_resize=fit&w=1000&h=1000> .
