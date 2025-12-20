@@ -3672,6 +3672,18 @@
 
 # -300 -- https://commons.wikimedia.org/wiki/File:Majiayuan_tomb_figurines.jpg
 
+:bow-case-melitopol a :group-of-human-figures ;
+   rdfs:label "Bow Case from Melitopol Kurgan" ;
+   :described-by <https://en.wikipedia.org/wiki/Melitopol_kurgan> ,
+    <https://en.wikipedia.org/wiki/Gorytos> ;
+   :earliest-date -350 ;
+   :latest-date -320 ;
+   :material-note "Gold, leather" ;
+   :note "From Wikipedia: “... repoussé gold-coated gorytos with scenes from the myth of Achilles ..." ;
+   :in-modern-country-note "Ukraine" ;
+   :representative-latlong-point (46.86701 35.353108) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Melitopol_kurgan_gorytos_(corrected_for_perspective).jpg> .
+
 :scultpures-tel-abrak a :group-of-human-figures ;
    rdfs:label "Parthian(?) Sculptures from Tel Abrak" ;
    :described-by <https://en.wikipedia.org/wiki/Tell_Abraq#Archaeology> ,
