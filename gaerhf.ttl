@@ -6160,6 +6160,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (33.346944 -106.011667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Three_Rivers_Petroglyph_Site_12.jpeg> .
 
+:gold-mask-princess-chen-state a :human-figure ;
+   rdfs:label "Golf funerary mask of “Princess of Chen State”" ;
+   :described-by <https://en.wikipedia.org/wiki/Tomb_of_Princess_of_Chen_State> ;
+   :approximate-date 1018 ;
+   :material-note "Gold" ;
+   :note "From Wikipedia: ”The entombed princess was found with “a gold funerary mask, a silver mesh suit, jade ornaments, and precious glass, ceramic, and metal vessels”, among other objects showing diverse origins and influences. Around her neck she wore two amber bead necklaces of different sizes, made using material from the Baltic Sea region, bearing the name of the Liao dynasty and bird, fish, and flower carvings - Chinese motifs symbolizing luck and wards against evil.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (42.390995 121.037075) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Golden_Mask_of_Princess_of_Chen_State.jpg> .
+
 :chaco-clay-figurines a :group-of-human-figures ;
    rdfs:label "Chaco Clay Figurines" ;
    :described-by <https://museum.nps.gov/ParkObjdet.aspx?rID=CHCU%20%20%2030600&db=objects&dir=CR%20AAWEB&page=2> ;
