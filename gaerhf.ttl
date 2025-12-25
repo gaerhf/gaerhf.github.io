@@ -1260,6 +1260,18 @@
    :representative-latlong-point (36.32045 42.3675) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Painted_vessel_figurine_of_a_nude_woman_from_Yarim_Tepe_II_settlement,_Iraq._Halaf_culture,_5th_millennium_BCE._Iraq_Museum.jpg> .
 
+:male-figure-bir-es-safadi a :human-figure ;
+   rdfs:label "Male figure in Ivory from Bir es Safadi" ;
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010146119> ,
+      <https://link.springer.com/article/10.1007/s10963-024-09187-9> ;
+   :earliest-date -5000 ;
+   :latest-date -4000 ;
+   :material-note "Hippopotamus Ivory" ;
+   :note "From Louvre website: “Hauteur : 24,8 cm ; Longueur : 4,7 cm ; Epaisseur : 4,2 cm”" ;
+   :modern-country-note "Israel" ;
+   :representative-latlong-point (31.244865 34.840366) ;
+   :thumbnail-image <https://collections.louvre.fr/media/cache/small/0000000021/0000146119/0000218347_OG.JPG> .
+
 :anthropomorphic-design-ceramic-banpo a :human-figure ;
    rdfs:label "Anthropomorphic Design on Ceramic Vessel from Banpo" ;
    :described-by <https://en.wikipedia.org/wiki/Banpo#Pottery_innovations> ;
@@ -4332,6 +4344,18 @@
    :representative-latlong-point (16.269444 33.275) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aegyptisches_Museum_Berlin_InvNrKA_20080313_Goettin_Isis_aus_Naga.jpg> .
 
+:seated-emaciated-man a :human-figure ;
+   rdfs:label "Seated Emaciated Man (ΠΕΡΔΙΚ)" ;
+   :described-by <https://www.doaks.org/resources/online-exhibits/ancient-art-at-dumbarton-oaks/ancient-myths/emaciated-man> ,
+      <https://museum.doaks.org/objects-1/info/27025> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :materia-note "Bronze" ;
+   :note "From Dumbarton Oaks website: “On the drapery around his lower body, two names are inscribed in punched letters: Eudamidas appears from knee to knee and may be the name of the person who commissioned the statuette. The name along the hem of the drapery, Perdik, has two literary associations, each of which casts the statuette in a slightly different light. It may refer to Perdix, a certain Athenian peddler, who had a club foot, and whose name had become synonymous with ailments of the foot. This explanation would correspond with the original function of such a small-scale bronze statuette--in ancient Greece, they were commissioned often as dedications to gods, offered at shrines either in gratitude for blessings received or as supplication by worshipers for divine favors, such as an athletic victory or healing. Eudamidas may have commissioned this piece as an offering to Asklepios, the Greek god of healing, for assistance with a foot problem. / On the other hand, Perdik may be an abbreviated form of Perdikkas, a young man who had neglected to sacrifice to Aphrodite while studying in Athens. As retribution, the vengeful goddess cursed him with a love for his own mother which caused him to waste away—a story that explains the combination of adolescence with the emaciated body.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (49.378702 3.335629) ;
+   :thumbnail-image <https://www.doaks.org/resources/online-exhibits/ancient-art-at-dumbarton-oaks/ancient-myths/emaciated-man/@@images/image/preview> .
+
 :corleck-head a :human-figure ;
    rdfs:label "Corleck Head" ;
    :described-by <https://en.wikipedia.org/wiki/Corleck_Head> ;
@@ -6161,7 +6185,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Three_Rivers_Petroglyph_Site_12.jpeg> .
 
 :gold-mask-princess-chen-state a :human-figure ;
-   rdfs:label "Golf funerary mask of “Princess of Chen State”" ;
+   rdfs:label "Gold funerary mask of “Princess of Chen State”" ;
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_Princess_of_Chen_State> ;
    :approximate-date 1018 ;
    :material-note "Gold" ;
