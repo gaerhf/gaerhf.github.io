@@ -1700,6 +1700,16 @@
    :representative-latlong-point (41.322015 119.51319) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_pottery_pregnant_woman,_Hongshan_Culture,_Liaoning,_1982.JPG> .
 
+:pre-dynastic-jar-figures a :group-of-human-figures ;
+   rdfs:label "Pre-dynastic Jar with Figures" ;
+   :described-by <https://smarthistory.org/decorated-jar-predynastic/> ;
+   :approximate-date -3500 ;
+   :material-note "Ceramic" ;
+   :note "From Smarthistory Website: “A boat is drawn on each side of this pot. Above them are stylized human figures: a dancing woman with her hands raised over her head, and two men holding clappers or casinets. The woman is perhaps a goddess or priestess, and the scenes on this pot can be understood as episodes in a ritual or ceremony. On one side, the woman is called forth from the boat by the playing of one man, while the other man helps to raise her up. On the other side, both men beat out the tune, as she dances for them, conferring her blessings on them. The feathers worn in the hair of one man represents victory.”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (26.142143 31.985322) ;
+   :thumbnail-image <https://smarthistory.org/wp-content/uploads/2021/05/detail-predyn-2048x1178.png> .
+
 :predynastic-figurine-nubt a :human-figure ;
    rdfs:label "Predynastic Female Figurines, possibly from Naqada" ;
    :described-by <https://www.metmuseum.org/art/collection/search/547202> ;
