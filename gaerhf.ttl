@@ -2293,6 +2293,18 @@
    :representative-latlong-point (30.628889 72.863889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harappa_13_grey_stone_male_dancer_statuette.jpg> .
 
+:seated-figure-axe a :human-figure ;
+   rdfs:label "Seated Figure on Axe" ;
+   :described-by <https://www.academia.edu/39046307/Idols_The_Power_of_Images> ,
+      <https://www.artribune.com/arti-visive/archeologia-arte-antica/2018/09/intervista-inti-ligabue-mostra-venezia/> ;
+   :earliest-date -2200 ;
+   :latest-date -1800 ;
+   :material-note "Copper alloy, silver incrustations" ;
+   :note "Mapped location very approxmiate. Object in Ligabue collection, which seems to not provide discrete landing page. From the catalog for Idols; The Power of Images (p. 247, no. 92): “... male figure wearing a long narrow mantel that covers his left arm, leaving his right arm free to rest on his thighs, is seated on a small mat. His face, with short cut beard and bushy eyebrows, looks wise and peaceful, lightened by a kind smile. The short hair is massed on the forehead and framed by two thin dreadlocks that spring in high relief from his temples”" ;
+   :in-modern-country-note "Iran (eastern)?" ;
+   :representative-latlong-point (36.250913 60.769207) ;
+   :thumbnail-image <https://www.artribune.com/wp-content/uploads/2018/09/ASCIAC1.jpg> .
+
 :bmac-seated-female a :human-figure ;
    rdfs:label "BMAC Seated Female" ;
    :described-by <https://www.metmuseum.org/art/collection/search/329073> ;
