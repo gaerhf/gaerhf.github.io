@@ -1313,6 +1313,16 @@
    :representative-latlong-point (14.532872 121.18679) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Angono_Petroglyphs1.jpg> .
 
+:skiers-reindeer-petroglyph a :group-of-human-figures ;
+   rdfs:label "Skiers and Reindeer Petroglyph (Belomorsky District)" ;
+   :described-by <https://en.wikipedia.org/wiki/Petroglyphs_of_Lake_Onega_and_the_White_Sea> ;
+   :earliest-date -5000 ;
+   :latest-date -2000 ;
+   :note "From Wikipedia: “ ...  cluster at the White Sea (Belomorsky District) has 11 sites with over 3400 figures, and according to the Permanent Delegation of the Russian Federation to UNESCO, they are clearly aligned towards hunting ...”" ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (61.799916 35.893820) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Belomorsk_petroglyphs18.jpg> .
+
 :rock-art-of-sierra-de-san-francisco a :group-of-human-figures ;
    rdfs:label "Rock Art of Sierra de San Francisco" ;
    :described-by <https://en.wikipedia.org/wiki/Rock_Paintings_of_Sierra_de_San_Francisco> ;
