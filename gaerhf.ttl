@@ -4388,6 +4388,30 @@
    :representative-latlong-point (49.378702 3.335629) ;
    :thumbnail-image <https://www.doaks.org/resources/online-exhibits/ancient-art-at-dumbarton-oaks/ancient-myths/emaciated-man/@@images/image/preview> .
 
+:statuette-poseidon-brahmapuri a :human-figure ;
+   rdfs:label "Statuette of Poseidon from Brahmapuri Hoard" ;
+   :described-by <https://www.metmuseum.org/exhibitions/tree-and-serpent/exhibition-objects> ,
+      <https://www.academia.edu/108589508/The_Brahmapuri_Bronzes> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :material-note "Bronze" ;
+   :note "The Met website doesn't provide an individual page, click on image instead for catalog entry: “The bronze Poseidon is one of many miniature copies after the lost original by the Greek sculptor Lysippos, images of which were issued on coins as early as 290 BCE”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (16.704802 74.216880 ) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/773152/1924892/restricted> .
+
+:emblama-perseus-andromeda-brahmapuri a :human-figure ;
+   rdfs:label "Emblama depicting Persues and Andromeda from Brahmapuri Hoard" ;
+   :described-by <https://www.metmuseum.org/exhibitions/tree-and-serpent/exhibition-objects> ,
+      <https://www.academia.edu/108589508/The_Brahmapuri_Bronzes> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :material-note "Bronze" ;
+   :note "The Met website doesn't provide an individual page. The catalog entry for this piece does not describe it specifically." ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (16.704802 74.216880 ) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/815792/1924900/restricted> .
+
 :corleck-head a :human-figure ;
    rdfs:label "Corleck Head" ;
    :described-by <https://en.wikipedia.org/wiki/Corleck_Head> ;
@@ -4528,6 +4552,30 @@
    :note "Approximate findspot." ;
    :representative-latlong-point (40.728078 31.601947) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bolu_museum_Cult_statue_head_june_2019_2979.jpg> .
+
+:elephant-riders-brahmapuri a :group-of-human-figures ;
+   rdfs:label "Elephant with Riders from Bramhapuri Hoard" ;
+   :described-by <https://www.metmuseum.org/exhibitions/tree-and-serpent/exhibition-objects> ,
+      <https://www.academia.edu/108589508/The_Brahmapuri_Bronzes> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :material-note "Bronze" ;
+   :note "The Met website doesn't provide an individual page, click on image instead for catalog entry: “group of locally produced miniature bronzes, including the toy cart and elephant with riders, points to an indigenous market for luxury novelties in metal.‘" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (16.704802 74.216880 ) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/776938/1924685/restricted> .
+
+:ring-figures-human-head a :group-of-human-figures ;
+   rdfs:label "Ring with protomes including Human Head" ;
+   :described-by <https://www.metmuseum.org/exhibitions/tree-and-serpent/exhibition-objects> ,
+      <https://www.academia.edu/108589508/The_Brahmapuri_Bronzes> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :material-note "Bronze" ;
+   :note "The Met website doesn't provide an individual page, click on image instead for catalog entry. The entry for this piece make no observatoins specific to it." ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (16.704802 74.216880 ) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/815794/1924771/restricted> .
 
 :fugoppe-cave-petroglyphs a :group-of-human-figures ;
    rdfs:label "Fugoppe Cave Petroglyphs" ;
