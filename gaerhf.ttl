@@ -5327,6 +5327,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (32.825 21.858056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Apollo_Kitharoidos_BM_1380.jpg> . 
 
+:female-applique-deccan a :human-figure ;
+   rdfs:label "Female Appliqué from the Deccan" ;
+   :described-by <https://doi.org/10.2307/4422976> ;
+   :earliest-date 200 ;
+   :latest-date 300 ;
+   :material-note "Bronze" ;
+   :note "Specific findspot not known. Image after Barrett 1967. From article: “The figure,s apart from the arms, is hollow cast, presumably by the cire perdu method. The arms, or the wax models for them, were presumably made in two-piece moulds. Possibly they were pre-cast, and inserted into the mould for the body when the latter was cast. The upper part of the head and crown has certainly been cast on, apparently around two iron pins, both of which are visible as patches of rust on the crown and one of which can clearly be seen inside the back of the head. The union between the two parts has been filled by four fragments of cast bronze hammered into an enlarged cavity along the line of junction. All three parts of the figure appear to have been made of similar metal which has corroded in a similar manner and to a similar depth”." ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (16.691667 74.233333) .
+
 :buddha-disciples-miran a :group-of-human-figures ;
    rdfs:label "Buddha with Disciples from Miran" ;
    :described-by <https://en.wikipedia.org/wiki/Miran_(Xinjiang)#History> ;
