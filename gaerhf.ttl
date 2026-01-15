@@ -4577,6 +4577,17 @@
    :representative-latlong-point (16.704802 74.216880 ) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/815794/1924771/restricted> .
 
+:textile-doll-roman-egypt a :human-figure ;
+   rdfs:label "Textile Doll from Roman Egypt" ;
+   :described-by <https://recherche.smb.museum/detail/771625> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :material-note "Fabric" ;
+   :note "Specific findsport note known, mapped to arbitrary point. Translated from Staatliche Museen zu Berlin website: “The doll's torso is made of flexible stuffing covered with linen, while its head is framed by an elaborate turban-like hairstyle made of real hair. ... The jewelry is exceptional. The earrings are made of real gold leaf, and the rings around the neck, ankles, and wrists are made of leather with a gold leaf overlay.”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (27.807431 30.873016) ;
+   :thumbnail-image <https://recherche.smb.museum/images/18/1891949_1000x600.jpg> .
+
 :fugoppe-cave-petroglyphs a :group-of-human-figures ;
    rdfs:label "Fugoppe Cave Petroglyphs" ;
    :described-by <https://en.wikipedia.org/wiki/Fugoppe_Cave> ;
@@ -6504,6 +6515,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :art-historical-culture-or-tradition :mississippian ;
    :representative-latlong-point (34.125131 -84.807664) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .
+
+:chincha-burial-post a :human-figure ;
+   rdfs:label "Chinca Culture Burial Post" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/312640> ,
+      <https://en.wikipedia.org/wiki/Chincha_culture> ;
+   :earliest-date 1400 ;
+   :latest-date 1535 ;
+   :material-note "Wood" ;
+   :note "Specific findspot not known. From Met Museum website: “”" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-13.451387 -76.170803 ) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312640/2085962/main-image> .
 
 :poka-i-bay-petroglyphs a :group-of-human-figures ;
    rdfs:label "Pōkaʻī Bay Petroglyphs" ;
