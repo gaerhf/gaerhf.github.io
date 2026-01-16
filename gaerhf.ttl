@@ -5348,15 +5348,6 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "India" ;
    :representative-latlong-point (16.691667 74.233333) .
 
-:buddha-disciples-miran a :group-of-human-figures ;
-   rdfs:label "Buddha with Disciples from Miran" ;
-   :described-by <https://en.wikipedia.org/wiki/Miran_(Xinjiang)#History> ;
-   :earliest-date 200 ;
-   :latest-date 400 ;
-   :in-modern-country-note "China" ;
-   :representative-latlong-point (39.234167 88.939444) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_with_Six_Disciples.png> .
-
 :kushan-plaque-with-two-figures a :group-of-human-figures ;
    rdfs:label "Kushan Plaque with Two Figures" ;
    :described-by <https://www.metmuseum.org/art/collection/search/327830> ;
@@ -5368,6 +5359,15 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :note "Met Museum page suggests Balkh as possible findspot. Mapped point is proxy for Northern Afghanistan generally." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327830/711829/main-image> .
 
+:buddha-disciples-miran a :group-of-human-figures ;
+   rdfs:label "Buddha with Disciples from Miran" ;
+   :described-by <https://en.wikipedia.org/wiki/Miran_(Xinjiang)#History> ;
+   :earliest-date 200 ;
+   :latest-date 400 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (39.234167 88.939444) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_with_Six_Disciples.png> .
+
 :balalyk-tepe-murals a :group-of-human-figures ;
    rdfs:label "Balalyk Tepe Murals" ;
    :described-by <https://en.wikipedia.org/wiki/Balalyk_Tepe> ;
@@ -5377,6 +5377,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :art-historical-culture-or-tradition :kushan-empire ;
    :representative-latlong-point (37.535384 67.115405) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_mural.jpg> .
+
+:female-pins-roman-egypt a :human-figure ;
+   rdfs:label "Female Figure Pierced by Copper Pins" ;
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010011467> ,
+      <https://collections.louvre.fr/en/ark:/53355/cl010044394> ;
+   :earliest-date 200 ;
+   :latest-date 400 ;
+   :material-note "Ceramic, copper alloy" ;
+   :note "Specific findsport not known." ;
+   :in-modern-country "Egypt" ;
+   :representative-latlong-point (27.807431 30.873016) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Voodoo_doll_Louvre_E27145a.jpg> .
 
 :fasting-buddha a :human-figure ;
    rdfs:label "Fasting Buddha" ;
