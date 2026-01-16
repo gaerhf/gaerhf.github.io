@@ -5385,7 +5385,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 200 ;
    :latest-date 400 ;
    :material-note "Ceramic, copper alloy" ;
-   :note "Specific findsport not known." ;
+   :note "Specific findspot not known." ;
    :in-modern-country "Egypt" ;
    :representative-latlong-point (27.807431 30.873016) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Voodoo_doll_Louvre_E27145a.jpg> .
