@@ -6457,6 +6457,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (13.4125 103.866667) ; # Angkhor as contemporary capital
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
 
+:emmons-rattle-mask a :human-figure ;
+   rdfs:label "So-called Emmons Rattle Mask" ;
+   :defined-by <https://en.wikipedia.org/wiki/Emmons_Cemetery_Site#Emmons_mask> ,
+      <https://www.museum.state.il.us/muslink/behind/htmls/cr_an_col2.html> ;
+   :approximate-date 1200 ;
+   :material-note "Coniferous wood, copper" ;
+   :note "From Wikipedia: “... carved red cedar believed to have been deposited in the grave sometime between 1200–1400 CE. The piece measures 11.9 centimetres (4.7 in) by 9.9 centimetres (3.9 in) by 5.5 centimetres (2.2 in) and was once adorned with sheet copper and paint made from galena, a lead ore.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (40.2146 -90.209981) ;
+   :thumbnail-image <https://www.museum.state.il.us/muslink/behind/images/cr_an_col2.jpg> .
+
 :anthropomorphic-helmet-visor a :human-figure ;
    rdfs:label "Anthropomorphic Helmet Visor" ;
    :described-by <https://nav.shm.ru/en/exhibits/1442/> ;
