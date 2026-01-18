@@ -1157,6 +1157,17 @@
    :art-historical-culture-or-tradition :neolithic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pottery_woman_torso_neolothic,_NAMA_Nama830.jpg> .
 
+:house-chimney-human a :human-figure ;
+   rdfs:label "House Model with Chimney in form of Human Head" ;
+   :described-by <https://muzejbitola.mk/en/altar/> ;
+   :earliest-date -5800 ;
+   :latest-date -5200 ;
+   :material-note "Ceramic" ;
+   :note "From museum website: “... anthropomorphic model of a house with a rectangular base, with inverted T-shaped openings on four sides. The roof is set in two sides topped with chimney. The chimney is presented in the form of a head with a realistic presentation of the eyes, nose and mouth ...”" ;
+   :in-modern-country-note "Northern Macedonia" ;
+   :representative-latlong-point (40.937159 21.373550) ;
+   :thumbnail-image <https://i0.wp.com/muzejbitola.mk/wp-content/uploads/2019/01/zrtvenik.jpg?w=1809&ssl=1> .
+
 :halaf-culture-seated-female-figurine a :human-figure ;
    rdfs:label "Halaf Culture Seated Female Figurine" ;
    :described-by <https://www.metmuseum.org/art/collection/search/327066> ;
