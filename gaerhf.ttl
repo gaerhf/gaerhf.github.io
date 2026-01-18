@@ -3596,6 +3596,16 @@
    :representative-latlong-point (36.5359 -6.29755) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sarcófago_femenino_(21887254049).jpg> .
 
+:articulated-female a :human-figure ;
+   rdfs:label "Articulated Female Figure attached to Working Surface" ;
+   :described-by <https://www.britishmuseum.org/collection/object/G_1864-1007-136> ;
+   :approximate-date -450 ;
+   :material-note "Ceramic" ;
+   :note "From BM website: “Terracotta figure (perhaps a toy) in the form of a woman, perhaps preparing food, articulated at waist and shoulders, resting on a rectangular panel, traces of white slip and black and red colour survive; the one wooden element (a rolling-pin) is a modern replacement.”" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (36.336403 27.922378) ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2016_6/16_10/d24db0b7_5bc1_454f_a966_a62700a91b7e/mid_GAA46748.jpg> .
+
 :heidelberg-head a :human-figure ;
    rdfs:label "Heidelberg Head" ;
    :described-by <https://de.wikipedia.org/wiki/Heidelberger_Kopf> ;
