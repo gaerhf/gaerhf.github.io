@@ -5432,6 +5432,15 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (54.9911 -2.3608) ;
    :thumbnail-image <https://www.vindolanda.com/GetImage.aspx?IDMF=7def79ad-4186-4493-bff0-734c20b3fe4c&w=700&h=525&src=mc> .
 
+:julius-terentius-sacrifice-dura a :group-of-human-figures ;
+   rdfs:label "Julius Terentius Performing a Sacrifice" ;
+   :described-by <https://artgallery.yale.edu/collections/objects/4961> ;
+   :approximate-date 239 ;
+   :note "From Yale Gallery website: “Commissioned by the Roman tribune at Dura-Europos, Julius Terentius (depicted and identified here by Latin inscription), this painting mixes Greek, Roman, and Palmyrene elements, perhaps as a gesture of diplomacy. Performing an official sacrifice in front of a military standard, Terentius stands with his men.”" ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (34.747 40.73) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Julius_Terentius_Performing_a_Sacrifice_-_YDEA_-_4961.jpg> .
+
 :hoxne-hoard-pepper-pot a :human-figure ;
    rdfs:label "Hoxne Hoard Pepper Pot" ;
    :described-by <https://en.wikipedia.org/wiki/Empress_pepper_pot> ;
