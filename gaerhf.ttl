@@ -3983,6 +3983,7 @@
    :described-by <https://en.wikipedia.org/wiki/Laocoön_and_His_Sons> ;
    :earliest-date -100 ;
    :latest-date 75 ;
+   :note "From Wikipedia: “The figures are nearly life-sized, with the entire group measuring just over 2 m (6 ft 7 in) in height. The sculpture depicts the Trojan priest Laocoön and his sons Antiphantes and Thymbraeus being attacked by sea serpents.”" ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :late-hellenistic ;
    :representative-latlong-point (41.895393 12.495459) ; # between the Colosseum and Santa Maria Maggiore
@@ -4053,7 +4054,7 @@
    :latest-date -100 ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (34.6197 112.4539) ; # Luoyang
-   :note "No specific findspot known." ;
+   :note "No specific findspot known. From Met website: “This figure vividly captures the moment when, with one long sleeve thrown back and the other trailing down, a dancer gently stoops and flexes her knees as she lifts one heel to advance her step, performing a dance described in Han dynasty poetry...”" ;
    :art-historical-culture-or-tradition :han-dynasty ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/42178/151378/main-image> .
 
