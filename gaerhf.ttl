@@ -3241,6 +3241,17 @@
    :representative-latlong-point (37.743056 -2.551389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Galera_(M.A.N._Madrid)_01.jpg> .
 
+:macmillan-aryballos a :group-of-human-figures ;
+   rdfs:label "Macmillan Aryballos" ;
+   :described-by <https://en.wikipedia.org/wiki/Macmillan_aryballos> ,
+   <https://www.britishmuseum.org/collection/object/G_1889-0418-1> ;
+   :approximate-date -640 ;
+   :in-modern-country-note "Greece" ;
+   :note "Findspot not known, mapped at Corinth. From BM website: “Pottery aryballos decorated in miniature with eighteen warriors, a hare-hunt and a horse-race. The warriors are locked in combat, thrusting their spears, jostling for position, or falling to the ground. Each warrior is armed with plumed helmet, spear and blazoned shield. Some are streaked with blood. ... ccording to the publication in JHS 11 (1890), the aryballos was acquired by Macmillan at Thebes; the British Museum Register, however, has a handwritten note in the margin stating that the aryballos was bought by Macmillan ‘on the platform at Corinth station’”" ;
+   :material-note "ceramic" ;
+   :representative-latlong-point (37.938611 22.927222) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Macmillan_aryballos.jpg> .
+
 :pomeranian-face-urn a :human-figure ;
    rdfs:label "Pomeranian Face Urn" ;
    :described-by <https://en.wikipedia.org/wiki/Pomeranian_culture> ,
@@ -5439,6 +5450,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :note "From Yale Gallery website: “Commissioned by the Roman tribune at Dura-Europos, Julius Terentius (depicted and identified here by Latin inscription), this painting mixes Greek, Roman, and Palmyrene elements, perhaps as a gesture of diplomacy. Performing an official sacrifice in front of a military standard, Terentius stands with his men.”" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (34.747 40.73) ;
+   :wikidata-uri <https://www.wikidata.org/wiki/Q49286023> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Julius_Terentius_Performing_a_Sacrifice_-_YDEA_-_4961.jpg> .
 
 :hoxne-hoard-pepper-pot a :human-figure ;
