@@ -3094,13 +3094,25 @@
    :representative-latlong-point (37.004566 45.45825) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hasanlu-gold-cup.jpg> .
 
+:wooden-mask-guerrero a :human-figure ;
+   rdfs:label "Wooden Mask possibly from the Guerrero Region" ;
+   :described-by <https://lbry-web-007.amnh.org/digital/index.php/items/show/60450> ,
+      <https://smarthistory.org/olmec-masks-masquerade/> ;
+   :approximat-date -800 ;
+   :material-note "Wood, jade inlay" ;
+   :note "From Smarthistory website: “... wooden mask recovered in 1931 from the Cañón de la Mano in the state of Guerrero, now located in the American Museum of Natural History. The wood of the mask is remarkably preserved. Its smoothly polished surfaces were incised with curvilinear designs and inlaid with pieces of blue-green jade.”";
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (18.410882 -99.524567);
+   :thumbnail-image <https://lbry-web-007.amnh.org/digital/files/thumbnails/0f2904fe1cb5e4e5cc14072ecf6c9d3b.jpg> .
+
+
 :statue-panamuwa a :human-figure ;
    rdfs:label "Statue of King Panamuwa I" ;
    :described-by <https://en.wikipedia.org/wiki/Hadad_Statue> ,
       <https://en.wikipedia.org/wiki/Samʾal> ;
    :earliest-date -800 ;
    :latest-date -700 ;
-   :material-nte "Basalt" ;
+   :material-note "Basalt" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.103611 36.678611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Weather_God_Haddad.jpg> .
