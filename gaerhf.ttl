@@ -4313,7 +4313,8 @@
 :dying-gaul a :human-figure ;
    rdfs:label "Statue of Dying Gaul" ;
    :described-by <https://www.museicapitolini.org/it/collezioni/percorsi_per_sale/palazzo_nuovo/sala_del_gladiatore/statua_del_galata_capitolino> ,
-   <https://en.wikipedia.org/wiki/Dying_Gaul> ;
+   <https://en.wikipedia.org/wiki/Dying_Gaul> ,
+   <https://sketchfab.com/3d-models/dying-gaul-captioline-museum-rome-bd996c28f4b2413fa92616c510aeb257> ;
    :earliest-date -60 ;
    :latest-date -40 ;
    :material-note "White marble" ;
