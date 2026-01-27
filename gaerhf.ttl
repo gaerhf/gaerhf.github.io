@@ -388,6 +388,18 @@
    :representative-latlong-point (49.1925 16.608333) ; # ll for Brno, Czech Republic
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_figurine,_mammoth_ivory,_Anthropos,_Brno,_187999.jpg> .
 
+:dolni-vestonice-head a :human-figure ;
+  rdfs:label "Dolní Věstonice Portrait Head" ;
+  :described-by <https://www.livescience.com/archaeology/dolni-vestonice-portrait-head-the-oldest-known-human-portrait-in-the-world> ;
+  :earliest-date -29000 ;
+  :latest-date -24000 ;
+  :in-modern-country-note "Czech Republic" ;
+  :note "Carved from mammoth ivory with stone tools, the small head measures just 4.8 centimetres high and 2.4 centimetres wide. It depicts a woman’s face with incised eyes, a dimpled chin, and raised nose and mouth, possibly framed by an updo or headdress. This carving appears individualised and is often considered the earliest known portrait of a specific person." ;
+  :material-note "Mammoth ivory" ;
+  :art-historical-culture-or-tradition :Gravettian ;
+  :representative-latlong-point (48.877778 16.652222) ;
+  :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mammoth_ivory_female_head.jpg> .
+
 :brassempouy-gravettian-head a :human-figure ;
     rdfs:label "Brassempouy Gravettian Head" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Brassempouy> ;
@@ -2729,6 +2741,18 @@
    :representative-latlong-point (27.661667 30.905556) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Egypt_Painted_Statue_(28314649872).jpg> .
 
+:hagia-triada-sarcophagus a :group-of-human-figures ;
+   rdfs:label "Hagia Triada Sarcophagus" ;
+   :described-by <https://en.wikipedia.org/wiki/Hagia_Triada_Sarcophagus>,
+   <https://heraklionmuseum.gr/en/exhibit/the-hagia-triada-sarcophagus/> ;
+   :earliest-date -1370 ;
+   :lastest-date -1320 ;
+   :note "From Wikipedia: “All four faces of the sarcophagus are fully painted in several colours, using the fresco technique otherwise only found in Minoan paintings on walls, and sometimes floors and ceilings. Each of the long sides has a long section with a narrative figure scene of a religious ritual.”" ;
+   :material-note "Plastered Limestone" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (35.058889 24.7925) ; 
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Painting_on_limestone_sarcophagus_of_religious_rituals_from_Hagia_Triada_-_Heraklion_AM_-_01_(cropped).jpg> .
+
 :bust-of-nefertiti a :human-figure ;
    rdfs:label "Bust of Nefertiti" ;
    :art-historical-culture-or-tradition :pharaonic-egypt ;
@@ -3068,6 +3092,17 @@
    :representative-latlong-point (36.229444 43.403333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Detail_of_an_embossed_scene_on_bronze_plate_showing_Shalmaneser_III_in_a_chariot_and_Assyrian_archers._From_a_Balawat_gate,_Iraq,_859-824_BCE._Ancient_Orient_Museum,_Istanbul.jpg> .
 
+:shalmaneser-iii-military-campaign a :group-of-human-figures ;
+   rdfs:label "Fragments of Bands from a Gate" ;
+   :described-by <https://art.thewalters.org/object/54.2335/> ;
+   :earliest-date -859 ;
+   :latest-date -824 ;
+   :in-modern-country-note "Iraq" ;
+   :note "From The Walters website:  “These two bronze fragments originally belonged to a 21 foot high wooden gate of a temple at Balawat, just northeast of the capital, Nimrud. Together with nearly 265 feet of narrative strips from the same gate now in the British Museum, they illustrate in intricate detail the numerous military campaigns of King Shalmaneser III." ;
+   :material-note "bronze" ;
+   :representative-latlong-point (36.1564207 42.1761315) ;
+   :thumbnail-image <https://art.thewalters.org/images/art/PS1_54.2335A_Fnt_DD_T14.jpg> .
+
 :statue-of-neo-hittite-ruler-suppiluliuma a :human-figure ;
    rdfs:label "Statue of Neo-Hittite Ruler Suppiluliuma" ;
    :described-by <https://www.worldhistory.org/image/13594/neo-hittite-king-suppiluliuma/> ;
@@ -3104,7 +3139,6 @@
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (18.410882 -99.524567);
    :thumbnail-image <https://lbry-web-007.amnh.org/digital/files/thumbnails/0f2904fe1cb5e4e5cc14072ecf6c9d3b.jpg> .
-
 
 :statue-panamuwa a :human-figure ;
    rdfs:label "Statue of King Panamuwa I" ;
@@ -4275,6 +4309,18 @@
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.980556 38.740833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mount_Nemrut_(4).jpg> .
+
+:dying-gaul a :human-figure ;
+   rdfs:label "Statue of Dying Gaul" ;
+   :described-by <https://www.museicapitolini.org/it/collezioni/percorsi_per_sale/palazzo_nuovo/sala_del_gladiatore/statua_del_galata_capitolino> ,
+   <https://en.wikipedia.org/wiki/Dying_Gaul> ;
+   :earliest-date -60 ;
+   :latest-date -40 ;
+   :material-note "White marble" ;
+   :note "From Wikipedia: “marble semi-recumbent statue now in the Capitoline Museums in Rome. It is a copy of a now lost Greek sculpture from the Hellenistic period (323–31 BC) thought to have been made in bronze.[3] The original may have been commissioned at some time between 230 and 220 BC by Attalus I of Pergamon to celebrate his victory over the Galatians, the Celtic or Gaulish people of parts of Anatolia." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point ( 41.90808 12.49692 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dying_gaul.jpg> .
 
 :terracotta-male-figure-from-kalchayan a :human-figure ;
    rdfs:label "Terracotta Male figure from Kalchayan" ;
@@ -6615,4 +6661,3 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "United States" ;
    :representative-latlong-point ( 21.447081 -158.191729 ) ;
    :thumbnail-image <https://npr.brightspotcdn.com/dims4/default/06f2fb1/2147483647/strip/true/crop/3000x2000+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd8%2F01%2F90be35714bffa6f90ef1e9abb926%2Fap25204741938927.jpg> .
-
