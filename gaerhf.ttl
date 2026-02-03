@@ -2102,6 +2102,18 @@
    :representative-latlong-point (47.780636 87.860069) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_Statue_0.jpg> .
 
+:harpist-keros a :human-figure ;
+   rdfs:label "Harpist from Keros" ;
+   :described-by <http://odysseus.culture.gr/h/4/eh430.jsp?obj_id=4500> ,
+    <https://smarthistory.org/male-harp-player-from-keros-early-cycladic-period/> ;
+   :earliest-date -2700 ;
+   :latest-date  -2300 ;
+   :material-note "Marble" ;
+   :note "From NAM website: “... male harpist sits on an elegant throne holding a large musical instrument resembling a harp or lyre in his right hand. His nose and penis are shown in relief, as on most Cycladic figurines. It was found in a tomb together with the figurine of a flutist; both artefacts were probably made by the same craftsman.”" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (36.887699 25.603557) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harpist_of_Keros,_NAMA3908,_Athens,_Greece1.jpg> .
+
 :panel-1426-mastaba-hesy-re a :human-figure ;
    rdfs:label "Panel 1426 from Mastaba of Hesy-Re" ;
    :described-by <https://en.wikipedia.org/wiki/Mastaba_of_Hesy-Re#CG_1426> ;
