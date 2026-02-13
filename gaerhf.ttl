@@ -5828,6 +5828,19 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (56.689167 -2.781389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pictish_Stone_at_Aberlemno_Church_Yard_-_Battle_Scene_Detail.jpg> .
 
+:wooden-mirror-frame a :human-figure ;
+   rdfs:label "Wooden Figure holding Mirror Frame" ;
+   :described-by <https://artmuseum.princeton.edu/art/collections/objects/33418> ;
+   :earliest-date 600 ;
+   :latest-date 800 ;
+   :material-note "Wood" ;
+   :apparent-gender :male ;
+   :note "Specific findspot not known. From Princeton Museum website: “Reportedly from a cave near the Sesesmil River”" ;
+   :in-modern-country-note "Honduras" ;
+   :representative-latlong-point (14.855696 -89.156942 ) ;
+   :thumbnail-image <https://media.artmuseum.princeton.edu/iiif/3/collection/y1990-71_view_b/full/1024,/0/default.webp> .
+
+
 :palm-sunday-qocho a :group-of-human-figures ;
    rdfs:label "Palm Sunday Mural from Qocho" ;
    :described-by <https://en.wikipedia.org/wiki/Murals_from_the_Christian_temple_at_Qocho> ;
