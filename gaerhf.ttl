@@ -2605,7 +2605,7 @@
    :art-historical-culture-or-tradition :minoan ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cueilleuse_de_safran,_fresque,_Akrotiri,_Grèce.jpg> .
 
-:unerary-mask-grave-circle-a-mycenae a :human-figure ;
+:funerary-mask-grave-circle-a-mycenae a :human-figure ;
    rdfs:label "Mycenaean Gold Mask from Grave Circle A at Mycenae";
    :described-by <https://en.wikipedia.org/wiki/Mask_of_Agamemnon> ;
    :earliest-date -1550 ;
@@ -2814,6 +2814,17 @@
    :in-modern-country-note "China" ;
    :representative-latlong-point (36.121031 114.316206) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shang_Jade_Figure_cropped,_highlighted.jpg> .
+
+:wooden-busts-el-manati a :group-of-human-figures ;
+   rdfs:label "Wooden busts from El Manatí" ;
+   :described-by <https://en.wikipedia.org/wiki/El_Manatí#Wooden_busts> ,
+      <https://traffickingculture.org/encyclopedia/case-studies/el-manati-wooden-olmec-busts/> ;
+   :approximate-date -1200 ;
+   :material-note "Wood" ;
+   :note "From Wikiedpia: “Of particular note are 37 wooden busts or sculptures recovered from the bogs in 1989 by INAH archaeologists...These busts were unusually well-preserved, owing to the anaerobic conditions of their interment and a stable water temperature that impeded microbial decay. Samples from two of these busts produced Carbon-14 dating results equivalent to a date of around 1200 BCE.”" ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (17.622427 -94.641552) ;
+   :thumbnail-image <https://traffickingculture.org/app/uploads/2013/02/El_Manati_Wooden_Busts-by-Ken-Garrett.jpg> .
 
 :sanxingdui-bronze-head-protuding-eyes a :human-figure ;
    rdfs:label "Sanxingdui Bronze Head with Protuding Eyes" ;
@@ -5839,7 +5850,6 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Honduras" ;
    :representative-latlong-point (14.855696 -89.156942 ) ;
    :thumbnail-image <https://media.artmuseum.princeton.edu/iiif/3/collection/y1990-71_view_b/full/1024,/0/default.webp> .
-
 
 :palm-sunday-qocho a :group-of-human-figures ;
    rdfs:label "Palm Sunday Mural from Qocho" ;
