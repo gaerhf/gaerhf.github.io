@@ -2114,6 +2114,16 @@
    :representative-latlong-point (36.887699 25.603557) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harpist_of_Keros,_NAMA3908,_Athens,_Greece1.jpg> .
 
+:plaque-hunting-korfi-t-aroniou a :group-of-human-figures ;
+   rdfs:label "Petroglyph plaque with Hunting Scene" ;
+   :described-by <https://de.wikipedia.org/wiki/Korfi_t’_Aroniou> ;
+   :earliest-date -2700 ;
+   :latest-date -2300 ;
+   :note "Translateed from German Wikipedia: “The most significant finds are ten marble slabs with figurative depictions. These slabs were incorporated into the modern dry-stone wall like ordinary building stones. The motifs are schematically carved into the approximately 30 × 50 cm slabs. They depict scenes from everyday life, such as hunting, animal husbandry, seafaring, and a dance or battle scene.“" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (36.977682 25.553899) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock-carvings,_stone,_Hunting_scene_or_ritual%3F_3000-2300,_AM_Apeiranthos,_143574.jpg> .
+
 :panel-1426-mastaba-hesy-re a :human-figure ;
    rdfs:label "Panel 1426 from Mastaba of Hesy-Re" ;
    :described-by <https://en.wikipedia.org/wiki/Mastaba_of_Hesy-Re#CG_1426> ;
