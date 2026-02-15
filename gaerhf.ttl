@@ -2519,16 +2519,6 @@
    :representative-latlong-point (18.455944 -9.417171) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Homme_muni_d’un_bâton,_et_vaches_à_robe_marquée_du_village_v.72.jpg> .
 
-:kangjiashimenzi-petroglyphs a :group-of-human-figures ;
-   rdfs:label "Kangjiashimenzi Petroglyphs" ;
-   :described-by <http://benedante.blogspot.com/2011/06/some-really-weird-bronze-age.html> ;
-   :earliest-date -1900 ;
-   :latest-date -1500 ;
-   :in-modern-country-note "China" ;
-   :representative-latlong-point (35.974859 76.5559) ;
-   :note "Needs a better landing page and overall documentation." ;
-   :thumbnail-image <https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqs1XBjeoqEDOISh-Y30t8nddz7teOux11AQQsWwoCRRIh-r7bd9FkGqfgwCPyOzZ8W-Jpsz6HcHprD2q9Y_6LRauj4Hg6EWhf5pDnnUbqF0Cb8uVFNKZSBkq8Eh_tMB94FQRGcsHPCXTk/s400/tienshan4.jpg> .
-
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
    :described-by <https://www.historymuseum.ca/collections/artifact/1295533> ;
@@ -2549,6 +2539,26 @@
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.033333 34.883333) ; # ll for Yehud
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/d/d6/Thinker_from_Yehud.jpeg?20230912000419> .
+
+:kangjiashimenzi-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Kangjiashimenzi Petroglyphs" ;
+   :described-by <http://benedante.blogspot.com/2011/06/some-really-weird-bronze-age.html> ;
+   :earliest-date -1900 ;
+   :latest-date -1500 ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (35.974859 76.5559) ;
+   :note "Needs a better landing page and overall documentation." ;
+   :thumbnail-image <https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqs1XBjeoqEDOISh-Y30t8nddz7teOux11AQQsWwoCRRIh-r7bd9FkGqfgwCPyOzZ8W-Jpsz6HcHprD2q9Y_6LRauj4Hg6EWhf5pDnnUbqF0Cb8uVFNKZSBkq8Eh_tMB94FQRGcsHPCXTk/s400/tienshan4.jpg> .
+
+:anthropomorphs-eagle-cave a :group-of-human-figures ;
+   rdfs:label "Anthropomorps from Eagle Cave" ;
+   :described-by <https://doi.org/10.1016/j.jas.2020.105315> ;
+   :earliest-date -1900 ;
+   :latest-date -1200 ;
+   :note "From linked article: “... a series of five small black anthropomorphs. The image is heavily obscured by accretions. Its upper torso is badly spalled, and the remaining imagery is fragile.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (29.8083 -101.5502) ;
+   :thumbnail-image <https://ars.els-cdn.com/content/image/1-s2.0-S0305440320302351-gr5.jpg> .
 
 # -1750 https://en.wikipedia.org/wiki/Haft_Tepe
 
