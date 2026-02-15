@@ -2376,6 +2376,7 @@
    :earliest-date -2200 ;
    :latest-date -1700 ;
    :material-note "Steatite or chlorite, alabaster" ;
+   :note "From Met Museum website: “... typical abstract form with an armless body and legs represented by a protruding ledge.”" ;
    :in-modern-country-note "Turkmenistan or Neighboring" ;
    :representative-latlong-point (37.30111 64.15531) ;
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
@@ -2387,6 +2388,7 @@
    :earliest-date -2200 ;
    :latest-date -1700 ;
    :in-modern-country-note "Turkmenistan or Neighboring" ;
+   :note "From Met Museum Website: “This small yet potent figure, with its human face and serpentine-scaled body, probably represents such a creature, enlivened and charged with magical efficacy whether propitious or demonic. The monstrous figure’s most enigmatic and distinctive features are the prominent scar across its face and the two holes pierced into its upper and lower lips. ”." ;
    :representative-latlong-point (37.3028 64.153) ;
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monstrous_male_figure_MET_dp22227.jpg> .
