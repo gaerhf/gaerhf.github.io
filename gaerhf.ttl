@@ -3336,16 +3336,16 @@
    :representative-latlong-point (37.743056 -2.551389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Galera_(M.A.N._Madrid)_01.jpg> .
 
-:macmillan-aryballos a :group-of-human-figures ;
-   rdfs:label "Macmillan Aryballos" ;
-   :described-by <https://en.wikipedia.org/wiki/Macmillan_aryballos> ,
-   <https://www.britishmuseum.org/collection/object/G_1889-0418-1> ;
-   :approximate-date -640 ;
-   :in-modern-country-note "Greece" ;
-   :note "Findspot not known, mapped at Corinth. From BM website: “Pottery aryballos decorated in miniature with eighteen warriors, a hare-hunt and a horse-race. The warriors are locked in combat, thrusting their spears, jostling for position, or falling to the ground. Each warrior is armed with plumed helmet, spear and blazoned shield. Some are streaked with blood. ... ccording to the publication in JHS 11 (1890), the aryballos was acquired by Macmillan at Thebes; the British Museum Register, however, has a handwritten note in the margin stating that the aryballos was bought by Macmillan ‘on the platform at Corinth station’”" ;
-   :material-note "ceramic" ;
-   :representative-latlong-point (37.938611 22.927222) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Macmillan_aryballos.jpg> .
+:eleusis-amphora a :group-of-human-figures ;
+   rdfs:label "Eleusis Amphora" ;
+   :described-by <https://en.wikipedia.org/wiki/Eleusis_Amphora> ;
+   :earliest-date -650 ;
+   :latest-date -625 ;
+   :material-note "Ceramic" ;
+   :note "From Wikipedia: “The Eleusis amphora shows some of the earliest artistic depictions of Greek mythology. On the neck of the vase, the figures depict Odysseus and his men blinding the cyclops Polyphemus. The register just below the neck shows a lion chasing a boar. Although it is hard to see because the amphora was found in pieces and then reconstructed, the central register shows Athena and Perseus escaping after Perseus beheads Medusa.”" ;
+   :in-modern-coountry-note "Greece" ;
+   :representative-latlong-point (38.0407 23.5376) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funerary_proto-Attic_amphora_by_Polyphemos_painter_depicting_Odysseus_and_his_men_blinding_the_cyclops_Polyphemus_from_xxx_flickr_8706777442_b4db371a26_o.jpg> .
 
 :pomeranian-face-urn a :human-figure ;
    rdfs:label "Pomeranian Face Urn" ;
@@ -3358,6 +3358,17 @@
    :in-modern-country-note "Poland" ;
    :representative-latlong-point (54.29 18.15) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MuseumGrudziadzA5149.JPG> .
+
+:macmillan-aryballos a :group-of-human-figures ;
+   rdfs:label "Macmillan Aryballos" ;
+   :described-by <https://en.wikipedia.org/wiki/Macmillan_aryballos> ,
+   <https://www.britishmuseum.org/collection/object/G_1889-0418-1> ;
+   :approximate-date -640 ;
+   :in-modern-country-note "Greece" ;
+   :note "Findspot not known, mapped at Corinth. From BM website: “Pottery aryballos decorated in miniature with eighteen warriors, a hare-hunt and a horse-race. The warriors are locked in combat, thrusting their spears, jostling for position, or falling to the ground. Each warrior is armed with plumed helmet, spear and blazoned shield. Some are streaked with blood. ... ccording to the publication in JHS 11 (1890), the aryballos was acquired by Macmillan at Thebes; the British Museum Register, however, has a handwritten note in the margin stating that the aryballos was bought by Macmillan ‘on the platform at Corinth station’”" ;
+   :material-note "ceramic" ;
+   :representative-latlong-point (37.938611 22.927222) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Macmillan_aryballos.jpg> .
 
 :hawtar-athat-statue a :human-figure ;
    rdfs:label "Hawtar'athat Statue" ;
