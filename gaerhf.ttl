@@ -3410,6 +3410,17 @@
    :representative-latlong-point (48.833056 9.011111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Krieger_Hirschlanden_Vs.jpg> .
 
+:lydian-coin-helmet a :human-figure ;
+   rdfs:label "Lydian Coin with Crested Helmet" ;
+   :described-by <https://www.britishmuseum.org/collection/object/C_1953-1008-1?selectedImageId=1613850146> ;
+   :earliest-date -600 ;
+   :latest-date -500 ;
+   :material-not "Electrum" ;
+   :note "Findspot not known. Mapped to Sardis as a candidate for the mint that produced this coins. From BM website: “Head of warrior in crested Corinthian helmet, left. (obverse) Incuse square. (reverse)”" ;
+   :in-mondern-country-note "Turkey" ;
+   :representative-latlong-point (38.488333 28.040278) ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2023_1/18_12/b4eaee21_d686_4b39_83d9_af8e00d2f296/mid_ERC_Cab_129_OFFICIAL_00926.jpg> .
+
 :ballachulish-figure a :human-figure ;
    rdfs:label "Ballachulish Figure" ;
    :described-by <https://en.wikipedia.org/wiki/Ballachulish_figure> ,
