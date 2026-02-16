@@ -327,6 +327,7 @@
    :in-modern-country-note "Austria" ;
    :art-historical-culture-or-tradition :aurignacian ;
    :material-note "Serpentine (Stone)" ;
+   :note "From Wikipedia: “The figurine measures 7.2 centimetres (2.8 in) in height and weighs 10 g. It is sculpted from shiny green serpentine rock which is found in the immediate vicinity of where the figurine was unearthed.”" ;
    :representative-latlong-point (48.45 15.6) ; # ll for Stratzing, Austria
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_vom_Galgenberg.JPG> .
 
@@ -589,12 +590,12 @@
    :representative-latlong-point (0.943212 118.872765) ;
    :thumbnail-image <https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41586-018-0679-9/MediaObjects/41586_2018_679_Fig6_ESM.jpg?as=webp> .
 
-:human-figure-petroglyph-jebel-arnan a :human-figure ;
-   rdfs:label "Human Figure Petroglyph at Jebel Arnan" ;
+:human-figure-petroglyphs-jebel-arnan a :group-of-human-figures ;
+   rdfs:label "Human Figure Petroglyphs at Jebel Arnan" ;
    :described-by <https://www.nature.com/articles/s41467-025-63417-y> ;
    :earliest-date -11000 ;
    :latest-date -9000 ;
-   :note "Figure 2a in the article (top-left in thumbnail) shows a large human figure highlighted in yellow." ;
+   :note "Figure 2a in the article (top-left in thumbnail) shows a large human figure highlighted in yellow. Image caption from article: “A. Panel ARN21A: Several small, stylised depictions of women (phase 1, traced in green), superimposed with a large human figure (phase 2, traced in yellow). Large, kneeling camel engraved over the top (phase 3, traced in white)”" ;
    :in-modern-country-note "Saudi Arabia" ;
    :representative-latlong-point (27.190099 39.641739) ;
    :thumbnail-image <https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-025-63417-y/MediaObjects/41467_2025_63417_Fig2_HTML.png?as=webp> .
@@ -696,6 +697,8 @@
       <https://en.wikipedia.org/wiki/Khiamian_culture> ;
    :earliest-date -9700 ;
    :latest-date -8600 ;
+   :material-note "Limestone" ;
+   :note "From Israel Museum website: “H: 36; W: 17; D: 9 cm” " ;
    :in-modern-country-note "West Bank, Palestinian Territories" ;
    :representative-latlong-point (32.032778 35.475556) ;
    :thumbnail-image <https://www.imj.org.il/sites/default/files/collections/Human%20Statue,%20Gilgal,%20PPNA~K10343_2.jpg> .
@@ -1729,6 +1732,7 @@
    rdfs:label "Female Figurines from Niuheliang" ;
    :described-by <https://en.wikipedia.org/wiki/Niuheliang> ;
    :approximate-date -3500 ;
+   :note "From wikipedia: “Female torso, 3500 BC, Hongshan Culture, Liaoning, 1982. Height 7.8 cm. Red brown terracotta.”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (41.322015 119.51319) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolithic_pottery_pregnant_woman,_Hongshan_Culture,_Liaoning,_1982.JPG> .
@@ -1761,7 +1765,7 @@
    :material-note "Elephant ivory handle, Flint blade." ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (26.185 31.918889) ; # ll for Gebel el-Arak, Egypt
-   :note "Probably from Abydos, not Gebel el-Arak." ;
+   :note "From Wikipedia: “The Gebel el-Arak Knife, also Jebel el-Arak Knife, is an ivory and flint knife dating from the end of the Naqada II period of Egyptian prehistory (c.3300–3200 BC), showing Mesopotamian influence. The knife was purchased in 1914 in Cairo by Georges Aaron Bénédite for the Louvre, where it is now on display in the Sully wing, room 633. At the time of its purchase, the knife handle was alleged by the seller to have been found at the site of Gebel el-Arak, but it is today believed to come from Abydos.”" ;
    :art-historical-culture-or-tradition :predynastic-egypt ; # can be more specific
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gebel_el-Arak_Knife_ivory_handle_(front_top_part_detail).jpg> .
 
@@ -3939,7 +3943,7 @@
    :described-by <https://en.wikipedia.org/wiki/Ai-Khanoum_plaque> ;
    :earliest-date -200 ;
    :latest-date -145 ;
-   :note "From Wikipedia: “The Ay-Khanoum plaque is an ancient Greco-Bactrian disk discovered at the archaeological site of Ay-Khanoum in Takhar Province, Afghanistan. This Hellenistic city served as a military and economic center for the rulers of the Greco-Bactrian Kingdom until its destruction c. 145 BC. Rediscovered in 1961, the ruins of the city were excavated by the French Archaeological Delegation in Afghanistan (DAFA) until an outbreak of conflict in Afghanistan during the late 1970s. Among the structures excavated by the archaeologists was a sanctuary called the 'Temple of Indented Niches', (French: “temple à niches indentées”; alternatively “temple à redans”, meaning 'Stepped Temple')[1] in which the disk was found. The disk is held in the collection of the National Museum of Afghanistan in Kabul.”" ;
+   :note "From Wikipedia: “The Ay-Khanoum plaque is an ancient Greco-Bactrian disk discovered at the archaeological site of Ay-Khanoum in Takhar Province, Afghanistan. This Hellenistic city served as a military and economic center for the rulers of the Greco-Bactrian Kingdom until its destruction c. 145 BC. Rediscovered in 1961, the ruins of the city were excavated by the French Archaeological Delegation in Afghanistan (DAFA) until an outbreak of conflict in Afghanistan during the late 1970s. Among the structures excavated by the archaeologists was a sanctuary called the 'Temple of Indented Niches', (French: “temple à niches indentées”; alternatively “temple à redans”, meaning 'Stepped Temple') in which the disk was found. The disk is held in the collection of the National Museum of Afghanistan in Kabul.”" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (37.164722 69.408611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AiKhanoumPlateSharp.jpg> .
@@ -5124,10 +5128,11 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :standing-female-puig-des-molins a :human-figure ;
    rdfs:label "Standing Female Statuette from Puig des Molins" ;
-   :described-by <https://en.wikipedia.org/wiki/Mauryan_art> ,<https://en.wikipedia.org/wiki/Lady_of_Ibiza> ;
+   :described-by <https://en.wikipedia.org/wiki/Lady_of_Ibiza> ;
    :earliest-date -300 ;
    :latest-date -200 ;
    :material-note "Ceramic" ;
+   :note "From Wikipedia: “ ... ceramic figure, 47 cm tall, that dates from the third century BC. ... found in the necropolis of Puig des Molins on the island of Ibiza in the Mediterranean. It was made using a mold and has a cavity in the back, perhaps used for hanging it up. She is richly ornamented in terms of clothing and jewelry.”" ;
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (38.9072 1.42951) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Ibiza_(M.A.N._Madrid)_01.jpg> .
@@ -5990,7 +5995,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 713 ;
    :latest-date 803 ;
    :material-note "Sandstone" ;
-   :note "From Wikipedia: “The Leshan Giant Buddha (Chinese: 樂山大佛) is a 71-meter (233 ft) tall stone statue, built between 713 and 803 (during the Tang dynasty). It is carved out of a cliff face of Cretaceous red bed sandstones that lies at the confluence of the Min River and Dadu River in the southern part of Sichuan Province in China, near the city of Leshan.[1] The stone sculpture faces Mount Emei, with the rivers flowing below its feet.”" ;
+   :note "From Wikipedia: “The Leshan Giant Buddha (Chinese: 樂山大佛) is a 71-meter (233 ft) tall stone statue, built between 713 and 803 (during the Tang dynasty). It is carved out of a cliff face of Cretaceous red bed sandstones that lies at the confluence of the Min River and Dadu River in the southern part of Sichuan Province in China, near the city of Leshan. The stone sculpture faces Mount Emei, with the rivers flowing below its feet.”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (29.544722 103.773333) ; # Leshan, China
    :art-historical-culture-or-tradition :tang-dynasty ;
