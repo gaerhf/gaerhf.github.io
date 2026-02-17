@@ -5502,6 +5502,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (32.825 21.858056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Apollo_Kitharoidos_BM_1380.jpg> . 
 
+:zliten-mosaic a :group-of-human-figures ;
+   rdfs:label "Zliten Mosaic with Gladiatorial Scenes" ;
+   :described-by <https://en.wikipedia.org/wiki/Zliten_mosaic> ,
+      <https://penelope.uchicago.edu/encyclopaedia_romana/gladiators/zliten.html> ;
+   :earliest-date 175 ;
+   :latest-date 250 ;
+   :material-note "Stone" ;
+   :note "From penelope.uchicago.edu: “This image shows the complete mosaic and provides a perspective that very often is presented only as individual images. Gladiatorial contests alternate with animal hunts. Across the top border, one can see musicians and combat between equites, a retiarius and secutor, a Thraex and murmillo, a hoplomachus and murmillo (who is appealing to the referee), and a final matched pair with crested helmets. Across the right-hand border, there are scenes of damnatio ad bestias and venationes. The opposing borders are damaged but show more gladiatorial combat across the bottom and venationes on the left.”" ;
+   :in-modern-country-note "Libya" ;
+   :representative-latlong-point (32.466667 14.566667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestiarii.jpg> .
+
 :female-applique-deccan a :human-figure ;
    rdfs:label "Female Appliqué from the Deccan" ;
    :described-by <https://doi.org/10.2307/4422976> ;
