@@ -2007,7 +2007,8 @@
 
 :standing-female-figure-necklace a :human-figure ;
    rdfs:label "Standing Female Figure with Necklace" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/327544> ;
+   :described-by <https://www.metmuseum.org/art/collection/search/327544> ,
+      <https://skfb.ly/p7VPF> ;
    :earliest-date -3000 ;
    :latest-date -2000 ;
    :material-note "Sandstone" ;
@@ -3682,6 +3683,7 @@
    :earliest-date -500 ;
    :latest-date 100 ;
    :material-note "Ceramic" ;
+   :note "From Ohio Memory website: “Human head sculpture made of clay by the Ohio Hopewell culture, 100 BC-500 AD. This small clay effigy of a human head (89.8 mm x 75.6 mm) is mottled dark reddish-gray, light reddish-brown, black and dark reddish-brown. The eyes are oval and eye sockets are formed by deeply incised lines. Distinct eyebrow ridges with some incised lines indicate eyebrows above the right eye. Nose has two indentations denoting nostrils. The mouth is slightly open and a ridge denotes the lower lip. There are projections on either side for ears, well-shaped with ear and ear lobes. Behind the left ear, running from the base to the forehead, is a gash that measures 76.6 mm in length. Behind the right ear, there is a gash running from the top of skull to the base that measures 74 mm in length. Base is flat where the neck would begin. There is a 19.7 mm hole in the base, roughly circular in shape, that extends into the head. There is also a hole that is 3 mm in diameter. The back of the head is somewhat flattened. On the top are two holes, roughly 6.3 mm in diameter, that extend into the head. Gash across the forehead measures 41.7 mm in length. This item has been extensively restored”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.238393 -83.221035) ;
    :thumbnail-image <https://www.nps.gov/hocu/learn/historyculture/images/SeipEx-450.jpg?maxwidth=650&autorotate=false&quality=78&format=webp> .
@@ -4574,6 +4576,18 @@
    :in-modern-country-note "India" ;
    :representative-latlong-point (16.704802 74.216880 ) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/815792/1924900/restricted> .
+
+:female-statue-sanaa-museum a :human-figure ;
+   rdfs:label "Bronze Female Staute, now in Sana'a Museum" ;
+   :described-by <https://www.academia.edu/94436139/Antonini_and_Robin_The_South_Arabian_woman_Semitica_et_Classica_11_71_> ,
+    <https://colorsandstones.eu/2023/09/06/ancient-arabia-female-portraits/> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :material-note "Bronze" ;
+   :note "An important piece that needs a better landing page on Internet. Findspot unclear. The date is unclear. It is sometimes dated to the 5th century BCE. From linked article: “bronze statue of a woman at the Ṣanʿāʾ Museum (1st century ad, figure 20). The woman wears a round pendant with rays suggesting the image of the sun.”" ;
+   :in-modern-country-note "Yemen" ;
+   :representative-latlong-point (15.380582 44.209382) ;
+   :thumbnail-image <https://upload.wikimedia.org/wikipedia/ar/0/09/Naional_Musuem_of_Sana%27a.jpg> .
 
 :corleck-head a :human-figure ;
    rdfs:label "Corleck Head" ;
@@ -5875,6 +5889,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 600 ;
    :latest-date 700 ;
    :material-note "Ceramic" ;
+   :note "From Guimet website: “The elegance of the figure is visible in the refinement of the folds moulding the body, the details of the ornaments such as the headdress and necklaces and the sophistication of the curls and hairstyle, which make it a timeless and graceful masterpiece. The mannerism and Indian influence are typical of the Fondukistan site - a coin treasure found in another niche allowed to date the sculptures back to the 7th century - which showcases the last manifestation of Buddhist art in Afghanistan before the takeover of Islam.”" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.969591 68.876891) ; # Kabul, Afghanistan
    :thumbnail-image <https://www.guimet.fr/sites/default/files/styles/width_1220px/public/2023-07/divinite-assise-en-delassement.jpg?itok=rlsorMb_> .
@@ -5936,6 +5951,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 # 600 - 900 https://www.metmuseum.org/art/collection/search/309503
 
+:coin-chach-7th-century a :human-figure ;
+   rdfs:label "Coin of Chach, e. 7th Century CE" ;
+   :described-by <https://en.wikipedia.org/wiki/Tashkent#History_as_Chach> ;
+   :earliest-date 625 ;
+   :latest-date 675 ;
+   :material-note "Copper alloy" ;
+   :note "Uncertain ruler. Findspot unknown. Mapped to Chach/Tashkent as mint." ;
+   :in-modern-country-note "Uzbekistan" ;
+   :representative-latlong-point (41.311111 69.279722) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Chach._Uncertain_ruler._Circa_AD_625-725.jpg> .
+
 :afrasiab-murals a :group-of-human-figures ;
    rdfs:label "Afrasiab Murals" ;
    :described-by <https://en.wikipedia.org/wiki/Afrasiab_murals> ;
@@ -5974,6 +6000,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Rinnegan_Crucifixion_Plaque> ;
    :earliest-date 675 ;
    :latest-date 775 ;
+   :note "Adpated from Wikipedia: “Christ wears a tubular and long-sleeved tunic ... and is beadless. He is centre-facing and looking out at the viewer with outstretched arms. He has open eyes and seems to stand rather than hang on the centre of the cross ... His feet point inwards and downwards, and the rivet holes indicate that he is nailed to a cross. The thin border that outlines his head is assumed to be a halo. His chest, arms and long tunic are heavily decorated by elaborate early Celtic spiral patterns.”" ;
    :in-modern-country-note "Ireland" ;
    :representative-latlong-point (53.5 -7.966667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Placca_della_crocifissione,_in_bronzo,_da_st._john%27s_rinnagan,_contea_di_roscommon,_viii_secolo.jpg> .
@@ -5983,6 +6010,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Jade_mask_of_Pakal> ;
    :date 683 ;
    :material-note "Jade, shell, nacre, obsidian" ;
+   :note "From Wikipedia: “... made with over 346 green jade stone fragments, the eyes are made with shell, nacre and the pupils with obsidian stone." ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (17.4836 -92.0468) ; # Temple of the Inscriptions, Palenque, Mexico
    :art-historical-culture-or-tradition :maya-culture ;
@@ -6002,6 +6030,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Takamatsuzuka_Tomb> ;
    :earliest-date 694 ;
    :latest-date 710 ;
+   :note "The thumbnail image is from the west wall, partial description from Wikipedia: “On the west wall, in contrast, from the south side, there is a group of male figures, the White Tiger, above which is the moon, and a group of female figures. The group of female figures on the west wall was particularly colorful.”." ;
    :in-modern-country-note "Japan" ;
    :representative-latlong-point (34.462222 135.806472) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Takamat1.jpg> .
@@ -6486,6 +6515,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "United States" ;
    :representative-latlong-point (42.9293 -107.6137) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:1205CastleGardens2.jpg> .
+
+:flourite-figurine-ware-mounds a :human-figure ;
+   rdfs:label "Flourite figureine from Ware Mounds" ;
+   :described-by <https://en.wikipedia.org/wiki/Ware_Mounds_and_Village_Site#Stone_statue> ;
+   :earliest-date 1000 ;
+   :latest0date 1300 ;
+   :material-note "Flourite" ;
+   :note "From Wikipedia: “A Mississippian culture stone statue made of fluorite was found buried in Mound 1 by Thomas Perrine in 1873 and nicknamed ‘Anna’.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (37.446389 -89.4) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stati_uniti,_mississippiani,_figurina_in_pietra,_dall%27illinois,_1000-1400_dc_ca.jpg> .
 
 :three-rivers-petroglyphs a :group-of-human-figures ;
    rdfs:label "Three Rivers Petroglyphs" ;
