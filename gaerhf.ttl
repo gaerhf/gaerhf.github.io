@@ -4849,6 +4849,7 @@
    :described-by <https://www.worldhistory.org/image/10852/statue-of-prince-absadmiya-from-hatra/> ;
    :earliest-date 140 ;
    :latest-date 180 ;
+   :note "From Smarthistory website: “... right arm is raised in salutation while the left hand holds a palm branch. He wears an elegant and exquisitely carved dress. The feet are lost. The statue was found in the Great Temple. From Hatra, Ninawa Governorate, Iraq. Parthian period, Late 2nd century CE. On display at the Iraq Museum in Baghdad, Republic of Iraq.”" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (35.588056 42.718333) ;
    :art-historical-culture-or-tradition :hatra ;
