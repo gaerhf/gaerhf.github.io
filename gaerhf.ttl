@@ -5529,6 +5529,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.metmuseum.org/art/collection/search/327830> ;
    :earliest-date 200 ;
    :latest-date 300 ;
+   :note "From Metmuseum website: “depicts a deity (with nimbus) being approached by a male worshiper, probably nonroyal but portrayed as of equal stature to the god”" ;
    :in-modern-country-note "Afghanistan and neighboring." ;
    :art-historical-culture-or-tradition :kushan-empire ;
    :representative-latlong-point (36.756160 66.912596) ;
@@ -5540,6 +5541,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Miran_(Xinjiang)#History> ;
    :earliest-date 200 ;
    :latest-date 400 ;
+   :note "From Wikpedia image caption: “Fragment of a wall painting from a stupa in Miran depicting the Buddha (leftmost) followed by six disciples”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (39.234167 88.939444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_with_Six_Disciples.png> .
