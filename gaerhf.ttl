@@ -4212,6 +4212,8 @@
    :described-by <https://www.metmuseum.org/art/collection/search/322114> ;
    :earliest-date -200 ;
    :latest-date 200 ;
+   :material-note "Alabaster" ;
+   :note "From Met Museum website: “ alabaster figurine is of a nude woman reclining on her left side. Her left arm, which would have supported her body, is missing. The right arm is extended along her side, with the tips of her fingers resting lightly on her thigh. Faint bands at the woman's neck indicate creases; the subtle folds of flesh along the right side of the torso emphasize the full curves of her figure.”" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (33.093611 44.580556) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/322114/1825368/main-image> .
