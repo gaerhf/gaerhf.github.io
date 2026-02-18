@@ -4054,6 +4054,7 @@
    :earliest-date -125 ;
    :latest-date -1 ;
    :material-note "Ceramic" ;
+   :note "From Wikipedia: “The sculpture represents a bearded man of mature age, with regular facial features. The thin nose continues the line of the straight forehead. The relief-modeled eyes have carefully worked out eyelids, convex eyeballs, the borders of the iris and pupil. The eyebrows are thin and arched. The moustache frames the mouth and merges with a short, rounded, slightly wavy beard. The hair is depicted as large, smoothly curved strands.”" ;
    :in-modern-country-note "Turkmenistan" ;
    :representative-latlong-point (37.966667 58.195) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nisa_helmeted_warrior_(black_background).jpg> .
