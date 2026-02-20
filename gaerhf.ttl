@@ -5106,6 +5106,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (42.746944 75.248611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balbal.jpg> .
 
+:moche-warrior-figure a :human-figure ;
+   rdfs:label "Moche Warrior Figure" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/314492> ;
+   :earliest-date 500 ;
+   :latest-date 800 ;
+   :material-note "Copper" ;
+   :note "From Met website: “Composed of six pieces of gilded copper cut from a larger sheet, [this piece] was shaped to create a figure of a warrior brandishing a weapon (now lost) and carrying a circular shield.”" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-5.612001 -80.499232) ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/314492/678549/main-image> .
+
 :bamiyan-buddhas a :group-of-human-figures ;
    rdfs:label "Bamiyan Buddhas" ;
    :described-by <https://en.wikipedia.org/wiki/Buddhas_of_Bamiyan> ;
