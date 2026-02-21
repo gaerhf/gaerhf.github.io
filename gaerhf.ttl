@@ -2546,6 +2546,15 @@
    :representative-latlong-point (75.171333 -88.975453) ; # devon island, Nunavut, Canada
    :thumbnail-image <https://www.historymuseum.ca/ke/_resources/120798/5050-1613-0243-094-base-cmhsize-small.jpg> .
 
+:famine-frieze-vichama a :group-of-human-figures ;
+   rdfs:label "Famine Frieze at Vichama" ;
+   :described-by <https://doi.org/10.1016/j.jasrep.2025.105473> ,
+   <https://www.theguardian.com/science/2025/nov/05/archaeologists-discover-how-oldest-american-civilisation-survived-a-climate-catastrophe> ;
+   :approximate-date -1800 ;
+   :note "The image is figure 1 in the JAS article. From the Guardian article: ”One such set of images was discovered at Vichama on the walls of a temple on top of a raised platform in the desert. It is formed of three-dimensional mural reliefs that depict emaciated corpses with sunken bellies and protruding ribs; on a second wall above and set back there are pregnant women, ritual dancers and a pair of large fish. / Above both, on a higher wall, is an almost cartoonish design which shows the face of a toad emerging with human hands being struck in the head by a lightning bolt.”" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-11.022610 -77.631640) .
+
 :female-male-mud-figurines a :group-of-human-figures ;
    rdfs:label "Female and male figurines formed from mud" ;
    :described-by <https://phys.org/news/2015-06-year-old-statuettes-peru.html> ,
@@ -2557,17 +2566,16 @@
    :representative-latlong-point (-11.022610 -77.631640 ) ;
    :thumbnail-image <https://www.archaeology.wiki/wp-content/uploads/2015/06/Peru_1.jpg> .
 
-:clay-heads-vichima a :group-of-human-figures ;
+:clay-heads-vichama a :group-of-human-figures ;
    rdfs:label "Clay Heds from Vichima" ;
    :described-by <https://phys.org/news/2015-06-year-old-statuettes-peru.html> ,
       <https://www.archaeology.wiki/blog/2015/06/11/caral-civilization-figurines-unearthed-peru/> ;
    :approximate-date -1800 ;
-   :material-note "Cermaic" ;
+   :material-note "Ceramic" ;
    :note "From archaeology.wiki: “ ... two female clay heads were found at the site. The heads were wrapped in tissue and were covered in yellow, blue and orange feathers – possibly from macaws.”" ;
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-11.022610 -77.631640 ) ;
    :thumbnail-image <https://www.archaeology.wiki/wp-content/uploads/2015/06/Peru_3.jpg> .
-
 
 :seated-figure-on-vessel a :human-figure ;
    rdfs:label "Seated Figure on Vessel" ;
