@@ -2546,6 +2546,29 @@
    :representative-latlong-point (75.171333 -88.975453) ; # devon island, Nunavut, Canada
    :thumbnail-image <https://www.historymuseum.ca/ke/_resources/120798/5050-1613-0243-094-base-cmhsize-small.jpg> .
 
+:female-male-mud-figurines a :group-of-human-figures ;
+   rdfs:label "Female and male figurines formed from mud" ;
+   :described-by <https://phys.org/news/2015-06-year-old-statuettes-peru.html> ,
+      <https://www.archaeology.wiki/blog/2015/06/11/caral-civilization-figurines-unearthed-peru/> ;
+   :approximate-date -1800 ;
+   :material-note "Mud" ;
+   :note "From archaeology.wiki: “The mud statuettes depict two women and a man. The male figurine is naked and has traces of white pigment on the face and the body. It is featured sitting cross-legged with yellow hair falling over its shoulders and wearing a beaded necklace. One of the women is also naked, depicted standing, while her face is painted with white stripes and her lips are black. Her hair is red and she is wearing a black and red beaded necklace. These two statuettes are believed to have been political authorities of high status. / The third figurine, assumingly a priestess because of her posture, the ornaments and the featured polydaktyly (she is featured with 28 fingers), is much larger than the other two. The face is painted with red dots, the hair is black with a red fringe. The priestess is also wearing a necklace.”" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-11.022610 -77.631640 ) ;
+   :thumbnail-image <https://www.archaeology.wiki/wp-content/uploads/2015/06/Peru_1.jpg> .
+
+:clay-heads-vichima a :group-of-human-figures ;
+   rdfs:label "Clay Heds from Vichima" ;
+   :described-by <https://phys.org/news/2015-06-year-old-statuettes-peru.html> ,
+      <https://www.archaeology.wiki/blog/2015/06/11/caral-civilization-figurines-unearthed-peru/> ;
+   :approximate-date -1800 ;
+   :material-note "Cermaic" ;
+   :note "From archaeology.wiki: “ ... two female clay heads were found at the site. The heads were wrapped in tissue and were covered in yellow, blue and orange feathers – possibly from macaws.”" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-11.022610 -77.631640 ) ;
+   :thumbnail-image <https://www.archaeology.wiki/wp-content/uploads/2015/06/Peru_3.jpg> .
+
+
 :seated-figure-on-vessel a :human-figure ;
    rdfs:label "Seated Figure on Vessel" ;
    :described-by <https://en.wikipedia.org/wiki/Thinker_from_Yehud> ,
@@ -5113,6 +5136,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :latest-date 800 ;
    :material-note "Copper" ;
    :note "From Met website: “Composed of six pieces of gilded copper cut from a larger sheet, [this piece] was shaped to create a figure of a warrior brandishing a weapon (now lost) and carrying a circular shield.”" ;
+   :findspot-note "From Met website: “These figures were said to have been found at a site or sites known as Loma Negra, a northern outpost of Moche culture.”" ;
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-5.612001 -80.499232) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/314492/678549/main-image> .
