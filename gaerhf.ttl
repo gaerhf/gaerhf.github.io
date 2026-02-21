@@ -2549,7 +2549,8 @@
 :famine-frieze-vichama a :group-of-human-figures ;
    rdfs:label "Famine Frieze at Vichama" ;
    :described-by <https://doi.org/10.1016/j.jasrep.2025.105473> ,
-   <https://www.theguardian.com/science/2025/nov/05/archaeologists-discover-how-oldest-american-civilisation-survived-a-climate-catastrophe> ;
+   <https://www.theguardian.com/science/2025/nov/05/archaeologists-discover-how-oldest-american-civilisation-survived-a-climate-catastrophe> ,
+   <https://en.wikipedia.org/wiki/Caral–Supe_civilization> ;
    :approximate-date -1800 ;
    :note "The image is figure 1 in the JAS article. From the Guardian article: ”One such set of images was discovered at Vichama on the walls of a temple on top of a raised platform in the desert. It is formed of three-dimensional mural reliefs that depict emaciated corpses with sunken bellies and protruding ribs; on a second wall above and set back there are pregnant women, ritual dancers and a pair of large fish. / Above both, on a higher wall, is an almost cartoonish design which shows the face of a toad emerging with human hands being struck in the head by a lightning bolt.”" ;
    :in-modern-country-note "Peru" ;
