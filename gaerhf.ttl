@@ -5231,18 +5231,20 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "India" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MauryanStatuette2ndCenturyBCE.jpg> .
 
-:okvik-figurine a :human-figure ;
-   rdfs:label "Okvik Figurine" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/717575> ;
-   :earliest-date -200 ;
-   :latest-date 100 ;
-   :in-modern-country-note "United States" ;
-   :representative-latlong-point (65.639361 -167.05) ;
-   :note "Specific findspot not known." ;
-   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/717575/1591782/restricted> .
+# no longer at this page on met website
+# :okvik-figurine a :human-figure ;
+#    rdfs:label "Okvik Figurine" ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/717575> ;
+#    :earliest-date -200 ;
+#    :latest-date 100 ;
+#    :in-modern-country-note "United States" ;
+#    :representative-latlong-point (65.639361 -167.05) ;
+#    :note "Specific findspot not known." ;
+#    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/717575/1591782/restricted> .
 
 :old-bering-sea-standing-figure a :human-figure ;
    rdfs:label "Old Bering Sea Standing Figure" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/312882> ;
    :earliest-date -200 ;
    :latest-date 100 ;
    :in-modern-country-note "United States" ;
@@ -6487,6 +6489,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :approximate-date 1000 ;
    :material-note "Guaiacum wood, Shell" ;
    :in-modern-country-note "Dominican Republic" ;
+   :note "From Met Museum website: “A ground up hallucinogenic powder or paste would be placed on the top of the stand, and ceremonial participants would inhale the cohoba through snuff tubes. The effects of such ritual acts are visible in the zemí itself: the emaciated look of the figure may represent someone who had been fasting, and watering eyes would have accompanied the inhalation of such substances. The exceptional preservation of this zemí suggests that it was carefully housed and revered, perhaps passed down for centuries. Without evidence of burial, it is likely that the caretakers of this zemí eventually deposited this special figure in a cave; many of the surviving Taíno wooden sculptures have been recovered from cave contexts.”" ;
    :representative-latlong-point (19 -70.666667) ;
    :note "Findspot unknown" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312602/1899468/main-image> .
