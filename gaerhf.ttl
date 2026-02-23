@@ -1686,7 +1686,7 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Westray_Wife_20110529.jpg> .
 
 :pecos-river-rock-art a :group-of-human-figures ;
-   rdfs:label "Pecos River Vallye Rock Art" ;
+   rdfs:label "Pecos River Valley Rock Art" ;
    :described-by <https://www.science.org/doi/10.1126/sciadv.adx7205> ,
       <https://www.livescience.com/archaeology/ancient-rock-art-along-us-mexico-border-persisted-for-more-than-4-000-years-and-it-depicts-indigenous-views-of-the-universe> ,
       <https://archaeology.org/news/2025/12/02/new-dates-obtained-for-texas-rock-art/> ;
@@ -1696,6 +1696,17 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point (29.346464 -104.079871) ;
    :thumbnail-image <https://cdn.mos.cms.futurecdn.net/YCGtzGK6JXqhj83s8AwRBX-1200-80.jpg.webp> .
+
+:fate-bell-rock-art a :group-of-human-figures ;
+   rdfs:label "Fate Bell Shelter Pecos Style Rock Art" ;
+   :described-by <https://www.bradshawfoundation.com/america/pecos/fate_bell_shelter.php> , 
+      <https://en.wikipedia.org/wiki/Seminole_Canyon_State_Park_and_Historic_Site> ;
+   :earliest-date -3700 ;
+   :latest-date 1000 ;
+   :note "From Bradshaw Foundation website: “Fate Bell Annex, Fate Bell Shelter and Running Horse Shelter are all situated in Seminole Canyon State Park and Historic Site. Seminole Canyon is a major tributary of the Rio Grande River. Fate Bell is one of the most famous and largest Pecos River Style rock art sites in the Lower Pecos Canyonlands Archeological District — A National Historic Landmark.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (29.6985721 -101.3125562) ;
+   :thumbnail-image <https://www.bradshawfoundation.com/america/pecos/fate_bell_shelter/fate_bell_shelter32.jpg> .
 
 :egyptian-predynastic-female-figurine a :human-figure ;
    rdfs:label "Egyptian Predynastic Female Figurine" ;
