@@ -3215,7 +3215,7 @@
    rdfs:label "Wooden Mask possibly from the Guerrero Region" ;
    :described-by <https://lbry-web-007.amnh.org/digital/index.php/items/show/60450> ,
       <https://smarthistory.org/olmec-masks-masquerade/> ;
-   :approximat-date -800 ;
+   :approximate-date -800 ;
    :material-note "Wood, jade inlay" ;
    :note "From Smarthistory website: “... wooden mask recovered in 1931 from the Cañón de la Mano in the state of Guerrero, now located in the American Museum of Natural History. The wood of the mask is remarkably preserved. Its smoothly polished surfaces were incised with curvilinear designs and inlaid with pieces of blue-green jade.”";
    :in-modern-country-note "Mexico" ;
@@ -3567,6 +3567,7 @@
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_the_Diver> ;
    :earliest-date -500 ;
    :latest-date -475 ;
+   :note "From Wikipedia: “ ... grave made of five local limestone slabs forming the four lateral walls and the roof, the floor being excavated in the natural bedrock. The five slabs, carefully bonded with plaster, formed a chamber about 215 × 100 × 80 cm (7.1 × 3.3 × 2.6 ft) in size. All five slabs forming the monument were painted on the interior sides using a true fresco technique.[2] The paintings on the four walls depict a symposium scene, while the cover slab shows the famous scene which gives the tomb its name: a young man diving into a curling and waving stream of water. ”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (40.422222 15.005278) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PaestumTaucher.jpg> .
@@ -5244,12 +5245,13 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :old-bering-sea-standing-figure a :human-figure ;
    rdfs:label "Old Bering Sea Standing Figure" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/312882> ;
+   :described-by <https://www.metmuseum.org/art/collection/search/316642> ;
    :earliest-date -200 ;
    :latest-date 100 ;
+   :material-note "Walrus ivoery" ;
+   :note "Specific findspot not known. From Met Museum webstie: “Also carved of walrus ivory were human figures, most frequently female. The purpose to which the enigmatic but equally elegant figures were put is unclear. Some authorities call them dolls-originally, they may have been dressed-while others call them ceremonial objects.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (65.65 -167.5) ;
-   :note "Specific findspot not known." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/316642/678217/main-image> .
 
 :old-bering-sea-figure a :human-figure ;
@@ -5258,15 +5260,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date -150 ;
    :latest-date 100 ;
    :material-note "Walrus ivory" ;
+   :note "Specific findspot not known. From Met Museum website: “The ivory half-figures or torsos made during the late centuries of the first millennium BCE were often rendered with such a minimum of detail that they remain enigmatic to the most insightful of viewers. Armless and legless, with faces reduced to essential elements, the figures are part of a larger group of works that have been called dolls by some, ceremonial or shamanistic objects by others.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (63.362222 -170.267222) ;
-   :note "Specific findspot not known." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312882/666902/main-image> .
 
 :hercules-behistun a :human-figure ;
    rdfs:label "Hercules in High Relief at Behistun" ;
    :described-by <https://en.wikipedia.org/wiki/Statue_of_Hercules_in_Behistun> ;
    :approximate-date -148 ;
+   :note "Dated by inscription. From Wikipedia: “ ... lying on a 2 m-long (6.6 ft) platform and holds a bowl in his left hand. His right hand rests on his leg. The statue is 1.47 m long and is attached to the mountain.“" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (34.3833 47.4333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bistoon_Kermanshah.jpg> .
