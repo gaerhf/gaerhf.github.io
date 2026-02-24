@@ -4919,6 +4919,7 @@
    :earliest-date 194 ;
    :latest-date 197 ;
    :in-modern-country-note "Greece" ;
+   :note "From Wikipedia: “... 23-karat gold bust[2] was probably made between 194 and 196/197 AD from a sheet of gold consisting of over 96% gold, 2-3% silver and 1% copper; the gold was probably obtained from melted gold coins with some silver ones added. The total height of the bust is 28.4 cm and its width is 25.5 cm. It is 1-1.5 mm thick, and weighs around 980 g (or three Roman pounds).”" ;
    :representative-latlong-point (41.35 26.5) ;
    :note "Approximate location of findspot." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:20130518_Septimius_Severus_Archeological_Museum_Komotini_Thrace_Greece.jpg> .
