@@ -333,7 +333,8 @@
 
 :figure-carved-in-mammoth-tusk a :human-figure ;
    rdfs:label "Figure carved in Mammoth Tusk" ;
-   :described-by <https://en.wikipedia.org/wiki/Adorant_from_the_Geißenklösterle_cave> ;
+   :described-by <https://en.wikipedia.org/wiki/Adorant_from_the_Geißenklösterle_cave> ,
+      <https://www.pnas.org/doi/10.1073/pnas.2520385123> ;
    :earliest-date -35000 ;
    :latest-date -30000 ;
    :material-note "Mammoth ivory" ;
@@ -2725,6 +2726,18 @@
    :representative-latlong-point (36.237778 36.384722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_King_Idrimi-IMG_4553-black.jpg> .
 
+:megaliths-cauria-plateau a :group-of-human-figures ;
+   rdfs:label "Megaliths of the Cauria Plateau" ;
+   :described-by <https://en.wikipedia.org/wiki/Stantari> ,
+      <https://en.wikipedia.org/wiki/Rinaghju> ,
+      <https://www.megalithic.co.uk/article.php?sid=9519> ,
+       <https://medium.com/the-bronze-age/the-mysterious-horned-warrior-torreans-of-the-isle-of-corsica-853b5e98c677> ;
+   :material-note "Stone" ;
+   :note "From page on medium.com (itself a transcribed article): “Almost all the Megalithic monuments on the plateau of Cuaria about 35 miles south of Ajaccio i.e. the dolmens  and the two most important alignments, Rinaiu consisting of 45 menhirs, and I Stantare consisting of 20 menhirs, have been very well known for a long time..”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (41.529400 8.921128) ;
+   :thumbnail-image <https://miro.medium.com/v2/resize:fit:1400/format:webp/0*cbqQtWF-8SLzHvLx.jpg> .
+
 :figurines-gajiganna-a-b a :group-of-human-figures ;
    rdfs:label "Figurines from Gajiganna (Gajiganna II)" ;
    :described-by <https://doi.org/10.1017/S0003598X00096915> ;
@@ -2734,7 +2747,6 @@
    :note "Illustration is from fig. 4 in Antiquity article. From article: “Phase II figurines are quite similar to those of the preceding phase, thus belonging to the same tradition. Fragments of anthropomorphic figurines are rare in comparison to zoomorphic types. While the two human figurines of Phase I are faceless, those of Phase II show anatomical details like eyes, nose, mouth and ears (Figure 4: 1-3 ), and even indicate hairstyles or head gear...” (p. 426)" ;
    :in-modern-country-note "Nigeria" ;
    :representative-latlong-point (12.256739 13.105106) .
-
 
 :paired-petroglyphs-valcamonica a :group-of-human-figures ;
    rdfs:label "Paired Petroglyphs from Valcamonica" ;
@@ -3109,6 +3121,17 @@
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (32.4795 44.431689) ;
    :thumbnail-image <https://collections.louvre.fr/media/cache/small/0000000021/0000132589/0000225642_OG.JPG> .
+
+:seated-figure-in-lap a :group-of-human-figures ;
+   rdfs:label "Seated figure with figure in lap" ;
+   :described-by <https://it.wikipedia.org/wiki/Urzulei?uselang=it#Siti_archeologici> ;
+   :earliest-date -900 ;
+   :latest-date -500 ;
+   :material-note "Bronze" ;
+   :note "From Italian Wikipedia: “Presso la grotta di Sa Domu 'e s'Orcu sono stati rinvenuti manufatti di eccezionale valore, tra cui il famoso bronzetto nuragico denominato La madre dell'ucciso ...”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.112917 9.514595) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronzetto_Nuragico_21.JPG> .
 
 # :olmec-standing-figure a :human-figure ;
 #    rdfs:label "Jadeite Standing Figure" ;
