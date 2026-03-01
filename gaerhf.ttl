@@ -5534,6 +5534,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://www.centralemontemartini.org/en/percorso/crepereia-tryphaena> ;
    :earliest-date 120 ;
    :latest-date 160 ;
+   :material-note "Ivory" ;
+   :note "From centralemontemartini.org: During the excavations carried out in 1889 for the construction of the Palace of Justice, the side by side sarcophagi of a man and a young woman, identified thanks to funerary inscriptions as Crepereius Euhodus and Crepereia Tryphaena, were brought to light. / The discovery caused a huge stir at the time, since the sarcophagus of the young woman, still intact, contained not only the mortal remains of the girl but also her grave goods, consisting of gold jewels and precious stones, of an amber distaff and a very refined ivory doll with articulated limbs accompanied by small toiletries. The precious set can be dated around the middle of the 2nd century A.D. and attests to the wealth of the Crepereii family, rich freedmen probably employed in the service of the imperial house, since the place where the burials were found has been included in the imperial domain since Nero's time.“" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (41.9041 12.4704) ;
    :art-historical-culture-or-tradition :roman-empire ;
