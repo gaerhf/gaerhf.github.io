@@ -3470,6 +3470,16 @@
    :art-historical-culture-or-tradition :hallstatt-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kultwagen_von_Strettweg_02.jpg> .
 
+:unfinished-kouros-apollonas a :human-figure ;
+   rdfs:label "Unfinished Kouros at Apollonas" ;
+   :described-by <https://en.wikipedia.org/wiki/Kouros_of_Apollonas> ;
+   :approximate-date -600 ;
+   :material-note "Marble" ;
+   :note "From Wikipedia: “... 10.7 meter tall unfinished statue of light grey Naxian marble with a weight of around 80 tonnes. It is located in an ancient quarry near Apollonas [de], a small town in the northern part of Naxos”" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (37.179167 25.547633) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cyclades_Naxos_Apollonas_Kouros_-_panoramio.jpg>  .
+
 :funerary-mask-trebenista a :human-figure ;
    rdfs:label "Funerary Mask from Trebeništa" ;
    :described-by <https://en.wikipedia.org/wiki/Trebeništa> ;
