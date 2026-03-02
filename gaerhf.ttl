@@ -5491,10 +5491,22 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <http://www.ostia-antica.org/museums/london-science-museum.htm> ;
    :earliest-date 100 ;
    :latest-date 300 ;
+   :note "From ostia-antica website: “A woman lying on a bed, giving birth to two or perhaps three children. She is assisted by three women.”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (41.733244 12.278939) ;
    :art-historical-culture-or-tradition :roman-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Marble_plaque_showing_parturition_scene,_Ostia,_Italy,_400_B_Wellcome_L0065025.jpg> . 
+
+:nursing-scene-from-ostia a :group-of-human-figures ;
+   rdfs:label "Nursing Scene from Ostia" ;
+   :described-by <http://www.ostia-antica.org/museums/london-science-museum.htm> ;
+   :earliest-date 100 ;
+   :latest-date 300 ;
+   :note "No individual description on ostia-antica website." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.733244 12.278939) ;
+   :art-historical-culture-or-tradition :roman-empire ;
+   :thumbnail-image <https://www.ostia-antica.org/museums/images/blythe-03.jpg> . 
 
 # :tolita-tumaco-bench-figure a :human-figure ;
 #    :described-by <https://www.metmuseum.org/art/collection/search/316449> ;
@@ -5516,6 +5528,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.britishmuseum.org/collection/object/G_1824-0407-10?selectedImageId=308154001> ;
    :earliest-date 100 ;
    :latest-date 200 ;
+   :note "From BM website: “Bronze parade mask: a woman's face, perhaps worn by soldiers representing Amazons.”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (40.926111 14.5275) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_parade_helmet_with_the_face_of_Amazon_from_Nola_100-200_AD_%2851233372856%29.jpg> .
@@ -5524,6 +5537,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Tropaeum Traiani" ;
    :described-by <https://en.wikipedia.org/wiki/Tropaeum_Traiani> ;
    :date 109 ;
+   :note "From Wikipedia: “The trophy monument was built, according to the inscription, between 106 and 109 AD probably by Apollodorus of Damascus, Trajan's favoured architect and engineer. It was inspired by the Augustus mausoleum, and was dedicated to Mars Ultor. It is a cylindrical building, with steps at the base, of diameter 40 m. Around the side were 54 metopes, showing Romans fighting Decebalus's allies, of which 48 are in the local museum and 1 is in Istanbul. The reliefs were framed by friezes and separated by decorative pilasters. The upper part was festooned with 27 battlements, each one showing prisoners...”" ;
    :in-modern-country-note "Romania" ;
    :representative-latlong-point (44.102 27.955) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AdamclisiMetope36.jpg> .
