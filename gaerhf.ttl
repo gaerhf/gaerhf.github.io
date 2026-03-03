@@ -1865,6 +1865,17 @@
    :representative-latlong-point (39.7131229 -6.5494671) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Garrovillas_de_Alconétar-Idolo_oculado_de_arenisca.jpg> .
 
+:female-statuette-ozieri a :human-figure ;
+   rdfs:label "Ozieri Culture Female Statuette" ;
+   :described-by <https://en.wikipedia.org/wiki/Ozieri_culture> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :material-note "Stone" ;
+   :note "There is not an individual landing page for this object. From the Ozieri Culture Wikipedia page: “Figurines recovered indicate the Ozieri may have worshiped a mother goddess, with the most well known example being an alabaster statuette found at Ponto Ferro Tomb, Senorbì, and sharing some stylistic characteristics with later Cycladic figures.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (39.533333 9.133333) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Neolitico_recente,_idolo_femminile_a_schema_geometrico_cruciforme,_da_senorbì,_loc._turriga.jpg> .
+
 :figure-majiayao-vessel a :human-figure ;
    rdfs:label "Figure on Majiayao Vessel" ;
    :described-by <https://en.wikipedia.org/wiki/Majiayao_culture#Pottery>,
