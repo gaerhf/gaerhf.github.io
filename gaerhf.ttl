@@ -1308,7 +1308,7 @@
    :note "From Wikipedia: “Banpo is known for a characteristic type of decorative pottery, with a red clay coating all over the body, and geometrical drawings in black, typically depicting a round human head with some fish around it. The round human head had a triangular design on top.”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (34.273 109.051) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Banpo_motif.jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Banpo_bowl.jpg> .
 
 :ennedi-plateau-archaic-rock-art a :group-of-human-figures ;
    rdfs:label "Ennedi Plateau Archaic Rock Art" ;
@@ -1558,6 +1558,7 @@
    :described-by <https://en.wikipedia.org/wiki/Suffering_Man_Statue_(Saudi_Arabia)> ;
    :approximate-date -4000 ;
    :material-note "Stone" ;
+   :note "From Wikipedia: “... statue comprises a human head and torso. It stands at 75 cm high, 25 cm wide and 7 cm deep.”" ;
    :in-modern-country-note "Saudi Arabia" ;
    :representative-latlong-point (25.869334 42.050495 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:رجل_المعاناة_(قطعة_أثرية).png> .
@@ -1943,6 +1944,7 @@
    :described-by <https://it.wikipedia.org/wiki/Stele_di_Vado_all%27Arancio> ;
    :earliest-date -3000 ;
    :latest-date -2000 ;
+   :note "From Italian Wikipedia: “La stele, o più propriamente statua-stele o menhir (lunga pietra), in pietra arenaria, rappresenta una figura antropomorfa stilizzata della quale si possono riconoscere gli occhi ed il naso (disposti a T) e le due braccia quasi conserte all'altezza dello stomaco. Non essendovi altri particolari, non è dato sapere se la statua intendesse rappresentare una figura maschile o femminile.”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (43.051036 10.893427) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stele_di_vado_all%27arancio,_III_millennio_a.c._circa_02.JPG> .
@@ -3514,8 +3516,8 @@
    :described-by <https://www.britishmuseum.org/collection/object/C_1953-1008-1?selectedImageId=1613850146> ;
    :earliest-date -600 ;
    :latest-date -500 ;
-   :material-not "Electrum" ;
-   :note "Findspot not known. Mapped to Sardis as a candidate for the mint that produced this coins. From BM website: “Head of warrior in crested Corinthian helmet, left. (obverse) Incuse square. (reverse)”" ;
+   :material-note "Electrum" ;
+   :note "Findspot not known. Mapped to Sardis as a candidate for the mint that produced this coin. From BM website: “Head of warrior in crested Corinthian helmet, left. (obverse) Incuse square. (reverse)”" ;
    :in-mondern-country-note "Turkey" ;
    :representative-latlong-point (38.488333 28.040278) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2023_1/18_12/b4eaee21_d686_4b39_83d9_af8e00d2f296/mid_ERC_Cab_129_OFFICIAL_00926.jpg> .
