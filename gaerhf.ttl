@@ -5655,6 +5655,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (32.466667 14.566667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bestiarii.jpg> .
 
+:harbor-scene-torlonia-relief a :group-of-human-figures ;
+   rdfs:label "Harbor Scene on “Torlonia Relief”" ;
+   :defined-by <https://www.fondazionetorlonia.org/torlonia-collection/bassorilievo-con-veduta-del-portus-augusti.html> ,
+      <https://www.ostia-antica.org/portus/forum-vinarium-torlonia.htm> ;
+   :earliest-date 175 ;
+   :latest-date 250 ;
+   :material-note "Marble" ;
+   :note "From Torlonia Collection website: “A large ship with decorated sails, on which the mythical symbol of the she-wolf suckling the twins Romulus and Remus stands out; the scene of a sacrifice calling for the successful outcome of a voyage; the towering lighthouse that welcomes sailors inside the port, the divine figures of Neptune and Bacchus: these are just some of the elements that the bas-relief depicts with an extraordinary amount of detail...”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.777466 12.257770) ;   
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Torlonia_Marbles_-_Rome_20210731_113728_71.jpg> .
+
 :female-applique-deccan a :human-figure ;
    rdfs:label "Female Appliqué from the Deccan" ;
    :described-by <https://doi.org/10.2307/4422976> ;
@@ -5677,12 +5689,24 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :note "Met Museum page suggests Balkh as possible findspot. Mapped point is proxy for Northern Afghanistan generally." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/327830/711829/main-image> .
 
+:stone-statuette-gholaia a :human-figure ;
+   rdfs:label "Small bust from Gholaia" ;
+   :described-by <https://www.livius.org/articles/place/gholaia-bu-njem/> ,
+      <https://www.livius.org/pictures/libya/bu-njem-gholaia/bu-njem-sacellum-head-of-a-war-goddess/> ;
+   :earliest-date 200 ;
+   :latest-date 300 ;
+   :material-note "Stone" ;
+   :note "From livius.org image page: “Bu Njem, Sanctuary, Head of a war goddess”" ;
+   :in-modern-country-note "Libya" ;
+   :representative-latlong-point (30.578331 15.413040 ) ;
+   :thumbnail-image <https://www.livius.org/site/assets/files/19312/bu_njem_statue_lepcis_mus.jpg> .
+
 :buddha-disciples-miran a :group-of-human-figures ;
    rdfs:label "Buddha with Disciples from Miran" ;
    :described-by <https://en.wikipedia.org/wiki/Miran_(Xinjiang)#History> ;
    :earliest-date 200 ;
    :latest-date 400 ;
-   :note "From Wikpedia image caption: “Fragment of a wall painting from a stupa in Miran depicting the Buddha (leftmost) followed by six disciples”" ;
+   :note "From Wikipedia image caption: “Fragment of a wall painting from a stupa in Miran depicting the Buddha (leftmost) followed by six disciples”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (39.234167 88.939444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_with_Six_Disciples.png> .
