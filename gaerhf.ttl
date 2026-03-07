@@ -6007,6 +6007,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :note "Dispersed on art market after discovery. Said to be from Anyang." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anyang_funerary_bed,_Museum_of_Fine_Arts,_Boston,_1.jpg> .
 
+:attendant-wounded-horse a :human-figure ;
+   rdfs:label "Emperor and Wounded House from Zhao Mausoleum" ;
+   :described-by <https://en.wikipedia.org/wiki/Six_Steeds_of_Zhao_Mausoleum> ,
+      <https://en.wikipedia.org/wiki/Zhao_Mausoleum_(Tang_dynasty)> ;
+   :earliest-date 599 ;
+   :latest-date 649 ;
+   :material-note "Stone" ;
+   :note "From Wikipedia: “”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.6319 108.4833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Emperor_Taizong_Horse_Relief_Saluzi.jpg> .
+
 :el-peru-waka-burial-39-funerary-ritual-scene a :group-of-human-figures ;
    rdfs:label "El Perú-Waka Burial 39 Funerary Ritual Scence" ;
    :described-by <https://unframed.lacma.org/2017/09/21/archaeology-el-%c3%ba-waka%e2%80%99-maya-ritual-resurrection-scene-broader-perspective> ,
