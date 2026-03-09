@@ -6104,6 +6104,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (14.855696 -89.156942 ) ;
    :thumbnail-image <https://media.artmuseum.princeton.edu/iiif/3/collection/y1990-71_view_b/full/1024,/0/default.webp> .
 
+:gilt-tara-statue a :human-figure ;
+   rdfs:label "Gilt Statue of Tara" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Tara> ;
+   :earliest-date 600 ;
+   :latest-date 800 ;
+   :material-note "Gilt bronze" ;
+   :note "Findspot is uncertain. Mapped to the city of Kandy. From Wikipedia: “The sculpture represents a standing figure of a female deity solid cast in bronze using the lost wax process. The statue is about three quarter life size and it has been gilded to create the luxurious, golden appearance. The goddess's hour-glass upper body is bare with a lower garment tied to the hips with an almost ankle length hemline. Tara's right hand is shown in the gesture of giving while her left hand is thought to have held a lotus flower, now lost.”" ;
+   :in-modern-country-note "Sri Lanka" ;
+   :representative-latlong-point (7.2931 80.635) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:British_Museum_Asia_45_(cropped).jpg> .
+
 :palm-sunday-qocho a :group-of-human-figures ;
    rdfs:label "Palm Sunday Mural from Qocho" ;
    :described-by <https://en.wikipedia.org/wiki/Murals_from_the_Christian_temple_at_Qocho> ;
