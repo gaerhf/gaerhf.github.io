@@ -5197,6 +5197,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (42.746944 75.248611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balbal.jpg> .
 
+:sultanganj-buddha a :human-figure ;
+   rdfs:label "Sultanganj Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Sultanganj_Buddha> ,
+    <https://en.wikipedia.org/wiki/Sultanganj,_Bihar> ;
+   :earliest-date 500 ;
+   :latest-date 700 ;
+   :material-note "Copper" ;
+   :note "From Wikipedia: “ .. cast in pure, unrefined copper by the cire perdue, or lost wax, technique. Inside there is a clay body, mixed with rice husks that allowed radiocarbon dating.[6] The figure stands in the “Fearless Posture”, with his right hand raised in abhayamudra (a gesture of reassurance or protection), and his left hand is held downwards with palm outwards, said to indicate granting a favour. The end of the monastic robe is held between the thumb and forefinger of this hand ... ” " ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point ( 25.246 86.738 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Sultanganj_Buddha.jpg> .
+
 :moche-warrior-figure a :human-figure ;
    rdfs:label "Moche Warrior Figure" ;
    :described-by <https://www.metmuseum.org/art/collection/search/314492> ;
@@ -6168,6 +6180,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (53.5 -7.966667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Placca_della_crocifissione,_in_bronzo,_da_st._john%27s_rinnagan,_contea_di_roscommon,_viii_secolo.jpg> .
 
+:madara-rider-relief a :human-figure ;
+   rdfs:label "Madara Rider Relief" ;
+   :described-by <https://en.wikipedia.org/wiki/Madara_Rider> ;
+   :earliest-date 680 ;
+   :latest-date 820 ;
+   :material-note "Stone" ;
+   :note "An early 8th century date may be most likely. From Wikipedia: “The relief sculpture depicts a majestic horseman, approximately 23 m (75 ft) above ground level, carved into an almost vertical 100 m-high (328 ft) cliff. The sculpture is almost life-size. The horseman, facing right, is thrusting a spear into a lion lying at his horse's feet, and on the left a dog is running after the horseman.”" ;
+   :in-modern-country-note "Bulgaria" ;
+   :representative-latlong-point (43.276694 27.119556) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Мадарски_конник.jpg> .
+
 :mask-of-k-inich-janaab-pakal a :human-figure ;
    rdfs:label "Mask of K'inich Janaab' Pakal" ;
    :described-by <https://en.wikipedia.org/wiki/Jade_mask_of_Pakal> ;
@@ -6237,6 +6260,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Honduras" ;
    :representative-latlong-point (14.8375 -89.1425) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Copan_(3831024263).jpg> .
+
+:bust-kul-tigin a :human-figure ;
+   rdfs:label "Bust of Kul Tigin" ;
+   :described-by <https://en.wikipedia.org/wiki/Bust_of_Kul_Tigin> , 
+   <https://en.wikipedia.org/wiki/Kul_Tigin> ;
+   :approximate-date 732 ;
+   :material-note "Marble" ;
+   :note "From Wikipedia: “The Bust of Kul Tigin is an 8th-century marble bust thought to represent Kul Tigin, a Turkic general and prince of the Second Turkic Khaganate. The head was probably part of a seated figure, whose torso was found in the same building at the Complex of Kul Tigin in Khöshöö-Tsaidam, Mongolia.”" ;
+   :in-modern-country-note "Mongolia" ;
+   :representative-latlong-point ( 47.556667 102.831389) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Turkic_Head_of_Koltegin_Statue_(35324303410).jpg> .
 
 :panel-borobudu-hidden-foot a :group-of-human-figures ;
    rdfs:label "Panel from from Borobudur ‘Hidden Foot’" ;
