@@ -5015,6 +5015,28 @@
    :representative-latlong-point (22.885533 4.86808) ;
    :thumbnail-image <https://collections.peabody.harvard.edu/internal/media/dispatcher/497602/preview> .
 
+:toluvila-buddha a :human-figure ;
+   rdfs:label "Toluvila Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Toluvila_statue> ;
+   :earliest-date 300 ;
+   :latest-date 500 ;
+   :material-note "Granite" ;
+   :note "Adapted from Wikipedia: “The Toluvila statue is 1.75 m in height. It shows the Buddha seated with his legs crossed and hands together in meditation...”" ;
+   :in-modern-country-note "Sri Lanka" ;
+   :representative-latlong-point (8.335 80.410833) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Toluwila_Seated_Buddha_Statue.jpg> .
+
+:samadhi-buddha a :human-figure ;
+   rdfs:label "Samadhi Buddha" ;
+   :described-by <https://en.wikipedia.org/wiki/Samadhi_Statue> ;
+   :earliest-date 300 ;
+   :latest-date 500 ;
+   :material-note "Dolomite marble" ;
+   :note "From Wik[pedia: “The Buddha is depicted in the position of the Dhyana Mudra, the posture of meditation associated with his first Enlightenment. This statue is 7 feet 3 inches in height and carved from dolomite marble.”" ;
+   :in-modern-country-note "Sri Lanka" ;
+   :representative-latlong-point ( 8.36987 80.39817 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:SAMADI.PILIMAYA.1870.jpg> .
+
 :male-figurine-adulis a :human-figure ;
    rdfs:label "Male figurine from Adulis" ;
    :described-by <https://isaw.nyu.edu/research/io-figures/images/fig-25-terracotta-figurine-from-adulis> ,
