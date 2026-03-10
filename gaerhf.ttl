@@ -558,7 +558,7 @@
    :latest-date -9000 ;
    :material-note "Ceramic" ;
    :note "Image is after fig. 10 in linked article. Catalog entry for this piece: “Tête regardant vers la droite, paraissant anthropomorphe, cassée au niveau du cou. La face est nettement située dans l’axe du cou, alors que les têtes zoomorphes sont plutôt perpendiculaires au cou. Le profil droit est le plus suggestif et le moins détérioré. Sur 2 ou 3 mm, on peut reconnaître, vers le haut du cou, le départ de la nuque, l’arrière du crâne se terminant en chignon et le haut du crâne, plutôt rectiligne. Le front est droit et le menton dégagé est plutôt prognathe.”" ;
-   :in-modern-country-not "Algeria" ;
+   :in-modern-country-note "Algeria" ;
    :representative-latlong-point (36.644613 5.372751) .
 
 :grotta-dell-addaura-inscribed-petroglyphs a :group-of-human-figures ;
@@ -566,6 +566,7 @@
    :described-by <https://en.wikipedia.org/wiki/Grotta_dell%27Addaura> ;
    :earliest-date -12000 ;
    :latest-date -8000 ;
+   :note "From Wikipedia: “Amid a large group of bovids, wild horses, and deer, there is represented a scene dominated by the presence of human figures: a group of characters, arranged in a circle, surrounding two central figures with their heads covered and their bodies strongly arched back.” " ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :epigravettian ;
    :representative-latlong-point (38.1875 13.352222) ;
@@ -3991,6 +3992,18 @@
    :note "See museum label in the linked Wikimedia Commons page." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Archer_King,_National_Museum_of_Sudan,_Khartoum,_Sudan,_North-East_Africa_(cropped).jpg> .
 
+:ombra-della-sera a :human-figure ;
+   rdfs:label "So-called “Ombra della Sera”" ;
+   :described-by <https://en.wikipedia.org/wiki/Ombra_della_sera> ,
+      <http://www.ombradellasera.com/en_01.htm> ;
+   :earliest-date -300 ;
+   :latest-date -200 ;
+   :material-not "Bronze" ;
+   :note "From Wikipedia: “.. nude male, 57.5 centimetres long, with very elongated body but head in normal proportions.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (43.4 10.866667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ombra_della_Sera_Volterra_revised.jpg> .
+
 :painted-beardedhead-takht-i-sangin a :human-figure ;
    rdfs:label "Painted Bearded Head from Takht-i Sangin" ;
    :described-by <https://en.wikipedia.org/wiki/Takht-i_Sangin#Seleucid_and_Greco-Bactrian_periods_(4th-2nd_century_BC)> ;
@@ -6203,6 +6216,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (20.208333 -90.485833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jaina_Island_type_figure,_Art_Institute.jpg> .
 
+:kneeling-bodhisattva-mogao-cave a :human-figure ;
+   rdfs:label "Kneeling Bodhisattva (Mogao Cave)" ;
+   :described-by <https://en.wikipedia.org/wiki/Kneeling_Attendant_Bodhisattva_(Mogao_Cave)> ,
+      <https://harvardartmuseums.org/collections/object/303672> ;
+   :earliest-date 650 ;
+   :latest-date 700 ;
+   :material-note "Ceramic, wooden armature" ;
+   :note "Adapted from Wikipedia: “The bodhisattva is posed with its head inclined slightly forward, hands pressed in Añjali Mudrā. Its upper body wears a scarf draped upon the shoulders, a jeweled necklace, with the dhoti covering the legs and feet.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (40.037222 94.804167) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harvard_Art_Museums_Tang_Dynasty_Kneeling_Attendant_Bodhisattva_哈佛美术馆_莫高窟唐代供养菩萨像.jpg> .
+
 :rinnegan-crucifixion-plaque a :group-of-human-figures ;
    rdfs:label "Rinnegan Crucifixion Plaque" ;
    :described-by <https://en.wikipedia.org/wiki/Rinnegan_Crucifixion_Plaque> ;
@@ -6394,6 +6419,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (55.419375 10.652358) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2014/08/SO14-Artifact-Viking-Silver-Figurine-2.jpg> .
 
+:zbruck-idol a :group-of-human-figures ;
+   rdfs:label "Zbruck Idol" ;
+   :described-by <https://en.wikipedia.org/wiki/Zbruch_Idol> ;
+   :earliest-date 800 ;
+   :latest-date 900 ;
+   :material-note "Limestone" ;
+   :note "From Wikipedia: “...  a four-sided pillar of grey limestone, 2.67 m (8.8 ft) in height, and has three tiers of reliefs engraved upon each of the four sides. The lower tier is 67 cm (26 in); the middle tier is 40 cm (16 in); and the top tier is 167 cm (66 in). Three sides of the lowest tier show a kneeling, bearded entity who appears to support the upper tier on his hands; the fourth side is blank. / he middle tier shows a smaller entity with extended arms on all four sides. Only one of four sides has an entity with a tiny “child” figure. / The four sides of the uppermost tier have the largest figures of the idol, with four faces united beneath a tall rounded hat. Each of the sides has a distinct attribute: a ring or a bracelet; a drinking horn, or horn of plenty; a sword and a horse; and an eroded solar symbol.”" ;
+   :in-modern-country-note "Ukraine" ;
+   :representative-latlong-point (49.146111 26.16) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:O98_Idol_von_Sbrutsch_mit_Darstellung_von_Unterwelt,_Erde_und_des_Himmels,_zirka_10._Jh._n._Chr..JPG> .
+
 :redhorn-panel-picture-cave a :group-of-human-figures ;
    rdfs:label "“Redhorn” Panel Picture Cave" ;
    :described-by <https://en.wikipedia.org/wiki/Red_Horn#Picture_Cave>,
@@ -6427,6 +6463,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Ireland" ;
    :representative-latlong-point (53.7775 -6.4175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monasterboice_(52358533944).jpg> .
+
+:wolin-four-face-figuring a :group-of-human-figures ;
+   rdfs:label "Wolin Four Faced Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Wolin_Svetovit> ;
+   :earliest-date 800 ;
+   :latest-date 1000 ;
+   :material-note "Wood" ;
+   :note "From Wikipedia: “figurine depicts a character with four faces, that had been identified as depicting Svetovit, a god of abundance and war in the Slavic paganism. It is made out of the wood of European yew tree.”" ;
+   :in-modern-country-note "Poland" ;
+   :representative-latlong-point (53.916667 14.5) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Swietowit_wolinski.jpg> .
 
 :cub-creek-petroglyph-panel a :group-of-human-figures ;
    rdfs:label "Cub Creek Petroglyph Panel" ;
@@ -6655,6 +6702,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Gommateshwara_statue> ;
    :approximate-date 983 ;
    :material-note "Granite" ;
+   :note "From Wikipedia: “The Gommateshwara statue is a 57-foot (17 m) high monolithic statue on Vindhyagiri, also known as Indra-giri in the town of Shravanbelagola in the Indian state of Karnataka. Carved of a single block of granite, it is one of the tallest monolithic statues in the ancient world.”" ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (12.854026 76.484677) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gommateshwara,_Shravanabelagola.jpg> .
