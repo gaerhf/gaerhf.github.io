@@ -6523,6 +6523,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (59.905 10.6844) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buckle_from_Oseberg_Vikingship_Buddha.JPG> .
 
+:equestrian-charlemagne a :human-figure ;
+   rdfs:label "Equestrian Statue of Charlemagne" ;
+   :described-by <https://en.wikipedia.org/wiki/Equestrian_statuette_of_Charlemagne> ;
+   :approximate-date 840 ;
+   :material-note "Bronze" ;
+   :note "Mapped to Metz Cathedral. From Wikipedia: “he statuette consists of three parts: the horse, the rider's body with the saddle, and the rider's head. It has a total height of 24 cm. The rider is depicted with a moustache, an open crown on his head, a sword in his right hand (lost), an imperial orb in his left hand, and a riding cloak fastened with a fibula.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point ( 49.12 6.1754 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Charlemagne_Louvre_OA8260_n2.jpg> .
+
 :printed-diamond-sutra-mogao-caves a :group-of-human-figures ;
    rdfs:label "Printed Diamond Sutra from Mogao Caves" ;
    :described-by <https://en.wikipedia.org/wiki/Diamond_Sutra> ,
@@ -6566,7 +6576,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 :bowl-figure-vessel a :human-figure ;
    rdfs:label "Bowl with Figure holding Vessel" ;
    :described-by <https://www.metmuseum.org/art/collection/search/449495> , 
-   <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> ;
+      <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> ;
    :earliest-date 900 ;
    :latest-date 1000 ;
    :in-modern-country-note "Iran" ;
