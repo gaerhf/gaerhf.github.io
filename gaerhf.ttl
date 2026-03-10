@@ -6319,6 +6319,15 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (14.8375 -89.1425) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Copan_(3831024263).jpg> .
 
+:musicians-rider-qasr-al-hayr-al-gharbi a :group-of-human-figures ;
+   rdfs:label "Musicians and Rider Fresco from Qasr al-Hayr al-Gharbi" ;
+   :described-by <https://en.wikipedia.org/wiki/Qasr_al-Hayr_al-Gharbi> ;
+   :approximate-date 727 ;
+   :note "From Wikipedia: “ ... features a hunter, similar to Sassanian depictions of kings during royal hunts, as well as depictions of two court minstrels playing musical instruments, a nai (a woodwind instrument) and an oud (a string instrument), beneath a pair of ornamented arches. The hunter is dressed in Sassanian-style fashion; his head-scarf flying behind him, and his bow and arrow are drawn tight for the shot.”" ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point ( 34.374444 37.605833 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Arabischer_Maler_um_730_002.jpg> .
+
 :bust-kul-tigin a :human-figure ;
    rdfs:label "Bust of Kul Tigin" ;
    :described-by <https://en.wikipedia.org/wiki/Bust_of_Kul_Tigin> , 
