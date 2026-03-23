@@ -6703,6 +6703,19 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (59.785901 10.478906) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/09/ND25-Artifact-Norway-Viking-Chess-Piece-1.jpg> .
 
+:harbaville-triptych a :group-of-human-figures ;
+   rdfs:label "So-called Harbaville Triptych" ;
+   :described-by <https://en.wikipedia.org/wiki/Harbaville_Triptych> ,
+   <https://smarthistory.org/a-byzantine-vision-of-paradise-the-harbaville-triptych/> ,
+   <https://collections.louvre.fr/en/ark:/53355/cl010112515> ;
+   :earliest-date 950 ;
+   :latest-date 1000 ;
+   :material-note "Ivory" ;
+   :note "From Louvre website: “... comporte deux volets qui se referment sur la partie centrale. Lorsqu'il est ouvert, la partie centrale, sculptée en très fort relief, offre deux registres superposés, séparés par un bandeau à décor de palmettes et de fleurons alternés. Au registre supérieur, le Christ trône entre la Vierge et saint Jean-Baptiste, tous deux debout de chaque côté, et tournés vers lui pour former la traditionnelle Déisis, la prière d'intercession pour le salut de l'Humanité. Au dessus du trône, deux anges en buste s'inscrivent dans des couronnes végétales rehaussées d'étoiles. Ils sont anonymes à la différence de tous les autres personnages du triptyque, identifiés par les inscriptions gravées. En dessous de la Déisis prennent place cinq apôtres : Pierre au centre, Paul et André à sa gauche, et, à sa droite Jean l'Evangéliste et Jacques. Deux bandeaux enferment la partie centrale. Sur celui du haut, trois petits médaillons contiennent chacun un buste : il s'agit de trois prophètes, Elie, placé au-dessus du Christ, Jérémie, à gauche, et Isaïe, à droite. Les volets se divisent en trois registres : des saints en pied, aux registres supérieur et inférieur, et des saints en buste, inscrits dans des médaillons, au registre médian.”" ;
+   :modern-country-note "Turkey" ;
+   :representative-latlong-point ( 41.008333 28.98 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Triptych_Harbaville_Louvre_OA3247_recto.jpg> .
+
 :great-hunt-panel-nine-mile-canyon a :group-of-human-figures ;
    rdfs:label "Great Hunt Panel at Nine Mile Canyon" ;
    :described-by <https://en.wikipedia.org/wiki/Ninemile_Canyon_(Utah)#Archaeology> ;
@@ -6983,6 +6996,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (49.2744 0.7003) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Odo_bayeux_tapestry.png> .
 
+:descent-cross-erill-la-vall a :human-figure ;
+   rdfs:label "Descent from the Cross at Erill la Vall" ;
+   :described-by <https://en.wikipedia.org/wiki/Erill_la_Vall_Descent_from_the_Cross> ;
+   :earliest-datae 1150 ;
+   :latest-date 1200 ;
+   :material-note "Wood" ;
+   :note "From Wikipedia: “In the centre was the figure of Jesus Christ held by Joseph of Arimathea and unnailed by Nicodemus, flanked by the Virgin Mary and Saint John the Evangelist on either side, with the penitent and impenitent thieves, Dismas and Gestas, at the ends, respectively.”" ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point ( 42.524778 0.825641 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Davallament_figures_MEV.jpg> .
+
 :luohan-laundering-silk a :group-of-human-figures ;
    rdfs:label "Luohan laundering 羅漢洗濯圖" ;
    :described-by <https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1902.224/> ,
@@ -7111,6 +7135,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-13.451387 -76.170803 ) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312640/2085962/main-image> .
+
+:david-donatello a :human-figure ;
+   rdfs:label "Bronze David by Donatello" ;
+   :described-by <https://en.wikipedia.org/wiki/David_(Donatello,_bronze)> ;
+   :earliest-date 1440 ;
+   :latest-date 1450 ;
+   :material-note "Bronze" ;
+   :note "From Wikipedia: “ ... depicts David with an enigmatic smile, posed with his foot on Goliath's severed head just after defeating the giant. The youth is completely naked, apart from a laurel-topped hat and boots, and holds Goliath's sword.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point ( 43.775278 11.255989 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Donatello_-_David_-_Florença.jpg> .
 
 :poka-i-bay-petroglyphs a :group-of-human-figures ;
    rdfs:label "Pōkaʻī Bay Petroglyphs" ;
