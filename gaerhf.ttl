@@ -3047,6 +3047,19 @@
    :representative-latlong-point (33.048286 35.102234) ;
    :thumbnail-image <https://www.antiquities.org.il/t/images/125/1142282.jpg> .
 
+:senor-de-las-limas a :human-figure ;
+   rdfs:label "So-called Señor de Las Limas" ;
+   :described-by <https://en.wikipedia.org/wiki/Las_Limas_Monument_1> ,
+      <https://en.wikipedia.org/wiki/Las_Limas_Monument_1> ;
+   :earliest-date -1000 ;
+   :latest-date -600 ;
+   :material-note "Serpentine" ;
+   :note "From Wikipedia: “55 centimetres (22 in) greenstone figure of a youth holding a limp were-jaguar baby. Found in the State of Veracruz, Mexico...”" ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (17.434444 -95.026667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Señor_de_Las_Limas_(cropped).jpg> .
+
+
 # https://collections.louvre.fr/en/ark:/53355/cl010132589
 
 :jinsha-figurine a :human-figure ;
@@ -6359,6 +6372,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (20.064156 -99.340803) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Telamones_Tula.jpg> .
+
+:bell-king-seongdeok a :group-of-human-figures ;
+   rdfs:label "Bell of King Seongdeok" ;
+   :described-by <https://en.wikipedia.org/wiki/Bell_of_King_Seongdeok> ;
+   :approximate-date 771 ;
+   :material-note "Bronze" ;
+   :note "From Wikipedia: “There are many relief patterns on the bell, including flower patterns along the rim and shoulder. There are also reliefs of lotus flowers, grass, and a pair of two apsaras (heavenly maidens). The striking point of the bell (dangjwa) is also in the shape of a lotus and sits between two of the apsara reliefs. The bottom of the bell is in a rhombic shape, designed to augment the sound reverberation.”" ;
+   :in-modern-country-note "Korea" ;
+   :representative-latlong-point ( 35.829575 129.227928 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Apsara_relief._Bell_of_King_Seongdeok.National_Museum_of_Gyeongju.Korea.2018.P1410600.jpg> .
 
 :musician-bomampak-murals a :group-of-human-figures ;
    rdfs:label "Procession from the Bonampak Murals" ;
