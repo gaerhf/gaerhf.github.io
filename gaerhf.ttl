@@ -6507,6 +6507,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (53.916667 14.5) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Swietowit_wolinski.jpg> .
 
+:white-island-figures a :group-of-human-figures ;
+   rdfs:label "White Island Stone Figures" ;
+   :described-by <https://en.wikipedia.org/wiki/White_Island,_County_Fermanagh> ;
+   :earliest-date 800 ;
+   :latest-date 1000 ;
+   :material-note "Stone" ;
+   :note "From wikipedia: “The ruined church on the island has a reconstructed plain Romanesque doorway. Secured to the north side of the south wall are eight carvings (seven figures and one head) built into the masonry of the church.[4] Most of the figures were carved wearing the long tunics of churchmen. They are all carved in quartzite and were probably constructed between 800 and 1000 AD, and were later used as building stones in the church before being uncovered in recent centuries.”" ;
+   :in-modern-country-note "United Kingdom" ;
+   :representative-latlong-point ( 54.48879 -7.73618 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:White_Island,Lower_Lough_Erne._(cropped).JPG> .
+
 :cub-creek-petroglyph-panel a :group-of-human-figures ;
    rdfs:label "Cub Creek Petroglyph Panel" ;
    :described-by <https://www.nps.gov/places/cub-creek-petroglyphs-pullout-13.htm> ;
