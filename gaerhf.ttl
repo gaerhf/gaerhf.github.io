@@ -2746,6 +2746,8 @@
       <https://en.wikipedia.org/wiki/Rinaghju> ,
       <https://www.megalithic.co.uk/article.php?sid=9519> ,
        <https://medium.com/the-bronze-age/the-mysterious-horned-warrior-torreans-of-the-isle-of-corsica-853b5e98c677> ;
+   :earliest-date -1500 ;
+   :latest-date -1000 ;
    :material-note "Stone" ;
    :note "From page on medium.com (itself a transcribed article): “Almost all the Megalithic monuments on the plateau of Cuaria about 35 miles south of Ajaccio i.e. the dolmens  and the two most important alignments, Rinaiu consisting of 45 menhirs, and I Stantare consisting of 20 menhirs, have been very well known for a long time..”" ;
    :in-modern-country-note "France" ;
@@ -6509,7 +6511,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :white-island-figures a :group-of-human-figures ;
    rdfs:label "White Island Stone Figures" ;
-   :described-by <https://en.wikipedia.org/wiki/White_Island,_County_Fermanagh> ;
+   :described-by <https://en.wikipedia.org/wiki/White_Island,_County_Fermanagh> ,
+      <https://theramblingwombat.com/2017/03/25/white-island-carvings-and-church/> ;
    :earliest-date 800 ;
    :latest-date 1000 ;
    :material-note "Stone" ;
@@ -7134,6 +7137,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :art-historical-culture-or-tradition :mississippian ;
    :representative-latlong-point (34.125131 -84.807664) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .
+
+:saint-catherine-karlstejn-castle a :human-figure ;
+   rdfs:label "Saint Catherine from Karlštejn Castle" ;
+   :described-by <https://en.wikipedia.org/wiki/Saint_Catherine_of_Alexandria_(Master_Theodoric)> ;
+   :earliest-date 1360 ;
+   :latest-date 1365 ;
+   :material-note "Tempura on beach wood" ;
+   :note "From Wikipedia: “The painting has the dimensions of 115 x 86.9 cm. The frame, decorated with the same printed decoration as the background of the painting, is original. The painting was restored in 1968 (R. Slánský) and in the 1980s (K. Veselý). Saint Catherine is holding the usual attributes - in her left hand a torture wheel with metal spikes, in her right hand a sword with which, according to legend, she was beheaded.”" ;
+   :in-modern-country-note "Czech Republic" ;
+   :representative-latlong-point (49.939444 14.188056) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mistr_Theodorik,_Sv._Kateřina,_Národní_galerie_v_Praze.jpg> .
 
 :chincha-burial-post a :human-figure ;
    rdfs:label "Chinca Culture Burial Post" ;
