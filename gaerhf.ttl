@@ -2477,12 +2477,13 @@
    :thumbnail-image <https://media.getty.edu/iiif/image/74715ced-ad1d-4f96-84b5-8070567edcd8/0,0,3249,4096/204,/0/default.jpg> .   
 
 :mohenjo-daro-priest-king a :human-figure ;
-   rdfs:label "Mohenjo daro Priest King" ;
+   rdfs:label "Mohenjo daro So-Called “Priest King”" ;
    :described-by <https://en.wikipedia.org/wiki/Priest-King_(Mohenjo-daro)> ,
    <https://smarthistory.org/the-priest-king-sculpture-from-the-indus-valley-civilization/> ;
    :earliest-date -2000 ;
    :latest-date -1900 ;
    :material-note "Steatite" ;
+   :note "From Wikipedia: “... sculpture shows a neatly bearded man with a fillet around his head, possibly all that is left of a once-elaborate hairstyle or headdress; his hair is combed back. He wears an armband, and a cloak with drilled trefoil, single circle and double circle motifs, which show traces of red. His eyes might have originally been inlaid.[6] The sculpture is incomplete, broken off at the bottom ...”" ;
    :in-modern-country-note "Pakistan" ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :representative-latlong-point (27.335167 68.143889) ;
@@ -4562,6 +4563,8 @@
    :described-by <https://en.wikipedia.org/wiki/Meroë_Head> ,
    <https://www.bbc.co.uk/ahistoryoftheworld/objects/z0_uHq1TSnWMEHR_sZDc8g> ;
    :date -27 ;
+   :material-note "Bronze, glass, calcite" ;
+   :note "From Wikipedia: “... larger-than-life-size bronze head depicting the first Roman emperor, Augustus, that was found in the ancient Nubian site of Meroë in modern Sudan in 1910.”" ;
    :in-modern-country-note "Sudan" ;
    :representative-latlong-point (16.933333 33.726389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_head_from_an_over-life-sized_statue_of_Augustus.jpg> .
