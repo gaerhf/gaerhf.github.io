@@ -6,6 +6,7 @@ const detailInfo = document.getElementById('detail-info');
 const detailImageDiv = document.getElementById('detail-image');
 const headerContainer = document.getElementById('header-container');
 
+
 const minYear = -50000; // Minimum year
 const maxYear = 1500;     // Maximum year
 
