@@ -2021,14 +2021,15 @@
 
 :dogu-female-abstract-figurine a :human-figure ;
    rdfs:label "Dogū Female Abstract Figurine" ;
-   :described-by <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> , 
+      <https://en.wikipedia.org/wiki/Dog%C5%AB> ;
    :earliest-date -3000 ;
    :latest-date -2000 ;
-   :in-modern-country-note "Japan" ;
    :material-note "Ceramic" ;
+   :note "This particular dōgu does not have its own landing page on Wikipedia or the internet generally. It should." ;
+   :in-modern-country-note "Japan" ;
    :representative-latlong-point (38.691218 140.312831) ;
    :art-historical-culture-or-tradition :jomon ;
-   :note "This particular dōgu does not have its own landing page on Wikipedia or the internet generally. It should." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nishi-no-mae_Iseki_dogu-2.JPG> .
 
 :standing-female-figure-necklace a :human-figure ;
@@ -2329,6 +2330,7 @@
    :described-by <https://en.wikipedia.org/wiki/Dagenham_idol> ;
    :approximate-date -2250 ;
    :material-note "Wood" ;
+   :note "From Wikipedia: “The Dagenham idol is a wooden statue of a naked human figure, found in Dagenham, Essex, England in 1922. It it one of only a handful of prehistoric human-shaped wooden sculptures from the British Isles. The statue has been carbon dated to around 2250 BC, during the late Neolithic period or early Bronze Age, making it one of the oldest human representations found in England.”" ;
    :in-modern-country-note "England" ;
    :art-historical-culture-or-tradition :neolithic-britain ;
    :representative-latlong-point (51.5397 0.1422) ; # ll for Dagenham, England
@@ -3585,6 +3587,7 @@
    rdfs:label "Capestrano Warrior" ;
    :described-by <https://en.wikipedia.org/wiki/Warrior_of_Capestrano> ;
    :approximate-date -550 ;
+   :note "From Wikipedia: “Though itself only 1.7 metres (5.6 ft) tall, the Warrior of Capestrano rises up to 2.5 metres (8.2 ft) whilst atop its base. The figure is composed of a type of soft limestone prevalent throughout Abruzzo known as “soft stone ('pietra gentile').” Two separate blocks of stone were used to form the statue, one of which was reshaped into the body, whereas the other was used to create the headpiece. Due to the soft character of the limestone, there remain marks left by the original stonemason, who likely employed tools such as a flat chisel, toothed chisel, scratch awl, or a gauge.”" ;
    :in-modern-country-note "Italy" ;
    :art-historical-culture-or-tradition :picene-culture ;
    :representative-latlong-point (42.269444 13.766667) ; # ll for Capestrano, Italy
@@ -5740,7 +5743,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 200 ;
    :latest-date 300 ;
    :material-note "Bronze" ;
-   :note "Specific findspot not known. Image after Barrett 1967. From article: “The figure,s apart from the arms, is hollow cast, presumably by the cire perdu method. The arms, or the wax models for them, were presumably made in two-piece moulds. Possibly they were pre-cast, and inserted into the mould for the body when the latter was cast. The upper part of the head and crown has certainly been cast on, apparently around two iron pins, both of which are visible as patches of rust on the crown and one of which can clearly be seen inside the back of the head. The union between the two parts has been filled by four fragments of cast bronze hammered into an enlarged cavity along the line of junction. All three parts of the figure appear to have been made of similar metal which has corroded in a similar manner and to a similar depth”." ;
+   :note "Specific findspot not known. Image after Barrett 1967. From article: “The figure, apart from the arms, is hollow cast, presumably by the cire perdu method. The arms, or the wax models for them, were presumably made in two-piece moulds. Possibly they were pre-cast, and inserted into the mould for the body when the latter was cast. The upper part of the head and crown has certainly been cast on, apparently around two iron pins, both of which are visible as patches of rust on the crown and one of which can clearly be seen inside the back of the head. The union between the two parts has been filled by four fragments of cast bronze hammered into an enlarged cavity along the line of junction. All three parts of the figure appear to have been made of similar metal which has corroded in a similar manner and to a similar depth”." ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (16.691667 74.233333) .
 
