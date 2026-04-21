@@ -6890,6 +6890,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (33.346944 -106.011667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Three_Rivers_Petroglyph_Site_12.jpeg> .
 
+:chancay-textile-figure a :human-figure ;
+   rdfs:label "Chancay-culture Textile Doll" ;
+   :described-by <https://art.thewalters.org/object/83.768/> ;
+   :earliest-date 1000 ;
+   :latest-date 1450 ;
+   :material-note "Cotton, wool, wood" ;
+   :note "From Walters Art Museum website: “Often referred to as dolls for their diminutive size and simplified imagery, these wood figures dressed in carefully crafted garments are frequently found in tombs from ancient Peru. Because there are no written records from this time period, their precise meaning and significance is not known. However, it's theorized that these figures represent those interred in the tomb or their family members. This particular example shows a female, wearing a long dress, not unlike those known from the later Inca period, when women pinned textiles at their shoulders something like Roman togas. The meaning of the staring eyes and brightly colored faces of these figures is unknown.”" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point ( -12.06 -77.0375 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Chancay_-_Textile_Doll_-_Walters_83768.jpg> .
+
 :gold-mask-princess-chen-state a :human-figure ;
    rdfs:label "Gold funerary mask of “Princess of Chen State”" ;
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_Princess_of_Chen_State> ;
