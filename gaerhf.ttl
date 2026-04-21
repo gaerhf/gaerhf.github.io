@@ -2781,6 +2781,7 @@
    :approximate-date -1450 ;
    :in-modern-country-note "Greece" ;
    :material-note "Agate" ;
+   :note "From Wikipedia: “... a Minoan sealstone of the Mycenaean era, likely manufactured in Late Minoan Crete. It depicts two warriors engaged in hand-to-hand combat, with a third warrior lying on the ground. It was recovered in 2015 during the excavation of the Griffin Warrior Tomb near the Palace of Nestor in Pylos and is dated to about 1450 BCE.”" ;
    :representative-latlong-point (37.028222 21.695944) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
 
@@ -3382,6 +3383,7 @@
    :earliest-date -750 ;
    :latest-date -450 ;
    :material-note "Bronze" ;
+   :note "From abstract of Praehistorische Zeitschrift article: “small bronze figurine (14.7 cm tall) has an egg-shaped head with a prominent nose, looped arms, a neckring, two knobs signifying breasts, a belt, an indication of a female sex and two slightly differently shaped legs.”" ;
    :in-modern-country-note "Germany" ;
    :representative-latlong-point ( 54.024095 13.296299 ) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2022/08/SO22-Artifact-Germany-Bronze-Figurine.jpg> .
