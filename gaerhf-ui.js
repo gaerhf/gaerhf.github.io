@@ -1,11 +1,6 @@
 const turtleUrl = 'gaerhf.ttl';
 const figureListDiv = document.getElementById('figure-list');
-const figureDetailsDiv = document.getElementById('figure-details');
-const detailLabel = document.getElementById('detail-label');
-const detailInfo = document.getElementById('detail-info');
-const detailImageDiv = document.getElementById('detail-image');
 const headerContainer = document.getElementById('header-container');
-
 
 const minYear = -50000; // Minimum year
 const maxYear = 1500;     // Maximum year
@@ -27,6 +22,9 @@ let playIndex = 0;
 let currentFigureId = null;
 let currentTab = "figure-map";
 
+let activeWindow = null;
+let topZIndex = 5000;
+
 let leafletMap = null;
 let leafletMarkers = {}; // Place this at the top level
 
@@ -34,6 +32,24 @@ let visibleMarkers = null ;
 let thresholdDebounceTimer = null;
 let isOptionKeyDown = false;
 let currentKeywordHighlightIds = [];
+
+// Modal functions for displaying external sites
+function openSiteModal(url) {
+    const modal = document.getElementById('site-modal');
+    const iframe = document.getElementById('modal-iframe');
+    const goBtn = document.getElementById('modal-go-btn');
+    if (!modal || !iframe || !goBtn) return;
+    iframe.src = url;
+    goBtn.onclick = () => window.open(url, '_blank');
+    modal.style.display = 'block';
+}
+
+function closeSiteModal() {
+    const modal = document.getElementById('site-modal');
+    const iframe = document.getElementById('modal-iframe');
+    if (modal) modal.style.display = 'none';
+    if (iframe) iframe.src = '';
+}
 
 // Helper: open callout with adaptive behavior
 // Note: Leaflet's 'direction' option is for Tooltips (not Popups).
@@ -779,141 +795,171 @@ function renderFiguresOnMap(figuresArray) {
 }
 
 async function showFigureDetails(figureId) {
-    currentFigureId = figureId;
+    const figure = figuresDict[figureId];
+    if (!figure) return;
 
-    // Update the URL hash without reloading the page
-    if (window.location.hash !== `#${figureId}`) {
-        history.replaceState(null, '', `#${figureId}`);
+    let targetWindow;
+    if (isOptionKeyDown || !activeWindow) {
+        targetWindow = createDetailWindow(figureId);
+    } else {
+        targetWindow = activeWindow;
     }
 
-    const figure = figuresDict[figureId];
-    if (figure && headerContainer) {
-        detailLabel.textContent = figure.label || figure.id;
+    // 1. Assign ID and references
+    targetWindow.dataset.figureId = figureId;
+    const labelEl = targetWindow.querySelector('.detail-label');
+    const infoEl = targetWindow.querySelector('.detail-info');
+    const imageDiv = targetWindow.querySelector('.detail-image');
 
-        // Add direct link icon
+    // 2. Populate Header
+    if (labelEl) {
+        labelEl.textContent = figure.label || figure.id;
         const linkIcon = document.createElement('a');
         linkIcon.href = `/#${figure.id}`;
         linkIcon.target = '_blank';
         linkIcon.style.marginLeft = '0.6em';
         linkIcon.style.fontSize = '.5em';
-        linkIcon.title = 'Direct link to this figure';
-        // Unicode "link" icon: 🔗 (U+1F517)
         linkIcon.textContent = '🔗';
-        detailLabel.appendChild(linkIcon);
+        labelEl.appendChild(linkIcon);
+    }
 
-        detailInfo.innerHTML = '';
-        detailImageDiv.innerHTML = '';
+    // 3. Build and set main metadata content
+    let html = '';
+    if (figure.cultureLabel) {
+        const cult = figure.cultureDescribedBy
+            ? `<a href="${figure.cultureDescribedBy}" target="_blank">${figure.cultureLabel}</a>`
+            : figure.cultureLabel;
+        html += `<p><strong>Tradition/Culture:</strong> ${cult}</p>`;
+    }
+    if (figure.inModernCountry) html += `<p><strong>Modern Country:</strong> ${figure.inModernCountry}</p>`;
+    if (figure.materialNote) html += `<p><strong>Material:</strong> ${figure.materialNote}</p>`;
 
-        let detailImageUrl = null;
-        if (figure.thumbnailURL) {
-            detailImageUrl = figure.thumbnailURL;
-        } else if (figure.wikipediaImagePage) {
-            detailImageUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 200); // Await the async call
-        }
+    if (figure.date !== null) html += `<p><strong>Date:</strong> ${formatDateForDisplay(figure.date)}</p>`;
+    else if (figure.approximateDate !== null) html += `<p><strong>Approx. Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
 
-    
+    if (figure.earliestDate !== null) {
+        const end = figure.latestDate !== null ? ` to ${formatDateForDisplay(figure.latestDate)}` : '';
+        html += `<p><strong>Date Range:</strong> ${formatDateForDisplay(figure.earliestDate)}${end}</p>`;
+    }
+    if (figure.note) html += `<p><strong>Note:</strong> ${figure.note}</p>`;
+    if (infoEl) infoEl.innerHTML = html;
+
+    // 4. Append 'More' links
+    if (figure.describedBy && figure.describedBy.length > 0 && infoEl) {
+        const morePara = document.createElement('p');
+        morePara.textContent = 'More: ';
+        figure.describedBy.forEach((url, idx) => {
+            const link = document.createElement('a');
+            link.href = url;
+            try { link.textContent = new URL(url).hostname; } catch { link.textContent = 'link'; }
+            link.target = '_blank';
+            morePara.appendChild(link);
+            if (idx < figure.describedBy.length - 1) morePara.appendChild(document.createTextNode(', '));
+        });
+        infoEl.appendChild(morePara);
+    }
+
+    // 5. Populate image container
+    if (imageDiv) {
+        imageDiv.innerHTML = '';
         const detailImg = document.createElement('img');
-        detailImg.src = "/thumbnails/" + figure.id + ".png" ;
-        detailImg.classList.add('detail-image-style');
-
-        // Swap to large image on hover
+        detailImg.src = "/thumbnails/" + figure.id + ".png";
         detailImg.addEventListener('mouseover', () => {
             detailImg.src = "/large/" + figure.id + ".png";
-            detailImg.style.maxWidth = 500 ;
+            detailImg.style.width = '100%';
         });
         detailImg.addEventListener('mouseout', () => {
             detailImg.src = "/thumbnails/" + figure.id + ".png";
-            detailImg.style.maxWidth = 200 ;
+            detailImg.style.width = 'auto';
         });
 
-        detailA = document.createElement('a');
-        detailA.href = `https://lens.google.com/uploadbyurl?url=${detailImageUrl}` ;
-        detailA.appendChild(detailImg)
-        detailA.setAttribute('title', "Click for Google Image Search")
+        const detailA = document.createElement('a');
+        detailA.setAttribute('title', "Click for Google Image Search");
+        detailA.appendChild(detailImg);
+        imageDiv.appendChild(detailA);
 
-        detailImageDiv.appendChild(detailA);
-
-
-        if (figure.cultureLabel && figure.cultureDescribedBy) {
-            const cultureLink = document.createElement('p');
-            const strongElement = document.createElement('strong');
-            strongElement.textContent = 'Art Historical Tradition or Culture: ';
-            const link = document.createElement('a');
-            link.href = figure.cultureDescribedBy;
-            link.textContent = figure.cultureLabel;
-
-            cultureLink.appendChild(strongElement);
-            cultureLink.appendChild(link);
-            detailInfo.appendChild(cultureLink);
-        } else if (figure.cultureLabel) {
-            detailInfo.innerHTML += `<p><strong>Art Historical Tradition or Culture:</strong> ${figure.cultureLabel}</p>`;
-        } else if (figure.culture) {
-            detailInfo.innerHTML += `<p><strong>Art Historical Tradition or Culture:</strong> ${figure.culture}</p>`;
-        }
-
-        if (figure.inModernCountry) {
-            detailInfo.innerHTML += `<p><strong>Modern Country:</strong> ${figure.inModernCountry}</p>`;
-        }
-
-        if (figure.materialNote) {
-            detailInfo.innerHTML += `<p><strong>Material:</strong> ${figure.materialNote}</p>`;
-        }
-
-        if (figure.date !== null) {
-            detailInfo.innerHTML += `<p><strong>Date:</strong> ${formatDateForDisplay(figure.date)}</p>`;
-        }
-        if (figure.approximateDate !== null) {
-            detailInfo.innerHTML += `<p><strong>Approximate Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
-        }
-
-        if (figure.latestDate !== null) {
-            append_to_date = ` to ${formatDateForDisplay(figure.latestDate)}`
-        }
-
-        if (figure.earliestDate !== null) {
-            detailInfo.innerHTML += `<p><strong>Date Range:</strong> ${formatDateForDisplay(figure.earliestDate)}${append_to_date}</p>`;
-        }
-
-        if (figure.describedBy && figure.describedBy.length > 0) {
-            const morePara = document.createElement('p');
-            morePara.textContent = 'More: ';
-            figure.describedBy.forEach((url, idx) => {
-                const link = document.createElement('a');
-                link.href = url;
-                try {
-                    link.textContent = new URL(url).hostname;
-                } catch {
-                    link.textContent = url;
-                }
-                link.target = '_blank';
-                morePara.appendChild(link);
-                if (idx < figure.describedBy.length - 1) {
-                    morePara.appendChild(document.createTextNode(', '));
-                }
-            });
-            detailInfo.appendChild(morePara);
-        }
-
-        if (figure.note) {
-            detailInfo.innerHTML += `<p><strong>Note:</strong> ${figure.note}</p>`;
-        }
-
-        // const directLink = document.createElement('p');
-        // const link = document.createElement('a');
-        // link.href = `/#${figure.id}`;
-        // link.textContent = 'Direct Link';
-        // link.target = '_blank';
-        // directLink.appendChild(link);
-        // detailInfo.appendChild(directLink);
-
-    } else {
-        console.error("Figure details not found for ID:", figureId);
+        (async () => {
+            let searchImgUrl = figure.thumbnailURL;
+            if (!searchImgUrl && figure.wikipediaImagePage) {
+                searchImgUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 200);
+            }
+            detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(searchImgUrl || "")}`;
+        })();
     }
-    // Rerender the timescale so the selected figure's span/line is shown
-    try {
-        renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
-    } catch (err) {
-        // defensive: ignore
+
+    // 6. Synchronize UI highlights and focus
+    setActiveWindow(targetWindow);
+    try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) {}
+}
+
+function createDetailWindow(figureId) {
+    const win = document.createElement('div');
+    win.className = 'detail-window';
+    // Slight offset for each new window to prevent exact stacking
+    const count = document.querySelectorAll('.detail-window').length;
+    win.style.top = `${110 + (count * 20)}px`;
+    win.style.right = `${30 + (count * 20)}px`;
+    
+    win.innerHTML = `
+        <div class="detail-label-container">
+            <h2 class="detail-label">Loading</h2>
+            <button class="window-close-btn" title="Close window">×</button>
+        </div>
+        <div class="figure-details-wrapper">
+            <div class="detail-image"></div>
+            <div class="detail-info"></div>
+        </div>
+        <div class="resizer resizer-r"></div>
+        <div class="resizer resizer-l"></div>
+        <div class="resizer resizer-b"></div>
+        <div class="resizer resizer-br"></div>
+        <div class="resizer resizer-bl"></div>
+    `;
+
+    document.body.appendChild(win);
+    dragElement(win);
+    initResizers(win);
+
+    win.addEventListener('mousedown', () => setActiveWindow(win));
+    win.querySelector('.window-close-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (activeWindow === win) activeWindow = null;
+        win.remove();
+    });
+
+    // Intercept clicks on links in the info section to open in the site modal
+    const infoEl = win.querySelector('.detail-info');
+    if (infoEl) {
+        infoEl.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && link.href) {
+                e.preventDefault();
+                openSiteModal(link.href);
+            }
+        });
+    }
+
+    return win;
+}
+
+function setActiveWindow(win) {
+    if (activeWindow) activeWindow.classList.remove('active-window');
+    activeWindow = win;
+    activeWindow.classList.add('active-window');
+    activeWindow.style.zIndex = ++topZIndex;
+    
+    const figId = win.dataset.figureId;
+    if (figId) {
+        currentFigureId = figId;
+        if (window.location.hash !== `#${figId}`) {
+            history.replaceState(null, '', `#${figId}`);
+        }
+        // Synchronize highlights across all views
+        highlightListFigure(figId);
+        highlightTimelineFigure(figId);
+        highlightMapFigure(figId);
+        highlightGalleryFigure(figId);
+        try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) {}
     }
 }
 
@@ -959,11 +1005,10 @@ async function loadAndDisplayFigures($rdf) {
 
     currentSortedIndex = sortedFiguresIndex;
 
-
     renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
-
-    renderFiguresAsList(currentSortedIndex);
-    renderFiguresAsTimeline(currentSortedIndex);
+    await renderFiguresAsList(currentSortedIndex);
+    await renderFiguresAsTimeline(currentSortedIndex);
+    
     setTimeout(() => {
                     if (leafletMap) {
                         leafletMap.invalidateSize();
@@ -983,20 +1028,19 @@ async function loadAndDisplayFigures($rdf) {
                     }
                 }, 200);
     renderKeywordSearch();
-    // --- Add this block ---
-    // Check for hash in URL and show that figure is present and valid
+
+    // Default display logic: respect URL hash if present, otherwise default to first item
+    let initialFigureId = sortedFiguresIndex.length > 0 ? sortedFiguresIndex[0] : null;
     const hash = window.location.hash;
     if (hash && hash.length > 1) {
         const figureId = hash.substring(1);
         if (figuresDict[figureId]) {
-            showFigureDetails(figureId);
-            return; // Don't show the first by default if hash is present
+            initialFigureId = figureId;
         }
     }
-    // --- End block ---
 
-    if (sortedFiguresIndex.length > 0) {
-        showFigureDetails(sortedFiguresIndex[0]);
+    if (initialFigureId) {
+        showFigureDetails(initialFigureId);
     }
 }
 
@@ -1027,8 +1071,8 @@ async function initializeStore($rdf) {
 (async function initializeAndLoadFigures() {
     if (await initializeStore($rdf)) {
         figuresDict = await buildFiguresInfoDict($rdf);
+        await loadAndDisplayFigures($rdf);
     }
-    loadAndDisplayFigures($rdf);
 })();
 
 // Track Option/Alt key state globally
@@ -1127,20 +1171,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove 'active' from all
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
-
-            // Add 'active' to clicked button and corresponding content
             button.classList.add('active');
             const tabName = button.getAttribute('data-tab');
-            currentTab = tabName ;
+            currentTab = tabName;
             const activeContent = document.getElementById(`${tabName}-container`);
-            if (activeContent) {
-                activeContent.classList.add('active');
-            }
+            if (activeContent) activeContent.classList.add('active');
 
-            // --- Scroll to current figure in the relevant view ---
             if (tabName === 'figure-list' && currentFigureId) {
                 scrollToListFigure(currentFigureId);
                 highlightListFigure(currentFigureId);
@@ -1148,24 +1186,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollToTimelineFigure(currentFigureId);
                 highlightTimelineFigure(currentFigureId);
             } else if (tabName === 'figure-map') {
-                // For the map tab, ensure the map is rendered and centered on the current figure
                 setTimeout(() => {
-                    if (leafletMap) {
-                        leafletMap.invalidateSize();
-                    }
-                    leafletMap.getPane('popupPane').style.zIndex = 3000; // Default is likely 650
+                    if (leafletMap) leafletMap.invalidateSize();
                     renderFiguresOnMap(currentSortedIndex);
-
-                    // Open popup for current figure if present
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
                         leafletMap.setView(leafletMarkers[currentFigureId].getLatLng(), 3)
                         leafletMarkers[currentFigureId].openPopup();
-                        highlightMapFigure(currentFigureId) ;
-                        highlightGalleryFigure(currentFigureId)
+                        highlightMapFigure(currentFigureId);
+                        highlightGalleryFigure(currentFigureId);
                     }
-                }, 200); // Delay to allow the tab to become visible
+                }, 200);
             }
-            // ------------------------------------------------------
         });
     });
 
@@ -1177,11 +1208,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Auto-start playback if 'play' parameter is present
     if (playParam !== null) {
-        setTimeout(() => {
-            startPlayback();
-        }, 500);
+        setTimeout(startPlayback, 500);
     }
 
     // --- Threshold slider control (allow user to slide the log threshold) ---
@@ -1314,7 +1342,80 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
         console.warn('Could not create threshold control:', err);
     }
+
+    // Modal interaction listeners
+    const modal = document.getElementById('site-modal');
+    const closeBtn = document.getElementById('modal-close-btn');
+    if (closeBtn) closeBtn.onclick = closeSiteModal;
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeSiteModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeSiteModal();
+    });
 });
+
+/**
+ * Makes an element draggable using a handle (defaults to element itself or child with ID + 'label')
+ */
+function dragElement(elmnt) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    const handle = elmnt.querySelector('.detail-label-container') || elmnt;
+    handle.onmousedown = (e) => {
+        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = () => { document.onmouseup = null; document.onmousemove = null; };
+        document.onmousemove = (ev) => {
+            ev.preventDefault();
+            pos1 = pos3 - ev.clientX;
+            pos2 = pos4 - ev.clientY;
+            pos3 = ev.clientX;
+            pos4 = ev.clientY;
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            elmnt.style.right = 'auto';
+        };
+    };
+}
+
+/**
+ * Makes an element resizable from edges
+ */
+function initResizers(elmnt) {
+    elmnt.querySelectorAll('.resizer').forEach(resizer => {
+        resizer.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const startX = e.clientX, startY = e.clientY;
+            const rect = elmnt.getBoundingClientRect();
+            const startW = rect.width, startH = rect.height, startL = rect.left;
+            const type = e.target.classList;
+
+            const doDrag = (ev) => {
+                elmnt.style.right = 'auto';
+                elmnt.style.bottom = 'auto';
+                if (type.contains('resizer-r') || type.contains('resizer-br')) {
+                    const w = startW + (ev.clientX - startX);
+                    if (w > 200) elmnt.style.width = w + 'px';
+                } else if (type.contains('resizer-l') || type.contains('resizer-bl')) {
+                    const w = startW - (ev.clientX - startX);
+                    if (w > 200) { elmnt.style.width = w + 'px'; elmnt.style.left = (startL + (ev.clientX - startX)) + 'px'; }
+                }
+                if (type.contains('resizer-b') || type.contains('resizer-br') || type.contains('resizer-bl')) {
+                    const h = startH + (ev.clientY - startY);
+                    if (h > 150) elmnt.style.height = h + 'px';
+                }
+            };
+            const stopDrag = () => { document.removeEventListener('mousemove', doDrag); document.removeEventListener('mouseup', stopDrag); window.dispatchEvent(new Event('resize')); };
+            document.addEventListener('mousemove', doDrag);
+            document.addEventListener('mouseup', stopDrag);
+        });
+    });
+}
 
 
 
@@ -1342,7 +1443,7 @@ function scrollToTimelineFigure(figureId) {
     if (currentDiv) {
         currentDiv.scrollIntoView({ behavior: 'auto', block: 'center' });
     } else {
-        console.warn(`Element with ID list-${figureId} not found.`);
+        console.warn(`Element with ID timeline-${figureId} not found.`);
     }
 }
 
@@ -1355,10 +1456,11 @@ function highlightTimelineFigure(figureId) {
         currentDiv.classList.add('highlighted');
     }
 }
-
 function highlightMapFigure(figureId) {
-
+        if (!leafletMarkers || !leafletMarkers[figureId]) return;
+        
         Object.values(leafletMarkers).forEach(m => {
+        if (!m) return;
         m.setZIndexOffset(1);
         const el = m.getElement && m.getElement();
         if (el) {
@@ -1372,8 +1474,11 @@ function highlightMapFigure(figureId) {
     });
 
         // Highlight this marker (give it the requested border)
-        const thisEl = leafletMarkers[figureId].getElement && leafletMarkers[figureId].getElement();
-        if (thisEl) {
+        const marker = leafletMarkers[figureId];
+        if (!marker) return;
+        
+        const thisEl = marker.getElement ? marker.getElement() : null;
+        if (thisEl && thisEl.querySelector) {
             const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
             if (innerDiv) {
                 innerDiv.style.borderRadius = '50%';
@@ -1382,11 +1487,10 @@ function highlightMapFigure(figureId) {
             }
         }
 
-        leafletMarkers[figureId].setZIndexOffset(2000);
+        marker.setZIndexOffset(2000);
         
-        // Center map on this marker only if Option/Alt key is held
-        if (isOptionKeyDown && leafletMap && leafletMarkers[figureId]) {
-            leafletMap.panTo(leafletMarkers[figureId].getLatLng());
+        if (isOptionKeyDown && leafletMap) {
+            leafletMap.panTo(marker.getLatLng());
         }
     }
 
