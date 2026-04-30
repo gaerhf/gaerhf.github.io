@@ -189,7 +189,9 @@ body {
 
 .detail-image {
     flex: 0 0 auto;
-    margin: 0;
+    width: 100%;
+    padding-top: 10px;
+    box-sizing: border-box;
 }
 
 .detail-image img {
@@ -201,6 +203,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     object-fit: contain;
     transition: width 0.2s ease-in-out, max-height 0.2s ease-in-out;
+    margin: 0 auto;
 }
 
 /* Modal styles */

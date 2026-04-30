@@ -889,10 +889,12 @@ async function showFigureDetails(figureId) {
         detailImg.addEventListener('mouseover', () => {
             detailImg.src = "/large/" + figure.id + ".png";
             detailImg.style.width = '100%';
+            imageDiv.style.paddingTop = '0';
         });
         detailImg.addEventListener('mouseout', () => {
             detailImg.src = "/thumbnails/" + figure.id + ".png";
             detailImg.style.width = 'auto';
+            imageDiv.style.paddingTop = '';
         });
 
         const detailA = document.createElement('a');
