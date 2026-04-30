@@ -923,8 +923,13 @@ function createDetailWindow(figureId) {
     win.addEventListener('mousedown', () => setActiveWindow(win));
     win.querySelector('.window-close-btn').addEventListener('click', (e) => {
         e.stopPropagation();
-        if (activeWindow === win) activeWindow = null;
+        if (activeWindow === win) {
+            activeWindow = null;
+            currentFigureId = null;
+        }
         win.remove();
+        // Re-apply marker highlights: demotes this window's marker from primary/secondary.
+        highlightMapFigure(currentFigureId);
     });
 
     // Intercept clicks on links in the info section to open in the site modal
@@ -1456,10 +1461,21 @@ function highlightTimelineFigure(figureId) {
         currentDiv.classList.add('highlighted');
     }
 }
+// Returns figureIds for all currently open detail windows.
+function getOpenWindowFigureIds() {
+    return Array.from(document.querySelectorAll('.detail-window[data-figure-id]'))
+        .map(w => w.dataset.figureId)
+        .filter(Boolean);
+}
+
 function highlightMapFigure(figureId) {
-        if (!leafletMarkers || !leafletMarkers[figureId]) return;
-        
-        Object.values(leafletMarkers).forEach(m => {
+    if (!leafletMarkers) return;
+
+    // Collect secondary IDs: open windows that are not the primary figure.
+    const secondaryIds = new Set(getOpenWindowFigureIds().filter(id => id !== figureId));
+
+    // Reset all markers to default style.
+    Object.values(leafletMarkers).forEach(m => {
         if (!m) return;
         m.setZIndexOffset(1);
         const el = m.getElement && m.getElement();
@@ -1473,26 +1489,40 @@ function highlightMapFigure(figureId) {
         }
     });
 
-        // Highlight this marker (give it the requested border)
+    // Blue ring for secondary markers (open windows that are not primary).
+    secondaryIds.forEach(id => {
+        const m = leafletMarkers[id];
+        if (!m) return;
+        const el = m.getElement && m.getElement();
+        if (el) {
+            const inner = el.querySelector && el.querySelector('div');
+            if (inner) {
+                inner.style.border = '3px solid #1976d2';
+                inner.style.borderRadius = '50%';
+                inner.style.transform = 'scale(1.4)';
+            }
+        }
+        m.setZIndexOffset(1000);
+    });
+
+    // Purple ring for the primary (active) marker.
+    if (figureId && leafletMarkers[figureId]) {
         const marker = leafletMarkers[figureId];
-        if (!marker) return;
-        
         const thisEl = marker.getElement ? marker.getElement() : null;
         if (thisEl && thisEl.querySelector) {
-            const innerDiv = thisEl.querySelector && thisEl.querySelector('div');
+            const innerDiv = thisEl.querySelector('div');
             if (innerDiv) {
                 innerDiv.style.borderRadius = '50%';
                 innerDiv.style.border = '5px solid #CC79A7';
                 innerDiv.style.transform = 'scale(1.8)';
             }
         }
-
         marker.setZIndexOffset(2000);
-        
         if (isOptionKeyDown && leafletMap) {
             leafletMap.panTo(marker.getLatLng());
         }
     }
+}
 
 function highlightGalleryFigure(figureId) {
     // Clear borders from all gallery images
