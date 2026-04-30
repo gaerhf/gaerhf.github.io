@@ -627,7 +627,7 @@ function renderFiguresOnMap(figuresArray) {
         leafletMap = L.map('figure-map', { 
             worldCopyJump: true,
             keyboard: false  // CRITICAL: Disable Leaflet's keyboard handler completely
-        }).setView([20, 0], 1.8); // World view
+        }).setView([20, 15], 2); // World view
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(leafletMap);
@@ -897,8 +897,17 @@ function createDetailWindow(figureId) {
     win.className = 'detail-window';
     // Slight offset for each new window to prevent exact stacking
     const count = document.querySelectorAll('.detail-window').length;
+    const _fig = figuresDict[figureId];
+    const _lng = _fig && _fig.representativeLatLongPoint ? _fig.representativeLatLongPoint[1] : null;
+    const _placeLeft = _lng !== null && _lng >= 0; // eastern hemisphere → left side keeps marker visible
     win.style.top = `${110 + (count * 20)}px`;
-    win.style.right = `${30 + (count * 20)}px`;
+    if (_placeLeft) {
+        win.style.left = `${30 + (count * 20)}px`;
+        win.style.right = 'auto';
+    } else {
+        win.style.right = `${30 + (count * 20)}px`;
+        win.style.left = 'auto';
+    }
     
     win.innerHTML = `
         <div class="detail-label-container">
@@ -1020,16 +1029,13 @@ async function loadAndDisplayFigures($rdf) {
                     }
                     renderFiguresOnMap(currentSortedIndex);
 
-                    // Open popup for current figure if present
+                    // Highlight current figure without zooming in — keep the world view.
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
-                        leafletMap.setView(leafletMarkers[currentFigureId].getLatLng(), 3)
                         const thisEl = leafletMarkers[currentFigureId].getElement && leafletMarkers[currentFigureId].getElement();
                         if (thisEl) {
-                            highlightMapFigure(currentFigureId) ;
-                            highlightGalleryFigure(currentFigureId) ;
+                            highlightMapFigure(currentFigureId);
+                            highlightGalleryFigure(currentFigureId);
                         }
-                    
-                        leafletMarkers[currentFigureId].openPopup();
                     }
                 }, 200);
     renderKeywordSearch();
