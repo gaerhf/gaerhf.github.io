@@ -259,6 +259,48 @@ body {
     border-radius: 0; /* Optional: square off corners when full-width */
 }
 
+.link-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.link-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.82em;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+}
+
+.link-chip--embed {
+    color: #1976d2;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+}
+
+.link-chip--embed:hover {
+    background: #bbdefb;
+}
+
+.link-chip--external {
+    color: #555;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+}
+
+.link-chip--external:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
 .culture-info {
     font-size: 0.8em;
     color: #777;

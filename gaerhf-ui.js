@@ -5,6 +5,19 @@ const headerContainer = document.getElementById('header-container');
 const minYear = -50000; // Minimum year
 const maxYear = 1500;     // Maximum year
 
+// Hostnames known to permit iframe embedding.
+const EMBEDDABLE_HOSTS = new Set([
+    'en.wikipedia.org',
+    'de.wikipedia.org',
+    'it.wikipedia.org',
+    'commons.wikimedia.org',
+]);
+
+function isEmbeddable(url) {
+    try { return EMBEDDABLE_HOSTS.has(new URL(url).hostname); }
+    catch { return false; }
+}
+
 // Check for 'play' CGI parameter in the URL
 const urlParams = new URLSearchParams(window.location.search);
 const playParam = urlParams.get('play');
@@ -844,19 +857,28 @@ async function showFigureDetails(figureId) {
     if (figure.note) html += `<p><strong>Note:</strong> ${figure.note}</p>`;
     if (infoEl) infoEl.innerHTML = html;
 
-    // 4. Append 'More' links
+    // 4. Append 'More' links as chips
     if (figure.describedBy && figure.describedBy.length > 0 && infoEl) {
-        const morePara = document.createElement('p');
-        morePara.textContent = 'More: ';
-        figure.describedBy.forEach((url, idx) => {
-            const link = document.createElement('a');
-            link.href = url;
-            try { link.textContent = new URL(url).hostname; } catch { link.textContent = 'link'; }
-            link.target = '_blank';
-            morePara.appendChild(link);
-            if (idx < figure.describedBy.length - 1) morePara.appendChild(document.createTextNode(', '));
+        const chipRow = document.createElement('div');
+        chipRow.className = 'link-chips';
+        figure.describedBy.forEach(url => {
+            const a = document.createElement('a');
+            a.href = url;
+            const embed = isEmbeddable(url);
+            a.className = `link-chip ${embed ? 'link-chip--embed' : 'link-chip--external'}`;
+            try { a.textContent = new URL(url).hostname.replace(/^www\./, ''); }
+            catch { a.textContent = 'link'; }
+            if (!embed) {
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                const icon = document.createElement('span');
+                icon.textContent = '↗'; // ↗
+                icon.setAttribute('aria-hidden', 'true');
+                a.appendChild(icon);
+            }
+            chipRow.appendChild(a);
         });
-        infoEl.appendChild(morePara);
+        infoEl.appendChild(chipRow);
     }
 
     // 5. Populate image container
@@ -941,12 +963,13 @@ function createDetailWindow(figureId) {
         highlightMapFigure(currentFigureId);
     });
 
-    // Intercept clicks on links in the info section to open in the site modal
+    // Intercept clicks on embeddable links to open in the site modal;
+    // non-embeddable links fall through to their target="_blank".
     const infoEl = win.querySelector('.detail-info');
     if (infoEl) {
         infoEl.addEventListener('click', (e) => {
             const link = e.target.closest('a');
-            if (link && link.href) {
+            if (link && link.href && isEmbeddable(link.href)) {
                 e.preventDefault();
                 openSiteModal(link.href);
             }
