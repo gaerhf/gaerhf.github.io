@@ -7,7 +7,7 @@ const maxYear = 1500;     // Maximum year
 
 // Image URL helpers — single source of truth for the thumbnails/large naming convention.
 const thumbnailUrl = (id) => `/thumbnails/${id}.png`;
-const largeUrl     = (id) => `/large/${id}.png`;
+const largeUrl = (id) => `/large/${id}.png`;
 
 // Marker icon factory — single source of truth for marker size, shape, and border.
 function makeMarkerIcon(color) {
@@ -95,7 +95,7 @@ function openAdaptivePopup(marker, content) {
         if (pt.y < topThreshold) {
             // Near top: use a tooltip that appears below the marker
             // Close any popup that might be open
-            try { marker.closePopup(); } catch {}
+            try { marker.closePopup(); } catch { }
             // Rebind tooltip with bottom direction
             marker.unbindTooltip();
             marker.bindTooltip(content, {
@@ -131,45 +131,45 @@ function openAdaptivePopup(marker, content) {
  * @returns {Array<string>} An array of keys (figureIds) for markers currently visible on the map.
  */
 function getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) {
-  // Ensure both map and markers object are provided
-  if (!leafletMap || !leafletMarkers) {
-    console.error("Error: leafletMap and leafletMarkers are required.");
-    return [];
-  }
-
-  // Get the current geographical bounds of the visible map area
-  const mapBounds = leafletMap.getBounds();
-
-  const visibleMarkerKeys = []
-
-  // Iterate over each key-value pair in the leafletMarkers object
-  for (const figureId in leafletMarkers) {
-    // Ensure the property belongs to the object itself and not its prototype chain
-    if (Object.prototype.hasOwnProperty.call(leafletMarkers, figureId)) {
-      const marker = leafletMarkers[figureId];
-
-      // Check if the marker is a valid Leaflet marker and has a getLatLng method
-      if (marker && typeof marker.getLatLng === 'function') {
-        const markerLatLng = marker.getLatLng();
-
-        // Check if the marker's geographical coordinates are within the map's bounds
-        if (mapBounds.contains(markerLatLng)) {
-          // If visible, add its key (figureId) to the results array
-          visibleMarkerKeys.push(figureId);
-        }
-      } else {
-        console.warn(`Warning: Object with key '${figureId}' is not a valid Leaflet marker.`);
-      }
+    // Ensure both map and markers object are provided
+    if (!leafletMap || !leafletMarkers) {
+        console.error("Error: leafletMap and leafletMarkers are required.");
+        return [];
     }
-  }
 
-  return visibleMarkerKeys;
+    // Get the current geographical bounds of the visible map area
+    const mapBounds = leafletMap.getBounds();
+
+    const visibleMarkerKeys = []
+
+    // Iterate over each key-value pair in the leafletMarkers object
+    for (const figureId in leafletMarkers) {
+        // Ensure the property belongs to the object itself and not its prototype chain
+        if (Object.prototype.hasOwnProperty.call(leafletMarkers, figureId)) {
+            const marker = leafletMarkers[figureId];
+
+            // Check if the marker is a valid Leaflet marker and has a getLatLng method
+            if (marker && typeof marker.getLatLng === 'function') {
+                const markerLatLng = marker.getLatLng();
+
+                // Check if the marker's geographical coordinates are within the map's bounds
+                if (mapBounds.contains(markerLatLng)) {
+                    // If visible, add its key (figureId) to the results array
+                    visibleMarkerKeys.push(figureId);
+                }
+            } else {
+                console.warn(`Warning: Object with key '${figureId}' is not a valid Leaflet marker.`);
+            }
+        }
+    }
+
+    return visibleMarkerKeys;
 }
 
 // Canonical date accessors — single source of truth for the "effective date" of a figure.
 // Use ?? (not ||) so that year 0 CE (a valid date) is not treated as falsy.
 function getFigureStart(f) { return f.earliestDate ?? f.date ?? f.approximateDate; }
-function getFigureEnd(f)   { return f.latestDate   ?? f.date ?? f.approximateDate; }
+function getFigureEnd(f) { return f.latestDate ?? f.date ?? f.approximateDate; }
 
 function formatDateForDisplay(date) {
     if (date === null) {
@@ -276,7 +276,7 @@ async function buildFiguresInfoDict($rdf) {
                 const wikipediaImagePage = tp.anyValue(subject, wikipediaImagePageProp) || null;
                 const describedBy = tp.each(subject, describedByProp).map(val => val.value);
                 const thumbnailURL = tp.anyValue(subject, thumbnailImageProp) || null;
-                
+
                 const latLongNode = tp.any(subject, latLongProp);
                 let representativeLatLongPoint = null;
                 if (latLongNode && latLongNode.termType === 'Collection') {
@@ -369,8 +369,8 @@ async function renderFiguresAsList(figuresArray) {
         figureItem.style.alignItems = 'center';
 
         const thumbnailImg = document.createElement('img');
-        thumbnailImg.src = thumbnailUrl(figureId) ;
-        thumbnailImg.loading = "lazy" ;
+        thumbnailImg.src = thumbnailUrl(figureId);
+        thumbnailImg.loading = "lazy";
         thumbnailImg.style.width = '50px';
         thumbnailImg.style.height = 'auto';
         thumbnailImg.style.marginRight = '10px';
@@ -436,7 +436,7 @@ async function renderFiguresAsList(figuresArray) {
         figureItem.appendChild(textContainer);
         figureItem.addEventListener('click', () => {
             showFigureDetails(figure.id);
-            highlightListFigure(figure.id) ;
+            highlightListFigure(figure.id);
         });
         figureListDiv.appendChild(figureItem);
     }
@@ -629,7 +629,7 @@ function initializeMap() {
 
     // Add zoom-to-all-markers button
     L.Control.ZoomToAll = L.Control.extend({
-        onAdd: function(map) {
+        onAdd: function (map) {
             const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
             container.innerHTML = '🌐';
             container.style.backgroundColor = 'white';
@@ -640,7 +640,7 @@ function initializeMap() {
             container.style.cursor = 'pointer';
             container.style.fontSize = '18px';
             container.title = 'Zoom to all markers';
-            container.onclick = function() {
+            container.onclick = function () {
                 const allMarkers = Object.values(leafletMarkers);
                 if (allMarkers.length === 0) return;
                 const bounds = L.latLngBounds(allMarkers.map(m => m.getLatLng()));
@@ -650,21 +650,21 @@ function initializeMap() {
             return container;
         }
     });
-    L.control.zoomToAll = function(opts) {
+    L.control.zoomToAll = function (opts) {
         return new L.Control.ZoomToAll(opts);
     };
     L.control.zoomToAll({ position: 'topleft' }).addTo(leafletMap);
-    leafletMap.on('zoomend', function() {
+    leafletMap.on('zoomend', function () {
         renderGallery();
         highlightGalleryFigure(currentFigureId);
         try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
-        try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
+        try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
     });
-    leafletMap.on('moveend', function() {
+    leafletMap.on('moveend', function () {
         renderGallery();
         highlightGalleryFigure(currentFigureId);
         try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
-        try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
+        try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
     });
 }
 
@@ -720,9 +720,9 @@ function renderFiguresOnMap(figuresArray) {
 
         const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
         marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
-        marker.on('click', () => { 
+        marker.on('click', () => {
             highlightMapFigure(figureId);
-            highlightGalleryFigure(figureId) ;
+            highlightGalleryFigure(figureId);
             showFigureDetails(figureId);
             clickContent = `<strong>${figure.label || figure.id}</strong>`;
             openAdaptivePopup(marker, clickContent);
@@ -737,8 +737,8 @@ function renderFiguresOnMap(figuresArray) {
             // Hide hover overlay immediately and close popup after a short delay
             try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
             marker._hoverCloseTimer = setTimeout(() => {
-                try { marker.closePopup(); } catch {}
-                try { marker.closeTooltip && marker.closeTooltip(); } catch {}
+                try { marker.closePopup(); } catch { }
+                try { marker.closeTooltip && marker.closeTooltip(); } catch { }
                 marker._hoverCloseTimer = null;
             }, 250);
         });
@@ -762,7 +762,7 @@ function renderFiguresOnMap(figuresArray) {
     // by updating colors in-place, but ensure the selected figure has its border applied)
     try {
         if (currentFigureId && leafletMarkers[currentFigureId]) {
-            highlightMapFigure(currentFigureId) ;
+            highlightMapFigure(currentFigureId);
             highlightGalleryFigure(currentFigureId)
         }
     } catch (err) {
@@ -868,7 +868,7 @@ async function showFigureDetails(figureId) {
     renderFigureImage(targetWindow.querySelector('.detail-image'), figure);
 
     setActiveWindow(targetWindow);
-    try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) {}
+    try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
 }
 
 function createDetailWindow(figureId) {
@@ -887,7 +887,7 @@ function createDetailWindow(figureId) {
         win.style.right = `${30 + (count * 20)}px`;
         win.style.left = 'auto';
     }
-    
+
     win.innerHTML = `
         <div class="detail-label-container">
             <h2 class="detail-label">Loading</h2>
@@ -941,7 +941,7 @@ function setActiveWindow(win) {
     activeWindow = win;
     activeWindow.classList.add('active-window');
     activeWindow.style.zIndex = ++topZIndex;
-    
+
     const figId = win.dataset.figureId;
     if (figId) {
         currentFigureId = figId;
@@ -953,7 +953,7 @@ function setActiveWindow(win) {
         highlightTimelineFigure(figId);
         highlightMapFigure(figId);
         highlightGalleryFigure(figId);
-        try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) {}
+        try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
     }
 }
 
@@ -1002,23 +1002,23 @@ async function loadAndDisplayFigures($rdf) {
     renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
     await renderFiguresAsList(currentSortedIndex);
     await renderFiguresAsTimeline(currentSortedIndex);
-    
-    setTimeout(() => {
-                    if (leafletMap) {
-                        leafletMap.invalidateSize();
-                    }
-                    renderFiguresOnMap(currentSortedIndex);
-                    renderGallery();
 
-                    // Highlight current figure without zooming in — keep the world view.
-                    if (currentFigureId && leafletMarkers[currentFigureId]) {
-                        const thisEl = leafletMarkers[currentFigureId].getElement && leafletMarkers[currentFigureId].getElement();
-                        if (thisEl) {
-                            highlightMapFigure(currentFigureId);
-                            highlightGalleryFigure(currentFigureId);
-                        }
-                    }
-                }, 200);
+    setTimeout(() => {
+        if (leafletMap) {
+            leafletMap.invalidateSize();
+        }
+        renderFiguresOnMap(currentSortedIndex);
+        renderGallery();
+
+        // Highlight current figure without zooming in — keep the world view.
+        if (currentFigureId && leafletMarkers[currentFigureId]) {
+            const thisEl = leafletMarkers[currentFigureId].getElement && leafletMarkers[currentFigureId].getElement();
+            if (thisEl) {
+                highlightMapFigure(currentFigureId);
+                highlightGalleryFigure(currentFigureId);
+            }
+        }
+    }, 200);
     renderKeywordSearch();
 
     // Default display logic: respect URL hash if present, otherwise default to first item
@@ -1069,88 +1069,88 @@ async function initializeStore($rdf) {
 
 // Track Option/Alt key state globally
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Alt') {
-    isOptionKeyDown = true;
-  }
+    if (event.key === 'Alt') {
+        isOptionKeyDown = true;
+    }
 });
 
 document.addEventListener('keyup', (event) => {
-  if (event.key === 'Alt') {
-    isOptionKeyDown = false;
-  }
+    if (event.key === 'Alt') {
+        isOptionKeyDown = false;
+    }
 });
 
 // Reset on window blur (in case user releases key while window not focused)
 window.addEventListener('blur', () => {
-  isOptionKeyDown = false;
+    isOptionKeyDown = false;
 });
 
 document.addEventListener('keydown', (event) => {
 
-  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === "Tab" ) {
-    // Prevent default scrolling behavior
-    event.preventDefault();
-    
-    // Decide navigation set: keyword highlights if present, otherwise visible figures
-    let navigationSet = [];
-    
-    if (currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0) {
-      // Navigate through keyword-highlighted figures
-      let keywordSet = sortFigures(currentKeywordHighlightIds, 'date');
-      
-      // On map tab, filter to only visible keyword figures
-      if (currentTab === 'figure-map') {
-        const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-        if (visibleFigures && visibleFigures.length > 0) {
-          const visibleSet = new Set(visibleFigures);
-          navigationSet = keywordSet.filter(id => visibleSet.has(id));
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === "Tab") {
+        // Prevent default scrolling behavior
+        event.preventDefault();
+
+        // Decide navigation set: keyword highlights if present, otherwise visible figures
+        let navigationSet = [];
+
+        if (currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0) {
+            // Navigate through keyword-highlighted figures
+            let keywordSet = sortFigures(currentKeywordHighlightIds, 'date');
+
+            // On map tab, filter to only visible keyword figures
+            if (currentTab === 'figure-map') {
+                const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+                if (visibleFigures && visibleFigures.length > 0) {
+                    const visibleSet = new Set(visibleFigures);
+                    navigationSet = keywordSet.filter(id => visibleSet.has(id));
+                } else {
+                    navigationSet = keywordSet; // fallback to all keyword highlights if no visible figures
+                }
+            } else {
+                // On other tabs (list, timeline), use all keyword figures
+                navigationSet = keywordSet;
+            }
         } else {
-          navigationSet = keywordSet; // fallback to all keyword highlights if no visible figures
+            // No keyword highlights: use visible figures
+            const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+            if (!visibleFigures || visibleFigures.length === 0) return;
+            navigationSet = sortFigures(visibleFigures, 'date');
         }
-      } else {
-        // On other tabs (list, timeline), use all keyword figures
-        navigationSet = keywordSet;
-      }
-    } else {
-      // No keyword highlights: use visible figures
-      const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-      if (!visibleFigures || visibleFigures.length === 0) return;
-      navigationSet = sortFigures(visibleFigures, 'date');
+
+        if (!navigationSet || navigationSet.length === 0) return;
+
+        let targetIndex = 0;
+
+        // Check if currentFigureId is in the navigation set
+        const idx = navigationSet.indexOf(currentFigureId);
+
+        if (idx !== -1) {
+            // Current figure is in the set, move to next/previous
+            if (event.key === 'ArrowLeft') {
+                targetIndex = idx > 0 ? idx - 1 : navigationSet.length - 1;
+            } else { // ArrowRight or Tab
+                targetIndex = idx < navigationSet.length - 1 ? idx + 1 : 0;
+            }
+        } else {
+            // Current figure not in set, go to first
+            targetIndex = 0;
+        }
+
+        const targetFigureId = navigationSet[targetIndex];
+
+        showFigureDetails(targetFigureId);
+        highlightTimelineFigure(targetFigureId);
+        scrollToTimelineFigure(targetFigureId);
+        highlightListFigure(targetFigureId);
+        scrollToListFigure(targetFigureId);
+        highlightMapFigure(targetFigureId);
+        highlightGalleryFigure(targetFigureId);
+
+        if (leafletMarkers[targetFigureId]) {
+            leafletMarkers[targetFigureId].openPopup();
+        }
     }
-
-    if (!navigationSet || navigationSet.length === 0) return;
-
-    let targetIndex = 0;
-
-    // Check if currentFigureId is in the navigation set
-    const idx = navigationSet.indexOf(currentFigureId);
-    
-    if (idx !== -1) {
-      // Current figure is in the set, move to next/previous
-      if (event.key === 'ArrowLeft') {
-        targetIndex = idx > 0 ? idx - 1 : navigationSet.length - 1;
-      } else { // ArrowRight or Tab
-        targetIndex = idx < navigationSet.length - 1 ? idx + 1 : 0;
-      }
-    } else {
-      // Current figure not in set, go to first
-      targetIndex = 0;
-    }
-
-    const targetFigureId = navigationSet[targetIndex];
-
-    showFigureDetails(targetFigureId);
-    highlightTimelineFigure(targetFigureId);
-    scrollToTimelineFigure(targetFigureId);
-    highlightListFigure(targetFigureId);
-    scrollToListFigure(targetFigureId);
-    highlightMapFigure(targetFigureId);
-    highlightGalleryFigure(targetFigureId);
-
-    if (leafletMarkers[targetFigureId]) {
-      leafletMarkers[targetFigureId].openPopup();
-    }
-  }
 
 });
 
@@ -1206,20 +1206,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Threshold slider control (allow user to slide the log threshold) ---
     try {
-    // Threshold control: hidden by default. Toggle visibility with Ctrl/Cmd+Shift+L.
-    const thresholdControl = document.createElement('div');
-    thresholdControl.id = 'threshold-control';
-    // Default hidden so it doesn't cover tab content; positioned absolutely in the header when shown.
-    thresholdControl.style.display = 'none';
-    thresholdControl.style.position = 'absolute';
-    thresholdControl.style.top = '8px';
-    thresholdControl.style.right = '8px';
-    thresholdControl.style.zIndex = '1200';
-    thresholdControl.style.background = 'rgba(255,255,255,0.95)';
-    thresholdControl.style.padding = '6px 8px';
-    thresholdControl.style.borderRadius = '6px';
-    thresholdControl.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-    thresholdControl.setAttribute('aria-hidden', 'true');
+        // Threshold control: hidden by default. Toggle visibility with Ctrl/Cmd+Shift+L.
+        const thresholdControl = document.createElement('div');
+        thresholdControl.id = 'threshold-control';
+        // Default hidden so it doesn't cover tab content; positioned absolutely in the header when shown.
+        thresholdControl.style.display = 'none';
+        thresholdControl.style.position = 'absolute';
+        thresholdControl.style.top = '8px';
+        thresholdControl.style.right = '8px';
+        thresholdControl.style.zIndex = '1200';
+        thresholdControl.style.background = 'rgba(255,255,255,0.95)';
+        thresholdControl.style.padding = '6px 8px';
+        thresholdControl.style.borderRadius = '6px';
+        thresholdControl.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+        thresholdControl.setAttribute('aria-hidden', 'true');
 
         const label = document.createElement('label');
         label.textContent = 'Log threshold:';
@@ -1271,23 +1271,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle with Ctrl (Windows/Linux) OR Cmd (macOS) + Shift + L.
         // Ignore when focus is in an editable field.
         document.addEventListener('keydown', (e) => {
-          try {
-            const target = e.target;
-            const editing = target && (
-              target.tagName === 'INPUT' ||
-              target.tagName === 'TEXTAREA' ||
-              target.isContentEditable
-            );
-            if (editing) return; // don't toggle while typing
+            try {
+                const target = e.target;
+                const editing = target && (
+                    target.tagName === 'INPUT' ||
+                    target.tagName === 'TEXTAREA' ||
+                    target.isContentEditable
+                );
+                if (editing) return; // don't toggle while typing
 
-            const modifier = e.ctrlKey || e.metaKey; // Ctrl or Cmd
-            if (modifier && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
-              toggleThresholdControlVisibility();
-              e.preventDefault();
+                const modifier = e.ctrlKey || e.metaKey; // Ctrl or Cmd
+                if (modifier && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
+                    toggleThresholdControlVisibility();
+                    e.preventDefault();
+                }
+            } catch (err) {
+                // defensive: ignore errors
             }
-          } catch (err) {
-            // defensive: ignore errors
-          }
         });
 
         // (duplicate old listener removed)
@@ -1516,7 +1516,7 @@ function highlightGalleryFigure(figureId) {
     document.querySelectorAll('.gallery-image').forEach(img => {
         img.style.border = '';
     });
-    
+
     // Add red border to the selected figure's gallery image
     const selectedImg = document.getElementById(`gi-${figureId}`);
     if (selectedImg) {
@@ -1617,11 +1617,11 @@ function startPlayback() {
     playIndex = startIndex;
 
     showFigureDetails(figures[playIndex]);
-    highlightTimelineFigure(figures[playIndex]) ;
-    scrollToTimelineFigure(figures[playIndex]) ;
+    highlightTimelineFigure(figures[playIndex]);
+    scrollToTimelineFigure(figures[playIndex]);
 
-    highlightListFigure(figures[playIndex]) ;
-    scrollToListFigure(figures[playIndex]) ;
+    highlightListFigure(figures[playIndex]);
+    scrollToListFigure(figures[playIndex]);
 
     leafletMarkers[figures[playIndex]].openPopup();
 
@@ -1632,17 +1632,17 @@ function startPlayback() {
             return;
         }
         showFigureDetails(figures[playIndex]);
-        highlightTimelineFigure(figures[playIndex]) ;
-        scrollToTimelineFigure(figures[playIndex]) ;
+        highlightTimelineFigure(figures[playIndex]);
+        scrollToTimelineFigure(figures[playIndex]);
 
-        highlightListFigure(figures[playIndex]) ;
-        scrollToListFigure(figures[playIndex]) ;
+        highlightListFigure(figures[playIndex]);
+        scrollToListFigure(figures[playIndex]);
 
-        console.log(figures[playIndex]) ;
+        console.log(figures[playIndex]);
         leafletMarkers[figures[playIndex]].openPopup();
 
     }, 2000);
-    }
+}
 
 function stopPlayback() {
     const playBtn = document.getElementById('play-btn');
@@ -1771,8 +1771,8 @@ function renderKeywordSearch() {
             if (query.length === 0) {
                 // Clear keyword highlights
                 currentKeywordHighlightIds = [];
-                try { highlightKeywordMarkers([]); } catch {}
-                try { highlightKeywordGalleryImages([]); } catch {}
+                try { highlightKeywordMarkers([]); } catch { }
+                try { highlightKeywordGalleryImages([]); } catch { }
                 suggestionsList.style.display = 'none';
                 updateZoomKeywordButtonVisibility();
             }
@@ -1786,8 +1786,8 @@ function renderKeywordSearch() {
             const query = searchInput.value.trim();
             suggestionsList.innerHTML = '';
             // Restore persistent highlight when regenerating list
-            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
-            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
+            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
+            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
 
             if (query.length === 0) {
                 suggestionsList.style.display = 'none';
@@ -1819,16 +1819,16 @@ function renderKeywordSearch() {
                 li.textContent = kwText;
                 li.tabIndex = 0;
                 const ids = Array.isArray(figuresKWDict[kwText])
-                  ? figuresKWDict[kwText]
-                  : String(figuresKWDict[kwText] || '').split(' ').filter(Boolean);
+                    ? figuresKWDict[kwText]
+                    : String(figuresKWDict[kwText] || '').split(' ').filter(Boolean);
                 // Hover preview: temporarily highlight matching markers
                 li.addEventListener('mouseover', () => {
-                    try { highlightKeywordMarkers(ids); } catch {}
-                    try { highlightKeywordGalleryImages(ids); } catch {}
+                    try { highlightKeywordMarkers(ids); } catch { }
+                    try { highlightKeywordGalleryImages(ids); } catch { }
                 });
                 li.addEventListener('mouseout', () => {
-                    try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
-                    try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
+                    try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
+                    try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
                 });
                 li.addEventListener('click', () => {
                     searchInput.value = kwText;
@@ -1858,8 +1858,8 @@ function renderKeywordSearch() {
         setTimeout(() => {
             suggestionsList.style.display = 'none';
             // Restore persistent highlight when suggestions close
-            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch {}
-            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
+            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
+            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
             updateZoomKeywordButtonVisibility();
         }, 150);
     });
@@ -1883,85 +1883,85 @@ function renderKeywordSearch() {
     updateZoomKeywordButtonVisibility();
 
 
-// Helper: update visibility of zoom button
-function updateZoomKeywordButtonVisibility() {
-    try {
-        const zoomBtn = document.getElementById('zoom-keyword-btn');
-        if (!zoomBtn) return;
-        const shouldShow = currentTab === 'figure-map' && currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0;
-        zoomBtn.style.display = shouldShow ? 'inline-block' : 'none';
-    } catch (e) { /* ignore */ }
-}
+    // Helper: update visibility of zoom button
+    function updateZoomKeywordButtonVisibility() {
+        try {
+            const zoomBtn = document.getElementById('zoom-keyword-btn');
+            if (!zoomBtn) return;
+            const shouldShow = currentTab === 'figure-map' && currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0;
+            zoomBtn.style.display = shouldShow ? 'inline-block' : 'none';
+        } catch (e) { /* ignore */ }
+    }
 
-// Helper: zoom map to bounds of highlighted keyword figures
-function zoomToKeywordHighlightedFigures() {
-    try {
-        if (!leafletMap) return;
-        const ids = (currentKeywordHighlightIds || []).filter(id => leafletMarkers[id]);
-        if (!ids.length) return;
-        const latLngs = ids.map(id => leafletMarkers[id].getLatLng()).filter(Boolean);
-        if (!latLngs.length) return;
-        const bounds = L.latLngBounds(latLngs);
-        if (!bounds.isValid()) return;
-        if (latLngs.length === 1) {
-            // Single marker: choose a zoom level that gives some context
-            leafletMap.setView(latLngs[0], Math.max(leafletMap.getZoom(), 6));
-        } else {
-            leafletMap.fitBounds(bounds, { padding: [40, 40] });
-        }
-    } catch (e) { /* ignore */ }
-}
+    // Helper: zoom map to bounds of highlighted keyword figures
+    function zoomToKeywordHighlightedFigures() {
+        try {
+            if (!leafletMap) return;
+            const ids = (currentKeywordHighlightIds || []).filter(id => leafletMarkers[id]);
+            if (!ids.length) return;
+            const latLngs = ids.map(id => leafletMarkers[id].getLatLng()).filter(Boolean);
+            if (!latLngs.length) return;
+            const bounds = L.latLngBounds(latLngs);
+            if (!bounds.isValid()) return;
+            if (latLngs.length === 1) {
+                // Single marker: choose a zoom level that gives some context
+                leafletMap.setView(latLngs[0], Math.max(leafletMap.getZoom(), 6));
+            } else {
+                leafletMap.fitBounds(bounds, { padding: [40, 40] });
+            }
+        } catch (e) { /* ignore */ }
+    }
 }
 
 function renderGallery() {
 
-            const visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-            galleryDiv = document.getElementById('gallery') ;
-            galleryDiv.innerHTML = "" ;
-            visibleMarkers.forEach(function(figureId, index) {
-                galleryImg = document.createElement('img') ;
-                galleryImg.id = `gi-${figureId}` ;
-                galleryImg.src = thumbnailUrl(figureId);
-                galleryImg.className = "gallery-image" ;
+    const visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+    galleryDiv = document.getElementById('gallery');
+    galleryDiv.innerHTML = "";
+    visibleMarkers.forEach(function (figureId, index) {
+        galleryImg = document.createElement('img');
+        galleryImg.id = `gi-${figureId}`;
+        galleryImg.src = thumbnailUrl(figureId);
+        galleryImg.className = "gallery-image";
 
-                maxHeight = '70'
-                if (visibleMarkers.length > 25) {
-                    maxHeight *= (25/visibleMarkers.length) ;
-                    if (maxHeight < 30) { maxHeight = 30} 
-                }
-                galleryImg.style = `max-height:${maxHeight}px` ;
+        maxHeight = '70'
+        if (visibleMarkers.length > 25) {
+            maxHeight *= (25 / visibleMarkers.length);
+            if (maxHeight < 30) { maxHeight = 30 }
+        }
+        galleryImg.style = `max-height:${maxHeight}px`;
 
-                galleryImg.addEventListener('mouseover', () => {
-                    mouseOverContent = `<strong>${figuresDict[figureId].label}</strong> <!-- <div><img style="max-width:75px;max-height:150px" src="/thumbnails/.png" loading="lazy"></div> -->`
-                    leafletMarkers[figureId].getPopup().setContent(mouseOverContent);
-                    leafletMarkers[figureId].openPopup();
-                    try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
-                });
+        galleryImg.addEventListener('mouseover', () => {
+            mouseOverContent = `<strong>${figuresDict[figureId].label}</strong> <!-- <div><img style="max-width:75px;max-height:150px" src="/thumbnails/.png" loading="lazy"></div> -->`
+            leafletMarkers[figureId].getPopup().setContent(mouseOverContent);
+            leafletMarkers[figureId].openPopup();
+            try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
+        });
 
-                galleryImg.addEventListener('mouseout', () => {
-                // small delay so quick moves don't flicker
-                    try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
-                    leafletMarkers[figureId]._hoverCloseTimer = setTimeout(() => {
-                    leafletMarkers[figureId].closePopup();
-                    leafletMarkers[figureId]._hoverCloseTimer = null;
-                }, 250);
-                });
+        galleryImg.addEventListener('mouseout', () => {
+            // small delay so quick moves don't flicker
+            try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
+            leafletMarkers[figureId]._hoverCloseTimer = setTimeout(() => {
+                leafletMarkers[figureId].closePopup();
+                leafletMarkers[figureId]._hoverCloseTimer = null;
+            }, 250);
+        });
 
-                galleryImg.addEventListener('click', () => {
-                    highlightMapFigure(figureId) ;
-                    highlightGalleryFigure(figureId) ;
-                    try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
-                    leafletMarkers[figureId].closePopup();
-                    showFigureDetails(figureId);
-                });
-                
-                galleryDiv.appendChild(galleryImg) ;
-            } ) ;
+        galleryImg.addEventListener('click', () => {
+            highlightMapFigure(figureId);
+            highlightGalleryFigure(figureId);
+            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
+            leafletMarkers[figureId].closePopup();
+            showFigureDetails(figureId);
+        });
 
-            // Apply keyword highlights to gallery images
-            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
+        galleryDiv.appendChild(galleryImg);
+    });
 
-    }   
+    // Apply keyword highlights to gallery images
+    try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
+
+}
 
 
 function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
@@ -2181,9 +2181,9 @@ function hexToRgba(hex, alpha) {
                 const b = parseInt(h[2] + h[2], 16);
                 return `rgba(${r},${g},${b},${alpha})`;
             } else if (h.length === 6) {
-                const r = parseInt(h.slice(0,2), 16);
-                const g = parseInt(h.slice(2,4), 16);
-                const b = parseInt(h.slice(4,6), 16);
+                const r = parseInt(h.slice(0, 2), 16);
+                const g = parseInt(h.slice(2, 4), 16);
+                const b = parseInt(h.slice(4, 6), 16);
                 return `rgba(${r},${g},${b},${alpha})`;
             }
         }
