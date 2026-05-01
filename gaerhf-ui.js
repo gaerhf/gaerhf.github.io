@@ -5,6 +5,8 @@ const headerContainer = document.getElementById('header-container');
 const minYear = -50000; // Minimum year
 const maxYear = 1500;     // Maximum year
 
+const SHIFT_HINT_HTML = `<div style="margin-top:5px;padding-top:4px;border-top:1px solid #ddd;font-size:0.72em;color:#999;font-style:italic;white-space:nowrap;">&#8679; Shift: open new window</div>`;
+
 // Image URL helpers — single source of truth for the thumbnails/large naming convention.
 const thumbnailUrl = (id) => `/thumbnails/${id}.png`;
 const largeUrl = (id) => `/large/${id}.png`;
@@ -58,7 +60,7 @@ let leafletMap = null;
 let leafletMarkers = {}; // Place this at the top level
 
 let thresholdDebounceTimer = null;
-let isOptionKeyDown = false;
+let isShiftKeyDown = false;
 let currentKeywordHighlightIds = [];
 
 // Modal functions for displaying external sites
@@ -617,7 +619,8 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
 function initializeMap() {
     leafletMap = L.map('figure-map', {
         worldCopyJump: true,
-        keyboard: false  // CRITICAL: Disable Leaflet's keyboard handler completely
+        keyboard: false,  // CRITICAL: Disable Leaflet's keyboard handler completely
+        boxZoom: false    // Shift+drag box-zoom conflicts with Shift+click for new windows
     }).setView([20, 15], 2); // World view
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
@@ -728,7 +731,7 @@ function renderFiguresOnMap(figuresArray) {
             openAdaptivePopup(marker, clickContent);
         });
         marker.on('mouseover', () => {
-            mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="${thumbnailUrl(figure.id)}" loading="lazy"></div>`;
+            mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="${thumbnailUrl(figure.id)}" loading="lazy"></div>${SHIFT_HINT_HTML}`;
             openAdaptivePopup(marker, mouseOverContent);
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
@@ -860,7 +863,7 @@ async function showFigureDetails(figureId) {
     const figure = figuresDict[figureId];
     if (!figure) return;
 
-    const targetWindow = (isOptionKeyDown || !activeWindow) ? createDetailWindow(figureId) : activeWindow;
+    const targetWindow = (isShiftKeyDown || !activeWindow) ? createDetailWindow(figureId) : activeWindow;
     targetWindow.dataset.figureId = figureId;
 
     renderFigureHeader(targetWindow.querySelector('.detail-label'), figure);
@@ -1067,22 +1070,22 @@ async function initializeStore($rdf) {
     }
 })();
 
-// Track Option/Alt key state globally
+// Track Shift key state globally
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Alt') {
-        isOptionKeyDown = true;
+    if (event.key === 'Shift') {
+        isShiftKeyDown = true;
     }
 });
 
 document.addEventListener('keyup', (event) => {
-    if (event.key === 'Alt') {
-        isOptionKeyDown = false;
+    if (event.key === 'Shift') {
+        isShiftKeyDown = false;
     }
 });
 
 // Reset on window blur (in case user releases key while window not focused)
 window.addEventListener('blur', () => {
-    isOptionKeyDown = false;
+    isShiftKeyDown = false;
 });
 
 document.addEventListener('keydown', (event) => {
@@ -1505,7 +1508,7 @@ function highlightMapFigure(figureId) {
             }
         }
         marker.setZIndexOffset(2000);
-        if (isOptionKeyDown && leafletMap) {
+        if (isShiftKeyDown && leafletMap) {
             leafletMap.panTo(marker.getLatLng());
         }
     }
@@ -1932,7 +1935,7 @@ function renderGallery() {
         galleryImg.style = `max-height:${maxHeight}px`;
 
         galleryImg.addEventListener('mouseover', () => {
-            mouseOverContent = `<strong>${figuresDict[figureId].label}</strong> <!-- <div><img style="max-width:75px;max-height:150px" src="/thumbnails/.png" loading="lazy"></div> -->`
+            mouseOverContent = `<strong>${figuresDict[figureId].label}</strong>${SHIFT_HINT_HTML}`
             leafletMarkers[figureId].getPopup().setContent(mouseOverContent);
             leafletMarkers[figureId].openPopup();
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
