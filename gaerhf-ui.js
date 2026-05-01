@@ -5,6 +5,21 @@ const headerContainer = document.getElementById('header-container');
 const minYear = -50000; // Minimum year
 const maxYear = 1500;     // Maximum year
 
+// Image URL helpers — single source of truth for the thumbnails/large naming convention.
+const thumbnailUrl = (id) => `/thumbnails/${id}.png`;
+const largeUrl     = (id) => `/large/${id}.png`;
+
+// Marker icon factory — single source of truth for marker size, shape, and border.
+function makeMarkerIcon(color) {
+    return L.divIcon({
+        className: 'custom-gray-marker',
+        iconSize: [10, 10],
+        iconAnchor: [6, 6],
+        popupAnchor: [0, -6],
+        html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
+    });
+}
+
 // Hostnames known to permit iframe embedding.
 const EMBEDDABLE_HOSTS = new Set([
     'en.wikipedia.org',
@@ -353,22 +368,14 @@ async function renderFiguresAsList(figuresArray) {
         figureItem.style.display = 'flex';
         figureItem.style.alignItems = 'center';
 
-        // let thumbnailUrl = null;
-        // if (figure.thumbnailURL) {
-        //     thumbnailUrl = figure.thumbnailURL;
-        // } else if (figure.wikipediaImagePage) {
-        //     thumbnailUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 50); // Await the async call
-        // }
-
-        // if (thumbnailUrl) {
         const thumbnailImg = document.createElement('img');
-        thumbnailImg.src = "/thumbnails/" + figureId + ".png" ;
+        thumbnailImg.src = thumbnailUrl(figureId) ;
         thumbnailImg.loading = "lazy" ;
         thumbnailImg.style.width = '50px';
         thumbnailImg.style.height = 'auto';
         thumbnailImg.style.marginRight = '10px';
 
-            figureItem.appendChild(thumbnailImg);
+        figureItem.appendChild(thumbnailImg);
 
         // }
 
@@ -523,21 +530,9 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
         return;
     }
 
-    // Get valid dates for the timeline
-    const validDates = figuresDisplayIndex
-        .map(id => figuresDict[id])
-        .filter(figure => getFigureStart(figure) != null);
+    const [earliestDate, latestDate] = getTimescaleRange(figuresDisplayIndex);
 
-    if (validDates.length === 0) {
-        timelineContainer.textContent = 'No valid dates found for the selected range.';
-        return;
-    }
-
-    // Calculate the earliest and latest dates
-    const earliestDate = Math.min(...validDates.map(getFigureStart));
-    const latestDate = Math.max(...validDates.map(getFigureEnd));
-
-    if (isNaN(earliestDate) || isNaN(latestDate) || earliestDate === latestDate) {
+    if (earliestDate === latestDate) {
         timelineContainer.textContent = 'No valid dates found for the selected range.';
         return;
     }
@@ -681,11 +676,7 @@ function renderFiguresOnMap(figuresArray) {
     // and remove markers that are no longer needed. This avoids losing border/boxShadow highlights.
 
     // Find min/max date for scaling
-    const validFigures = figuresArray
-        .map(id => figuresDict[id])
-        .filter(f => f && getFigureStart(f) != null);
-    const minDate = Math.min(...validFigures.map(getFigureStart));
-    const maxDate = Math.max(...validFigures.map(getFigureEnd));
+    const [minDate, maxDate] = getTimescaleRange(figuresArray);
 
     // Update existing markers in-place where possible (to preserve highlight borders/shadows),
     // create markers for figures that don't yet have one, and remove any leftover markers
@@ -718,27 +709,14 @@ function renderFiguresOnMap(figuresArray) {
                 }
             } else {
                 // If element isn't available, ensure the icon is set so it will render when visible
-                const icon = L.divIcon({
-                    className: 'custom-gray-marker',
-                    iconSize: [10, 10],
-                    iconAnchor: [6, 6],
-                    popupAnchor: [0, -6],
-                    html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
-                });
-                existingMarker.setIcon(icon);
+                existingMarker.setIcon(makeMarkerIcon(color));
             }
             toKeep.add(figureId);
             return;
         }
 
         // Otherwise create a new marker (first time seen)
-        const icon = L.divIcon({
-            className: 'custom-gray-marker',
-            iconSize: [10, 10],
-            iconAnchor: [6, 6],
-            popupAnchor: [0, -6],
-            html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
-        });
+        const icon = makeMarkerIcon(color);
 
         const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
         marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
@@ -750,7 +728,7 @@ function renderFiguresOnMap(figuresArray) {
             openAdaptivePopup(marker, clickContent);
         });
         marker.on('mouseover', () => {
-            mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="/thumbnails/${figure.id}.png" loading="lazy"></div>`;
+            mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="${thumbnailUrl(figure.id)}" loading="lazy"></div>`;
             openAdaptivePopup(marker, mouseOverContent);
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
@@ -853,14 +831,14 @@ function renderFigureImage(imageDiv, figure) {
     if (!imageDiv) return;
     imageDiv.innerHTML = '';
     const detailImg = document.createElement('img');
-    detailImg.src = "/thumbnails/" + figure.id + ".png";
+    detailImg.src = thumbnailUrl(figure.id);
     detailImg.addEventListener('mouseover', () => {
-        detailImg.src = "/large/" + figure.id + ".png";
+        detailImg.src = largeUrl(figure.id);
         detailImg.style.width = '100%';
         imageDiv.style.paddingTop = '0';
     });
     detailImg.addEventListener('mouseout', () => {
-        detailImg.src = "/thumbnails/" + figure.id + ".png";
+        detailImg.src = thumbnailUrl(figure.id);
         detailImg.style.width = 'auto';
         imageDiv.style.paddingTop = '';
     });
@@ -1943,7 +1921,7 @@ function renderGallery() {
             visibleMarkers.forEach(function(figureId, index) {
                 galleryImg = document.createElement('img') ;
                 galleryImg.id = `gi-${figureId}` ;
-                galleryImg.src = `/thumbnails/${figureId}.png` ;
+                galleryImg.src = thumbnailUrl(figureId);
                 galleryImg.className = "gallery-image" ;
 
                 maxHeight = '70'
@@ -2142,19 +2120,8 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
 }
 
 function updateMarkerColors(figuresArray) {
-    const ids = Array.isArray(figuresArray) && figuresArray.length > 0 ? figuresArray : currentSortedIndex || Object.keys(figuresDict);
-
-    const validFigures = ids
-        .map(id => figuresDict[id])
-        .filter(f => f && getFigureStart(f) != null);
-
-    if (validFigures.length === 0) return;
-
-    const minDate = Math.min(...validFigures.map(getFigureStart));
-    const maxDate = Math.max(...validFigures.map(getFigureEnd));
-
-    // Guard: avoid division by zero, timelineScale already guards but keep defensive
-    if (!isFinite(minDate) || !isFinite(maxDate) || minDate === maxDate) return;
+    const [minDate, maxDate] = getTimescaleRange(figuresArray);
+    if (minDate === maxDate) return;
 
     Object.keys(leafletMarkers).forEach(figureId => {
         const marker = leafletMarkers[figureId];
@@ -2180,13 +2147,16 @@ function updateMarkerColors(figuresArray) {
 }
 
 // --- Timescale hover overlay helpers (blue) ---
-function getTimescaleRange() {
-    // Prefer the currently-sorted index range, otherwise fall back to all figures
-    const ids = Array.isArray(currentSortedIndex) && currentSortedIndex.length > 0 ? currentSortedIndex : Object.keys(figuresDict || {});
-    const valid = ids.map(id => figuresDict[id]).filter(f => f && getFigureStart(f) != null);
+function getTimescaleRange(ids) {
+    const source = Array.isArray(ids) && ids.length > 0
+        ? ids
+        : (Array.isArray(currentSortedIndex) && currentSortedIndex.length > 0
+            ? currentSortedIndex
+            : Object.keys(figuresDict || {}));
+    const valid = source.map(id => figuresDict[id]).filter(f => f && getFigureStart(f) != null);
     if (!valid || valid.length === 0) return [minYear, maxYear];
-    const minN = Math.min(...valid.map(f => getFigureStart(f)));
-    const maxN = Math.max(...valid.map(f => getFigureEnd(f)));
+    const minN = Math.min(...valid.map(getFigureStart));
+    const maxN = Math.max(...valid.map(getFigureEnd));
     if (!isFinite(minN) || !isFinite(maxN) || minN === maxN) return [minYear, maxYear];
     return [minN, maxN];
 }
