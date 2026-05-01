@@ -243,7 +243,7 @@ async function buildFiguresInfoDict($rdf) {
     const processedDict = {};
 
     try {
-        [figureType, groupType].forEach(async type => {
+        await Promise.all([figureType, groupType].map(async type => {
             const subjectsOfType = tp.each(null, rdfType, type);
             console.log("Found subjects of type:", type.uri, "Count:", subjectsOfType.length);
 
@@ -313,7 +313,7 @@ async function buildFiguresInfoDict($rdf) {
                     representativeLatLongPoint: representativeLatLongPoint,  // [number, number] or null
                 };
             }));
-        });
+        }));
         return processedDict;
     } catch (error) {
         console.error("Error processing store:", error);
