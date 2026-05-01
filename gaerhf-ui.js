@@ -26,6 +26,7 @@ const viewParam = urlParams.get('view')
 // Initialize the figures dictionary
 let figuresDict = {};
 let currentSortedIndex = [];
+let figuresKWDict = {}; // keyword-to-IDs index, populated by initKeywordSearch
 let tp;
 
 // Playback variables
@@ -41,7 +42,6 @@ let topZIndex = 5000;
 let leafletMap = null;
 let leafletMarkers = {}; // Place this at the top level
 
-let visibleMarkers = null ;
 let thresholdDebounceTimer = null;
 let isOptionKeyDown = false;
 let currentKeywordHighlightIds = [];
@@ -151,6 +151,11 @@ function getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) {
   return visibleMarkerKeys;
 }
 
+// Canonical date accessors — single source of truth for the "effective date" of a figure.
+// Use ?? (not ||) so that year 0 CE (a valid date) is not treated as falsy.
+function getFigureStart(f) { return f.earliestDate ?? f.date ?? f.approximateDate; }
+function getFigureEnd(f)   { return f.latestDate   ?? f.date ?? f.approximateDate; }
+
 function formatDateForDisplay(date) {
     if (date === null) {
         return '';
@@ -158,22 +163,6 @@ function formatDateForDisplay(date) {
     const year = Math.abs(date);
     const era = date < 0 ? ' BCE' : ' CE';
     return `${year}${era}`;
-}
-
-// Sorting and Filtering functions
-function filterFiguresByDateRange(startYear, endYear) {
-
-    return Object.keys(figuresDict).filter(figureId => {
-        const figure = figuresDict[figureId];
-        const figureStartDate = figure.earliestDate || figure.date || figure.approximateDate;
-        const figureEndDate = figure.latestDate || figure.date || figure.approximateDate;
-
-        return (
-            (figureStartDate >= startYear && figureStartDate <= endYear) || // Start date is within range
-            (figureEndDate >= startYear && figureEndDate <= endYear) ||     // End date is within range
-            (figureStartDate <= startYear && figureEndDate >= endYear)      // Range overlaps the selected range
-        );
-    });
 }
 
 function sortFigures(figureIds, sortBy = 'date') {
@@ -331,8 +320,8 @@ function filterFiguresByDateRange(startYear, endYear) {
             return false;
         }
 
-        const figureStartDate = figure.earliestDate || figure.date || figure.approximateDate;
-        const figureEndDate = figure.latestDate || figure.date || figure.approximateDate;
+        const figureStartDate = getFigureStart(figure);
+        const figureEndDate = getFigureEnd(figure);
 
         if (figureStartDate === undefined && figureEndDate === undefined) {
             console.warn("Figure has no valid dates:", figureId, figure);
@@ -537,7 +526,7 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
     // Get valid dates for the timeline
     const validDates = figuresDisplayIndex
         .map(id => figuresDict[id])
-        .filter(figure => figure.earliestDate || figure.date || figure.approximateDate);
+        .filter(figure => getFigureStart(figure) != null);
 
     if (validDates.length === 0) {
         timelineContainer.textContent = 'No valid dates found for the selected range.';
@@ -545,12 +534,8 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
     }
 
     // Calculate the earliest and latest dates
-    const earliestDate = Math.min(
-        ...validDates.map(figure => figure.earliestDate || figure.date || figure.approximateDate)
-    );
-    const latestDate = Math.max(
-        ...validDates.map(figure => figure.latestDate || figure.date || figure.approximateDate)
-    );
+    const earliestDate = Math.min(...validDates.map(getFigureStart));
+    const latestDate = Math.max(...validDates.map(getFigureEnd));
 
     if (isNaN(earliestDate) || isNaN(latestDate) || earliestDate === latestDate) {
         timelineContainer.textContent = 'No valid dates found for the selected range.';
@@ -564,8 +549,8 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
 
     figuresDisplayIndex.forEach((figureId, index) => {
         const figure = figuresDict[figureId];
-        const startDate = figure.earliestDate || figure.date || figure.approximateDate;
-        const endDate = figure.latestDate || figure.date || figure.approximateDate;
+        const startDate = getFigureStart(figure);
+        const endDate = getFigureEnd(figure);
 
         if (startDate === null || endDate === null) {
             return; // Skip figures with no valid dates
@@ -634,61 +619,62 @@ async function renderFiguresAsTimeline(figuresDisplayIndex) {
     // (tick rendering belongs in the timescale renderer; nothing more to do here)
 }
 
-function renderFiguresOnMap(figuresArray) {
-    // Only initialize once
-    if (!leafletMap) {
-        leafletMap = L.map('figure-map', { 
-            worldCopyJump: true,
-            keyboard: false  // CRITICAL: Disable Leaflet's keyboard handler completely
-        }).setView([20, 15], 2); // World view
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(leafletMap);
-        // Disable automatic map panning for ALL popups globally (simplifies hover behavior)
-        try { L.Popup.prototype.options.autoPan = false; } catch (e) { /* ignore if Leaflet not loaded */ }
-        // Explicitly raise popup pane z-index in JS in case CSS loads late or is overridden
-        try { leafletMap.getPanes().popupPane.style.zIndex = '20000'; } catch (e) { /* ignore */ }
-        
-        // Add zoom-to-all-markers button
-        L.Control.ZoomToAll = L.Control.extend({
-            onAdd: function(map) {
-                const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
-                container.innerHTML = '🌐';
-                container.style.backgroundColor = 'white';
-                container.style.width = '30px';
-                container.style.height = '30px';
-                container.style.lineHeight = '30px';
-                container.style.textAlign = 'center';
-                container.style.cursor = 'pointer';
-                container.style.fontSize = '18px';
-                container.title = 'Zoom to all markers';
-                container.onclick = function() {
-                    const allMarkers = Object.values(leafletMarkers);
-                    if (allMarkers.length === 0) return;
-                    const bounds = L.latLngBounds(allMarkers.map(m => m.getLatLng()));
-                    // keep padding 0. Any other value zooms too far out.
-                    map.fitBounds(bounds, { padding: [0, 0] });
-                };
-                return container;
-            }
-        });
-        L.control.zoomToAll = function(opts) {
-            return new L.Control.ZoomToAll(opts);
+function initializeMap() {
+    leafletMap = L.map('figure-map', {
+        worldCopyJump: true,
+        keyboard: false  // CRITICAL: Disable Leaflet's keyboard handler completely
+    }).setView([20, 15], 2); // World view
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(leafletMap);
+    // Disable automatic map panning for ALL popups globally (simplifies hover behavior)
+    try { L.Popup.prototype.options.autoPan = false; } catch (e) { /* ignore if Leaflet not loaded */ }
+    // Explicitly raise popup pane z-index in JS in case CSS loads late or is overridden
+    try { leafletMap.getPanes().popupPane.style.zIndex = '20000'; } catch (e) { /* ignore */ }
+
+    // Add zoom-to-all-markers button
+    L.Control.ZoomToAll = L.Control.extend({
+        onAdd: function(map) {
+            const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+            container.innerHTML = '🌐';
+            container.style.backgroundColor = 'white';
+            container.style.width = '30px';
+            container.style.height = '30px';
+            container.style.lineHeight = '30px';
+            container.style.textAlign = 'center';
+            container.style.cursor = 'pointer';
+            container.style.fontSize = '18px';
+            container.title = 'Zoom to all markers';
+            container.onclick = function() {
+                const allMarkers = Object.values(leafletMarkers);
+                if (allMarkers.length === 0) return;
+                const bounds = L.latLngBounds(allMarkers.map(m => m.getLatLng()));
+                // keep padding 0. Any other value zooms too far out.
+                map.fitBounds(bounds, { padding: [0, 0] });
+            };
+            return container;
         }
-        L.control.zoomToAll({ position: 'topleft' }).addTo(leafletMap);
-        leafletMap.on('zoomend', function() {
-            renderGallery() ;
-            highlightGalleryFigure(currentFigureId)
-            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
-            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
-            });
-        leafletMap.on('moveend', function () {
-            renderGallery() ;
-            highlightGalleryFigure(currentFigureId)
-            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
-            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
-            });
-    }
+    });
+    L.control.zoomToAll = function(opts) {
+        return new L.Control.ZoomToAll(opts);
+    };
+    L.control.zoomToAll({ position: 'topleft' }).addTo(leafletMap);
+    leafletMap.on('zoomend', function() {
+        renderGallery();
+        highlightGalleryFigure(currentFigureId);
+        try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
+        try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
+    });
+    leafletMap.on('moveend', function() {
+        renderGallery();
+        highlightGalleryFigure(currentFigureId);
+        try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
+        try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch {}
+    });
+}
+
+function renderFiguresOnMap(figuresArray) {
+    if (!leafletMap) initializeMap();
 
     // We'll update markers in-place where possible to preserve highlight styles
     // Do NOT recreate all markers — update existing markers' background color, create missing ones,
@@ -697,9 +683,9 @@ function renderFiguresOnMap(figuresArray) {
     // Find min/max date for scaling
     const validFigures = figuresArray
         .map(id => figuresDict[id])
-        .filter(f => f && (f.earliestDate !== null || f.date !== null || f.approximateDate !== null));
-    const minDate = Math.min(...validFigures.map(f => f.earliestDate ?? f.date ?? f.approximateDate));
-    const maxDate = Math.max(...validFigures.map(f => f.latestDate ?? f.date ?? f.approximateDate));
+        .filter(f => f && getFigureStart(f) != null);
+    const minDate = Math.min(...validFigures.map(getFigureStart));
+    const maxDate = Math.max(...validFigures.map(getFigureEnd));
 
     // Update existing markers in-place where possible (to preserve highlight borders/shadows),
     // create markers for figures that don't yet have one, and remove any leftover markers
@@ -711,7 +697,7 @@ function renderFiguresOnMap(figuresArray) {
         if (!figure || !figure.representativeLatLongPoint) return;
 
         const [lat, lng] = figure.representativeLatLongPoint;
-        const date = figure.earliestDate ?? figure.date ?? figure.approximateDate;
+        const date = getFigureStart(figure);
         let scale = 0.5;
         if (date !== null && !isNaN(date)) {
             scale = timelineScale(date, minDate, maxDate);
@@ -807,36 +793,20 @@ function renderFiguresOnMap(figuresArray) {
 
 }
 
-async function showFigureDetails(figureId) {
-    const figure = figuresDict[figureId];
-    if (!figure) return;
+function renderFigureHeader(labelEl, figure) {
+    if (!labelEl) return;
+    labelEl.textContent = figure.label || figure.id;
+    const linkIcon = document.createElement('a');
+    linkIcon.href = `/#${figure.id}`;
+    linkIcon.target = '_blank';
+    linkIcon.style.marginLeft = '0.6em';
+    linkIcon.style.fontSize = '.5em';
+    linkIcon.textContent = '🔗';
+    labelEl.appendChild(linkIcon);
+}
 
-    let targetWindow;
-    if (isOptionKeyDown || !activeWindow) {
-        targetWindow = createDetailWindow(figureId);
-    } else {
-        targetWindow = activeWindow;
-    }
-
-    // 1. Assign ID and references
-    targetWindow.dataset.figureId = figureId;
-    const labelEl = targetWindow.querySelector('.detail-label');
-    const infoEl = targetWindow.querySelector('.detail-info');
-    const imageDiv = targetWindow.querySelector('.detail-image');
-
-    // 2. Populate Header
-    if (labelEl) {
-        labelEl.textContent = figure.label || figure.id;
-        const linkIcon = document.createElement('a');
-        linkIcon.href = `/#${figure.id}`;
-        linkIcon.target = '_blank';
-        linkIcon.style.marginLeft = '0.6em';
-        linkIcon.style.fontSize = '.5em';
-        linkIcon.textContent = '🔗';
-        labelEl.appendChild(linkIcon);
-    }
-
-    // 3. Build and set main metadata content
+function renderFigureMetadata(infoEl, figure) {
+    if (!infoEl) return;
     let html = '';
     if (figure.cultureLabel) {
         const cult = figure.cultureDescribedBy
@@ -846,19 +816,16 @@ async function showFigureDetails(figureId) {
     }
     if (figure.inModernCountry) html += `<p><strong>Modern Country:</strong> ${figure.inModernCountry}</p>`;
     if (figure.materialNote) html += `<p><strong>Material:</strong> ${figure.materialNote}</p>`;
-
     if (figure.date !== null) html += `<p><strong>Date:</strong> ${formatDateForDisplay(figure.date)}</p>`;
     else if (figure.approximateDate !== null) html += `<p><strong>Approx. Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
-
     if (figure.earliestDate !== null) {
         const end = figure.latestDate !== null ? ` to ${formatDateForDisplay(figure.latestDate)}` : '';
         html += `<p><strong>Date Range:</strong> ${formatDateForDisplay(figure.earliestDate)}${end}</p>`;
     }
     if (figure.note) html += `<p><strong>Note:</strong> ${figure.note}</p>`;
-    if (infoEl) infoEl.innerHTML = html;
+    infoEl.innerHTML = html;
 
-    // 4. Append 'More' links as chips
-    if (figure.describedBy && figure.describedBy.length > 0 && infoEl) {
+    if (figure.describedBy && figure.describedBy.length > 0) {
         const chipRow = document.createElement('div');
         chipRow.className = 'link-chips';
         figure.describedBy.forEach(url => {
@@ -872,7 +839,7 @@ async function showFigureDetails(figureId) {
                 a.target = '_blank';
                 a.rel = 'noopener noreferrer';
                 const icon = document.createElement('span');
-                icon.textContent = '↗'; // ↗
+                icon.textContent = '↗';
                 icon.setAttribute('aria-hidden', 'true');
                 a.appendChild(icon);
             }
@@ -880,38 +847,48 @@ async function showFigureDetails(figureId) {
         });
         infoEl.appendChild(chipRow);
     }
+}
 
-    // 5. Populate image container
-    if (imageDiv) {
-        imageDiv.innerHTML = '';
-        const detailImg = document.createElement('img');
+function renderFigureImage(imageDiv, figure) {
+    if (!imageDiv) return;
+    imageDiv.innerHTML = '';
+    const detailImg = document.createElement('img');
+    detailImg.src = "/thumbnails/" + figure.id + ".png";
+    detailImg.addEventListener('mouseover', () => {
+        detailImg.src = "/large/" + figure.id + ".png";
+        detailImg.style.width = '100%';
+        imageDiv.style.paddingTop = '0';
+    });
+    detailImg.addEventListener('mouseout', () => {
         detailImg.src = "/thumbnails/" + figure.id + ".png";
-        detailImg.addEventListener('mouseover', () => {
-            detailImg.src = "/large/" + figure.id + ".png";
-            detailImg.style.width = '100%';
-            imageDiv.style.paddingTop = '0';
-        });
-        detailImg.addEventListener('mouseout', () => {
-            detailImg.src = "/thumbnails/" + figure.id + ".png";
-            detailImg.style.width = 'auto';
-            imageDiv.style.paddingTop = '';
-        });
+        detailImg.style.width = 'auto';
+        imageDiv.style.paddingTop = '';
+    });
+    const detailA = document.createElement('a');
+    detailA.setAttribute('title', "Click for Google Image Search");
+    detailA.appendChild(detailImg);
+    imageDiv.appendChild(detailA);
 
-        const detailA = document.createElement('a');
-        detailA.setAttribute('title', "Click for Google Image Search");
-        detailA.appendChild(detailImg);
-        imageDiv.appendChild(detailA);
+    (async () => {
+        let searchImgUrl = figure.thumbnailURL;
+        if (!searchImgUrl && figure.wikipediaImagePage) {
+            searchImgUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 200);
+        }
+        detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(searchImgUrl || "")}`;
+    })();
+}
 
-        (async () => {
-            let searchImgUrl = figure.thumbnailURL;
-            if (!searchImgUrl && figure.wikipediaImagePage) {
-                searchImgUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 200);
-            }
-            detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(searchImgUrl || "")}`;
-        })();
-    }
+async function showFigureDetails(figureId) {
+    const figure = figuresDict[figureId];
+    if (!figure) return;
 
-    // 6. Synchronize UI highlights and focus
+    const targetWindow = (isOptionKeyDown || !activeWindow) ? createDetailWindow(figureId) : activeWindow;
+    targetWindow.dataset.figureId = figureId;
+
+    renderFigureHeader(targetWindow.querySelector('.detail-label'), figure);
+    renderFigureMetadata(targetWindow.querySelector('.detail-info'), figure);
+    renderFigureImage(targetWindow.querySelector('.detail-image'), figure);
+
     setActiveWindow(targetWindow);
     try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) {}
 }
@@ -1053,6 +1030,7 @@ async function loadAndDisplayFigures($rdf) {
                         leafletMap.invalidateSize();
                     }
                     renderFiguresOnMap(currentSortedIndex);
+                    renderGallery();
 
                     // Highlight current figure without zooming in — keep the world view.
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
@@ -1642,7 +1620,7 @@ function startPlayback() {
     playBtn.textContent = '⏸️';
     playBtn.dataset.playing = "true";
 
-    figures = currentSortedIndex ;
+    let figures = currentSortedIndex;
 
     // Start from the current figure if available
     let startIndex = 0;
@@ -1654,7 +1632,7 @@ function startPlayback() {
     // override if map
     if (currentTab == "figure-map") {
         startIndex = 0;
-        visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers)
+        const visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
         figures = sortFigures(visibleMarkers, 'date');
     }
 
@@ -1794,9 +1772,9 @@ function renderKeywordSearch() {
         }
     });
 
-    kwCombined = makeFiguresKWDocsArray() ;
-    figuresKWArray = kwCombined['array'] ;
-    figuresKWDict = kwCombined['dictionary'] ;
+    const kwCombined = makeFiguresKWDocsArray();
+    const figuresKWArray = kwCombined['array'];
+    figuresKWDict = kwCombined['dictionary'];
 
     miniSearch.addAll(figuresKWArray);
 
@@ -1959,7 +1937,7 @@ function zoomToKeywordHighlightedFigures() {
 
 function renderGallery() {
 
-            visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) ;
+            const visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
             galleryDiv = document.getElementById('gallery') ;
             galleryDiv.innerHTML = "" ;
             visibleMarkers.forEach(function(figureId, index) {
@@ -2168,12 +2146,12 @@ function updateMarkerColors(figuresArray) {
 
     const validFigures = ids
         .map(id => figuresDict[id])
-        .filter(f => f && (f.earliestDate != null || f.date != null || f.approximateDate != null));
+        .filter(f => f && getFigureStart(f) != null);
 
     if (validFigures.length === 0) return;
 
-    const minDate = Math.min(...validFigures.map(f => f.earliestDate ?? f.date ?? f.approximateDate));
-    const maxDate = Math.max(...validFigures.map(f => f.latestDate ?? f.date ?? f.approximateDate));
+    const minDate = Math.min(...validFigures.map(getFigureStart));
+    const maxDate = Math.max(...validFigures.map(getFigureEnd));
 
     // Guard: avoid division by zero, timelineScale already guards but keep defensive
     if (!isFinite(minDate) || !isFinite(maxDate) || minDate === maxDate) return;
@@ -2187,7 +2165,7 @@ function updateMarkerColors(figuresArray) {
         if (!inner) return;
 
         const figure = figuresDict[figureId];
-        const date = figure ? (figure.earliestDate ?? figure.date ?? figure.approximateDate) : null;
+        const date = figure ? getFigureStart(figure) : null;
         let color = 'rgb(128,128,128)'; // fallback neutral
         if (date !== null && !isNaN(date)) {
             const scale = timelineScale(date, minDate, maxDate);
@@ -2205,10 +2183,10 @@ function updateMarkerColors(figuresArray) {
 function getTimescaleRange() {
     // Prefer the currently-sorted index range, otherwise fall back to all figures
     const ids = Array.isArray(currentSortedIndex) && currentSortedIndex.length > 0 ? currentSortedIndex : Object.keys(figuresDict || {});
-    const valid = ids.map(id => figuresDict[id]).filter(f => f && (f.earliestDate != null || f.date != null || f.approximateDate != null));
+    const valid = ids.map(id => figuresDict[id]).filter(f => f && getFigureStart(f) != null);
     if (!valid || valid.length === 0) return [minYear, maxYear];
-    const minN = Math.min(...valid.map(f => f.earliestDate ?? f.date ?? f.approximateDate));
-    const maxN = Math.max(...valid.map(f => f.latestDate ?? f.date ?? f.approximateDate));
+    const minN = Math.min(...valid.map(f => getFigureStart(f)));
+    const maxN = Math.max(...valid.map(f => getFigureEnd(f)));
     if (!isFinite(minN) || !isFinite(maxN) || minN === maxN) return [minYear, maxYear];
     return [minN, maxN];
 }
@@ -2281,8 +2259,8 @@ function showTimescaleOverlay(bar, figureId, color, prefix, minN, maxN) {
             }
         }
 
-        let figStart = figuresDict[figureId].earliestDate ?? figuresDict[figureId].date ?? figuresDict[figureId].approximateDate;
-        let figEnd = figuresDict[figureId].latestDate ?? figuresDict[figureId].date ?? figuresDict[figureId].approximateDate;
+        let figStart = getFigureStart(figuresDict[figureId]);
+        let figEnd = getFigureEnd(figuresDict[figureId]);
         if (figStart == null || figEnd == null) return;
         figStart = Number(figStart); figEnd = Number(figEnd);
         if (!isFinite(figStart) || !isFinite(figEnd)) return;
