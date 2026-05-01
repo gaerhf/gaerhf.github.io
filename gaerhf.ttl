@@ -3325,7 +3325,7 @@
 
 :el-carambolo-astarte a :human-figure ;
    rdfs:label "Astarte of El Carambolo" ;
-   :described-by <https://en.wikipedia.org/wiki/Treasure_of_El_Carambolo> ;
+   :described-by <https://en.wikipedia.org/wiki/Treasure_of_El_Carambolo#Phoenician_statuette> ;
    :earliest-date -800 ;
    :latest-date -700 ;
    :material-note "Bronze" ;
@@ -3637,6 +3637,17 @@
    :representative-latlong-point (50.311235 9.017070) ; # ll for Glauberg, Germany
    :note "Mapped location is general for Glauberg, not specific for this figure." ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
+
+:pozo-moro-mausoleum a :group-of-human-figures ;
+   rdfs:label "Friezes on Mausoleum of Pozo Moro" ;
+   :described-by <https://en.wikipedia.org/wiki/Mausoleum_of_Pozo_Moro> ;
+   :earliest-date -525 ;
+   :latest-date -490 ;
+   :material-note "Stone" ;
+   :note "Summarized from Wikipedia: Iberian tower-tomb (c. 10 m high, on a three-level square pedestal 3.65 m wide), with four corner lions and relief panels including a banquet served by a two-headed monster, a hero confronting beasts, and other narrative scenes strongly influenced by Hittite and Syrian iconography. Found in 1970 near Chinchilla de Monte-Aragón (Albacete) and reassembled at the Museo Arqueológico Nacional, Madrid." ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (38.836389 -1.696667) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Madrid_Pozo_Moro_03.JPG> .
 
 :yue-kneeling-figure a :human-figure ;
    rdfs:label "Yue Kneeling Figure" ;
