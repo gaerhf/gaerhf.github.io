@@ -2565,6 +2565,18 @@
    :representative-latlong-point (18.455944 -9.417171) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Homme_muni_d’un_bâton,_et_vaches_à_robe_marquée_du_village_v.72.jpg> .
 
+:oukaimeden-anthropomorphs a :group-of-human-figures ;
+   rdfs:label "Anthropomorph Engravings of Oukaïmeden" ;
+   :described-by <https://africanrockart.britishmuseum.org/country/morocco/oukaimeden/> ,
+      <https://www.mdpi.com/2076-0752/2/1/35> ;
+   :earliest-date -2000 ;
+   :latest-date -500 ;
+   :material-note "Pecked and polished engraving on sandstone slabs" ;
+   :note "From BM website: “From the 2nd millennium BC onwards, animal depictions were replaced by images of weapons and warriors, showing a different, more violent way of reclaiming rights over pastures.”" ;
+   :in-modern-country-note "Morocco" ;
+   :representative-latlong-point (31.2052 -7.8623) ;
+   :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_11/11_13/8f7faea9_bfe4_45ba_b483_a3e000dec3a8/mid_01591370_001.jpg> , <https://africanrockart.britishmuseum.org/assets/images/site/2013_2034.5879.jpg> .
+
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
    :described-by <https://www.historymuseum.ca/collections/artifact/1295533> ;
@@ -3707,6 +3719,17 @@
    :representative-latlong-point (38.58 28.0072) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Britishmuseumbintepehorserelief_(cropped).jpg> .
 
+:warrior-double-cuirass a :human-figure ;
+   rdfs:label "Warrior of the Double Cuirass" ;
+   :described-by <https://es.wikipedia.org/wiki/Guerrero_de_la_doble_armadura> ;
+   :earliest-date -500 ;
+   :latest-date -450 ;
+   :material-note "Calcarenite (Santiago de Calatrava stone)" ;
+   :note "Summarized from Spanish Wikipedia: Aristocratic warrior in combat from the Cerrillo Blanco sculptural ensemble at Porcuna; the surviving fragment (105 × 17 × 32 cm) preserves head, torso, and parts of the left arm and right thigh, wearing two superimposed cuirasses and a helmet with crest in the form of a feline. The sword and circular shield (caetra) would have been held in the right and left hands. Now displayed at the Museo Íbero de Jaén." ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (37.869881 -4.184657) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Guerrero_de_la_doble_armadura_-_Museo_Ibero.jpg> .
+
 :phoenecian-apotropaic-mask a :human-figure ;
    rdfs:label "Phoenician Apotropaic Mask" ;
    :described-by <https://www.britishmuseum.org/collection/object/W_1856-1223-456> ;
@@ -4256,6 +4279,17 @@
    :note "Specific findspot not known. Object has been returned by Metropolitan Museum to India." ;
    :representative-latlong-point (25.6125 85.128333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MET_2001_588_Strm1_(vertical).jpg> .
+
+:bust-oso-de-porcuna a :human-figure ;
+   rdfs:label "Subsidiary Bust of the “Oso de Porcuna”" ;
+   :described-by <https://es.wikipedia.org/wiki/Oso_de_Porcuna> ;
+   :earliest-date -100 ;
+   :latest-date 0 ;
+   :material-note "Limestone" ;
+   :note "Summarized from Spanish Wikipedia: free-standing sculpture (79 × 70 × 32 cm) of a seated bear with its left forepaw raised and resting on a human head treated as a herm in the classical sense (a pillar surmounted by a human head. Found at Porcuna in 1926; held at the Museo Arqueológico Nacional, Madrid (MAN inv. 33195). Late Iberian / early Roman-period funerary sculpture." ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (37.869881 -4.184657) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Oso_ibero_de_Porcuna_(M.A.N._Inv.33195)_01.jpg> .
 
 :winged-figure-tillya-tepe a :human-figure ;
    rdfs:label "Winged Figure from Tillya Tepe" ;

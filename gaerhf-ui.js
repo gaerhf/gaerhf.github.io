@@ -8,8 +8,10 @@ const maxYear = 1500;     // Maximum year
 const SHIFT_HINT_HTML = `<div style="margin-top:5px;padding-top:4px;border-top:1px solid #ddd;font-size:0.72em;color:#999;font-style:italic;white-space:nowrap;">&#8679; Shift: open new window</div>`;
 
 // Image URL helpers — single source of truth for the thumbnails/large naming convention.
-const thumbnailUrl = (id) => `/thumbnails/${id}.png`;
-const largeUrl = (id) => `/large/${id}.png`;
+// Index 0 → <id>.png (backwards-compatible); index i>0 → <id>-<i>.png.
+// Ordering MUST match sources_by_subject in mk_thumbnails.py: imageSourceUrls first, wikimediaImagePages second.
+const thumbnailUrl = (id, index = 0) => index === 0 ? `/thumbnails/${id}.png` : `/thumbnails/${id}-${index}.png`;
+const largeUrl     = (id, index = 0) => index === 0 ? `/large/${id}.png`      : `/large/${id}-${index}.png`;
 
 // Marker icon factory — single source of truth for marker size, shape, and border.
 function makeMarkerIcon(color) {
@@ -275,9 +277,9 @@ async function buildFiguresInfoDict($rdf) {
                 // Extract all string/literal values consistently - no RDF nodes should reach figuresDict
                 const inModernCountry = tp.anyValue(subject, inModernCountryProp) || null;
                 const materialNote = tp.anyValue(subject, materialNoteProp) || null;
-                const wikipediaImagePage = tp.anyValue(subject, wikipediaImagePageProp) || null;
+                const imageSourceUrls = tp.each(subject, thumbnailImageProp).map(n => n.value);
+                const wikimediaImagePages = tp.each(subject, wikipediaImagePageProp).map(n => n.value);
                 const describedBy = tp.each(subject, describedByProp).map(val => val.value);
-                const thumbnailURL = tp.anyValue(subject, thumbnailImageProp) || null;
 
                 const latLongNode = tp.any(subject, latLongProp);
                 let representativeLatLongPoint = null;
@@ -310,8 +312,8 @@ async function buildFiguresInfoDict($rdf) {
                     cultureDescribedBy: cultureDescribedBy,  // string or null
                     materialNote: materialNote,  // string or null
                     inModernCountry: inModernCountry,  // string or null
-                    wikipediaImagePage: wikipediaImagePage,  // string or null
-                    thumbnailURL: thumbnailURL,  // string or null
+                    imageSourceUrls: imageSourceUrls,       // array of direct image URLs
+                    wikimediaImagePages: wikimediaImagePages, // array of Wikimedia Commons page URLs
                     representativeLatLongPoint: representativeLatLongPoint,  // [number, number] or null
                 };
             }));
@@ -830,33 +832,88 @@ function renderFigureMetadata(infoEl, figure) {
     }
 }
 
+// Returns ordered image descriptors matching mk_thumbnails.py's sources_by_subject order:
+// imageSourceUrls (direct) first, then wikimediaImagePages.
+function getImageSources(figure) {
+    const n = figure.imageSourceUrls.length;
+    return [
+        ...figure.imageSourceUrls.map((_, i) => ({ thumb: thumbnailUrl(figure.id, i), large: largeUrl(figure.id, i) })),
+        ...figure.wikimediaImagePages.map((_, i) => ({ thumb: thumbnailUrl(figure.id, n + i), large: largeUrl(figure.id, n + i) })),
+    ];
+}
+
 function renderFigureImage(imageDiv, figure) {
     if (!imageDiv) return;
     imageDiv.innerHTML = '';
-    const detailImg = document.createElement('img');
-    detailImg.src = thumbnailUrl(figure.id);
-    detailImg.addEventListener('mouseover', () => {
-        detailImg.src = largeUrl(figure.id);
-        detailImg.style.width = '100%';
-        imageDiv.style.paddingTop = '0';
-    });
-    detailImg.addEventListener('mouseout', () => {
-        detailImg.src = thumbnailUrl(figure.id);
-        detailImg.style.width = 'auto';
-        imageDiv.style.paddingTop = '';
-    });
+
+    const sources = getImageSources(figure);
+    if (sources.length === 0) return;
+
+    let currentIndex = 0;
+
+    const img = document.createElement('img');
     const detailA = document.createElement('a');
-    detailA.setAttribute('title', "Click for Google Image Search");
-    detailA.appendChild(detailImg);
+    detailA.title = 'Click for Google Image Search';
+    detailA.appendChild(img);
     imageDiv.appendChild(detailA);
 
-    (async () => {
-        let searchImgUrl = figure.thumbnailURL;
-        if (!searchImgUrl && figure.wikipediaImagePage) {
-            searchImgUrl = await getWikimediaImageUrl(figure.wikipediaImagePage, 200);
+    // Mouseover handlers read currentIndex at event time so they work across carousel navigation.
+    img.addEventListener('mouseover', () => {
+        img.src = sources[currentIndex].large;
+        img.style.width = '100%';
+        imageDiv.style.paddingTop = '0';
+    });
+    img.addEventListener('mouseout', () => {
+        img.src = sources[currentIndex].thumb;
+        img.style.width = 'auto';
+        imageDiv.style.paddingTop = '';
+    });
+
+    // Lens URLs: direct sources are known immediately; Wikimedia pages resolve async.
+    const lensUrls = [
+        ...figure.imageSourceUrls,
+        ...figure.wikimediaImagePages.map(() => null),
+    ];
+    figure.wikimediaImagePages.forEach(async (page, i) => {
+        const url = await getWikimediaImageUrl(page, 200);
+        const idx = figure.imageSourceUrls.length + i;
+        lensUrls[idx] = url;
+        if (currentIndex === idx) {
+            detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(url || '')}`;
         }
-        detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(searchImgUrl || "")}`;
-    })();
+    });
+
+    let prevBtn, nextBtn, counter;
+
+    function showImage(index) {
+        currentIndex = index;
+        img.src = sources[index].thumb;
+        detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(lensUrls[index] || '')}`;
+        if (sources.length > 1) {
+            counter.textContent = `${index + 1} / ${sources.length}`;
+            prevBtn.style.visibility = index > 0 ? 'visible' : 'hidden';
+            nextBtn.style.visibility = index < sources.length - 1 ? 'visible' : 'hidden';
+        }
+    }
+
+    if (sources.length > 1) {
+        const nav = document.createElement('div');
+        nav.className = 'carousel-nav';
+        prevBtn = document.createElement('button');
+        prevBtn.className = 'carousel-btn';
+        prevBtn.textContent = '◀';
+        prevBtn.addEventListener('click', () => { if (currentIndex > 0) showImage(currentIndex - 1); });
+        counter = document.createElement('span');
+        counter.className = 'carousel-counter';
+        nextBtn = document.createElement('button');
+        nextBtn.className = 'carousel-btn';
+        nextBtn.textContent = '▶';
+        nextBtn.addEventListener('click', () => { if (currentIndex < sources.length - 1) showImage(currentIndex + 1); });
+        nav.append(prevBtn, counter, nextBtn);
+        imageDiv.appendChild(nav);
+    }
+
+    showImage(0);
 }
 
 async function showFigureDetails(figureId) {
