@@ -108,6 +108,45 @@ body {
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     padding: 0;
+    transition: background-color 0.22s ease;
+}
+
+/* When hovering the gallery, make the window frame translucent by fading its
+   background-color. The image element has no background-color of its own, so
+   it stays fully opaque and pops against the transparent frame. Using
+   background-color (not opacity) is the only CSS-correct way to make a child
+   appear more opaque than its parent container. */
+body.gallery-hovered .detail-window {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+body.gallery-hovered .detail-window .figure-details-wrapper {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+body.gallery-hovered .detail-window .detail-label-container {
+    background-color: rgba(25, 118, 210, 0.35);
+}
+
+body.gallery-hovered .detail-window.active-window .detail-label-container {
+    background-color: rgba(204, 121, 167, 0.35);
+}
+
+/* Restore full backgrounds for windows opened via gallery click (3-second grace period) */
+body.gallery-hovered .detail-window.recently-opened {
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+body.gallery-hovered .detail-window.recently-opened .figure-details-wrapper {
+    background-color: #fff;
+}
+
+body.gallery-hovered .detail-window.recently-opened .detail-label-container {
+    background-color: #1976d2;
+}
+
+body.gallery-hovered .detail-window.active-window.recently-opened .detail-label-container {
+    background-color: #CC79A7;
 }
 
 .detail-window.active-window {
@@ -128,6 +167,7 @@ body {
     overflow-y: auto;
     flex: 1;
     gap: 12px;
+    transition: background-color 0.22s ease;
 }
 
 .resizer { position: absolute; z-index: 10001; }
@@ -148,6 +188,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     color: white;
+    transition: background-color 0.22s ease;
 }
 
 .detail-window.active-window .detail-label-container {
@@ -765,6 +806,7 @@ body {
     white-space: normal;
     max-width: 196px;
     line-height: 1.25;
+    transition: opacity 0.22s ease;
 }
 
 .leaflet-tooltip.popup-like .popup-card {

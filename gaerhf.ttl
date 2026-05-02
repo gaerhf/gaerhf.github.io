@@ -3701,6 +3701,19 @@
    :representative-latlong-point (44.554887 80.882147) ;
    :thumbnail-image <https://english.news.cn/20250527/78f909d4820b47f28a2a0b32406af62d/3d866704c5804302a5e316daeba63eac.jpg> .
 
+:aphaia-west-pediment a :group-of-human-figures ;
+   rdfs:label "West Pediment of the Temple of Aphaia, Aegina" ;
+   :described-by <https://en.wikipedia.org/wiki/Temple_of_Aphaia#Western_pediment> ,
+      <https://smarthistory.org/east-and-west-pediments-from-the-temple-of-aphaia-aegina/> ;
+   :earliest-date -500 ;
+   :latest-date -490 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Parian marble" ;
+   :note "From Wikipedia: “Both the west (earlier, about 490 BC) and the east (later, about 480 BC) had Athena at the centre of a fight at Troy. The west pediment depicts the ‘second’ sack of Troy by the Achaeans led by Agamemnon; the east, a sack a generation earlier led by Herakles ... Each pediment had Athena at the centre, with groups of combatants, fallen warriors, and arms filling the decreasing angles of the pediments.”" ;
+   :representative-latlong-point (37.754722 23.533333) ; # Temple of Aphaia, Aegina (find-spot)
+   # :art-historical-culture-or-tradition :archaic-greece ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Panorama_of_the_west_pediment_of_the_temple_of_Aphaia_in_the_Glyptothek_Munich_n1.jpg> .
+
 :tomb-diver a :group-of-human-figures ;
    rdfs:label "Tomb of the Diver" ;
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_the_Diver> ;
@@ -3892,6 +3905,19 @@
    :in-modern-country-note "Nicaragua or Costa Rica" ;
    :representative-latlong-point (10.899020 -85.414379) ;
    :thumbnail-image <https://ka-perseus-images.s3.amazonaws.com/72dd66a8ce1bee581bec8c170f858185d8e25fc6.jpg> .
+
+:aphaia-east-pediment a :group-of-human-figures ;
+   rdfs:label "East Pediment of the Temple of Aphaia, Aegina" ;
+   :described-by <https://en.wikipedia.org/wiki/Temple_of_Aphaia#Eastern_pediment> ,
+      <https://smarthistory.org/east-and-west-pediments-from-the-temple-of-aphaia-aegina/> ;
+   :earliest-date -490 ;
+   :latest-date -480 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Parian marble" ;
+   :note "From Wikipedia: “The east pediment depicts the first Trojan War, not the one described by Homer but the war of Heracles against the king of Troy Laomedon, with Telamon figuring prominently as he fights alongside Heracles against king Laomedon. The Goddess stands in the center of the gable, overseeing the battle that rages on either side. ... This pediment is thought to be later than the west pediment and shows a number of features appropriate to the Classical period: the statues show a dynamic posture especially in the case of Athena, chiastic composition, and intricate filling of the space using the legs of fallen combatants to fill the difficult decreasing angles of the pediment.”" ;
+   :representative-latlong-point (37.754722 23.533333) ; # Temple of Aphaia, Aegina (find-spot)
+   :art-historical-culture-or-tradition :archaic-greece ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_east_pediment_of_the_Temple_of_Aphaia,_ca._505–500_BC,_Glyptothek,_Munich_(41606793432).jpg> .
 
 :tomb-darius-i a :group-of-human-figures ;
    rdfs:label "Tomb of Darius I" ;

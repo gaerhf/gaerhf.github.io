@@ -980,12 +980,20 @@ async function renderFigureImage(imageDiv, figure) {
     showImage(0);
 }
 
-async function showFigureDetails(figureId) {
+async function showFigureDetails(figureId, { markAsRecent = false } = {}) {
     const figure = figuresDict[figureId];
     if (!figure) return;
 
     const targetWindow = (isShiftKeyDown || !activeWindow) ? createDetailWindow(figureId) : activeWindow;
     targetWindow.dataset.figureId = figureId;
+
+    if (markAsRecent) {
+        clearTimeout(targetWindow._recentOpenTimer);
+        targetWindow.classList.add('recently-opened');
+        targetWindow._recentOpenTimer = setTimeout(() => {
+            targetWindow.classList.remove('recently-opened');
+        }, 3000);
+    }
 
     renderFigureHeader(targetWindow.querySelector('.detail-label'), figure);
     renderFigureMetadata(targetWindow.querySelector('.detail-info'), figure);
@@ -1271,6 +1279,11 @@ document.addEventListener('keydown', (event) => {
         highlightMapFigure(targetFigureId);
         highlightGalleryFigure(targetFigureId);
 
+        Object.values(leafletMarkers).forEach(m => {
+            clearTimeout(m._hoverCloseTimer);
+            m._hoverCloseTimer = null;
+            try { m.closeTooltip(); } catch {}
+        });
         if (leafletMarkers[targetFigureId]) {
             openAdaptivePopup(leafletMarkers[targetFigureId], markerLabelContent(targetFigureId));
         }
@@ -1281,6 +1294,14 @@ document.addEventListener('keydown', (event) => {
 // Tab functionality for the UI
 // Ensure the DOM is fully loaded before attaching event listeners
 document.addEventListener('DOMContentLoaded', () => {
+    // Fade all open info windows while the user hovers the gallery strip so
+    // thumbnails stay readable even when a popup overlaps from below.
+    const galleryContainer = document.getElementById('gallery-container');
+    if (galleryContainer) {
+        galleryContainer.addEventListener('mouseenter', () => document.body.classList.add('gallery-hovered'));
+        galleryContainer.addEventListener('mouseleave', () => document.body.classList.remove('gallery-hovered'));
+    }
+
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
     const playBtn = document.getElementById('play-btn');
@@ -2087,7 +2108,7 @@ function renderGallery() {
             highlightGalleryFigure(figureId);
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
             try { leafletMarkers[figureId].closeTooltip(); } catch { }
-            showFigureDetails(figureId);
+            showFigureDetails(figureId, { markAsRecent: true });
         });
 
         galleryDiv.appendChild(galleryImg);
