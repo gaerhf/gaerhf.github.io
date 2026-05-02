@@ -3918,6 +3918,18 @@
    :representative-latlong-point (10.899020 -85.414379) ;
    :thumbnail-image <https://ka-perseus-images.s3.amazonaws.com/72dd66a8ce1bee581bec8c170f858185d8e25fc6.jpg> .
 
+:plain-of-jars-frogman a :human-figure ;
+   rdfs:label "Plain of Jars Frogman Carving" ;
+   :described-by <https://en.wikipedia.org/wiki/Plain_of_Jars> ,
+      <https://www.waymarking.com/waymarks/WMF2MY_The_Frogman_Plain_of_JarsPhonsavan_City_Xiengkhouang_Province_Laos> ;
+   :earliest-date -500 ;
+   :latest-date 500 ;
+   :in-modern-country-note "Laos" ;
+   :material-note "Sandstone" ;
+   :note "From Wikipedia: “Of the jars, only one jar has been found with iconography carved into it. The stone jars are undecorated, with the exception of a single jar at Site 1. This jar has a human ‘frogman’ bas-relief carved on the exterior.” Parallels have been drawn with the rock paintings at Huashan in Guangxi, China (ca. 500 BCE – 200 CE)." ;
+   :representative-latlong-point (19.430639 103.154256) ;
+   :thumbnail-image <https://img.geocaching.com/waymarking/large/ffdf15d2-4d98-475c-a241-b4b3c158b08a.jpg> .
+
 :aphaia-east-pediment a :group-of-human-figures ;
    rdfs:label "East Pediment of the Temple of Aphaia, Aegina" ;
    :described-by <https://en.wikipedia.org/wiki/Temple_of_Aphaia#Eastern_pediment> ,
