@@ -3622,6 +3622,18 @@
    :representative-latlong-point (48.639167 9.010833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Holzgerlingen,_Googles_Arts_%26_Culture_(cropped).png> .
 
+:gorgon-pediment-corfu a :group-of-human-figures ;
+   rdfs:label "Gorgon Pediment, Temple of Artemis, Corfu" ;
+   :described-by <https://en.wikipedia.org/wiki/Temple_of_Artemis,_Corfu#Pediment_details> ;
+   :approximate-date -580 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Limestone" ;
+   :note "From Wikipedia: “Behind the seated figure, on its left, lies a bearded figure of a dead warrior, facing outward from the pediment. Behind the leopard to the right, two figures are shown. The standing figure closest to the leopard is believed to be Zeus who is depicted in partial profile wielding a thunderbolt against another figure, which faces outward from the pediment. The figure is presented with a beard and is kneeling. To the right of these figures, another relief of a dead warrior is believed to have existed.”" ;
+   :representative-latlong-point (39.60712 19.91809) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Titanomachy_at_the_Gorgon_pediment_at_Artemis_Temple_in_the_Corfu_museum.jpg> ,
+    <https://commons.wikimedia.org/wiki/File:Corpse_and_seated_figure_at_the_Artemis_Temple_pediment_in_Corfu.jpg> ,
+    <https://commons.wikimedia.org/wiki/File:West_Pediment_from_the_Temple_of_Artemis_in_Corfu.jpg> .
+
 :ushabti-neferibresaneith a :human-figure ;
    rdfs:label "Ushabti for Neferibresaneith" ;
    :described-by <https://www.getty.edu/art/collection/object/1143JJ> ,
