@@ -364,7 +364,10 @@
    :note "Adapted from Wikipedia: “ ... a ceramic statuette of a nude female figure dated to 31,000–27,000 years ago (Gravettian industry). It was found at the Paleolithic site Dolní Věstonice in the Moravian basin south of Brno, at the base of Děvín Mountain in what is today the Czech Republic.”" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (48.877778 16.652222) ; # ll for Dolní Věstonice
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vestonicka_venuse_edit.jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vestonicka_venuse_edit.jpg> , 
+   <https://commons.wikimedia.org/wiki/File:Vestonicka_venuse_left.jpg> ,
+   <https://commons.wikimedia.org/wiki/File:Vestonicka_venuse_back.jpg> ,
+   <https://commons.wikimedia.org/wiki/File:Vestonicka_venuse_right.jpg> .
 
 :willendorf-figurine a :human-figure ;
    rdfs:label "Female Figurine from Willendorf" ;

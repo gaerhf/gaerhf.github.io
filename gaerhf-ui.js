@@ -955,8 +955,8 @@ async function renderFigureImage(imageDiv, figure) {
         detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(lensUrls[index] || '')}`;
         if (sources.length > 1) {
             counter.textContent = `${index + 1} / ${sources.length}`;
-            prevBtn.style.visibility = index > 0 ? 'visible' : 'hidden';
-            nextBtn.style.visibility = index < sources.length - 1 ? 'visible' : 'hidden';
+            prevBtn.style.visibility = 'visible';
+            nextBtn.style.visibility = 'visible';
         }
     }
 
@@ -966,13 +966,13 @@ async function renderFigureImage(imageDiv, figure) {
         prevBtn = document.createElement('button');
         prevBtn.className = 'carousel-btn';
         prevBtn.textContent = '◀';
-        prevBtn.addEventListener('click', () => { if (currentIndex > 0) showImage(currentIndex - 1); });
+        prevBtn.addEventListener('click', () => { showImage((currentIndex - 1 + sources.length) % sources.length); });
         counter = document.createElement('span');
         counter.className = 'carousel-counter';
         nextBtn = document.createElement('button');
         nextBtn.className = 'carousel-btn';
         nextBtn.textContent = '▶';
-        nextBtn.addEventListener('click', () => { if (currentIndex < sources.length - 1) showImage(currentIndex + 1); });
+        nextBtn.addEventListener('click', () => { showImage((currentIndex + 1) % sources.length); });
         nav.append(prevBtn, counter, nextBtn);
         imageDiv.appendChild(nav);
     }
