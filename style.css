@@ -192,6 +192,11 @@ body {
     width: 100%;
     padding-top: 10px;
     box-sizing: border-box;
+    text-align: center;
+}
+
+.detail-image a {
+    display: inline-block;
 }
 
 .detail-image img {
@@ -202,8 +207,13 @@ body {
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     object-fit: contain;
-    transition: width 0.2s ease-in-out, max-height 0.2s ease-in-out;
+    transition: opacity 0.16s ease, filter 0.16s ease;
     margin: 0 auto;
+}
+
+.detail-image img.is-swapping {
+    opacity: 0.78;
+    filter: saturate(0.94);
 }
 
 /* Carousel navigation */
@@ -239,8 +249,7 @@ body {
 }
 
 /* Modal styles */
-.site-modal {
-    display: none;
+.gaerhf-site-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -250,7 +259,11 @@ body {
     z-index: 30000;
 }
 
-.modal-content {
+.gaerhf-site-modal[hidden] {
+    display: none !important;
+}
+
+.gaerhf-modal-content {
     position: relative;
     background-color: #fff;
     margin: 2vh auto;
@@ -263,7 +276,7 @@ body {
     overflow: hidden;
 }
 
-.modal-header {
+.gaerhf-modal-header {
     background-color: #f1f1f1;
     padding: 10px 20px;
     display: flex;
@@ -272,7 +285,7 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-.modal-body {
+.gaerhf-modal-body {
     flex: 1;
     background-color: #fff;
 }
@@ -283,11 +296,11 @@ body {
     border: none;
 }
 
-.modal-btn { padding: 6px 16px; cursor: pointer; background-color: #5cb85c; color: white; border: none; border-radius: 4px; font-weight: bold; font-size: 0.95em; }
-.modal-btn:hover { background-color: #4cae4c; }
+.gaerhf-modal-btn { padding: 6px 16px; cursor: pointer; background-color: #5cb85c; color: white; border: none; border-radius: 4px; font-weight: bold; font-size: 0.95em; }
+.gaerhf-modal-btn:hover { background-color: #4cae4c; }
 
-.modal-close-btn { background: none; border: none; font-size: 2.5em; cursor: pointer; color: #555; line-height: 1; }
-.modal-close-btn:hover { color: #d9534f; }
+.gaerhf-modal-close-btn { background: none; border: none; font-size: 2.5em; cursor: pointer; color: #555; line-height: 1; }
+.gaerhf-modal-close-btn:hover { color: #d9534f; }
 
 .detail-image img:hover {
     max-height: 70vh;
@@ -740,23 +753,66 @@ body {
 }
 
 /* Popup pane above everything */
-.leaflet-popup-pane {
-    z-index: 20000 !important;
-}
-
-/* Tooltip pane should also be above to ensure below-marker callouts are visible */
 .leaflet-tooltip-pane { z-index: 20000 !important; }
 
-/* Style tooltip to look like popup when used as adaptive callout */
 .leaflet-tooltip.popup-like {
     background: #fff;
     color: #000;
     border: 1px solid rgba(0,0,0,0.3);
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    padding: 6px 8px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    padding: 8px 10px;
     white-space: normal;
-    max-width: 220px;
+    max-width: 196px;
+    line-height: 1.25;
+}
+
+.leaflet-tooltip.popup-like .popup-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+}
+
+.leaflet-tooltip.popup-like .popup-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1f1f1f;
+}
+
+.leaflet-tooltip.popup-like .popup-thumb-frame {
+    width: 96px;
+    height: 116px;
+    margin: 0 auto;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #fcfcfc 0%, #f2f2f2 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leaflet-tooltip.popup-like .popup-thumb {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+.leaflet-tooltip.popup-like .popup-hint {
+    margin-top: 1px;
+    padding-top: 5px;
+    border-top: 1px solid #e6e6e6;
+    font-size: 10px;
+    color: #8b8b8b;
+    font-style: italic;
+    white-space: nowrap;
 }
 
 #figure-map-scale {

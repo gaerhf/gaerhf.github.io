@@ -5,7 +5,7 @@ const headerContainer = document.getElementById('header-container');
 const minYear = -50000; // Minimum year
 const maxYear = 1500;     // Maximum year
 
-const SHIFT_HINT_HTML = `<div style="margin-top:5px;padding-top:4px;border-top:1px solid #ddd;font-size:0.72em;color:#999;font-style:italic;white-space:nowrap;">&#8679; Shift: open new window</div>`;
+const SHIFT_HINT_HTML = `<div class="popup-hint">&#8679; Shift: open new window</div>`;
 
 // Image URL helpers — single source of truth for the thumbnails/large naming convention.
 // Index 0 → <id>.png (backwards-compatible); index i>0 → <id>-<i>.png.
@@ -18,9 +18,9 @@ function makeMarkerIcon(color) {
     return L.divIcon({
         className: 'custom-gray-marker',
         iconSize: [10, 10],
-        iconAnchor: [6, 6],
-        popupAnchor: [0, -6],
-        html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
+        iconAnchor: [5, 5],
+        tooltipAnchor: [0, -5],  // tip points to the top-center of the 10px marker
+        html: `<div style="width:10px;height:10px;box-sizing:border-box;transform-origin:center center;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
     });
 }
 
@@ -73,59 +73,75 @@ function openSiteModal(url) {
     if (!modal || !iframe || !goBtn) return;
     iframe.src = url;
     goBtn.onclick = () => window.open(url, '_blank');
-    modal.style.display = 'block';
+    modal.hidden = false;
 }
 
 function closeSiteModal() {
     const modal = document.getElementById('site-modal');
     const iframe = document.getElementById('modal-iframe');
-    if (modal) modal.style.display = 'none';
-    if (iframe) iframe.src = '';
+    if (modal) modal.hidden = true;
+    if (iframe) iframe.removeAttribute('src');
 }
 
-// Helper: open callout with adaptive behavior
-// Note: Leaflet's 'direction' option is for Tooltips (not Popups).
-// We use a tooltip styled like a popup when near the top, otherwise a normal popup.
+// Open a marker callout using a Leaflet Tooltip (direction-aware, no auto-pan).
+// 'top' when the marker has room above; 'bottom' when near the map's top edge.
 function openAdaptivePopup(marker, content) {
     if (!leafletMap || !marker) return;
-    try {
-        const pt = leafletMap.latLngToContainerPoint(marker.getLatLng());
-        const topThreshold = 300; // px from top to trigger below placement
+    const pt = leafletMap.latLngToContainerPoint(marker.getLatLng());
+    const mapSize = leafletMap.getSize();
+    const topThreshold = Math.max(140, Math.floor(mapSize.y * 0.28));
+    const direction = pt.y < topThreshold ? 'bottom' : 'top';
+    marker.unbindTooltip();
+    marker.unbindPopup();
+    marker.bindTooltip(content, {
+        direction,
+        offset: direction === 'bottom' ? [0, 10] : [0, 10],
+        opacity: 1,
+        permanent: false,
+        sticky: false,
+        interactive: false,
+        className: 'popup-like'
+    });
+    marker.openTooltip();
 
-        // Always ensure popup is bound for the normal case
-        marker.unbindPopup();
-        marker.bindPopup(content, { offset: [0, -6], autoPan: false });
+    // Tooltips with images can grow after open; force a position/layout refresh
+    // when media resolves so the tip stays anchored to the marker.
+    const tooltip = marker.getTooltip && marker.getTooltip();
+    const refreshTooltipPosition = () => {
+        try { tooltip && tooltip.update && tooltip.update(); } catch { }
+    };
 
-        if (pt.y < topThreshold) {
-            // Near top: use a tooltip that appears below the marker
-            // Close any popup that might be open
-            try { marker.closePopup(); } catch { }
-            // Rebind tooltip with bottom direction
-            marker.unbindTooltip();
-            marker.bindTooltip(content, {
-                direction: 'bottom',
-                offset: [0, 10],
-                opacity: 1,
-                permanent: false,
-                sticky: false,
-                interactive: true,
-                className: 'popup-like'
-            });
-            marker.openTooltip();
-        } else {
-            // Normal case: open actual popup above marker
-            marker.unbindTooltip();
-            marker.openPopup();
-        }
-    } catch (err) {
-        // Fallback to standard behavior
-        try {
-            marker.unbindTooltip();
-            marker.unbindPopup();
-            marker.bindPopup(content, { autoPan: false });
-            marker.openPopup();
-        } catch (e) { /* ignore */ }
-    }
+    requestAnimationFrame(refreshTooltipPosition);
+    requestAnimationFrame(refreshTooltipPosition);
+
+    const tooltipEl = tooltip && tooltip.getElement ? tooltip.getElement() : null;
+    if (!tooltipEl) return;
+
+    tooltipEl.querySelectorAll('img').forEach((img) => {
+        if (img.complete) return;
+        img.addEventListener('load', refreshTooltipPosition, { once: true });
+        img.addEventListener('error', refreshTooltipPosition, { once: true });
+    });
+}
+
+function markerLabelContent(figureId) {
+    const f = figuresDict[figureId];
+    return f ? buildPopupContent(f.label || f.id) : '';
+}
+
+function buildPopupContent(label, options = {}) {
+    const { figureId = null, showImage = false, showHint = false } = options;
+    const imageHtml = showImage && figureId
+        ? `<div class="popup-thumb-frame"><img class="popup-thumb" src="${thumbnailUrl(figureId)}" loading="lazy" alt=""></div>`
+        : '';
+
+    return `
+        <div class="popup-card">
+            <div class="popup-title">${label}</div>
+            ${imageHtml}
+            ${showHint ? SHIFT_HINT_HTML : ''}
+        </div>
+    `;
 }
 
 // Convenience functions
@@ -724,26 +740,27 @@ function renderFiguresOnMap(figuresArray) {
         const icon = makeMarkerIcon(color);
 
         const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
-        marker.bindPopup(`<strong>${figure.label || figure.id}</strong>`);
         marker.on('click', () => {
             highlightMapFigure(figureId);
             highlightGalleryFigure(figureId);
             showFigureDetails(figureId);
-            clickContent = `<strong>${figure.label || figure.id}</strong>`;
+            clickContent = buildPopupContent(figure.label || figure.id);
             openAdaptivePopup(marker, clickContent);
         });
         marker.on('mouseover', () => {
-            mouseOverContent = `<strong>${figure.label || figure.id}</strong><div><img style="max-width:75px;max-height:150px" src="${thumbnailUrl(figure.id)}" loading="lazy"></div>${SHIFT_HINT_HTML}`;
+            mouseOverContent = buildPopupContent(figure.label || figure.id, {
+                figureId: figure.id,
+                showImage: true,
+                showHint: true,
+            });
             openAdaptivePopup(marker, mouseOverContent);
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
 
         marker.on('mouseout', () => {
-            // Hide hover overlay immediately and close popup after a short delay
             try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
             marker._hoverCloseTimer = setTimeout(() => {
-                try { marker.closePopup(); } catch { }
-                try { marker.closeTooltip && marker.closeTooltip(); } catch { }
+                try { marker.closeTooltip(); } catch { }
                 marker._hoverCloseTimer = null;
             }, 250);
         });
@@ -842,14 +859,31 @@ function getImageSources(figure) {
     ];
 }
 
-function renderFigureImage(imageDiv, figure) {
+function probeImageExists(url) {
+    return new Promise((resolve) => {
+        const probe = new Image();
+        probe.onload = () => resolve(true);
+        probe.onerror = () => resolve(false);
+        probe.src = url;
+    });
+}
+
+async function renderFigureImage(imageDiv, figure) {
     if (!imageDiv) return;
     imageDiv.innerHTML = '';
 
     const sources = getImageSources(figure);
-    if (sources.length === 0) return;
+    if (sources.length === 0) {
+        const localThumb = thumbnailUrl(figure.id);
+        const localLarge = largeUrl(figure.id);
+        const hasLocalImage = await probeImageExists(localThumb);
+        if (!hasLocalImage) return;
+        sources.push({ thumb: localThumb, large: localLarge });
+    }
 
     let currentIndex = 0;
+    let showLargePreview = false;
+    let swapToken = 0;
 
     const img = document.createElement('img');
     const detailA = document.createElement('a');
@@ -857,23 +891,50 @@ function renderFigureImage(imageDiv, figure) {
     detailA.appendChild(img);
     imageDiv.appendChild(detailA);
 
+    function swapImageSmooth(nextSrc) {
+        if (!nextSrc || img.dataset.currentSrc === nextSrc) return;
+        const myToken = ++swapToken;
+        const preload = new Image();
+        preload.src = nextSrc;
+
+        const applySwap = () => {
+            if (myToken !== swapToken) return;
+            img.classList.add('is-swapping');
+            img.src = nextSrc;
+            img.dataset.currentSrc = nextSrc;
+            requestAnimationFrame(() => {
+                if (myToken !== swapToken) return;
+                img.classList.remove('is-swapping');
+            });
+        };
+
+        if (preload.complete) {
+            applySwap();
+            return;
+        }
+        preload.addEventListener('load', applySwap, { once: true });
+        preload.addEventListener('error', applySwap, { once: true });
+    }
+
     // Mouseover handlers read currentIndex at event time so they work across carousel navigation.
     img.addEventListener('mouseover', () => {
-        img.src = sources[currentIndex].large;
-        img.style.width = '100%';
+        showLargePreview = true;
+        swapImageSmooth(sources[currentIndex].large);
         imageDiv.style.paddingTop = '0';
     });
     img.addEventListener('mouseout', () => {
-        img.src = sources[currentIndex].thumb;
-        img.style.width = 'auto';
+        showLargePreview = false;
+        swapImageSmooth(sources[currentIndex].thumb);
         imageDiv.style.paddingTop = '';
     });
 
     // Lens URLs: direct sources are known immediately; Wikimedia pages resolve async.
-    const lensUrls = [
-        ...figure.imageSourceUrls,
-        ...figure.wikimediaImagePages.map(() => null),
-    ];
+    const lensUrls = sources.length > 0
+        ? [
+            ...figure.imageSourceUrls,
+            ...figure.wikimediaImagePages.map(() => null),
+        ]
+        : [];
     figure.wikimediaImagePages.forEach(async (page, i) => {
         const url = await getWikimediaImageUrl(page, 200);
         const idx = figure.imageSourceUrls.length + i;
@@ -887,7 +948,10 @@ function renderFigureImage(imageDiv, figure) {
 
     function showImage(index) {
         currentIndex = index;
-        img.src = sources[index].thumb;
+        const nextSrc = showLargePreview ? sources[index].large : sources[index].thumb;
+        swapImageSmooth(nextSrc);
+        const preloadLarge = new Image();
+        preloadLarge.src = sources[index].large;
         detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(lensUrls[index] || '')}`;
         if (sources.length > 1) {
             counter.textContent = `${index + 1} / ${sources.length}`;
@@ -925,7 +989,7 @@ async function showFigureDetails(figureId) {
 
     renderFigureHeader(targetWindow.querySelector('.detail-label'), figure);
     renderFigureMetadata(targetWindow.querySelector('.detail-info'), figure);
-    renderFigureImage(targetWindow.querySelector('.detail-image'), figure);
+    await renderFigureImage(targetWindow.querySelector('.detail-image'), figure);
 
     setActiveWindow(targetWindow);
     try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
@@ -1208,7 +1272,7 @@ document.addEventListener('keydown', (event) => {
         highlightGalleryFigure(targetFigureId);
 
         if (leafletMarkers[targetFigureId]) {
-            leafletMarkers[targetFigureId].openPopup();
+            openAdaptivePopup(leafletMarkers[targetFigureId], markerLabelContent(targetFigureId));
         }
     }
 
@@ -1243,7 +1307,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     renderFiguresOnMap(currentSortedIndex);
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
                         leafletMap.setView(leafletMarkers[currentFigureId].getLatLng(), 3)
-                        leafletMarkers[currentFigureId].openPopup();
+                        openAdaptivePopup(leafletMarkers[currentFigureId], markerLabelContent(currentFigureId));
                         highlightMapFigure(currentFigureId);
                         highlightGalleryFigure(currentFigureId);
                     }
@@ -1398,7 +1462,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Modal interaction listeners
     const modal = document.getElementById('site-modal');
     const closeBtn = document.getElementById('modal-close-btn');
+    closeSiteModal();
     if (closeBtn) closeBtn.onclick = closeSiteModal;
+
+    window.addEventListener('pageshow', () => {
+        closeSiteModal();
+    });
 
     window.addEventListener('click', (e) => {
         if (e.target === modal) closeSiteModal();
@@ -1532,6 +1601,7 @@ function highlightMapFigure(figureId) {
                 inner.style.border = '1.5px solid #222';
                 inner.style.borderRadius = '50%';
                 inner.style.transform = 'scale(1)';
+                inner.style.boxShadow = '0 1px 4px rgba(0,0,0,0.2)';
             }
         }
     });
@@ -1544,9 +1614,10 @@ function highlightMapFigure(figureId) {
         if (el) {
             const inner = el.querySelector && el.querySelector('div');
             if (inner) {
-                inner.style.border = '3px solid #1976d2';
+                inner.style.border = '1.5px solid #222';
                 inner.style.borderRadius = '50%';
-                inner.style.transform = 'scale(1.4)';
+                inner.style.transform = 'scale(1.22)';
+                inner.style.boxShadow = '0 0 0 3px #1976d2, 0 1px 4px rgba(0,0,0,0.2)';
             }
         }
         m.setZIndexOffset(1000);
@@ -1560,8 +1631,9 @@ function highlightMapFigure(figureId) {
             const innerDiv = thisEl.querySelector('div');
             if (innerDiv) {
                 innerDiv.style.borderRadius = '50%';
-                innerDiv.style.border = '5px solid #CC79A7';
-                innerDiv.style.transform = 'scale(1.8)';
+                innerDiv.style.border = '1.5px solid #222';
+                innerDiv.style.transform = 'scale(1.28)';
+                innerDiv.style.boxShadow = '0 0 0 5px #CC79A7, 0 1px 4px rgba(0,0,0,0.2)';
             }
         }
         marker.setZIndexOffset(2000);
@@ -1589,6 +1661,8 @@ function highlightGalleryFigure(figureId) {
 function highlightKeywordMarkers(ids) {
     // Normalize ids: dedupe, remove empties/nulls
     const uniqueIds = Array.from(new Set((ids || []).filter(Boolean)));
+    const secondaryIds = new Set(getOpenWindowFigureIds().filter(id => id !== currentFigureId));
+    const protectedIds = new Set([currentFigureId, ...secondaryIds].filter(Boolean));
 
     // Clear existing keyword highlights safely
     Object.keys(leafletMarkers).forEach((figureId) => {
@@ -1598,9 +1672,11 @@ function highlightKeywordMarkers(ids) {
             const el = m.getElement && m.getElement();
             if (el) {
                 const inner = el.querySelector && el.querySelector('div');
-                if (inner) inner.style.boxShadow = '';
+                if (inner && !protectedIds.has(figureId)) inner.style.boxShadow = '';
             }
-            if (figureId !== currentFigureId) {
+            if (secondaryIds.has(figureId)) {
+                m.setZIndexOffset(1000);
+            } else if (figureId !== currentFigureId) {
                 m.setZIndexOffset(1);
             }
         } catch (e) {
@@ -1613,6 +1689,7 @@ function highlightKeywordMarkers(ids) {
         try {
             const m = leafletMarkers[figureId];
             if (!m) return;
+            if (protectedIds.has(figureId)) return;
             const el = m.getElement && m.getElement();
             if (el) {
                 const inner = el.querySelector && el.querySelector('div');
@@ -1683,7 +1760,7 @@ function startPlayback() {
     highlightListFigure(figures[playIndex]);
     scrollToListFigure(figures[playIndex]);
 
-    leafletMarkers[figures[playIndex]].openPopup();
+    openAdaptivePopup(leafletMarkers[figures[playIndex]], markerLabelContent(figures[playIndex]));
 
     playInterval = setInterval(() => {
         playIndex++;
@@ -1699,7 +1776,7 @@ function startPlayback() {
         scrollToListFigure(figures[playIndex]);
 
         console.log(figures[playIndex]);
-        leafletMarkers[figures[playIndex]].openPopup();
+        openAdaptivePopup(leafletMarkers[figures[playIndex]], markerLabelContent(figures[playIndex]));
 
     }, 2000);
 }
@@ -1992,17 +2069,15 @@ function renderGallery() {
         galleryImg.style = `max-height:${maxHeight}px`;
 
         galleryImg.addEventListener('mouseover', () => {
-            mouseOverContent = `<strong>${figuresDict[figureId].label}</strong>${SHIFT_HINT_HTML}`
-            leafletMarkers[figureId].getPopup().setContent(mouseOverContent);
-            leafletMarkers[figureId].openPopup();
+            const content = buildPopupContent(figuresDict[figureId].label, { showHint: true });
+            openAdaptivePopup(leafletMarkers[figureId], content);
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
 
         galleryImg.addEventListener('mouseout', () => {
-            // small delay so quick moves don't flicker
             try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
             leafletMarkers[figureId]._hoverCloseTimer = setTimeout(() => {
-                leafletMarkers[figureId].closePopup();
+                try { leafletMarkers[figureId].closeTooltip(); } catch { }
                 leafletMarkers[figureId]._hoverCloseTimer = null;
             }, 250);
         });
@@ -2011,7 +2086,7 @@ function renderGallery() {
             highlightMapFigure(figureId);
             highlightGalleryFigure(figureId);
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
-            leafletMarkers[figureId].closePopup();
+            try { leafletMarkers[figureId].closeTooltip(); } catch { }
             showFigureDetails(figureId);
         });
 
