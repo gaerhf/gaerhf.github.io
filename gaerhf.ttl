@@ -7245,6 +7245,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (13.4125 103.866667) ; # Angkhor as contemporary capital
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
 
+:bayon-southern-market-scene a :group-of-human-figures ;
+   rdfs:label "Bayon Market Scene" ;
+   :described-by <https://en.wikipedia.org/wiki/Bayon#The_outer_gallery:_historical_events_and_everyday_life> ;
+   :earliest-date 1190 ;
+   :latest-date 1220 ;
+   :material-note "Sandstone" ;
+   :in-modern-country-note "Cambodia" ;
+   :note "From Wikipedia: “A market scene in the southern gallery shows the weighing of goods; the fish belong to a naval battle taking place above.”" ;
+   :representative-latlong-point (13.441389 103.858611) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bayonmarket01.JPG> .
+
 :emmons-rattle-mask a :human-figure ;
    rdfs:label "So-called Emmons Rattle Mask" ;
    :defined-by <https://en.wikipedia.org/wiki/Emmons_Cemetery_Site#Emmons_mask> ,
