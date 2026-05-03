@@ -4946,6 +4946,19 @@
    :representative-latlong-point (-3.161182 -59.986566) ;
    :thumbnail-image <https://www.ancientartarchive.org/wp-content/uploads/lowwater.png> .
 
+:pillar-of-the-boatmen a :group-of-human-figures ;
+   rdfs:label "Pillar of the Boatmen (Pilier des nautes)" ;
+   :described-by <https://en.wikipedia.org/wiki/Pillar_of_the_Boatmen> ,
+      <https://www.musee-moyenage.fr/en/collection/pillar-of-the-boatmen.html> ;
+   :earliest-date 14 ;
+   :latest-date 37 ;
+   :in-modern-country-note "France" ;
+   :material-note "Limestone" ;
+   :note "From Wikipedia: “The Pillar of the Boatmen (French: Pilier des nautes) is a monumental Roman column erected in Lutetia (modern Paris) in honour of Jupiter by the guild of boatmen in the 1st century AD. It is the oldest monument in Paris and is one of the earliest pieces of representational Gallo-Roman art to carry a written inscription. … Written in Latin with Gaulish language features, the inscription mingles Roman deities with gods that are distinctly Celtic.”" ;
+   :representative-latlong-point (48.8530 2.3499) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Le_Pilier_des_Nautes_01.JPG> ,
+      <https://commons.wikimedia.org/wiki/File:Paris_MNMA_Pilier_des_Nautes_Vulcanus_827.jpg> .
+
 :prima-porta-augustus a :human-figure ;
    rdfs:label "Prima Porta Augustus" ;
    :described-by <https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta> ;
