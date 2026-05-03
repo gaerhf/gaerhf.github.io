@@ -2449,6 +2449,31 @@
    :representative-latlong-point (35.3 33.35) ;
    :thumbnail-image <https://d3rfecmxqkrsyb.cloudfront.net/sites/vounous.webp> .
 
+:khao-chan-ngam-rock-art a :group-of-human-figures ;
+   rdfs:label "Khao Chan Ngam Rock Paintings" ;
+   :described-by <https://www.unesco.org/en/iggp/geoparks/khorat> ,
+      <https://www.tourismthailand.org/Attraction/wat-khao-chan-ngam> ,
+      <https://www.mdpi.com/2076-0752/3/1/73> ,
+      <https://link.springer.com/article/10.1007/s41826-025-00121-2> ,
+      <https://archaeology.sac.or.th/archaeology/180> ;
+   :earliest-date -2050 ;
+   :latest-date -1050 ;
+   :in-modern-country-note "Thailand" ;
+   :material-note "Red pigment on sandstone" ;
+   :note "Image is after fig. 18 in Tan et al. 2026. Adapted from Tourism Thailand website: “The monastery is famous for the pre-historic colour paintings on a huge rock depicting human and animal figures in various movements, which can be dated to about 3000 years ago.” The painted panel shows a hunting scene with multiple anthropomorphs in motion; two figures wear ‘skirts’ (interpreted as loincloths) and have pronounced calves, a combination cited by Tan et al. 2025 as a stylistic parallel with figure D28 at Tham Pha Mue (their Fig. 18). The site is behind Wat Khao Chan Ngam (Wat Lertsuwat) in Sikhio District, at the western edge of the Khorat Plateau, and is a designated geosite within the Khorat UNESCO Global Geopark. Registered as a Thai national ancient monument in the Royal Gazette Vol. 107, Edition 127 (24 July 1990)." ;
+   :representative-latlong-point (14.81372 101.59385) .
+
+:tham-pha-mue-rock-art a :group-of-human-figures ;
+   rdfs:label "Tham Pha Mue Rock Art" ;
+   :described-by <https://link.springer.com/article/10.1007/s41826-025-00121-2> ,
+      <https://laotiantimes.com/2025/08/05/hidden-hands-cave-in-laos-reveals-prehistoric-art/> ;
+   :earliest-date -2050 ;
+   :latest-date -500 ;
+   :in-modern-country-note "Laos" ;
+   :material-note "Red, black, and white mineral pigments on limestone" ;
+   :note "Approximate location. Tan et al. 2025 do not publish coordinates; the article places the site in northern Khammouane Province near Baan Khoun Ngeun, ca. 30 km from the Lao–Thai border (Mekong), within the proposed Phou Hin Poun UNESCO Global Geopark, on a southwest-facing limestone massif ca. 1 km east of National Road No. 8. The point given here is a rough centroid for that description and should be refined. From Tan et al. 2025: “Tham Pha Mue, a newly documented rock art site in Khammouane Province, central Laos, represents a significant addition to the study of Southeast Asian prehistoric art. This cliffside rock shelter, the first of its type described in Laos, contains over 200 rock art motifs, predominantly hand stencils, alongside a substantial number of anthropomorphic and zoomorphic depictions.” The site has approximately 35 anthropomorphic figures, mostly stick figures in static poses with arms outstretched or upraised; two appear to wear ‘skirts’ (interpreted as loincloths). Hand stencils are stratigraphically the earliest motifs, with anthropomorphs and zoomorphs superimposed over them, and black paintings on Panel D superimposed over red. The paintings are not directly dated; Tan et al. presume a date no older than ca. 4,000 BP based on a depiction of a domesticated bovid." ;
+   :representative-latlong-point (18.250 104.350) .
+
 :karakol-funerary-marker-face a :human-figure ;
    rdfs:label "Karakol Culture Funerary Marker with Face" ;
    :described-by <https://en.wikipedia.org/wiki/Karakol_culture> ;
