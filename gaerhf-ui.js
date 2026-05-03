@@ -1313,6 +1313,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.add('active');
             const tabName = button.getAttribute('data-tab');
             currentTab = tabName;
+            document.body.classList.toggle('about-tab', tabName === 'about');
             const activeContent = document.getElementById(`${tabName}-container`);
             if (activeContent) activeContent.classList.add('active');
 

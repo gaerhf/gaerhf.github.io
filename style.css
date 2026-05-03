@@ -764,6 +764,14 @@ body.gallery-hovered .detail-window.active-window.recently-opened .detail-label-
     overflow-y: auto;
 }
 
+#about-container.active {
+    display: block;
+}
+
+body.about-tab .detail-window {
+    display: none;
+}
+
 #figure-map-container {
     width: 100%;
     position: fixed;
