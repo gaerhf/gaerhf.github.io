@@ -3286,6 +3286,19 @@
 #    :earliest-date -900 ;
 #    :latest-date -200 .
 
+:jemaa-head a :human-figure ;
+   rdfs:label "Jemaa Head" ;
+   :described-by <https://www.britannica.com/place/Jemaa> ,
+      <https://en.wikipedia.org/wiki/Nok_culture> ,
+      <https://brunoclaessens.com/2013/06/the-jemaa-nok-head/> ;
+   :earliest-date -900 ;
+   :latest-date -200 ;
+   :in-modern-country-note "Nigeria" ;
+   :material-note "Terracotta" ;
+   :note "From Britannica: “A 2,000-year-old terra-cotta head discovered at Jemaa in 1944 proved to be vital to an understanding of the Nok culture, a civilization that probably flourished in the area between 900 bce and 200 ce.”" ;
+   :representative-latlong-point (9.466 8.385) ; # find-spot: Tsauni tin mine at Jemaa (Jema'a), southern Kaduna State, Nigeria — coordinates approximate the village of Jema'a
+   :thumbnail-image <https://brunoclaessens.com/wp-content/uploads/2013/06/Jemaa-head-Nok-Nigeria.jpeg> .
+
 :funerary-jar-figures-boat a :group-of-human-figures ;
    rdfs:label "Funerary Jar with Two Figures in Boat" ;
    :described-by <https://en.wikipedia.org/wiki/Manunggul_Jar> ;
