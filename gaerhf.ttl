@@ -7168,6 +7168,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (39.3075 -110.057222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PillingFigurines01.jpg> .
 
+:birger-figurine a :human-figure ;
+   rdfs:label "Birger Figurine" ;
+   :described-by <https://en.wikipedia.org/wiki/Mississippian_stone_statuary#BBB_Motor_Site_figurines> ;
+   :earliest-date 1050 ;
+   :latest-date 1200 ;
+   :material-note "Flint clay (sourced from the St. Louis area, Missouri)" ;
+   :note "From Wikipedia: “The first, the ‘Birger figurine’, depicts a kneeling woman wearing a pack on her back and using a hoe to till the back of a feline headed serpent on which she is squatting. The tail of the serpent splits and transforms into gourd flowers, vines and fruit. The Underwater Serpent, with its associations with the Underworld, is thought to represent the fertility of the Earth.” Found at the BBB Motor Site, a Stirling Phase second-tier ceremonial site of Cahokia. The mapped point is the approximate location of the BBB Motor Site, matching the existing :keller-figurine record." ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (38.8275 -89.9355) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Birger_figurine_(1).jpg> .
+
 :manuscript-covers-buddhist-deities a :group-of-human-figures ;
    rdfs:label "Manuscript Covers with Buddhist Deities" ;
    :described-by <https://www.metmuseum.org/art/collection/search/37791> ;
