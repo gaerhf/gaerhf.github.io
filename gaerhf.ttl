@@ -7020,6 +7020,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (0.301667 32.645) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Luzira_Head_4.jpg> .
 
+:mimbres-bowl-man-and-crane a :human-figure ;
+   rdfs:label "Mimbres Bowl with Man and Crane (Mattocks Site)" ;
+   :described-by <https://en.wikipedia.org/wiki/Mogollon_culture#Mimbres_pottery> ;
+   :approximate-date 1000 ;
+   :material-note "Ceramic" ;
+   :note "From Wikipedia caption: “Man and crane, Mangas-Mimbres pot, c. 1000 CE, showing figure-ground reversal.” From Wikimedia Commons file description: “Mangas (Mimbres), Mattocks site, ex-Janss Foundation collection. Published Brody, 1977 SAR book, Fig. 32.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (32.8427 -107.96367) ; # Mattocks Site, Mimbres Valley, NM
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Man_and_crane,_Mangas-Mimbres_pot.jpg> .
+
 :dresden-codex a :group-of-human-figures ;
    rdfs:label "Dresden Codex" ;
    :described-by <https://en.wikipedia.org/wiki/Dresden_Codex> ;
