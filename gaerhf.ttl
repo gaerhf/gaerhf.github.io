@@ -6566,6 +6566,19 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (20.064156 -99.340803) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Telamones_Tula.jpg> .
 
+:man-mound-sauk-county a :human-figure ;
+   rdfs:label "Man Mound" ;
+   :described-by <https://en.wikipedia.org/wiki/Man_Mound> ,
+      <https://wisconsinfirstnations.org/man-mound-county-park/> ;
+   :earliest-date 750 ;
+   :latest-date 1200 ;
+   :material-note "Earth (raised earthwork)" ;
+   :note "From Wikipedia: “The Man Mound is a precontact earthwork of a humanoid figure located in Greenfield, Sauk County, Wisconsin, east of the city of Baraboo. Constructed during the Late Woodland period, the mound is the only surviving anthropomorphic effigy mound in North America. The mound depicts a humanoid figure with horns or a horned headdress and may have held religious or ceremonial significance to its builders ... When it was built, the figure was 214 feet (65 m) long and raised 2.5 feet (0.76 m) from the ground. The legs and feet of the figure were destroyed by the construction of Man Mound Road and a cow pasture across the road, leaving the modern mound roughly 50 feet (15 m) shorter than its original length.”" ;
+   :in-modern-country-note "United States" ;
+   :representative-latlong-point (43.48861 -89.67083) ;
+   :thumbnail-image <https://wisconsinfirstnations.org/wp-content/uploads/2018/10/ManMound.jpg> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Man_Mound.jpg> .
+
 :bell-king-seongdeok a :group-of-human-figures ;
    rdfs:label "Bell of King Seongdeok" ;
    :described-by <https://en.wikipedia.org/wiki/Bell_of_King_Seongdeok> ;
