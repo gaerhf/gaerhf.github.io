@@ -2070,6 +2070,18 @@
    :representative-latlong-point (10.399768 45.900335) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human_figure_wearing_headgear_and_carrying_bow_and_arrow,_hunting_with_dogs_in_Dhambalin.jpg> .
 
+:tawi-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Tawi Petroglyphs" ;
+   :described-by <https://www.megalithic.co.uk/article.php?sid=35661> ,
+      <https://visitmusandam.com/tawi-rock-carvings-ancient-art-in-musandam/> ;
+   :earliest-date -3000 ;
+   :latest-date -500 ;
+   :in-modern-country-note "Oman" ;
+   :material-note "Stone" ;
+   :note "From Visit Musandam website: “The Tawi Rock Carvings depict a variety of human-like figures and symbols representing daily life activities. These carvings showcase scenes of hunting, dancing, and social gatherings, reflecting the cultural practices and beliefs of the people who created them. The figures vary in size and detail, often indicating different roles or statuses within the community.”" ;
+   :representative-latlong-point (26.177870 56.217970) ;
+   :thumbnail-image <https://www.megalithic.co.uk/a558/a312/gallery/Eastern_Europe/Romania/Tawi_petroglyphs_IMG_5520_.jpg> .
+
 :skara-brae-buddo a :human-figure ;
    rdfs:label "Skara Brae Buddo" ;
    :described-by <https://www.stromnessmuseum.org.uk/collections/objects/axxx> ,
