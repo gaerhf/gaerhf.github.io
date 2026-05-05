@@ -3010,6 +3010,29 @@
    :art-historical-culture-or-tradition :olmec ;
    :thumbnail-image <https://www.doaks.org/resources/olmec-art/catalogue/02-stone-yuguito/stone-yuguito-early-formative-12002013900-bce/@@images/image/zoom> .
 
+:san-lorenzo-colossal-head-1 a :human-figure ;
+   rdfs:label "San Lorenzo Colossal Head 1" ;
+   :described-by <https://commons.wikimedia.org/wiki/Category:San_Lorenzo_Colossal_Head_1> , 
+     <https://en.wikipedia.org/wiki/Olmec_colossal_heads>  ;
+   :earliest-date -1200 ;
+   :latest-date -900 ;
+   :in-modern-country-note "Mexico" ;
+   :material-note "Basalt" ;
+   :note "From Wikipedia: “Colossal Head 1 is 2.84 metres (9.3 ft) high; it measures 2.11 metres (6.9 ft) wide and it weighs 25.3 tons. The monument was discovered partially buried at the edge of a gully by Matthew Stirling in 1945. When discovered, it was lying on its back, looking upwards.”" ;
+   :representative-latlong-point (17.7544 -94.7331) ; # San Lorenzo Tenochtitlán, Veracruz
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cabeza_Colosal_n%C2%BA1_del_Museo_Xalapa.jpg> .
+
+:san-lorenzo-colossal-head-5 a :human-figure ;
+   rdfs:label "San Lorenzo Colossal Head 5" ;
+   :described-by <https://en.wikipedia.org/wiki/Olmec_colossal_heads> ;
+   :earliest-date -1200 ;
+   :latest-date -900 ;
+   :in-modern-country-note "Mexico" ;
+   :material-note "Basalt" ;
+   :note "From Wikipedia: “The monument stands 1.86 metres (6.1 ft) high and measures 1.47 metres (4.8 ft) wide by 1.15 metres (3.8 ft) deep. It weighs 11.6 tons. The head was discovered by Matthew Stirling in 1946, face down in a gully to the south of the principal mound. The head is particularly well executed and is likely to have been found close to its original location. … The headdress is decorated with jaguar paws … At the back of the head, ten interlaced strips form a net decorated with disc motifs.”" ;
+   :representative-latlong-point (17.7544 -94.7331) ; # San Lorenzo Tenochtitlán, Veracruz
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cabeza_Colosal_5.jpg> .
+
 :deer-stones-funerary-marker a :human-figure ;
    rdfs:label "Deer Stones Culture Funerary Marker" ;
    :described-by <https://en.wikipedia.org/wiki/Deer_stones_culture#Type_I:_Classic_Mongolian> ;
@@ -3128,6 +3151,17 @@
    :representative-latlong-point (17.434444 -95.026667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Señor_de_Las_Limas_(cropped).jpg> .
 
+:la-venta-monument-1 a :human-figure ;
+   rdfs:label "La Venta Monument 1" ;
+   :described-by <https://en.wikipedia.org/wiki/Olmec_colossal_heads> ,
+      <https://en.wikipedia.org/wiki/La_Venta> ;
+   :earliest-date -1000 ;
+   :latest-date -600 ;
+   :in-modern-country-note "Mexico" ;
+   :material-note "Basalt" ;
+   :note "From Wikipedia: “La Venta Monument 1 is speculated to have been the portrait of La Venta's final ruler. Monument 1 measures 2.41 metres (7.9 ft) high by 2.08 metres (6.8 ft) wide by 1.95 metres (6.4 ft) deep; it weighs 24 tons. … Monument 1 is the best preserved head at La Venta. … The head was first described by Franz Blom and Oliver La Farge who investigated the La Venta remains on behalf of Tulane University in 1925. … Matthew Stirling fully excavated the monument in 1940. … The head was found in its original context; associated finds have been radiocarbon dated to between 1000 and 600 BC.”" ;
+   :representative-latlong-point (18.1031 -94.0392) ; # La Venta archaeological site, Tabasco
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Olmeca_head_in_Villahermosa.jpg> .
 
 # https://collections.louvre.fr/en/ark:/53355/cl010132589
 
@@ -3228,6 +3262,18 @@
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (40.112917 9.514595) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronzetto_Nuragico_21.JPG> .
+
+:tres-zapotes-monument-a a :human-figure ;
+   rdfs:label "Tres Zapotes Monument A" ;
+   :described-by <https://en.wikipedia.org/wiki/Olmec_colossal_heads> ,
+      <https://en.wikipedia.org/wiki/Tres_Zapotes> ;
+   :earliest-date -900 ;
+   :latest-date -400 ;
+   :in-modern-country-note "Mexico" ;
+   :material-note "Basalt" ;
+   :note "From Wikipedia: “Tres Zapotes Monument A (also known as Tres Zapotes Colossal Head 1) was the first colossal head to be found, discovered by accident in the middle of the 19th century, 1 kilometre (0.62 mi) to the north of the modern village of Tres Zapotes. After its discovery it remained half-buried until it was excavated by Matthew Stirling in 1939. … Monument A stands 1.47 metres (4.8 ft) tall; it measures 1.5 metres (4.9 ft) wide by 1.45 metres (4.8 ft) deep, and is estimated to weigh 7.8 tons. The head is sculpted with a simple headdress with a wide band that is otherwise unadorned, and wears rectangular ear ornaments that project forwards onto the cheeks.”" ;
+   :representative-latlong-point (18.4700 -95.4431) ; # Tres Zapotes archaeological site, Veracruz
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tres_Zapotes_Monument_A.jpg> .
 
 # :olmec-standing-figure a :human-figure ;
 #    rdfs:label "Jadeite Standing Figure" ;
@@ -5220,6 +5266,17 @@
 #    :period-note "Gandhara Region (Pakistan)" ;
 #    :earliest-date 300 ;
 #    :latest-date 400 .
+
+:female-athletes-casale a :group-of-human-figures ;
+   rdfs:label "Female Athletes Mosaic, Villa Romana del Casale" ;
+   :described-by <https://en.wikipedia.org/wiki/Villa_Romana_del_Casale> ;
+   :earliest-date 300 ;
+   :latest-date 325 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Mosaic (tesserae)" ;
+   :note "From Wikipedia: “Several women athletes are shown competing in sports that include weight-lifting, discus throwing, running, and ball-games. A toga-wearing official on the bottom left holds the victor's trophies (a crown and a palm frond), and the victor herself appears crowned in the centre of the mosaic.”" ;
+   :representative-latlong-point (37.36472 14.33472) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Villa_Romana_del_Casale_BW_2025-04-28_11-11-12.jpg> .
 
 :female-figurine-tin-hanan a :human-figure ;
    rdfs:label "Female Figurine from Tin Hinan Tomb" ;
