@@ -5214,6 +5214,18 @@
 
 # https://in.pinterest.com/pin/918523286471789707/
 
+:statue-of-sanatruq-i a :human-figure ;
+   rdfs:label "Statue of Sanatruq I from Hatra" ;
+   :described-by <https://en.wikipedia.org/wiki/Sanatruq_I> ;
+   :earliest-date 140 ;
+   :latest-date 180 ;
+   :in-modern-country-note "Iraq" ;
+   :material-note "Limestone" ;
+   :note "From Wikipedia: “Sanatruq I (also spelled Sanatruk I) was the first king of Hatra, an ancient city in northern Mesopotamia (present-day Iraq). He is known from more than 20 inscriptions found at Hatra and reigned from about 140 to 180. … He was granted the title of king by his Parthian overlord Vologases IV (r. 147–191), due to the increasing strategic importance of the city during that period.”" ;
+   :representative-latlong-point (35.588056 42.718333) ; # Hatra
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Sanatruq_I,_2nd_century_CE._From_Hatra._Erbil_Civilization_Museum,_Iraqi_Kurdistan.jpg>,
+      <https://commons.wikimedia.org/wiki/File:Sanatruq_I,_2nd_century_AD._From_Hatra._Erbil_Civilization_Museum,_Iraqi_Kurdistan.jpg> .
+
 :statue-of-hatran-noble a :human-figure ;
    rdfs:label "Statue of Hatran Noble" ;
    :described-by <https://www.worldhistory.org/image/10852/statue-of-prince-absadmiya-from-hatra/> ;
@@ -5254,6 +5266,19 @@
    :approximate-date 100 ;
    :in-modern-country-note "South Africa" ;
    :representative-latlong-point (-29.380719 29.527825) .
+
+:artabanus-iv-khwasak-relief a :group-of-human-figures ;
+   rdfs:label "Artabanus IV and Khwasak Relief" ;
+   :described-by <https://en.wikipedia.org/wiki/Khwasak> , 
+      <https://www.livius.org/pictures/iran/susa/susa-museum-pieces/susa-relief-of-artabanus-iv/> ;
+   :approximate-date 215 ;
+   :material-note "Stone" ;
+   :in-modern-country-note "Iran" ;
+   :note "From Wikipedia: “Khwasak is known from a stela found at Susa. The function of the stela is unknown but it might have been a tomb stone. The stela shows Khwasak and the king, who is handing over the ring of power to Khwasak. The Parthian text informs us that the stela was set up in the year AD 215.” " ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point ( 32.190556 48.257778 ) ;
+   :thumbnail-image <https://www.livius.org/site/assets/files/18301/susa_parthian_relief_tehran_museum.jpg> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Relief_of_Artabanus_IV_handing_the_ring_to_Khwasak,_satrap_of_Susa_(215),_from_Susa,_Iran_Bastan_Musuem,_Tehran.jpg> .
 
 :colossal-shapur-i a :human-figure ;
    rdfs:label "Colossal Statue of Shapur I" ;
