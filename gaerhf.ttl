@@ -5648,6 +5648,18 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 #    :note "Specific findspot not known." ;
 #    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/717575/1591782/restricted> .
 
+:bronze-heracles-inscribed-iraq a :human-figure ;
+   rdfs:label "Bronze Heracles with Biligual Inscription" ;
+   :described-by <https://en.wikipedia.org/wiki/Vologases_IV#Conquest_of_Characene> ,
+      <https://parthiansources.com/texts/bhm/bhm-introduction/> ;
+   :earliest-date -200 ;
+   :latest-date -100 ;
+   :in-modern-country-note "Iraq" ;
+   :material-note "Bronze" ;
+   :note "The sculpture is Hellenistic. It was later inscribed in 151 CE after being taken to Seluecia on the Tigris. From Wikipedia: “Vologases IV's forces seized a statue of Heracles, the patron god of the Characenian royalty. The statue was taken to the temple of Apollo in Seleucia, where it was displayed as a demonstration of Vologases IV's victory. A bilingual inscription (Greek and Parthian) was carved on the statue, which recounts Vologases IV's conquest of Characene: ‘In the year of the Greeks 462 (151 AD) the King of Kings Arsaces Vologases, son of Mithridates king, led a military expedition into Mesene against Mithridates king, son of previous ruler Pacorus, and after king Mithridates had been expelled from Mesene, became the ruler of all of Mesene and of this bronze statue of the god Heracles, which he himself transported from Mesene, placed in this Sanctuary of the god Apollo who guards the Bronze Door.’”" ;
+   :representative-latlong-point (33.0875 44.520278) ; # Seleucia on the Tigris (find-spot in Apollo temple)
+   :thumbnail-image <https://parthiansources.com/wp-content/uploads/2014/08/Hercules-of-Mesene-ArtStor.png> .
+
 :old-bering-sea-standing-figure a :human-figure ;
    rdfs:label "Old Bering Sea Standing Figure" ;
    :described-by <https://www.metmuseum.org/art/collection/search/316642> ;
