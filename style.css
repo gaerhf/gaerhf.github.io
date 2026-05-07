@@ -81,7 +81,7 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1100;
+    z-index: 25000;
     background-color: #dbdada;
     padding: 4px 0 2px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -111,41 +111,49 @@ body {
     transition: background-color 0.22s ease;
 }
 
-/* When hovering the gallery, make the window frame translucent by fading its
-   background-color. The image element has no background-color of its own, so
-   it stays fully opaque and pops against the transparent frame. Using
-   background-color (not opacity) is the only CSS-correct way to make a child
-   appear more opaque than its parent container. */
-body.gallery-hovered .detail-window {
+/* When hovering the gallery OR the search dropdown is open, make the window
+   frame translucent by fading its background-color. The image element has no
+   background-color of its own, so it stays fully opaque and pops against the
+   transparent frame. Using background-color (not opacity) is the only
+   CSS-correct way to make a child appear more opaque than its parent. */
+body.gallery-hovered .detail-window,
+body.search-open .detail-window {
     background-color: rgba(255, 255, 255, 0.18);
 }
 
-body.gallery-hovered .detail-window .figure-details-wrapper {
+body.gallery-hovered .detail-window .figure-details-wrapper,
+body.search-open .detail-window .figure-details-wrapper {
     background-color: rgba(255, 255, 255, 0.12);
 }
 
-body.gallery-hovered .detail-window .detail-label-container {
+body.gallery-hovered .detail-window .detail-label-container,
+body.search-open .detail-window .detail-label-container {
     background-color: rgba(25, 118, 210, 0.35);
 }
 
-body.gallery-hovered .detail-window.active-window .detail-label-container {
+body.gallery-hovered .detail-window.active-window .detail-label-container,
+body.search-open .detail-window.active-window .detail-label-container {
     background-color: rgba(204, 121, 167, 0.35);
 }
 
 /* Restore full backgrounds for windows opened via gallery click (3-second grace period) */
-body.gallery-hovered .detail-window.recently-opened {
+body.gallery-hovered .detail-window.recently-opened,
+body.search-open .detail-window.recently-opened {
     background-color: rgba(255, 255, 255, 0.98);
 }
 
-body.gallery-hovered .detail-window.recently-opened .figure-details-wrapper {
+body.gallery-hovered .detail-window.recently-opened .figure-details-wrapper,
+body.search-open .detail-window.recently-opened .figure-details-wrapper {
     background-color: #fff;
 }
 
-body.gallery-hovered .detail-window.recently-opened .detail-label-container {
+body.gallery-hovered .detail-window.recently-opened .detail-label-container,
+body.search-open .detail-window.recently-opened .detail-label-container {
     background-color: #1976d2;
 }
 
-body.gallery-hovered .detail-window.active-window.recently-opened .detail-label-container {
+body.gallery-hovered .detail-window.active-window.recently-opened .detail-label-container,
+body.search-open .detail-window.active-window.recently-opened .detail-label-container {
     background-color: #CC79A7;
 }
 
@@ -523,7 +531,7 @@ body.gallery-hovered .detail-window.active-window.recently-opened .detail-label-
     /* Position the dropdown right below the input */
     top: 100%; 
     left: 0;
-    z-index: 100; /* Ensures it sits above other content */
+    z-index: 50000;
     
     width: 100%; /* Make the dropdown the same width as the input */
     max-height: 300px; /* Max height before scrolling */

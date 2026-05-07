@@ -1920,8 +1920,13 @@ function renderKeywordSearch() {
     const zoomBtn = document.getElementById('zoom-keyword-btn');
     let searchDebounceTimer = null; // debounce timer for typeahead
 
+    function setSuggestionsVisible(visible) {
+        suggestionsList.style.display = visible ? 'block' : 'none';
+        document.body.classList.toggle('search-open', visible);
+    }
+
     // Start hidden
-    suggestionsList.style.display = 'none';
+    setSuggestionsVisible(false);
 
     // Handle Enter key to clear highlights when input is empty
     searchInput.addEventListener('keydown', (e) => {
@@ -1932,7 +1937,7 @@ function renderKeywordSearch() {
                 currentKeywordHighlightIds = [];
                 try { highlightKeywordMarkers([]); } catch { }
                 try { highlightKeywordGalleryImages([]); } catch { }
-                suggestionsList.style.display = 'none';
+                setSuggestionsVisible(false);
                 updateZoomKeywordButtonVisibility();
             }
         }
@@ -1949,14 +1954,14 @@ function renderKeywordSearch() {
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
 
             if (query.length === 0) {
-                suggestionsList.style.display = 'none';
+                setSuggestionsVisible(false);
                 return;
             }
 
             const results = miniSearch.search(query, { prefix: true, limit: 5 });
 
             if (!results || results.length === 0) {
-                suggestionsList.style.display = 'none';
+                setSuggestionsVisible(false);
                 return;
             }
 
@@ -1992,7 +1997,7 @@ function renderKeywordSearch() {
                 li.addEventListener('click', () => {
                     searchInput.value = kwText;
                     suggestionsList.innerHTML = '';
-                    suggestionsList.style.display = 'none';
+                    setSuggestionsVisible(false);
                     currentKeywordHighlightIds = ids;
                     highlightKeywordMarkers(ids);
                     highlightKeywordGalleryImages(ids);
@@ -2006,7 +2011,7 @@ function renderKeywordSearch() {
                 suggestionsList.appendChild(li);
             });
 
-            suggestionsList.style.display = 'block';
+            setSuggestionsVisible(true);
         }, 450); // ~0.5s debounce
     });
 
@@ -2015,7 +2020,7 @@ function renderKeywordSearch() {
     // Hide suggestions when input loses focus (small delay keeps click working)
     searchInput.addEventListener('blur', () => {
         setTimeout(() => {
-            suggestionsList.style.display = 'none';
+            setSuggestionsVisible(false);
             // Restore persistent highlight when suggestions close
             try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
@@ -2026,7 +2031,7 @@ function renderKeywordSearch() {
     // Optional: show suggestions when input gains focus if it already has text
     searchInput.addEventListener('focus', () => {
         if (searchInput.value.trim().length > 0 && suggestionsList.children.length > 0) {
-            suggestionsList.style.display = 'block';
+            setSuggestionsVisible(true);
         }
         updateZoomKeywordButtonVisibility();
     });
