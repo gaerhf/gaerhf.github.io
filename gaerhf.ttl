@@ -586,6 +586,18 @@
    :representative-latlong-point (22.938415 77.613085) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bhimbetka_war_scene.jpg> .
 
+:tadrart-acacus-rock-art a :group-of-human-figures ;
+   rdfs:label "Rock-Art Sites of Tadrart Acacus" ;
+   :described-by <https://en.wikipedia.org/wiki/Acacus_Mountains> ,
+      <https://whc.unesco.org/en/list/287> ;
+   :earliest-date -12000 ;
+   :latest-date -8000 ;
+   :in-modern-country-note "Libya" ;
+   :material-note "Rock paintings and engravings on sandstone" ;
+   :note "From Wikipedia: “The paintings date from 12,000 BCE to 100 CE and reflect cultural and natural changes in the area.”" ;
+   :representative-latlong-point (24.833 10.333) ;  # centroid of the Acacus range per Wikipedia infobox
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tadrart_Acacus_2.jpg> .
+
 :datu-saman-figures-sangkulirang-mangkalihat-peninsula a :group-of-human-figures ;
    rdfs:label "‘Datu Saman’ Style Figures from the Sangkulirang–Mangkalihat Peninsula" ;
    :described-by <https://doi.org/10.1038/s41586-018-0679-9> ;
