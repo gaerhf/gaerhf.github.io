@@ -1675,6 +1675,18 @@
    :representative-latlong-point (-20.590556 14.372222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_painting_in_Twyfelfontein3.jpg> .
   
+:sikachi-alyan-petroglyph-masks a :group-of-human-figures ;
+   rdfs:label "Petroglyph “Masks” of Sikachi-Alyan" ;
+   :described-by <https://en.wikipedia.org/wiki/Petroglyphs_of_Sikachi-Alyan> ,
+      <https://en.wikipedia.org/wiki/Sikachi-Alyan> ;
+   :earliest-date -4000 ;
+   :latest-date -2000 ;
+   :in-modern-country-note "Russia" ;
+   :material-note "Basalt boulders" ;
+   :note "From Wikipedia: “The oldest petroglyphs date to 12000 BCE, the masks to 4000 to 2000 BCE.”" ;
+   :representative-latlong-point (48.748889 135.646111) ; # Sikachi-Alyan, Khabarovsk Krai, on the Amur River
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Петроглифы_Сикачи-Аляна_4.JPG> .
+
 :neolithic-figurine-karditsa a :human-figure ;
    rdfs:label "Neolithic Figurine from Karditsa" ;
    :described-by <https://en.wikipedia.org/wiki/Karditsa_Thinker> ;
@@ -2840,6 +2852,17 @@
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (45.957056 10.297333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antropomorfi_detti_astronauti_(a)_-_R_1_-_Area_di_Zurla_-_Nadro_(ph_Luca_Giarelli).jpg> .
+
+:tamgaly-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Tamgaly Petroglyphs" ;
+   :described-by <https://en.wikipedia.org/wiki/Tanbaly> ,
+      <https://whc.unesco.org/en/list/1145> ;
+   :earliest-date -1500 ;
+   :latest-date 1900 ;
+   :in-modern-country-note "Kazakhstan" ;
+   :note "From Wikipedia: “solar deities (sun-heads), disguised personages, archers with wolf masks, worshippers, armed warriors”" ;
+   :representative-latlong-point (43.803333 75.535000) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tamgaly_Sacred_Site.JPG> .
 
 :pylos-combat-agate a :group-of-human-figures ;
    rdfs:label "Pylos Combat Agate" ;
@@ -5007,6 +5030,28 @@
    :representative-latlong-point (49.242222 2.625833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ex-voto_gallo-romain_Halatte_070908_05.jpg> .
 
+:yelykaevo-bronze-maskette a :human-figure ;
+   rdfs:label "Yelykaevo Bronze Maskette" ;
+   :described-by <https://objet.art/as/articles/68245c93032d3bfc397f7fdd> ;
+   :earliest-date 1 ;
+   :latest-date 500 ;
+   :in-modern-country-note "Russia" ;
+   :material-note "White or tin-based bronze" ;
+   :note "From article: “found in 1906 approximately 2 km from the village of Yelykaevo in the Kemerovo region.”" ;
+   :representative-latlong-point (55.4814 86.2783) ; # Yelykaevo village, Kemerovo Oblast (approximate)
+   :thumbnail-image <https://objet.art/api/file/Exhibits/68248d4d032d3bfc397fcea4/gallery/ruPM3TI5LRO1SCzoBL5xi.jpg> .
+
+:tomskaya-pisanitsa-bronze-maskette a :human-figure ;
+   rdfs:label "Bronze Maskette from near Tomskaya Pisanitsa" ;
+   :described-by <https://objet.art/as/articles/68245c93032d3bfc397f7fdd> ;
+   :earliest-date 1 ;
+   :latest-date 600 ;
+   :in-modern-country-note "Russia" ;
+   :material-note "White or tin-based bronze" ;
+   :note "From article: “it was discovered in the 1990s on the right bank of the Pisana River, not far from its mouth, in close proximity of the ancient sanctuary Tomskaya Pisanitsa 50 km northwest of the city of Kemerovo.”" ;
+   :representative-latlong-point (55.6328 85.7456) ; # Tomskaya Pisanitsa rock-art site, Yashkinsky District, Kemerovo Oblast (approximate)
+   :thumbnail-image <https://objet.art/api/file/Exhibits/68248d4d032d3bfc397fcec3/gallery/u_raOqRUSx6ZkUymqenCQ.jpg> .
+
 :san-agustin-megaliths a :group-of-human-figures ;
    rdfs:label "San Agustin Megaliths" ;
    :described-by <https://en.wikipedia.org/wiki/San_Agustín_Archaeological_Park> ;
@@ -5373,6 +5418,17 @@
    :representative-latlong-point (15.263611 39.660556) ;
    :thumbnail-image <https://isaw.nyu.edu/research/io-figures/images/fig-25-terracotta-figurine-from-adulis/@@images/8f3ea8cc-a9b0-4afa-a8ec-516dd1ee8fd1.jpeg> .
 
+:ishim-area-2020-maskette-and-figure a :group-of-human-figures ;
+   rdfs:label "Bronze Maskette and Figure from the Ishim Area (2020 find)" ;
+   :described-by <https://objet.art/as/articles/68245c93032d3bfc397f7fdd> ;
+   :earliest-date 300 ;
+   :latest-date 600 ;
+   :in-modern-country-note "Russia" ;
+   :material-note "White or tin-based bronze" ;
+   :note "From article: “discovered in 2020 in the area of the Ishim ‘treasure’ found in 1910… the repetition of the headdress of the maskette and the human figure found at site is striking.”" ;
+   :representative-latlong-point (56.77 90.45) ; # Ishimka, Bolshe-Uluysky District, Krasnoyarsk Krai (approximate, same find area as No. 3)
+   :thumbnail-image <https://objet.art/api/file/Exhibits/66defdebe5f9ab725c3068cd/gallery/RWHsZFesPu6uRa3tmWt2X.jpg> .
+
 :standing-warrior-costa-veraguis a :human-figure ;
    rdfs:label "Standing Warrior of the Veraquis Culture" ;
    :described-by <https://www.metmuseum.org/art/collection/search/312642> ;
@@ -5567,6 +5623,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-5.612001 -80.499232) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/314492/678549/main-image> .
+
+:mys-lisii-bronze-maskette a :human-figure ;
+   rdfs:label "Bronze Maskette from Mys Lisii on the Vasyugan" ;
+   :described-by <https://objet.art/as/articles/68245c93032d3bfc397f7fdd> ;
+   :earliest-date 500 ;
+   :latest-date 1000 ;
+   :in-modern-country-note "Russia" ;
+   :material-note "White or tin-based bronze" ;
+   :note "From article: “found in 1968 at the Mys Lisii settlement located on the bank of the Varen-Igay River (left tributary of the Vasyugan River), 3 km from the Sredny Vasyugan settlement.”" ;
+   :representative-latlong-point (59.067 78.067) ; # Sredny Vasyugan, Kargasoksky District, Tomsk Oblast (approximate, find spot is ~3 km away on the Varen-Igay River)
+   :thumbnail-image <https://objet.art/api/file/articles/zm0RCpyF_nXWultIxOJvx.jpg> .
 
 :bamiyan-buddhas a :group-of-human-figures ;
    rdfs:label "Bamiyan Buddhas" ;
