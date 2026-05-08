@@ -288,7 +288,7 @@
    :described-by <https://doi.org/10.1038/s41586-024-07541-7> ;
    :approximate-date -49000 ;
    :apparent-gender :unclear ;
-   :note "See H1-H3 in image, which are taken to be anthropomorphic figures engaged with the oversized pig. Approximate location. From linked article abstract: “... we also assign a minimum age of 53.5 ± 2.3 ka to a newly described cave art scene at Leang Karampuang. Painted at least 51,200 years ago, this narrative composition, which depicts human-like figures interacting with a pig, is now the earliest known surviving example of representational art, and visual storytelling, in the world. Our findings show that figurative portrayals of anthropomorphic figures and animals have a deeper origin in the history of modern human (Homo sapiens) image-making than recognized to date, as does their representation in composed scenes.”" ;
+   :note "See H1-H3 in image, which are taken to be anthropomorphic figures engaged with the oversized pig. Approximate location. From linked article abstract: “…we also assign a minimum age of 53.5 ± 2.3 ka to a newly described cave art scene at Leang Karampuang. Painted at least 51,200 years ago, this narrative composition, which depicts human-like figures interacting with a pig, is now the earliest known surviving example of representational art, and visual storytelling, in the world. Our findings show that figurative portrayals of anthropomorphic figures and animals have a deeper origin in the history of modern human (Homo sapiens) image-making than recognized to date, as does their representation in composed scenes.”" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-5.028238 119.758602) ;
    :thumbnail-image <https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41586-024-07541-7/MediaObjects/41586_2024_7541_Fig3_HTML.png?as=webp> .
@@ -361,7 +361,7 @@
    :latest-date -27000 ;
    :material-note "Ceramic" ;
    :in-modern-country-note "Czech Republic" ;
-   :note "Adapted from Wikipedia: “ ... a ceramic statuette of a nude female figure dated to 31,000–27,000 years ago (Gravettian industry). It was found at the Paleolithic site Dolní Věstonice in the Moravian basin south of Brno, at the base of Děvín Mountain in what is today the Czech Republic.”" ;
+   :note "Adapted from Wikipedia: “ …a ceramic statuette of a nude female figure dated to 31,000–27,000 years ago (Gravettian industry). It was found at the Paleolithic site Dolní Věstonice in the Moravian basin south of Brno, at the base of Děvín Mountain in what is today the Czech Republic.”" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (48.877778 16.652222) ; # ll for Dolní Věstonice
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vestonicka_venuse_edit.jpg> , 
@@ -375,7 +375,7 @@
    :earliest-date -29000 ;
    :latest-date -27000 ;
    :material-note "Oolitic limestone" ;
-   :note "Adapted from Wikipedia: ” ... an 11.1-centimetre-tall (4.4 in) [female] figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 from an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria. [It] is carved from an oolitic limestone that is not local to the area, and tinted with red ochre.”" ;
+   :note "Adapted from Wikipedia: ” …an 11.1-centimetre-tall (4.4 in) [female] figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 from an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria. [It] is carved from an oolitic limestone that is not local to the area, and tinted with red ochre.”" ;
    :in-modern-country-note "Austria" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (48.3225 15.404722) ; # ll for Willendorf, Austria
@@ -410,7 +410,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Brassempouy> ;
    :approximate-date -25000 ;
    :material-note "Mammoth ivory" ;
-   :note "Adapted from Wikipedia: “ ... a fragmentary ivory figurine from the Upper Palaeolithic, apparently broken from a larger figure at some time unknown. It was discovered in a cave at Brassempouy, France in 1894.”" ;
+   :note "Adapted from Wikipedia: “ …a fragmentary ivory figurine from the Upper Palaeolithic, apparently broken from a larger figure at some time unknown. It was discovered in a cave at Brassempouy, France in 1894.”" ;
    :in-modern-country-note "France" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (43.6328 -0.6936) ; # ll for Brassempouy, France
@@ -433,7 +433,7 @@
    :earliest-date -23000 ;
    :latest-date -22000 ;
    :material-note "Limestone; red ochre paint." ;
-   :note "Adapted from Wikipedia: “... an 18.11-inch-high (46.0-centimetre) limestone bas-relief of a nude woman. It is painted with red ochre and was carved into the limestone of a rock shelter (Abri de Laussel) in the commune of Marquay, in the Dordogne department of south-western France.”" ;
+   :note "Adapted from Wikipedia: “…an 18.11-inch-high (46.0-centimetre) limestone bas-relief of a nude woman. It is painted with red ochre and was carved into the limestone of a rock shelter (Abri de Laussel) in the commune of Marquay, in the Dordogne department of south-western France.”" ;
    :in-modern-country-note "France" ;
    :art-historical-culture-or-tradition :gravettian ;
    :representative-latlong-point (44.9447 1.1347) ; # ll for Marquay, Dordogne
@@ -456,7 +456,7 @@
    :period-note "Mal'ta-Buret' Culture (Siberia)" ;
    :earliest-date -21000 ;
    :latest-date -20500 ;
-   :note "Adapted from Wikipedia: “ ... 29 figurines altogether. They are about 23,000 years old and stem from the Gravettian. Most of these statuettes show stylized clothes. Quite often the face is depicted. They were discovered at Mal'ta, at the Angara River, near Lake Baikal in Irkutsk Oblast, Siberia ...”" ;
+   :note "Adapted from Wikipedia: “ …29 figurines altogether. They are about 23,000 years old and stem from the Gravettian. Most of these statuettes show stylized clothes. Quite often the face is depicted. They were discovered at Mal'ta, at the Angara River, near Lake Baikal in Irkutsk Oblast, Siberia …”" ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (52.850045 103.517383) ;
    :art-historical-culture-or-tradition :mal-ta-buret-culture ;
@@ -500,7 +500,7 @@
     <https://en.wikipedia.org/wiki/Laugerie-Basse> ;
    :earliest-date -17000 ;
    :latest-date -14000 ;
-   :note "Adapted from Wikipedia: “ ... headless, footless, armless but with a strongly incised vulva. The figurine is eight centimetres tall and carved from ivory.”" ;
+   :note "Adapted from Wikipedia: “ …headless, footless, armless but with a strongly incised vulva. The figurine is eight centimetres tall and carved from ivory.”" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (44.570278 0.595556) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venus_of_Impudique_-_1.jpg> .
@@ -602,7 +602,7 @@
    rdfs:label "‘Datu Saman’ Style Figures from the Sangkulirang–Mangkalihat Peninsula" ;
    :described-by <https://doi.org/10.1038/s41586-018-0679-9> ;
    :approximate-date -11000 ;
-   :note "The depiction could be earlier. From article abstract: “... rare Pleistocene depiction of a human figure—also coloured dark purple—has a minimum date of 13.6 ka.”" ;
+   :note "The depiction could be earlier. From article abstract: “…rare Pleistocene depiction of a human figure—also coloured dark purple—has a minimum date of 13.6 ka.”" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (0.943212 118.872765) ;
    :thumbnail-image <https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41586-018-0679-9/MediaObjects/41586_2018_679_Fig6_ESM.jpg?as=webp> .
@@ -700,7 +700,7 @@
    :described-by <https://en.wikipedia.org/wiki/Magura_Cave> ;
    :earliest-date -10000 ;
    :latest-date -3000 ;
-   :note "From Wikipedia: “Cave paintings dating from the Epipaleolithic, late Neolithic, Eneolithic and early Bronze Age decorate some of the cave's walls. The paintings have been estimated to be made between 10.000 and 8.000 years ago. The drawings represent important events of the society that had occupied the Magura Cave: religious ceremonies, hunting scenes and depictions of deities ...”" ;
+   :note "From Wikipedia: “Cave paintings dating from the Epipaleolithic, late Neolithic, Eneolithic and early Bronze Age decorate some of the cave's walls. The paintings have been estimated to be made between 10.000 and 8.000 years ago. The drawings represent important events of the society that had occupied the Magura Cave: religious ceremonies, hunting scenes and depictions of deities …”" ;
    :in-modern-country-note "Bulgaria" ;
    :representative-latlong-point (43.727778 22.582778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Magura_-_drawings.jpg> .
@@ -794,7 +794,7 @@
    :approximate-date -9000 ;
    :in-modern-country-note "Turkey" ;
    :materia-note "Sandstone, obsidian (eyes)" ;
-   :note "From Wikipedia: ”The Urfa man, also known as the Balıklıgöl statue, is an ancient human shaped statue found during excavations in Balıklıgöl near Urfa, in the geographical area of Upper Mesopotamia, in the southeast of modern Turkey. It is dated c. 9000 BC to the period of the Pre-Pottery Neolithic... / The statue is nearly 1.90 meters tall.[9] The eyes form deep holes, in which are set segments of black obsidian.[3] It features a V-shaped collar or necklace. The hands are clasped in front, covering the genitals.”" ;
+   :note "From Wikipedia: ”The Urfa man, also known as the Balıklıgöl statue, is an ancient human shaped statue found during excavations in Balıklıgöl near Urfa, in the geographical area of Upper Mesopotamia, in the southeast of modern Turkey. It is dated c. 9000 BC to the period of the Pre-Pottery Neolithic…/ The statue is nearly 1.90 meters tall.[9] The eyes form deep holes, in which are set segments of black obsidian.[3] It features a V-shaped collar or necklace. The hands are clasped in front, covering the genitals.”" ;
    :representative-latlong-point (37.158333 38.791667) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_man.jpg> .
@@ -1066,7 +1066,7 @@
    rdfs:label "Platform with Human Heads from Sefertepe" ;
    :described-by <https://www.turkiyetoday.com/culture/8500-year-old-carved-faces-tiny-double-faced-bead-reshape-sefertepes-role-in-tas-tepe-3210504> ;
    :approximate-date -6500 ;
-   :note "From Turkiye Today article: “... stone block that carries two different human faces side by side. According to the excavation team, one face is rendered in high relief, while the other appears in low relief, so the two images emerge from the same block with different depths.”" ;
+   :note "From Turkiye Today article: “…stone block that carries two different human faces side by side. According to the excavation team, one face is rendered in high relief, while the other appears in low relief, so the two images emerge from the same block with different depths.”" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.181603 39.495559) ;
    :thumbnail-image <https://img.turkiyetoday.com/images/2025/11/28/8500-year-old-carved-faces-and-tiny-double-faced-bead-reshape-sefertepes-role-in-tas-3210504.jpeg> .
@@ -1162,7 +1162,7 @@
    :described-by <https://www.anatolianarchaeology.net/before-the-hittites-8000-year-old-rock-art-discovered-in-central-anatolia/> ;
    :approximate-date -6000 ;
    :in-modern-country-note "Turkey" ;
-   :note "Approximate location. From linked article: “... human-shaped motifs rendered in red pigment on the inner rock face, interpreted as one of the earliest symbolic scenes in Central Anatolia.”" ;
+   :note "Approximate location. From linked article: “…human-shaped motifs rendered in red pigment on the inner rock face, interpreted as one of the earliest symbolic scenes in Central Anatolia.”" ;
    :representative-latlong-point (38.304952 35.554091) ;
    :thumbnail-image <https://www.anatolianarchaeology.net/wp-content/uploads/2025/11/Before-the-Hittites-8000-Year-Old-Rock-Art-Discovered-in-Central-Anatolia.webp> .
 
@@ -1195,7 +1195,7 @@
    :earliest-date -5800 ;
    :latest-date -5200 ;
    :material-note "Ceramic" ;
-   :note "From museum website: “... anthropomorphic model of a house with a rectangular base, with inverted T-shaped openings on four sides. The roof is set in two sides topped with chimney. The chimney is presented in the form of a head with a realistic presentation of the eyes, nose and mouth ...”" ;
+   :note "From museum website: “…anthropomorphic model of a house with a rectangular base, with inverted T-shaped openings on four sides. The roof is set in two sides topped with chimney. The chimney is presented in the form of a head with a realistic presentation of the eyes, nose and mouth …”" ;
    :in-modern-country-note "Northern Macedonia" ;
    :representative-latlong-point (40.937159 21.373550) ;
    :thumbnail-image <https://i0.wp.com/muzejbitola.mk/wp-content/uploads/2019/01/zrtvenik.jpg?w=1809&ssl=1> .
@@ -1254,7 +1254,7 @@
    :described-by <https://en.wikipedia.org/wiki/Thinker_of_Hamangia> ;
    :approximate-date -5000 ;
    :material-note "Ceramic" ;
-   :note "From Wikipedia: “UUnearthed in 1956 near Cernavodă, in southeastern Romania, these ceramic figures were discovered within a vast cemetery belonging to the Hamangia culture. This culture had a tradition of burying their deceased in designated areas known as necropolises, often accompanied by funerary items ... figurines like The Thinker. The Thinker and its companion, The Sitting Woman, were found within a necropolis containing approximately 400 graves." ;
+   :note "From Wikipedia: “UUnearthed in 1956 near Cernavodă, in southeastern Romania, these ceramic figures were discovered within a vast cemetery belonging to the Hamangia culture. This culture had a tradition of burying their deceased in designated areas known as necropolises, often accompanied by funerary items …figurines like The Thinker. The Thinker and its companion, The Sitting Woman, were found within a necropolis containing approximately 400 graves." ;
    :in-modern-country-note "Romania" ;
    :representative-latlong-point (44.338056 28.033611) ; # ll for Cernavoda, Romania
    :art-historical-culture-or-tradition :hamangia-culture ;
@@ -1288,7 +1288,7 @@
    :earliest-date -5000 ;
    :latest-date -4000 ;
    :material-note "Marble" ;
-   :note "Adapted from Wikipedia: “...marble figure from the Aegean Neolithic period from Saliagos between Paros and Antiparos. Missing head and left shoulder. Found during the excavations of Saliagos in 1964/65 by John Davies Evans and Colin Renfrew.”" ;
+   :note "Adapted from Wikipedia: “…marble figure from the Aegean Neolithic period from Saliagos between Paros and Antiparos. Missing head and left shoulder. Found during the excavations of Saliagos in 1964/65 by John Davies Evans and Colin Renfrew.”" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.048 25.094) ; # Saliagos
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PAM_Pomos_2857.jpg> .
@@ -1331,7 +1331,7 @@
    :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-6807> ;
    :earliest-date -5000 ;
    :latest-date -3000 ;
-   :note "From BM Website: “...painted rock art on a rock face showing eight human figures. To the left there are five human figures partially outlined in red, partially defined by series of red dots. Figures are depicted upright, facing front or right, with arms and legs in different positions (splayed, outstretched down or to the left).”" ;
+   :note "From BM Website: “…painted rock art on a rock face showing eight human figures. To the left there are five human figures partially outlined in red, partially defined by series of red dots. Figures are depicted upright, facing front or right, with arms and legs in different positions (splayed, outstretched down or to the left).”" ;
    :in-modern-country-note "Chad" ;
    :representative-latlong-point (17.038890 21.862235) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2015_3/13_15/a3ea69af_4d22_4a65_94ff_a45a00ffeb2c/mid_CHAENP0210005.jpg> .
@@ -1361,7 +1361,7 @@
    :described-by <https://en.wikipedia.org/wiki/Petroglyphs_of_Lake_Onega_and_the_White_Sea> ;
    :earliest-date -5000 ;
    :latest-date -2000 ;
-   :note "From Wikipedia: “ ...  cluster at the White Sea (Belomorsky District) has 11 sites with over 3400 figures, and according to the Permanent Delegation of the Russian Federation to UNESCO, they are clearly aligned towards hunting ...”" ;
+   :note "From Wikipedia: “ … cluster at the White Sea (Belomorsky District) has 11 sites with over 3400 figures, and according to the Permanent Delegation of the Russian Federation to UNESCO, they are clearly aligned towards hunting …”" ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (61.799916 35.893820) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Belomorsk_petroglyphs18.jpg> .
@@ -1565,7 +1565,7 @@
    :approximate-date -4000 ;
    :material-note "Limestone" ;
    :in-modern-country-note "Poland" ;
-   :note "Mapped to approximate point. From Archaeology Magazine website: “ ... the figure is rather simplistically crafted and has no discernible facial features. The lower limbs seem to have been created by striking the stone with a hard tool.”" ;
+   :note "Mapped to approximate point. From Archaeology Magazine website: “ …the figure is rather simplistically crafted and has no discernible facial features. The lower limbs seem to have been created by striking the stone with a hard tool.”" ;
    :representative-latlong-point (54.176111 15.576111) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/06/News-20250620-Poland-Kolobrzeg-Venus.jpg> .
 
@@ -1574,7 +1574,7 @@
    :described-by <https://en.wikipedia.org/wiki/Suffering_Man_Statue_(Saudi_Arabia)> ;
    :approximate-date -4000 ;
    :material-note "Stone" ;
-   :note "From Wikipedia: “... statue comprises a human head and torso. It stands at 75 cm high, 25 cm wide and 7 cm deep.”" ;
+   :note "From Wikipedia: “…statue comprises a human head and torso. It stands at 75 cm high, 25 cm wide and 7 cm deep.”" ;
    :in-modern-country-note "Saudi Arabia" ;
    :representative-latlong-point (25.869334 42.050495 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:رجل_المعاناة_(قطعة_أثرية).png> .
@@ -1754,7 +1754,7 @@
    :described-by <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> ;
    :earliest-date -3600 ;
    :latest-date -3500 ;
-   :note "From the Wikimedia Commons page, itself quoting a fuller description: “Tomb 16 is a large tomb of the Naqada IC–IIA period into which a bricklined tomb of the Naqada IIIA2 period had later been inserted in what now appears to be an act of respectful renovation rather than usurpation (Hendrickx 2008: fig. 5). (...) In all probability, the two famous ceramic masks also originate from this tomb (Fig. 2). Some fragments were found in the tomb fill, although the majority were collected in surface and subsurface levels to the west and especially to the south, where the beard to the smaller mask was recovered in 2010.”" ;
+   :note "From the Wikimedia Commons page, itself quoting a fuller description: “Tomb 16 is a large tomb of the Naqada IC–IIA period into which a bricklined tomb of the Naqada IIIA2 period had later been inserted in what now appears to be an act of respectful renovation rather than usurpation (Hendrickx 2008: fig. 5). (…) In all probability, the two famous ceramic masks also originate from this tomb (Fig. 2). Some fragments were found in the tomb fill, although the majority were collected in surface and subsurface levels to the west and especially to the south, where the beard to the smaller mask was recovered in 2010.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (25.097222 32.779444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_head_from_Hierakonpolis._Probably_originating_from_Tomb_16_complex_(found_in_the_vicinity),_Naqada_IC-Naqada_IIA_(circa_3600-3500_BCE)._Egyptian_Museum,_Cairo.jpg> . 
@@ -1878,7 +1878,7 @@
    :earliest-date -3200 ;
    :latest-date -3000 ;
    :material-note "Gold foil" ;
-   :note "From Wikipedia: “... gold fragments formed two statues of naked men with lapis lazuli eyes. The statuettes represent standing naked males. The high is 60cm for the tallest, and 30cm for the other one. The statues featured “large protruding ears, unnaturally large phalluses, and carefully modeled fingernails and toenails”. The lapis lazuli came from what is now modern day Afghanistan. The figurines represent bald individuals, with no facial hair and large protruding ears. They are equipped with very large phallus sheaths, one of them decorated with a carved band around it. The larger figure also has a necklace. The core of the statuettes (now decomposed) was made of wood, which was covered with thin sheets of gold fastened by 140 golden rivets.”" ;
+   :note "From Wikipedia: “…gold fragments formed two statues of naked men with lapis lazuli eyes. The statuettes represent standing naked males. The high is 60cm for the tallest, and 30cm for the other one. The statues featured “large protruding ears, unnaturally large phalluses, and carefully modeled fingernails and toenails”. The lapis lazuli came from what is now modern day Afghanistan. The figurines represent bald individuals, with no facial hair and large protruding ears. They are equipped with very large phallus sheaths, one of them decorated with a carved band around it. The larger figure also has a necklace. The core of the statuettes (now decomposed) was made of wood, which was covered with thin sheets of gold fastened by 140 golden rivets.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (30.870556 31.6025) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tell_el-Farkha_golden_figurine_(60cm_tall).jpg> .
@@ -1889,7 +1889,7 @@
    :earliest-date -3200 ;
    :latest-date -2200 ;
    :material-note "Stone" ;
-   :note "Translated and adapted from Spanish Wikipedia; “The Idol of Garrovillas de Alconetar is a Chalcolithic, anthropomorphic with prominent eyes plaque idol... roughly rectangular, flat stone slab measuring 16.30 x 7.90 cm and 1.40 cm thick. On the obverse, a face is visible, formed by two perforations for eyes, eyebrows, and a nose created by indentations representing the eye sockets and cheeks. The lines on what would be the cheeks have been interpreted as facial tattoos. Below, two arms and what has been interpreted as the pubic triangle are visible. The reverse has zigzag lines, possibly representing a hairstyle.”" ;
+   :note "Translated and adapted from Spanish Wikipedia; “The Idol of Garrovillas de Alconetar is a Chalcolithic, anthropomorphic with prominent eyes plaque idol…roughly rectangular, flat stone slab measuring 16.30 x 7.90 cm and 1.40 cm thick. On the obverse, a face is visible, formed by two perforations for eyes, eyebrows, and a nose created by indentations representing the eye sockets and cheeks. The lines on what would be the cheeks have been interpreted as facial tattoos. Below, two arms and what has been interpreted as the pubic triangle are visible. The reverse has zigzag lines, possibly representing a hairstyle.”" ;
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (39.7131229 -6.5494671) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Garrovillas_de_Alconétar-Idolo_oculado_de_arenisca.jpg> .
@@ -2089,7 +2089,7 @@
    :described-by <https://en.wikipedia.org/wiki/Dhambalin> ;
    :earliest-date -3000 ;
    :latest-date -1000 ;
-   :note "From Wikipedia: “The polychrome paintings of the Neolithic or proto-historic Arabian–Ethiopian Style, depict the first sheep paintings in Somali archaeology and also many of antelopes, dogs, giraffes, snakes and a turtle with and also without humans. There are eight to ten people represented, usually as part of hunting scenes, with bow and arrow; they are surrounded by wildlife. One of the hunters is depicted with hair down and with headgear, accompanied by two dogs. Another hunter sits on an animal, possibly a horse...”" ;
+   :note "From Wikipedia: “The polychrome paintings of the Neolithic or proto-historic Arabian–Ethiopian Style, depict the first sheep paintings in Somali archaeology and also many of antelopes, dogs, giraffes, snakes and a turtle with and also without humans. There are eight to ten people represented, usually as part of hunting scenes, with bow and arrow; they are surrounded by wildlife. One of the hunters is depicted with hair down and with headgear, accompanied by two dogs. Another hunter sits on an animal, possibly a horse…”" ;
    :in-modern-country-note "Somaliland" ;
    :representative-latlong-point (10.399768 45.900335) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Human_figure_wearing_headgear_and_carrying_bow_and_arrow,_hunting_with_dogs_in_Dhambalin.jpg> .
@@ -2180,7 +2180,7 @@
    :earliest-date -2700 ;
    :latest-date  -2300 ;
    :material-note "Marble" ;
-   :note "From NAM website: “... male harpist sits on an elegant throne holding a large musical instrument resembling a harp or lyre in his right hand. His nose and penis are shown in relief, as on most Cycladic figurines. It was found in a tomb together with the figurine of a flutist; both artefacts were probably made by the same craftsman.”" ;
+   :note "From NAM website: “…male harpist sits on an elegant throne holding a large musical instrument resembling a harp or lyre in his right hand. His nose and penis are shown in relief, as on most Cycladic figurines. It was found in a tomb together with the figurine of a flutist; both artefacts were probably made by the same craftsman.”" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (36.887699 25.603557) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harpist_of_Keros,_NAMA3908,_Athens,_Greece1.jpg> .
@@ -2347,7 +2347,7 @@
    :earliest-date -2300 ;
    :latest-date -1750 ;
    :material-note "Ceramic" ;
-   :note "From MAP Academy website: “A potsherd dating back to the Mature Phase of the Harappan Civilisation, the Dancing Girl was discovered at Bhirrana in present-day Haryana in 2004–05. The visual characteristics of the Dancing Girl from Bhirrana, especially her stance, the tilt of her head and the positioning of her arms bear a close resemblance to the Dancing Girl from Mohenjo-Daro...”" ;
+   :note "From MAP Academy website: “A potsherd dating back to the Mature Phase of the Harappan Civilisation, the Dancing Girl was discovered at Bhirrana in present-day Haryana in 2004–05. The visual characteristics of the Dancing Girl from Bhirrana, especially her stance, the tilt of her head and the positioning of her arms bear a close resemblance to the Dancing Girl from Mohenjo-Daro…”" ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (29.548194 75.549479) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dancing_Girl_engraving_on_a_potsherd.jpg> .
@@ -2437,7 +2437,7 @@
    :earliest-date -2200 ;
    :latest-date -1800 ;
    :material-note "Copper alloy, silver incrustations" ;
-   :note "Mapped location very approxmiate. Object in Ligabue collection, which seems to not provide discrete landing page. From the catalog for Idols; The Power of Images (p. 247, no. 92): “... male figure wearing a long narrow mantel that covers his left arm, leaving his right arm free to rest on his thighs, is seated on a small mat. His face, with short cut beard and bushy eyebrows, looks wise and peaceful, lightened by a kind smile. The short hair is massed on the forehead and framed by two thin dreadlocks that spring in high relief from his temples”" ;
+   :note "Mapped location very approxmiate. Object in Ligabue collection, which seems to not provide discrete landing page. From the catalog for Idols; The Power of Images (p. 247, no. 92): “…male figure wearing a long narrow mantel that covers his left arm, leaving his right arm free to rest on his thighs, is seated on a small mat. His face, with short cut beard and bushy eyebrows, looks wise and peaceful, lightened by a kind smile. The short hair is massed on the forehead and framed by two thin dreadlocks that spring in high relief from his temples”" ;
    :in-modern-country-note "Iran (eastern)?" ;
    :representative-latlong-point (36.250913 60.769207) ;
    :thumbnail-image <https://www.artribune.com/wp-content/uploads/2018/09/ASCIAC1.jpg> .
@@ -2448,7 +2448,7 @@
    :earliest-date -2200 ;
    :latest-date -1700 ;
    :material-note "Steatite or chlorite, alabaster" ;
-   :note "From Met Museum website: “... typical abstract form with an armless body and legs represented by a protruding ledge.”" ;
+   :note "From Met Museum website: “…typical abstract form with an armless body and legs represented by a protruding ledge.”" ;
    :in-modern-country-note "Turkmenistan or Neighboring" ;
    :representative-latlong-point (37.30111 64.15531) ;
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
@@ -2549,7 +2549,7 @@
    :earliest-date -2000 ;
    :latest-date -1900 ;
    :material-note "Steatite" ;
-   :note "From Wikipedia: “... sculpture shows a neatly bearded man with a fillet around his head, possibly all that is left of a once-elaborate hairstyle or headdress; his hair is combed back. He wears an armband, and a cloak with drilled trefoil, single circle and double circle motifs, which show traces of red. His eyes might have originally been inlaid.[6] The sculpture is incomplete, broken off at the bottom ...”" ;
+   :note "From Wikipedia: “…sculpture shows a neatly bearded man with a fillet around his head, possibly all that is left of a once-elaborate hairstyle or headdress; his hair is combed back. He wears an armband, and a cloak with drilled trefoil, single circle and double circle motifs, which show traces of red. His eyes might have originally been inlaid.[6] The sculpture is incomplete, broken off at the bottom …”" ;
    :in-modern-country-note "Pakistan" ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :representative-latlong-point (27.335167 68.143889) ;
@@ -2603,7 +2603,7 @@
    :described-by <https://archeology.uark.edu/artifacts/stone-figurine/> ;
    :earliest-date -2000 ;
    :latest-date -700 ;
-   :note "From U. of Arkansas website: “... 72mm in length with a maximum width of 42mm and average thickness of about 11mm. It has a rectangular cross section. The object is made of a dark grey shale or slate with a reddish-brown patina on its surface from weathering.”" ;
+   :note "From U. of Arkansas website: “…72mm in length with a maximum width of 42mm and average thickness of about 11mm. It has a rectangular cross section. The object is made of a dark grey shale or slate with a reddish-brown patina on its surface from weathering.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (34.262373 -92.025230) ;
    :note "Findspot is approximate: near Pine Bluff, Arkansas." ;
@@ -2678,7 +2678,7 @@
       <https://www.archaeology.wiki/blog/2015/06/11/caral-civilization-figurines-unearthed-peru/> ;
    :approximate-date -1800 ;
    :material-note "Ceramic" ;
-   :note "From archaeology.wiki: “ ... two female clay heads were found at the site. The heads were wrapped in tissue and were covered in yellow, blue and orange feathers – possibly from macaws.”" ;
+   :note "From archaeology.wiki: “ …two female clay heads were found at the site. The heads were wrapped in tissue and were covered in yellow, blue and orange feathers – possibly from macaws.”" ;
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-11.022610 -77.631640 ) ;
    :thumbnail-image <https://www.archaeology.wiki/wp-content/uploads/2015/06/Peru_3.jpg> .
@@ -2709,7 +2709,7 @@
    :described-by <https://doi.org/10.1016/j.jas.2020.105315> ;
    :earliest-date -1900 ;
    :latest-date -1200 ;
-   :note "From linked article: “... a series of five small black anthropomorphs. The image is heavily obscured by accretions. Its upper torso is badly spalled, and the remaining imagery is fragile.”" ;
+   :note "From linked article: “…a series of five small black anthropomorphs. The image is heavily obscured by accretions. Its upper torso is badly spalled, and the remaining imagery is fragile.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (29.8083 -101.5502) ;
    :thumbnail-image <https://ars.els-cdn.com/content/image/1-s2.0-S0305440320302351-gr5.jpg> .
@@ -2722,7 +2722,7 @@
    :earliest-date -1800 ;
    :latest-date -1500 ;
    :material-note "Ceramic" ;
-   :note "Illustration is from fig. 3 in Antiquity article. From article: “In Phase I figurines, like other cultural remains, are rare due to the high mobility of the pastoral groups. The figurines are small and show very simple and stylised, asexual anthropomorphic representations...” (p. 426)" ;
+   :note "Illustration is from fig. 3 in Antiquity article. From article: “In Phase I figurines, like other cultural remains, are rare due to the high mobility of the pastoral groups. The figurines are small and show very simple and stylised, asexual anthropomorphic representations…” (p. 426)" ;
    :in-modern-country-note "Nigeria" ;
    :representative-latlong-point (12.127645 13.162662) .
 
@@ -2839,7 +2839,7 @@
    :earliest-date -1500 ;
    :latest-date -800 ;
    :material-note "Ceramic" ;
-   :note "Illustration is from fig. 4 in Antiquity article. From article: “Phase II figurines are quite similar to those of the preceding phase, thus belonging to the same tradition. Fragments of anthropomorphic figurines are rare in comparison to zoomorphic types. While the two human figurines of Phase I are faceless, those of Phase II show anatomical details like eyes, nose, mouth and ears (Figure 4: 1-3 ), and even indicate hairstyles or head gear...” (p. 426)" ;
+   :note "Illustration is from fig. 4 in Antiquity article. From article: “Phase II figurines are quite similar to those of the preceding phase, thus belonging to the same tradition. Fragments of anthropomorphic figurines are rare in comparison to zoomorphic types. While the two human figurines of Phase I are faceless, those of Phase II show anatomical details like eyes, nose, mouth and ears (Figure 4: 1-3 ), and even indicate hairstyles or head gear…” (p. 426)" ;
    :in-modern-country-note "Nigeria" ;
    :representative-latlong-point (12.256739 13.105106) .
 
@@ -2870,7 +2870,7 @@
    :approximate-date -1450 ;
    :in-modern-country-note "Greece" ;
    :material-note "Agate" ;
-   :note "From Wikipedia: “... a Minoan sealstone of the Mycenaean era, likely manufactured in Late Minoan Crete. It depicts two warriors engaged in hand-to-hand combat, with a third warrior lying on the ground. It was recovered in 2015 during the excavation of the Griffin Warrior Tomb near the Palace of Nestor in Pylos and is dated to about 1450 BCE.”" ;
+   :note "From Wikipedia: “…a Minoan sealstone of the Mycenaean era, likely manufactured in Late Minoan Crete. It depicts two warriors engaged in hand-to-hand combat, with a third warrior lying on the ground. It was recovered in 2015 during the excavation of the Griffin Warrior Tomb near the Palace of Nestor in Pylos and is dated to about 1450 BCE.”" ;
    :representative-latlong-point (37.028222 21.695944) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Pylos_Combat_Agate.jpg/330px-Pylos_Combat_Agate.jpg> .
 
@@ -3010,7 +3010,7 @@
       <https://traffickingculture.org/encyclopedia/case-studies/el-manati-wooden-olmec-busts/> ;
    :approximate-date -1200 ;
    :material-note "Wood" ;
-   :note "From Wikiedpia: “Of particular note are 37 wooden busts or sculptures recovered from the bogs in 1989 by INAH archaeologists...These busts were unusually well-preserved, owing to the anaerobic conditions of their interment and a stable water temperature that impeded microbial decay. Samples from two of these busts produced Carbon-14 dating results equivalent to a date of around 1200 BCE.”" ;
+   :note "From Wikiedpia: “Of particular note are 37 wooden busts or sculptures recovered from the bogs in 1989 by INAH archaeologists…These busts were unusually well-preserved, owing to the anaerobic conditions of their interment and a stable water temperature that impeded microbial decay. Samples from two of these busts produced Carbon-14 dating results equivalent to a date of around 1200 BCE.”" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (17.622427 -94.641552) ;
    :thumbnail-image <https://traffickingculture.org/app/uploads/2013/02/El_Manati_Wooden_Busts-by-Ken-Garrett.jpg> .
@@ -3193,7 +3193,7 @@
    :earliest-date -1000 ;
    :latest-date -600 ;
    :material-note "Serpentine" ;
-   :note "From Wikipedia: “55 centimetres (22 in) greenstone figure of a youth holding a limp were-jaguar baby. Found in the State of Veracruz, Mexico...”" ;
+   :note "From Wikipedia: “55 centimetres (22 in) greenstone figure of a youth holding a limp were-jaguar baby. Found in the State of Veracruz, Mexico…”" ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (17.434444 -95.026667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Señor_de_Las_Limas_(cropped).jpg> .
@@ -3305,7 +3305,7 @@
    :earliest-date -900 ;
    :latest-date -500 ;
    :material-note "Bronze" ;
-   :note "From Italian Wikipedia: “Presso la grotta di Sa Domu 'e s'Orcu sono stati rinvenuti manufatti di eccezionale valore, tra cui il famoso bronzetto nuragico denominato La madre dell'ucciso ...”" ;
+   :note "From Italian Wikipedia: “Presso la grotta di Sa Domu 'e s'Orcu sono stati rinvenuti manufatti di eccezionale valore, tra cui il famoso bronzetto nuragico denominato La madre dell'ucciso …”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (40.112917 9.514595) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronzetto_Nuragico_21.JPG> .
@@ -3453,7 +3453,7 @@
       <https://smarthistory.org/olmec-masks-masquerade/> ;
    :approximate-date -800 ;
    :material-note "Wood, jade inlay" ;
-   :note "From Smarthistory website: “... wooden mask recovered in 1931 from the Cañón de la Mano in the state of Guerrero, now located in the American Museum of Natural History. The wood of the mask is remarkably preserved. Its smoothly polished surfaces were incised with curvilinear designs and inlaid with pieces of blue-green jade.”";
+   :note "From Smarthistory website: “…wooden mask recovered in 1931 from the Cañón de la Mano in the state of Guerrero, now located in the American Museum of Natural History. The wood of the mask is remarkably preserved. Its smoothly polished surfaces were incised with curvilinear designs and inlaid with pieces of blue-green jade.”";
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (18.410882 -99.524567);
    :thumbnail-image <https://lbry-web-007.amnh.org/digital/files/thumbnails/0f2904fe1cb5e4e5cc14072ecf6c9d3b.jpg> .
@@ -3646,7 +3646,7 @@
    <https://www.britishmuseum.org/collection/object/G_1889-0418-1> ;
    :approximate-date -640 ;
    :in-modern-country-note "Greece" ;
-   :note "Findspot not known, mapped at Corinth. From BM website: “Pottery aryballos decorated in miniature with eighteen warriors, a hare-hunt and a horse-race. The warriors are locked in combat, thrusting their spears, jostling for position, or falling to the ground. Each warrior is armed with plumed helmet, spear and blazoned shield. Some are streaked with blood. ... ccording to the publication in JHS 11 (1890), the aryballos was acquired by Macmillan at Thebes; the British Museum Register, however, has a handwritten note in the margin stating that the aryballos was bought by Macmillan ‘on the platform at Corinth station’”" ;
+   :note "Findspot not known, mapped at Corinth. From BM website: “Pottery aryballos decorated in miniature with eighteen warriors, a hare-hunt and a horse-race. The warriors are locked in combat, thrusting their spears, jostling for position, or falling to the ground. Each warrior is armed with plumed helmet, spear and blazoned shield. Some are streaked with blood. …ccording to the publication in JHS 11 (1890), the aryballos was acquired by Macmillan at Thebes; the British Museum Register, however, has a handwritten note in the margin stating that the aryballos was bought by Macmillan ‘on the platform at Corinth station’”" ;
    :material-note "ceramic" ;
    :representative-latlong-point (37.938611 22.927222) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Macmillan_aryballos.jpg> .
@@ -3689,7 +3689,7 @@
    :described-by <https://en.wikipedia.org/wiki/Kouros_of_Apollonas> ;
    :approximate-date -600 ;
    :material-note "Marble" ;
-   :note "From Wikipedia: “... 10.7 meter tall unfinished statue of light grey Naxian marble with a weight of around 80 tonnes. It is located in an ancient quarry near Apollonas [de], a small town in the northern part of Naxos”" ;
+   :note "From Wikipedia: “…10.7 meter tall unfinished statue of light grey Naxian marble with a weight of around 80 tonnes. It is located in an ancient quarry near Apollonas [de], a small town in the northern part of Naxos”" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (37.179167 25.547633) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cyclades_Naxos_Apollonas_Kouros_-_panoramio.jpg>  .
@@ -3852,7 +3852,7 @@
    :latest-date -490 ;
    :in-modern-country-note "Greece" ;
    :material-note "Parian marble" ;
-   :note "From Wikipedia: “Both the west (earlier, about 490 BC) and the east (later, about 480 BC) had Athena at the centre of a fight at Troy. The west pediment depicts the ‘second’ sack of Troy by the Achaeans led by Agamemnon; the east, a sack a generation earlier led by Herakles ... Each pediment had Athena at the centre, with groups of combatants, fallen warriors, and arms filling the decreasing angles of the pediments.”" ;
+   :note "From Wikipedia: “Both the west (earlier, about 490 BC) and the east (later, about 480 BC) had Athena at the centre of a fight at Troy. The west pediment depicts the ‘second’ sack of Troy by the Achaeans led by Agamemnon; the east, a sack a generation earlier led by Herakles …Each pediment had Athena at the centre, with groups of combatants, fallen warriors, and arms filling the decreasing angles of the pediments.”" ;
    :representative-latlong-point (37.754722 23.533333) ; # Temple of Aphaia, Aegina (find-spot)
    # :art-historical-culture-or-tradition :archaic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Panorama_of_the_west_pediment_of_the_temple_of_Aphaia_in_the_Glyptothek_Munich_n1.jpg> .
@@ -3862,7 +3862,7 @@
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_the_Diver> ;
    :earliest-date -500 ;
    :latest-date -475 ;
-   :note "From Wikipedia: “ ... grave made of five local limestone slabs forming the four lateral walls and the roof, the floor being excavated in the natural bedrock. The five slabs, carefully bonded with plaster, formed a chamber about 215 × 100 × 80 cm (7.1 × 3.3 × 2.6 ft) in size. All five slabs forming the monument were painted on the interior sides using a true fresco technique.[2] The paintings on the four walls depict a symposium scene, while the cover slab shows the famous scene which gives the tomb its name: a young man diving into a curling and waving stream of water. ”" ;
+   :note "From Wikipedia: “ …grave made of five local limestone slabs forming the four lateral walls and the roof, the floor being excavated in the natural bedrock. The five slabs, carefully bonded with plaster, formed a chamber about 215 × 100 × 80 cm (7.1 × 3.3 × 2.6 ft) in size. All five slabs forming the monument were painted on the interior sides using a true fresco technique.[2] The paintings on the four walls depict a symposium scene, while the cover slab shows the famous scene which gives the tomb its name: a young man diving into a curling and waving stream of water. ”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (40.422222 15.005278) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PaestumTaucher.jpg> .
@@ -3970,7 +3970,7 @@
    :earliest-date -500 ;
    :latest-date -200 ;
    :material-note "Ink on silk" ;
-   :note "From Wikipedia: “ ... man with a sword is riding a dragon by holding the rein. The dragon's body was given the shape of a boat. A little egret is standing at the tail of the dragon. A carp under the dragon is leading the way. The umbrella in the top middle of the picture shows the owner's nobility.”" ;
+   :note "From Wikipedia: “ …man with a sword is riding a dragon by holding the rein. The dragon's body was given the shape of a boat. A little egret is standing at the tail of the dragon. A carp under the dragon is leading the way. The umbrella in the top middle of the picture shows the owner's nobility.”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (28.228 112.939) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Changshadragon.jpg> .
@@ -4069,7 +4069,7 @@
    :latest-date -480 ;
    :in-modern-country-note "Greece" ;
    :material-note "Parian marble" ;
-   :note "From Wikipedia: “The east pediment depicts the first Trojan War, not the one described by Homer but the war of Heracles against the king of Troy Laomedon, with Telamon figuring prominently as he fights alongside Heracles against king Laomedon. The Goddess stands in the center of the gable, overseeing the battle that rages on either side. ... This pediment is thought to be later than the west pediment and shows a number of features appropriate to the Classical period: the statues show a dynamic posture especially in the case of Athena, chiastic composition, and intricate filling of the space using the legs of fallen combatants to fill the difficult decreasing angles of the pediment.”" ;
+   :note "From Wikipedia: “The east pediment depicts the first Trojan War, not the one described by Homer but the war of Heracles against the king of Troy Laomedon, with Telamon figuring prominently as he fights alongside Heracles against king Laomedon. The Goddess stands in the center of the gable, overseeing the battle that rages on either side. …This pediment is thought to be later than the west pediment and shows a number of features appropriate to the Classical period: the statues show a dynamic posture especially in the case of Athena, chiastic composition, and intricate filling of the space using the legs of fallen combatants to fill the difficult decreasing angles of the pediment.”" ;
    :representative-latlong-point (37.754722 23.533333) ; # Temple of Aphaia, Aegina (find-spot)
    :art-historical-culture-or-tradition :archaic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_east_pediment_of_the_Temple_of_Aphaia,_ca._505–500_BC,_Glyptothek,_Munich_(41606793432).jpg> .
@@ -4238,7 +4238,7 @@
    :earliest-date -350 ;
    :latest-date -320 ;
    :material-note "Gold, leather" ;
-   :note "From Wikipedia: “... repoussé gold-coated gorytos with scenes from the myth of Achilles ..." ;
+   :note "From Wikipedia: “…repoussé gold-coated gorytos with scenes from the myth of Achilles …" ;
    :in-modern-country-note "Ukraine" ;
    :representative-latlong-point (46.86701 35.353108) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Melitopol_kurgan_gorytos_(corrected_for_perspective).jpg> .
@@ -4572,7 +4572,7 @@
    :latest-date -100 ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (34.6197 112.4539) ; # Luoyang
-   :note "No specific findspot known. From Met website: “This figure vividly captures the moment when, with one long sleeve thrown back and the other trailing down, a dancer gently stoops and flexes her knees as she lifts one heel to advance her step, performing a dance described in Han dynasty poetry...”" ;
+   :note "No specific findspot known. From Met website: “This figure vividly captures the moment when, with one long sleeve thrown back and the other trailing down, a dancer gently stoops and flexes her knees as she lifts one heel to advance her step, performing a dance described in Han dynasty poetry…”" ;
    :art-historical-culture-or-tradition :han-dynasty ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/42178/151378/main-image> .
 
@@ -4832,7 +4832,7 @@
    <https://www.bbc.co.uk/ahistoryoftheworld/objects/z0_uHq1TSnWMEHR_sZDc8g> ;
    :date -27 ;
    :material-note "Bronze, glass, calcite" ;
-   :note "From Wikipedia: “... larger-than-life-size bronze head depicting the first Roman emperor, Augustus, that was found in the ancient Nubian site of Meroë in modern Sudan in 1910.”" ;
+   :note "From Wikipedia: “…larger-than-life-size bronze head depicting the first Roman emperor, Augustus, that was found in the ancient Nubian site of Meroë in modern Sudan in 1910.”" ;
    :in-modern-country-note "Sudan" ;
    :representative-latlong-point (16.933333 33.726389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_head_from_an_over-life-sized_statue_of_Augustus.jpg> .
@@ -5187,7 +5187,7 @@
    :earliest-date 100 ;
    :latest-date 200 ;
    :material-note "Fabric" ;
-   :note "Specific findsport note known, mapped to arbitrary point. Translated from Staatliche Museen zu Berlin website: “The doll's torso is made of flexible stuffing covered with linen, while its head is framed by an elaborate turban-like hairstyle made of real hair. ... The jewelry is exceptional. The earrings are made of real gold leaf, and the rings around the neck, ankles, and wrists are made of leather with a gold leaf overlay.”" ;
+   :note "Specific findsport note known, mapped to arbitrary point. Translated from Staatliche Museen zu Berlin website: “The doll's torso is made of flexible stuffing covered with linen, while its head is framed by an elaborate turban-like hairstyle made of real hair. …The jewelry is exceptional. The earrings are made of real gold leaf, and the rings around the neck, ankles, and wrists are made of leather with a gold leaf overlay.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (27.807431 30.873016) ;
    :thumbnail-image <https://recherche.smb.museum/images/18/1891949_1000x600.jpg> .
@@ -5207,7 +5207,7 @@
    :described-by <https://en.wikipedia.org/wiki/Berenike_Buddha> ;
    :earliest-date 100 ;
    :latest-date 200 ;
-   :note "From Wikipedia: “The Berenike Buddha is a statue of the Buddha, parts of which were discovered in January 2018 and January 2022 in an archaeological excavation in the ancient harbour of Berenike, Egypt, by an American-Polish archaeological mission. The statue was discovered in the forecourt of an early Roman period temple dedicated to the Goddess Isis. ... It was made from a stone that was extracted south of Istanbul, and may also have been carved in Berenike itself. The statue has a halo around the head of the Buddha, decorated with the rays of the sun, and has a lotus flower by his side. It is 71cm tall.”" ;
+   :note "From Wikipedia: “The Berenike Buddha is a statue of the Buddha, parts of which were discovered in January 2018 and January 2022 in an archaeological excavation in the ancient harbour of Berenike, Egypt, by an American-Polish archaeological mission. The statue was discovered in the forecourt of an early Roman period temple dedicated to the Goddess Isis. …It was made from a stone that was extracted south of Istanbul, and may also have been carved in Berenike itself. The statue has a halo around the head of the Buddha, decorated with the rays of the sun, and has a lotus flower by his side. It is 71cm tall.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (23.908611 35.4725) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Berenike_Buddha.jpg/500px-Berenike_Buddha.jpg> .
@@ -5288,7 +5288,7 @@
    :described-by <https://www.worldhistory.org/image/10852/statue-of-prince-absadmiya-from-hatra/> ;
    :earliest-date 140 ;
    :latest-date 180 ;
-   :note "From Smarthistory website: “... right arm is raised in salutation while the left hand holds a palm branch. He wears an elegant and exquisitely carved dress. The feet are lost. The statue was found in the Great Temple. From Hatra, Ninawa Governorate, Iraq. Parthian period, Late 2nd century CE. On display at the Iraq Museum in Baghdad, Republic of Iraq.”" ;
+   :note "From Smarthistory website: “…right arm is raised in salutation while the left hand holds a palm branch. He wears an elegant and exquisitely carved dress. The feet are lost. The statue was found in the Great Temple. From Hatra, Ninawa Governorate, Iraq. Parthian period, Late 2nd century CE. On display at the Iraq Museum in Baghdad, Republic of Iraq.”" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (35.588056 42.718333) ;
    :art-historical-culture-or-tradition :hatra ;
@@ -5311,7 +5311,7 @@
    :earliest-date 194 ;
    :latest-date 197 ;
    :in-modern-country-note "Greece" ;
-   :note "From Wikipedia: “... 23-karat gold bust[2] was probably made between 194 and 196/197 AD from a sheet of gold consisting of over 96% gold, 2-3% silver and 1% copper; the gold was probably obtained from melted gold coins with some silver ones added. The total height of the bust is 28.4 cm and its width is 25.5 cm. It is 1-1.5 mm thick, and weighs around 980 g (or three Roman pounds).”" ;
+   :note "From Wikipedia: “…23-karat gold bust[2] was probably made between 194 and 196/197 AD from a sheet of gold consisting of over 96% gold, 2-3% silver and 1% copper; the gold was probably obtained from melted gold coins with some silver ones added. The total height of the bust is 28.4 cm and its width is 25.5 cm. It is 1-1.5 mm thick, and weighs around 980 g (or three Roman pounds).”" ;
    :representative-latlong-point (41.35 26.5) ;
    :note "Approximate location of findspot." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:20130518_Septimius_Severus_Archeological_Museum_Komotini_Thrace_Greece.jpg> .
@@ -5391,7 +5391,7 @@
    :earliest-date 300 ;
    :latest-date 500 ;
    :material-note "Granite" ;
-   :note "Adapted from Wikipedia: “The Toluvila statue is 1.75 m in height. It shows the Buddha seated with his legs crossed and hands together in meditation...”" ;
+   :note "Adapted from Wikipedia: “The Toluvila statue is 1.75 m in height. It shows the Buddha seated with his legs crossed and hands together in meditation…”" ;
    :in-modern-country-note "Sri Lanka" ;
    :representative-latlong-point (8.335 80.410833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Toluwila_Seated_Buddha_Statue.jpg> .
@@ -5607,7 +5607,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 500 ;
    :latest-date 700 ;
    :material-note "Copper" ;
-   :note "From Wikipedia: “ .. cast in pure, unrefined copper by the cire perdue, or lost wax, technique. Inside there is a clay body, mixed with rice husks that allowed radiocarbon dating.[6] The figure stands in the “Fearless Posture”, with his right hand raised in abhayamudra (a gesture of reassurance or protection), and his left hand is held downwards with palm outwards, said to indicate granting a favour. The end of the monastic robe is held between the thumb and forefinger of this hand ... ” " ;
+   :note "From Wikipedia: “ .. cast in pure, unrefined copper by the cire perdue, or lost wax, technique. Inside there is a clay body, mixed with rice husks that allowed radiocarbon dating.[6] The figure stands in the “Fearless Posture”, with his right hand raised in abhayamudra (a gesture of reassurance or protection), and his left hand is held downwards with palm outwards, said to indicate granting a favour. The end of the monastic robe is held between the thumb and forefinger of this hand …” " ;
    :in-modern-country-note "India" ;
    :representative-latlong-point ( 25.246 86.738 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Sultanganj_Buddha.jpg> .
@@ -5701,7 +5701,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date -300 ;
    :latest-date -200 ;
    :material-note "Ceramic" ;
-   :note "From Wikipedia: “ ... ceramic figure, 47 cm tall, that dates from the third century BC. ... found in the necropolis of Puig des Molins on the island of Ibiza in the Mediterranean. It was made using a mold and has a cavity in the back, perhaps used for hanging it up. She is richly ornamented in terms of clothing and jewelry.”" ;
+   :note "From Wikipedia: “ …ceramic figure, 47 cm tall, that dates from the third century BC. …found in the necropolis of Puig des Molins on the island of Ibiza in the Mediterranean. It was made using a mold and has a cavity in the back, perhaps used for hanging it up. She is richly ornamented in terms of clothing and jewelry.”" ;
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (38.9072 1.42951) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Ibiza_(M.A.N._Madrid)_01.jpg> .
@@ -5765,7 +5765,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Hercules in High Relief at Behistun" ;
    :described-by <https://en.wikipedia.org/wiki/Statue_of_Hercules_in_Behistun> ;
    :approximate-date -148 ;
-   :note "Dated by inscription. From Wikipedia: “ ... lying on a 2 m-long (6.6 ft) platform and holds a bowl in his left hand. His right hand rests on his leg. The statue is 1.47 m long and is attached to the mountain.“" ;
+   :note "Dated by inscription. From Wikipedia: “ …lying on a 2 m-long (6.6 ft) platform and holds a bowl in his left hand. His right hand rests on his leg. The statue is 1.47 m long and is attached to the mountain.“" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (34.3833 47.4333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bistoon_Kermanshah.jpg> .
@@ -5998,7 +5998,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Tropaeum Traiani" ;
    :described-by <https://en.wikipedia.org/wiki/Tropaeum_Traiani> ;
    :date 109 ;
-   :note "From Wikipedia: “The trophy monument was built, according to the inscription, between 106 and 109 AD probably by Apollodorus of Damascus, Trajan's favoured architect and engineer. It was inspired by the Augustus mausoleum, and was dedicated to Mars Ultor. It is a cylindrical building, with steps at the base, of diameter 40 m. Around the side were 54 metopes, showing Romans fighting Decebalus's allies, of which 48 are in the local museum and 1 is in Istanbul. The reliefs were framed by friezes and separated by decorative pilasters. The upper part was festooned with 27 battlements, each one showing prisoners...”" ;
+   :note "From Wikipedia: “The trophy monument was built, according to the inscription, between 106 and 109 AD probably by Apollodorus of Damascus, Trajan's favoured architect and engineer. It was inspired by the Augustus mausoleum, and was dedicated to Mars Ultor. It is a cylindrical building, with steps at the base, of diameter 40 m. Around the side were 54 metopes, showing Romans fighting Decebalus's allies, of which 48 are in the local museum and 1 is in Istanbul. The reliefs were framed by friezes and separated by decorative pilasters. The upper part was festooned with 27 battlements, each one showing prisoners…”" ;
    :in-modern-country-note "Romania" ;
    :representative-latlong-point (44.102 27.955) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AdamclisiMetope36.jpg> .
@@ -6100,7 +6100,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 175 ;
    :latest-date 250 ;
    :material-note "Marble" ;
-   :note "From Torlonia Collection website: “A large ship with decorated sails, on which the mythical symbol of the she-wolf suckling the twins Romulus and Remus stands out; the scene of a sacrifice calling for the successful outcome of a voyage; the towering lighthouse that welcomes sailors inside the port, the divine figures of Neptune and Bacchus: these are just some of the elements that the bas-relief depicts with an extraordinary amount of detail...”" ;
+   :note "From Torlonia Collection website: “A large ship with decorated sails, on which the mythical symbol of the she-wolf suckling the twins Romulus and Remus stands out; the scene of a sacrifice calling for the successful outcome of a voyage; the towering lighthouse that welcomes sailors inside the port, the divine figures of Neptune and Bacchus: these are just some of the elements that the bas-relief depicts with an extraordinary amount of detail…”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (41.777466 12.257770) ;   
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Torlonia_Marbles_-_Rome_20210731_113728_71.jpg> .
@@ -6217,7 +6217,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 300 ;
    :latest-date 1200 ;
    :material-note "Ceramic" ;
-   :note "From Yale Art Gallery website: “ ... a necropolis at Bura-Asinda-Sikka with more than six hundred overturned ceramic urns dating from 300 to 1700. Some of the urns contained human remains, while others had remains buried underneath. Bura vessels are generally ovoid and tubular in shape, and some are surmounted by figures or heads. In some examples, like this one, the head is angled skyward.”" ;
+   :note "From Yale Art Gallery website: “ …a necropolis at Bura-Asinda-Sikka with more than six hundred overturned ceramic urns dating from 300 to 1700. Some of the urns contained human remains, while others had remains buried underneath. Bura vessels are generally ovoid and tubular in shape, and some are surmounted by figures or heads. In some examples, like this one, the head is angled skyward.”" ;
    :in-modern-country-note "Niger" ;
    :representative-latlong-point (13.898 1.039) ;
    :thumbnail-image <https://images.collections.yale.edu/iiif/2/yuag:bd85d735-38fe-4a4c-8804-342599d5a933/full/!200,200/0/default.jpg> .
@@ -6429,7 +6429,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://en.wikipedia.org/wiki/Qajartalik> ;
    :earliest-date 500 ;
    :latest-date 1250 ;
-   :note "From Wikipedia: “Qajartalik (Inuktitut for “where there is a kayak”) is a petroglyph site located on the Qajartalik peninsula of Qikertaaluk Island, Nunavut, approximately 40 km southeast of Kangiqsujuaq, Quebec. The site consists of over 150 carvings of faces in soapstone. It was created by the Dorset people, the culture who inhabited the Canadian eastern Arctic and Greenland beginning approximately 2,200 years ago before disappearing approximately 1,000 years ago, and who inhabited the region prior to the Thule Inuit who arrived approximately 800 years ago. It is believed to be the northernmost rock art site in North America...”." ;
+   :note "From Wikipedia: “Qajartalik (Inuktitut for “where there is a kayak”) is a petroglyph site located on the Qajartalik peninsula of Qikertaaluk Island, Nunavut, approximately 40 km southeast of Kangiqsujuaq, Quebec. The site consists of over 150 carvings of faces in soapstone. It was created by the Dorset people, the culture who inhabited the Canadian eastern Arctic and Greenland beginning approximately 2,200 years ago before disappearing approximately 1,000 years ago, and who inhabited the region prior to the Thule Inuit who arrived approximately 800 years ago. It is believed to be the northernmost rock art site in North America…”." ;
    :in-modern-country-note "Canada" ;
    :representative-latlong-point (61.331574 -71.499644) ;
    :thumbnail-image <https://www.historymuseum.ca/wp-content/uploads/2022/09/Blog-KRyan-09-2022_Fig567-1024x512.png>  .
@@ -6465,7 +6465,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 600 ;
    :latest-date 650 ;
    :material-note "Ceramic" ;
-   :note "From LACMA website: “ ... scene of 23 ceramic figurines, arranged by mourners in a circular configuration inside a royal tomb chamber, tells a story about the ritual life of the ancient Maya. This scene includes a deceased king accompanied by his animal spirit companion—a magical deer wearing an oval pendant with a motif in the shape of a capital “T” incised into it. For the ancient Maya, this was the Ik’ symbol, which represented breath, wind, and life.”" ;
+   :note "From LACMA website: “ …scene of 23 ceramic figurines, arranged by mourners in a circular configuration inside a royal tomb chamber, tells a story about the ritual life of the ancient Maya. This scene includes a deceased king accompanied by his animal spirit companion—a magical deer wearing an oval pendant with a motif in the shape of a capital “T” incised into it. For the ancient Maya, this was the Ik’ symbol, which represented breath, wind, and life.”" ;
    :in-modern-country-note "Guatemala" ;
    :representative-latlong-point (17.2783 -90.3806) ;
    :thumbnail-image <https://unframed.lacma.org/sites/default/files/attachments/AncientBodies_Grouping1.png> .
@@ -6624,7 +6624,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Rinnegan_Crucifixion_Plaque> ;
    :earliest-date 675 ;
    :latest-date 775 ;
-   :note "Adpated from Wikipedia: “Christ wears a tubular and long-sleeved tunic ... and is beadless. He is centre-facing and looking out at the viewer with outstretched arms. He has open eyes and seems to stand rather than hang on the centre of the cross ... His feet point inwards and downwards, and the rivet holes indicate that he is nailed to a cross. The thin border that outlines his head is assumed to be a halo. His chest, arms and long tunic are heavily decorated by elaborate early Celtic spiral patterns.”" ;
+   :note "Adpated from Wikipedia: “Christ wears a tubular and long-sleeved tunic …and is beadless. He is centre-facing and looking out at the viewer with outstretched arms. He has open eyes and seems to stand rather than hang on the centre of the cross …His feet point inwards and downwards, and the rivet holes indicate that he is nailed to a cross. The thin border that outlines his head is assumed to be a halo. His chest, arms and long tunic are heavily decorated by elaborate early Celtic spiral patterns.”" ;
    :in-modern-country-note "Ireland" ;
    :representative-latlong-point (53.5 -7.966667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Placca_della_crocifissione,_in_bronzo,_da_st._john%27s_rinnagan,_contea_di_roscommon,_viii_secolo.jpg> .
@@ -6645,7 +6645,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Jade_mask_of_Pakal> ;
    :date 683 ;
    :material-note "Jade, shell, nacre, obsidian" ;
-   :note "From Wikipedia: “... made with over 346 green jade stone fragments, the eyes are made with shell, nacre and the pupils with obsidian stone." ;
+   :note "From Wikipedia: “…made with over 346 green jade stone fragments, the eyes are made with shell, nacre and the pupils with obsidian stone." ;
    :in-modern-country-note "Mexico" ;
    :representative-latlong-point (17.4836 -92.0468) ; # Temple of the Inscriptions, Palenque, Mexico
    :art-historical-culture-or-tradition :maya-culture ;
@@ -6714,7 +6714,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Musicians and Rider Fresco from Qasr al-Hayr al-Gharbi" ;
    :described-by <https://en.wikipedia.org/wiki/Qasr_al-Hayr_al-Gharbi> ;
    :approximate-date 727 ;
-   :note "From Wikipedia: “ ... features a hunter, similar to Sassanian depictions of kings during royal hunts, as well as depictions of two court minstrels playing musical instruments, a nai (a woodwind instrument) and an oud (a string instrument), beneath a pair of ornamented arches. The hunter is dressed in Sassanian-style fashion; his head-scarf flying behind him, and his bow and arrow are drawn tight for the shot.”" ;
+   :note "From Wikipedia: “ …features a hunter, similar to Sassanian depictions of kings during royal hunts, as well as depictions of two court minstrels playing musical instruments, a nai (a woodwind instrument) and an oud (a string instrument), beneath a pair of ornamented arches. The hunter is dressed in Sassanian-style fashion; his head-scarf flying behind him, and his bow and arrow are drawn tight for the shot.”" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point ( 34.374444 37.605833 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Arabischer_Maler_um_730_002.jpg> .
@@ -6758,7 +6758,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 750 ;
    :latest-date 1200 ;
    :material-note "Earth (raised earthwork)" ;
-   :note "From Wikipedia: “The Man Mound is a precontact earthwork of a humanoid figure located in Greenfield, Sauk County, Wisconsin, east of the city of Baraboo. Constructed during the Late Woodland period, the mound is the only surviving anthropomorphic effigy mound in North America. The mound depicts a humanoid figure with horns or a horned headdress and may have held religious or ceremonial significance to its builders ... When it was built, the figure was 214 feet (65 m) long and raised 2.5 feet (0.76 m) from the ground. The legs and feet of the figure were destroyed by the construction of Man Mound Road and a cow pasture across the road, leaving the modern mound roughly 50 feet (15 m) shorter than its original length.”" ;
+   :note "From Wikipedia: “The Man Mound is a precontact earthwork of a humanoid figure located in Greenfield, Sauk County, Wisconsin, east of the city of Baraboo. Constructed during the Late Woodland period, the mound is the only surviving anthropomorphic effigy mound in North America. The mound depicts a humanoid figure with horns or a horned headdress and may have held religious or ceremonial significance to its builders …When it was built, the figure was 214 feet (65 m) long and raised 2.5 feet (0.76 m) from the ground. The legs and feet of the figure were destroyed by the construction of Man Mound Road and a cow pasture across the road, leaving the modern mound roughly 50 feet (15 m) shorter than its original length.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (43.48861 -89.67083) ;
    :thumbnail-image <https://wisconsinfirstnations.org/wp-content/uploads/2018/10/ManMound.jpg> ;
@@ -6848,7 +6848,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 800 ;
    :latest-date 900 ;
    :material-note "Limestone" ;
-   :note "From Wikipedia: “...  a four-sided pillar of grey limestone, 2.67 m (8.8 ft) in height, and has three tiers of reliefs engraved upon each of the four sides. The lower tier is 67 cm (26 in); the middle tier is 40 cm (16 in); and the top tier is 167 cm (66 in). Three sides of the lowest tier show a kneeling, bearded entity who appears to support the upper tier on his hands; the fourth side is blank. / he middle tier shows a smaller entity with extended arms on all four sides. Only one of four sides has an entity with a tiny “child” figure. / The four sides of the uppermost tier have the largest figures of the idol, with four faces united beneath a tall rounded hat. Each of the sides has a distinct attribute: a ring or a bracelet; a drinking horn, or horn of plenty; a sword and a horse; and an eroded solar symbol.”" ;
+   :note "From Wikipedia: “… a four-sided pillar of grey limestone, 2.67 m (8.8 ft) in height, and has three tiers of reliefs engraved upon each of the four sides. The lower tier is 67 cm (26 in); the middle tier is 40 cm (16 in); and the top tier is 167 cm (66 in). Three sides of the lowest tier show a kneeling, bearded entity who appears to support the upper tier on his hands; the fourth side is blank. / he middle tier shows a smaller entity with extended arms on all four sides. Only one of four sides has an entity with a tiny “child” figure. / The four sides of the uppermost tier have the largest figures of the idol, with four faces united beneath a tall rounded hat. Each of the sides has a distinct attribute: a ring or a bracelet; a drinking horn, or horn of plenty; a sword and a horse; and an eroded solar symbol.”" ;
    :in-modern-country-note "Ukraine" ;
    :representative-latlong-point (49.146111 26.16) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:O98_Idol_von_Sbrutsch_mit_Darstellung_von_Unterwelt,_Erde_und_des_Himmels,_zirka_10._Jh._n._Chr..JPG> .
@@ -7058,7 +7058,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 900 ;
    :latest-date 1100 ;
    :material-note "Ceramic" ;
-   :note "The chronology may be towards the later part of the 900 to 1100 range, see the linked article by A. Antonities. Image here is after Fig. 3 in that. From Google Arts and Culture: “ ... male figurine has an animal-like head, making it therianthropic or part-human, part animal. Many of the Schroda anthropomorphic figurines are clearly sexed. This figurine is covered in red ochre on the back and on the lower part of the front abdomen.” The Wikipedia page needs improvement and it is hoped images of the figurines will make it to Wikimedia Commons." ;
+   :note "The chronology may be towards the later part of the 900 to 1100 range, see the linked article by A. Antonities. Image here is after Fig. 3 in that. From Google Arts and Culture: “ …male figurine has an animal-like head, making it therianthropic or part-human, part animal. Many of the Schroda anthropomorphic figurines are clearly sexed. This figurine is covered in red ochre on the back and on the lower part of the front abdomen.” The Wikipedia page needs improvement and it is hoped images of the figurines will make it to Wikimedia Commons." ;
    :in-mondern-country-note "South Africa" ;
    :representative-latlong-point (-22.183333 29.423611) .
 
@@ -7069,7 +7069,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://www.blm.gov/visit/blythe-intaglios> ;
    :earliest-date 900 ;
    :latest-date 1200 ;
-   :note "Adapted from Wikipedia: “The Blythe Intaglios contain three human figures, two four-legged animals, and a spiral ... The largest human figure in the Blythe Intaglio group is 52 m long.”" ;
+   :note "Adapted from Wikipedia: “The Blythe Intaglios contain three human figures, two four-legged animals, and a spiral …The largest human figure in the Blythe Intaglio group is 52 m long.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (33.800278 -114.538333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Blythe_Intaglios_-_Human_Figure_1.jpg> .
@@ -7114,7 +7114,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 950 ;
    :latest-date 1000 ;
    :material-note "Ivory" ;
-   :note "From Louvre Website: “... comporte deux volets qui se referment sur la partie centrale. Lorsqu'il est ouvert, la partie centrale, sculptée en très fort relief, offre deux registres superposés, séparés par un bandeau à décor de palmettes et de fleurons alternés. Au registre supérieur, le Christ trône entre la Vierge et saint Jean-Baptiste, tous deux debout de chaque côté, et tournés vers lui pour former la traditionnelle Déisis, la prière d'intercession pour le salut de l'Humanité. Au dessus du trône, deux anges en buste s'inscrivent dans des couronnes végétales rehaussées d'étoiles. Ils sont anonymes à la différence de tous les autres personnages du triptyque, identifiés par les inscriptions gravées. En dessous de la Déisis prennent place cinq apôtres : Pierre au centre, Paul et André à sa gauche, et, à sa droite Jean l'Evangéliste et Jacques. Deux bandeaux enferment la partie centrale. Sur celui du haut, trois petits médaillons contiennent chacun un buste : il s'agit de trois prophètes, Elie, placé au-dessus du Christ, Jérémie, à gauche, et Isaïe, à droite. Les volets se divisent en trois registres : des saints en pied, aux registres supérieur et inférieur, et des saints en buste, inscrits dans des médaillons, au registre médian.”" ;
+   :note "From Louvre Website: “…comporte deux volets qui se referment sur la partie centrale. Lorsqu'il est ouvert, la partie centrale, sculptée en très fort relief, offre deux registres superposés, séparés par un bandeau à décor de palmettes et de fleurons alternés. Au registre supérieur, le Christ trône entre la Vierge et saint Jean-Baptiste, tous deux debout de chaque côté, et tournés vers lui pour former la traditionnelle Déisis, la prière d'intercession pour le salut de l'Humanité. Au dessus du trône, deux anges en buste s'inscrivent dans des couronnes végétales rehaussées d'étoiles. Ils sont anonymes à la différence de tous les autres personnages du triptyque, identifiés par les inscriptions gravées. En dessous de la Déisis prennent place cinq apôtres : Pierre au centre, Paul et André à sa gauche, et, à sa droite Jean l'Evangéliste et Jacques. Deux bandeaux enferment la partie centrale. Sur celui du haut, trois petits médaillons contiennent chacun un buste : il s'agit de trois prophètes, Elie, placé au-dessus du Christ, Jérémie, à gauche, et Isaïe, à droite. Les volets se divisent en trois registres : des saints en pied, aux registres supérieur et inférieur, et des saints en buste, inscrits dans des médaillons, au registre médian.”" ;
    :modern-country-note "Turkey" ;
    :representative-latlong-point ( 41.008333 28.98 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Triptych_Harbaville_Louvre_OA3247_recto.jpg> .
@@ -7213,7 +7213,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Luzira_Head> ,
       <https://doi.org/10.1017/S0003598X00096472> ;
    :approximate-date 1000 ;
-   :note "From Wikipedia: “... the head has very narrow, protruding eyes and mouth with a diminutive nose. Along the forehead are three cicatrices. The hair is matted and falls either side of the head.”" ;
+   :note "From Wikipedia: “…the head has very narrow, protruding eyes and mouth with a diminutive nose. Along the forehead are three cicatrices. The hair is matted and falls either side of the head.”" ;
    :in-modern-country-note "Uganda" ;
    :representative-latlong-point (0.301667 32.645) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Luzira_Head_4.jpg> .
@@ -7258,7 +7258,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://www.blm.gov/visit/castle-gardens-petroglyph-site> ;
    :earliest-date 1000 ;
    :latest-date 1250 ;
-   :note "From Wikipedia: “ ... a 6-mile (9.7 km) by 1-mile (1.6 km) region of vertical cliff faces in Fremont County, Wyoming, United States, with extensive petroglyph images incised in the rock faces. The glyphs include images of water turtles and circular shields, as well as human and animal figures.[2] The figures with circular shields are particular to the area, and are known as Castle Gardens Shield style images. A consensus of researchers is that the figures were carved by Athabaskans related to the Navajo and Apache, some time between 1000 AD and 1250 AD”" ;
+   :note "From Wikipedia: “ …a 6-mile (9.7 km) by 1-mile (1.6 km) region of vertical cliff faces in Fremont County, Wyoming, United States, with extensive petroglyph images incised in the rock faces. The glyphs include images of water turtles and circular shields, as well as human and animal figures.[2] The figures with circular shields are particular to the area, and are known as Castle Gardens Shield style images. A consensus of researchers is that the figures were carved by Athabaskans related to the Navajo and Apache, some time between 1000 AD and 1250 AD”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (42.9293 -107.6137) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:1205CastleGardens2.jpg> .
@@ -7494,7 +7494,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://www.museum.state.il.us/muslink/behind/htmls/cr_an_col2.html> ;
    :approximate-date 1200 ;
    :material-note "Coniferous wood, copper" ;
-   :note "From Wikipedia: “... carved red cedar believed to have been deposited in the grave sometime between 1200–1400 CE. The piece measures 11.9 centimetres (4.7 in) by 9.9 centimetres (3.9 in) by 5.5 centimetres (2.2 in) and was once adorned with sheet copper and paint made from galena, a lead ore.”" ;
+   :note "From Wikipedia: “…carved red cedar believed to have been deposited in the grave sometime between 1200–1400 CE. The piece measures 11.9 centimetres (4.7 in) by 9.9 centimetres (3.9 in) by 5.5 centimetres (2.2 in) and was once adorned with sheet copper and paint made from galena, a lead ore.”" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (40.2146 -90.209981) ;
    :thumbnail-image <https://www.museum.state.il.us/muslink/behind/images/cr_an_col2.jpg> .
@@ -7527,10 +7527,11 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :latest-date 1300 ;
    :in-modern-country-note "Mali" ;
    :material-note "Terracotta" ;
-   :note "From Met Museum website: “ ... figure huddles with its leg hugged to its chest and its head dropped on its knee. It simultaneously suggests the knotted tension of anxiety and the sublime absorption of deep prayer. Created over 700 years ago, in the Inland Niger Delta region of present-day Mali, this elegant work's intense emotional immediacy blurs the boundaries of time and place. / This terracotta sculpture comes from a site called Jenne-jeno, the oldest known city in sub-Saharan Africa. Jenne-jeno flourished in the ninth century A.D., but declined and was abandoned by 1400. Items of cast brass and forged iron, clay vessels, and figures like this one survive. They testify to what scholars contend was a richly varied and highly sophisticated urban society." ;
+   :note "From Met Museum website: “ …figure huddles with its leg hugged to its chest and its head dropped on its knee. It simultaneously suggests the knotted tension of anxiety and the sublime absorption of deep prayer. Created over 700 years ago, in the Inland Niger Delta region of present-day Mali, this elegant work's intense emotional immediacy blurs the boundaries of time and place. / This terracotta sculpture comes from a site called Jenne-jeno, the oldest known city in sub-Saharan Africa. Jenne-jeno flourished in the ninth century A.D., but declined and was abandoned by 1400. Items of cast brass and forged iron, clay vessels, and figures like this one survive. They testify to what scholars contend was a richly varied and highly sophisticated urban society." ;
    # :art-historical-culture-or-tradition :mopti-culture ;
    :representative-latlong-point (13.890556 -4.540278) ; # Mali
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_figure_grom_Mali,_13th_century,_Djenné_peoples,_Metropolitan_Museum_of_Art,_1981.218.JPG> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_figure_grom_Mali,_13th_century,_Djenné_peoples,_Metropolitan_Museum_of_Art,_1981.218.JPG> ;
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/314362/671847/main-image> .
 
 :effigy-mask-antlers a :human-figure ;
    rdfs:label "Effigy Mask with Antlers from Spiro" ;
@@ -7599,7 +7600,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 1440 ;
    :latest-date 1450 ;
    :material-note "Bronze" ;
-   :note "From Wikipedia: “ ... depicts David with an enigmatic smile, posed with his foot on Goliath's severed head just after defeating the giant. The youth is completely naked, apart from a laurel-topped hat and boots, and holds Goliath's sword.”" ;
+   :note "From Wikipedia: “ …depicts David with an enigmatic smile, posed with his foot on Goliath's severed head just after defeating the giant. The youth is completely naked, apart from a laurel-topped hat and boots, and holds Goliath's sword.”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point ( 43.775278 11.255989 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Donatello_-_David_-_Florença.jpg> .
@@ -7609,7 +7610,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.hawaiipublicradio.org/local-news/2025-07-25/hawaiian-petroglyphs-resurface-with-changing-tides-and-shifting-sands>,
     <https://www.smithsonianmag.com/smart-news/centuries-old-hawaiian-petroglyphs-emerge-from-the-sand-for-the-first-time-in-nine-years-180987080/> ;
    :approximate-date 1500 ;
-   :note "From Hawaii NPR website: “Archaeologists identified a total of 26 petroglyphs. Of the 18 anthropomorphic stick figures, eight are depicted with possible male genitalia and the remainder are of undetermined gender, the report said. / The entire panel stretches about 115 feet long ..." ;
+   :note "From Hawaii NPR website: “Archaeologists identified a total of 26 petroglyphs. Of the 18 anthropomorphic stick figures, eight are depicted with possible male genitalia and the remainder are of undetermined gender, the report said. / The entire panel stretches about 115 feet long …" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point ( 21.447081 -158.191729 ) ;
    :thumbnail-image <https://npr.brightspotcdn.com/dims4/default/06f2fb1/2147483647/strip/true/crop/3000x2000+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd8%2F01%2F90be35714bffa6f90ef1e9abb926%2Fap25204741938927.jpg> .
