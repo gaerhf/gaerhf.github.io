@@ -516,3 +516,98 @@ function figureNavigate(direction, currentId, sortedIndex, highlightIds) {
         : (i - 1 + pool.length) % pool.length;
     return pool[idx];
 }
+
+// ---------------------------------------------------------------------------
+// Keyword search utilities (same model as the 2D map)
+// ---------------------------------------------------------------------------
+
+// Build an inverted keyword→figureIds index over figure text fields.
+// Returns { searchIndex: MiniSearch, kwDict: { [token]: string[] } }
+// The searchIndex searches token strings; kwDict maps each token to its figure IDs.
+function buildKeywordSearchIndex(figures) {
+    const wordRe  = /[\p{L}\p{N}]+/gu;
+    const tokenize = text => (text != null ? String(text).toLowerCase().match(wordRe) : null) || [];
+
+    const kwSets = {};
+    for (const f of figures) {
+        for (const field of [f.label, f.inModernCountry, f.materialNote, f.note, f.cultureLabel]) {
+            for (const tok of tokenize(field)) {
+                if (!kwSets[tok]) kwSets[tok] = new Set();
+                kwSets[tok].add(f.id);
+            }
+        }
+    }
+
+    const docs = Object.entries(kwSets).map(([tok, ids]) => ({ id: tok, ids: [...ids] }));
+
+    const ms = new MiniSearch({
+        fields:        ['id'],
+        storeFields:   ['ids'],
+        searchOptions: { prefix: true },
+    });
+    ms.addAll(docs);
+
+    const kwDict = Object.fromEntries(docs.map(d => [d.id, d.ids]));
+    return { searchIndex: ms, kwDict };
+}
+
+// Wire a search input + dropdown to a keyword index.
+// Dropdown shows matching keywords; highlights are committed on click, previewed on hover.
+// opts.onResults(ids)    — called with figure IDs when user commits a keyword (or clears).
+// opts.onHover(ids)      — called on dropdown item hover for preview.
+// opts.onHoverEnd()      — called on dropdown item mouseleave to restore committed state.
+// opts.onClose()         — called when dropdown hides (e.g. blur).
+// Returns { clear() }.
+function initKeywordSearchUI({ inputEl, suggestionsEl, searchIndex, kwDict,
+                               onResults, onHover, onHoverEnd, onClose, debounceMs = 300 }) {
+    let timer  = null;
+    let isOpen = false;
+
+    function setVisible(visible) {
+        if (visible === isOpen) return;
+        isOpen = visible;
+        suggestionsEl.hidden = !visible;
+        if (!visible && onClose) onClose();
+    }
+
+    function doSearch(query) {
+        suggestionsEl.innerHTML = '';
+        if (!query.trim()) {
+            setVisible(false);
+            onResults([]);
+            return;
+        }
+        const results = searchIndex.search(query);
+        if (!results.length) { setVisible(false); return; }
+
+        results.slice(0, 8).forEach(r => {
+            const ids = kwDict[r.id] || [];
+            const li  = document.createElement('li');
+            li.textContent = r.id;
+            li.addEventListener('mousedown', e => {
+                e.preventDefault();
+                inputEl.value = r.id;
+                setVisible(false);
+                onResults(ids);
+            });
+            if (onHover)    li.addEventListener('mouseenter', () => onHover(ids));
+            if (onHoverEnd) li.addEventListener('mouseleave', () => onHoverEnd());
+            suggestionsEl.appendChild(li);
+        });
+        setVisible(true);
+        // Do NOT call onResults here — highlights commit on click only, matching 2D behavior.
+    }
+
+    inputEl.addEventListener('input', () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => doSearch(inputEl.value), debounceMs);
+    });
+    inputEl.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { inputEl.value = ''; doSearch(''); inputEl.blur(); }
+        if (e.key === 'Enter' && !inputEl.value.trim()) { doSearch(''); }
+    });
+    inputEl.addEventListener('blur',  () => setTimeout(() => setVisible(false), 180));
+    inputEl.addEventListener('focus', () => { if (inputEl.value.trim()) doSearch(inputEl.value); });
+
+    return { clear: () => { inputEl.value = ''; doSearch(''); } };
+}

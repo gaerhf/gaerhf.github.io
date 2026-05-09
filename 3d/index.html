@@ -12,7 +12,7 @@
 
     /* ── Top header bar ─────────────────────────────────────────────── */
     #top-bar {
-      position: fixed; top: 0; left: 0; right: 0; height: 46px; z-index: 300;
+      position: fixed; top: 0; left: 0; right: 0; height: 46px; z-index: 25000;
       background: rgba(0,0,0,0.72);
       border-bottom: 1px solid rgba(255,255,255,0.12);
       display: flex; align-items: center; gap: 10px;
@@ -589,16 +589,27 @@
 
         buildGallery(allFigures);
 
-        // Wire search using shared utilities from gaerhf-detail.js.
-        const searchIndex = buildFigureSearchIndex(allFigures);
-        searchControl = initSearchUI({
+        // Keyword search — same model as the 2D map: dropdown shows matching keywords,
+        // hover previews markers, click commits highlights.
+        const { searchIndex, kwDict } = buildKeywordSearchIndex(allFigures);
+        searchControl = initKeywordSearchUI({
           inputEl:       document.getElementById('search-input'),
           suggestionsEl: document.getElementById('suggestions-list'),
           searchIndex,
-          figures:       allFigures,
+          kwDict,
           onResults(ids) {
             currentKeywordHighlightIds = ids;
             applyKeywordHighlights(ids);
+          },
+          onHover(ids) {
+            applyKeywordHighlights(ids);
+          },
+          onHoverEnd() {
+            applyKeywordHighlights(currentKeywordHighlightIds);
+          },
+          onClose() {
+            // Restore committed highlights after dropdown blurs.
+            applyKeywordHighlights(currentKeywordHighlightIds);
           },
         });
 
@@ -620,7 +631,7 @@
           .htmlElementsData(allFigures)
           .htmlLat(d => d.lat)
           .htmlLng(d => d.lng)
-          .htmlAltitude(0.018)
+          .htmlAltitude(0.003)
           .htmlElement(d => {
             const mid   = getFigureMidDate(d);
             const color = mid !== null ? dateToColor(mid) : '#aaa';
