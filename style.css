@@ -584,6 +584,14 @@ body.search-open .detail-window.active-window.recently-opened .detail-label-cont
     transition: background-color 0.3s ease;
 }
 
+/* Anchor used as tab button — reset inherited text styles to match <button> rendering */
+a.tab-button {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.85rem;
+    font-family: sans-serif;
+}
+
 .tab-button.active {
     background-color: #5cb85c;
     color: white;

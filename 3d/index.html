@@ -373,6 +373,8 @@
 
     document.addEventListener('keydown', e => { if (e.key === 'Shift') isShiftKeyDown = true;  });
     document.addEventListener('keyup',   e => { if (e.key === 'Shift') isShiftKeyDown = false; });
+    // Reset if window loses focus while Shift is held (tab-switch etc.)
+    window.addEventListener('blur', () => { isShiftKeyDown = false; });
 
     // Arrow-key / Tab navigation.
     document.addEventListener('keydown', e => {
@@ -536,6 +538,11 @@
 
       targetWindow.dataset.figureId = figure.id;
 
+      // Register immediately — before any async work — so concurrent calls to
+      // showFigureDetails see a non-null active window and reuse it rather than
+      // creating a second window.
+      setActiveWindow3d(targetWindow);
+
       clearTimeout(targetWindow._recentOpenTimer);
       targetWindow.classList.add('recently-opened');
       targetWindow._recentOpenTimer = setTimeout(
@@ -544,8 +551,6 @@
       renderFigureHeader(targetWindow.querySelector('.detail-label'), figure);
       renderFigureMetadata(targetWindow.querySelector('.detail-info'), figure);
       await renderFigureImage(targetWindow.querySelector('.detail-image'), figure);
-
-      setActiveWindow3d(targetWindow);
     }
 
     // ── Gallery ───────────────────────────────────────────────────────
