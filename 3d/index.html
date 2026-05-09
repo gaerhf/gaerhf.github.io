@@ -441,7 +441,6 @@
         const idSet = new Set(currentKeywordHighlightIds);
         if (el) {
           el.style.background = el.dataset.baseColor;
-          el.style.transform  = '';
           el.style.zIndex     = '';
           if (!currentKeywordHighlightIds.length) {
             el.style.opacity   = '';
@@ -462,8 +461,7 @@
         if (el) {
           el.style.opacity   = '1';
           el.style.background  = '#fff';
-          el.style.boxShadow   = '0 0 0 2.5px #CC79A7, 0 2px 8px rgba(0,0,0,0.7)';
-          el.style.transform   = 'scale(1.5)';
+          el.style.boxShadow   = '0 0 0 3px #CC79A7, 0 2px 8px rgba(0,0,0,0.7)';
           el.style.zIndex      = '99';
         }
         const thumb = document.getElementById(`gt-${figureId}`);
@@ -651,8 +649,7 @@
               'border:1.5px solid rgba(255,255,255,0.85)',
               'box-shadow:0 1px 4px rgba(0,0,0,0.55)',
               'cursor:pointer',
-              'transform-origin:center center',
-              'transition:transform 0.1s',
+              'transition:box-shadow 0.15s, opacity 0.15s',
               'position:relative',
               'pointer-events:auto',
             ].join(';');
@@ -677,7 +674,8 @@
             });
 
             div.addEventListener('mouseenter', e => {
-              if (d.id !== currentHighlightId) div.style.transform = 'scale(1.5)';
+              if (d.id !== currentHighlightId)
+                div.style.boxShadow = '0 0 0 3px rgba(255,255,255,0.8), 0 1px 6px rgba(0,0,0,0.6)';
               _markerTooltip.innerHTML = `
                 <b>${d.label}</b>
                 ${d.inModernCountry ? `<br><span style="color:#aaa">${d.inModernCountry}</span>` : ''}
@@ -692,7 +690,8 @@
               _markerTooltip.style.top  = (e.clientY + 14) + 'px';
             });
             div.addEventListener('mouseleave', () => {
-              if (d.id !== currentHighlightId) div.style.transform = '';
+              if (d.id !== currentHighlightId)
+                div.style.boxShadow = '0 1px 4px rgba(0,0,0,0.55)';
               _markerTooltip.style.display = 'none';
             });
 
@@ -707,9 +706,8 @@
 
         // Auto-rotation; stops on any user interaction.
         const controls          = globeInstance.controls();
-        controls.autoRotate      = true;
-        controls.autoRotateSpeed = 0.4;
-        controls.enableDamping   = true;
+        controls.autoRotate    = false;
+        controls.enableDamping = true;
         controls.dampingFactor   = 0.1;
 
         document.getElementById('globe-container').addEventListener('pointerdown', () => {
