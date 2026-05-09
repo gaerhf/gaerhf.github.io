@@ -7,11 +7,12 @@ const maxYear = 1500;     // Maximum year
 
 const SHIFT_HINT_HTML = `<div class="popup-hint">&#8679; Shift: open new window</div>`;
 
-// Image URL helpers — single source of truth for the thumbnails/large naming convention.
-// Index 0 → <id>.png (backwards-compatible); index i>0 → <id>-<i>.png.
-// Ordering MUST match sources_by_subject in mk_thumbnails.py: imageSourceUrls first, wikimediaImagePages second.
-const thumbnailUrl = (id, index = 0) => index === 0 ? `/thumbnails/${id}.png` : `/thumbnails/${id}-${index}.png`;
-const largeUrl     = (id, index = 0) => index === 0 ? `/large/${id}.png`      : `/large/${id}-${index}.png`;
+// thumbnailUrl, largeUrl, isEmbeddable, EMBEDDABLE_HOSTS, openSiteModal, closeSiteModal,
+// formatDateForDisplay, getWikimediaImageUrl, probeImageExists, getImageSources,
+// renderFigureHeader, renderFigureMetadata, renderFigureImage,
+// dragElement, initResizers, createDetailWindowShell,
+// getActiveWindow, _setActiveWindowBase
+// — all provided by gaerhf-detail.js (loaded before this script in index.html).
 
 // Marker icon factory — single source of truth for marker size, shape, and border.
 function makeMarkerIcon(color) {
@@ -22,19 +23,6 @@ function makeMarkerIcon(color) {
         tooltipAnchor: [0, -5],  // tip points to the top-center of the 10px marker
         html: `<div style="width:10px;height:10px;box-sizing:border-box;transform-origin:center center;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
     });
-}
-
-// Hostnames known to permit iframe embedding.
-const EMBEDDABLE_HOSTS = new Set([
-    'en.wikipedia.org',
-    'de.wikipedia.org',
-    'it.wikipedia.org',
-    'commons.wikimedia.org',
-]);
-
-function isEmbeddable(url) {
-    try { return EMBEDDABLE_HOSTS.has(new URL(url).hostname); }
-    catch { return false; }
 }
 
 // Check for 'play' CGI parameter in the URL
@@ -55,33 +43,12 @@ let playIndex = 0;
 let currentFigureId = null;
 let currentTab = "figure-map";
 
-let activeWindow = null;
-let topZIndex = 5000;
-
 let leafletMap = null;
 let leafletMarkers = {}; // Place this at the top level
 
 let thresholdDebounceTimer = null;
 let isShiftKeyDown = false;
 let currentKeywordHighlightIds = [];
-
-// Modal functions for displaying external sites
-function openSiteModal(url) {
-    const modal = document.getElementById('site-modal');
-    const iframe = document.getElementById('modal-iframe');
-    const goBtn = document.getElementById('modal-go-btn');
-    if (!modal || !iframe || !goBtn) return;
-    iframe.src = url;
-    goBtn.onclick = () => window.open(url, '_blank');
-    modal.hidden = false;
-}
-
-function closeSiteModal() {
-    const modal = document.getElementById('site-modal');
-    const iframe = document.getElementById('modal-iframe');
-    if (modal) modal.hidden = true;
-    if (iframe) iframe.removeAttribute('src');
-}
 
 // Open a marker callout using a Leaflet Tooltip (direction-aware, no auto-pan).
 // 'top' when the marker has room above; 'bottom' when near the map's top edge.
@@ -190,15 +157,6 @@ function getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) {
 // Use ?? (not ||) so that year 0 CE (a valid date) is not treated as falsy.
 function getFigureStart(f) { return f.earliestDate ?? f.date ?? f.approximateDate; }
 function getFigureEnd(f) { return f.latestDate ?? f.date ?? f.approximateDate; }
-
-function formatDateForDisplay(date) {
-    if (date === null) {
-        return '';
-    }
-    const year = Math.abs(date);
-    const era = date < 0 ? ' BCE' : ' CE';
-    return `${year}${era}`;
-}
 
 function sortFigures(figureIds, sortBy = 'date') {
     const sortedFigures = [...figureIds]; // Create a copy to avoid mutating the original array
@@ -793,198 +751,11 @@ function renderFiguresOnMap(figuresArray) {
 
 }
 
-function renderFigureHeader(labelEl, figure) {
-    if (!labelEl) return;
-    labelEl.textContent = figure.label || figure.id;
-    const linkIcon = document.createElement('a');
-    linkIcon.href = `/#${figure.id}`;
-    linkIcon.target = '_blank';
-    linkIcon.style.marginLeft = '0.6em';
-    linkIcon.style.fontSize = '.5em';
-    linkIcon.textContent = '🔗';
-    labelEl.appendChild(linkIcon);
-}
-
-function renderFigureMetadata(infoEl, figure) {
-    if (!infoEl) return;
-    let html = '';
-    if (figure.cultureLabel) {
-        const cult = figure.cultureDescribedBy
-            ? `<a href="${figure.cultureDescribedBy}" target="_blank">${figure.cultureLabel}</a>`
-            : figure.cultureLabel;
-        html += `<p><strong>Tradition/Culture:</strong> ${cult}</p>`;
-    }
-    if (figure.inModernCountry) html += `<p><strong>Modern Country:</strong> ${figure.inModernCountry}</p>`;
-    if (figure.materialNote) html += `<p><strong>Material:</strong> ${figure.materialNote}</p>`;
-    if (figure.date !== null) html += `<p><strong>Date:</strong> ${formatDateForDisplay(figure.date)}</p>`;
-    else if (figure.approximateDate !== null) html += `<p><strong>Approx. Date:</strong> ${formatDateForDisplay(figure.approximateDate)}</p>`;
-    if (figure.earliestDate !== null) {
-        const end = figure.latestDate !== null ? ` to ${formatDateForDisplay(figure.latestDate)}` : '';
-        html += `<p><strong>Date Range:</strong> ${formatDateForDisplay(figure.earliestDate)}${end}</p>`;
-    }
-    if (figure.note) html += `<p><strong>Note:</strong> ${figure.note}</p>`;
-    infoEl.innerHTML = html;
-
-    if (figure.describedBy && figure.describedBy.length > 0) {
-        const chipRow = document.createElement('div');
-        chipRow.className = 'link-chips';
-        figure.describedBy.forEach(url => {
-            const a = document.createElement('a');
-            a.href = url;
-            const embed = isEmbeddable(url);
-            a.className = `link-chip ${embed ? 'link-chip--embed' : 'link-chip--external'}`;
-            try { a.textContent = new URL(url).hostname.replace(/^www\./, ''); }
-            catch { a.textContent = 'link'; }
-            if (!embed) {
-                a.target = '_blank';
-                a.rel = 'noopener noreferrer';
-                const icon = document.createElement('span');
-                icon.textContent = '↗';
-                icon.setAttribute('aria-hidden', 'true');
-                a.appendChild(icon);
-            }
-            chipRow.appendChild(a);
-        });
-        infoEl.appendChild(chipRow);
-    }
-}
-
-// Returns ordered image descriptors matching mk_thumbnails.py's sources_by_subject order:
-// imageSourceUrls (direct) first, then wikimediaImagePages.
-function getImageSources(figure) {
-    const n = figure.imageSourceUrls.length;
-    return [
-        ...figure.imageSourceUrls.map((_, i) => ({ thumb: thumbnailUrl(figure.id, i), large: largeUrl(figure.id, i) })),
-        ...figure.wikimediaImagePages.map((_, i) => ({ thumb: thumbnailUrl(figure.id, n + i), large: largeUrl(figure.id, n + i) })),
-    ];
-}
-
-function probeImageExists(url) {
-    return new Promise((resolve) => {
-        const probe = new Image();
-        probe.onload = () => resolve(true);
-        probe.onerror = () => resolve(false);
-        probe.src = url;
-    });
-}
-
-async function renderFigureImage(imageDiv, figure) {
-    if (!imageDiv) return;
-    imageDiv.innerHTML = '';
-
-    const sources = getImageSources(figure);
-    if (sources.length === 0) {
-        const localThumb = thumbnailUrl(figure.id);
-        const localLarge = largeUrl(figure.id);
-        const hasLocalImage = await probeImageExists(localThumb);
-        if (!hasLocalImage) return;
-        sources.push({ thumb: localThumb, large: localLarge });
-    }
-
-    let currentIndex = 0;
-    let showLargePreview = false;
-    let swapToken = 0;
-
-    const img = document.createElement('img');
-    const detailA = document.createElement('a');
-    detailA.title = 'Click for Google Image Search';
-    detailA.appendChild(img);
-    imageDiv.appendChild(detailA);
-
-    function swapImageSmooth(nextSrc) {
-        if (!nextSrc || img.dataset.currentSrc === nextSrc) return;
-        const myToken = ++swapToken;
-        const preload = new Image();
-        preload.src = nextSrc;
-
-        const applySwap = () => {
-            if (myToken !== swapToken) return;
-            img.classList.add('is-swapping');
-            img.src = nextSrc;
-            img.dataset.currentSrc = nextSrc;
-            requestAnimationFrame(() => {
-                if (myToken !== swapToken) return;
-                img.classList.remove('is-swapping');
-            });
-        };
-
-        if (preload.complete) {
-            applySwap();
-            return;
-        }
-        preload.addEventListener('load', applySwap, { once: true });
-        preload.addEventListener('error', applySwap, { once: true });
-    }
-
-    // Mouseover handlers read currentIndex at event time so they work across carousel navigation.
-    img.addEventListener('mouseover', () => {
-        showLargePreview = true;
-        swapImageSmooth(sources[currentIndex].large);
-        imageDiv.style.paddingTop = '0';
-    });
-    img.addEventListener('mouseout', () => {
-        showLargePreview = false;
-        swapImageSmooth(sources[currentIndex].thumb);
-        imageDiv.style.paddingTop = '';
-    });
-
-    // Lens URLs: direct sources are known immediately; Wikimedia pages resolve async.
-    const lensUrls = sources.length > 0
-        ? [
-            ...figure.imageSourceUrls,
-            ...figure.wikimediaImagePages.map(() => null),
-        ]
-        : [];
-    figure.wikimediaImagePages.forEach(async (page, i) => {
-        const url = await getWikimediaImageUrl(page, 200);
-        const idx = figure.imageSourceUrls.length + i;
-        lensUrls[idx] = url;
-        if (currentIndex === idx) {
-            detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(url || '')}`;
-        }
-    });
-
-    let prevBtn, nextBtn, counter;
-
-    function showImage(index) {
-        currentIndex = index;
-        const nextSrc = showLargePreview ? sources[index].large : sources[index].thumb;
-        swapImageSmooth(nextSrc);
-        const preloadLarge = new Image();
-        preloadLarge.src = sources[index].large;
-        detailA.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(lensUrls[index] || '')}`;
-        if (sources.length > 1) {
-            counter.textContent = `${index + 1} / ${sources.length}`;
-            prevBtn.style.visibility = 'visible';
-            nextBtn.style.visibility = 'visible';
-        }
-    }
-
-    if (sources.length > 1) {
-        const nav = document.createElement('div');
-        nav.className = 'carousel-nav';
-        prevBtn = document.createElement('button');
-        prevBtn.className = 'carousel-btn';
-        prevBtn.textContent = '◀';
-        prevBtn.addEventListener('click', () => { showImage((currentIndex - 1 + sources.length) % sources.length); });
-        counter = document.createElement('span');
-        counter.className = 'carousel-counter';
-        nextBtn = document.createElement('button');
-        nextBtn.className = 'carousel-btn';
-        nextBtn.textContent = '▶';
-        nextBtn.addEventListener('click', () => { showImage((currentIndex + 1) % sources.length); });
-        nav.append(prevBtn, counter, nextBtn);
-        imageDiv.appendChild(nav);
-    }
-
-    showImage(0);
-}
-
 async function showFigureDetails(figureId, { markAsRecent = false } = {}) {
     const figure = figuresDict[figureId];
     if (!figure) return;
 
-    const targetWindow = (isShiftKeyDown || !activeWindow) ? createDetailWindow(figureId) : activeWindow;
+    const targetWindow = (isShiftKeyDown || !getActiveWindow()) ? createDetailWindow(figureId) : getActiveWindow();
     targetWindow.dataset.figureId = figureId;
 
     if (markAsRecent) {
@@ -1004,75 +775,33 @@ async function showFigureDetails(figureId, { markAsRecent = false } = {}) {
 }
 
 function createDetailWindow(figureId) {
-    const win = document.createElement('div');
-    win.className = 'detail-window';
-    // Slight offset for each new window to prevent exact stacking
-    const count = document.querySelectorAll('.detail-window').length;
-    const _fig = figuresDict[figureId];
-    const _lng = _fig && _fig.representativeLatLongPoint ? _fig.representativeLatLongPoint[1] : null;
+    const count   = document.querySelectorAll('.detail-window').length;
+    const _fig    = figuresDict[figureId];
+    const _lng    = _fig && _fig.representativeLatLongPoint ? _fig.representativeLatLongPoint[1] : null;
     const _placeLeft = _lng !== null && _lng >= 0; // eastern hemisphere → left side keeps marker visible
+
+    const win = createDetailWindowShell({
+        onClose: () => {
+            if (!getActiveWindow()) currentFigureId = null;
+            highlightMapFigure(currentFigureId);
+        },
+    });
+
     win.style.top = `${110 + (count * 20)}px`;
     if (_placeLeft) {
-        win.style.left = `${30 + (count * 20)}px`;
+        win.style.left  = `${30 + (count * 20)}px`;
         win.style.right = 'auto';
     } else {
         win.style.right = `${30 + (count * 20)}px`;
-        win.style.left = 'auto';
+        win.style.left  = 'auto';
     }
-
-    win.innerHTML = `
-        <div class="detail-label-container">
-            <h2 class="detail-label">Loading</h2>
-            <button class="window-close-btn" title="Close window">×</button>
-        </div>
-        <div class="figure-details-wrapper">
-            <div class="detail-image"></div>
-            <div class="detail-info"></div>
-        </div>
-        <div class="resizer resizer-r"></div>
-        <div class="resizer resizer-l"></div>
-        <div class="resizer resizer-b"></div>
-        <div class="resizer resizer-br"></div>
-        <div class="resizer resizer-bl"></div>
-    `;
-
-    document.body.appendChild(win);
-    dragElement(win);
-    initResizers(win);
 
     win.addEventListener('mousedown', () => setActiveWindow(win));
-    win.querySelector('.window-close-btn').addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (activeWindow === win) {
-            activeWindow = null;
-            currentFigureId = null;
-        }
-        win.remove();
-        // Re-apply marker highlights: demotes this window's marker from primary/secondary.
-        highlightMapFigure(currentFigureId);
-    });
-
-    // Intercept clicks on embeddable links to open in the site modal;
-    // non-embeddable links fall through to their target="_blank".
-    const infoEl = win.querySelector('.detail-info');
-    if (infoEl) {
-        infoEl.addEventListener('click', (e) => {
-            const link = e.target.closest('a');
-            if (link && link.href && isEmbeddable(link.href)) {
-                e.preventDefault();
-                openSiteModal(link.href);
-            }
-        });
-    }
-
     return win;
 }
 
 function setActiveWindow(win) {
-    if (activeWindow) activeWindow.classList.remove('active-window');
-    activeWindow = win;
-    activeWindow.classList.add('active-window');
-    activeWindow.style.zIndex = ++topZIndex;
+    _setActiveWindowBase(win);
 
     const figId = win.dataset.figureId;
     if (figId) {
@@ -1080,40 +809,11 @@ function setActiveWindow(win) {
         if (window.location.hash !== `#${figId}`) {
             history.replaceState(null, '', `#${figId}`);
         }
-        // Synchronize highlights across all views
         highlightListFigure(figId);
         highlightTimelineFigure(figId);
         highlightMapFigure(figId);
         highlightGalleryFigure(figId);
         try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
-    }
-}
-
-async function getWikimediaImageUrl(pageUrl, width = 200) {
-    try {
-        const parts = pageUrl.split('/');
-        const filename = parts[parts.length - 1];
-        const apiUrlBase = 'https://commons.wikimedia.org/w/api.php';
-        const apiUrl = `${apiUrlBase}?action=query&prop=imageinfo&iiprop=url|thumburl&titles=${filename}&iiurlwidth=${width}&format=json&origin=*`;
-        const response = await fetch(apiUrl);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        const pages = data.query.pages;
-        const pageId = Object.keys(pages)[0];
-
-        if (pageId !== "-1" && pages[pageId].imageinfo && pages[pageId].imageinfo[0].thumburl) {
-            return pages[pageId].imageinfo[0].thumburl;
-        } else {
-            console.error("Could not retrieve thumbnail URL from the API response for:", pageUrl);
-            return null;
-        }
-    } catch (error) {
-        console.error("An error occurred while fetching Wikimedia image info:", error);
-        return null;
     }
 }
 
@@ -1503,65 +1203,6 @@ document.addEventListener('DOMContentLoaded', () => {
 /**
  * Makes an element draggable using a handle (defaults to element itself or child with ID + 'label')
  */
-function dragElement(elmnt) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    const handle = elmnt.querySelector('.detail-label-container') || elmnt;
-    handle.onmousedown = (e) => {
-        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = () => { document.onmouseup = null; document.onmousemove = null; };
-        document.onmousemove = (ev) => {
-            ev.preventDefault();
-            pos1 = pos3 - ev.clientX;
-            pos2 = pos4 - ev.clientY;
-            pos3 = ev.clientX;
-            pos4 = ev.clientY;
-            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-            elmnt.style.right = 'auto';
-        };
-    };
-}
-
-/**
- * Makes an element resizable from edges
- */
-function initResizers(elmnt) {
-    elmnt.querySelectorAll('.resizer').forEach(resizer => {
-        resizer.addEventListener('mousedown', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            const startX = e.clientX, startY = e.clientY;
-            const rect = elmnt.getBoundingClientRect();
-            const startW = rect.width, startH = rect.height, startL = rect.left;
-            const type = e.target.classList;
-
-            const doDrag = (ev) => {
-                elmnt.style.right = 'auto';
-                elmnt.style.bottom = 'auto';
-                if (type.contains('resizer-r') || type.contains('resizer-br')) {
-                    const w = startW + (ev.clientX - startX);
-                    if (w > 200) elmnt.style.width = w + 'px';
-                } else if (type.contains('resizer-l') || type.contains('resizer-bl')) {
-                    const w = startW - (ev.clientX - startX);
-                    if (w > 200) { elmnt.style.width = w + 'px'; elmnt.style.left = (startL + (ev.clientX - startX)) + 'px'; }
-                }
-                if (type.contains('resizer-b') || type.contains('resizer-br') || type.contains('resizer-bl')) {
-                    const h = startH + (ev.clientY - startY);
-                    if (h > 150) elmnt.style.height = h + 'px';
-                }
-            };
-            const stopDrag = () => { document.removeEventListener('mousemove', doDrag); document.removeEventListener('mouseup', stopDrag); window.dispatchEvent(new Event('resize')); };
-            document.addEventListener('mousemove', doDrag);
-            document.addEventListener('mouseup', stopDrag);
-        });
-    });
-}
-
-
-
 function scrollToListFigure(figureId) {
     const currentDiv = document.getElementById(`list-${figureId}`);
     if (currentDiv) {

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAERHF 3D Globe</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0e1a; color: #fff; font-family: system-ui, sans-serif; overflow: hidden; }
+    #globe-container { width: 100vw; height: 100vh; }
+
+    /* ── Top header bar ─────────────────────────────────────────────── */
+    #top-bar {
+      position: fixed; top: 0; left: 0; right: 0; height: 46px; z-index: 300;
+      background: rgba(0,0,0,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      display: flex; align-items: center; gap: 10px;
+      padding: 0 14px;
+    }
+    #back-link {
+      font-size: 0.78em; color: #aaa; text-decoration: none;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    #back-link:hover { color: #fff; }
+    .top-bar-sep { color: rgba(255,255,255,0.2); flex-shrink: 0; user-select: none; }
+    #site-title {
+      font-size: 0.85em; font-weight: 600; letter-spacing: 0.03em;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    #count {
+      font-size: 0.75em; color: #bbb; white-space: nowrap; flex-shrink: 0;
+    }
+
+    /* Spacer pushes search + play to the right */
+    .top-bar-spacer { flex: 1; }
+
+    /* Search area */
+    #top-bar .autocomplete-container {
+      position: relative; display: flex; align-items: center; gap: 4px;
+      flex-shrink: 0; width: 240px;
+    }
+    #search-input {
+      flex: 1;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 4px;
+      color: #fff;
+      font-size: 0.82em;
+      padding: 4px 8px;
+      outline: none;
+    }
+    #search-input::placeholder { color: rgba(255,255,255,0.4); }
+    #search-input:focus {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.15);
+    }
+    #zoom-keyword-btn {
+      flex-shrink: 0;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 4px; padding: 2px 6px;
+      color: #fff; font-size: 0.8em; cursor: pointer;
+    }
+    #zoom-keyword-btn:hover { border-color: rgba(255,255,255,0.7); }
+
+    /* Override style.css autocomplete for dark theme */
+    #top-bar .autocomplete-dropdown {
+      top: calc(100% + 4px);
+      background-color: rgba(20,20,35,0.97);
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      border-radius: 4px;
+      max-height: 200px;
+    }
+    #top-bar .autocomplete-dropdown li {
+      color: #ddd;
+      font-size: 0.82em;
+      padding: 6px 10px;
+      border-bottom-color: rgba(255,255,255,0.07);
+    }
+    #top-bar .autocomplete-dropdown li:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    #play-btn {
+      flex-shrink: 0;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 4px; padding: 3px 8px;
+      color: #fff; font-size: 0.9em; cursor: pointer;
+    }
+    #play-btn:hover { border-color: rgba(255,255,255,0.6); }
+
+    /* ── Legend ─────────────────────────────────────────────────────── */
+    #legend {
+      position: absolute; bottom: 90px; left: 14px;
+      background: rgba(0,0,0,0.65);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px; padding: 10px 14px;
+    }
+    #legend p { font-size: 0.72em; color: #bbb; margin-bottom: 5px; }
+    #legend canvas { display: block; border-radius: 3px; }
+    #legend-labels {
+      display: flex; justify-content: space-between;
+      font-size: 0.68em; color: #aaa; margin-top: 3px; width: 200px;
+    }
+
+    #loading {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 1.2em; color: #ccc;
+    }
+
+    /* ── Gallery strip ──────────────────────────────────────────────── */
+    #gallery-strip {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: rgba(0,0,0,0.72);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      overflow-x: auto; overflow-y: hidden;
+      display: flex; align-items: center;
+      padding: 6px 10px; gap: 5px;
+      z-index: 200;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.2) transparent;
+    }
+    #gallery-strip::-webkit-scrollbar { height: 4px; }
+    #gallery-strip::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.2); border-radius: 2px;
+    }
+
+    .gallery-thumb {
+      height: 62px; width: auto;
+      border-radius: 4px;
+      cursor: pointer;
+      opacity: 0.7;
+      border: 2px solid transparent;
+      flex-shrink: 0;
+      transition: opacity 0.15s, border-color 0.15s, box-shadow 0.15s;
+      object-fit: cover;
+    }
+    .gallery-thumb:hover { opacity: 1; }
+    .gallery-thumb.selected { border-color: #CC79A7; opacity: 1; }
+    .gallery-thumb.keyword-match {
+      box-shadow: 0 0 0 2px rgba(230,159,0,1);
+      opacity: 1;
+    }
+    .gallery-thumb.keyword-dim { opacity: 0.2; }
+
+    /* ── Dark-theme overrides for detail windows ────────────────────── */
+    .detail-window {
+      background-color: rgba(18,22,42,0.97) !important;
+      border-color: rgba(255,255,255,0.14) !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.7) !important;
+      color: #e8e8f0;
+    }
+    .detail-window.active-window {
+      border-color: #CC79A7 !important;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.8) !important;
+    }
+    .figure-details-wrapper {
+      background-color: rgba(18,22,42,0.97) !important;
+      color: #e8e8f0;
+    }
+    .detail-info { color: #d0d0e0; }
+    .detail-info strong { color: #f0f0f8; }
+    .carousel-btn { color: #aaa !important; }
+    .carousel-btn:hover { color: #fff !important; background: rgba(255,255,255,0.1) !important; }
+    .carousel-counter { color: #888 !important; }
+    .link-chip--embed {
+      color: #7ec8f7 !important;
+      background: rgba(25,118,210,0.2) !important;
+      border-color: rgba(25,118,210,0.5) !important;
+    }
+    .link-chip--embed:hover { background: rgba(25,118,210,0.35) !important; }
+    .link-chip--external {
+      color: #bbb !important;
+      background: rgba(255,255,255,0.07) !important;
+      border-color: rgba(255,255,255,0.18) !important;
+    }
+    .link-chip--external:hover { background: rgba(255,255,255,0.14) !important; color: #eee !important; }
+    .culture-info { color: #999 !important; }
+
+    /* Fade detail windows while hovering gallery strip — dark version */
+    body.gallery-hovered .detail-window { background-color: rgba(18,22,42,0.22) !important; }
+    body.gallery-hovered .detail-window .figure-details-wrapper { background-color: rgba(18,22,42,0.15) !important; }
+    body.gallery-hovered .detail-window .detail-label-container { background-color: rgba(25,118,210,0.35); }
+    body.gallery-hovered .detail-window.active-window .detail-label-container { background-color: rgba(204,121,167,0.35); }
+    body.gallery-hovered .detail-window.recently-opened { background-color: rgba(18,22,42,0.97) !important; }
+    body.gallery-hovered .detail-window.recently-opened .figure-details-wrapper { background-color: rgba(18,22,42,0.97) !important; }
+    body.gallery-hovered .detail-window.recently-opened .detail-label-container { background-color: #1976d2; }
+    body.gallery-hovered .detail-window.active-window.recently-opened .detail-label-container { background-color: #CC79A7; }
+  </style>
+</head>
+<body>
+  <div id="globe-container"></div>
+
+  <div id="top-bar">
+    <a id="back-link" href="../index.html">← Main site</a>
+    <span class="top-bar-sep">|</span>
+    <span id="site-title">GAERHF 3D Globe</span>
+    <span id="count">Loading…</span>
+    <div class="top-bar-spacer"></div>
+    <div class="autocomplete-container">
+      <button type="button" id="zoom-keyword-btn" title="Fly to first result" hidden>🔎</button>
+      <input id="search-input" type="text" placeholder="Search figures…" autocomplete="off">
+      <ul class="autocomplete-dropdown" id="suggestions-list" hidden></ul>
+    </div>
+    <button type="button" id="play-btn" title="Play / Pause">▶</button>
+  </div>
+
+  <div id="legend">
+    <p>Point color by date</p>
+    <canvas id="legend-canvas" width="200" height="14"></canvas>
+    <div id="legend-labels">
+      <span>50,000 BCE</span>
+      <span>1,500 CE</span>
+    </div>
+  </div>
+
+  <div id="loading">Loading GAERHF data…</div>
+
+  <div id="gallery-strip"></div>
+
+  <script src="https://unpkg.com/rdflib@2.2.19/dist/rdflib.min.js"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js"></script>
+  <script src="../gaerhf-detail.js"></script>
+  <script>
+    const MIN_DATE = -50000;
+    const MAX_DATE = 1500;
+
+    // ── Date helpers ──────────────────────────────────────────────────
+    function getFigureMidDate(f) {
+      if (f.date !== null && f.date !== undefined) return f.date;
+      if (f.earliestDate !== null && f.earliestDate !== undefined &&
+          f.latestDate   !== null && f.latestDate   !== undefined)
+        return (f.earliestDate + f.latestDate) / 2;
+      if (f.approximateDate !== null && f.approximateDate !== undefined) return f.approximateDate;
+      return null;
+    }
+
+    function formatDateRange(f) {
+      const fmt = n => n < 0
+        ? `${Math.abs(Math.round(n)).toLocaleString()} BCE`
+        : `${Math.round(n).toLocaleString()} CE`;
+      if (f.date !== null && f.date !== undefined) return fmt(f.date);
+      if (f.earliestDate !== null && f.earliestDate !== undefined &&
+          f.latestDate   !== null && f.latestDate   !== undefined)
+        return `${fmt(f.earliestDate)} – ${fmt(f.latestDate)}`;
+      if (f.approximateDate !== null && f.approximateDate !== undefined) return `c. ${fmt(f.approximateDate)}`;
+      return 'Date unknown';
+    }
+
+    // ── Color scale ───────────────────────────────────────────────────
+    function dateToColor(date) {
+      const t = Math.max(0, Math.min(1, (date - MIN_DATE) / (MAX_DATE - MIN_DATE)));
+      let r, g, b;
+      if (t < 0.5) {
+        const u = t * 2;
+        r = Math.round(139 + (37  - 139) * u);
+        g = Math.round(61  + (117 - 61)  * u);
+        b = Math.round(191 + (232 - 191) * u);
+      } else {
+        const u = (t - 0.5) * 2;
+        r = Math.round(37  + (255 - 37)  * u);
+        g = Math.round(117 + (140 - 117) * u);
+        b = Math.round(232 + (0   - 232) * u);
+      }
+      return `rgba(${r},${g},${b},0.9)`;
+    }
+
+    // ── Data loading ──────────────────────────────────────────────────
+    async function loadFigures() {
+      const response = await fetch('../gaerhf.ttl');
+      if (!response.ok) throw new Error(`HTTP ${response.status} fetching gaerhf.ttl`);
+      const turtleData = await response.text();
+
+      const store = $rdf.graph();
+      $rdf.parse(turtleData, store, document.location.href, 'text/turtle');
+
+      const sym = uri => $rdf.sym(uri);
+      const RDF_TYPE    = sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type');
+      const RDFS_LABEL  = sym('http://www.w3.org/2000/01/rdf-schema#label');
+      const HUMAN_FIG   = sym('urn:gaerhf:id:human-figure');
+      const GROUP_FIG   = sym('urn:gaerhf:id:group-of-human-figures');
+      const LATLONG     = sym('urn:gaerhf:id:representative-latlong-point');
+      const DATE        = sym('urn:gaerhf:id:date');
+      const EARLIEST    = sym('urn:gaerhf:id:earliest-date');
+      const LATEST      = sym('urn:gaerhf:id:latest-date');
+      const APPROX      = sym('urn:gaerhf:id:approximate-date');
+      const COUNTRY     = sym('urn:gaerhf:id:in-modern-country-note');
+      const MATERIAL    = sym('urn:gaerhf:id:material-note');
+      const NOTE        = sym('urn:gaerhf:id:note');
+      const DESCRIBED   = sym('urn:gaerhf:id:described-by');
+      const WC_IMAGE    = sym('urn:gaerhf:id:wikimedia-commons-image-page');
+      const THUMB_IMAGE = sym('urn:gaerhf:id:thumbnail-image');
+      const CULTURE     = sym('urn:gaerhf:id:art-historical-culture-or-tradition');
+
+      const figures = [];
+
+      for (const type of [HUMAN_FIG, GROUP_FIG]) {
+        for (const subject of store.each(null, RDF_TYPE, type)) {
+          const latLongNode = store.any(subject, LATLONG);
+          if (!latLongNode || latLongNode.termType !== 'Collection') continue;
+          const coords = latLongNode.elements.map(el => parseFloat(el.value));
+          if (coords.length !== 2 || coords.some(isNaN)) continue;
+          const [lat, lng] = coords;
+
+          const v   = prop => store.anyValue(subject, prop) || null;
+          const all = prop => store.each(subject, prop).map(n => n.value);
+
+          const date            = v(DATE)     !== null ? parseFloat(v(DATE))     : null;
+          const earliestDate    = v(EARLIEST) !== null ? parseFloat(v(EARLIEST)) : null;
+          const latestDate      = v(LATEST)   !== null ? parseFloat(v(LATEST))   : null;
+          const approximateDate = v(APPROX)   !== null ? parseFloat(v(APPROX))   : null;
+
+          const culture = store.any(subject, CULTURE);
+          let cultureLabel = null, cultureDescribedBy = null;
+          if (culture) {
+            cultureLabel       = store.anyValue(culture, RDFS_LABEL) || null;
+            cultureDescribedBy = store.anyValue(culture, DESCRIBED)  || null;
+          }
+
+          figures.push({
+            id:                         subject.uri.replace('urn:gaerhf:id:', ''),
+            label:                      v(RDFS_LABEL) || subject.uri.replace('urn:gaerhf:id:', ''),
+            lat, lng,
+            date, earliestDate, latestDate, approximateDate,
+            inModernCountry:            v(COUNTRY),
+            materialNote:               v(MATERIAL),
+            note:                       v(NOTE),
+            describedBy:                all(DESCRIBED),
+            imageSourceUrls:            all(THUMB_IMAGE),
+            wikimediaImagePages:        all(WC_IMAGE),
+            cultureLabel,
+            cultureDescribedBy,
+            representativeLatLongPoint: [lat, lng],
+          });
+        }
+      }
+
+      return figures;
+    }
+
+    // ── Legend ────────────────────────────────────────────────────────
+    function drawLegend() {
+      const canvas = document.getElementById('legend-canvas');
+      const ctx    = canvas.getContext('2d');
+      const grad   = ctx.createLinearGradient(0, 0, 200, 0);
+      for (let i = 0; i <= 40; i++) {
+        const t = i / 40;
+        grad.addColorStop(t, dateToColor(MIN_DATE + t * (MAX_DATE - MIN_DATE)));
+      }
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 200, 14);
+    }
+
+    // ── Globe state ───────────────────────────────────────────────────
+    let globeInstance              = null;
+    let allFigures                 = [];
+    let figuresDict                = {};
+    let currentSortedIndex         = [];
+    let currentFigureId            = null;
+    let currentKeywordHighlightIds = [];
+    let searchControl              = null;
+    let playInterval               = null;
+    let playIndex                  = 0;
+    let currentHighlightId         = null;
+    let isShiftKeyDown             = false;
+    const markerElements           = new Map(); // figureId → DOM element
+
+    document.addEventListener('keydown', e => { if (e.key === 'Shift') isShiftKeyDown = true;  });
+    document.addEventListener('keyup',   e => { if (e.key === 'Shift') isShiftKeyDown = false; });
+
+    // Arrow-key / Tab navigation.
+    document.addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT') return;
+      const dir = (e.key === 'ArrowRight' || e.key === 'Tab') ? 'forward'
+                : (e.key === 'ArrowLeft')                      ? 'backward'
+                : null;
+      if (!dir) return;
+      if (e.key === 'Tab') e.preventDefault();
+      stopPlayback();
+      const nextId = figureNavigate(dir, currentFigureId, currentSortedIndex, currentKeywordHighlightIds);
+      if (nextId && figuresDict[nextId]) showFigureDetails(figuresDict[nextId]);
+    });
+
+    // Shared hover tooltip (one div reused across all markers).
+    const _markerTooltip = document.createElement('div');
+    _markerTooltip.style.cssText = [
+      'position:fixed', 'z-index:9999', 'pointer-events:none', 'display:none',
+      'background:rgba(10,10,20,0.9)', 'border:1px solid rgba(255,255,255,0.22)',
+      'border-radius:6px', 'padding:7px 10px',
+      'font-family:system-ui,sans-serif', 'font-size:0.85em',
+      'max-width:240px', 'line-height:1.5', 'color:#fff',
+    ].join(';');
+    document.body.appendChild(_markerTooltip);
+
+    // ── Keyword highlight ─────────────────────────────────────────────
+    function applyKeywordHighlights(ids) {
+      const idSet      = new Set(ids);
+      const hasResults = ids.length > 0;
+
+      markerElements.forEach((el, figId) => {
+        if (figId === currentHighlightId) return; // don't override selected marker
+        if (!hasResults) {
+          el.style.opacity   = '';
+          el.style.boxShadow = '0 1px 4px rgba(0,0,0,0.55)';
+        } else if (idSet.has(figId)) {
+          el.style.opacity   = '1';
+          el.style.boxShadow = '0 0 0 2px rgba(230,159,0,0.8), 0 1px 4px rgba(0,0,0,0.55)';
+        } else {
+          el.style.opacity   = '0.2';
+          el.style.boxShadow = 'none';
+        }
+      });
+
+      document.querySelectorAll('.gallery-thumb').forEach(img => {
+        const id = img.id.replace(/^gt-/, '');
+        img.classList.remove('keyword-match', 'keyword-dim');
+        if (hasResults) {
+          img.classList.add(idSet.has(id) ? 'keyword-match' : 'keyword-dim');
+        }
+      });
+
+      const zoomBtn = document.getElementById('zoom-keyword-btn');
+      if (zoomBtn) zoomBtn.hidden = !hasResults;
+    }
+
+    function highlightGlobeFigure(figureId) {
+      const prev         = currentHighlightId;
+      currentHighlightId = figureId || null;
+
+      // Restore previous marker to its keyword-highlight or default state.
+      if (prev && prev !== figureId) {
+        const el    = markerElements.get(prev);
+        const idSet = new Set(currentKeywordHighlightIds);
+        if (el) {
+          el.style.background = el.dataset.baseColor;
+          el.style.transform  = '';
+          el.style.zIndex     = '';
+          if (!currentKeywordHighlightIds.length) {
+            el.style.opacity   = '';
+            el.style.boxShadow = '0 1px 4px rgba(0,0,0,0.55)';
+          } else if (idSet.has(prev)) {
+            el.style.opacity   = '1';
+            el.style.boxShadow = '0 0 0 2px rgba(230,159,0,0.8), 0 1px 4px rgba(0,0,0,0.55)';
+          } else {
+            el.style.opacity   = '0.2';
+            el.style.boxShadow = 'none';
+          }
+        }
+      }
+
+      // Apply selected style to new marker.
+      if (figureId) {
+        const el = markerElements.get(figureId);
+        if (el) {
+          el.style.opacity   = '1';
+          el.style.background  = '#fff';
+          el.style.boxShadow   = '0 0 0 2.5px #CC79A7, 0 2px 8px rgba(0,0,0,0.7)';
+          el.style.transform   = 'scale(1.5)';
+          el.style.zIndex      = '99';
+        }
+        const thumb = document.getElementById(`gt-${figureId}`);
+        if (thumb) thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+
+      document.querySelectorAll('.gallery-thumb').forEach(img => img.classList.remove('selected'));
+      if (figureId) {
+        const thumb = document.getElementById(`gt-${figureId}`);
+        if (thumb) thumb.classList.add('selected');
+      }
+    }
+
+    // ── Playback ──────────────────────────────────────────────────────
+    function startPlayback() {
+      if (playInterval) return;
+      playIndex = currentSortedIndex.indexOf(currentFigureId);
+      if (playIndex < 0) playIndex = 0;
+      document.getElementById('play-btn').textContent = '⏸';
+      playInterval = setInterval(() => {
+        playIndex = (playIndex + 1) % currentSortedIndex.length;
+        const nextId = currentSortedIndex[playIndex];
+        if (figuresDict[nextId]) showFigureDetails(figuresDict[nextId]);
+      }, 2000);
+    }
+
+    function stopPlayback() {
+      if (!playInterval) return;
+      clearInterval(playInterval);
+      playInterval = null;
+      document.getElementById('play-btn').textContent = '▶';
+    }
+
+    // ── Detail window (3D-page version) ──────────────────────────────
+    function createDetailWindow3d() {
+      const count = document.querySelectorAll('.detail-window').length;
+      const win   = createDetailWindowShell({
+        onClose: () => {
+          const activeWin = getActiveWindow();
+          highlightGlobeFigure(activeWin?.dataset.figureId || null);
+          if (!activeWin) currentFigureId = null;
+        },
+      });
+      win.style.top   = `${56 + count * 22}px`;
+      win.style.right = `${30 + count * 22}px`;
+      win.style.left  = 'auto';
+      win.addEventListener('mousedown', () => setActiveWindow3d(win));
+      return win;
+    }
+
+    function setActiveWindow3d(win) {
+      _setActiveWindowBase(win);
+      const figId = win?.dataset.figureId;
+      if (figId) {
+        currentFigureId = figId;
+        highlightGlobeFigure(figId);
+        if (window.location.hash !== `#${figId}`) history.replaceState(null, '', `#${figId}`);
+      }
+    }
+
+    async function showFigureDetails(figure) {
+      if (!figure) return;
+
+      if (globeInstance) {
+        globeInstance.pointOfView({ lat: figure.lat, lng: figure.lng, altitude: 1.8 }, 1200);
+        globeInstance.controls().autoRotate = false;
+      }
+
+      const targetWindow = (isShiftKeyDown || !getActiveWindow())
+        ? createDetailWindow3d()
+        : getActiveWindow();
+
+      targetWindow.dataset.figureId = figure.id;
+
+      clearTimeout(targetWindow._recentOpenTimer);
+      targetWindow.classList.add('recently-opened');
+      targetWindow._recentOpenTimer = setTimeout(
+        () => targetWindow.classList.remove('recently-opened'), 3000);
+
+      renderFigureHeader(targetWindow.querySelector('.detail-label'), figure);
+      renderFigureMetadata(targetWindow.querySelector('.detail-info'), figure);
+      await renderFigureImage(targetWindow.querySelector('.detail-image'), figure);
+
+      setActiveWindow3d(targetWindow);
+    }
+
+    // ── Gallery ───────────────────────────────────────────────────────
+    function buildGallery(figures) {
+      const strip = document.getElementById('gallery-strip');
+      strip.innerHTML = '';
+
+      const sorted = [...figures].sort((a, b) =>
+        (getFigureMidDate(a) ?? 0) - (getFigureMidDate(b) ?? 0));
+
+      sorted.forEach(figure => {
+        const img     = document.createElement('img');
+        img.id        = `gt-${figure.id}`;
+        img.className = 'gallery-thumb';
+        img.src       = thumbnailUrl(figure.id);
+        img.alt       = figure.label;
+        img.title     = `${figure.label} · ${formatDateRange(figure)}`;
+        img.loading   = 'lazy';
+        img.addEventListener('error', () => { img.style.display = 'none'; });
+        img.addEventListener('click', () => { stopPlayback(); showFigureDetails(figure); });
+        strip.appendChild(img);
+      });
+
+      strip.addEventListener('mouseenter', () => document.body.classList.add('gallery-hovered'));
+      strip.addEventListener('mouseleave', () => document.body.classList.remove('gallery-hovered'));
+    }
+
+    // ── Main ──────────────────────────────────────────────────────────
+    (async () => {
+      try {
+        drawLegend();
+        allFigures = await loadFigures();
+
+        figuresDict        = Object.fromEntries(allFigures.map(f => [f.id, f]));
+        currentSortedIndex = [...allFigures]
+          .sort((a, b) => (getFigureMidDate(a) ?? 0) - (getFigureMidDate(b) ?? 0))
+          .map(f => f.id);
+
+        document.getElementById('loading').remove();
+        document.getElementById('count').textContent = `${allFigures.length} figures`;
+
+        buildGallery(allFigures);
+
+        // Wire search using shared utilities from gaerhf-detail.js.
+        const searchIndex = buildFigureSearchIndex(allFigures);
+        searchControl = initSearchUI({
+          inputEl:       document.getElementById('search-input'),
+          suggestionsEl: document.getElementById('suggestions-list'),
+          searchIndex,
+          figures:       allFigures,
+          onResults(ids) {
+            currentKeywordHighlightIds = ids;
+            applyKeywordHighlights(ids);
+          },
+        });
+
+        document.getElementById('zoom-keyword-btn').addEventListener('click', () => {
+          if (!currentKeywordHighlightIds.length) return;
+          const first = figuresDict[currentKeywordHighlightIds[0]];
+          if (first && globeInstance)
+            globeInstance.pointOfView({ lat: first.lat, lng: first.lng, altitude: 2 }, 1000);
+        });
+
+        document.getElementById('play-btn').addEventListener('click', () => {
+          playInterval ? stopPlayback() : startPlayback();
+        });
+
+        globeInstance = Globe()(document.getElementById('globe-container'))
+          .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-day.jpg')
+          .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+          .backgroundImageUrl(null)
+          .htmlElementsData(allFigures)
+          .htmlLat(d => d.lat)
+          .htmlLng(d => d.lng)
+          .htmlAltitude(0.018)
+          .htmlElement(d => {
+            const mid   = getFigureMidDate(d);
+            const color = mid !== null ? dateToColor(mid) : '#aaa';
+
+            const div = document.createElement('div');
+            div.dataset.baseColor = color;
+            div.style.cssText = [
+              'width:11px', 'height:11px',
+              'margin-left:-5.5px', 'margin-top:-5.5px',
+              'border-radius:50%',
+              `background:${color}`,
+              'border:1.5px solid rgba(255,255,255,0.85)',
+              'box-shadow:0 1px 4px rgba(0,0,0,0.55)',
+              'cursor:pointer',
+              'transform-origin:center center',
+              'transition:transform 0.1s',
+              'position:relative',
+              'pointer-events:auto',
+            ].join(';');
+
+            // Click detection via pointerdown/pointerup — more reliable than the
+            // 'click' event, which OrbitControls can suppress by consuming pointerdown.
+            let ptDownX = 0, ptDownY = 0;
+            div.addEventListener('pointerdown', e => {
+              e.stopPropagation();
+              ptDownX = e.clientX;
+              ptDownY = e.clientY;
+            });
+            div.addEventListener('pointercancel', () => { ptDownX = ptDownY = -9999; });
+            div.addEventListener('pointerup', e => {
+              e.stopPropagation();
+              if (Math.hypot(e.clientX - ptDownX, e.clientY - ptDownY) < 8) {
+                try {
+                  stopPlayback();
+                  showFigureDetails(d);
+                } catch (err) { console.error('marker click failed:', err); }
+              }
+            });
+
+            div.addEventListener('mouseenter', e => {
+              if (d.id !== currentHighlightId) div.style.transform = 'scale(1.5)';
+              _markerTooltip.innerHTML = `
+                <b>${d.label}</b>
+                ${d.inModernCountry ? `<br><span style="color:#aaa">${d.inModernCountry}</span>` : ''}
+                <br><span style="color:#ddd">${formatDateRange(d)}</span>
+                ${d.materialNote ? `<br><span style="color:#999;font-size:0.9em">${d.materialNote}</span>` : ''}`;
+              _markerTooltip.style.display = 'block';
+              _markerTooltip.style.left    = (e.clientX + 14) + 'px';
+              _markerTooltip.style.top     = (e.clientY + 14) + 'px';
+            });
+            div.addEventListener('mousemove', e => {
+              _markerTooltip.style.left = (e.clientX + 14) + 'px';
+              _markerTooltip.style.top  = (e.clientY + 14) + 'px';
+            });
+            div.addEventListener('mouseleave', () => {
+              if (d.id !== currentHighlightId) div.style.transform = '';
+              _markerTooltip.style.display = 'none';
+            });
+
+            markerElements.set(d.id, div);
+            return div;
+          });
+
+        // Dim scene lights for a natural satellite look.
+        globeInstance.scene().children
+          .filter(obj => obj.isLight)
+          .forEach(light => { light.intensity *= 0.55; });
+
+        // Auto-rotation; stops on any user interaction.
+        const controls          = globeInstance.controls();
+        controls.autoRotate      = true;
+        controls.autoRotateSpeed = 0.4;
+        controls.enableDamping   = true;
+        controls.dampingFactor   = 0.1;
+
+        document.getElementById('globe-container').addEventListener('pointerdown', () => {
+          controls.autoRotate = false;
+          stopPlayback();
+        });
+
+        // Hash deep-link: open the referenced figure after globe initializes.
+        const hashId = window.location.hash.slice(1);
+        if (hashId && figuresDict[hashId]) {
+          setTimeout(() => showFigureDetails(figuresDict[hashId]), 600);
+        }
+
+      } catch (err) {
+        const loadEl = document.getElementById('loading');
+        if (loadEl) loadEl.textContent = `Error: ${err.message}`;
+        console.error(err);
+      }
+    })();
+  </script>
+</body>
+</html>
