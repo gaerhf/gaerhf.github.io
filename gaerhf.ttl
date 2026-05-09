@@ -6049,6 +6049,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (18.466667 -95.433333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Estatuilla_de_Tuxtla.jpg> .
 
+:herodes-atticus-probalinthus a :human-figure ;
+   rdfs:label "Bust of Herodes Atticus from Probalinthos" ;
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010275329> ;
+   :approximate-date 162 ;
+   :material-note "Marble" ;
+   :note "Height : 63 cm" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (38.12163 23.9480 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Herodes_Atticus_Louvre_Ma1164_n4.jpg> .
+
 :crosby-garrett-helmet a :human-figure ;
    rdfs:label "Crosby Garrett Helmet" ;
    :described-by <https://en.wikipedia.org/wiki/Crosby_Garrett_Helmet> ;
