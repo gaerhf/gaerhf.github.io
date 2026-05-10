@@ -4406,6 +4406,17 @@
    :representative-latlong-point (19.239864 -103.712762) ;
    :thumbnail-image <https://collections-images.lacma.org/remote_images/ma-47618-WEB.jpg> .
 
+:ekven-cemetery-crouched-figure a :human-figure ;
+   rdfs:label "Ekven Cemetery Crouched Figure" ;
+   :described-by <https://www.google.com/books/edition/Problems_of_Ethnic_History_in_the_Bering/pckRnk29-YoC?hl=en&gbpv=0> ,
+      <https://en.wikipedia.org/wiki/Ekven> ;
+   :earliest-date -200 ;
+   :latest-date 500 ;
+   :material-note "Walrus tusk" ;
+   :note "From Arutiunov and Dorian A. Sergeev 1975, trans., p. 140: “In a sculptured figurine, the above-mentioned half-closed eye motif is encountered (Fig. 54). One can see the realism and precise depiction of the natural form and proportions of the human body in the dynamic and expressive figurine. Conventionally, disproportion in the depiction of the human body was more common in Eskimo art. Judging by the hole carved in the groin area of the torso, the figurine must have been the end piece for a staff or baton. The slot in the back area must have been used for attaching additional ornaments made of soft material, such as fur.”" ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (66.025833 -170.073333) . # Ekven Burial Ground, ~30 km south of Uelen on Cape Dezhnev; coordinates from UNESCO tentative-list dossier
+
 :lakshmi-stupa-2-sanchi a :human-figure ;
    rdfs:label "Lakshmi from Stupa 2 at Sanchi" ;
    :described-by <https://en.wikipedia.org/wiki/Sanchi_Stupa_No._2#Early_period_(circa_115_BCE)> ;
