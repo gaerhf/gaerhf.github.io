@@ -2790,7 +2790,7 @@
    :in-modern-country-note "Greece";
    :representative-latlong-point (35.2980 25.16279);
    :thumbnail-image <https://commons.wikimedia.org/wiki/File:Knossos_—_Prince_of_the_Lilies.jpg> ,
-      <https://commons.wikimedia.org/wiki/Category:Prince_of_the_Lilies_(Knossos,_main_palace)#/media/File:Wall_painting_of_the_Priest-King_from_Knossos_(North-South_Corridor)_-_Heraklion_AM_(TORSO_cropped).jpg> .
+      <https://commons.wikimedia.org/wiki/File:Wall_painting_of_the_Priest-King_from_Knossos_(North-South_Corridor)_-_Heraklion_AM_(TORSO_cropped).jpg> .
 
 # :bull-leaping-figurine-knossos a :human-figure;
 #    rdfs:label "Ivory bull-leaper figurine";
@@ -7140,7 +7140,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (33.800278 -114.538333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Blythe_Intaglios_-_Human_Figure_1.jpg> .
 
-:tutu-fella-stelae a :grou-of-human-figures ;
+:tutu-fella-stelae a :group-of-human-figures ;
    rdfs:label "Stelae of Tutu Fella" ;
    :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-16206> ;
    :earliest-date 900;
