@@ -929,14 +929,26 @@ document.addEventListener('keydown', (event) => {
         // Decide navigation set: keyword highlights if present, otherwise visible figures
         let navigationSet = [];
 
+        // Visible-figure ids for the active spatial view, or null if the
+        // current tab has no spatial filter (list/timeline).
+        let visibleFigures = null;
+        if (currentTab === 'figure-globe' && typeof getVisibleGlobeFigureKeys === 'function') {
+            visibleFigures = getVisibleGlobeFigureKeys(); // already sorted by date
+        } else if (currentTab === 'figure-map') {
+            visibleFigures = sortFigures(
+                getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) || [],
+                'date'
+            );
+        }
+
         if (currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0) {
             // Navigate through keyword-highlighted figures
             let keywordSet = sortFigures(currentKeywordHighlightIds, 'date');
 
-            // On map tab, filter to only visible keyword figures
-            if (currentTab === 'figure-map') {
-                const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-                if (visibleFigures && visibleFigures.length > 0) {
+            // On spatial tabs, filter to keyword figures visible in the viewport
+            // so Tab only cycles through markers the user can actually see.
+            if (visibleFigures !== null) {
+                if (visibleFigures.length > 0) {
                     const visibleSet = new Set(visibleFigures);
                     navigationSet = keywordSet.filter(id => visibleSet.has(id));
                 } else {
@@ -947,13 +959,13 @@ document.addEventListener('keydown', (event) => {
                 navigationSet = keywordSet;
             }
         } else {
-            // No keyword highlights: use visible figures on map, all figures on globe
-            if (currentTab === 'figure-globe') {
-                navigationSet = currentSortedIndex;
+            // No keyword highlights: cycle through visible figures on spatial
+            // tabs (map/globe); fall back to the full sorted index elsewhere.
+            if (visibleFigures !== null) {
+                if (visibleFigures.length === 0) return;
+                navigationSet = visibleFigures;
             } else {
-                const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-                if (!visibleFigures || visibleFigures.length === 0) return;
-                navigationSet = sortFigures(visibleFigures, 'date');
+                navigationSet = currentSortedIndex;
             }
         }
 
