@@ -1880,6 +1880,7 @@
    :latest-date -3000 ;
    :material-note "Marble" ;
    :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (31.324167 45.637222) ;
    :art-historical-culture-or-tradition :sumerian ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Warka_mask_(cropped).jpg> .
 
@@ -2392,7 +2393,9 @@
    :earliest-date -2250 ;
    :latest-date -2200 ;
    :material-note "Sandstone" ;
+   :note "From Wikipedia: “The stele shows a narrative scene of the king crossing the steep slopes into enemy territory; on the left are the ordered imperial forces keeping in rank while marching over the disordered defenders that lie broken and defeated. Naram-Sin is shown as by far the most important figure, towering over his enemy and troops and all eyes gaze up toward him. The weak and chaotic opposing forces are shown being thrown from atop the mountainside, impaled by spears, fleeing and begging Naram-Sin for mercy as well as being trampled underfoot by Naram-Sin himself.”" ;
    :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (32.194722 48.2475) ;
    :art-historical-culture-or-tradition :akkadian-empire ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Victory_stele_of_Naram-Suen_(31064823690)_(cropped).jpg> .
 

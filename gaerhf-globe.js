@@ -14,17 +14,18 @@
 const GLOBE_MIN_DATE = -50000;
 const GLOBE_MAX_DATE = 1500;
 
-// Base-map options for the globe. Each entry pairs a globe texture URL with
-// an optional bump map. Textures that already encode shading (Blue Marble,
-// the Wikimedia hypsometric image) read better with no bump; the default Day
-// view keeps the topology bump for relief shading.
+// Base-map options for the globe. Vendored locally because the free hosted
+// equivalents (NASA eoimages, Solar System Scope, Wikimedia thumbnails) all
+// either lack CORS or cap thumbnail rendering well below the resolutions
+// that look sharp on a curved sphere. Each entry pairs an equirectangular
+// texture URL with an optional bump map; both candidate textures already
+// encode shading internally, so no bump map is needed.
 const GLOBE_BASEMAPS = {
-    'day':         { globe: 'https://unpkg.com/three-globe/example/img/earth-day.jpg',         bump: 'https://unpkg.com/three-globe/example/img/earth-topology.png' },
-    'blue-marble': { globe: 'https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg', bump: null },
-    // Cross-blended hypsometric tints + shaded relief (Tom Patterson, via
-    // Wikimedia, CC0). Equirectangular 2048×1025; bakes its own relief so we
-    // skip the bump map.
-    'terrain':     { globe: 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Cross-blended_Hypsometric_Tints_World_map.png', bump: null },
+    // Natural Earth hypsometric tints with shaded relief (Tom Patterson,
+    // 10m public-domain set, downsampled from the 10800×5400 TIF to 8K JPG).
+    'terrain':     { globe: 'globe-textures/ne_hyp_8k.jpg',         bump: null },
+    // NASA Blue Marble Next Generation, December 2004 mosaic, 5400×2700.
+    'blue-marble': { globe: 'globe-textures/nasa_bluemarble_5k.jpg', bump: null },
 };
 
 let globeInstance    = null;
@@ -263,7 +264,7 @@ function initGlobe() {
     }
 
     // animateIn:false disables globe.gl's default "fly-in" intro animation.
-    const initialBasemap = GLOBE_BASEMAPS.day;
+    const initialBasemap = GLOBE_BASEMAPS.terrain;
     globeInstance = Globe({ animateIn: false })(document.getElementById('globe-inner'))
         .globeImageUrl(initialBasemap.globe)
         .bumpImageUrl(initialBasemap.bump)
