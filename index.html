@@ -106,7 +106,6 @@
             <button type="button" id="play-btn" title="Play" style="display:none">▶️</button>
             <button type="button" class="tab-button active" data-tab="figure-map">Map</button>
             <button type="button" class="tab-button" data-tab="figure-globe">Globe</button>
-            <button type="button" class="tab-button" data-tab="figure-list">List</button>
             <button type="button" class="tab-button" data-tab="figure-timeline" style="display:none">Timeline</button>
             🚧
             <button type="button" class="tab-button" data-tab="about">About</button>
@@ -133,6 +132,14 @@
             </div>
             <!-- Shared gallery strip — visible on Map and Globe tabs (hidden on List/Timeline/About via body class). -->
             <div id="gallery-container">
+                <button type="button" id="gallery-list-btn" title="Show currently visible figures as a grid" aria-label="Show grid of visible figures">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                        <rect x="3"  y="3"  width="7" height="7" rx="1"/>
+                        <rect x="14" y="3"  width="7" height="7" rx="1"/>
+                        <rect x="3"  y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                </button>
                 <div id="gallery">Loading</div>
             </div>
             <div id="figure-list-container" class="tab-content">

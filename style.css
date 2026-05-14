@@ -495,7 +495,10 @@ body.search-open .detail-window.active-window.recently-opened .detail-label-cont
 }
 
 body.gallery-visible #gallery-container {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
 }
 
 /* The scroller: flex row, horizontal scroll, no vertical overflow */
@@ -505,10 +508,42 @@ body.gallery-visible #gallery-container {
     gap: 8px;
     overflow-x: auto;
     overflow-y: hidden;
-    width: 100%;
+    flex: 1 1 0;
+    min-width: 0; /* let the scroller shrink so its overflow stays scoped to itself */
     box-sizing: border-box;
     padding-bottom: 4px;
 }
+
+/* Grid-view trigger: opens the list modal of currently-visible figures. */
+#gallery-list-btn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    background: transparent;
+    color: #333;
+    cursor: pointer;
+    transition: background 120ms, color 120ms, border-color 120ms;
+}
+#gallery-list-btn:hover  { background: rgba(0,0,0,0.06); }
+#gallery-list-btn:active { background: rgba(0,0,0,0.12); }
+#gallery-list-btn:focus-visible {
+    outline: 2px solid #1976d2;
+    outline-offset: 2px;
+}
+
+/* Dark theme when on the Globe tab (matches gallery-container dark swap). */
+body.globe-tab-active #gallery-list-btn {
+    color: #eee;
+    border-color: rgba(255,255,255,0.25);
+}
+body.globe-tab-active #gallery-list-btn:hover  { background: rgba(255,255,255,0.12); }
+body.globe-tab-active #gallery-list-btn:active { background: rgba(255,255,255,0.2); }
 
 #gallery img {
     display: block;

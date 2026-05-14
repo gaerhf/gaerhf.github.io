@@ -1021,6 +1021,14 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryContainer.addEventListener('mouseleave', () => document.body.classList.remove('gallery-hovered'));
     }
 
+    const galleryListBtn = document.getElementById('gallery-list-btn');
+    if (galleryListBtn) {
+        galleryListBtn.addEventListener('click', () => {
+            stopPlayback();
+            openListModal();
+        });
+    }
+
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
     const playBtn = document.getElementById('play-btn');
