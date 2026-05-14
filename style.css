@@ -481,16 +481,21 @@ body.search-open .detail-window.active-window.recently-opened .detail-label-cont
 
 /* Gallery: horizontal scroller anchored to bottom of map container */
 #gallery-container {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    bottom: 0; /* sit at the bottom of the map container */
+    bottom: 0;
     margin: 0 auto;
     padding: 6px 8px;
     box-sizing: border-box;
     max-width: 100%;
-    overflow: hidden; /* don't allow it to expand past map */
+    overflow: hidden;
     z-index: 1000;
+    display: none; /* shown via body.gallery-visible (set by tab handler for Map/Globe) */
+}
+
+body.gallery-visible #gallery-container {
+    display: block;
 }
 
 /* The scroller: flex row, horizontal scroll, no vertical overflow */
@@ -804,6 +809,34 @@ body.about-tab .detail-window {
     display: block;
 }
 
+/* ── Cross-fade between Map and Globe tabs ────────────────────────────────
+   Both containers stay in the DOM, layered on top of each other; only
+   opacity transitions. Visibility flips after the fade so the inactive
+   container can't intercept events when other tabs (List/About) show.
+*/
+#figure-map-container,
+#figure-globe-container {
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0s linear 200ms;
+}
+#figure-map-container.active,
+#figure-globe-container.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0s linear 0s;
+}
+
+/* Smooth the gallery's light → dark background swap when entering Globe. */
+#gallery-container {
+    transition: background 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 #figure-map {
     width: 100%;
     height: 100%;
@@ -956,4 +989,47 @@ body.about-tab .detail-window {
     #threshold-control input[type="range"] {
         width: 120px;
     }
+}
+
+/* ── List modal (size-to-content over Map / Globe view) ───────────────────── */
+.gaerhf-list-modal {
+    position: fixed; inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 30000;
+    display: flex; align-items: center; justify-content: center;
+}
+.gaerhf-list-modal[hidden] { display: none !important; }
+.gaerhf-list-modal-content {
+    background: #fff;
+    border-radius: 8px;
+    max-width: 95vw; max-height: 94vh;
+    min-width: 320px;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+}
+.gaerhf-list-modal-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 14px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.9em;
+}
+.gaerhf-list-modal-body {
+    overflow: auto;
+    padding: 12px;
+}
+#list-modal-grid {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    justify-content: center;
+}
+.list-modal-thumb {
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    width: auto;
+}
+.list-modal-thumb:hover {
+    border-color: #999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }

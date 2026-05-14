@@ -1,5 +1,5 @@
 // gaerhf-detail.js — shared detail-window, image, and metadata utilities.
-// Loaded by every GAERHF view (main map, 3D globe, …) before its own script.
+// Loaded by every GAERHF view (main map, globe, …) before its own script.
 // Provides: image helpers, isEmbeddable, site modal, date formatting,
 //           Wikimedia API, figure rendering, drag/resize, detail window shell,
 //           and the shared active-window state (getActiveWindow / _setActiveWindowBase).

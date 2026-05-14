@@ -784,6 +784,7 @@ function createDetailWindow(figureId) {
         onClose: () => {
             if (!getActiveWindow()) currentFigureId = null;
             highlightMapFigure(currentFigureId);
+            if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(currentFigureId);
         },
     });
 
@@ -813,6 +814,7 @@ function setActiveWindow(win) {
         highlightTimelineFigure(figId);
         highlightMapFigure(figId);
         highlightGalleryFigure(figId);
+        if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(figId);
         try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
     }
 }
@@ -840,6 +842,7 @@ async function loadAndDisplayFigures($rdf) {
             leafletMap.invalidateSize();
         }
         renderFiguresOnMap(currentSortedIndex);
+        document.body.classList.add('gallery-visible');
         renderGallery();
 
         // Highlight current figure without zooming in — keep the world view.
@@ -944,10 +947,14 @@ document.addEventListener('keydown', (event) => {
                 navigationSet = keywordSet;
             }
         } else {
-            // No keyword highlights: use visible figures
-            const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-            if (!visibleFigures || visibleFigures.length === 0) return;
-            navigationSet = sortFigures(visibleFigures, 'date');
+            // No keyword highlights: use visible figures on map, all figures on globe
+            if (currentTab === 'figure-globe') {
+                navigationSet = currentSortedIndex;
+            } else {
+                const visibleFigures = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+                if (!visibleFigures || visibleFigures.length === 0) return;
+                navigationSet = sortFigures(visibleFigures, 'date');
+            }
         }
 
         if (!navigationSet || navigationSet.length === 0) return;
@@ -1008,12 +1015,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
+            const tabName = button.getAttribute('data-tab');
+            // The "List" button is currently in the tab strip but opens a modal
+            // over the active view rather than swapping tabs. Underlying view
+            // (Map / Globe) is preserved.
+            if (tabName === 'figure-list') {
+                openListModal();
+                return;
+            }
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
             button.classList.add('active');
-            const tabName = button.getAttribute('data-tab');
             currentTab = tabName;
             document.body.classList.toggle('about-tab', tabName === 'about');
+            document.body.classList.toggle('globe-tab-active', tabName === 'figure-globe');
+            document.body.classList.toggle('gallery-visible',
+                tabName === 'figure-map' || tabName === 'figure-globe');
             const activeContent = document.getElementById(`${tabName}-container`);
             if (activeContent) activeContent.classList.add('active');
 
@@ -1027,13 +1044,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     if (leafletMap) leafletMap.invalidateSize();
                     renderFiguresOnMap(currentSortedIndex);
+                    renderGallery();
                     if (currentFigureId && leafletMarkers[currentFigureId]) {
-                        leafletMap.setView(leafletMarkers[currentFigureId].getLatLng(), 3)
-                        openAdaptivePopup(leafletMarkers[currentFigureId], markerLabelContent(currentFigureId));
+                        // Preserve the user's current zoom; only pan if the marker
+                        // is outside the visible map bounds.
+                        const target = leafletMarkers[currentFigureId].getLatLng();
+                        if (!leafletMap.getBounds().contains(target)) {
+                            leafletMap.panTo(target);
+                        }
                         highlightMapFigure(currentFigureId);
                         highlightGalleryFigure(currentFigureId);
                     }
                 }, 200);
+            } else if (tabName === 'figure-globe') {
+                // Init synchronously: the container is always display:block under the
+                // cross-fade CSS, so it has dimensions immediately. Doing it now means
+                // globe.gl is rendering before the opacity fade starts.
+                if (typeof initGlobe === 'function') initGlobe();
+                renderGallery();
+                if (currentFigureId) {
+                    if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(currentFigureId);
+                    // Only rotate if the current figure isn't already in view.
+                    if (typeof panGlobeTo === 'function' &&
+                        typeof getVisibleGlobeFigureKeys === 'function') {
+                        const onScreen = getVisibleGlobeFigureKeys().includes(currentFigureId);
+                        if (!onScreen) panGlobeTo(currentFigureId);
+                    }
+                    highlightGalleryFigure(currentFigureId);
+                }
             }
         });
     });
@@ -1189,6 +1227,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('pageshow', () => {
         closeSiteModal();
+        closeListModal();
     });
 
     window.addEventListener('click', (e) => {
@@ -1197,6 +1236,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeSiteModal();
+    });
+
+    // List-modal listeners
+    const listModal = document.getElementById('list-modal');
+    const listCloseBtn = document.getElementById('list-modal-close-btn');
+    if (listCloseBtn) listCloseBtn.addEventListener('click', closeListModal);
+    if (listModal) {
+        listModal.addEventListener('click', (e) => {
+            if (e.target === listModal) closeListModal();
+        });
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && listModal && !listModal.hidden) closeListModal();
     });
 });
 
@@ -1578,6 +1630,7 @@ function renderKeywordSearch() {
                 currentKeywordHighlightIds = [];
                 try { highlightKeywordMarkers([]); } catch { }
                 try { highlightKeywordGalleryImages([]); } catch { }
+                if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights([]);
                 setSuggestionsVisible(false);
                 updateZoomKeywordButtonVisibility();
             }
@@ -1593,6 +1646,7 @@ function renderKeywordSearch() {
             // Restore persistent highlight when regenerating list
             try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
+            if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(currentKeywordHighlightIds || []);
 
             if (query.length === 0) {
                 setSuggestionsVisible(false);
@@ -1630,10 +1684,12 @@ function renderKeywordSearch() {
                 li.addEventListener('mouseover', () => {
                     try { highlightKeywordMarkers(ids); } catch { }
                     try { highlightKeywordGalleryImages(ids); } catch { }
+                    if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(ids);
                 });
                 li.addEventListener('mouseout', () => {
                     try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
                     try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
+                    if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(currentKeywordHighlightIds || []);
                 });
                 li.addEventListener('click', () => {
                     searchInput.value = kwText;
@@ -1642,6 +1698,7 @@ function renderKeywordSearch() {
                     currentKeywordHighlightIds = ids;
                     highlightKeywordMarkers(ids);
                     highlightKeywordGalleryImages(ids);
+                    if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(ids);
                     updateZoomKeywordButtonVisibility();
                 });
                 li.addEventListener('keydown', (ev) => {
@@ -1665,6 +1722,7 @@ function renderKeywordSearch() {
             // Restore persistent highlight when suggestions close
             try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
+            if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(currentKeywordHighlightIds || []);
             updateZoomKeywordButtonVisibility();
         }, 150);
     });
@@ -1680,7 +1738,12 @@ function renderKeywordSearch() {
     // Zoom button click handler
     if (zoomBtn) {
         zoomBtn.addEventListener('click', () => {
-            zoomToKeywordHighlightedFigures();
+            if (currentTab === 'figure-globe') {
+                if (typeof panGlobeTo === 'function' && currentKeywordHighlightIds && currentKeywordHighlightIds.length)
+                    panGlobeTo(currentKeywordHighlightIds[0]);
+            } else {
+                zoomToKeywordHighlightedFigures();
+            }
         });
     }
 
@@ -1693,7 +1756,8 @@ function renderKeywordSearch() {
         try {
             const zoomBtn = document.getElementById('zoom-keyword-btn');
             if (!zoomBtn) return;
-            const shouldShow = currentTab === 'figure-map' && currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0;
+            const hasHighlights = currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0;
+            const shouldShow = hasHighlights && (currentTab === 'figure-map' || currentTab === 'figure-globe');
             zoomBtn.style.display = shouldShow ? 'inline-block' : 'none';
         } catch (e) { /* ignore */ }
     }
@@ -1720,41 +1784,58 @@ function renderKeywordSearch() {
 
 function renderGallery() {
 
-    const visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+    // Both tabs show only currently-visible markers.
+    //  - Map: markers within the Leaflet viewport bounds.
+    //  - Globe: markers within the camera-facing spherical cap (see
+    //    getVisibleGlobeFigureKeys in gaerhf-globe.js).
+    let figureIds;
+    if (currentTab === 'figure-globe') {
+        figureIds = (typeof getVisibleGlobeFigureKeys === 'function')
+            ? getVisibleGlobeFigureKeys()
+            : (currentSortedIndex || []);
+    } else {
+        figureIds = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+    }
+
     galleryDiv = document.getElementById('gallery');
     galleryDiv.innerHTML = "";
-    visibleMarkers.forEach(function (figureId, index) {
+    figureIds.forEach(function (figureId, index) {
         galleryImg = document.createElement('img');
         galleryImg.id = `gi-${figureId}`;
         galleryImg.src = thumbnailUrl(figureId);
         galleryImg.className = "gallery-image";
 
         maxHeight = '70'
-        if (visibleMarkers.length > 25) {
-            maxHeight *= (25 / visibleMarkers.length);
+        if (figureIds.length > 25) {
+            maxHeight *= (25 / figureIds.length);
             if (maxHeight < 30) { maxHeight = 30 }
         }
         galleryImg.style = `max-height:${maxHeight}px`;
 
         galleryImg.addEventListener('mouseover', () => {
-            const content = buildPopupContent(figuresDict[figureId].label, { showHint: true });
-            openAdaptivePopup(leafletMarkers[figureId], content);
+            if (leafletMarkers[figureId]) {
+                const content = buildPopupContent(figuresDict[figureId].label, { showHint: true });
+                openAdaptivePopup(leafletMarkers[figureId], content);
+            }
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
 
         galleryImg.addEventListener('mouseout', () => {
             try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
-            leafletMarkers[figureId]._hoverCloseTimer = setTimeout(() => {
-                try { leafletMarkers[figureId].closeTooltip(); } catch { }
-                leafletMarkers[figureId]._hoverCloseTimer = null;
-            }, 250);
+            if (leafletMarkers[figureId]) {
+                leafletMarkers[figureId]._hoverCloseTimer = setTimeout(() => {
+                    try { leafletMarkers[figureId].closeTooltip(); } catch { }
+                    leafletMarkers[figureId]._hoverCloseTimer = null;
+                }, 250);
+            }
         });
 
         galleryImg.addEventListener('click', () => {
+            stopPlayback();
             highlightMapFigure(figureId);
             highlightGalleryFigure(figureId);
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
-            try { leafletMarkers[figureId].closeTooltip(); } catch { }
+            try { leafletMarkers[figureId] && leafletMarkers[figureId].closeTooltip(); } catch { }
             showFigureDetails(figureId, { markAsRecent: true });
         });
 
@@ -1764,6 +1845,55 @@ function renderGallery() {
     // Apply keyword highlights to gallery images
     try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
 
+}
+
+
+function openListModal() {
+    let ids;
+    if (currentTab === 'figure-globe' && typeof getVisibleGlobeFigureKeys === 'function') {
+        ids = getVisibleGlobeFigureKeys();
+    } else if (leafletMap) {
+        ids = sortFigures(getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers), 'date');
+    } else {
+        ids = currentSortedIndex || [];
+    }
+
+    const n = ids.length;
+    let thumbHeight;
+    if (n <= 4)       thumbHeight = 240;
+    else if (n <= 9)  thumbHeight = 180;
+    else if (n <= 25) thumbHeight = 130;
+    else if (n <= 50) thumbHeight = 90;
+    else              thumbHeight = 60;
+
+    const grid = document.getElementById('list-modal-grid');
+    grid.innerHTML = '';
+    ids.forEach(figureId => {
+        const fig = figuresDict[figureId];
+        if (!fig) return;
+        const img = document.createElement('img');
+        img.className = 'list-modal-thumb';
+        img.src = thumbnailUrl(figureId);
+        img.alt = fig.label;
+        img.title = fig.label;
+        img.loading = 'lazy';
+        img.style.height = thumbHeight + 'px';
+        img.addEventListener('error', () => { img.style.display = 'none'; });
+        img.addEventListener('click', () => {
+            closeListModal();
+            showFigureDetails(figureId, { markAsRecent: true });
+        });
+        grid.appendChild(img);
+    });
+
+    document.getElementById('list-modal-title').textContent =
+        `${n} figure${n === 1 ? '' : 's'} in view`;
+    document.getElementById('list-modal').hidden = false;
+}
+
+function closeListModal() {
+    const m = document.getElementById('list-modal');
+    if (m) m.hidden = true;
 }
 
 

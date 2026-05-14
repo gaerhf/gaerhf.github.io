@@ -12,6 +12,86 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js"></script>
+    <script src="https://unpkg.com/globe.gl"></script>
+    <style>
+        /* ── Globe tab layout ────────────────────────────────────────────── */
+        #figure-globe-container {
+            width: 100%;
+            position: fixed;
+            top: 84px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #0a0e1a;
+            z-index: 500;
+        }
+        #globe-inner { position: absolute; inset: 0; }
+
+        #globe-legend {
+            position: absolute; bottom: 90px; left: 14px; z-index: 200;
+            background: rgba(0,0,0,0.65);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px; padding: 10px 14px;
+            color: #bbb;
+        }
+        #globe-legend p { font-size: 0.72em; margin-bottom: 5px; }
+        #globe-legend canvas { display: block; border-radius: 3px; }
+        #globe-legend-labels {
+            display: flex; justify-content: space-between;
+            font-size: 0.68em; color: #aaa; margin-top: 3px; width: 200px;
+        }
+
+        /* Dark theme for the shared gallery strip when globe tab is active */
+        body.globe-tab-active #gallery-container {
+            background: rgba(0,0,0,0.72);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ── Dark-theme detail windows when globe tab is active ─────────── */
+        body.globe-tab-active .detail-window {
+            background-color: rgba(18,22,42,0.97) !important;
+            border-color: rgba(255,255,255,0.14) !important;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.7) !important;
+            color: #e8e8f0;
+        }
+        body.globe-tab-active .detail-window.active-window {
+            border-color: #CC79A7 !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.8) !important;
+        }
+        body.globe-tab-active .figure-details-wrapper {
+            background-color: rgba(18,22,42,0.97) !important;
+            color: #e8e8f0;
+        }
+        body.globe-tab-active .detail-info { color: #d0d0e0; }
+        body.globe-tab-active .detail-info strong { color: #f0f0f8; }
+        body.globe-tab-active .carousel-btn { color: #aaa !important; }
+        body.globe-tab-active .carousel-btn:hover { color: #fff !important; background: rgba(255,255,255,0.1) !important; }
+        body.globe-tab-active .carousel-counter { color: #888 !important; }
+        body.globe-tab-active .link-chip--embed {
+            color: #7ec8f7 !important; background: rgba(25,118,210,0.2) !important;
+            border-color: rgba(25,118,210,0.5) !important;
+        }
+        body.globe-tab-active .link-chip--embed:hover { background: rgba(25,118,210,0.35) !important; }
+        body.globe-tab-active .link-chip--external {
+            color: #bbb !important; background: rgba(255,255,255,0.07) !important;
+            border-color: rgba(255,255,255,0.18) !important;
+        }
+        body.globe-tab-active .link-chip--external:hover { background: rgba(255,255,255,0.14) !important; color: #eee !important; }
+        body.globe-tab-active .culture-info { color: #999 !important; }
+
+        body.globe-tab-active.gallery-hovered .detail-window {
+            background-color: rgba(18,22,42,0.22) !important;
+        }
+        body.globe-tab-active.gallery-hovered .detail-window .figure-details-wrapper {
+            background-color: rgba(18,22,42,0.15) !important;
+        }
+        body.globe-tab-active.gallery-hovered .detail-window.recently-opened {
+            background-color: rgba(18,22,42,0.97) !important;
+        }
+        body.globe-tab-active.gallery-hovered .detail-window.recently-opened .figure-details-wrapper {
+            background-color: rgba(18,22,42,0.97) !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,9 +105,9 @@
             🚧 Global Approaches to Early Representations of the Human Figure (GAERHF)
             <button type="button" id="play-btn" title="Play" style="display:none">▶️</button>
             <button type="button" class="tab-button active" data-tab="figure-map">Map</button>
-            <a href="3d/" class="tab-button">3D (test)</a>
+            <button type="button" class="tab-button" data-tab="figure-globe">Globe</button>
             <button type="button" class="tab-button" data-tab="figure-list">List</button>
-            <button type="button" class="tab-button" data-tab="figure-timeline">Timeline</button>
+            <button type="button" class="tab-button" data-tab="figure-timeline" style="display:none">Timeline</button>
             🚧
             <button type="button" class="tab-button" data-tab="about">About</button>
         </div>
@@ -42,11 +122,18 @@
         <div id="tab-content">
             <div id="figure-map-container" class="tab-content active">
                 <div id="figure-map">Loading...</div>
-
-                <!-- Gallery of visible thumbnails — kept inside the map container so it only shows on Map tab. It is very important that it stay here. -->
-                <div id="gallery-container">
-                    <div id="gallery">Loading</div>
+            </div>
+            <div id="figure-globe-container" class="tab-content">
+                <div id="globe-inner"></div>
+                <div id="globe-legend">
+                    <p>Point color by date</p>
+                    <canvas id="globe-legend-canvas" width="200" height="14"></canvas>
+                    <div id="globe-legend-labels"><span>50,000 BCE</span><span>1,500 CE</span></div>
                 </div>
+            </div>
+            <!-- Shared gallery strip — visible on Map and Globe tabs (hidden on List/Timeline/About via body class). -->
+            <div id="gallery-container">
+                <div id="gallery">Loading</div>
             </div>
             <div id="figure-list-container" class="tab-content">
                 <div id="figure-list">Loading...</div>
@@ -87,7 +174,20 @@
         </div>
     </div>
 
+    <div id="list-modal" class="gaerhf-list-modal" hidden>
+        <div class="gaerhf-list-modal-content">
+            <div class="gaerhf-list-modal-header">
+                <span id="list-modal-title"></span>
+                <button type="button" id="list-modal-close-btn" class="gaerhf-modal-close-btn" title="Close">&times;</button>
+            </div>
+            <div class="gaerhf-list-modal-body">
+                <div id="list-modal-grid"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="gaerhf-detail.js"></script>
     <script src="gaerhf-ui.js"></script>
+    <script src="gaerhf-globe.js"></script>
 </body>
 </html>
