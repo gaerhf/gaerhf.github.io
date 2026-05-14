@@ -598,9 +598,57 @@ function initializeMap() {
         keyboard: false,  // CRITICAL: Disable Leaflet's keyboard handler completely
         boxZoom: false    // Shift+drag box-zoom conflicts with Shift+click for new windows
     }).setView([20, 15], 2); // World view
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(leafletMap);
+
+    // Base layers — exposed as a radio control (L.control.layers) in the top-right.
+    // All three are usable without an API key.
+    const baseLayers = {
+        // World Physical Map: hypsographic tints + shaded relief, no labels,
+        // no borders. Native tiles cap at z8; let Leaflet overzoom so the user
+        // can still zoom further without the layer disappearing.
+        'Terrain': L.tileLayer(
+            'https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}',
+            {
+                attribution: 'Tiles &copy; Esri &mdash; Source: US National Park Service',
+                maxNativeZoom: 8,
+                maxZoom: 19,
+            }
+        ),
+        // Esri WorldShadedRelief: standalone grayscale shaded relief — readable
+        // on its own (unlike WorldHillshade, which is meant as a translucent
+        // overlay on a colored base). No labels, no borders.
+        'Terrain (Hillshade)': L.tileLayer(
+            'https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}',
+            {
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
+                maxNativeZoom: 13,
+                maxZoom: 19,
+            }
+        ),
+        'Satellite': L.tileLayer(
+            'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+            {
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community',
+                maxZoom: 19,
+            }
+        ),
+        'Minimal': L.tileLayer(
+            'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
+            {
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+                subdomains: 'abcd',
+                maxZoom: 19,
+            }
+        ),
+        'OpenStreetMap': L.tileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+                attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 19,
+            }
+        ),
+    };
+    baseLayers['Terrain'].addTo(leafletMap);
+    L.control.layers(baseLayers, null, { position: 'topright', collapsed: true }).addTo(leafletMap);
     // Disable automatic map panning for ALL popups globally (simplifies hover behavior)
     try { L.Popup.prototype.options.autoPan = false; } catch (e) { /* ignore if Leaflet not loaded */ }
     // Explicitly raise popup pane z-index in JS in case CSS loads late or is overridden
