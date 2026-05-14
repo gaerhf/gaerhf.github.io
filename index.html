@@ -41,6 +41,39 @@
             font-size: 0.68em; color: #aaa; margin-top: 3px; width: 200px;
         }
 
+        /* Globe base-map selector. Mirrors Leaflet's L.control.layers visual
+           style (same stacked-papers icon, white background, soft shadow) so
+           the Map and Globe tabs present a consistent base-map affordance. */
+        #globe-basemap-control {
+            position: absolute; top: 10px; right: 10px; z-index: 200;
+            background: #fff;
+            border: 2px solid rgba(0,0,0,0.2);
+            border-radius: 4px;
+            color: #222;
+            font-family: system-ui, sans-serif;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+        }
+        #globe-basemap-toggle {
+            display: block;
+            width: 36px; height: 36px;
+            background: #fff url('https://unpkg.com/leaflet@1.9.4/dist/images/layers.png') no-repeat center center;
+            background-size: 26px 26px;
+            border: 0; cursor: pointer;
+        }
+        #globe-basemap-control:hover #globe-basemap-toggle,
+        #globe-basemap-control.open #globe-basemap-toggle { display: none; }
+        #globe-basemap-menu {
+            display: none; padding: 6px 10px; font-size: 0.85em;
+        }
+        #globe-basemap-control:hover #globe-basemap-menu,
+        #globe-basemap-control.open #globe-basemap-menu { display: block; }
+        #globe-basemap-menu label {
+            display: block; padding: 2px 0; cursor: pointer; white-space: nowrap;
+        }
+        #globe-basemap-menu input[type="radio"] {
+            margin-right: 6px; vertical-align: middle;
+        }
+
         /* Dark theme for the shared gallery strip when globe tab is active */
         body.globe-tab-active #gallery-container {
             background: rgba(0,0,0,0.72);
@@ -128,6 +161,14 @@
                     <p>Point color by date</p>
                     <canvas id="globe-legend-canvas" width="200" height="14"></canvas>
                     <div id="globe-legend-labels"><span>50,000 BCE</span><span>1,500 CE</span></div>
+                </div>
+                <div id="globe-basemap-control" title="Choose base map">
+                    <button type="button" id="globe-basemap-toggle" aria-label="Choose base map"></button>
+                    <div id="globe-basemap-menu" role="radiogroup" aria-label="Base map">
+                        <label><input type="radio" name="globe-basemap" value="day" checked> Day</label>
+                        <label><input type="radio" name="globe-basemap" value="blue-marble"> Blue Marble</label>
+                        <label><input type="radio" name="globe-basemap" value="terrain"> Terrain</label>
+                    </div>
                 </div>
             </div>
             <!-- Shared gallery strip — visible on Map and Globe tabs (hidden on List/Timeline/About via body class). -->

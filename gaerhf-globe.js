@@ -14,6 +14,19 @@
 const GLOBE_MIN_DATE = -50000;
 const GLOBE_MAX_DATE = 1500;
 
+// Base-map options for the globe. Each entry pairs a globe texture URL with
+// an optional bump map. Textures that already encode shading (Blue Marble,
+// the Wikimedia hypsometric image) read better with no bump; the default Day
+// view keeps the topology bump for relief shading.
+const GLOBE_BASEMAPS = {
+    'day':         { globe: 'https://unpkg.com/three-globe/example/img/earth-day.jpg',         bump: 'https://unpkg.com/three-globe/example/img/earth-topology.png' },
+    'blue-marble': { globe: 'https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg', bump: null },
+    // Cross-blended hypsometric tints + shaded relief (Tom Patterson, via
+    // Wikimedia, CC0). Equirectangular 2048×1025; bakes its own relief so we
+    // skip the bump map.
+    'terrain':     { globe: 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Cross-blended_Hypsometric_Tints_World_map.png', bump: null },
+};
+
 let globeInstance    = null;
 let globeHighlightId = null;
 const markerElements = new Map(); // figureId → DOM marker div
@@ -250,9 +263,10 @@ function initGlobe() {
     }
 
     // animateIn:false disables globe.gl's default "fly-in" intro animation.
+    const initialBasemap = GLOBE_BASEMAPS.day;
     globeInstance = Globe({ animateIn: false })(document.getElementById('globe-inner'))
-        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-day.jpg')
-        .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+        .globeImageUrl(initialBasemap.globe)
+        .bumpImageUrl(initialBasemap.bump)
         .backgroundImageUrl(null)
         // 0 means markers appear instantly at their final position.
         .htmlTransitionDuration(0)
@@ -357,6 +371,16 @@ function initGlobe() {
             if (currentFigureId && typeof highlightGalleryFigure === 'function')
                 highlightGalleryFigure(currentFigureId);
         }, 180);
+    });
+
+    // Wire the base-map selector. Mirrors Leaflet's L.control.layers behavior
+    // on the map tab: session-only, no URL/localStorage persistence.
+    document.querySelectorAll('#globe-basemap-menu input[name="globe-basemap"]').forEach(radio => {
+        radio.addEventListener('change', e => {
+            const opt = GLOBE_BASEMAPS[e.target.value];
+            if (!opt) return;
+            globeInstance.globeImageUrl(opt.globe).bumpImageUrl(opt.bump);
+        });
     });
 
     // Apply any pre-existing highlight state. The initial POV was already set
