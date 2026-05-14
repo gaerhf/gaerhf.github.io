@@ -102,42 +102,54 @@ document.body.appendChild(_globeTooltip);
 //   - None of the above                       → default
 //
 // Both highlightGlobeFigure() and applyGlobeKeywordHighlights() funnel through
-// _applyGlobeMarkerStyles() so the four states compose correctly.
-function _applyGlobeMarkerStyles() {
+// _applyGlobeMarkerStyles() so the four states compose correctly. The same
+// per-marker logic is also invoked from the htmlElement factory at marker
+// creation time — globe.gl renders html elements asynchronously after
+// htmlElementsData(), so markers may be created after a highlight was already
+// requested (e.g. on the first switch from Map to Globe).
+function _computeGlobeMarkerStyleContext() {
     const openIds = (typeof getOpenWindowFigureIds === 'function')
         ? getOpenWindowFigureIds()
         : [];
-    const secondarySet = new Set(openIds.filter(id => id !== globeHighlightId));
-    const keywordSet   = new Set(currentKeywordHighlightIds || []);
-    const hasKeyword   = keywordSet.size > 0;
+    return {
+        secondarySet: new Set(openIds.filter(id => id !== globeHighlightId)),
+        keywordSet:   new Set(currentKeywordHighlightIds || []),
+        hasKeyword:   Array.isArray(currentKeywordHighlightIds) && currentKeywordHighlightIds.length > 0,
+    };
+}
 
-    markerElements.forEach((el, figId) => {
-        if (figId === globeHighlightId) {
-            el.style.opacity    = '1';
-            el.style.background = '#fff';
-            el.style.boxShadow  = '0 0 0 3px #CC79A7, 0 2px 8px rgba(0,0,0,0.7)';
-            el.style.zIndex     = '99';
-        } else {
-            el.style.background = el.dataset.baseColor;
-            if (secondarySet.has(figId)) {
-                el.style.opacity   = '1';
-                el.style.boxShadow = '0 0 0 3px #1976d2, 0 1px 4px rgba(0,0,0,0.55)';
-                el.style.zIndex    = '50';
-            } else if (hasKeyword && keywordSet.has(figId)) {
-                el.style.opacity   = '1';
-                el.style.boxShadow = '0 0 0 2px rgba(230,159,0,0.8), 0 1px 4px rgba(0,0,0,0.55)';
-                el.style.zIndex    = '';
-            } else if (hasKeyword) {
-                el.style.opacity   = '0.2';
-                el.style.boxShadow = 'none';
-                el.style.zIndex    = '';
-            } else {
-                el.style.opacity   = '';
-                el.style.boxShadow = '0 1px 4px rgba(0,0,0,0.55)';
-                el.style.zIndex    = '';
-            }
-        }
-    });
+function _applyGlobeMarkerStyleTo(figId, el, ctx) {
+    ctx = ctx || _computeGlobeMarkerStyleContext();
+    if (figId === globeHighlightId) {
+        el.style.opacity    = '1';
+        el.style.background = '#fff';
+        el.style.boxShadow  = '0 0 0 3px #CC79A7, 0 2px 8px rgba(0,0,0,0.7)';
+        el.style.zIndex     = '99';
+        return;
+    }
+    el.style.background = el.dataset.baseColor;
+    if (ctx.secondarySet.has(figId)) {
+        el.style.opacity   = '1';
+        el.style.boxShadow = '0 0 0 3px #1976d2, 0 1px 4px rgba(0,0,0,0.55)';
+        el.style.zIndex    = '50';
+    } else if (ctx.hasKeyword && ctx.keywordSet.has(figId)) {
+        el.style.opacity   = '1';
+        el.style.boxShadow = '0 0 0 2px rgba(230,159,0,0.8), 0 1px 4px rgba(0,0,0,0.55)';
+        el.style.zIndex    = '';
+    } else if (ctx.hasKeyword) {
+        el.style.opacity   = '0.2';
+        el.style.boxShadow = 'none';
+        el.style.zIndex    = '';
+    } else {
+        el.style.opacity   = '';
+        el.style.boxShadow = '0 1px 4px rgba(0,0,0,0.55)';
+        el.style.zIndex    = '';
+    }
+}
+
+function _applyGlobeMarkerStyles() {
+    const ctx = _computeGlobeMarkerStyleContext();
+    markerElements.forEach((el, figId) => _applyGlobeMarkerStyleTo(figId, el, ctx));
 }
 
 function highlightGlobeFigure(figureId) {
@@ -305,6 +317,11 @@ function initGlobe() {
             });
 
             markerElements.set(d.id, div);
+            // globe.gl may create this element after a highlight/keyword
+            // request has already been issued (e.g. first Map→Globe switch).
+            // Apply current state immediately so the marker doesn't paint with
+            // default styling and miss the highlight.
+            _applyGlobeMarkerStyleTo(d.id, div);
             return div;
         });
 
