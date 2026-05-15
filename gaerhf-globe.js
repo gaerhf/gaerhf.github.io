@@ -134,30 +134,33 @@ function _computeGlobeMarkerStyleContext() {
 
 function _applyGlobeMarkerStyleTo(figId, el, ctx) {
     ctx = ctx || _computeGlobeMarkerStyleContext();
-    if (figId === globeHighlightId) {
+    // Stacking is owned by the .globe-marker-primary / .globe-marker-secondary
+    // CSS classes — inline z-index here would be clobbered by CSS2DRenderer's
+    // per-frame depth-order rewrites.
+    const isPrimary   = figId === globeHighlightId;
+    const isSecondary = !isPrimary && ctx.secondarySet.has(figId);
+    el.classList.toggle('globe-marker-primary',   isPrimary);
+    el.classList.toggle('globe-marker-secondary', isSecondary);
+
+    if (isPrimary) {
         el.style.opacity    = '1';
         el.style.background = '#fff';
         el.style.boxShadow  = '0 0 0 3px #CC79A7, 0 2px 8px rgba(0,0,0,0.7)';
-        el.style.zIndex     = '99';
         return;
     }
     el.style.background = el.dataset.baseColor;
-    if (ctx.secondarySet.has(figId)) {
+    if (isSecondary) {
         el.style.opacity   = '1';
         el.style.boxShadow = '0 0 0 3px #1976d2, 0 1px 4px rgba(0,0,0,0.55)';
-        el.style.zIndex    = '50';
     } else if (ctx.hasKeyword && ctx.keywordSet.has(figId)) {
         el.style.opacity   = '1';
         el.style.boxShadow = '0 0 0 2px rgba(230,159,0,0.8), 0 1px 4px rgba(0,0,0,0.55)';
-        el.style.zIndex    = '';
     } else if (ctx.hasKeyword) {
         el.style.opacity   = '0.2';
         el.style.boxShadow = 'none';
-        el.style.zIndex    = '';
     } else {
         el.style.opacity   = '';
         el.style.boxShadow = '0 1px 4px rgba(0,0,0,0.55)';
-        el.style.zIndex    = '';
     }
 }
 

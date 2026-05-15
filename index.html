@@ -74,6 +74,14 @@
             margin-right: 6px; vertical-align: middle;
         }
 
+        /* Globe markers — primary (active) and secondary (other open windows)
+           need to render above neighboring markers. globe.gl's CSS2DRenderer
+           rewrites `element.style.zIndex` every frame in depth order, so an
+           inline z-index gets clobbered. External-stylesheet !important wins
+           over inline non-!important, so apply the stacking via class instead. */
+        .globe-marker-primary   { z-index: 99999 !important; }
+        .globe-marker-secondary { z-index:  9999 !important; }
+
         /* Dark theme for the shared gallery strip when globe tab is active */
         body.globe-tab-active #gallery-container {
             background: rgba(0,0,0,0.72);
