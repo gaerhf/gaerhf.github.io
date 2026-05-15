@@ -1131,9 +1131,11 @@ document.addEventListener('DOMContentLoaded', () => {
         thresholdControl.id = 'threshold-control';
         // Default hidden so it doesn't cover tab content; positioned absolutely in the header when shown.
         thresholdControl.style.display = 'none';
-        thresholdControl.style.position = 'absolute';
+        thresholdControl.style.position = 'fixed';
         thresholdControl.style.top = '8px';
-        thresholdControl.style.right = '8px';
+        thresholdControl.style.left = '50%';
+        thresholdControl.style.right = 'auto';
+        thresholdControl.style.transform = 'translateX(-50%)';
         thresholdControl.style.zIndex = '1200';
         thresholdControl.style.background = 'rgba(255,255,255,0.95)';
         thresholdControl.style.padding = '6px 8px';
@@ -1173,6 +1175,45 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             document.body.appendChild(thresholdControl);
         }
+
+        function updateThresholdControlPosition() {
+            const mapContainer = document.getElementById('figure-map-container');
+            const globeContainer = document.getElementById('figure-globe-container');
+
+            let anchor = null;
+            if (currentTab === 'figure-globe' && globeContainer) {
+                anchor = globeContainer;
+            } else if (currentTab === 'figure-map' && mapContainer) {
+                anchor = mapContainer;
+            } else if (globeContainer && globeContainer.classList.contains('active')) {
+                anchor = globeContainer;
+            } else if (mapContainer && mapContainer.classList.contains('active')) {
+                anchor = mapContainer;
+            } else {
+                anchor = mapContainer || globeContainer;
+            }
+
+            if (!anchor) {
+                thresholdControl.style.top = '8px';
+                return;
+            }
+
+            const anchorRect = anchor.getBoundingClientRect();
+            thresholdControl.style.top = `${Math.max(8, Math.round(anchorRect.top + 8))}px`;
+        }
+
+        updateThresholdControlPosition();
+        window.addEventListener('resize', updateThresholdControlPosition);
+        document.addEventListener('gaerhf:threshold-visibility-changed', () => {
+            if (isThresholdSliderVisible()) {
+                updateThresholdControlPosition();
+            }
+        });
+        tabButtons.forEach(tabButton => {
+            tabButton.addEventListener('click', () => {
+                requestAnimationFrame(updateThresholdControlPosition);
+            });
+        });
 
         // Toggle function and keyboard shortcut (Ctrl+Shift+L). Flows
         // through setThresholdSliderVisible() in gaerhf-colormap.js so
