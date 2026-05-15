@@ -9,10 +9,11 @@
    currentTab, showFigureDetails, stopPlayback, sortFigures, renderGallery,
    highlightGalleryFigure, getOpenWindowFigureIds, thumbnailUrl,
    renderFigureHeader, renderFigureMetadata, renderFigureImage,
-   createDetailWindowShell, getActiveWindow, _setActiveWindowBase, Globe */
+   createDetailWindowShell, getActiveWindow, _setActiveWindowBase, Globe,
+   COLOR_MIN_DATE, COLOR_MAX_DATE, dateToColor, getActiveColormap,
+   getFigureColorDate, sampleRamp, onColormapChange, bindColormapPicker */
 
-const GLOBE_MIN_DATE = -50000;
-const GLOBE_MAX_DATE = 1500;
+// Color domain and ramp pipeline come from gaerhf-colormap.js (shared with the Map).
 
 // Base-map options for the globe. Vendored locally because the free hosted
 // equivalents (NASA eoimages, Solar System Scope, Wikimedia thumbnails) all
@@ -38,14 +39,9 @@ function getFigureLatLng(f) {
     return f.representativeLatLongPoint || [0, 0];
 }
 
-function getGlobeMidDate(f) {
-    if (f.date !== null && f.date !== undefined) return f.date;
-    if (f.earliestDate !== null && f.earliestDate !== undefined &&
-        f.latestDate   !== null && f.latestDate   !== undefined)
-        return (f.earliestDate + f.latestDate) / 2;
-    if (f.approximateDate !== null && f.approximateDate !== undefined) return f.approximateDate;
-    return null;
-}
+// getFigureColorDate() (shared, from gaerhf-colormap.js) replaces the
+// former local getGlobeMidDate() — both views now color by midpoint of
+// earliest/latest, falling back to :date / :approximateDate.
 
 function formatGlobeDateRange(f) {
     const fmt = n => n < 0
@@ -59,39 +55,8 @@ function formatGlobeDateRange(f) {
     return 'Date unknown';
 }
 
-// ── Color scale ───────────────────────────────────────────────────────────────
-
-function dateToGlobeColor(date) {
-    const t = Math.max(0, Math.min(1, (date - GLOBE_MIN_DATE) / (GLOBE_MAX_DATE - GLOBE_MIN_DATE)));
-    let r, g, b;
-    if (t < 0.5) {
-        const u = t * 2;
-        r = Math.round(139 + (37  - 139) * u);
-        g = Math.round(61  + (117 - 61)  * u);
-        b = Math.round(191 + (232 - 191) * u);
-    } else {
-        const u = (t - 0.5) * 2;
-        r = Math.round(37  + (255 - 37)  * u);
-        g = Math.round(117 + (140 - 117) * u);
-        b = Math.round(232 + (0   - 232) * u);
-    }
-    return `rgba(${r},${g},${b},0.9)`;
-}
-
-// ── Legend canvas ─────────────────────────────────────────────────────────────
-
-function drawGlobeLegend() {
-    const canvas = document.getElementById('globe-legend-canvas');
-    if (!canvas) return;
-    const ctx  = canvas.getContext('2d');
-    const grad = ctx.createLinearGradient(0, 0, 200, 0);
-    for (let i = 0; i <= 40; i++) {
-        const t = i / 40;
-        grad.addColorStop(t, dateToGlobeColor(GLOBE_MIN_DATE + t * (GLOBE_MAX_DATE - GLOBE_MIN_DATE)));
-    }
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, 200, 14);
-}
+// The top-of-page timescale strip serves as the colormap legend for both
+// the Map and Globe — no per-view legend needed.
 
 // ── Shared hover tooltip (reused across all markers) ─────────────────────────
 
@@ -148,7 +113,8 @@ function _applyGlobeMarkerStyleTo(figId, el, ctx) {
         el.style.boxShadow  = '0 0 0 3px #CC79A7, 0 2px 8px rgba(0,0,0,0.7)';
         return;
     }
-    el.style.background = el.dataset.baseColor;
+    el.style.background  = el.dataset.baseColor;
+    el.style.borderColor = el.dataset.baseBorder || 'rgba(255,255,255,0.85)';
     if (isSecondary) {
         el.style.opacity   = '1';
         el.style.boxShadow = '0 0 0 3px #1976d2, 0 1px 4px rgba(0,0,0,0.55)';
@@ -249,8 +215,6 @@ function getVisibleGlobeFigureKeys() {
 function initGlobe() {
     if (globeInstance) return;
 
-    drawGlobeLegend();
-
     const figures = Object.values(figuresDict).filter(f => {
         const ll = getFigureLatLng(f);
         return Array.isArray(ll) && ll.length === 2 && !ll.some(isNaN);
@@ -279,17 +243,19 @@ function initGlobe() {
         .htmlLng(d => getFigureLatLng(d)[1])
         .htmlAltitude(0.003)
         .htmlElement(d => {
-            const mid   = getGlobeMidDate(d);
-            const color = mid !== null ? dateToGlobeColor(mid) : '#aaa';
+            const date         = getFigureColorDate(d);
+            const color        = date !== null ? dateToColor(date) : '#aaa';
+            const borderColor  = getActiveColormap().markerBorder;
 
             const div = document.createElement('div');
-            div.dataset.baseColor = color;
+            div.dataset.baseColor  = color;
+            div.dataset.baseBorder = borderColor;
             div.style.cssText = [
                 'width:11px', 'height:11px',
                 'margin-left:-5.5px', 'margin-top:-5.5px',
                 'border-radius:50%',
                 `background:${color}`,
-                'border:1.5px solid rgba(255,255,255,0.85)',
+                `border:1.5px solid ${borderColor}`,
                 'box-shadow:0 1px 4px rgba(0,0,0,0.55)',
                 'cursor:pointer',
                 'transition:box-shadow 0.15s, opacity 0.15s',
@@ -384,6 +350,24 @@ function initGlobe() {
             const opt = GLOBE_BASEMAPS[e.target.value];
             if (!opt) return;
             globeInstance.globeImageUrl(opt.globe).bumpImageUrl(opt.bump);
+        });
+    });
+
+    // Wire the colormap picker (sibling of the basemap-selector). Radios
+    // are rendered from gaerhf-colormap.js's ramp registry so adding a
+    // third ramp is a one-line change.
+    const colormapMenu = document.getElementById('globe-colormap-menu');
+    if (colormapMenu) bindColormapPicker(colormapMenu);
+
+    // Re-color markers and redraw legend on any colormap change (ramp
+    // switch in either view, or log-threshold slider).
+    onColormapChange(() => {
+        markerElements.forEach((el, figId) => {
+            const f = figuresDict[figId];
+            const date = f ? getFigureColorDate(f) : null;
+            el.dataset.baseColor  = date !== null ? dateToColor(date) : '#aaa';
+            el.dataset.baseBorder = getActiveColormap().markerBorder;
+            _applyGlobeMarkerStyleTo(figId, el);
         });
     });
 

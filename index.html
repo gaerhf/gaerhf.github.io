@@ -27,20 +27,6 @@
         }
         #globe-inner { position: absolute; inset: 0; }
 
-        #globe-legend {
-            position: absolute; bottom: 90px; left: 14px; z-index: 200;
-            background: rgba(0,0,0,0.65);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 8px; padding: 10px 14px;
-            color: #bbb;
-        }
-        #globe-legend p { font-size: 0.72em; margin-bottom: 5px; }
-        #globe-legend canvas { display: block; border-radius: 3px; }
-        #globe-legend-labels {
-            display: flex; justify-content: space-between;
-            font-size: 0.68em; color: #aaa; margin-top: 3px; width: 200px;
-        }
-
         /* Globe base-map selector. Mirrors Leaflet's L.control.layers visual
            style (same stacked-papers icon, white background, soft shadow) so
            the Map and Globe tabs present a consistent base-map affordance. */
@@ -72,6 +58,55 @@
         }
         #globe-basemap-menu input[type="radio"] {
             margin-right: 6px; vertical-align: middle;
+        }
+
+        /* Colormap picker — identical placement on Map and Globe so the
+           widget is in the same spot no matter which view is active.
+           Sits to the left of the basemap selector (which lives at
+           right:10px on the Globe and inside Leaflet's topright stack
+           on the Map). Hover-to-open mirrors the Globe basemap picker. */
+        .colormap-picker {
+            position: absolute; top: 10px; right: 56px; z-index: 1000;
+            background: #fff;
+            border: 2px solid rgba(0,0,0,0.2);
+            border-radius: 4px;
+            color: #222;
+            font-family: system-ui, sans-serif;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+        }
+        .colormap-picker-toggle {
+            display: block;
+            width: 36px; height: 36px;
+            background: #fff;
+            border: 0; cursor: pointer;
+            font-size: 20px; line-height: 36px; text-align: center;
+            padding: 0;
+        }
+        .colormap-picker:hover .colormap-picker-toggle,
+        .colormap-picker.open .colormap-picker-toggle { display: none; }
+        .colormap-picker-menu {
+            display: none; padding: 6px 10px; font-size: 0.85em;
+            background: #fff;
+        }
+        .colormap-picker:hover .colormap-picker-menu,
+        .colormap-picker.open .colormap-picker-menu { display: block; }
+        .colormap-picker-menu label {
+            display: block; padding: 2px 0; cursor: pointer; white-space: nowrap;
+        }
+        .colormap-picker-menu input[type="radio"] {
+            margin-right: 6px; vertical-align: middle;
+        }
+
+        /* Force Leaflet's layers-toggle to the same 36px the custom
+           Globe basemap toggle and the colormap pickers use. Leaflet
+           bumps to 44px when it detects a touch-capable device (incl.
+           some non-touch macOS browsers that report touch). Source
+           order: this rule comes after Leaflet's CDN stylesheet so it
+           wins via the cascade. */
+        .leaflet-touch .leaflet-control-layers-toggle,
+        .leaflet-control-layers-toggle {
+            width: 36px;
+            height: 36px;
         }
 
         /* Globe markers — primary (active) and secondary (other open windows)
@@ -162,20 +197,27 @@
         <div id="tab-content">
             <div id="figure-map-container" class="tab-content active">
                 <div id="figure-map">Loading...</div>
+                <!-- Colormap picker — same DOM/CSS pattern as the Globe so
+                     placement is consistent across views. -->
+                <div id="map-colormap-control" class="colormap-picker" title="Choose point-color scheme">
+                    <button type="button" class="colormap-picker-toggle" aria-label="Choose point-color scheme">🎨</button>
+                    <div id="map-colormap-menu" class="colormap-picker-menu" role="radiogroup" aria-label="Point-color scheme"></div>
+                </div>
             </div>
             <div id="figure-globe-container" class="tab-content">
                 <div id="globe-inner"></div>
-                <div id="globe-legend">
-                    <p>Point color by date</p>
-                    <canvas id="globe-legend-canvas" width="200" height="14"></canvas>
-                    <div id="globe-legend-labels"><span>50,000 BCE</span><span>1,500 CE</span></div>
-                </div>
                 <div id="globe-basemap-control" title="Choose base map">
                     <button type="button" id="globe-basemap-toggle" aria-label="Choose base map"></button>
                     <div id="globe-basemap-menu" role="radiogroup" aria-label="Base map">
                         <label><input type="radio" name="globe-basemap" value="terrain" checked> Terrain</label>
                         <label><input type="radio" name="globe-basemap" value="blue-marble"> Blue Marble</label>
                     </div>
+                </div>
+                <!-- Colormap picker — sibling of the basemap selector. Radios are
+                     populated by bindColormapPicker() in gaerhf-colormap.js. -->
+                <div id="globe-colormap-control" class="colormap-picker" title="Choose point-color scheme">
+                    <button type="button" class="colormap-picker-toggle" aria-label="Choose point-color scheme">🎨</button>
+                    <div id="globe-colormap-menu" class="colormap-picker-menu" role="radiogroup" aria-label="Point-color scheme"></div>
                 </div>
             </div>
             <!-- Shared gallery strip — visible on Map and Globe tabs (hidden on List/Timeline/About via body class). -->
@@ -245,7 +287,8 @@
     </div>
 
     <script src="gaerhf-detail.js"></script>
-    <script src="gaerhf-ui.js"></script>
-    <script src="gaerhf-globe.js"></script>
+    <script src="gaerhf-colormap.js?v=2"></script>
+    <script src="gaerhf-ui.js?v=4"></script>
+    <script src="gaerhf-globe.js?v=2"></script>
 </body>
 </html>

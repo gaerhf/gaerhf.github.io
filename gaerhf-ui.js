@@ -15,13 +15,16 @@ const SHIFT_HINT_HTML = `<div class="popup-hint">&#8679; Shift: open new window<
 // — all provided by gaerhf-detail.js (loaded before this script in index.html).
 
 // Marker icon factory — single source of truth for marker size, shape, and border.
-function makeMarkerIcon(color) {
+// borderColor defaults to #222 (back-compat); callers that know the active
+// colormap pass its markerBorder so the border tracks the ramp.
+function makeMarkerIcon(color, borderColor) {
+    const bc = borderColor || '#222';
     return L.divIcon({
         className: 'custom-gray-marker',
         iconSize: [10, 10],
         iconAnchor: [5, 5],
         tooltipAnchor: [0, -5],  // tip points to the top-center of the 10px marker
-        html: `<div style="width:10px;height:10px;box-sizing:border-box;transform-origin:center center;background:${color};border-radius:50%;border:1.5px solid #222;box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
+        html: `<div style="width:10px;height:10px;box-sizing:border-box;transform-origin:center center;background:${color};border-radius:50%;border:1.5px solid ${bc};box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
     });
 }
 
@@ -431,72 +434,13 @@ async function renderFiguresAsList(figuresArray) {
     // --- End block ---
 }
 
-// Timeline display settings
-let LOG_SCALE_THRESHOLD = -4000; // Dates before this will be compressed logarithmically (user-adjustable)
-const LOG_SCALE_FACTOR = 4;         // Higher = more compression for early dates
-const LOG_REGION_PROPORTION = 0.15;  // 0.4 = 40% of width for log region, adjust as needed
-
+// Timeline display settings — the log-threshold pipeline now lives in
+// gaerhf-colormap.js. This forwarder keeps the many timeline-positioning
+// call sites (renderFiguresAsTimeline, renderFiguresAsTimescale, etc.)
+// working unchanged. The Ctrl+Shift+L slider writes its value through
+// setLogScaleThreshold() in the shared module.
 function timelineScale(date, minDate, maxDate) {
-    // Defensive conversion
-    const d = Number(date);
-    const minN = Number(minDate);
-    const maxN = Number(maxDate);
-    if (!isFinite(d) || !isFinite(minN) || !isFinite(maxN) || minN === maxN) {
-        // fallback to a simple clamp in case of bad inputs
-        if (!isFinite(d) || !isFinite(minN) || !isFinite(maxN)) return 0.5;
-        return 0; // degenerate range
-    }
-
-    try {
-        // If all dates are after the threshold, use linear scaling only
-        if (minN >= LOG_SCALE_THRESHOLD) {
-            return (d - minN) / (maxN - minN);
-        }
-
-        // If all dates are before the threshold, use log-only scaling with optional compression
-        if (maxN < LOG_SCALE_THRESHOLD) {
-            const logMin = Math.log(Math.abs(minN - LOG_SCALE_THRESHOLD) + 1);
-            const logMax = Math.log(Math.abs(maxN - LOG_SCALE_THRESHOLD) + 1);
-            const logVal = Math.log(Math.abs(d - LOG_SCALE_THRESHOLD) + 1);
-            const denom = (logMax - logMin);
-            if (!isFinite(denom) || denom === 0) {
-                // fallback to linear inside the available span
-                return Math.max(0, Math.min(1, (d - minN) / (maxN - minN)));
-            }
-            let normalized = (logVal - logMin) / denom;
-            normalized = Math.max(0, Math.min(1, normalized));
-            // Apply power-based compression inside the log-space
-            return Math.pow(normalized, LOG_SCALE_FACTOR);
-        }
-
-        // Hybrid case: allocate LOG_REGION_PROPORTION of the width to the compressed log region,
-        // and the remainder to linear scaling for recent dates.
-        if (d < LOG_SCALE_THRESHOLD) {
-            // Log region: normalize in log-space to [0,1], then compress and scale into the reserved proportion
-            const logMin = Math.log(Math.abs(minN - LOG_SCALE_THRESHOLD) + 1);
-            const logMax = Math.log(1); // at threshold -> log(1) == 0
-            const logVal = Math.log(Math.abs(d - LOG_SCALE_THRESHOLD) + 1);
-            const denom = (logMax - logMin);
-            if (!isFinite(denom) || denom === 0) {
-                // fallback: map proportionally into the log region based on distance
-                const fallback = Math.max(0, Math.min(1, (d - minN) / (LOG_SCALE_THRESHOLD - minN)));
-                return Math.pow(fallback, LOG_SCALE_FACTOR) * LOG_REGION_PROPORTION;
-            }
-            let normalized = (logVal - logMin) / denom;
-            normalized = Math.max(0, Math.min(1, normalized));
-            const compressed = Math.pow(normalized, LOG_SCALE_FACTOR);
-            return compressed * LOG_REGION_PROPORTION;
-        } else {
-            // Linear region: map to [LOG_REGION_PROPORTION, 1]
-            const linearMin = LOG_SCALE_THRESHOLD;
-            const linearMax = maxN;
-            if (linearMax === linearMin) return 1; // avoid division by zero
-            return LOG_REGION_PROPORTION + ((d - linearMin) / (linearMax - linearMin)) * (1 - LOG_REGION_PROPORTION);
-        }
-    } catch (err) {
-        // Unexpected error: fallback to simple linear mapping
-        return Math.max(0, Math.min(1, (d - minN) / (maxN - minN)));
-    }
+    return dateToScale(date, minDate, maxDate);
 }
 
 async function renderFiguresAsTimeline(figuresDisplayIndex) {
@@ -649,6 +593,23 @@ function initializeMap() {
     };
     baseLayers['Terrain'].addTo(leafletMap);
     L.control.layers(baseLayers, null, { position: 'topright', collapsed: true }).addTo(leafletMap);
+
+    // Bind the Map's colormap picker. Markup lives in index.html as
+    // #map-colormap-control — identical structure & placement to the
+    // Globe's picker so the widget is in the same spot across views.
+    // Stop interactions from bubbling to the map underneath.
+    const mapColormapControl = document.getElementById('map-colormap-control');
+    if (mapColormapControl) {
+        L.DomEvent.disableClickPropagation(mapColormapControl);
+        L.DomEvent.disableScrollPropagation(mapColormapControl);
+        bindColormapPicker(document.getElementById('map-colormap-menu'));
+    }
+
+    // Re-render markers whenever the active colormap (or log threshold) changes.
+    // Wired once per Leaflet map instance; initializeMap() runs once.
+    onColormapChange(() => {
+        try { updateMarkerColors(); } catch (e) { /* ignore */ }
+    });
     // Disable automatic map panning for ALL popups globally (simplifies hover behavior)
     try { L.Popup.prototype.options.autoPan = false; } catch (e) { /* ignore if Leaflet not loaded */ }
     // Explicitly raise popup pane z-index in JS in case CSS loads late or is overridden
@@ -702,8 +663,11 @@ function renderFiguresOnMap(figuresArray) {
     // Do NOT recreate all markers — update existing markers' background color, create missing ones,
     // and remove markers that are no longer needed. This avoids losing border/boxShadow highlights.
 
-    // Find min/max date for scaling
-    const [minDate, maxDate] = getTimescaleRange(figuresArray);
+    // Color normalization uses the fixed color domain (matches the
+    // timeline slider), so a marker's color is stable regardless of the
+    // active date filter. getTimescaleRange() is still used by the
+    // timeline-overlay code paths via its other callers.
+    const ramp = getActiveColormap();
 
     // Update existing markers in-place where possible (to preserve highlight borders/shadows),
     // create markers for figures that don't yet have one, and remove any leftover markers
@@ -715,13 +679,8 @@ function renderFiguresOnMap(figuresArray) {
         if (!figure || !figure.representativeLatLongPoint) return;
 
         const [lat, lng] = figure.representativeLatLongPoint;
-        const date = getFigureStart(figure);
-        let scale = 0.5;
-        if (date !== null && !isNaN(date)) {
-            scale = timelineScale(date, minDate, maxDate);
-        }
-        const gray = Math.round(scale * 255);
-        const color = `rgb(${gray},${gray},${gray})`;
+        const date = getFigureColorDate(figure);
+        const color = date !== null ? dateToColor(date) : '#888';
 
         // If a marker already exists for this figure, update its inner div background color
         // and keep it. This preserves styles like border and boxShadow applied by highlight
@@ -733,17 +692,18 @@ function renderFiguresOnMap(figuresArray) {
                 const inner = el.querySelector && el.querySelector('div');
                 if (inner) {
                     inner.style.backgroundColor = color;
+                    inner.style.borderColor     = ramp.markerBorder;
                 }
             } else {
                 // If element isn't available, ensure the icon is set so it will render when visible
-                existingMarker.setIcon(makeMarkerIcon(color));
+                existingMarker.setIcon(makeMarkerIcon(color, ramp.markerBorder));
             }
             toKeep.add(figureId);
             return;
         }
 
         // Otherwise create a new marker (first time seen)
-        const icon = makeMarkerIcon(color);
+        const icon = makeMarkerIcon(color, ramp.markerBorder);
 
         const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
         marker.on('click', () => {
@@ -1061,6 +1021,13 @@ document.addEventListener('keydown', (event) => {
 // Tab functionality for the UI
 // Ensure the DOM is fully loaded before attaching event listeners
 document.addEventListener('DOMContentLoaded', () => {
+    // Re-render the top-of-page timescale legend (colored gradient + figure
+    // dots) whenever the active colormap or log threshold changes. Wired
+    // here so it fires regardless of which tab the user is on.
+    onColormapChange(() => {
+        try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { /* ignore */ }
+    });
+
     // Fade all open info windows while the user hovers the gallery strip so
     // thumbnails stay readable even when a popup overlaps from below.
     const galleryContainer = document.getElementById('gallery-container');
@@ -1184,7 +1151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         thresholdSlider.min = String(minYear);
         thresholdSlider.max = String(maxYear);
         thresholdSlider.step = '100';
-        thresholdSlider.value = String(LOG_SCALE_THRESHOLD);
+        thresholdSlider.value = String(LOG_SCALE_THRESHOLD);  // read from gaerhf-colormap.js
         thresholdSlider.title = 'Slide to change log threshold (years)';
         thresholdSlider.style.verticalAlign = 'middle';
         thresholdControl.appendChild(thresholdSlider);
@@ -1206,18 +1173,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.appendChild(thresholdControl);
         }
 
-        // Toggle function and keyboard shortcut (Ctrl+Shift+L)
+        // Toggle function and keyboard shortcut (Ctrl+Shift+L). Flows
+        // through setThresholdSliderVisible() in gaerhf-colormap.js so
+        // both pickers' checkboxes stay in sync via the shared event.
         function toggleThresholdControlVisibility() {
-            const el = document.getElementById('threshold-control');
-            if (!el) return;
-            const hidden = el.style.display === 'none' || el.getAttribute('aria-hidden') === 'true';
-            if (hidden) {
-                el.style.display = 'inline-block';
-                el.setAttribute('aria-hidden', 'false');
-            } else {
-                el.style.display = 'none';
-                el.setAttribute('aria-hidden', 'true');
-            }
+            setThresholdSliderVisible(!isThresholdSliderVisible());
         }
 
         // Toggle with Ctrl (Windows/Linux) OR Cmd (macOS) + Shift + L.
@@ -1244,27 +1204,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // (duplicate old listener removed)
 
-        // Live update while sliding; debounce final action (rerender timeline/map) when user stops
+        // Live update while sliding; debounce final action (rerender timeline/map) when user stops.
+        // setLogScaleThreshold() fires onColormapChange listeners so the Map markers AND the
+        // Globe (markers + legend) re-render in response.
         thresholdSlider.addEventListener('input', (e) => {
             const val = Number(e.target.value);
             if (Number.isFinite(val)) {
-                LOG_SCALE_THRESHOLD = val;
+                setLogScaleThreshold(val);
                 thresholdValue.textContent = formatDateForDisplay(LOG_SCALE_THRESHOLD);
-                // update the timescale immediately
                 renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
-                // If the map tab is visible, apply lightweight in-place recolor so we don't overwrite highlight styles
-                if (currentTab === 'figure-map') {
-                    // updateMarkerColors updates only backgroundColor on existing markers
-                    try { updateMarkerColors(currentSortedIndex); } catch (e) { /* ignore */ }
-                }
             }
             if (thresholdDebounceTimer) clearTimeout(thresholdDebounceTimer);
             thresholdDebounceTimer = setTimeout(() => {
-                // When sliding stops, rerender the timeline if visible
                 if (currentTab === 'figure-timeline') {
                     renderFiguresAsTimeline(currentSortedIndex);
                 }
-                // Also update the map markers if map is visible
                 if (currentTab === 'figure-map') {
                     renderFiguresOnMap(currentSortedIndex);
                 }
@@ -1272,11 +1226,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300);
         });
 
-        // On change ensure final state is rendered
         thresholdSlider.addEventListener('change', (e) => {
             const val = Number(e.target.value);
             if (Number.isFinite(val)) {
-                LOG_SCALE_THRESHOLD = val;
+                setLogScaleThreshold(val);
                 thresholdValue.textContent = formatDateForDisplay(LOG_SCALE_THRESHOLD);
             }
             if (thresholdDebounceTimer) { clearTimeout(thresholdDebounceTimer); thresholdDebounceTimer = null; }
@@ -2002,18 +1955,23 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
     // clamp
     threshPos = Math.max(0, Math.min(1, threshPos));
 
-    if (threshPos > 0 && threshPos < 1) {
-        // Use a three-stop gradient with threshold highlighted by a mid tone
-        const p = Math.round(threshPos * 100);
-        const grad = `linear-gradient(to right, black 0%, #666 ${p}%, white 100%)`;
-        // Set both background and backgroundImage to maximize cross-browser support
-        bar.style.backgroundImage = grad;
-        bar.style.background = grad;
-    } else {
-        const grad = `linear-gradient(to right, black, white)`;
-        bar.style.backgroundImage = grad;
-        bar.style.background = grad;
+    // Scale-axis bar: position t along the bar = scale t. The leftmost
+    // 15% (LOG_REGION_PROPORTION) renders everything BEFORE
+    // LOG_SCALE_THRESHOLD; the remaining 85% renders everything after.
+    // Tick labels are placed via timelineScale, so the threshold's
+    // label sits exactly at the 15% boundary. As the threshold slider
+    // moves, labels reposition along the bar while the bar's color
+    // partition stays 15% / 85%.
+    const ramp = getActiveColormap();
+    const stops = 80;
+    const gradStops = [];
+    for (let i = 0; i <= stops; i++) {
+        const t = i / stops;
+        gradStops.push(`${ramp.scaleToColor(t)} ${(t * 100).toFixed(3)}%`);
     }
+    const grad = `linear-gradient(to right, ${gradStops.join(', ')})`;
+    bar.style.backgroundImage = grad;
+    bar.style.background = grad;
     scaleDiv.appendChild(bar);
 
     // --- Tick generation ---
@@ -2120,9 +2078,11 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
     }
 }
 
-function updateMarkerColors(figuresArray) {
-    const [minDate, maxDate] = getTimescaleRange(figuresArray);
-    if (minDate === maxDate) return;
+// Repaints existing markers using the active colormap. Iterates all live
+// markers in leafletMarkers — no figure-array filter needed since the
+// color domain is fixed and we only touch markers that already exist.
+function updateMarkerColors() {
+    const ramp = getActiveColormap();
 
     Object.keys(leafletMarkers).forEach(figureId => {
         const marker = leafletMarkers[figureId];
@@ -2133,17 +2093,13 @@ function updateMarkerColors(figuresArray) {
         if (!inner) return;
 
         const figure = figuresDict[figureId];
-        const date = figure ? getFigureStart(figure) : null;
-        let color = 'rgb(128,128,128)'; // fallback neutral
-        if (date !== null && !isNaN(date)) {
-            const scale = timelineScale(date, minDate, maxDate);
-            const gray = Math.round(Math.max(0, Math.min(1, scale)) * 255);
-            color = `rgb(${gray},${gray},${gray})`;
-        }
+        const date   = figure ? getFigureColorDate(figure) : null;
+        const color  = date !== null ? dateToColor(date) : 'rgb(128,128,128)';
 
-        // IMPORTANT: only set the background color property to avoid overwriting border/boxShadow
+        // IMPORTANT: only set the background and border color so we don't
+        // overwrite the highlight box-shadow / outline applied by other paths.
         inner.style.backgroundColor = color;
-        // Do NOT touch inner.style.border, inner.style.boxShadow, inner.style.borderRadius, or inner.style.cssText
+        inner.style.borderColor     = ramp.markerBorder;
     });
 }
 
