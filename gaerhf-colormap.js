@@ -148,7 +148,7 @@ const COLORMAP_RAMPS = {
             }
             return `rgba(${r},${g},${b},0.9)`;
         },
-        markerBorder: 'rgba(255,255,255,0.85)',
+        markerBorder: '#222',
     },
 };
 const DEFAULT_COLORMAP_ID = 'grayscale';
