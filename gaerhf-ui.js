@@ -765,6 +765,9 @@ async function showFigureDetails(figureId, { markAsRecent = false } = {}) {
 
     const targetWindow = (isShiftKeyDown || !getActiveWindow()) ? createDetailWindow(figureId) : getActiveWindow();
     targetWindow.dataset.figureId = figureId;
+    // Mark active synchronously so a rapid second click reuses this window
+    // even if renderFigureImage below throws or is still awaiting.
+    setActiveWindow(targetWindow);
 
     if (markAsRecent) {
         clearTimeout(targetWindow._recentOpenTimer);
@@ -777,8 +780,6 @@ async function showFigureDetails(figureId, { markAsRecent = false } = {}) {
     renderFigureHeader(targetWindow.querySelector('.detail-label'), figure);
     renderFigureMetadata(targetWindow.querySelector('.detail-info'), figure);
     await renderFigureImage(targetWindow.querySelector('.detail-image'), figure);
-
-    setActiveWindow(targetWindow);
     try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
 }
 
