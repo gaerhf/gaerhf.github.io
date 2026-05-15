@@ -1165,6 +1165,26 @@ document.addEventListener('DOMContentLoaded', () => {
         thresholdValue.textContent = formatDateForDisplay(LOG_SCALE_THRESHOLD);
         thresholdControl.appendChild(thresholdValue);
 
+        const thresholdCloseBtn = document.createElement('button');
+        thresholdCloseBtn.type = 'button';
+        thresholdCloseBtn.textContent = 'x';
+        thresholdCloseBtn.title = 'Hide log-threshold slider';
+        thresholdCloseBtn.setAttribute('aria-label', 'Hide log-threshold slider');
+        thresholdCloseBtn.style.marginLeft = '8px';
+        thresholdCloseBtn.style.border = 'none';
+        thresholdCloseBtn.style.background = 'transparent';
+        thresholdCloseBtn.style.cursor = 'pointer';
+        thresholdCloseBtn.style.fontSize = '1rem';
+        thresholdCloseBtn.style.lineHeight = '1';
+        thresholdCloseBtn.style.color = '#555';
+        thresholdCloseBtn.style.padding = '0 2px';
+        thresholdCloseBtn.addEventListener('click', () => {
+            // Shared setter dispatches the visibility-changed event so both
+            // colormap-menu checkboxes stay in sync with this close action.
+            setThresholdSliderVisible(false);
+        });
+        thresholdControl.appendChild(thresholdCloseBtn);
+
         // Insert into headerContainer if available, otherwise append to document.body
         const mainTitle = document.getElementById('main-title');
         if (mainTitle) {
