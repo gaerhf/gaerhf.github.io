@@ -1,5 +1,4 @@
 const turtleUrl = 'gaerhf.ttl';
-const figureListDiv = document.getElementById('figure-list');
 const headerContainer = document.getElementById('header-container');
 
 const minYear = -50000; // Minimum year
@@ -481,108 +480,6 @@ function filterFiguresByDateRange(startYear, endYear) {
     });
 }
 
-async function renderFiguresAsList(figuresArray) {
-    figureListDiv.innerHTML = ''; // Clear the list container
-
-    if (!figuresArray || figuresArray.length === 0) {
-        // Display a message if no figures are found
-        figureListDiv.textContent = 'No human figures or groups found.';
-        return;
-    }
-
-    for (const figureId of figuresArray) {
-        const figure = figuresDict[figureId];
-        const figureItem = document.createElement('div');
-        figureItem.setAttribute('id', `list-${figure.id}`);
-        figureItem.classList.add('figure-item');
-        figureItem.style.display = 'flex';
-        figureItem.style.alignItems = 'center';
-
-        const thumbnailImg = document.createElement('img');
-        thumbnailImg.src = thumbnailUrl(figureId);
-        thumbnailImg.loading = "lazy";
-        thumbnailImg.style.width = '50px';
-        thumbnailImg.style.height = 'auto';
-        thumbnailImg.style.marginRight = '10px';
-
-        figureItem.appendChild(thumbnailImg);
-
-        // }
-
-        const textContainer = document.createElement('div');
-
-        // Show date range if available, or approximate date
-        if (figure.date !== null) {
-            const dateDiv = document.createElement('div');
-            dateDiv.classList.add('date-info');
-            dateDiv.style.fontSize = '0.8em';
-            dateDiv.style.marginBottom = '.4em';
-            dateDiv.textContent = `${formatDateForDisplay(figure.date)}`;
-            textContainer.appendChild(dateDiv);
-        } else if (figure.earliestDate !== null && figure.latestDate !== null) {
-            const dateDiv = document.createElement('div');
-            dateDiv.classList.add('date-info');
-            dateDiv.style.fontSize = '0.8em';
-            dateDiv.style.marginBottom = '.4em';
-            dateDiv.textContent = `${formatDateForDisplay(figure.earliestDate)} - ${formatDateForDisplay(figure.latestDate)}`;
-            textContainer.appendChild(dateDiv);
-        } else if (figure.approximateDate !== null) {
-            const dateDiv = document.createElement('div');
-            dateDiv.classList.add('date-info');
-            dateDiv.style.fontSize = '0.8em';
-            dateDiv.style.marginBottom = '.4em';
-            dateDiv.textContent = `${formatDateForDisplay(figure.approximateDate)}`;
-            textContainer.appendChild(dateDiv);
-        }
-
-        const labelSpan = document.createElement('span');
-        labelSpan.textContent = figure.label || figure.id;
-        textContainer.appendChild(labelSpan);
-
-        if (figure.cultureLabel || figure.culture) {
-            const cultureDiv = document.createElement('div');
-            cultureDiv.classList.add('culture-info');
-            cultureDiv.style.fontSize = '0.8em';
-            cultureDiv.textContent = `${figure.cultureLabel || figure.culture}`;
-            textContainer.appendChild(cultureDiv);
-        }
-
-        if (figure.materialNote) {
-            const materialDiv = document.createElement('div');
-            materialDiv.classList.add('material-info');
-            materialDiv.style.fontSize = '0.8em';
-            materialDiv.textContent = `${figure.materialNote}`;
-            textContainer.appendChild(materialDiv);
-        }
-
-        if (figure.inModernCountry) {
-            const countryDiv = document.createElement('div');
-            countryDiv.classList.add('country-info');
-            countryDiv.style.fontSize = '0.8em';
-            countryDiv.textContent = `${figure.inModernCountry}`;
-            textContainer.appendChild(countryDiv);
-        }
-
-        figureItem.appendChild(textContainer);
-        figureItem.addEventListener('click', () => {
-            showFigureDetails(figure.id);
-            highlightListFigure(figure.id);
-        });
-        figureListDiv.appendChild(figureItem);
-    }
-
-    // --- Add this block at the end ---
-    // If there's a hash in the URL, scroll to that figure
-    const hash = window.location.hash;
-    if (hash && hash.length > 1) {
-        const figureId = hash.substring(1);
-        if (document.getElementById(`list-${figureId}`)) {
-            scrollToListFigure(figureId);
-        }
-    }
-    // --- End block ---
-}
-
 // Timescale display settings — the log-threshold pipeline now lives in
 // gaerhf-colormap.js. This forwarder keeps the many scale-positioning
 // call sites (renderFiguresAsTimescale, etc.)
@@ -867,7 +764,6 @@ function syncActiveFigureFromOpenWindows() {
     }
 
     currentFigureId = null;
-    highlightListFigure(null);
     highlightMapFigure(null);
     highlightGalleryFigure(null);
     if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(null);
@@ -908,7 +804,6 @@ function setActiveWindow(win) {
         if (window.location.hash !== `#${figId}`) {
             history.replaceState(null, '', `#${figId}`);
         }
-        highlightListFigure(figId);
         highlightMapFigure(figId);
         highlightGalleryFigure(figId);
         if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(figId);
@@ -926,7 +821,6 @@ async function loadAndDisplayFigures() {
     currentSortedIndex = sortedFiguresIndex;
 
     renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
-    await renderFiguresAsList(currentSortedIndex);
 
     setTimeout(() => {
         if (leafletMap) {
@@ -1004,7 +898,6 @@ async function initializeStore($rdf) {
         return true;
     } catch (error) {
         console.error("Error initializing store:", error);
-        figureListDiv.textContent = `Error loading or processing data: ${error.message}`;
         return false;
     }
 }
@@ -1100,8 +993,6 @@ document.addEventListener('keydown', (event) => {
         const targetFigureId = navigationSet[targetIndex];
 
         showFigureDetails(targetFigureId);
-        highlightListFigure(targetFigureId);
-        scrollToListFigure(targetFigureId);
         highlightMapFigure(targetFigureId);
         highlightGalleryFigure(targetFigureId);
 
@@ -1150,13 +1041,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const tabName = button.getAttribute('data-tab');
-            // The "List" button is currently in the tab strip but opens a modal
-            // over the active view rather than swapping tabs. Underlying view
-            // (Map / Globe) is preserved.
-            if (tabName === 'figure-list') {
-                openListModal();
-                return;
-            }
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
             button.classList.add('active');
@@ -1168,10 +1052,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const activeContent = document.getElementById(`${tabName}-container`);
             if (activeContent) activeContent.classList.add('active');
 
-            if (tabName === 'figure-list' && currentFigureId) {
-                scrollToListFigure(currentFigureId);
-                highlightListFigure(currentFigureId);
-            } else if (tabName === 'figure-map') {
+            if (tabName === 'figure-map') {
                 setTimeout(() => {
                     if (leafletMap) leafletMap.invalidateSize();
                     renderFiguresOnMap(currentSortedIndex);
@@ -1432,27 +1313,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/**
- * Makes an element draggable using a handle (defaults to element itself or child with ID + 'label')
- */
-function scrollToListFigure(figureId) {
-    const currentDiv = document.getElementById(`list-${figureId}`);
-    if (currentDiv) {
-        currentDiv.scrollIntoView({ behavior: 'auto', block: 'center' });
-    } else {
-        console.warn(`Element with ID list-${figureId} not found.`);
-    }
-}
-
-function highlightListFigure(figureId) {
-    document.querySelectorAll('.figure-item.highlighted').forEach(div => {
-        div.classList.remove('highlighted');
-    });
-    const currentDiv = document.getElementById(`list-${figureId}`);
-    if (currentDiv) {
-        currentDiv.classList.add('highlighted');
-    }
-}
 // Returns figureIds for all currently open detail windows.
 function getOpenWindowFigureIds() {
     return Array.from(document.querySelectorAll('.detail-window[data-figure-id]'))
@@ -1632,8 +1492,6 @@ function startPlayback() {
     playIndex = startIndex;
 
     showFigureDetails(figures[playIndex]);
-    highlightListFigure(figures[playIndex]);
-    scrollToListFigure(figures[playIndex]);
 
     openAdaptivePopup(leafletMarkers[figures[playIndex]], markerLabelContent(figures[playIndex]));
 
@@ -1644,8 +1502,6 @@ function startPlayback() {
             return;
         }
         showFigureDetails(figures[playIndex]);
-        highlightListFigure(figures[playIndex]);
-        scrollToListFigure(figures[playIndex]);
 
         console.log(figures[playIndex]);
         openAdaptivePopup(leafletMarkers[figures[playIndex]], markerLabelContent(figures[playIndex]));
@@ -2124,12 +1980,16 @@ function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
         scaleDiv.appendChild(popup);
     };
 
-    // Hover behaviour: hovering EITHER thumb shows both year popups and
-    // the range-span popup. Clearing removes all three together.
+    // Hover behaviour: hovering EITHER thumb shows the year on BOTH
+    // thumbs and the range-span popup between them. A separate hint
+    // tooltip ("⇧ to maintain distance") appears BENEATH the year
+    // popup on the OTHER (non-hovered) thumb. Clearing removes them
+    // all together.
     const HOVER_POPUP_IDS = [
         'timescale-thumb-popup-hover-start',
         'timescale-thumb-popup-hover-end',
         'timescale-thumb-popup-hover-distance',
+        'timescale-thumb-popup-hover-hint',
     ];
     const clearHoverPopups = () => {
         HOVER_POPUP_IDS.forEach(id => {
@@ -2137,7 +1997,7 @@ function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
             if (el && el.parentNode) el.parentNode.removeChild(el);
         });
     };
-    const showHoverPopups = () => {
+    const showHoverPopups = (hoveredBound) => {
         if (timescaleDragPopupState.active) return;
         clearHoverPopups();
 
@@ -2154,6 +2014,16 @@ function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
         endPopup.style.left = `${endX}px`;
         endPopup.textContent = formatDateForDisplay(selectedLatestYear);
         scaleDiv.appendChild(endPopup);
+
+        // ⇧ icon (U+21E7) matches the shift-key glyph used elsewhere
+        // in popups (see SHIFT_HINT_HTML).
+        const otherX = hoveredBound === 'start' ? endX : startX;
+        const hintPopup = document.createElement('div');
+        hintPopup.id = 'timescale-thumb-popup-hover-hint';
+        hintPopup.className = 'timescale-thumb-popup-hint';
+        hintPopup.style.left = `${otherX}px`;
+        hintPopup.innerHTML = '&#8679; to maintain distance';
+        scaleDiv.appendChild(hintPopup);
 
         const distancePopup = document.createElement('div');
         distancePopup.id = 'timescale-thumb-popup-hover-distance';
@@ -2347,14 +2217,14 @@ function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
         }
         dragThumb('end', event);
     });
-    startThumb.addEventListener('mouseenter', showHoverPopups);
+    startThumb.addEventListener('mouseenter', () => showHoverPopups('start'));
     startThumb.addEventListener('mouseleave', clearHoverPopups);
-    startThumb.addEventListener('focus', showHoverPopups);
-    startThumb.addEventListener('blur', clearHoverPopups);
-    endThumb.addEventListener('mouseenter', showHoverPopups);
-    endThumb.addEventListener('mouseleave', clearHoverPopups);
-    endThumb.addEventListener('focus', showHoverPopups);
-    endThumb.addEventListener('blur', clearHoverPopups);
+    startThumb.addEventListener('focus',      () => showHoverPopups('start'));
+    startThumb.addEventListener('blur',       clearHoverPopups);
+    endThumb.addEventListener('mouseenter',   () => showHoverPopups('end'));
+    endThumb.addEventListener('mouseleave',   clearHoverPopups);
+    endThumb.addEventListener('focus',        () => showHoverPopups('end'));
+    endThumb.addEventListener('blur',         clearHoverPopups);
 }
 
 

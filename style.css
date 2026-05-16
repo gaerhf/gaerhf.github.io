@@ -39,68 +39,6 @@ body {
     --map-widget-shadow: 0 1px 5px rgba(0,0,0,0.4);
 }
 
-#figure-list-container {
-    width: 100%;
-    position: fixed;
-    top: 84px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #eaeaea;
-    display: none;
-    z-index: 500;
-    overflow-y: auto;
-}
-
-#figure-list-container.active {
-    display: block;
-}
-
-#figure-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-    padding: 15px;
-    margin-top: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.figure-item {
-    border: 1px solid #ddd;
-    padding: 8px 12px;
-    cursor: pointer;
-    background-color: #fff;
-    border-radius: 4px;
-    transition: transform 0.2s ease-in-out;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-}
-
-.figure-item.highlighted {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    background-color: #d4d2d2;
-}
-
-.figure-item img {
-    height: 50px;
-    width: auto;
-    margin-right: 10px;
-}
-
-.figure-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.figure-item h3 {
-    margin-top: 0;
-    color: #333;
-}
-
 #header-container {
     display: flex;
     flex-direction: column;
@@ -565,6 +503,26 @@ body.globe-tab-active .detail-window.out-of-range .figure-details-wrapper {
     white-space: nowrap;
     pointer-events: none;
     z-index: 1320;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Standalone hint tooltip that sits BENEATH the year popup on the
+   non-hovered thumb ("⇧ to maintain distance"). Visually muted so
+   it reads as an affordance rather than data. */
+.timescale-thumb-popup-hint {
+    position: absolute;
+    top: 22px;
+    transform: translateX(-50%);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(24, 24, 24, 0.6);
+    color: #fff;
+    font-size: 11px;
+    font-style: italic;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1322;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
