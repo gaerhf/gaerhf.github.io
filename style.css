@@ -751,10 +751,6 @@ a.tab-button {
     cursor: pointer;
 }
 
-#play-btn {
-    display: none;
-}
-
 
 /* Tabbed interface and tab content use default block layout (no explicit rules) */
 

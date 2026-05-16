@@ -1,12 +1,12 @@
 // gaerhf-globe.js — globe view for gaerhf.github.io
 // Reads shared globals from gaerhf-ui.js: figuresDict, currentSortedIndex,
 // currentFigureId, currentKeywordHighlightIds, currentTab, showFigureDetails,
-// stopPlayback, sortFigures, renderGallery, highlightGalleryFigure.
+// sortFigures, renderGallery, highlightGalleryFigure.
 // Shared utilities come from gaerhf-detail.js: thumbnailUrl, renderFigureHeader,
 // renderFigureMetadata, renderFigureImage, createDetailWindowShell, etc.
 
 /* globals figuresDict, currentSortedIndex, currentFigureId, currentKeywordHighlightIds,
-   currentTab, showFigureDetails, stopPlayback, sortFigures, renderGallery,
+   currentTab, showFigureDetails, sortFigures, renderGallery,
    highlightGalleryFigure, getOpenWindowFigureIds, thumbnailUrl,
    renderFigureHeader, renderFigureMetadata, renderFigureImage,
    createDetailWindowShell, getActiveWindow, _setActiveWindowBase, Globe,
@@ -305,7 +305,7 @@ function initGlobe() {
             div.addEventListener('pointerup', e => {
                 e.stopPropagation();
                 if (Math.hypot(e.clientX - ptDownX, e.clientY - ptDownY) < 8) {
-                    try { stopPlayback(); showFigureDetails(d.id); } catch (err) { console.error(err); }
+                    try { showFigureDetails(d.id); } catch (err) { console.error(err); }
                 }
             });
 
@@ -355,7 +355,6 @@ function initGlobe() {
 
     document.getElementById('globe-inner').addEventListener('pointerdown', () => {
         controls.autoRotate = false;
-        stopPlayback();
     });
 
     // Refresh the shared gallery as the user rotates the globe so it always

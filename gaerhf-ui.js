@@ -27,9 +27,7 @@ function makeMarkerIcon(color, borderColor) {
     });
 }
 
-// Check for 'play' CGI parameter in the URL
 const urlParams = new URLSearchParams(window.location.search);
-const playParam = urlParams.get('play');
 const viewParam = urlParams.get('view')
 
 // Initialize the figures dictionary
@@ -37,10 +35,6 @@ let figuresDict = {};
 let currentSortedIndex = [];
 let figuresKWDict = {}; // keyword-to-IDs index, populated by initKeywordSearch
 let tp;
-
-// Playback variables
-let playInterval = null;
-let playIndex = 0;
 
 let currentFigureId = null;
 let currentTab = "figure-map";
@@ -1029,14 +1023,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryListBtn = document.getElementById('gallery-list-btn');
     if (galleryListBtn) {
         galleryListBtn.addEventListener('click', () => {
-            stopPlayback();
             openListModal();
         });
     }
 
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
-    const playBtn = document.getElementById('play-btn');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -1087,18 +1079,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    playBtn.addEventListener('click', () => {
-        if (playBtn.dataset.playing === "true") {
-            stopPlayback();
-        } else {
-            startPlayback();
-        }
-    });
-
-    if (playParam !== null) {
-        setTimeout(startPlayback, 500);
-    }
 
     // --- Threshold slider control (allow user to slide the log threshold) ---
     try {
@@ -1468,57 +1448,6 @@ function highlightKeywordGalleryImages(ids) {
     });
 }
 
-function startPlayback() {
-    const playBtn = document.getElementById('play-btn');
-    playBtn.textContent = '⏸️';
-    playBtn.dataset.playing = "true";
-
-    let figures = currentSortedIndex;
-
-    // Start from the current figure if available
-    let startIndex = 0;
-    if (currentFigureId) {
-        const idx = figures.indexOf(currentFigureId);
-        if (idx !== -1) startIndex = idx;
-    }
-
-    // override if map
-    if (currentTab == "figure-map") {
-        startIndex = 0;
-        const visibleMarkers = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
-        figures = sortFigures(visibleMarkers, 'date');
-    }
-
-    playIndex = startIndex;
-
-    showFigureDetails(figures[playIndex]);
-
-    openAdaptivePopup(leafletMarkers[figures[playIndex]], markerLabelContent(figures[playIndex]));
-
-    playInterval = setInterval(() => {
-        playIndex++;
-        if (playIndex >= figures.length) {
-            stopPlayback();
-            return;
-        }
-        showFigureDetails(figures[playIndex]);
-
-        console.log(figures[playIndex]);
-        openAdaptivePopup(leafletMarkers[figures[playIndex]], markerLabelContent(figures[playIndex]));
-
-    }, 2000);
-}
-
-function stopPlayback() {
-    const playBtn = document.getElementById('play-btn');
-    playBtn.textContent = '▶️';
-    playBtn.dataset.playing = "false";
-    if (playInterval) {
-        clearInterval(playInterval);
-        playInterval = null;
-    }
-}
-
 window.addEventListener('hashchange', () => {
     const hash = window.location.hash;
     if (hash && hash.length > 1 && figuresDict[hash.substring(1)]) {
@@ -1854,7 +1783,6 @@ function renderGallery() {
         });
 
         galleryImg.addEventListener('click', () => {
-            stopPlayback();
             highlightMapFigure(figureId);
             highlightGalleryFigure(figureId);
             try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
