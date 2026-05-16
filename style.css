@@ -11,6 +11,32 @@ body {
     /* Centralize header height so timescale can reference it in CSS without JS */
     --header-height: 33vh;
     --actual-header-height: auto; /* Dynamic based on content */
+
+    /* ─────────────────────────────────────────────────────────────────
+       SHARED WIDGET SHELL — DO NOT INLINE THESE VALUES.
+       The top-right corner of both the Map and the Globe view stacks
+       three pill controls: the colormap (🎨) picker, the basemap
+       picker, and (on Map) Leaflet's L.control.layers toggle. They
+       MUST look identical across views so the same affordance appears
+       in the same place when the user flips between Map and Globe.
+
+       Design rule: adopt Leaflet's NON-touch `.leaflet-control-layers`
+       look exactly — soft shadow, 5px radius, no outer border, 36px
+       toggle — and pin Leaflet's touch-mode size/border back to the
+       non-touch defaults (see the `.leaflet-touch ...` overrides
+       below). That way Safari (which Leaflet flags as touch on
+       macOS) renders the trio the same size as Chrome, and the
+       custom Globe widgets don't have to grow a border just to keep
+       up with the Map. Match Leaflet here, don't fight it.
+
+       If you change any of these (size, shadow, radius), change them
+       HERE so .colormap-picker, #globe-basemap-control, and the
+       Leaflet control all stay in lockstep.
+       ───────────────────────────────────────────────────────────────── */
+    --map-widget-size: 36px;
+    --map-widget-bg: #fff;
+    --map-widget-radius: 5px;
+    --map-widget-shadow: 0 1px 5px rgba(0,0,0,0.4);
 }
 
 #figure-list-container {
@@ -1057,22 +1083,21 @@ body.about-tab .detail-window {
 }
 #globe-inner { position: absolute; inset: 0; }
 
-/* Globe base-map selector. Mirrors Leaflet's L.control.layers visual
-   style (same stacked-papers icon, white background, soft shadow) so
-   the Map and Globe tabs present a consistent base-map affordance. */
+/* Globe base-map selector. Uses the shared --map-widget-* tokens (see
+   :root) so it stays visually identical to Leaflet's L.control.layers
+   on the Map and to the colormap picker on both views. */
 #globe-basemap-control {
     position: absolute; top: 10px; right: 10px; z-index: 200;
-    background: #fff;
-    border: 2px solid rgba(0,0,0,0.2);
-    border-radius: 4px;
+    background: var(--map-widget-bg);
+    border-radius: var(--map-widget-radius);
     color: #222;
     font-family: system-ui, sans-serif;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    box-shadow: var(--map-widget-shadow);
 }
 #globe-basemap-toggle {
     display: block;
-    width: 36px; height: 36px;
-    background: #fff url('https://unpkg.com/leaflet@1.9.4/dist/images/layers.png') no-repeat center center;
+    width: var(--map-widget-size); height: var(--map-widget-size);
+    background: var(--map-widget-bg) url('https://unpkg.com/leaflet@1.9.4/dist/images/layers.png') no-repeat center center;
     background-size: 26px 26px;
     border: 0; cursor: pointer;
 }
@@ -1094,22 +1119,23 @@ body.about-tab .detail-window {
    widget is in the same spot no matter which view is active.
    Sits to the left of the basemap selector (which lives at
    right:10px on the Globe and inside Leaflet's topright stack
-   on the Map). Hover-to-open mirrors the Globe basemap picker. */
+   on the Map). Hover-to-open mirrors the Globe basemap picker.
+   Visual shell uses the shared --map-widget-* tokens so Map and
+   Globe stay in lockstep. */
 .colormap-picker {
     position: absolute; top: 10px; right: 56px; z-index: 1000;
-    background: #fff;
-    border: 2px solid rgba(0,0,0,0.2);
-    border-radius: 4px;
+    background: var(--map-widget-bg);
+    border-radius: var(--map-widget-radius);
     color: #222;
     font-family: system-ui, sans-serif;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    box-shadow: var(--map-widget-shadow);
 }
 .colormap-picker-toggle {
     display: block;
-    width: 36px; height: 36px;
-    background: #fff;
+    width: var(--map-widget-size); height: var(--map-widget-size);
+    background: var(--map-widget-bg);
     border: 0; cursor: pointer;
-    font-size: 20px; line-height: 36px; text-align: center;
+    font-size: 20px; line-height: var(--map-widget-size); text-align: center;
     padding: 0;
 }
 .colormap-picker:hover .colormap-picker-toggle,
@@ -1127,16 +1153,26 @@ body.about-tab .detail-window {
     margin-right: 6px; vertical-align: middle;
 }
 
-/* Force Leaflet's layers-toggle to the same 36px the custom
-   Globe basemap toggle and the colormap pickers use. Leaflet
-   bumps to 44px when it detects a touch-capable device (incl.
-   some non-touch macOS browsers that report touch). Source
-   order: this rule comes after Leaflet's CDN stylesheet so it
-   wins via the cascade. */
+/* Pin Leaflet's touch-mode layer control back to its non-touch look.
+   Leaflet flags Safari/macOS as touch and bumps the toggle to 44px
+   AND adds a 2px outer border — neither of which the Globe's custom
+   controls do, so the trio would visually diverge between Map and
+   Globe (and even between Safari and Chrome on the Map). Reverting
+   to the plain 36px / no-border Leaflet look means the custom
+   .colormap-picker and #globe-basemap-control can match Leaflet
+   with zero extra styling (just bg/radius/shadow tokens above).
+   Source order: style.css is loaded AFTER leaflet.css in index.html
+   so these overrides win the cascade.
+   If you change widget sizing/colors, update the tokens in :root —
+   NOT here. See the SHARED WIDGET SHELL block at the top of this file. */
+.leaflet-touch .leaflet-control-layers {
+    border: none;
+    box-shadow: var(--map-widget-shadow);
+}
 .leaflet-touch .leaflet-control-layers-toggle,
 .leaflet-control-layers-toggle {
-    width: 36px;
-    height: 36px;
+    width: var(--map-widget-size);
+    height: var(--map-widget-size);
 }
 
 /* Globe markers — primary (active) and secondary (other open windows)
