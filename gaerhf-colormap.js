@@ -21,7 +21,6 @@ const COLOR_MAX_DATE = 1500;
 
 // ── Log-threshold scaling ────────────────────────────────────────────────
 let LOG_SCALE_THRESHOLD   = -4000;   // mutable; Ctrl+Shift+L slider writes here
-const LOG_SCALE_FACTOR     = 4;
 const LOG_REGION_PROPORTION = 0.15;
 
 // Maps a date to [0,1]. Hybrid log-then-linear: dates older than the
@@ -57,22 +56,18 @@ function dateToScale(date, minDate, maxDate) {
             }
             let normalized = (logVal - logMin) / denom;
             normalized = Math.max(0, Math.min(1, normalized));
-            return Math.pow(normalized, LOG_SCALE_FACTOR);
+            return normalized;
         }
 
         if (d < LOG_SCALE_THRESHOLD) {
             const logMin = Math.log(Math.abs(minN - LOG_SCALE_THRESHOLD) + 1);
-            const logMax = Math.log(1);
             const logVal = Math.log(Math.abs(d - LOG_SCALE_THRESHOLD) + 1);
-            const denom  = (logMax - logMin);
-            if (!isFinite(denom) || denom === 0) {
-                const fallback = Math.max(0, Math.min(1, (d - minN) / (LOG_SCALE_THRESHOLD - minN)));
-                return Math.pow(fallback, LOG_SCALE_FACTOR) * LOG_REGION_PROPORTION;
+            if (!isFinite(logMin) || logMin <= 0) {
+                return Math.max(0, Math.min(1, (d - minN) / (LOG_SCALE_THRESHOLD - minN))) * LOG_REGION_PROPORTION;
             }
-            let normalized = (logVal - logMin) / denom;
+            let normalized = (logMin - logVal) / logMin;
             normalized = Math.max(0, Math.min(1, normalized));
-            const compressed = Math.pow(normalized, LOG_SCALE_FACTOR);
-            return compressed * LOG_REGION_PROPORTION;
+            return normalized * LOG_REGION_PROPORTION;
         } else {
             const linearMin = LOG_SCALE_THRESHOLD;
             const linearMax = maxN;
@@ -88,6 +83,7 @@ function setLogScaleThreshold(v) {
     const n = Number(v);
     if (!Number.isFinite(n) || n === LOG_SCALE_THRESHOLD) return;
     LOG_SCALE_THRESHOLD = n;
+    document.dispatchEvent(new CustomEvent('gaerhf:threshold-value-changed', { detail: { value: n } }));
     _notifyColormapChange();
 }
 

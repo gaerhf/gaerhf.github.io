@@ -39,6 +39,17 @@ function getFigureLatLng(f) {
     return f.representativeLatLongPoint || [0, 0];
 }
 
+function getFilteredGlobeFigures() {
+    const ids = Array.isArray(currentSortedIndex) ? currentSortedIndex : [];
+    return ids
+        .map(id => figuresDict[id])
+        .filter(f => {
+            if (!f) return false;
+            const ll = getFigureLatLng(f);
+            return Array.isArray(ll) && ll.length === 2 && !ll.some(isNaN);
+        });
+}
+
 // getFigureColorDate() (shared, from gaerhf-colormap.js) replaces the
 // former local getGlobeMidDate() — both views now color by midpoint of
 // earliest/latest, falling back to :date / :approximateDate.
@@ -187,7 +198,7 @@ function getVisibleGlobeFigureKeys() {
     const camNorm    = camera.position.clone().normalize();
 
     const visible = [];
-    Object.values(figuresDict).forEach(f => {
+    getFilteredGlobeFigures().forEach(f => {
         const [lat, lng] = getFigureLatLng(f);
         if (lat == null || lng == null || isNaN(lat) || isNaN(lng)) return;
 
@@ -210,15 +221,35 @@ function getVisibleGlobeFigureKeys() {
         : visible;
 }
 
+function syncGlobeDataToCurrentSelection() {
+    if (!globeInstance) return;
+
+    const figures = getFilteredGlobeFigures();
+    const visibleIds = new Set(figures.map(f => f.id));
+
+    markerElements.forEach((_, figId) => {
+        if (!visibleIds.has(figId)) markerElements.delete(figId);
+    });
+
+    globeInstance.htmlElementsData(figures);
+
+    if (currentFigureId && !visibleIds.has(currentFigureId)) {
+        highlightGlobeFigure(null);
+    } else if (currentFigureId) {
+        highlightGlobeFigure(currentFigureId);
+    }
+
+    if (currentKeywordHighlightIds && currentKeywordHighlightIds.length) {
+        applyGlobeKeywordHighlights(currentKeywordHighlightIds);
+    }
+}
+
 // ── Globe init (lazy — called once on first tab activation) ───────────────────
 
 function initGlobe() {
     if (globeInstance) return;
 
-    const figures = Object.values(figuresDict).filter(f => {
-        const ll = getFigureLatLng(f);
-        return Array.isArray(ll) && ll.length === 2 && !ll.some(isNaN);
-    });
+    const figures = getFilteredGlobeFigures();
 
     // Compute starting POV: center on current figure if there is one,
     // otherwise leave the globe at globe.gl's default (lat:0, lng:0).
@@ -373,6 +404,8 @@ function initGlobe() {
 
     // Apply any pre-existing highlight state. The initial POV was already set
     // above (before first paint) so we don't pan again here.
+    syncGlobeDataToCurrentSelection();
+
     if (currentFigureId) highlightGlobeFigure(currentFigureId);
     if (currentKeywordHighlightIds && currentKeywordHighlightIds.length) {
         applyGlobeKeywordHighlights(currentKeywordHighlightIds);

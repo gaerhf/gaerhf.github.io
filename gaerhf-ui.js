@@ -51,7 +51,137 @@ let leafletMarkers = {}; // Place this at the top level
 
 let thresholdDebounceTimer = null;
 let isShiftKeyDown = false;
+let isTimescaleThumbDragging = false;
 let currentKeywordHighlightIds = [];
+let selectedEarliestYear = minYear;
+let selectedLatestYear = maxYear;
+let dateRangeApplyInFlight = false;
+let dateRangeApplyTimer = null;
+let pendingDateRangeApply = null;
+let dateRangeApplyNeedsRerun = false;
+let hasAutoOpenedInitialFigure = false;
+let timescaleDragPopupState = {
+    active: false,
+    showStart: false,
+    showEnd: false,
+    startYear: null,
+    endYear: null,
+};
+
+function normalizeDateRange(startYear, endYear) {
+    const start = Number(startYear);
+    const end = Number(endYear);
+    if (!isFinite(start) || !isFinite(end)) {
+        return [minYear, maxYear];
+    }
+    return start <= end ? [start, end] : [end, start];
+}
+
+function scaleToDate(scaleValue, minDate, maxDate) {
+    const minN = Number(minDate);
+    const maxN = Number(maxDate);
+    const target = Math.max(0, Math.min(1, Number(scaleValue)));
+    if (!isFinite(minN) || !isFinite(maxN) || minN === maxN) {
+        return minYear;
+    }
+
+    if (target <= 0) return minN;
+    if (target >= 1) return maxN;
+
+    let lo = minN;
+    let hi = maxN;
+    for (let i = 0; i < 36; i++) {
+        const mid = (lo + hi) / 2;
+        const midScale = timelineScale(mid, minN, maxN);
+        if (!isFinite(midScale)) {
+            break;
+        }
+        if (midScale < target) {
+            lo = mid;
+        } else {
+            hi = mid;
+        }
+    }
+    return Math.round((lo + hi) / 2);
+}
+
+function getTimescaleSideMarginPx(scaleDiv) {
+    if (!scaleDiv) return 20;
+    try {
+        const raw = getComputedStyle(scaleDiv).getPropertyValue('--timescale-side-margin');
+        const parsed = Number.parseFloat(raw);
+        if (Number.isFinite(parsed) && parsed >= 0) return parsed;
+    } catch (e) {
+        // ignore and use default
+    }
+    return 20;
+}
+
+async function applySelectedDateRange(startYear, endYear) {
+    const [normalizedStart, normalizedEnd] = normalizeDateRange(startYear, endYear);
+    selectedEarliestYear = normalizedStart;
+    selectedLatestYear = normalizedEnd;
+    await loadAndDisplayFigures();
+}
+
+function scheduleDateRangeApply() {
+    pendingDateRangeApply = [selectedEarliestYear, selectedLatestYear];
+
+    if (dateRangeApplyTimer) {
+        clearTimeout(dateRangeApplyTimer);
+    }
+
+    dateRangeApplyTimer = setTimeout(async () => {
+        dateRangeApplyTimer = null;
+
+        if (dateRangeApplyInFlight) {
+            dateRangeApplyNeedsRerun = true;
+            return;
+        }
+
+        const payload = pendingDateRangeApply;
+        if (!payload) return;
+
+        pendingDateRangeApply = null;
+        dateRangeApplyInFlight = true;
+        await applySelectedDateRange(payload[0], payload[1]);
+        dateRangeApplyInFlight = false;
+
+        if (dateRangeApplyNeedsRerun || pendingDateRangeApply) {
+            dateRangeApplyNeedsRerun = false;
+            scheduleDateRangeApply();
+        }
+    }, 100);
+}
+
+function flushDateRangeApplyNow() {
+    pendingDateRangeApply = [selectedEarliestYear, selectedLatestYear];
+
+    if (dateRangeApplyTimer) {
+        clearTimeout(dateRangeApplyTimer);
+        dateRangeApplyTimer = null;
+    }
+
+    if (dateRangeApplyInFlight) {
+        dateRangeApplyNeedsRerun = true;
+        return;
+    }
+
+    (async () => {
+        const payload = pendingDateRangeApply;
+        if (!payload) return;
+
+        pendingDateRangeApply = null;
+        dateRangeApplyInFlight = true;
+        await applySelectedDateRange(payload[0], payload[1]);
+        dateRangeApplyInFlight = false;
+
+        if (dateRangeApplyNeedsRerun || pendingDateRangeApply) {
+            dateRangeApplyNeedsRerun = false;
+            scheduleDateRangeApply();
+        }
+    })();
+}
 
 // Open a marker callout using a Leaflet Tooltip (direction-aware, no auto-pan).
 // 'top' when the marker has room above; 'bottom' when near the map's top edge.
@@ -309,6 +439,8 @@ function filterFiguresByDateRange(startYear, endYear) {
         return [];
     }
 
+    const [rangeStart, rangeEnd] = normalizeDateRange(startYear, endYear);
+
     return Object.keys(figuresDict).filter(figureId => {
         const figure = figuresDict[figureId];
         if (!figure) {
@@ -319,16 +451,22 @@ function filterFiguresByDateRange(startYear, endYear) {
         const figureStartDate = getFigureStart(figure);
         const figureEndDate = getFigureEnd(figure);
 
-        if (figureStartDate === undefined && figureEndDate === undefined) {
+        if (figureStartDate == null && figureEndDate == null) {
             console.warn("Figure has no valid dates:", figureId, figure);
             return false;
         }
 
-        return (
-            (figureStartDate >= startYear && figureStartDate <= endYear) || // Start date is within range
-            (figureEndDate >= startYear && figureEndDate <= endYear) ||     // End date is within range
-            (figureStartDate <= startYear && figureEndDate >= endYear)      // Range overlaps the selected range
-        );
+        const resolvedStart = Number(figureStartDate ?? figureEndDate);
+        const resolvedEnd = Number(figureEndDate ?? figureStartDate);
+        if (!isFinite(resolvedStart) || !isFinite(resolvedEnd)) {
+            return false;
+        }
+
+        const effectiveStart = Math.min(resolvedStart, resolvedEnd);
+        const effectiveEnd = Math.max(resolvedStart, resolvedEnd);
+
+        // Overlap semantics: figure's time span intersects selected span.
+        return effectiveEnd >= rangeStart && effectiveStart <= rangeEnd;
     });
 }
 
@@ -434,106 +572,13 @@ async function renderFiguresAsList(figuresArray) {
     // --- End block ---
 }
 
-// Timeline display settings — the log-threshold pipeline now lives in
-// gaerhf-colormap.js. This forwarder keeps the many timeline-positioning
-// call sites (renderFiguresAsTimeline, renderFiguresAsTimescale, etc.)
+// Timescale display settings — the log-threshold pipeline now lives in
+// gaerhf-colormap.js. This forwarder keeps the many scale-positioning
+// call sites (renderFiguresAsTimescale, etc.)
 // working unchanged. The Ctrl+Shift+L slider writes its value through
 // setLogScaleThreshold() in the shared module.
 function timelineScale(date, minDate, maxDate) {
     return dateToScale(date, minDate, maxDate);
-}
-
-async function renderFiguresAsTimeline(figuresDisplayIndex) {
-    const timelineContainer = document.getElementById('figure-timeline');
-    timelineContainer.innerHTML = ''; // Clear any existing content
-
-    if (!figuresDisplayIndex || figuresDisplayIndex.length === 0) {
-        timelineContainer.textContent = 'No human figures or groups found.';
-        return;
-    }
-
-    const [earliestDate, latestDate] = getTimescaleRange(figuresDisplayIndex);
-
-    if (earliestDate === latestDate) {
-        timelineContainer.textContent = 'No valid dates found for the selected range.';
-        return;
-    }
-
-    // Get the width of the timeline container for label positioning
-    const containerWidth = timelineContainer.offsetWidth;
-
-    let hoverTimeout = null;
-
-    figuresDisplayIndex.forEach((figureId, index) => {
-        const figure = figuresDict[figureId];
-        const startDate = getFigureStart(figure);
-        const endDate = getFigureEnd(figure);
-
-        if (startDate === null || endDate === null) {
-            return; // Skip figures with no valid dates
-        }
-
-        // Scale both start and end to [0, 1]
-        const scaledStart = timelineScale(startDate, earliestDate, latestDate);
-        const scaledEnd = timelineScale(endDate, earliestDate, latestDate);
-
-        // Convert to percent for CSS
-        const startPercent = scaledStart * 100;
-        const endPercent = scaledEnd * 100;
-
-        const figureDiv = document.createElement('div');
-        figureDiv.setAttribute('id', `timeline-${figureId}`);
-        figureDiv.classList.add('timeline-figure');
-        figureDiv.style.position = 'absolute';
-        figureDiv.style.left = `${startPercent}%`;
-        figureDiv.style.width = `${Math.max(endPercent - startPercent, 0.5)}%`;
-        figureDiv.style.top = `${index * 20}px`; // Use 20px or more for better spacing
-        figureDiv.title = `${figure.label || figure.id}: ${formatDateForDisplay(startDate)} - ${formatDateForDisplay(endDate)}`;
-        figureDiv.addEventListener('click', () => {
-            showFigureDetails(figureId);
-        });
-        figureDiv.dataset.figureId = figureId;
-
-        figureDiv.addEventListener('mouseover', () => {
-            hoverTimeout = setTimeout(() => {
-                document.querySelectorAll('.timeline-figure.highlighted').forEach(div => {
-                    div.classList.remove('highlighted');
-                });
-                showFigureDetails(figureId);
-            }, 250);
-        });
-
-        figureDiv.addEventListener('mouseout', () => {
-            clearTimeout(hoverTimeout);
-        });
-
-        // Add country label if available
-        if (figure.inModernCountry) {
-            const labelDiv = document.createElement('div');
-            labelDiv.className = 'timeline-country-label';
-            labelDiv.textContent = figure.inModernCountry;
-
-            // Calculate the pixel position of the bar's right edge
-            // Use getBoundingClientRect after appending, or estimate based on percent
-            // We'll estimate here for simplicity
-            // If the bar is in the right 25% of the timeline, put label to the left, else to the right
-            const barRightPercent = endPercent;
-            if (barRightPercent > 75) {
-                labelDiv.classList.add('left');
-            } else {
-                labelDiv.classList.add('right');
-            }
-            figureDiv.appendChild(labelDiv);
-        }
-
-        timelineContainer.appendChild(figureDiv);
-    });
-
-    // Optional: set container to relative positioning for absolute bars
-    timelineContainer.style.position = 'relative';
-    timelineContainer.style.height = `${figuresDisplayIndex.length * 20 + 20}px`;
-
-    // (tick rendering belongs in the timescale renderer; nothing more to do here)
 }
 
 function initializeMap() {
@@ -664,9 +709,9 @@ function renderFiguresOnMap(figuresArray) {
     // and remove markers that are no longer needed. This avoids losing border/boxShadow highlights.
 
     // Color normalization uses the fixed color domain (matches the
-    // timeline slider), so a marker's color is stable regardless of the
+    // timescale slider), so a marker's color is stable regardless of the
     // active date filter. getTimescaleRange() is still used by the
-    // timeline-overlay code paths via its other callers.
+    // timescale-overlay code paths via its other callers.
     const ramp = getActiveColormap();
 
     // Update existing markers in-place where possible (to preserve highlight borders/shadows),
@@ -780,6 +825,41 @@ async function showFigureDetails(figureId, { markAsRecent = false } = {}) {
     renderFigureHeader(targetWindow.querySelector('.detail-label'), figure);
     renderFigureMetadata(targetWindow.querySelector('.detail-info'), figure);
     await renderFigureImage(targetWindow.querySelector('.detail-image'), figure);
+    updateDetailWindowRangeState();
+    try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
+}
+
+function updateDetailWindowRangeState() {
+    const inRangeIds = new Set(Array.isArray(currentSortedIndex) ? currentSortedIndex : []);
+    document.querySelectorAll('.detail-window[data-figure-id]').forEach((win) => {
+        const figureId = win.dataset.figureId;
+        const outOfRange = !figureId || !inRangeIds.has(figureId);
+        win.classList.toggle('out-of-range', outOfRange);
+    });
+}
+
+function getTopmostOpenDetailWindow() {
+    const windows = Array.from(document.querySelectorAll('.detail-window[data-figure-id]'));
+    if (windows.length === 0) return null;
+    return windows.reduce((best, candidate) => {
+        const bestZ = Number(best.style.zIndex || 0);
+        const candidateZ = Number(candidate.style.zIndex || 0);
+        return candidateZ > bestZ ? candidate : best;
+    }, windows[0]);
+}
+
+function syncActiveFigureFromOpenWindows() {
+    const nextWindow = getTopmostOpenDetailWindow();
+    if (nextWindow) {
+        setActiveWindow(nextWindow);
+        return;
+    }
+
+    currentFigureId = null;
+    highlightListFigure(null);
+    highlightMapFigure(null);
+    highlightGalleryFigure(null);
+    if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(null);
     try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
 }
 
@@ -791,9 +871,7 @@ function createDetailWindow(figureId) {
 
     const win = createDetailWindowShell({
         onClose: () => {
-            if (!getActiveWindow()) currentFigureId = null;
-            highlightMapFigure(currentFigureId);
-            if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(currentFigureId);
+            syncActiveFigureFromOpenWindows();
         },
     });
 
@@ -820,7 +898,6 @@ function setActiveWindow(win) {
             history.replaceState(null, '', `#${figId}`);
         }
         highlightListFigure(figId);
-        highlightTimelineFigure(figId);
         highlightMapFigure(figId);
         highlightGalleryFigure(figId);
         if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(figId);
@@ -828,14 +905,9 @@ function setActiveWindow(win) {
     }
 }
 
-async function loadAndDisplayFigures($rdf) {
-    const filteredFiguresIndex = filterFiguresByDateRange(minYear, maxYear);
+async function loadAndDisplayFigures() {
+    const filteredFiguresIndex = filterFiguresByDateRange(selectedEarliestYear, selectedLatestYear);
     console.log("Filtered figures count:", filteredFiguresIndex.length);
-
-    if (filteredFiguresIndex.length === 0) {
-        console.warn("No figures found in the specified date range.");
-        return;
-    }
 
     const sortedFiguresIndex = sortFigures(filteredFiguresIndex, 'date');
     console.log("Sorted figures count:", sortedFiguresIndex.length);
@@ -844,13 +916,15 @@ async function loadAndDisplayFigures($rdf) {
 
     renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
     await renderFiguresAsList(currentSortedIndex);
-    await renderFiguresAsTimeline(currentSortedIndex);
 
     setTimeout(() => {
         if (leafletMap) {
             leafletMap.invalidateSize();
         }
         renderFiguresOnMap(currentSortedIndex);
+        if (typeof syncGlobeDataToCurrentSelection === 'function') {
+            syncGlobeDataToCurrentSelection();
+        }
         document.body.classList.add('gallery-visible');
         renderGallery();
 
@@ -865,18 +939,38 @@ async function loadAndDisplayFigures($rdf) {
     }, 200);
     renderKeywordSearch();
 
+    updateDetailWindowRangeState();
+
+    const openWindowIds = getOpenWindowFigureIds();
+    if (openWindowIds.length > 0) {
+        return;
+    }
+
+    if (sortedFiguresIndex.length === 0) {
+        hasAutoOpenedInitialFigure = true;
+        return;
+    }
+
+    if (hasAutoOpenedInitialFigure) {
+        return;
+    }
+
     // Default display logic: respect URL hash if present, otherwise default to first item
     let initialFigureId = sortedFiguresIndex.length > 0 ? sortedFiguresIndex[0] : null;
+    if (currentFigureId && sortedFiguresIndex.includes(currentFigureId)) {
+        initialFigureId = currentFigureId;
+    }
     const hash = window.location.hash;
     if (hash && hash.length > 1) {
         const figureId = hash.substring(1);
-        if (figuresDict[figureId]) {
+        if (figuresDict[figureId] && sortedFiguresIndex.includes(figureId)) {
             initialFigureId = figureId;
         }
     }
 
     if (initialFigureId) {
         showFigureDetails(initialFigureId);
+        hasAutoOpenedInitialFigure = true;
     }
 }
 
@@ -907,7 +1001,7 @@ async function initializeStore($rdf) {
 (async function initializeAndLoadFigures() {
     if (await initializeStore($rdf)) {
         figuresDict = await buildFiguresInfoDict($rdf);
-        await loadAndDisplayFigures($rdf);
+        await loadAndDisplayFigures();
     }
 })();
 
@@ -939,15 +1033,10 @@ document.addEventListener('keydown', (event) => {
         let navigationSet = [];
 
         // Visible-figure ids for the active spatial view, or null if the
-        // current tab has no spatial filter (list/timeline).
+        // current tab has no spatial filter (list/about).
         let visibleFigures = null;
-        if (currentTab === 'figure-globe' && typeof getVisibleGlobeFigureKeys === 'function') {
-            visibleFigures = getVisibleGlobeFigureKeys(); // already sorted by date
-        } else if (currentTab === 'figure-map') {
-            visibleFigures = sortFigures(
-                getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) || [],
-                'date'
-            );
+        if (currentTab === 'figure-globe' || currentTab === 'figure-map') {
+            visibleFigures = getVisibleInRangeFigureIds();
         }
 
         if (currentKeywordHighlightIds && currentKeywordHighlightIds.length > 0) {
@@ -964,7 +1053,7 @@ document.addEventListener('keydown', (event) => {
                     navigationSet = keywordSet; // fallback to all keyword highlights if no visible figures
                 }
             } else {
-                // On other tabs (list, timeline), use all keyword figures
+                // On non-spatial tabs (list/about), use all keyword figures
                 navigationSet = keywordSet;
             }
         } else {
@@ -1000,8 +1089,6 @@ document.addEventListener('keydown', (event) => {
         const targetFigureId = navigationSet[targetIndex];
 
         showFigureDetails(targetFigureId);
-        highlightTimelineFigure(targetFigureId);
-        scrollToTimelineFigure(targetFigureId);
         highlightListFigure(targetFigureId);
         scrollToListFigure(targetFigureId);
         highlightMapFigure(targetFigureId);
@@ -1073,9 +1160,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tabName === 'figure-list' && currentFigureId) {
                 scrollToListFigure(currentFigureId);
                 highlightListFigure(currentFigureId);
-            } else if (tabName === 'figure-timeline' && currentFigureId) {
-                scrollToTimelineFigure(currentFigureId);
-                highlightTimelineFigure(currentFigureId);
             } else if (tabName === 'figure-map') {
                 setTimeout(() => {
                     if (leafletMap) leafletMap.invalidateSize();
@@ -1229,6 +1313,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateThresholdControlPosition();
             }
         });
+        document.addEventListener('gaerhf:threshold-value-changed', (evt) => {
+            const value = Number(evt && evt.detail && evt.detail.value);
+            if (!Number.isFinite(value)) return;
+            thresholdSlider.value = String(value);
+            thresholdValue.textContent = formatDateForDisplay(value);
+        });
         tabButtons.forEach(tabButton => {
             tabButton.addEventListener('click', () => {
                 requestAnimationFrame(updateThresholdControlPosition);
@@ -1266,7 +1356,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // (duplicate old listener removed)
 
-        // Live update while sliding; debounce final action (rerender timeline/map) when user stops.
+        // Live update while sliding; debounce final action (rerender map) when user stops.
         // setLogScaleThreshold() fires onColormapChange listeners so the Map markers AND the
         // Globe (markers + legend) re-render in response.
         thresholdSlider.addEventListener('input', (e) => {
@@ -1278,9 +1368,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (thresholdDebounceTimer) clearTimeout(thresholdDebounceTimer);
             thresholdDebounceTimer = setTimeout(() => {
-                if (currentTab === 'figure-timeline') {
-                    renderFiguresAsTimeline(currentSortedIndex);
-                }
                 if (currentTab === 'figure-map') {
                     renderFiguresOnMap(currentSortedIndex);
                 }
@@ -1295,7 +1382,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 thresholdValue.textContent = formatDateForDisplay(LOG_SCALE_THRESHOLD);
             }
             if (thresholdDebounceTimer) { clearTimeout(thresholdDebounceTimer); thresholdDebounceTimer = null; }
-            if (currentTab === 'figure-timeline') renderFiguresAsTimeline(currentSortedIndex);
             if (currentTab === 'figure-map') renderFiguresOnMap(currentSortedIndex);
         });
     } catch (err) {
@@ -1352,25 +1438,6 @@ function highlightListFigure(figureId) {
         div.classList.remove('highlighted');
     });
     const currentDiv = document.getElementById(`list-${figureId}`);
-    if (currentDiv) {
-        currentDiv.classList.add('highlighted');
-    }
-}
-
-function scrollToTimelineFigure(figureId) {
-    const currentDiv = document.getElementById(`timeline-${figureId}`);
-    if (currentDiv) {
-        currentDiv.scrollIntoView({ behavior: 'auto', block: 'center' });
-    } else {
-        console.warn(`Element with ID timeline-${figureId} not found.`);
-    }
-}
-
-function highlightTimelineFigure(figureId) {
-    document.querySelectorAll('.timeline-figure.highlighted').forEach(div => {
-        div.classList.remove('highlighted');
-    });
-    const currentDiv = document.getElementById(`timeline-${figureId}`);
     if (currentDiv) {
         currentDiv.classList.add('highlighted');
     }
@@ -1435,7 +1502,9 @@ function highlightMapFigure(figureId) {
             }
         }
         marker.setZIndexOffset(2000);
-        if (isShiftKeyDown && leafletMap) {
+        // Shift can be used for timescale range translation; suppress
+        // map panning side effects while thumbs are being dragged.
+        if (isShiftKeyDown && !isTimescaleThumbDragging && leafletMap) {
             leafletMap.panTo(marker.getLatLng());
         }
     }
@@ -1552,9 +1621,6 @@ function startPlayback() {
     playIndex = startIndex;
 
     showFigureDetails(figures[playIndex]);
-    highlightTimelineFigure(figures[playIndex]);
-    scrollToTimelineFigure(figures[playIndex]);
-
     highlightListFigure(figures[playIndex]);
     scrollToListFigure(figures[playIndex]);
 
@@ -1567,9 +1633,6 @@ function startPlayback() {
             return;
         }
         showFigureDetails(figures[playIndex]);
-        highlightTimelineFigure(figures[playIndex]);
-        scrollToTimelineFigure(figures[playIndex]);
-
         highlightListFigure(figures[playIndex]);
         scrollToListFigure(figures[playIndex]);
 
@@ -1587,10 +1650,6 @@ function stopPlayback() {
         clearInterval(playInterval);
         playInterval = null;
     }
-    // Remove highlight when stopped
-    document.querySelectorAll('.timeline-figure.highlighted').forEach(div => {
-        div.classList.remove('highlighted');
-    });
 }
 
 window.addEventListener('hashchange', () => {
@@ -1865,19 +1924,33 @@ function renderKeywordSearch() {
     }
 }
 
+function getVisibleInRangeFigureIds() {
+    const inRange = new Set(Array.isArray(currentSortedIndex) ? currentSortedIndex : []);
+    let visible = [];
+
+    if (currentTab === 'figure-globe') {
+        visible = (typeof getVisibleGlobeFigureKeys === 'function')
+            ? (getVisibleGlobeFigureKeys() || [])
+            : [];
+    } else if (currentTab === 'figure-map') {
+        visible = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) || [];
+    }
+
+    if (!Array.isArray(visible) || visible.length === 0) return [];
+
+    const ids = visible.filter(id => inRange.has(id));
+    return sortFigures(Array.from(new Set(ids)), 'date');
+}
+
 function renderGallery() {
 
     // Both tabs show only currently-visible markers.
     //  - Map: markers within the Leaflet viewport bounds.
     //  - Globe: markers within the camera-facing spherical cap (see
     //    getVisibleGlobeFigureKeys in gaerhf-globe.js).
-    let figureIds;
-    if (currentTab === 'figure-globe') {
-        figureIds = (typeof getVisibleGlobeFigureKeys === 'function')
-            ? getVisibleGlobeFigureKeys()
-            : (currentSortedIndex || []);
-    } else {
-        figureIds = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers);
+    let figureIds = [];
+    if (currentTab === 'figure-globe' || currentTab === 'figure-map') {
+        figureIds = getVisibleInRangeFigureIds();
     }
 
     galleryDiv = document.getElementById('gallery');
@@ -1933,10 +2006,8 @@ function renderGallery() {
 
 function openListModal() {
     let ids;
-    if (currentTab === 'figure-globe' && typeof getVisibleGlobeFigureKeys === 'function') {
-        ids = getVisibleGlobeFigureKeys();
-    } else if (leafletMap) {
-        ids = sortFigures(getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers), 'date');
+    if (currentTab === 'figure-globe' || currentTab === 'figure-map') {
+        ids = getVisibleInRangeFigureIds();
     } else {
         ids = currentSortedIndex || [];
     }
@@ -1979,6 +2050,286 @@ function closeListModal() {
     if (m) m.hidden = true;
 }
 
+function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
+    if (!scaleDiv) return;
+
+    const [currentStart, currentEnd] = normalizeDateRange(selectedEarliestYear, selectedLatestYear);
+    selectedEarliestYear = Math.max(minN, Math.min(maxN, currentStart));
+    selectedLatestYear = Math.max(minN, Math.min(maxN, currentEnd));
+
+    const startPct = Math.max(0, Math.min(100, timelineScale(selectedEarliestYear, minN, maxN) * 100));
+    const endPct = Math.max(0, Math.min(100, timelineScale(selectedLatestYear, minN, maxN) * 100));
+    const sideMargin = getTimescaleSideMarginPx(scaleDiv);
+    const scaleWidth = Math.max(scaleDiv.clientWidth, 1);
+    const usableWidth = Math.max(scaleWidth - (sideMargin * 2), 1);
+    const startX = sideMargin + (startPct / 100) * usableWidth;
+    const endX = sideMargin + (endPct / 100) * usableWidth;
+
+    const selection = document.createElement('div');
+    selection.className = 'timescale-range-selection';
+    selection.style.left = `${Math.min(startX, endX)}px`;
+    selection.style.width = `${Math.max(endX - startX, 0)}px`;
+    selection.title = `${formatDateForDisplay(selectedEarliestYear)} - ${formatDateForDisplay(selectedLatestYear)}`;
+    scaleDiv.appendChild(selection);
+
+    const startThumb = document.createElement('div');
+    startThumb.className = 'timescale-range-thumb';
+    startThumb.style.left = `${startX}px`;
+    startThumb.style.transform = 'translateX(-50%)';
+    startThumb.setAttribute('role', 'slider');
+    startThumb.setAttribute('aria-label', 'Earliest date filter');
+    startThumb.setAttribute('aria-valuemin', String(minN));
+    startThumb.setAttribute('aria-valuemax', String(maxN));
+    startThumb.setAttribute('aria-valuenow', String(selectedEarliestYear));
+    startThumb.setAttribute('aria-valuetext', formatDateForDisplay(selectedEarliestYear));
+    scaleDiv.appendChild(startThumb);
+
+    const endThumb = document.createElement('div');
+    endThumb.className = 'timescale-range-thumb';
+    endThumb.style.left = `${endX}px`;
+    endThumb.style.transform = 'translateX(-50%)';
+    endThumb.setAttribute('role', 'slider');
+    endThumb.setAttribute('aria-label', 'Latest date filter');
+    endThumb.setAttribute('aria-valuemin', String(minN));
+    endThumb.setAttribute('aria-valuemax', String(maxN));
+    endThumb.setAttribute('aria-valuenow', String(selectedLatestYear));
+    endThumb.setAttribute('aria-valuetext', formatDateForDisplay(selectedLatestYear));
+    scaleDiv.appendChild(endThumb);
+
+    const renderThumbPopup = (x, year) => {
+        const popup = document.createElement('div');
+        popup.className = 'timescale-thumb-popup';
+        popup.style.left = `${x}px`;
+        popup.textContent = formatDateForDisplay(year);
+        scaleDiv.appendChild(popup);
+    };
+
+    const renderRangeDistancePopup = (startXPos, endXPos, startYear, endYear) => {
+        const popup = document.createElement('div');
+        popup.className = 'timescale-range-distance-popup';
+        popup.style.left = `${(startXPos + endXPos) / 2}px`;
+        const distanceYears = Math.abs(Number(endYear) - Number(startYear));
+        popup.textContent = `${Math.round(distanceYears).toLocaleString()} years`;
+        scaleDiv.appendChild(popup);
+    };
+
+    const clearHoverPopup = (bound) => {
+        const id = `timescale-thumb-popup-hover-${bound}`;
+        const existing = document.getElementById(id);
+        if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+    };
+
+    const showHoverPopup = (bound) => {
+        if (timescaleDragPopupState.active) return;
+        clearHoverPopup(bound);
+        const popup = document.createElement('div');
+        popup.id = `timescale-thumb-popup-hover-${bound}`;
+        popup.className = 'timescale-thumb-popup';
+        if (bound === 'start') {
+            popup.style.left = `${startX}px`;
+            popup.textContent = formatDateForDisplay(selectedEarliestYear);
+        } else {
+            popup.style.left = `${endX}px`;
+            popup.textContent = formatDateForDisplay(selectedLatestYear);
+        }
+        scaleDiv.appendChild(popup);
+    };
+
+    const parseManualYearInput = (rawValue) => {
+        if (rawValue == null) return null;
+        const trimmed = String(rawValue).trim();
+        if (!trimmed) return Number.NaN;
+
+        const normalized = trimmed.replace(/,/g, '').trim();
+        let valuePart = normalized;
+        let parsedYear;
+
+        if (/\bBCE\b$/i.test(normalized)) {
+            valuePart = normalized.replace(/\bBCE\b$/i, '').trim();
+            const n = Number(valuePart);
+            if (!Number.isFinite(n)) return Number.NaN;
+            parsedYear = -Math.abs(n);
+        } else if (/\bCE\b$/i.test(normalized)) {
+            valuePart = normalized.replace(/\bCE\b$/i, '').trim();
+            const n = Number(valuePart);
+            if (!Number.isFinite(n)) return Number.NaN;
+            parsedYear = Math.abs(n);
+        } else {
+            const n = Number(valuePart);
+            if (!Number.isFinite(n)) return Number.NaN;
+            parsedYear = n;
+        }
+
+        return Math.round(parsedYear);
+    };
+
+    const promptThumbYearInput = (bound) => {
+        const isStart = bound === 'start';
+        const currentYear = isStart ? selectedEarliestYear : selectedLatestYear;
+        const otherYear = isStart ? selectedLatestYear : selectedEarliestYear;
+        const whichLabel = isStart ? 'earliest' : 'latest';
+        const entered = window.prompt(
+            `Enter ${whichLabel} year (${Math.round(minN)} to ${Math.round(maxN)}). Use negative numbers for BCE or append BCE/CE.`,
+            String(Math.round(currentYear))
+        );
+        const parsedYear = parseManualYearInput(entered);
+        if (parsedYear === null) return;
+        if (!Number.isFinite(parsedYear)) {
+            window.alert('Enter a valid year, e.g. -12000, 12000 BCE, or 500 CE.');
+            return;
+        }
+        if (parsedYear < minN || parsedYear > maxN) {
+            window.alert(`Year must be between ${formatDateForDisplay(minN)} and ${formatDateForDisplay(maxN)}.`);
+            return;
+        }
+        if (isStart && parsedYear > otherYear) {
+            window.alert(`Earliest year cannot be later than ${formatDateForDisplay(otherYear)}.`);
+            return;
+        }
+        if (!isStart && parsedYear < otherYear) {
+            window.alert(`Latest year cannot be earlier than ${formatDateForDisplay(otherYear)}.`);
+            return;
+        }
+
+        if (isStart) selectedEarliestYear = parsedYear;
+        else selectedLatestYear = parsedYear;
+
+        timescaleDragPopupState.active = false;
+        timescaleDragPopupState.showStart = false;
+        timescaleDragPopupState.showEnd = false;
+        clearHoverPopup('start');
+        clearHoverPopup('end');
+        renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
+        flushDateRangeApplyNow();
+    };
+
+    if (timescaleDragPopupState.active) {
+        if (timescaleDragPopupState.showStart && Number.isFinite(timescaleDragPopupState.startYear)) {
+            renderThumbPopup(startX, timescaleDragPopupState.startYear);
+        }
+        if (timescaleDragPopupState.showEnd && Number.isFinite(timescaleDragPopupState.endYear)) {
+            renderThumbPopup(endX, timescaleDragPopupState.endYear);
+        }
+        if (Number.isFinite(timescaleDragPopupState.startYear) && Number.isFinite(timescaleDragPopupState.endYear)) {
+            renderRangeDistancePopup(startX, endX, timescaleDragPopupState.startYear, timescaleDragPopupState.endYear);
+        }
+    }
+
+    const dragThumb = (bound, event) => {
+        event.preventDefault();
+        isTimescaleThumbDragging = true;
+        clearHoverPopup('start');
+        clearHoverPopup('end');
+        const dragStartRatio = Math.max(0, Math.min(1, timelineScale(selectedEarliestYear, minN, maxN)));
+        const dragEndRatio = Math.max(0, Math.min(1, timelineScale(selectedLatestYear, minN, maxN)));
+        const dragSpanRatio = Math.max(0, dragEndRatio - dragStartRatio);
+        const rect0 = scaleDiv.getBoundingClientRect();
+        const pointerStartRatio = (event.clientX - rect0.left - sideMargin) / Math.max(rect0.width - sideMargin * 2, 1);
+
+        const move = (moveEvent) => {
+            const rect = scaleDiv.getBoundingClientRect();
+            if (!rect || rect.width <= 0) return;
+            const localX = moveEvent.clientX - rect.left;
+            const ratio = (localX - sideMargin) / Math.max(rect.width - (sideMargin * 2), 1);
+            const clampedRatio = Math.max(0, Math.min(1, ratio));
+
+            // Shift-drag: translate range by exact pointer delta from drag start.
+            // Physical pixel distance between thumbs stays constant; year span
+            // changes naturally as the range crosses log/linear regions.
+            if (moveEvent.shiftKey || event.shiftKey) {
+                const usableWidth = Math.max(rect.width - sideMargin * 2, 1);
+                const delta = (moveEvent.clientX - rect.left - sideMargin) / usableWidth - pointerStartRatio;
+                let startRatio = dragStartRatio + delta;
+                let endRatio   = dragEndRatio   + delta;
+
+                if (startRatio < 0) {
+                    endRatio += -startRatio;
+                    startRatio = 0;
+                }
+                if (endRatio > 1) {
+                    startRatio -= (endRatio - 1);
+                    endRatio = 1;
+                }
+
+                startRatio = Math.max(0, Math.min(1, startRatio));
+                endRatio = Math.max(0, Math.min(1, endRatio));
+
+                const translatedStartYear = scaleToDate(startRatio, minN, maxN);
+                const translatedEndYear = scaleToDate(endRatio, minN, maxN);
+                selectedEarliestYear = Math.min(translatedStartYear, translatedEndYear);
+                selectedLatestYear = Math.max(translatedStartYear, translatedEndYear);
+                timescaleDragPopupState.active = true;
+                timescaleDragPopupState.showStart = true;
+                timescaleDragPopupState.showEnd = true;
+                timescaleDragPopupState.startYear = selectedEarliestYear;
+                timescaleDragPopupState.endYear = selectedLatestYear;
+            } else {
+                const candidateYear = scaleToDate(clampedRatio, minN, maxN);
+                if (bound === 'start') {
+                    selectedEarliestYear = Math.min(candidateYear, selectedLatestYear);
+                    timescaleDragPopupState.active = true;
+                    timescaleDragPopupState.showStart = true;
+                    timescaleDragPopupState.showEnd = false;
+                    timescaleDragPopupState.startYear = selectedEarliestYear;
+                    timescaleDragPopupState.endYear = selectedLatestYear;
+                } else {
+                    selectedLatestYear = Math.max(candidateYear, selectedEarliestYear);
+                    timescaleDragPopupState.active = true;
+                    timescaleDragPopupState.showStart = false;
+                    timescaleDragPopupState.showEnd = true;
+                    timescaleDragPopupState.startYear = selectedEarliestYear;
+                    timescaleDragPopupState.endYear = selectedLatestYear;
+                }
+            }
+
+            renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
+            scheduleDateRangeApply();
+        };
+
+        const end = () => {
+            isTimescaleThumbDragging = false;
+            timescaleDragPopupState.active = false;
+            timescaleDragPopupState.showStart = false;
+            timescaleDragPopupState.showEnd = false;
+            window.removeEventListener('pointermove', move);
+            window.removeEventListener('pointerup', end);
+            renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
+            flushDateRangeApplyNow();
+        };
+
+        window.addEventListener('pointermove', move);
+        window.addEventListener('pointerup', end, { once: true });
+        window.addEventListener('pointercancel', end, { once: true });
+    };
+
+    startThumb.addEventListener('pointerdown', (event) => {
+        if (event.altKey) {
+            event.preventDefault();
+            event.stopPropagation();
+            promptThumbYearInput('start');
+            return;
+        }
+        dragThumb('start', event);
+    });
+    endThumb.addEventListener('pointerdown', (event) => {
+        if (event.altKey) {
+            event.preventDefault();
+            event.stopPropagation();
+            promptThumbYearInput('end');
+            return;
+        }
+        dragThumb('end', event);
+    });
+    startThumb.addEventListener('mouseenter', () => showHoverPopup('start'));
+    startThumb.addEventListener('mouseleave', () => clearHoverPopup('start'));
+    startThumb.addEventListener('focus', () => showHoverPopup('start'));
+    startThumb.addEventListener('blur', () => clearHoverPopup('start'));
+    endThumb.addEventListener('mouseenter', () => showHoverPopup('end'));
+    endThumb.addEventListener('mouseleave', () => clearHoverPopup('end'));
+    endThumb.addEventListener('focus', () => showHoverPopup('end'));
+    endThumb.addEventListener('blur', () => clearHoverPopup('end'));
+}
+
 
 function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
     const scaleDiv = document.getElementById('figure-timescale');
@@ -1993,14 +2344,17 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
         return;
     }
 
+    const sideMargin = getTimescaleSideMarginPx(scaleDiv);
+    const usableWidth = Math.max(scaleDiv.clientWidth - (sideMargin * 2), 1);
+
     // Create gradient bar. If the LOG_SCALE_THRESHOLD lies inside the range,
     // show a subtle mid-stop so users can see the visual split.
     const bar = document.createElement('div');
-    bar.style.width = '100%';
+    bar.style.width = `${usableWidth}px`;
     bar.style.height = '16px';
     bar.style.position = 'absolute';
     bar.style.bottom = '4px'; // 4px from bottom of container
-    bar.style.left = '0';
+    bar.style.left = `${sideMargin}px`;
     // Store the numeric timescale range on the bar so overlay helpers can use the
     // exact same coordinate space (prevents hover vs selected mismatch).
     try {
@@ -2106,7 +2460,7 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
         if (labelNeeded) {
             const label = document.createElement('div');
             label.style.position = 'absolute';
-            label.style.left = `${percent}%`;
+            label.style.left = `${sideMargin + (percent / 100) * usableWidth}px`;
             label.style.top = '2px'; // Position labels at top of container
             label.style.fontSize = '11px';
             label.style.color = '#222';
@@ -2127,6 +2481,8 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
             lastLabelPos = percent;
         }
     });
+
+    renderTimescaleRangeControls(scaleDiv, minN, maxN);
 
     // --- Selected-figure overlay (render via shared helper) ---
     try {

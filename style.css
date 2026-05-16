@@ -157,6 +157,33 @@ body.search-open .detail-window.active-window.recently-opened .detail-label-cont
     background-color: #CC79A7;
 }
 
+/* Per-window fade state for figures filtered out by date range. Mirrors the
+   existing gallery/search translucency treatment but applies selectively to
+   each out-of-range detail window. */
+.detail-window.out-of-range {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.detail-window.out-of-range .figure-details-wrapper {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.detail-window.out-of-range .detail-label-container {
+    background-color: rgba(25, 118, 210, 0.35);
+}
+
+.detail-window.out-of-range.active-window .detail-label-container {
+    background-color: rgba(204, 121, 167, 0.35);
+}
+
+body.globe-tab-active .detail-window.out-of-range {
+    background-color: rgba(18,22,42,0.22) !important;
+}
+
+body.globe-tab-active .detail-window.out-of-range .figure-details-wrapper {
+    background-color: rgba(18,22,42,0.15) !important;
+}
+
 .detail-window.active-window {
     border-color: #CC79A7;
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
@@ -454,9 +481,81 @@ body.search-open .detail-window.active-window.recently-opened .detail-label-cont
 }
 
 #figure-timescale {
+    --timescale-side-margin: 20px;
     width: 100%;
     height: 100%;
     position: relative;
+}
+
+.timescale-range-selection {
+    position: absolute;
+    top: 22px;
+    height: 16px;
+    background: rgba(25, 118, 210, 0.16);
+    border-left: 1px solid rgba(25, 118, 210, 0.45);
+    border-right: 1px solid rgba(25, 118, 210, 0.45);
+    pointer-events: none;
+    z-index: 1200;
+}
+
+.timescale-range-thumb {
+    position: absolute;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 11px solid #1a5fa8;
+    cursor: ew-resize;
+    z-index: 1310;
+    touch-action: none;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.95)) drop-shadow(0 1px 2px rgba(0,0,0,0.35));
+}
+
+.timescale-range-thumb::after {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: -10px;
+    width: 32px;
+    height: 24px;
+}
+
+.timescale-range-thumb:hover,
+.timescale-range-thumb:focus-visible {
+    border-bottom-color: #0f96f0;
+}
+
+.timescale-thumb-popup {
+    position: absolute;
+    top: 2px;
+    transform: translateX(-50%);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(24, 24, 24, 0.9);
+    color: #fff;
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1320;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.timescale-range-distance-popup {
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%);
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(25, 118, 210, 0.92);
+    color: #fff;
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1321;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .marker-gallery {
@@ -648,142 +747,6 @@ a.tab-button {
 
 .tab-content.active {
     display: block;
-}
-
-
-/* Timeline-specific styles */
-#figure-timeline-container {
-    width: 100%;
-    position: fixed;
-    top: 84px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #eaeaea;
-    display: none;
-    z-index: 500;
-    overflow-y: auto;
-}
-
-#figure-timeline-container.active {
-    display: block;
-}
-
-
-#figure-timeline {
-    position: relative;
-    height: auto;
-    min-height: 100%;
-    padding: .5em;
-}
-
-.timeline-figure {
-    position: absolute;
-    height: 14px; /* or your preferred bar height */
-    background: #1976d2;
-    border-radius: 4px;
-    opacity: 0.85;
-    z-index: 1;
-    transition: background 0.2s, outline 0.2s;
-    /* Optional: for debugging, add a border */
-    /* border: 1px solid #333; */
-}
-
-.timeline-figure:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    background-color: #5cb85c; /* Change color on hover */
-}
-
-.timeline-figure.highlighted {
-    outline: 3px solid #1976d2;
-    background: #e3f2fd;
-    z-index: 2;
-}
-
-.timeline-scroll-wrapper {
-    position: relative;
-    overflow-x: auto;
-    width: 100%;
-    background: #fff;
-}
-
-.timeline-tick {
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    border-left: 1px solid #888;
-    text-align: left;
-    white-space: nowrap;
-    pointer-events: none;
-}
-.timeline-tick-label {
-    position: absolute;
-    top: 0;
-    left: 2px;
-    transform: translateX(-50%);
-    font-size: 0.85em;
-    background: #fff;
-    padding: 0 2px;
-    pointer-events: none;
-}
-/* date-range-slider styles */
-#date-range-slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 99;
-}
-
-#date-range {
-    width: 300px;
-    margin: 10px 0;
-}
-
-#date-range-slider span {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.timeline-country-label {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    white-space: nowrap;
-    font-size: 0.8em;
-    background: rgba(255,255,255,0.85);
-    padding: 0 4px;
-    border-radius: 3px;
-    pointer-events: none;
-    color: #333;
-    max-width: 120px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.timeline-country-label.right {
-    left: 100%;
-    margin-left: 6px;
-    text-align: left;
-}
-
-.timeline-country-label.left {
-    right: 100%;
-    margin-right: 6px;
-    text-align: right;
-}
-
-#timeline-play-btn {
-    margin-left: 0.5em;
-    font-size: 1em;
-    cursor: pointer;
-    background: none;
-    border: none;
 }
 
 #main-title {

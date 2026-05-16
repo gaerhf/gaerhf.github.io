@@ -182,7 +182,6 @@
             <button type="button" id="play-btn" title="Play" style="display:none">▶️</button>
             <button type="button" class="tab-button active" data-tab="figure-map">Map</button>
             <button type="button" class="tab-button" data-tab="figure-globe">Globe</button>
-            <button type="button" class="tab-button" data-tab="figure-timeline" style="display:none">Timeline</button>
             🚧
             <button type="button" class="tab-button" data-tab="about">About</button>
         </div>
@@ -220,7 +219,7 @@
                     <div id="globe-colormap-menu" class="colormap-picker-menu" role="radiogroup" aria-label="Point-color scheme"></div>
                 </div>
             </div>
-            <!-- Shared gallery strip — visible on Map and Globe tabs (hidden on List/Timeline/About via body class). -->
+            <!-- Shared gallery strip — visible on Map and Globe tabs (hidden on List/About via body class). -->
             <div id="gallery-container">
                 <button type="button" id="gallery-list-btn" title="Show currently visible figures as a grid" aria-label="Show grid of visible figures">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
@@ -234,11 +233,6 @@
             </div>
             <div id="figure-list-container" class="tab-content">
                 <div id="figure-list">Loading...</div>
-            </div>
-            <div id="figure-timeline-container" class="tab-content">
-                <div class="timeline-scroll-wrapper">
-                    <div id="figure-timeline">Loading...</div>
-                </div>
             </div>
             <div id="about-container" class="tab-content">
                 <div class="about-wrapper">
@@ -288,8 +282,8 @@
     </div>
 
     <script src="gaerhf-detail.js"></script>
-    <script src="gaerhf-colormap.js?v=2"></script>
-    <script src="gaerhf-ui.js?v=4"></script>
-    <script src="gaerhf-globe.js?v=2"></script>
+    <script src="gaerhf-colormap.js"></script>
+    <script src="gaerhf-ui.js"></script>
+    <script src="gaerhf-globe.js"></script>
 </body>
 </html>
