@@ -2124,26 +2124,44 @@ function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
         scaleDiv.appendChild(popup);
     };
 
-    const clearHoverPopup = (bound) => {
-        const id = `timescale-thumb-popup-hover-${bound}`;
-        const existing = document.getElementById(id);
-        if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+    // Hover behaviour: hovering EITHER thumb shows both year popups and
+    // the range-span popup. Clearing removes all three together.
+    const HOVER_POPUP_IDS = [
+        'timescale-thumb-popup-hover-start',
+        'timescale-thumb-popup-hover-end',
+        'timescale-thumb-popup-hover-distance',
+    ];
+    const clearHoverPopups = () => {
+        HOVER_POPUP_IDS.forEach(id => {
+            const el = document.getElementById(id);
+            if (el && el.parentNode) el.parentNode.removeChild(el);
+        });
     };
-
-    const showHoverPopup = (bound) => {
+    const showHoverPopups = () => {
         if (timescaleDragPopupState.active) return;
-        clearHoverPopup(bound);
-        const popup = document.createElement('div');
-        popup.id = `timescale-thumb-popup-hover-${bound}`;
-        popup.className = 'timescale-thumb-popup';
-        if (bound === 'start') {
-            popup.style.left = `${startX}px`;
-            popup.textContent = formatDateForDisplay(selectedEarliestYear);
-        } else {
-            popup.style.left = `${endX}px`;
-            popup.textContent = formatDateForDisplay(selectedLatestYear);
-        }
-        scaleDiv.appendChild(popup);
+        clearHoverPopups();
+
+        const startPopup = document.createElement('div');
+        startPopup.id = 'timescale-thumb-popup-hover-start';
+        startPopup.className = 'timescale-thumb-popup';
+        startPopup.style.left = `${startX}px`;
+        startPopup.textContent = formatDateForDisplay(selectedEarliestYear);
+        scaleDiv.appendChild(startPopup);
+
+        const endPopup = document.createElement('div');
+        endPopup.id = 'timescale-thumb-popup-hover-end';
+        endPopup.className = 'timescale-thumb-popup';
+        endPopup.style.left = `${endX}px`;
+        endPopup.textContent = formatDateForDisplay(selectedLatestYear);
+        scaleDiv.appendChild(endPopup);
+
+        const distancePopup = document.createElement('div');
+        distancePopup.id = 'timescale-thumb-popup-hover-distance';
+        distancePopup.className = 'timescale-range-distance-popup';
+        distancePopup.style.left = `${(startX + endX) / 2}px`;
+        const distanceYears = Math.abs(Number(selectedLatestYear) - Number(selectedEarliestYear));
+        distancePopup.textContent = `${Math.round(distanceYears).toLocaleString()} years`;
+        scaleDiv.appendChild(distancePopup);
     };
 
     const parseManualYearInput = (rawValue) => {
@@ -2208,8 +2226,7 @@ function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
         timescaleDragPopupState.active = false;
         timescaleDragPopupState.showStart = false;
         timescaleDragPopupState.showEnd = false;
-        clearHoverPopup('start');
-        clearHoverPopup('end');
+        clearHoverPopups();
         renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex);
         flushDateRangeApplyNow();
     };
@@ -2229,8 +2246,7 @@ function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
     const dragThumb = (bound, event) => {
         event.preventDefault();
         isTimescaleThumbDragging = true;
-        clearHoverPopup('start');
-        clearHoverPopup('end');
+        clearHoverPopups();
         const dragStartRatio = Math.max(0, Math.min(1, timelineScale(selectedEarliestYear, minN, maxN)));
         const dragEndRatio = Math.max(0, Math.min(1, timelineScale(selectedLatestYear, minN, maxN)));
         const dragSpanRatio = Math.max(0, dragEndRatio - dragStartRatio);
@@ -2331,14 +2347,14 @@ function renderTimescaleRangeControls(scaleDiv, minN, maxN) {
         }
         dragThumb('end', event);
     });
-    startThumb.addEventListener('mouseenter', () => showHoverPopup('start'));
-    startThumb.addEventListener('mouseleave', () => clearHoverPopup('start'));
-    startThumb.addEventListener('focus', () => showHoverPopup('start'));
-    startThumb.addEventListener('blur', () => clearHoverPopup('start'));
-    endThumb.addEventListener('mouseenter', () => showHoverPopup('end'));
-    endThumb.addEventListener('mouseleave', () => clearHoverPopup('end'));
-    endThumb.addEventListener('focus', () => showHoverPopup('end'));
-    endThumb.addEventListener('blur', () => clearHoverPopup('end'));
+    startThumb.addEventListener('mouseenter', showHoverPopups);
+    startThumb.addEventListener('mouseleave', clearHoverPopups);
+    startThumb.addEventListener('focus', showHoverPopups);
+    startThumb.addEventListener('blur', clearHoverPopups);
+    endThumb.addEventListener('mouseenter', showHoverPopups);
+    endThumb.addEventListener('mouseleave', clearHoverPopups);
+    endThumb.addEventListener('focus', showHoverPopups);
+    endThumb.addEventListener('blur', clearHoverPopups);
 }
 
 
