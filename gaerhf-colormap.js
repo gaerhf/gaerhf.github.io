@@ -197,6 +197,9 @@ function dateToColor(date, rampId) {
 function getFigureColorDate(f) {
     if (!f) return null;
     const num = v => {
+        // Short-circuit null/undefined: Number(null) is 0 (finite), which
+        // would otherwise wrongly coerce missing dates into the year 0.
+        if (v === null || v === undefined) return null;
         const n = Number(v);
         return Number.isFinite(n) ? n : null;
     };

@@ -68,6 +68,15 @@ let timescaleDragPopupState = {
     endYear: null,
 };
 
+function getResolvedFigureColorDate(f) {
+    if (!f) return null;
+    // Guard against Number(null) === 0 falsely satisfying isFinite, which
+    // would coerce a date-less figure into the year 0.
+    if (f.colorDate === null || f.colorDate === undefined) return getFigureColorDate(f);
+    const cached = Number(f.colorDate);
+    if (Number.isFinite(cached)) return cached;
+    return getFigureColorDate(f);
+}
 function normalizeDateRange(startYear, endYear) {
     const start = Number(startYear);
     const end = Number(endYear);
@@ -405,7 +414,7 @@ async function buildFiguresInfoDict($rdf) {
                     cultureDescribedBy = tp.anyValue(culture, describedByProp) || null;
                 }
 
-                processedDict[shortId] = {
+                const figureInfo = {
                     id: shortId,
                     label: label,  // always a string
                     date: date,  // number or null
@@ -423,6 +432,8 @@ async function buildFiguresInfoDict($rdf) {
                     wikimediaImagePages: wikimediaImagePages, // array of Wikimedia Commons page URLs
                     representativeLatLongPoint: representativeLatLongPoint,  // [number, number] or null
                 };
+                figureInfo.colorDate = getFigureColorDate(figureInfo);
+                processedDict[shortId] = figureInfo;
             }));
         }));
         return processedDict;
@@ -724,7 +735,7 @@ function renderFiguresOnMap(figuresArray) {
         if (!figure || !figure.representativeLatLongPoint) return;
 
         const [lat, lng] = figure.representativeLatLongPoint;
-        const date = getFigureColorDate(figure);
+        const date = getResolvedFigureColorDate(figure);
         const color = date !== null ? dateToColor(date) : '#888';
 
         // If a marker already exists for this figure, update its inner div background color
@@ -2511,7 +2522,7 @@ function updateMarkerColors() {
         if (!inner) return;
 
         const figure = figuresDict[figureId];
-        const date   = figure ? getFigureColorDate(figure) : null;
+        const date   = figure ? getResolvedFigureColorDate(figure) : null;
         const color  = date !== null ? dateToColor(date) : 'rgb(128,128,128)';
 
         // IMPORTANT: only set the background and border color so we don't

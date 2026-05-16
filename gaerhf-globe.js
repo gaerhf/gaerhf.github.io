@@ -274,7 +274,7 @@ function initGlobe() {
         .htmlLng(d => getFigureLatLng(d)[1])
         .htmlAltitude(0.003)
         .htmlElement(d => {
-            const date         = getFigureColorDate(d);
+            const date         = getResolvedFigureColorDate(d);
             const color        = date !== null ? dateToColor(date) : '#aaa';
             const borderColor  = getActiveColormap().markerBorder;
 
@@ -395,7 +395,7 @@ function initGlobe() {
     onColormapChange(() => {
         markerElements.forEach((el, figId) => {
             const f = figuresDict[figId];
-            const date = f ? getFigureColorDate(f) : null;
+            const date = f ? getResolvedFigureColorDate(f) : null;
             el.dataset.baseColor  = date !== null ? dateToColor(date) : '#aaa';
             el.dataset.baseBorder = getActiveColormap().markerBorder;
             _applyGlobeMarkerStyleTo(figId, el);
