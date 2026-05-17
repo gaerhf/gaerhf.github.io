@@ -1000,8 +1000,36 @@ body.about-tab .detail-window {
     right: 0;
     background: #0a0e1a;
     z-index: 500;
+    /* Clip the right edge of the canvas after #globe-inner is shifted right. */
+    overflow: hidden;
 }
-#globe-inner { position: absolute; inset: 0; }
+/* Offset the globe ~10% right so the default view isn't covered by the
+   detail window when it opens on the left. The CSS transform shifts both
+   the WebGL canvas and the HTML marker layer together; OrbitControls'
+   pointer math keeps working because getBoundingClientRect() returns the
+   transformed rect.
+   `bottom` is overridden inline by gaerhf-globe.js to match the gallery's
+   actual height (it varies with figure count). The 70px fallback below
+   keeps the layout reasonable if the JS sync hasn't run yet. */
+#globe-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    transform: translateX(10%);
+}
+/* Shift-drag pan cursor states. The classes are toggled on <body> from
+   gaerhf-globe.js: globe-shift-held while Shift is down on the Globe tab,
+   globe-panning while a shift-drag is actively in progress. */
+body.globe-shift-held #globe-inner,
+body.globe-shift-held #globe-inner canvas {
+    cursor: grab !important;
+}
+body.globe-panning #globe-inner,
+body.globe-panning #globe-inner canvas {
+    cursor: grabbing !important;
+}
 
 /* Globe base-map selector. Uses the shared --map-widget-* tokens (see
    :root) so it stays visually identical to Leaflet's L.control.layers
@@ -1096,6 +1124,66 @@ body.about-tab .detail-window {
    rewrites `element.style.zIndex` every frame in depth order, so an
    inline z-index gets clobbered. External-stylesheet !important wins
    over inline non-!important, so apply the stacking via class instead. */
+/* ── Markers (Map + Globe) ──────────────────────────────────────────────
+   Shared base for the circle visual; per-view classes layer their own
+   size, shadow, and library-specific positioning on top. Inline styles
+   are reserved for the only two truly dynamic per-figure/per-ramp
+   properties: background-color and border-color. */
+.custom-gray-marker .marker-inner,
+.globe-marker {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1.5px;
+    box-sizing: border-box;
+    transform-origin: center center;
+}
+
+/* Map-specific size + base shadow. Highlight state for the Map marker is
+   driven by .marker-primary / .marker-secondary / .marker-keyword classes
+   toggled on the OUTER .custom-gray-marker by _applyMapMarkerStyleTo. */
+.custom-gray-marker .marker-inner {
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-gray-marker.marker-primary .marker-inner {
+    transform: scale(1.28);
+    box-shadow: 0 0 0 5px #CC79A7, 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-gray-marker.marker-secondary .marker-inner {
+    transform: scale(1.22);
+    box-shadow: 0 0 0 3px #1976d2, 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyword match — applied only when the marker is neither primary nor
+   secondary (those take precedence in the apply function). */
+.custom-gray-marker.marker-keyword .marker-inner {
+    box-shadow: 0 0 0 6px rgba(230, 159, 0, 1);
+}
+
+/* Globe-specific size, positioning, and base shadow. globe.gl positions
+   the marker by its top-left corner, so negative margins re-center the
+   visible circle on the lat/lng point. Shadow is darker than Map's
+   because globe markers sit on a dark sphere. Highlight state for Globe
+   is set inline by _applyGlobeMarkerStyleTo (the four states there
+   override background/borderColor/boxShadow directly); the two classes
+   below only own z-index stacking, which globe.gl's CSS2DRenderer would
+   otherwise overwrite per-frame. */
+.globe-marker {
+    width: 11px;
+    height: 11px;
+    margin-left: -5.5px;
+    margin-top: -5.5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    transition: box-shadow 0.15s, opacity 0.15s;
+    pointer-events: auto;
+    /* `position` and `transform` are owned by globe.gl's CSS2DRenderer,
+       which writes them inline every frame to anchor each marker. */
+}
+
 .globe-marker-primary   { z-index: 99999 !important; }
 .globe-marker-secondary { z-index:  9999 !important; }
 

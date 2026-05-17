@@ -18,6 +18,9 @@ const SHIFT_HINT_HTML = `<div class="popup-hint">&#8679; Shift: open new window<
 // Marker icon factory — single source of truth for marker size, shape, and border.
 // borderColor defaults to #222 (back-compat); callers that know the active
 // colormap pass its markerBorder so the border tracks the ramp.
+// Visual state (size, shape, base shadow, highlight rings) lives in
+// style.css under .custom-gray-marker .marker-inner; only the per-figure
+// color and per-ramp border-color are set inline here.
 function makeMarkerIcon(color, borderColor) {
     const bc = borderColor || '#222';
     return L.divIcon({
@@ -25,8 +28,35 @@ function makeMarkerIcon(color, borderColor) {
         iconSize: [10, 10],
         iconAnchor: [5, 5],
         tooltipAnchor: [0, -5],  // tip points to the top-center of the 10px marker
-        html: `<div style="width:10px;height:10px;box-sizing:border-box;transform-origin:center center;background:${color};border-radius:50%;border:1.5px solid ${bc};box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
+        html: `<div class="marker-inner" style="background:${color};border-color:${bc};"></div>`
     });
+}
+
+// Resolve the background + border colors a marker should use given its
+// figure record and the currently-active colormap. One source of truth
+// for "what color is this marker right now" — used both at marker
+// creation and at every re-paint (filter change, colormap change).
+function _resolveMarkerColors(figure) {
+    const date = getResolvedFigureColorDate(figure);
+    return {
+        color:  date !== null ? dateToColor(date) : '#888',
+        border: getActiveColormap().markerBorder,
+    };
+}
+
+// Paint a Map marker's inner element in-place with the given colors.
+// Returns false if the marker's DOM element isn't available yet
+// (caller can then fall back to setIcon for a fresh render). Highlight
+// state (rings, scale) is owned by CSS classes on the outer wrapper,
+// so this only touches the two inline color properties.
+function _paintMapMarker(marker, colors) {
+    const el = marker && marker.getElement && marker.getElement();
+    if (!el) return false;
+    const inner = el.querySelector('.marker-inner');
+    if (!inner) return false;
+    inner.style.backgroundColor = colors.color;
+    inner.style.borderColor     = colors.border;
+    return true;
 }
 
 // Initialize the figures dictionary
@@ -608,15 +638,8 @@ function renderFiguresOnMap(figuresArray) {
     // Do NOT recreate all markers — update existing markers' background color, create missing ones,
     // and remove markers that are no longer needed. This avoids losing border/boxShadow highlights.
 
-    // Color normalization uses the fixed color domain (matches the
-    // timescale slider), so a marker's color is stable regardless of the
-    // active date filter. getTimescaleRange() is still used by the
-    // timescale-overlay code paths via its other callers.
-    const ramp = getActiveColormap();
-
-    // Update existing markers in-place where possible (to preserve highlight borders/shadows),
-    // create markers for figures that don't yet have one, and remove any leftover markers
-    // that are not in the current figuresArray.
+    // Update existing markers in-place where possible, create markers for figures
+    // that don't yet have one, and remove any leftover markers not in figuresArray.
     const toKeep = new Set();
 
     figuresArray.forEach(figureId => {
@@ -624,31 +647,21 @@ function renderFiguresOnMap(figuresArray) {
         if (!figure || !figure.representativeLatLongPoint) return;
 
         const [lat, lng] = figure.representativeLatLongPoint;
-        const date = getResolvedFigureColorDate(figure);
-        const color = date !== null ? dateToColor(date) : '#888';
+        const colors = _resolveMarkerColors(figure);
 
-        // If a marker already exists for this figure, update its inner div background color
-        // and keep it. This preserves styles like border and boxShadow applied by highlight
-        // functions.
         if (leafletMarkers[figureId]) {
             const existingMarker = leafletMarkers[figureId];
-            const el = existingMarker.getElement && existingMarker.getElement();
-            if (el) {
-                const inner = el.querySelector && el.querySelector('div');
-                if (inner) {
-                    inner.style.backgroundColor = color;
-                    inner.style.borderColor     = ramp.markerBorder;
-                }
-            } else {
-                // If element isn't available, ensure the icon is set so it will render when visible
-                existingMarker.setIcon(makeMarkerIcon(color, ramp.markerBorder));
+            // Fall back to setIcon if the element isn't in the DOM yet — the
+            // fresh icon HTML will carry the right colors when Leaflet renders it.
+            if (!_paintMapMarker(existingMarker, colors)) {
+                existingMarker.setIcon(makeMarkerIcon(colors.color, colors.border));
             }
             toKeep.add(figureId);
             return;
         }
 
         // Otherwise create a new marker (first time seen)
-        const icon = makeMarkerIcon(color, ramp.markerBorder);
+        const icon = makeMarkerIcon(colors.color, colors.border);
 
         const marker = L.marker([lat, lng], { icon }).addTo(leafletMap);
         marker.on('click', () => {
@@ -1292,61 +1305,62 @@ function getOpenWindowFigureIds() {
         .filter(Boolean);
 }
 
-function highlightMapFigure(figureId) {
+// Map marker highlight state machine — mirrors gaerhf-globe.js's
+// _computeGlobeMarkerStyleContext / _applyGlobeMarkerStyleTo pair so the
+// same four-state model (default / primary / secondary / keyword) is
+// expressed once per view. The mechanism on Map is CSS-class-based: the
+// `.custom-gray-marker.marker-{primary|secondary|keyword}` rules in
+// style.css drive all visual state; this function only toggles classes
+// and the Leaflet z-index offset.
+function _computeMapMarkerStyleContext(primaryId, keywordIdsOverride) {
+    const openIds = getOpenWindowFigureIds();
+    // `keywordIdsOverride` lets the dropdown hover-preview show a
+    // temporary highlight set without mutating the committed
+    // currentKeywordHighlightIds; omit to use the committed set.
+    const kwArr = keywordIdsOverride !== undefined
+        ? (keywordIdsOverride || [])
+        : (currentKeywordHighlightIds || []);
+    return {
+        primaryId,
+        secondarySet: new Set(openIds.filter(id => id !== primaryId)),
+        keywordSet:   new Set(kwArr),
+        hasKeyword:   Array.isArray(kwArr) && kwArr.length > 0,
+    };
+}
+
+function _applyMapMarkerStyleTo(figId, marker, ctx) {
+    if (!marker) return;
+    const el = marker.getElement && marker.getElement();
+    const isPrimary   = figId === ctx.primaryId && !!ctx.primaryId;
+    const isSecondary = !isPrimary && ctx.secondarySet.has(figId);
+    const isKeyword   = !isPrimary && !isSecondary && ctx.hasKeyword && ctx.keywordSet.has(figId);
+
+    if (el) {
+        el.classList.toggle('marker-primary',   isPrimary);
+        el.classList.toggle('marker-secondary', isSecondary);
+        el.classList.toggle('marker-keyword',   isKeyword);
+    }
+
+    marker.setZIndexOffset(
+        isPrimary   ? 2000 :
+        isSecondary ? 1000 :
+        isKeyword   ?  900 :
+                         1
+    );
+}
+
+function _applyMapMarkerStyles(primaryId, keywordIdsOverride) {
     if (!leafletMarkers) return;
+    const ctx = _computeMapMarkerStyleContext(primaryId, keywordIdsOverride);
+    Object.entries(leafletMarkers).forEach(([id, m]) => _applyMapMarkerStyleTo(id, m, ctx));
+}
 
-    // Collect secondary IDs: open windows that are not the primary figure.
-    const secondaryIds = new Set(getOpenWindowFigureIds().filter(id => id !== figureId));
-
-    // Reset all markers to default style.
-    Object.values(leafletMarkers).forEach(m => {
-        if (!m) return;
-        m.setZIndexOffset(1);
-        const el = m.getElement && m.getElement();
-        if (el) {
-            const inner = el.querySelector && el.querySelector('div');
-            if (inner) {
-                inner.style.border = '1.5px solid #222';
-                inner.style.borderRadius = '50%';
-                inner.style.transform = 'scale(1)';
-                inner.style.boxShadow = '0 1px 4px rgba(0,0,0,0.2)';
-            }
-        }
-    });
-
-    // Blue ring for secondary markers (open windows that are not primary).
-    secondaryIds.forEach(id => {
-        const m = leafletMarkers[id];
-        if (!m) return;
-        const el = m.getElement && m.getElement();
-        if (el) {
-            const inner = el.querySelector && el.querySelector('div');
-            if (inner) {
-                inner.style.border = '1.5px solid #222';
-                inner.style.borderRadius = '50%';
-                inner.style.transform = 'scale(1.22)';
-                inner.style.boxShadow = '0 0 0 3px #1976d2, 0 1px 4px rgba(0,0,0,0.2)';
-            }
-        }
-        m.setZIndexOffset(1000);
-    });
-
-    // Purple ring for the primary (active) marker.
+function highlightMapFigure(figureId) {
+    _applyMapMarkerStyles(figureId);
+    // Shift-click pans to the primary marker (suppressed while the
+    // timescale thumbs are mid-drag — Shift there means "translate range").
     if (figureId && leafletMarkers[figureId]) {
         const marker = leafletMarkers[figureId];
-        const thisEl = marker.getElement ? marker.getElement() : null;
-        if (thisEl && thisEl.querySelector) {
-            const innerDiv = thisEl.querySelector('div');
-            if (innerDiv) {
-                innerDiv.style.borderRadius = '50%';
-                innerDiv.style.border = '1.5px solid #222';
-                innerDiv.style.transform = 'scale(1.28)';
-                innerDiv.style.boxShadow = '0 0 0 5px #CC79A7, 0 1px 4px rgba(0,0,0,0.2)';
-            }
-        }
-        marker.setZIndexOffset(2000);
-        // Shift can be used for timescale range translation; suppress
-        // map panning side effects while thumbs are being dragged.
         if (isShiftKeyDown && !isTimescaleThumbDragging && leafletMap) {
             leafletMap.panTo(marker.getLatLng());
         }
@@ -1368,50 +1382,12 @@ function highlightGalleryFigure(figureId) {
     }
 }
 
+// Keep the current primary/secondary state; only change the keyword overlay.
+// `ids` is the keyword set to render right now — distinct from the committed
+// `currentKeywordHighlightIds` so the dropdown can preview a different set
+// on hover without changing the persistent selection.
 function highlightKeywordMarkers(ids) {
-    // Normalize ids: dedupe, remove empties/nulls
-    const uniqueIds = Array.from(new Set((ids || []).filter(Boolean)));
-    const secondaryIds = new Set(getOpenWindowFigureIds().filter(id => id !== currentFigureId));
-    const protectedIds = new Set([currentFigureId, ...secondaryIds].filter(Boolean));
-
-    // Clear existing keyword highlights safely
-    Object.keys(leafletMarkers).forEach((figureId) => {
-        try {
-            const m = leafletMarkers[figureId];
-            if (!m) return;
-            const el = m.getElement && m.getElement();
-            if (el) {
-                const inner = el.querySelector && el.querySelector('div');
-                if (inner && !protectedIds.has(figureId)) inner.style.boxShadow = '';
-            }
-            if (secondaryIds.has(figureId)) {
-                m.setZIndexOffset(1000);
-            } else if (figureId !== currentFigureId) {
-                m.setZIndexOffset(1);
-            }
-        } catch (e) {
-            // ignore and continue
-        }
-    });
-
-    // Apply new keyword highlights
-    uniqueIds.forEach((figureId) => {
-        try {
-            const m = leafletMarkers[figureId];
-            if (!m) return;
-            if (protectedIds.has(figureId)) return;
-            const el = m.getElement && m.getElement();
-            if (el) {
-                const inner = el.querySelector && el.querySelector('div');
-                if (inner) inner.style.boxShadow = '0px 0px 6px 6px rgba(230, 159, 0, 1)';
-            }
-            if (figureId !== currentFigureId) {
-                m.setZIndexOffset(900);
-            }
-        } catch (e) {
-            // ignore and continue
-        }
-    });
+    _applyMapMarkerStyles(currentFigureId, Array.from(new Set((ids || []).filter(Boolean))));
 }
 
 function highlightKeywordGalleryImages(ids) {
@@ -2267,24 +2243,10 @@ function renderFiguresAsTimescale(minDate, maxDate, currentSortedIndex) {
 // markers in leafletMarkers — no figure-array filter needed since the
 // color domain is fixed and we only touch markers that already exist.
 function updateMarkerColors() {
-    const ramp = getActiveColormap();
-
-    Object.keys(leafletMarkers).forEach(figureId => {
-        const marker = leafletMarkers[figureId];
-        if (!marker) return;
-        const el = marker.getElement && marker.getElement();
-        if (!el) return;
-        const inner = el.querySelector && el.querySelector('div');
-        if (!inner) return;
-
-        const figure = figuresDict[figureId];
-        const date   = figure ? getResolvedFigureColorDate(figure) : null;
-        const color  = date !== null ? dateToColor(date) : 'rgb(128,128,128)';
-
-        // IMPORTANT: only set the background and border color so we don't
-        // overwrite the highlight box-shadow / outline applied by other paths.
-        inner.style.backgroundColor = color;
-        inner.style.borderColor     = ramp.markerBorder;
+    Object.entries(leafletMarkers).forEach(([id, marker]) => {
+        const figure = figuresDict[id];
+        if (!figure) return;
+        _paintMapMarker(marker, _resolveMarkerColors(figure));
     });
 }
 

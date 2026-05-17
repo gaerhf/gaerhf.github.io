@@ -291,21 +291,15 @@ function initGlobe() {
             const color        = date !== null ? dateToColor(date) : '#aaa';
             const borderColor  = getActiveColormap().markerBorder;
 
+            // Visual base (size, shape, base shadow, cursor, positioning
+            // offsets) lives in style.css under .globe-marker. Only the
+            // two truly dynamic per-figure/per-ramp properties stay inline.
             const div = document.createElement('div');
+            div.className = 'globe-marker';
             div.dataset.baseColor  = color;
             div.dataset.baseBorder = borderColor;
-            div.style.cssText = [
-                'width:11px', 'height:11px',
-                'margin-left:-5.5px', 'margin-top:-5.5px',
-                'border-radius:50%',
-                `background:${color}`,
-                `border:1.5px solid ${borderColor}`,
-                'box-shadow:0 1px 4px rgba(0,0,0,0.55)',
-                'cursor:pointer',
-                'transition:box-shadow 0.15s, opacity 0.15s',
-                'position:relative',
-                'pointer-events:auto',
-            ].join(';');
+            div.style.background  = color;
+            div.style.borderColor = borderColor;
 
             // Use pointerdown/pointerup — more reliable than 'click' with OrbitControls.
             let ptDownX = 0, ptDownY = 0;
@@ -362,6 +356,104 @@ function initGlobe() {
     document.getElementById('globe-inner').addEventListener('pointerdown', () => {
         controls.autoRotate = false;
     });
+
+    // Shift+drag pan — purely visual. globe.gl resets OrbitControls' target
+    // to the globe origin every POV sync, so library-level pan is dead
+    // even with controls.enablePan = true. Instead we translate #globe-inner
+    // itself via CSS transform: rotation/zoom keep working unmodified
+    // because globe.gl thinks nothing has moved. The capture-phase listener
+    // runs before the canvas's OrbitControls listener and stops the event
+    // from reaching it when shift is held, so rotation isn't triggered.
+    {
+        const panInner = document.getElementById('globe-inner');
+        const BASE_TRANSFORM = 'translateX(10%)';
+        let panX = 0, panY = 0;
+        let activePtrId = null, lastX = 0, lastY = 0;
+        const apply = () => {
+            panInner.style.transform = `${BASE_TRANSFORM} translate(${panX}px, ${panY}px)`;
+        };
+        panInner.addEventListener('pointerdown', e => {
+            if (!e.shiftKey) return;
+            // Preserve shift+click on a marker → opens the figure in a
+            // second detail window (same as Map view). Markers stop
+            // propagation in their own handlers; if we grabbed the event
+            // here in capture phase, the marker would never see it.
+            if (e.target.closest('.globe-marker')) return;
+            activePtrId = e.pointerId;
+            lastX = e.clientX; lastY = e.clientY;
+            panInner.setPointerCapture(e.pointerId);
+            document.body.classList.add('globe-panning');
+            e.stopPropagation();
+            e.preventDefault();
+        }, true);
+        panInner.addEventListener('pointermove', e => {
+            if (e.pointerId !== activePtrId) return;
+            panX += e.clientX - lastX;
+            panY += e.clientY - lastY;
+            lastX = e.clientX; lastY = e.clientY;
+            apply();
+        });
+        const endPan = e => {
+            if (e.pointerId !== activePtrId) return;
+            activePtrId = null;
+            document.body.classList.remove('globe-panning');
+        };
+        panInner.addEventListener('pointerup', endPan);
+        panInner.addEventListener('pointercancel', endPan);
+
+        // Markers have pointer-events: auto so clicks/hovers work, which
+        // also means wheel events landing on a marker get routed to the
+        // marker instead of the canvas — and bubble up the DOM rather than
+        // sideways to the canvas where OrbitControls is listening. The net
+        // effect is no zoom while the cursor is on a marker. Re-dispatch
+        // any non-canvas wheel event onto the canvas so zoom keeps working
+        // regardless of what's under the cursor.
+        panInner.addEventListener('wheel', e => {
+            const canvas = panInner.querySelector('canvas');
+            if (!canvas || e.target === canvas) return;
+            e.preventDefault();
+            canvas.dispatchEvent(new WheelEvent('wheel', {
+                deltaX: e.deltaX, deltaY: e.deltaY, deltaZ: e.deltaZ,
+                deltaMode: e.deltaMode,
+                clientX: e.clientX, clientY: e.clientY,
+                ctrlKey: e.ctrlKey, shiftKey: e.shiftKey,
+                altKey: e.altKey, metaKey: e.metaKey,
+                bubbles: false, cancelable: true,
+            }));
+        }, { passive: false });
+        // Cursor hint: grab/grabbing while shift is held on the Globe tab.
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Shift' && currentTab === 'figure-globe')
+                document.body.classList.add('globe-shift-held');
+        });
+        window.addEventListener('keyup', e => {
+            if (e.key === 'Shift')
+                document.body.classList.remove('globe-shift-held');
+        });
+    }
+
+    // Keep #globe-inner's bottom flush with the top of the fixed-position
+    // gallery, AND push the resulting size into globe.gl. The library does
+    // not reliably track its container when CSS `bottom` changes at
+    // runtime — its wrapper/canvas keeps the viewport-height it picked up
+    // at first attach, so the sphere renders centered in a too-tall canvas
+    // and appears below visible center. Calling .width()/.height()
+    // explicitly forces the renderer + camera aspect to match what's
+    // actually visible.
+    const galleryEl = document.getElementById('gallery-container');
+    const innerEl   = document.getElementById('globe-inner');
+    if (galleryEl && innerEl) {
+        const syncSize = () => {
+            innerEl.style.bottom = galleryEl.offsetHeight + 'px';
+            globeInstance.width(innerEl.offsetWidth).height(innerEl.offsetHeight);
+        };
+        syncSize();
+        if (typeof ResizeObserver !== 'undefined') {
+            new ResizeObserver(syncSize).observe(galleryEl);
+            new ResizeObserver(syncSize).observe(innerEl);
+        }
+        window.addEventListener('resize', syncSize);
+    }
 
     // Refresh the shared gallery as the user rotates the globe so it always
     // reflects the markers currently in the visible cap (mirrors the map's
