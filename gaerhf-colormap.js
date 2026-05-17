@@ -156,10 +156,6 @@ function getActiveColormap() {
     return COLORMAP_RAMPS[_activeColormapId] || COLORMAP_RAMPS[DEFAULT_COLORMAP_ID];
 }
 
-function getActiveColormapId() {
-    return _activeColormapId;
-}
-
 function setActiveColormap(id) {
     if (!COLORMAP_RAMPS[id] || id === _activeColormapId) return;
     _activeColormapId = id;
@@ -213,23 +209,6 @@ function getFigureColorDate(f) {
     if (e !== null) return e;
     if (l !== null) return l;
     return null;
-}
-
-// ── Legend sampling ──────────────────────────────────────────────────────
-// Legends share the *scale axis* with markers: a marker at scale s is
-// drawn with scaleToColor(s), so a legend sampled across t in [0,1] shows
-// the full color range markers can take. The log-region's compressed
-// width (LOG_REGION_PROPORTION) is visible directly because dateToScale
-// maps the deep-Paleolithic dates into [0, LOG_REGION_PROPORTION].
-function sampleRamp(rampId, n) {
-    const ramp = rampId ? (COLORMAP_RAMPS[rampId] || getActiveColormap()) : getActiveColormap();
-    const stops = Number.isFinite(n) && n > 1 ? Math.floor(n) : 40;
-    const out = [];
-    for (let i = 0; i <= stops; i++) {
-        const t = i / stops;
-        out.push({ t, color: ramp.scaleToColor(t) });
-    }
-    return out;
 }
 
 // ── Picker widget builder ────────────────────────────────────────────────

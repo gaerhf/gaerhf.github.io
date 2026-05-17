@@ -6,12 +6,14 @@ const maxYear = 1500;     // Maximum year
 
 const SHIFT_HINT_HTML = `<div class="popup-hint">&#8679; Shift: open new window</div>`;
 
-// thumbnailUrl, largeUrl, isEmbeddable, EMBEDDABLE_HOSTS, openSiteModal, closeSiteModal,
-// formatDateForDisplay, getWikimediaImageUrl, probeImageExists, getImageSources,
+// thumbnailUrl, closeSiteModal, formatDateForDisplay,
 // renderFigureHeader, renderFigureMetadata, renderFigureImage,
-// dragElement, initResizers, createDetailWindowShell,
-// getActiveWindow, _setActiveWindowBase
+// createDetailWindowShell, getActiveWindow, _setActiveWindowBase
 // — all provided by gaerhf-detail.js (loaded before this script in index.html).
+//
+// showGlobeTooltipForFigure, hideGlobeTooltip — provided by gaerhf-globe.js
+// (loaded after this script, so the bindings exist by the time gallery
+// hover handlers actually fire).
 
 // Marker icon factory — single source of truth for marker size, shape, and border.
 // borderColor defaults to #222 (back-compat); callers that know the active
@@ -26,9 +28,6 @@ function makeMarkerIcon(color, borderColor) {
         html: `<div style="width:10px;height:10px;box-sizing:border-box;transform-origin:center center;background:${color};border-radius:50%;border:1.5px solid ${bc};box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`
     });
 }
-
-const urlParams = new URLSearchParams(window.location.search);
-const viewParam = urlParams.get('view')
 
 // Initialize the figures dictionary
 let figuresDict = {};
@@ -61,14 +60,9 @@ let timescaleDragPopupState = {
     endYear: null,
 };
 
+// f.colorDate is set once in buildFiguresInfoDict() (number or null).
 function getResolvedFigureColorDate(f) {
-    if (!f) return null;
-    // Guard against Number(null) === 0 falsely satisfying isFinite, which
-    // would coerce a date-less figure into the year 0.
-    if (f.colorDate === null || f.colorDate === undefined) return getFigureColorDate(f);
-    const cached = Number(f.colorDate);
-    if (Number.isFinite(cached)) return cached;
-    return getFigureColorDate(f);
+    return f ? f.colorDate : null;
 }
 function normalizeDateRange(startYear, endYear) {
     const start = Number(startYear);
@@ -126,33 +120,37 @@ async function applySelectedDateRange(startYear, endYear) {
     await loadAndDisplayFigures();
 }
 
+// Runs the pending date-range apply. If another apply is already in-flight,
+// flag a rerun so the latest range eventually wins; otherwise await the apply
+// and re-schedule if new input arrived during the await.
+async function runPendingDateRangeApply() {
+    if (dateRangeApplyInFlight) {
+        dateRangeApplyNeedsRerun = true;
+        return;
+    }
+
+    const payload = pendingDateRangeApply;
+    if (!payload) return;
+
+    pendingDateRangeApply = null;
+    dateRangeApplyInFlight = true;
+    await applySelectedDateRange(payload[0], payload[1]);
+    dateRangeApplyInFlight = false;
+
+    if (dateRangeApplyNeedsRerun || pendingDateRangeApply) {
+        dateRangeApplyNeedsRerun = false;
+        scheduleDateRangeApply();
+    }
+}
+
 function scheduleDateRangeApply() {
     pendingDateRangeApply = [selectedEarliestYear, selectedLatestYear];
 
-    if (dateRangeApplyTimer) {
-        clearTimeout(dateRangeApplyTimer);
-    }
+    if (dateRangeApplyTimer) clearTimeout(dateRangeApplyTimer);
 
-    dateRangeApplyTimer = setTimeout(async () => {
+    dateRangeApplyTimer = setTimeout(() => {
         dateRangeApplyTimer = null;
-
-        if (dateRangeApplyInFlight) {
-            dateRangeApplyNeedsRerun = true;
-            return;
-        }
-
-        const payload = pendingDateRangeApply;
-        if (!payload) return;
-
-        pendingDateRangeApply = null;
-        dateRangeApplyInFlight = true;
-        await applySelectedDateRange(payload[0], payload[1]);
-        dateRangeApplyInFlight = false;
-
-        if (dateRangeApplyNeedsRerun || pendingDateRangeApply) {
-            dateRangeApplyNeedsRerun = false;
-            scheduleDateRangeApply();
-        }
+        runPendingDateRangeApply();
     }, 100);
 }
 
@@ -164,25 +162,7 @@ function flushDateRangeApplyNow() {
         dateRangeApplyTimer = null;
     }
 
-    if (dateRangeApplyInFlight) {
-        dateRangeApplyNeedsRerun = true;
-        return;
-    }
-
-    (async () => {
-        const payload = pendingDateRangeApply;
-        if (!payload) return;
-
-        pendingDateRangeApply = null;
-        dateRangeApplyInFlight = true;
-        await applySelectedDateRange(payload[0], payload[1]);
-        dateRangeApplyInFlight = false;
-
-        if (dateRangeApplyNeedsRerun || pendingDateRangeApply) {
-            dateRangeApplyNeedsRerun = false;
-            scheduleDateRangeApply();
-        }
-    })();
+    runPendingDateRangeApply();
 }
 
 // Open a marker callout using a Leaflet Tooltip (direction-aware, no auto-pan).
@@ -589,18 +569,17 @@ function initializeMap() {
         return new L.Control.ZoomToAll(opts);
     };
     L.control.zoomToAll({ position: 'topleft' }).addTo(leafletMap);
-    leafletMap.on('zoomend', function () {
+
+    // Zoom and pan both change which markers are in view, so both must
+    // refresh the gallery and restore highlights the same way.
+    const onMapViewChange = () => {
         renderGallery();
         highlightGalleryFigure(currentFigureId);
         try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
         try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
-    });
-    leafletMap.on('moveend', function () {
-        renderGallery();
-        highlightGalleryFigure(currentFigureId);
-        try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch (e) { /* ignore */ }
-        try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
-    });
+    };
+    leafletMap.on('zoomend', onMapViewChange);
+    leafletMap.on('moveend', onMapViewChange);
 }
 
 function renderFiguresOnMap(figuresArray) {
@@ -657,16 +636,14 @@ function renderFiguresOnMap(figuresArray) {
             highlightMapFigure(figureId);
             highlightGalleryFigure(figureId);
             showFigureDetails(figureId);
-            clickContent = buildPopupContent(figure.label || figure.id);
-            openAdaptivePopup(marker, clickContent);
+            openAdaptivePopup(marker, buildPopupContent(figure.label || figure.id));
         });
         marker.on('mouseover', () => {
-            mouseOverContent = buildPopupContent(figure.label || figure.id, {
+            openAdaptivePopup(marker, buildPopupContent(figure.label || figure.id, {
                 figureId: figure.id,
                 showImage: true,
                 showHint: true,
-            });
-            openAdaptivePopup(marker, mouseOverContent);
+            }));
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
 
@@ -693,13 +670,15 @@ function renderFiguresOnMap(figuresArray) {
         }
     });
 
-    // Reapply selected figure highlight if present (we preserved boxShadow for keyword highlights
-    // by updating colors in-place, but ensure the selected figure has its border applied)
+    // Reapply selected figure highlight, then keyword highlights — the
+    // selected-figure path clears boxShadow on all markers, so keyword
+    // highlights must be reapplied after it to stay visible.
     try {
         if (currentFigureId && leafletMarkers[currentFigureId]) {
             highlightMapFigure(currentFigureId);
-            highlightGalleryFigure(currentFigureId)
+            highlightGalleryFigure(currentFigureId);
         }
+        highlightKeywordMarkers(currentKeywordHighlightIds || []);
     } catch (err) {
         // ignore
     }
@@ -760,7 +739,7 @@ function syncActiveFigureFromOpenWindows() {
     currentFigureId = null;
     highlightMapFigure(null);
     highlightGalleryFigure(null);
-    if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(null);
+    highlightGlobeFigure(null);
     try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
 }
 
@@ -800,7 +779,7 @@ function setActiveWindow(win) {
         }
         highlightMapFigure(figId);
         highlightGalleryFigure(figId);
-        if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(figId);
+        highlightGlobeFigure(figId);
         try { renderFiguresAsTimescale(minYear, maxYear, currentSortedIndex); } catch (e) { }
     }
 }
@@ -821,9 +800,7 @@ async function loadAndDisplayFigures() {
             leafletMap.invalidateSize();
         }
         renderFiguresOnMap(currentSortedIndex);
-        if (typeof syncGlobeDataToCurrentSelection === 'function') {
-            syncGlobeDataToCurrentSelection();
-        }
+        syncGlobeDataToCurrentSelection();
         document.body.classList.add('gallery-visible');
         renderGallery();
 
@@ -836,7 +813,6 @@ async function loadAndDisplayFigures() {
             }
         }
     }, 200);
-    renderKeywordSearch();
 
     updateDetailWindowRangeState();
 
@@ -873,9 +849,7 @@ async function loadAndDisplayFigures() {
     }
 }
 
-// Initialization sequence
-//const $rdf = require('rdflib'); // Ensure rdflib is available
-// Initialize the RDF store
+// Initialize the RDF store from the public turtle file.
 async function initializeStore($rdf) {
     tp = $rdf.graph();
     try {
@@ -899,6 +873,10 @@ async function initializeStore($rdf) {
 (async function initializeAndLoadFigures() {
     if (await initializeStore($rdf)) {
         figuresDict = await buildFiguresInfoDict($rdf);
+        // figuresDict is built once and not mutated by filters; wire the
+        // keyword search a single time so listeners on #search-input don't
+        // stack with each loadAndDisplayFigures() call.
+        renderKeywordSearch();
         await loadAndDisplayFigures();
     }
 })();
@@ -1064,15 +1042,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Init synchronously: the container is always display:block under the
                 // cross-fade CSS, so it has dimensions immediately. Doing it now means
                 // globe.gl is rendering before the opacity fade starts.
-                if (typeof initGlobe === 'function') initGlobe();
+                initGlobe();
                 renderGallery();
                 if (currentFigureId) {
-                    if (typeof highlightGlobeFigure === 'function') highlightGlobeFigure(currentFigureId);
+                    highlightGlobeFigure(currentFigureId);
                     // Only rotate if the current figure isn't already in view.
-                    if (typeof panGlobeTo === 'function' &&
-                        typeof getVisibleGlobeFigureKeys === 'function') {
-                        const onScreen = getVisibleGlobeFigureKeys().includes(currentFigureId);
-                        if (!onScreen) panGlobeTo(currentFigureId);
+                    if (!getVisibleGlobeFigureKeys().includes(currentFigureId)) {
+                        panGlobeTo(currentFigureId);
                     }
                     highlightGalleryFigure(currentFigureId);
                 }
@@ -1225,8 +1201,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 // defensive: ignore errors
             }
         });
-
-        // (duplicate old listener removed)
 
         // Live update while sliding; debounce final action (rerender map) when user stops.
         // setLogScaleThreshold() fires onColormapChange listeners so the Map markers AND the
@@ -1464,58 +1438,23 @@ function tokenizer(input) {
     return tokens;
 }
 
+// Fields on a figure that contribute to the keyword index.
+const KEYWORD_FIELDS = ['label', 'cultureLabel', 'materialNote', 'note', 'inModernCountry'];
+
 function makeFiguresKWDocsArray() {
-    // Map token -> Set of figure IDs (avoid duplicates)
     const documents_dict = {};
 
-    const asText = (v) => {
-        if (v === null || v === undefined) return '';
-        if (typeof v === 'string') return v;
-        if (typeof v === 'object' && v && typeof v.value === 'string') return v.value;
-        return String(v);
-    };
-
     Object.values(figuresDict).forEach((figure) => {
-        let tokens = tokenizer(figure.label);
-        tokens.forEach((token) => {
-            if (!documents_dict[token]) documents_dict[token] = new Set();
-            documents_dict[token].add(figure.id);
+        KEYWORD_FIELDS.forEach((field) => {
+            const value = figure[field];
+            if (value == null) return;
+            tokenizer(typeof value === 'string' ? value : String(value)).forEach((token) => {
+                if (!documents_dict[token]) documents_dict[token] = new Set();
+                documents_dict[token].add(figure.id);
+            });
         });
-
-        if (figure.cultureLabel) {
-            tokens = tokenizer(asText(figure.cultureLabel));
-            tokens.forEach((token) => {
-                if (!documents_dict[token]) documents_dict[token] = new Set();
-                documents_dict[token].add(figure.id);
-            });
-        }
-
-        if (figure.materialNote) {
-            tokens = tokenizer(asText(figure.materialNote));
-            tokens.forEach((token) => {
-                if (!documents_dict[token]) documents_dict[token] = new Set();
-                documents_dict[token].add(figure.id);
-            });
-        }
-
-        if (figure.note) {
-            tokens = tokenizer(asText(figure.note));
-            tokens.forEach((token) => {
-                if (!documents_dict[token]) documents_dict[token] = new Set();
-                documents_dict[token].add(figure.id);
-            });
-        }
-
-        if (figure.inModernCountry) {
-            tokens = tokenizer(asText(figure.inModernCountry));
-            tokens.forEach((token) => {
-                if (!documents_dict[token]) documents_dict[token] = new Set();
-                documents_dict[token].add(figure.id);
-            });
-        }
     });
 
-    // Convert Sets to arrays for MiniSearch storage and for dictionary lookups
     const documents_array = [];
     const dict_out = {};
     Object.keys(documents_dict).forEach((doc) => {
@@ -1528,7 +1467,18 @@ function makeFiguresKWDocsArray() {
 
 
 
-// ** Render Keyword Serch **
+// Reapply the current keyword highlights everywhere they appear: map markers,
+// gallery thumbnails, and globe markers. Used by every code path that
+// dismisses or restores the suggestions dropdown so the three views stay
+// in sync without each call site repeating the trio.
+function applyKeywordHighlightsEverywhere(ids) {
+    const list = ids || [];
+    try { highlightKeywordMarkers(list); } catch { }
+    try { highlightKeywordGalleryImages(list); } catch { }
+    applyGlobeKeywordHighlights(list);
+}
+
+// ** Render Keyword Search **
 function renderKeywordSearch() {
     const miniSearch = new MiniSearch({
         fields: ['id'], // Fields to search in
@@ -1566,9 +1516,7 @@ function renderKeywordSearch() {
             if (query.length === 0) {
                 // Clear keyword highlights
                 currentKeywordHighlightIds = [];
-                try { highlightKeywordMarkers([]); } catch { }
-                try { highlightKeywordGalleryImages([]); } catch { }
-                if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights([]);
+                applyKeywordHighlightsEverywhere([]);
                 setSuggestionsVisible(false);
                 updateZoomKeywordButtonVisibility();
             }
@@ -1582,9 +1530,7 @@ function renderKeywordSearch() {
             const query = searchInput.value.trim();
             suggestionsList.innerHTML = '';
             // Restore persistent highlight when regenerating list
-            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
-            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
-            if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(currentKeywordHighlightIds || []);
+            applyKeywordHighlightsEverywhere(currentKeywordHighlightIds);
 
             if (query.length === 0) {
                 setSuggestionsVisible(false);
@@ -1598,51 +1544,27 @@ function renderKeywordSearch() {
                 return;
             }
 
-            function extractKw(item) {
-                if (!item) return '';
-                if (typeof item === 'string') return item;
-                if (item.id) return item.id;
-                if (item.suggestion) return item.suggestion;
-                if (item.doc && item.doc.id) return item.doc.id;
-                if (item.document && item.document.id) return item.document.id;
-                if (item.id) return String(item.id);
-                try { return JSON.stringify(item); } catch { return String(item); }
-            }
-
             results.forEach(result => {
-                const kwText = extractKw(result);
+                // MiniSearch results always carry an `id` (the keyword token).
+                const kwText = result && result.id;
                 if (!kwText) return;
                 const li = document.createElement('li');
                 li.textContent = kwText;
                 li.tabIndex = 0;
-                const ids = Array.isArray(figuresKWDict[kwText])
-                    ? figuresKWDict[kwText]
-                    : String(figuresKWDict[kwText] || '').split(' ').filter(Boolean);
+                const ids = Array.isArray(figuresKWDict[kwText]) ? figuresKWDict[kwText] : [];
                 // Hover preview: temporarily highlight matching markers
-                li.addEventListener('mouseover', () => {
-                    try { highlightKeywordMarkers(ids); } catch { }
-                    try { highlightKeywordGalleryImages(ids); } catch { }
-                    if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(ids);
-                });
-                li.addEventListener('mouseout', () => {
-                    try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
-                    try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
-                    if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(currentKeywordHighlightIds || []);
-                });
+                li.addEventListener('mouseover', () => applyKeywordHighlightsEverywhere(ids));
+                li.addEventListener('mouseout',  () => applyKeywordHighlightsEverywhere(currentKeywordHighlightIds));
                 li.addEventListener('click', () => {
                     searchInput.value = kwText;
                     suggestionsList.innerHTML = '';
                     setSuggestionsVisible(false);
                     currentKeywordHighlightIds = ids;
-                    highlightKeywordMarkers(ids);
-                    highlightKeywordGalleryImages(ids);
-                    if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(ids);
+                    applyKeywordHighlightsEverywhere(ids);
                     updateZoomKeywordButtonVisibility();
                 });
                 li.addEventListener('keydown', (ev) => {
-                    if (ev.key === 'Enter') {
-                        li.click();
-                    }
+                    if (ev.key === 'Enter') li.click();
                 });
                 suggestionsList.appendChild(li);
             });
@@ -1658,9 +1580,7 @@ function renderKeywordSearch() {
         setTimeout(() => {
             setSuggestionsVisible(false);
             // Restore persistent highlight when suggestions close
-            try { highlightKeywordMarkers(currentKeywordHighlightIds || []); } catch { }
-            try { highlightKeywordGalleryImages(currentKeywordHighlightIds || []); } catch { }
-            if (typeof applyGlobeKeywordHighlights === 'function') applyGlobeKeywordHighlights(currentKeywordHighlightIds || []);
+            applyKeywordHighlightsEverywhere(currentKeywordHighlightIds);
             updateZoomKeywordButtonVisibility();
         }, 150);
     });
@@ -1677,8 +1597,9 @@ function renderKeywordSearch() {
     if (zoomBtn) {
         zoomBtn.addEventListener('click', () => {
             if (currentTab === 'figure-globe') {
-                if (typeof panGlobeTo === 'function' && currentKeywordHighlightIds && currentKeywordHighlightIds.length)
+                if (currentKeywordHighlightIds && currentKeywordHighlightIds.length) {
                     panGlobeTo(currentKeywordHighlightIds[0]);
+                }
             } else {
                 zoomToKeywordHighlightedFigures();
             }
@@ -1725,9 +1646,7 @@ function getVisibleInRangeFigureIds() {
     let visible = [];
 
     if (currentTab === 'figure-globe') {
-        visible = (typeof getVisibleGlobeFigureKeys === 'function')
-            ? (getVisibleGlobeFigureKeys() || [])
-            : [];
+        visible = getVisibleGlobeFigureKeys() || [];
     } else if (currentTab === 'figure-map') {
         visible = getVisibleLeafletMarkerKeys(leafletMap, leafletMarkers) || [];
     }
@@ -1749,23 +1668,26 @@ function renderGallery() {
         figureIds = getVisibleInRangeFigureIds();
     }
 
-    galleryDiv = document.getElementById('gallery');
+    const galleryDiv = document.getElementById('gallery');
     galleryDiv.innerHTML = "";
-    figureIds.forEach(function (figureId, index) {
-        galleryImg = document.createElement('img');
+
+    // Shrink thumbs once the strip is crowded, but never below 30px.
+    let maxHeight = 70;
+    if (figureIds.length > 25) {
+        maxHeight = Math.max(30, maxHeight * (25 / figureIds.length));
+    }
+
+    figureIds.forEach(function (figureId) {
+        const galleryImg = document.createElement('img');
         galleryImg.id = `gi-${figureId}`;
         galleryImg.src = thumbnailUrl(figureId);
         galleryImg.className = "gallery-image";
-
-        maxHeight = '70'
-        if (figureIds.length > 25) {
-            maxHeight *= (25 / figureIds.length);
-            if (maxHeight < 30) { maxHeight = 30 }
-        }
         galleryImg.style = `max-height:${maxHeight}px`;
 
         galleryImg.addEventListener('mouseover', () => {
-            if (leafletMarkers[figureId]) {
+            if (currentTab === 'figure-globe') {
+                showGlobeTooltipForFigure(figureId);
+            } else if (leafletMarkers[figureId]) {
                 const content = buildPopupContent(figuresDict[figureId].label, { showHint: true });
                 openAdaptivePopup(leafletMarkers[figureId], content);
             }
@@ -1774,7 +1696,9 @@ function renderGallery() {
 
         galleryImg.addEventListener('mouseout', () => {
             try { clearTimescaleHoverOverlay(); } catch (e) { /* ignore */ }
-            if (leafletMarkers[figureId]) {
+            if (currentTab === 'figure-globe') {
+                hideGlobeTooltip();
+            } else if (leafletMarkers[figureId]) {
                 leafletMarkers[figureId]._hoverCloseTimer = setTimeout(() => {
                     try { leafletMarkers[figureId].closeTooltip(); } catch { }
                     leafletMarkers[figureId]._hoverCloseTimer = null;

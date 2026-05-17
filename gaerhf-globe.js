@@ -7,11 +7,10 @@
 
 /* globals figuresDict, currentSortedIndex, currentFigureId, currentKeywordHighlightIds,
    currentTab, showFigureDetails, sortFigures, renderGallery,
-   highlightGalleryFigure, getOpenWindowFigureIds, thumbnailUrl,
-   renderFigureHeader, renderFigureMetadata, renderFigureImage,
+   highlightGalleryFigure, getOpenWindowFigureIds, getResolvedFigureColorDate,
+   thumbnailUrl, renderFigureHeader, renderFigureMetadata, renderFigureImage,
    createDetailWindowShell, getActiveWindow, _setActiveWindowBase, Globe,
-   COLOR_MIN_DATE, COLOR_MAX_DATE, dateToColor, getActiveColormap,
-   getFigureColorDate, sampleRamp, onColormapChange, bindColormapPicker */
+   dateToColor, getActiveColormap, onColormapChange, bindColormapPicker */
 
 // Color domain and ramp pipeline come from gaerhf-colormap.js (shared with the Map).
 
@@ -81,6 +80,39 @@ _globeTooltip.style.cssText = [
     'max-width:240px', 'line-height:1.5', 'color:#fff',
 ].join(';');
 document.body.appendChild(_globeTooltip);
+
+function _renderGlobeTooltipContent(f) {
+    _globeTooltip.innerHTML = `
+        <b>${f.label}</b>
+        ${f.inModernCountry ? `<br><span style="color:#aaa">${f.inModernCountry}</span>` : ''}
+        <br><span style="color:#ddd">${formatGlobeDateRange(f)}</span>
+        ${f.materialNote ? `<br><span style="color:#999;font-size:0.9em">${f.materialNote}</span>` : ''}`;
+}
+
+function _positionGlobeTooltipAt(x, y) {
+    _globeTooltip.style.display = 'block';
+    _globeTooltip.style.left    = (x + 14) + 'px';
+    _globeTooltip.style.top     = (y + 14) + 'px';
+}
+
+// Public: show the tooltip for a figure, anchored to its marker on the globe.
+// Called by gaerhf-ui.js when the user hovers a gallery thumbnail on the Globe
+// tab. If the marker is off-screen or hasn't been laid out yet, do nothing.
+function showGlobeTooltipForFigure(figureId) {
+    const f = figuresDict[figureId];
+    if (!f) return;
+    const el = markerElements.get(figureId);
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.width === 0 && rect.height === 0) return;
+    _renderGlobeTooltipContent(f);
+    // Position just to the right of the marker, vertically near its center.
+    _positionGlobeTooltipAt(rect.right, rect.top);
+}
+
+function hideGlobeTooltip() {
+    _globeTooltip.style.display = 'none';
+}
 
 // ── Marker styling: primary / secondary / keyword / default ──────────────────
 //
@@ -312,23 +344,16 @@ function initGlobe() {
             div.addEventListener('mouseenter', e => {
                 if (d.id !== globeHighlightId)
                     div.style.boxShadow = '0 0 0 3px rgba(255,255,255,0.8), 0 1px 6px rgba(0,0,0,0.6)';
-                _globeTooltip.innerHTML = `
-                    <b>${d.label}</b>
-                    ${d.inModernCountry ? `<br><span style="color:#aaa">${d.inModernCountry}</span>` : ''}
-                    <br><span style="color:#ddd">${formatGlobeDateRange(d)}</span>
-                    ${d.materialNote ? `<br><span style="color:#999;font-size:0.9em">${d.materialNote}</span>` : ''}`;
-                _globeTooltip.style.display = 'block';
-                _globeTooltip.style.left    = (e.clientX + 14) + 'px';
-                _globeTooltip.style.top     = (e.clientY + 14) + 'px';
+                _renderGlobeTooltipContent(d);
+                _positionGlobeTooltipAt(e.clientX, e.clientY);
             });
             div.addEventListener('mousemove', e => {
-                _globeTooltip.style.left = (e.clientX + 14) + 'px';
-                _globeTooltip.style.top  = (e.clientY + 14) + 'px';
+                _positionGlobeTooltipAt(e.clientX, e.clientY);
             });
             div.addEventListener('mouseleave', () => {
                 if (d.id !== globeHighlightId)
                     div.style.boxShadow = '0 1px 4px rgba(0,0,0,0.55)';
-                _globeTooltip.style.display = 'none';
+                hideGlobeTooltip();
             });
 
             markerElements.set(d.id, div);

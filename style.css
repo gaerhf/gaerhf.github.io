@@ -8,10 +8,6 @@ body {
 }
 
 :root {
-    /* Centralize header height so timescale can reference it in CSS without JS */
-    --header-height: 33vh;
-    --actual-header-height: auto; /* Dynamic based on content */
-
     /* ─────────────────────────────────────────────────────────────────
        SHARED WIDGET SHELL — DO NOT INLINE THESE VALUES.
        The top-right corner of both the Map and the Globe view stacks
@@ -389,50 +385,6 @@ body.globe-tab-active .detail-window.out-of-range .figure-details-wrapper {
     color: #333;
 }
 
-.culture-info {
-    font-size: 0.8em;
-    color: #777;
-    margin-left: 10px;
-}
-
-#back-to-list {
-    padding: 10px 15px;
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-#back-to-list:hover {
-    background-color: #4cae4c;
-}
-
-.hidden {
-    display: none !important;
-}
-
-#detail-info p {
-    margin: 3px 0;
-    line-height: 1.4;
-}
-
-#detail-info strong {
-    font-weight: bold;
-}
-
-#detail-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow-y: auto;
-    text-align: left;
-}
-
 #timescale-container {
     width: 100%;
     height: 42px;
@@ -541,26 +493,6 @@ body.globe-tab-active .detail-window.out-of-range .figure-details-wrapper {
     z-index: 1321;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
-
-.marker-gallery {
-    background-color: #f0f0f0;
-    /* padding: 10px 20px; */
-    text-align: center;
-    position: fixed; /* Make it stick! */
-    bottom: 0;            /* Stick to the bottom */
-    left: 0;
-    width: 100%;
-}
-
-.marker-gallery a {
-    color: #337ab7;
-    text-decoration: none;
-}
-
-.marker-gallery a:hover {
-    text-decoration: underline;
-}
-
 
 /* Gallery: horizontal scroller anchored to bottom of map container */
 #gallery-container {
@@ -688,21 +620,13 @@ body.globe-tab-active #gallery-list-btn:active { background: rgba(255,255,255,0.
     border-bottom: none;
 }
 
-#tab-buttons {
-    /* width: 100%; */
-    /* display: flex; */
-    /* justify-content: center; */
-    margin-bottom: 0;
-    float: right ;
-}
-
 .tab-button {
     padding: 10px 20px;
     background-color: #f0f0f0;
     border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: bold ;
+    font-weight: bold;
     margin: 0 5px;
     transition: background-color 0.3s ease;
 }
@@ -734,13 +658,9 @@ a.tab-button {
 }
 
 #main-title {
-    /* width: 100%; */
     text-align: center;
-    /* margin: 0 0 6px 0; */
-    /* float:left ; */
     font-size: 1.2em;
-    font-weight: bold ;
-    /* display: block; */
+    font-weight: bold;
 }
 
 #zoom-keyword-btn {
@@ -749,17 +669,6 @@ a.tab-button {
     font-size: 0.8em;
     vertical-align: middle;
     cursor: pointer;
-}
-
-
-/* Tabbed interface and tab content use default block layout (no explicit rules) */
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
 }
 
 #about-container {
@@ -791,18 +700,15 @@ body.about-tab .detail-window {
     left: 0;
     right: 0;
     background: #eaeaea;
-    display: none;
     z-index: 500;
-}
-
-#figure-map-container.active {
-    display: block;
 }
 
 /* ── Cross-fade between Map and Globe tabs ────────────────────────────────
    Both containers stay in the DOM, layered on top of each other; only
    opacity transitions. Visibility flips after the fade so the inactive
    container can't intercept events when other tabs (List/About) show.
+   display is forced to block here so the .tab-content base rule
+   (display: none) can't hide either container.
 */
 #figure-map-container,
 #figure-globe-container {
@@ -902,13 +808,6 @@ body.about-tab .detail-window {
     color: #8b8b8b;
     font-style: italic;
     white-space: nowrap;
-}
-
-#figure-map-scale {
-    width: 100%;
-    min-width: 300px;
-    margin: 0 auto 10px auto;
-    position: relative;
 }
 
 .about-wrapper {
@@ -1055,13 +954,11 @@ body.about-tab .detail-window {
     background-size: 26px 26px;
     border: 0; cursor: pointer;
 }
-#globe-basemap-control:hover #globe-basemap-toggle,
-#globe-basemap-control.open #globe-basemap-toggle { display: none; }
+#globe-basemap-control:hover #globe-basemap-toggle { display: none; }
 #globe-basemap-menu {
     display: none; padding: 6px 10px; font-size: 0.85em;
 }
-#globe-basemap-control:hover #globe-basemap-menu,
-#globe-basemap-control.open #globe-basemap-menu { display: block; }
+#globe-basemap-control:hover #globe-basemap-menu { display: block; }
 #globe-basemap-menu label {
     display: block; padding: 2px 0; cursor: pointer; white-space: nowrap;
 }
@@ -1092,14 +989,12 @@ body.about-tab .detail-window {
     font-size: 20px; line-height: var(--map-widget-size); text-align: center;
     padding: 0;
 }
-.colormap-picker:hover .colormap-picker-toggle,
-.colormap-picker.open .colormap-picker-toggle { display: none; }
+.colormap-picker:hover .colormap-picker-toggle { display: none; }
 .colormap-picker-menu {
     display: none; padding: 6px 10px; font-size: 0.85em;
     background: #fff;
 }
-.colormap-picker:hover .colormap-picker-menu,
-.colormap-picker.open .colormap-picker-menu { display: block; }
+.colormap-picker:hover .colormap-picker-menu { display: block; }
 .colormap-picker-menu label {
     display: block; padding: 2px 0; cursor: pointer; white-space: nowrap;
 }
@@ -1173,7 +1068,6 @@ body.globe-tab-active .link-chip--external {
     border-color: rgba(255,255,255,0.18) !important;
 }
 body.globe-tab-active .link-chip--external:hover { background: rgba(255,255,255,0.14) !important; color: #eee !important; }
-body.globe-tab-active .culture-info { color: #999 !important; }
 
 body.globe-tab-active.gallery-hovered .detail-window {
     background-color: rgba(18,22,42,0.22) !important;
