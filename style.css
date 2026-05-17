@@ -749,65 +749,132 @@ body.about-tab .detail-window {
 /* Popup pane above everything */
 .leaflet-tooltip-pane { z-index: 20000 !important; }
 
-.leaflet-tooltip.popup-like {
-    background: #fff;
-    color: #000;
-    border: 1px solid rgba(0,0,0,0.3);
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
-    padding: 8px 10px;
+/* Shared hover card — used by both the Map (as the Leaflet tooltip
+   className) and the Globe (as the className of the #globe-tooltip div).
+   The combined-list selector keeps specificity high against Leaflet's
+   own .leaflet-tooltip defaults while still matching the standalone div.
+   Horizontal body: text column on the left, small thumbnail on the right,
+   shift hint full-width below.
+
+   Mode is controlled by an opt-in `.popup-card--dark` class on the inner
+   card; default (no modifier) is light. The shell flips via :has(). */
+.leaflet-tooltip.popup-like,
+.popup-like {
+    border-radius: 6px;
+    padding: 7px 10px;
     white-space: normal;
-    max-width: 196px;
-    line-height: 1.25;
+    /* Pin width explicitly. max-width alone doesn't pin it: Leaflet's
+       tooltip auto-shrinks to fit its offsetParent while the Globe's
+       free-floating div sizes to its content. Use the same fixed width
+       on both so layout is identical. */
+    width: 260px;
+    max-width: 260px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    /* Use an absolute font-size so neither view inherits a different
+       base (Leaflet's tooltip and <body> differ). */
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
     transition: opacity 0.22s ease;
+
+    /* Light defaults */
+    background: #fff;
+    color: #1f1f1f;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
-.leaflet-tooltip.popup-like .popup-card {
+/* Dark mode — shell colors flip when the inner card opts in. */
+.leaflet-tooltip.popup-like:has(.popup-card--dark),
+.popup-like:has(.popup-card--dark) {
+    background: rgba(10, 10, 20, 0.9);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.popup-like .popup-card {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 7px;
+    gap: 6px;
 }
 
-.leaflet-tooltip.popup-like .popup-title {
+.popup-like .popup-body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.popup-like .popup-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.popup-like .popup-title {
     font-size: 12px;
     font-weight: 700;
     line-height: 1.3;
     color: #1f1f1f;
 }
 
-.leaflet-tooltip.popup-like .popup-thumb-frame {
-    width: 96px;
-    height: 116px;
-    margin: 0 auto;
-    padding: 6px;
+.popup-like .popup-meta {
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.popup-like .popup-country  { color: #6a6a6a; }
+.popup-like .popup-date     { color: #2f2f2f; font-weight: 500; }
+.popup-like .popup-material { color: #8b8b8b; font-size: 10px; }
+
+.popup-like .popup-thumb-frame {
+    flex: 0 0 auto;
+    width: 60px;
+    height: 72px;
+    padding: 4px;
     box-sizing: border-box;
     border: 1px solid #dfdfdf;
-    border-radius: 8px;
+    border-radius: 4px;
     background: linear-gradient(180deg, #fcfcfc 0%, #f2f2f2 100%);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.85);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.leaflet-tooltip.popup-like .popup-thumb {
+.popup-like .popup-thumb {
     display: block;
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
-    margin: 0 auto;
 }
 
-.leaflet-tooltip.popup-like .popup-hint {
-    margin-top: 1px;
+.popup-like .popup-hint {
+    margin-top: 2px;
     padding-top: 5px;
     border-top: 1px solid #e6e6e6;
     font-size: 10px;
     color: #8b8b8b;
     font-style: italic;
     white-space: nowrap;
+}
+
+/* Dark-mode element overrides */
+.popup-like .popup-card--dark .popup-title    { color: #fff; }
+.popup-like .popup-card--dark .popup-country  { color: #aaa; }
+.popup-like .popup-card--dark .popup-date     { color: #ddd; font-weight: 400; }
+.popup-like .popup-card--dark .popup-material { color: #999; }
+.popup-like .popup-card--dark .popup-thumb-frame {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.05);
+}
+.popup-like .popup-card--dark .popup-hint {
+    border-top-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.55);
 }
 
 .about-wrapper {

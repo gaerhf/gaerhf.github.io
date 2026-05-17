@@ -82,6 +82,22 @@ function formatDateForDisplay(date) {
     return `${year}${era}`;
 }
 
+// Formats a figure's date as a single line for hover/tooltip use.
+// Returns null when no usable date is present so callers can omit the
+// line entirely. Numbers use thousands separators (40,000 BCE) to match
+// how the rich hover card presents the rest of its metadata.
+function formatFigureDateRange(f) {
+    const fmt = n => n < 0
+        ? `${Math.abs(Math.round(n)).toLocaleString()} BCE`
+        : `${Math.round(n).toLocaleString()} CE`;
+    if (f.date !== null && f.date !== undefined) return fmt(f.date);
+    if (f.earliestDate !== null && f.earliestDate !== undefined &&
+        f.latestDate   !== null && f.latestDate   !== undefined)
+        return `${fmt(f.earliestDate)} – ${fmt(f.latestDate)}`;
+    if (f.approximateDate !== null && f.approximateDate !== undefined) return `c. ${fmt(f.approximateDate)}`;
+    return null;
+}
+
 // ---------------------------------------------------------------------------
 // Wikimedia Commons image URL resolution
 // ---------------------------------------------------------------------------

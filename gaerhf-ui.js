@@ -206,24 +206,43 @@ function openAdaptivePopup(marker, content) {
     });
 }
 
-function markerLabelContent(figureId) {
-    const f = figuresDict[figureId];
-    return f ? buildPopupContent(f.label || f.id) : '';
-}
-
-function buildPopupContent(label, options = {}) {
-    const { figureId = null, showImage = false, showHint = false } = options;
-    const imageHtml = showImage && figureId
-        ? `<div class="popup-thumb-frame"><img class="popup-thumb" src="${thumbnailUrl(figureId)}" loading="lazy" alt=""></div>`
+// Single hover-card builder used by every Map and Globe hover/click/Tab
+// callsite. The same content shows everywhere — including the shift-key
+// hint, since showFigureDetails() honors isShiftKeyDown regardless of
+// which view triggered it. Layout is horizontal: text column on the
+// left, small thumbnail on the right, shift hint full-width below.
+//
+// Options:
+//   mode      — 'light' (default) or 'dark'. Renders as a
+//               `.popup-card--dark` modifier on the inner card; CSS
+//               uses :has() to flip the outer shell colors.
+//   thumbnail — boolean (default true). When false, the thumbnail
+//               frame is omitted entirely and the text fills the body.
+function buildHoverContent(figure, { mode = 'light', thumbnail = true } = {}) {
+    if (!figure) return '';
+    const title    = figure.label || figure.id;
+    const country  = figure.inModernCountry
+        ? `<div class="popup-meta popup-country">${figure.inModernCountry}</div>` : '';
+    const dateStr  = formatFigureDateRange(figure);
+    const date     = dateStr
+        ? `<div class="popup-meta popup-date">${dateStr}</div>` : '';
+    const material = figure.materialNote
+        ? `<div class="popup-meta popup-material">${figure.materialNote}</div>` : '';
+    const thumb    = thumbnail
+        ? `<div class="popup-thumb-frame"><img class="popup-thumb" src="${thumbnailUrl(figure.id)}" loading="lazy" alt=""></div>`
         : '';
-
+    const modeCls  = mode === 'dark' ? ' popup-card--dark' : '';
     return `
-        <div class="popup-card">
-            <div class="popup-title">${label}</div>
-            ${imageHtml}
-            ${showHint ? SHIFT_HINT_HTML : ''}
-        </div>
-    `;
+        <div class="popup-card${modeCls}">
+            <div class="popup-body">
+                <div class="popup-text">
+                    <div class="popup-title">${title}</div>
+                    ${country}${date}${material}
+                </div>
+                ${thumb}
+            </div>
+            ${SHIFT_HINT_HTML}
+        </div>`;
 }
 
 // Convenience functions
@@ -636,14 +655,10 @@ function renderFiguresOnMap(figuresArray) {
             highlightMapFigure(figureId);
             highlightGalleryFigure(figureId);
             showFigureDetails(figureId);
-            openAdaptivePopup(marker, buildPopupContent(figure.label || figure.id));
+            openAdaptivePopup(marker, buildHoverContent(figure));
         });
         marker.on('mouseover', () => {
-            openAdaptivePopup(marker, buildPopupContent(figure.label || figure.id, {
-                figureId: figure.id,
-                showImage: true,
-                showHint: true,
-            }));
+            openAdaptivePopup(marker, buildHoverContent(figure));
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });
 
@@ -964,18 +979,21 @@ document.addEventListener('keydown', (event) => {
 
         const targetFigureId = navigationSet[targetIndex];
 
+        // Arrow/Tab navigation updates the info window only — no transient
+        // marker popup, on either view. showFigureDetails() opens a new
+        // window when none is active, otherwise updates the active one.
         showFigureDetails(targetFigureId);
         highlightMapFigure(targetFigureId);
         highlightGalleryFigure(targetFigureId);
 
+        // Clear any hover tooltip the user may have left open before
+        // they started keyboarding, on both views.
         Object.values(leafletMarkers).forEach(m => {
             clearTimeout(m._hoverCloseTimer);
             m._hoverCloseTimer = null;
             try { m.closeTooltip(); } catch {}
         });
-        if (leafletMarkers[targetFigureId]) {
-            openAdaptivePopup(leafletMarkers[targetFigureId], markerLabelContent(targetFigureId));
-        }
+        hideGlobeTooltip();
     }
 
 });
@@ -1688,8 +1706,8 @@ function renderGallery() {
             if (currentTab === 'figure-globe') {
                 showGlobeTooltipForFigure(figureId);
             } else if (leafletMarkers[figureId]) {
-                const content = buildPopupContent(figuresDict[figureId].label, { showHint: true });
-                openAdaptivePopup(leafletMarkers[figureId], content);
+                openAdaptivePopup(leafletMarkers[figureId],
+                    buildHoverContent(figuresDict[figureId], { thumbnail: false }));
             }
             try { showTimescaleHoverOverlay(figureId); } catch (e) { /* ignore */ }
         });

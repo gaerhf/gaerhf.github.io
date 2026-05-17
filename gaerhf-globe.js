@@ -8,8 +8,9 @@
 /* globals figuresDict, currentSortedIndex, currentFigureId, currentKeywordHighlightIds,
    currentTab, showFigureDetails, sortFigures, renderGallery,
    highlightGalleryFigure, getOpenWindowFigureIds, getResolvedFigureColorDate,
-   thumbnailUrl, renderFigureHeader, renderFigureMetadata, renderFigureImage,
-   createDetailWindowShell, getActiveWindow, _setActiveWindowBase, Globe,
+   buildHoverContent, thumbnailUrl, renderFigureHeader, renderFigureMetadata,
+   renderFigureImage, createDetailWindowShell, getActiveWindow,
+   _setActiveWindowBase, Globe,
    dateToColor, getActiveColormap, onColormapChange, bindColormapPicker */
 
 // Color domain and ramp pipeline come from gaerhf-colormap.js (shared with the Map).
@@ -53,41 +54,22 @@ function getFilteredGlobeFigures() {
 // former local getGlobeMidDate() — both views now color by midpoint of
 // earliest/latest, falling back to :date / :approximateDate.
 
-function formatGlobeDateRange(f) {
-    const fmt = n => n < 0
-        ? `${Math.abs(Math.round(n)).toLocaleString()} BCE`
-        : `${Math.round(n).toLocaleString()} CE`;
-    if (f.date !== null && f.date !== undefined) return fmt(f.date);
-    if (f.earliestDate !== null && f.earliestDate !== undefined &&
-        f.latestDate   !== null && f.latestDate   !== undefined)
-        return `${fmt(f.earliestDate)} – ${fmt(f.latestDate)}`;
-    if (f.approximateDate !== null && f.approximateDate !== undefined) return `c. ${fmt(f.approximateDate)}`;
-    return 'Date unknown';
-}
-
 // The top-of-page timescale strip serves as the colormap legend for both
 // the Map and Globe — no per-view legend needed.
 
 // ── Shared hover tooltip (reused across all markers) ─────────────────────────
 
+// The Globe's tooltip is the same .popup-like card used by Leaflet on the
+// Map — only the delivery mechanism differs (free-standing fixed div here,
+// L.tooltip there). All visual styling lives in style.css; only layout
+// (fixed positioning, z-index, pointer-events) is inline.
 const _globeTooltip = document.createElement('div');
 _globeTooltip.id = 'globe-tooltip';
+_globeTooltip.className = 'popup-like';
 _globeTooltip.style.cssText = [
     'position:fixed', 'z-index:29000', 'pointer-events:none', 'display:none',
-    'background:rgba(10,10,20,0.9)', 'border:1px solid rgba(255,255,255,0.22)',
-    'border-radius:6px', 'padding:7px 10px',
-    'font-family:system-ui,sans-serif', 'font-size:0.85em',
-    'max-width:240px', 'line-height:1.5', 'color:#fff',
 ].join(';');
 document.body.appendChild(_globeTooltip);
-
-function _renderGlobeTooltipContent(f) {
-    _globeTooltip.innerHTML = `
-        <b>${f.label}</b>
-        ${f.inModernCountry ? `<br><span style="color:#aaa">${f.inModernCountry}</span>` : ''}
-        <br><span style="color:#ddd">${formatGlobeDateRange(f)}</span>
-        ${f.materialNote ? `<br><span style="color:#999;font-size:0.9em">${f.materialNote}</span>` : ''}`;
-}
 
 function _positionGlobeTooltipAt(x, y) {
     _globeTooltip.style.display = 'block';
@@ -105,8 +87,7 @@ function showGlobeTooltipForFigure(figureId) {
     if (!el) return;
     const rect = el.getBoundingClientRect();
     if (rect.width === 0 && rect.height === 0) return;
-    _renderGlobeTooltipContent(f);
-    // Position just to the right of the marker, vertically near its center.
+    _globeTooltip.innerHTML = buildHoverContent(f, { mode: 'dark', thumbnail: false });
     _positionGlobeTooltipAt(rect.right, rect.top);
 }
 
@@ -344,7 +325,7 @@ function initGlobe() {
             div.addEventListener('mouseenter', e => {
                 if (d.id !== globeHighlightId)
                     div.style.boxShadow = '0 0 0 3px rgba(255,255,255,0.8), 0 1px 6px rgba(0,0,0,0.6)';
-                _renderGlobeTooltipContent(d);
+                _globeTooltip.innerHTML = buildHoverContent(d, { mode: 'dark' });
                 _positionGlobeTooltipAt(e.clientX, e.clientY);
             });
             div.addEventListener('mousemove', e => {
