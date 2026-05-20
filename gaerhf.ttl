@@ -3280,6 +3280,30 @@
    :art-historical-culture-or-tradition :jinsha-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:金沙遺址博物館_Jinsha_Site_Museum_-_51131523226.jpg> .
 
+:whalebone-mask-hot-springs a :human-figure ;
+   rdfs:label "Whalebone Mask from Hot Springs Village, Alaska" ;
+   :described-by <https://lbry-web-007.amnh.org/digital/index.php/items/show/56029> ,
+       <https://aa.uwpress.org/content/48/1/66> ;
+   :earliest-date -1000 ;
+   :latest-date -500 ;
+   :in-modern-country-note "United States" ;
+   :material-note "Whalebone" ;
+   :note "From Arctic Archaeology article: “Two ‘ceremonial’ bone masks were excavated at the Hot Springs Village site (near Port Moller) in 1928 by the Stoll-McCracken Arctic Expedition of the American Museum of Natural History (Weyer 1930). The masks measure approximately 16 cm high by 12 cm wide. Weyer assumed that both masks were made from whale mandibles. One (60.01–5833) is round, with fl aring nostrils and a grimacing mouth (Fig. 6)”" ;
+   :representative-latlong-point (55.99 -160.57) ;
+   :thumbnail-image <https://lbry-web-007.amnh.org/digital/files/original/f017f472c46c2ec08b03883e9191e6bc.jpg> .
+
+:whalebone-mask-hot-springs-teeth a :human-figure ;
+   rdfs:label "Whalebone Mask with Inset Teeth from Hot Springs Village, Alaska" ;
+   :described-by <https://lbry-web-007.amnh.org/digital/index.php/items/show/56037> ,
+       <https://aa.uwpress.org/content/48/1/66> ;
+   :earliest-date -1000 ;
+   :latest-date -500 ;
+   :in-modern-country-note "United States" ;
+   :material-note "Whalebone" ;
+   :note "From Arctic Archaeology article: “The second mask (60.1–5834) is oval with a pointed head, large round eyes, and an open mouth with carved lips and tongue. The mouth has human teeth inset in both the upper and lower jaws (Fig. 7).  ... ”" ;
+   :representative-latlong-point (55.99 -160.57) ;
+   :thumbnail-image <https://lbry-web-007.amnh.org/digital/files/original/1d69028b072c27e87f6c6cbb006bcdc4.jpg> .
+
 :jomon-doju-statuette a :human-figure ;
    rdfs:label "Jōmon Dogū Statuette" ;
    :described-by <https://en.wikipedia.org/wiki/Dogū#Shakōkidogū> ;
