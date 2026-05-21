@@ -3304,14 +3304,14 @@
    :representative-latlong-point (55.99 -160.57) ;
    :thumbnail-image <https://lbry-web-007.amnh.org/digital/files/original/1d69028b072c27e87f6c6cbb006bcdc4.jpg> .
 
-:jomon-doju-statuette a :human-figure ;
-   rdfs:label "Jōmon Dogū Statuette" ;
-   :described-by <https://en.wikipedia.org/wiki/Dogū#Shakōkidogū> ;
-   :earliest-date -1000 ;
-   :latest-date -400 ;
-   :in-modern-country-note "Japan" ;
-   :art-historical-culture-or-tradition :jomon ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_statue,_late_Jomon_period.JPG> .
+# :jomon-doju-statuette a :human-figure ;
+#    rdfs:label "Jōmon Dogū Statuette" ;
+#    :described-by <https://en.wikipedia.org/wiki/Dogū#Shakōkidogū> ;
+#    :earliest-date -1000 ;
+#    :latest-date -400 ;
+#    :in-modern-country-note "Japan" ;
+#    :art-historical-culture-or-tradition :jomon ;
+#    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_statue,_late_Jomon_period.JPG> .
 
 :chorrera-standing-figure a :human-figure ;
    rdfs:label "Chorrera Standing Figure" ;
@@ -5718,12 +5718,26 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (59.067 78.067) ; # Sredny Vasyugan, Kargasoksky District, Tomsk Oblast (approximate, find spot is ~3 km away on the Varen-Igay River)
    :thumbnail-image <https://objet.art/api/file/articles/zm0RCpyF_nXWultIxOJvx.jpg> .
 
+:small-plaque-molds-bjohnhovda a :group-of-human-figures ;
+   rdfs:label "Small molds for decorative Plaques from Björnhovda" ;
+   :described-by <https://samlingar.shm.se/object/32C77A31-D658-4BB5-9DEA-D6D58EDCD0D4> ,
+   <https://sv.wikipedia.org/wiki/Torslundaplåtarna> ,
+      <https://www.wikidata.org/wiki/Q24761074> ;
+   :earliest-date 500 ;
+   :latest-date 800 ;
+   :material-note "Bronze" ;
+   :note "Translated automatically from SHM website: “For the production of press plate decorations on helmets. With two men walking in the same direction, dressed alike in long, knee-length shirts, which are decorated with a wide brim at the bottom and have short sleeves. On the head a helmet, topped with a wild boar. In the right hand a spear with the tip facing downwards. In the left a sword in its sheath.”" ;
+   :in-modern-country-note "Sweden" ;
+   :representative-latlong-point ( 56.650207 16.502379 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Torslundaplåtarna_-_Historiska_museet_-_323552.jpg> .
+
 :bamiyan-buddhas a :group-of-human-figures ;
    rdfs:label "Bamiyan Buddhas" ;
    :described-by <https://en.wikipedia.org/wiki/Buddhas_of_Bamiyan> ;
    :earliest-date 570 ;
    :latest-date 625 ;
    :material-note "Sandstone" ;
+   :note "From Wikipedia: “... the smaller 38 m (125 ft) ‘Eastern Buddha’ was built around 570 CE, and the larger 55 m (180 ft) ‘Western Buddha’ was built around 618 CE, which would date both to the time when the Hephthalites ruled the region. / In March 2001, both structures were destroyed by the Taliban following an order given on February 26, 2001, by Taliban leader Mullah Muhammad Omar”" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.832 67.8267) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_of_Bamiyan.jpg> .
