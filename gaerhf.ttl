@@ -5295,14 +5295,14 @@
    :representative-latlong-point (23.908611 35.4725) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Berenike_Buddha.jpg/500px-Berenike_Buddha.jpg> .
 
-:gift-of-anathapindada-relief a :human-figure ;
-   rdfs:label "Gift of Anathapindada Relief" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/38207> ;
-   :earliest-date 100 ;
-   :latest-date 300 ;
-   :in-modern-country-note "Pakistan" ;
-   :art-historical-culture-or-tradition :gandhara ;
-   :thumbnail-image <https://images.metmuseum.org/CRDImages/as/original/DT8660.jpg> .
+# :gift-of-anathapindada-relief a :human-figure ;
+#    rdfs:label "Gift of Anathapindada Relief" ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/38207> ;
+#    :earliest-date 100 ;
+#    :latest-date 300 ;
+#    :in-modern-country-note "Pakistan" ;
+#    :art-historical-culture-or-tradition :gandhara ;
+#    :thumbnail-image <https://images.metmuseum.org/CRDImages/as/original/DT8660.jpg> .
 
 :paired-male-female-figures-takht-i-bahi a :group-of-human-figures ;
    rdfs:label "Paired Male and Female Figures from Takht-i-Bahi" ;
@@ -6005,23 +6005,23 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (53.813 -2.532) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ribchester_Helmet_c.jpg> .
 
-:roman-period-egyptian-funerary-portrait a :human-figure ;
-   rdfs:label "Roman Period Egyptian Funerary Portrait" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/547951> ;
-   :earliest-date 100 ;
-   :latest-date 150 ;
-   :in-modern-country-note "Egypt" ;
-   :art-historical-culture-or-tradition :roman-egypt ;
-   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/547951/2174855/main-image> .
+# :roman-period-egyptian-funerary-portrait a :human-figure ;
+#    rdfs:label "Roman Period Egyptian Funerary Portrait" ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/547951> ;
+#    :earliest-date 100 ;
+#    :latest-date 150 ;
+#    :in-modern-country-note "Egypt" ;
+#    :art-historical-culture-or-tradition :roman-egypt ;
+#    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/547951/2174855/main-image> .
 
-:gandharan-standing-buddha a :human-figure ;
-   rdfs:label "Gandharan Standing Buddha" ;
-   :described-by <https://en.wikipedia.org/wiki/Standing_Buddha_from_Gandhara_(Tokyo)> ;
-   :earliest-date 100 ;
-   :latest-date 200 ;
-   :art-historical-culture-or-tradition :gandhara ;
-   :in-modern-country-note "Pakistan" ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
+# :gandharan-standing-buddha a :human-figure ;
+#    rdfs:label "Gandharan Standing Buddha" ;
+#    :described-by <https://en.wikipedia.org/wiki/Standing_Buddha_from_Gandhara_(Tokyo)> ;
+#    :earliest-date 100 ;
+#    :latest-date 200 ;
+#    :art-historical-culture-or-tradition :gandhara ;
+#    :in-modern-country-note "Pakistan" ;
+#    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gandhara_Buddha_(tnm).jpeg> .
 
 :paired-figures-funerary-relief-tylos a :group-of-human-figures ;
    rdfs:label "Paired Figures from Funerary Relief of Tylos" ;
@@ -6490,25 +6490,25 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (58.856747 -2.891810) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%27Peedie_Pict%27_Pictish_carved_figure_on_ox_bone_from_Bu_Sands,_Burray,_Orkney.jpg> .
 
-:moche-head-shaped-vessel a :human-figure ;
-   rdfs:label "Moche Head-shaped Vessel" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/308528> ;
-   :earliest-date 500 ;
-   :latest-date 800 ;
-   :material-note "Ceramic" ;
-   :in-modern-country-note "Peru" ;
-   :art-historical-culture-or-tradition :moche-culture ;
-   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/308528/2084843/main-image> .
+# :moche-head-shaped-vessel a :human-figure ;
+#    rdfs:label "Moche Head-shaped Vessel" ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/308528> ;
+#    :earliest-date 500 ;
+#    :latest-date 800 ;
+#    :material-note "Ceramic" ;
+#    :in-modern-country-note "Peru" ;
+#    :art-historical-culture-or-tradition :moche-culture ;
+#    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/308528/2084843/main-image> .
 
-:wari-tray-with-figures a :group-of-human-figures ;
-   rdfs:label "Wari Tray with Figures" ;
-   :described-by <https://www.metmuseum.org/art/collection/search/316330> ;
-   :earliest-date 500 ;
-   :latest-date 1000 ;
-   :material-note "Wood, copper allou" ;
-   :in-modern-country-note "Peru" ;
-   :art-historical-culture-or-tradition :wari-culture ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Snuff_Tray_MET_DT1273_(cropped).jpg> .
+# :wari-tray-with-figures a :group-of-human-figures ;
+#    rdfs:label "Wari Tray with Figures" ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/316330> ;
+#    :earliest-date 500 ;
+#    :latest-date 1000 ;
+#    :material-note "Wood, copper allou" ;
+#    :in-modern-country-note "Peru" ;
+#    :art-historical-culture-or-tradition :wari-culture ;
+#    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Snuff_Tray_MET_DT1273_(cropped).jpg> .
 
 :so-called-bennet-monolith a :human-figure ;
    rdfs:label "So-called Bennet Monolith" ;
