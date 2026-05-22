@@ -6614,6 +6614,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (12.6175 80.198889) ; # Mahabalipuram, India
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg> .
 
+:niederdollendorf-stone a :group-of-human-figures ;
+   rdfs:label "Niederdollendorf Stone" ;
+   :described-by <https://en.wikipedia.org/wiki/Niederdollendorf_stone> ;
+   :earliest-date 600 ;
+   :latest-date 700 ;
+   :material-note "Limestone" ;
+   :note "From Wikipedia: “The stone measures 42.5 cm by 22–25 cm by 16–19 cm (17” by 8–9” by 6–7”) and was carved from Lorraine limestone. It was made in the 7th century and reused later (around the 8th century) as a gravestone. The original purpose is unknown, so the common reference to it as a ‘gravestone’ is slightly misleading. / On one broad side, a spear-wielding man is shown standing on an interlace pattern. Rays extend from his head and he has a circle on his torso. Incised lines extend out from the chest and feet.”" ;
+   :representative-latlong-point (50.707315 7.196520 ) ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Grabstein_von_Niederdollendorf,_Rückseite._Cropped.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:2018_Rheinisches_Landesmuseum_Bonn,_Grabstein_aus_Niederdollendorf.jpg> .
+
 :battle-scene-aberlemno-2 a :group-of-human-figures ;
    rdfs:label "Battle Scene on Stone Aberlemno 2" ;
    :described-by <https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones#The_battle_scene_on_Aberlemno_2> ;
