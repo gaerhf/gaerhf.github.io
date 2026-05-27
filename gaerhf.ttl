@@ -6848,6 +6848,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point ( 47.556667 102.831389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Turkic_Head_of_Koltegin_Statue_(35324303410).jpg> .
 
+:kildalton-cross a :group-of-human-figures ;
+   rdfs:label "Kildalton Cross" ;
+   :described-by <https://en.wikipedia.org/wiki/Kildalton_Cross> ;
+   :earliest-date 750 ;
+   :latest-date 800 ;
+   :material-note "Stone" ;
+   :note "From wikipedia: “The Kildalton Cross features an iconic image of the Virgin and Child, which is closely related to similar Virgin and Child iconography found on St. Martin's Cross and St. Oran's Cross at Iona.”" ;
+   :in-modern-country-note "Scotland" ;
+   :representative-latlong-point (55.683889 -6.044444) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kildalton_Cross_20120411_east_side.jpg> .
+
 :panel-borobudu-hidden-foot a :group-of-human-figures ;
    rdfs:label "Panel from from Borobudur ‘Hidden Foot’" ;
    :described-by <https://en.wikipedia.org/wiki/Borobudur#Reliefs> ;
@@ -7001,6 +7012,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 800 ;
    :latest-date 1000 ;
    :material-note "Sandstone" ;
+   :note "From Wikipedia: “The cross measures about 19 feet (5.8 m) high; including the base, which measures 2 feet 3 inches (0.69 m). The cross is made of sandstone which is yellow in colour. The main shaft of the cross is carved from a single block of sandstone; the base and the capstone on the top are carved from separate stones. ... Every piece of the cross is divided into panels which are decorated with carvings. The carvings are remarkably well preserved, however, they certainly would have originally had much finer detail. Even so, certain details about clothing, weapons, and other things, can still be clearly made out. Biblical themes dominate the carved panels; though there are pieces which feature certain geometric shapes and interlace ornaments.”" ;
    :in-modern-country-note "Ireland" ;
    :representative-latlong-point (53.7775 -6.4175) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monasterboice_(52358533944).jpg> .
