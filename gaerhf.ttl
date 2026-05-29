@@ -7723,6 +7723,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (49.939444 14.188056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mistr_Theodorik,_Sv._Kateřina,_Národní_galerie_v_Praze.jpg> .
 
+:wilton-diptych a :group-of-human-figures ;
+   rdfs:label "Wilton Diptych" ;
+   :described-by <https://en.wikipedia.org/wiki/Wilton_Diptych> ;
+   :earliest-date 1390 ;
+   :latest-date 1399 ;
+   :material-note "Tempura, gold leaf" ;
+   :note "From Wikipedia: “... a small portable diptych of two hinged panels, painted on both sides, now in the National Gallery, London. It is an extremely rare survival of a late medieval religious panel painting from England. The diptych was painted for King Richard II of England, who is depicted kneeling before the Virgin and Child in what is known as a donor portrait. He is presented to them by (left to right) the English saints King Edmund the Martyr, King Edward the Confessor and patron saint, John the Baptist”" ;
+   :in-modern-country-note "United Kingdom" ;
+   :representative-latlong-point ( 51.499167 -0.124722 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anonimo_inglese_o_francese,_dittico_wilton,_1395-99_ca._01.jpg> .
+
 :chincha-burial-post a :human-figure ;
    rdfs:label "Chinca Culture Burial Post" ;
    :described-by <https://www.metmuseum.org/art/collection/search/312640> ,
@@ -7730,7 +7741,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 1400 ;
    :latest-date 1535 ;
    :material-note "Wood" ;
-   :note "Specific findspot not known. From Met Museum website: “”" ;
+   :note "Specific findspot not known. From Met Museum website: “This post was reportedly used as a burial marker on the Peruvian South Coast before the Inca conquest of the region. Most of the post would have been underground when in situ, and it still bears the marks of the rough cutting tools used to shape the sculpture. The head, which would have been above ground, features a stylized face, suggesting a generic ancestor rather than a specific individual.”" ;
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-13.451387 -76.170803 ) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312640/2085962/main-image> .
