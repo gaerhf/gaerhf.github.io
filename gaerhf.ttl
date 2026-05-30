@@ -6625,6 +6625,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Grabstein_von_Niederdollendorf,_Rückseite._Cropped.jpg> ,
       <https://commons.wikimedia.org/wiki/File:2018_Rheinisches_Landesmuseum_Bonn,_Grabstein_aus_Niederdollendorf.jpg> .
 
+:hornhausen-rider-stone a :human-figure ;
+   rdfs:label "Hornhausen Rider Stone" ;
+   :described-by <https://en.wikipedia.org/wiki/Hornhausen_stones> ;
+   :earliest-date 600 ;
+   :latest-date 700 ;
+   :material-note "Sandstone" ;
+   :note "From Wikipedia: “Stone 1 was once divided into three registers, two of which survive clearly to this day. The central register is that of a rider on his steed. The lower register is that of a serpent-like animal. The zigzagging band which frame the figures suggests there was once a register above the rider. The poorly-preserved marks above the central register are probably feet turned to the right.”" ;
+   :in-modern-country-note "Germany" ;
+   :representative-latlong-point ( 52.050278 11.176944 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Halle_(Saale),_Landesmuseum_für_Vorgeschichte,_das_Monument_von_Hornhausen.jpg> .
+
 :battle-scene-aberlemno-2 a :group-of-human-figures ;
    rdfs:label "Battle Scene on Stone Aberlemno 2" ;
    :described-by <https://en.wikipedia.org/wiki/Aberlemno_sculptured_stones#The_battle_scene_on_Aberlemno_2> ;
