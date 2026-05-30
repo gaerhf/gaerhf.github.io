@@ -340,6 +340,21 @@ function initGlobe() {
             return div;
         });
 
+    // Remove the "Loading globe…" placeholder once the basemap texture
+    // has actually finished downloading. globe.gl's onGlobeReady fires
+    // when the WebGL mesh is structurally ready — BEFORE the texture
+    // image is fetched — so it would hide the loader while the sphere is
+    // still invisible. A direct Image() onload on the same URL is a
+    // reliable trigger; the browser HTTP-cache dedupes the request with
+    // globe.gl's own fetch, so no extra bandwidth.
+    {
+        const removeLoader = () => document.getElementById('globe-loading')?.remove();
+        const probe = new Image();
+        probe.addEventListener('load',  removeLoader);
+        probe.addEventListener('error', removeLoader);
+        probe.src = initialBasemap.globe;
+    }
+
     // Snap to the chosen POV BEFORE the first paint — duration 0 means no tween.
     globeInstance.pointOfView(initialPov, 0);
 
