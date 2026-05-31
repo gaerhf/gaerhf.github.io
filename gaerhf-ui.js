@@ -1829,14 +1829,6 @@ function renderKeywordSearch() {
 function getVisibleInRangeFigureIds() {
     const inRange = new Set(Array.isArray(currentSortedIndex) ? currentSortedIndex : []);
 
-    // When a polygon selection is active, the polygon set replaces the
-    // viewport filter (the selection persists regardless of zoom/pan). Still
-    // intersect with the date range so the timescale and polygon compose.
-    if (polygonSelectionActive) {
-        const ids = Array.from(polygonSelectedIds).filter(id => inRange.has(id));
-        return sortFigures(ids, 'date');
-    }
-
     let visible = [];
 
     if (currentTab === 'figure-globe') {
@@ -1847,7 +1839,15 @@ function getVisibleInRangeFigureIds() {
 
     if (!Array.isArray(visible) || visible.length === 0) return [];
 
-    const ids = visible.filter(id => inRange.has(id));
+    // Compose all active filters: viewport ∩ date range, and — when a polygon
+    // selection is active — ∩ the polygon set. Zoom/pan re-runs this (via
+    // onMapViewChange), so the gallery/list/nav track the current viewport
+    // even while a polygon is active. The red marker borders mark full polygon
+    // membership independently of what's currently on screen.
+    let ids = visible.filter(id => inRange.has(id));
+    if (polygonSelectionActive) {
+        ids = ids.filter(id => polygonSelectedIds.has(id));
+    }
     return sortFigures(Array.from(new Set(ids)), 'date');
 }
 
