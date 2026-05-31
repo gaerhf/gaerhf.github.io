@@ -71,6 +71,18 @@ let currentTab = "figure-map";
 let leafletMap = null;
 let leafletMarkers = {}; // Place this at the top level
 
+// Polygon spatial-selection state (view-agnostic). When a polygon is active,
+// `polygonSelectedIds` holds the figure ids whose representative point falls
+// inside it; gallery/list/keyboard-nav narrow to this set (see
+// getVisibleInRangeFigureIds) and matching map markers get a red border (see
+// _applyMapMarkerStyleTo). The Leaflet drawing UI lives in initializeMap; this
+// state + pointInPolygon + recomputePolygonSelection are reusable by the Globe.
+let polygonSelectionActive = false;
+let polygonSelectedIds = new Set();
+// Leaflet drawing handles for the active polygon (Map-only UI).
+let polygonDrawState = { polygon: null, vertices: [], ring: [] };
+let polygonControlButton = null;
+
 let thresholdDebounceTimer = null;
 let isShiftKeyDown = false;
 let isTimescaleThumbDragging = false;
@@ -503,6 +515,35 @@ function filterFiguresByDateRange(startYear, endYear) {
     });
 }
 
+// Ray-casting point-in-polygon test. `ring` is an array of [lat, lng] vertices
+// (open or closed). Pure — no Leaflet dependency — so the Globe can reuse it
+// with a ring it builds its own way.
+function pointInPolygon(lat, lng, ring) {
+    if (!Array.isArray(ring) || ring.length < 3) return false;
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+        const [yi, xi] = ring[i];   // lat, lng
+        const [yj, xj] = ring[j];
+        const intersect = ((yi > lat) !== (yj > lat)) &&
+            (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+    return inside;
+}
+
+// Rebuild polygonSelectedIds from the current figures, keeping those whose
+// representative point falls inside `ring`. Figures with no coordinate are
+// excluded. Callers repaint markers / re-render views afterward.
+function recomputePolygonSelection(ring) {
+    polygonSelectedIds = new Set();
+    if (!Array.isArray(ring) || ring.length < 3) return;
+    Object.keys(figuresDict).forEach(figureId => {
+        const pt = figuresDict[figureId] && figuresDict[figureId].representativeLatLongPoint;
+        if (!pt) return;
+        if (pointInPolygon(pt[0], pt[1], ring)) polygonSelectedIds.add(figureId);
+    });
+}
+
 // Timescale display settings — the log-threshold pipeline now lives in
 // gaerhf-colormap.js. This forwarder keeps the many scale-positioning
 // call sites (renderFiguresAsTimescale, etc.)
@@ -619,6 +660,33 @@ function initializeMap() {
     };
     L.control.zoomToAll({ position: 'topleft' }).addTo(leafletMap);
 
+    // Polygon-selection toggle — stacks directly under the zoom-to-all button
+    // (both topleft). Drops a draggable 5-vertex polygon; gallery/list/nav
+    // narrow to figures inside it. See togglePolygonSelection().
+    L.Control.PolygonSelect = L.Control.extend({
+        onAdd: function () {
+            const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+            container.innerHTML = '⬠';
+            container.style.backgroundColor = 'white';
+            container.style.width = '30px';
+            container.style.height = '30px';
+            container.style.lineHeight = '30px';
+            container.style.textAlign = 'center';
+            container.style.cursor = 'pointer';
+            container.style.fontSize = '18px';
+            container.title = 'Select figures with a polygon';
+            // Don't let clicks/drags on the button reach the map.
+            L.DomEvent.disableClickPropagation(container);
+            container.onclick = function () { togglePolygonSelection(); };
+            polygonControlButton = container;
+            return container;
+        }
+    });
+    L.control.polygonSelect = function (opts) {
+        return new L.Control.PolygonSelect(opts);
+    };
+    L.control.polygonSelect({ position: 'topleft' }).addTo(leafletMap);
+
     // Zoom and pan both change which markers are in view, so both must
     // refresh the gallery and restore highlights the same way.
     const onMapViewChange = () => {
@@ -629,6 +697,122 @@ function initializeMap() {
     };
     leafletMap.on('zoomend', onMapViewChange);
     leafletMap.on('moveend', onMapViewChange);
+}
+
+// --- Polygon spatial selection (Leaflet drawing UI) -----------------------
+
+// Seed a regular pentagon inscribed in ~40% of the current viewport, so the
+// polygon is fully on-screen and easy to grab at any zoom level. Returns an
+// array of 5 [lat, lng] vertices.
+function seedPolygonRing() {
+    const b = leafletMap.getBounds();
+    const center = b.getCenter();
+    const latR = (b.getNorth() - b.getSouth()) * 0.4 / 2;
+    const lngR = (b.getEast() - b.getWest()) * 0.4 / 2;
+    const ring = [];
+    for (let i = 0; i < 5; i++) {
+        const angle = Math.PI / 2 - i * (2 * Math.PI / 5); // clockwise from top
+        ring.push([
+            center.lat + latR * Math.sin(angle),
+            center.lng + lngR * Math.cos(angle),
+        ]);
+    }
+    return ring;
+}
+
+// Recompute the selection from the current ring and refresh every view that
+// reads it: map marker borders, gallery, and the list modal if it's open.
+function refreshAfterPolygonChange() {
+    recomputePolygonSelection(polygonDrawState.ring);
+    _applyMapMarkerStyles(currentFigureId);
+    renderGallery();
+    highlightGalleryFigure(currentFigureId);
+    const listModal = document.getElementById('list-modal');
+    if (listModal && !listModal.hidden) openListModal();
+}
+
+// A draggable vertex handle. Dragging rewrites its slot in the shared ring and
+// redraws the polygon live; on release the selection recomputes.
+function makeVertexMarker(latlng, index) {
+    const icon = L.divIcon({
+        className: 'polygon-vertex-handle',
+        iconSize: [14, 14],
+        iconAnchor: [7, 7],
+    });
+    const m = L.marker(latlng, { icon, draggable: true, zIndexOffset: 3000 }).addTo(leafletMap);
+    m.on('drag', () => {
+        const p = m.getLatLng();
+        polygonDrawState.ring[index] = [p.lat, p.lng];
+        if (polygonDrawState.polygon) polygonDrawState.polygon.setLatLngs(polygonDrawState.ring);
+    });
+    m.on('dragend', () => { refreshAfterPolygonChange(); });
+    return m;
+}
+
+// Shift+drag anywhere on the polygon body translates the whole shape (and its
+// vertex handles) by the cursor delta. Plain (no-shift) drags fall through to
+// normal map panning. Mirrors the vertex makeVertexMarker pattern: move live,
+// recompute the selection only on release.
+function onPolygonShiftDrag(e) {
+    if (!(e.originalEvent && e.originalEvent.shiftKey)) return;
+    L.DomEvent.stop(e.originalEvent); // suppress map pan for this gesture
+    leafletMap.dragging.disable();
+    const startLatLng = e.latlng;
+    const startRing = polygonDrawState.ring.map(v => v.slice());
+    const onMove = (ev) => {
+        const dLat = ev.latlng.lat - startLatLng.lat;
+        const dLng = ev.latlng.lng - startLatLng.lng;
+        polygonDrawState.ring = startRing.map(([la, ln]) => [la + dLat, ln + dLng]);
+        polygonDrawState.polygon.setLatLngs(polygonDrawState.ring);
+        polygonDrawState.vertices.forEach((m, i) => m.setLatLng(polygonDrawState.ring[i]));
+    };
+    const onUp = () => {
+        leafletMap.off('mousemove', onMove);
+        leafletMap.off('mouseup', onUp);
+        leafletMap.dragging.enable();
+        refreshAfterPolygonChange();
+    };
+    leafletMap.on('mousemove', onMove);
+    leafletMap.on('mouseup', onUp);
+}
+
+function activatePolygonSelection() {
+    if (!leafletMap) return;
+    polygonDrawState.ring = seedPolygonRing();
+    polygonDrawState.polygon = L.polygon(polygonDrawState.ring, {
+        color: '#D55E00',
+        weight: 2,
+        fillColor: '#D55E00',
+        fillOpacity: 0.08,
+        // interactive so the body can receive the shift-drag mousedown; plain
+        // drags still pass through to the map (we only stop on shift).
+        interactive: true,
+    }).addTo(leafletMap);
+    polygonDrawState.polygon.on('mousedown', onPolygonShiftDrag);
+    polygonDrawState.vertices = polygonDrawState.ring.map((latlng, i) => makeVertexMarker(latlng, i));
+    polygonSelectionActive = true;
+    if (polygonControlButton) polygonControlButton.classList.add('polygon-control-active');
+    refreshAfterPolygonChange();
+}
+
+function deactivatePolygonSelection() {
+    if (polygonDrawState.polygon) leafletMap.removeLayer(polygonDrawState.polygon);
+    polygonDrawState.vertices.forEach(m => leafletMap.removeLayer(m));
+    polygonDrawState = { polygon: null, vertices: [], ring: [] };
+    polygonSelectionActive = false;
+    polygonSelectedIds = new Set();
+    if (polygonControlButton) polygonControlButton.classList.remove('polygon-control-active');
+    // Repaint markers and return gallery/list to the viewport-based set.
+    _applyMapMarkerStyles(currentFigureId);
+    renderGallery();
+    highlightGalleryFigure(currentFigureId);
+    const listModal = document.getElementById('list-modal');
+    if (listModal && !listModal.hidden) openListModal();
+}
+
+function togglePolygonSelection() {
+    if (polygonSelectionActive) deactivatePolygonSelection();
+    else activatePolygonSelection();
 }
 
 function renderFiguresOnMap(figuresArray) {
@@ -1334,17 +1518,24 @@ function _applyMapMarkerStyleTo(figId, marker, ctx) {
     const isPrimary   = figId === ctx.primaryId && !!ctx.primaryId;
     const isSecondary = !isPrimary && ctx.secondarySet.has(figId);
     const isKeyword   = !isPrimary && !isSecondary && ctx.hasKeyword && ctx.keywordSet.has(figId);
+    // Polygon membership is the lowest-precedence highlight: a clicked
+    // (primary), open (secondary), or keyword-matched marker keeps its own
+    // color so "purple wins" over the red selection ring.
+    const isPolygon   = !isPrimary && !isSecondary && !isKeyword &&
+                        polygonSelectionActive && polygonSelectedIds.has(figId);
 
     if (el) {
         el.classList.toggle('marker-primary',   isPrimary);
         el.classList.toggle('marker-secondary', isSecondary);
         el.classList.toggle('marker-keyword',   isKeyword);
+        el.classList.toggle('marker-polygon',   isPolygon);
     }
 
     marker.setZIndexOffset(
         isPrimary   ? 2000 :
         isSecondary ? 1000 :
         isKeyword   ?  900 :
+        isPolygon   ?  800 :
                          1
     );
 }
@@ -1637,6 +1828,15 @@ function renderKeywordSearch() {
 
 function getVisibleInRangeFigureIds() {
     const inRange = new Set(Array.isArray(currentSortedIndex) ? currentSortedIndex : []);
+
+    // When a polygon selection is active, the polygon set replaces the
+    // viewport filter (the selection persists regardless of zoom/pan). Still
+    // intersect with the date range so the timescale and polygon compose.
+    if (polygonSelectionActive) {
+        const ids = Array.from(polygonSelectedIds).filter(id => inRange.has(id));
+        return sortFigures(ids, 'date');
+    }
+
     let visible = [];
 
     if (currentTab === 'figure-globe') {

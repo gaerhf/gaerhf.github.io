@@ -1194,6 +1194,29 @@ body.globe-panning #globe-inner canvas {
     box-shadow: 0 0 0 6px rgba(230, 159, 0, 1);
 }
 
+/* Inside the active polygon selection — lowest precedence, so primary/
+   secondary/keyword override it (see _applyMapMarkerStyleTo). Red/vermilion
+   ring, distinct from the pink primary and orange keyword. */
+.custom-gray-marker.marker-polygon .marker-inner {
+    transform: scale(1.22);
+    box-shadow: 0 0 0 4px #D55E00, 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Draggable handles at each polygon vertex. */
+.polygon-vertex-handle {
+    background: #fff;
+    border: 2px solid #D55E00;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    cursor: move;
+}
+
+/* Active state for the polygon-select control button. */
+.leaflet-control-custom.polygon-control-active {
+    background-color: #D55E00 !important;
+    color: #fff;
+}
+
 /* Globe-specific size, positioning, and base shadow. globe.gl positions
    the marker by its top-left corner, so negative margins re-center the
    visible circle on the lat/lng point. Shadow is darker than Map's
