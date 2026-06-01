@@ -4216,6 +4216,17 @@
    :representative-latlong-point (31.720900 113.355795) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Two_Tone_Set-bells_of_Marquis_Yi_of_Zeng_(statuette).jpg> .
 
+:caryatids-of-erechtheion a :group-of-human-figures;
+   rdfs:label "Caryatid porch of the Erechtheion";
+   :descibed-by <https://en.wikipedia.org/wiki/Caryatid>;
+   :earliest-date -420;
+   :latest-date -415;
+   :material-note "Marble from Penteli";
+   :note "From Wikipedia: “a sculpted female figure serving as an architectural support taking the place of a column or a pillar supporting an entablature on her head... Although of the same height and build, and similarly attired and coiffed, the six Caryatids are not the same: their faces, stance, draping, and hair are carved separately... Their bulky, intricately arranged hairstyles serve the crucial purpose of providing static support to their necks, which would otherwise be the thinnest and structurally weakest part.”";
+   :in-modern-country-note "Greece";
+   :representative-latlong-point (37.97223 23.72636);
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ath%C3%A8nes_Acropole_Caryatides.JPG>.
+
 :deposit-figurines-san-isidro a :group-of-human-figures ;
    rdfs:label "Deposit of Figurines from San Isidro" ;
    :described-by <https://doi.org/10.15184/aqy.2025.37> ,
@@ -6828,6 +6839,20 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "England" ;
    :representative-latlong-point (55.063611 -2.681944) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg> .
+
+:tianlongshan-bodhisattva-head- a :human-figure ;
+  rdfs:label "Head of a Bodhisattva (Tianlongshan Cave 21)" ;
+  :described-by
+    <https://www.metmuseum.org/art/collection/search/39640> ,
+    <https://commons.wikimedia.org/wiki/File:%E5%94%90_%E5%A4%A9%E9%BE%8D%E5%B1%B1%E7%AC%AC21%E7%AA%9F_%E5%BD%A9%E7%B9%AA%E7%9F%B3%E9%9B%95%E8%8F%A9%E8%96%A9%E9%A0%AD%E5%83%8F%EF%BC%88%E7%A0%82%E5%B2%A9%EF%BC%89-Head_of_a_Bodhisattva_MET_DP170147.jpg> ,
+    <https://en.wikipedia.org/wiki/Tianlongshan_Grottoes> ;
+  :earliest-date 700 ;
+  :latest-date 720 ;
+  :in-modern-country-note "China" ;
+  :note "This anthropomorphic sculpture (Buddhist statue) originates from Cave 21 of the Tianlongshan Grottoes in Taiyuan, Shanxi Province, China, and dates approximately to the early 8th century (Tang Dynasty). Having been dispersed overseas, it is now housed in the Metropolitan Museum of Art in the United States." ;
+  :material-note "Sandstone with pigment" ;
+  :representative-latlong-point (37.736 112.377) ;
+  :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E5%94%90_%E5%A4%A9%E9%BE%8D%E5%B1%B1%E7%AC%AC21%E7%AA%9F_%E5%BD%A9%E7%B9%AA%E7%9F%B3%E9%9B%95%E8%8F%A9%E8%96%A9%E9%A0%AD%E5%83%8F%EF%BC%88%E7%A0%82%E5%B2%A9%EF%BC%89-Head_of_a_Bodhisattva_MET_DP170147.jpg> .
 
 :leshan-giant-buddha a :human-figure ;
    rdfs:label "Leshan Giant Buddha" ;
