@@ -5582,6 +5582,18 @@
    :representative-latlong-point (19.606910 -98.861352) ;
    :thumbnail-image <https://static.cambridge.org//content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0003598X25102214/resource/name/optimisedImage-png-S0003598X25102214_figAb.jpg?pub-status=live> .
 
+:funen-bracteate a :human-figure ;
+   rdfs:label "Funen Bracteate" ;
+   :described-by <https://natmus.dk/historisk-viden/temaer/genstande-af-enestaaende-betydning/genstande-fra-danmarks-oldtid/guldbrakteat/> ,
+    <https://artofthemiddleages.com/s/main/item/2407> ;
+   :earliest-date 400 ;
+   :latest-date 500 ;
+   :material-note "Gold" ;
+   :note "Unknown findspot on Funen Island. Automatically translated from National Museum Denmark website: “The image on the bracteate shows a man with a diadem and long, braided hair. He stands behind an animal with a harness and a ponytail. One of his hands is on the animal's neck, and his foot is visible between its front legs.” " ;
+   :in-modern-country-note "Denmark" ;
+   :representative-latlong-point (55.270023  10.329369 ) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bracteate_from_Funen,_Denmark_(DR_BR42).jpg> .
+
 :smiss-stone-figure-snakes a :human-figure ;
    rdfs:label "Carved Stone with Figure Holding Snakes from Smiss" ;
    :described-by <https://en.wikipedia.org/wiki/Snake-witch_stone> ;
