@@ -7298,7 +7298,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :viking-gaming-piece a :human-figure ;
    rdfs:label "Viking Gaming Piece" ;
-   :described-by <https://archaeology.org/issues/november-december-2025/artifacts/viking-chess-piece/> ;
+   :described-by <https://archaeology.org/issues/november-december-2025/artifacts/viking-chess-piece/> ,
+      <https://doi.org/10.1080/00766097.2025.2518811> ;
    :earliest-date 950 ;
    :latest-date 1000 ;
    :mateial-note "Walrus Ivory" ;
@@ -7630,6 +7631,16 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :in-modern-country-note "France" ;
    :representative-latlong-point (49.2744 0.7003) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Odo_bayeux_tapestry.png> .
+
+:eadwine-scribal-portrait a :human-figure ;
+   rdfs:label "Eadwine Scribal Portrait" ;
+   :described-by <https://en.wikipedia.org/wiki/Eadwine_Psalter#Eadwine_and_his_portrait> ;
+   :earliest-date 1130 ;
+   :latest-date 1170 ;
+   :note "From Wikipedia: “ ... of the conventional type of an author portrait, at this period most often seen in evangelist portraits at the start of the Gospels. These look right or forward to the pages following containing their work. Eadwine's is placed at the end of the book, after the text, so he looks left, back over it.”" ;
+   :in-modern-country-note "United Kingdom" ;
+   :representative-latlong-point ( 52.207125 0.115228 ) ;
+   :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Unknown-artist-eadwine-the-scribe-at-work-eadwine-psalter-christ-church-canterbury-england-uk-circa-1160-70.jpg> .
 
 :descent-cross-erill-la-vall a :human-figure ;
    rdfs:label "Descent from the Cross at Erill la Vall" ;
