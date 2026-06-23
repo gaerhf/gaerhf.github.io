@@ -1446,7 +1446,7 @@
    :approximate-date -4500 ;
    :in-modern-country-note "Italy" ;
    :note "Approximate location." ;
-   :representative-latlong-point (40.416667 8.633333) ;
+   :representative-latlong-point (39.919218 8.497555) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:R20S09-90_(52319225595).jpg> .
 
 :seated-figure-vinca a :human-figure ;
