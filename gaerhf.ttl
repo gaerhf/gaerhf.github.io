@@ -802,7 +802,7 @@
    :described-by <https://en.wikipedia.org/wiki/Urfa_Man> ;
    :approximate-date -9000 ;
    :in-modern-country-note "Turkey" ;
-   :materia-note "Sandstone, obsidian (eyes)" ;
+   :material-note "Sandstone, obsidian (eyes)" ;
    :note "From Wikipedia: ”The Urfa man, also known as the Balıklıgöl statue, is an ancient human shaped statue found during excavations in Balıklıgöl near Urfa, in the geographical area of Upper Mesopotamia, in the southeast of modern Turkey. It is dated c. 9000 BC to the period of the Pre-Pottery Neolithic…/ The statue is nearly 1.90 meters tall.[9] The eyes form deep holes, in which are set segments of black obsidian.[3] It features a V-shaped collar or necklace. The hands are clasped in front, covering the genitals.”" ;
    :representative-latlong-point (37.158333 38.791667) ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -858,7 +858,7 @@
    :described-by <https://www.cambridge.org/core/journals/antiquity/article/flint-figurines-from-the-early-neolithic-site-of-kharaysin-jordan/FFEB57291718AF9FF216F1113844C61B> ;
    :earliest-date -8500 ;
    :latest-date -6500 ;
-   :materia-note "Flint" ;
+   :material-note "Flint" ;
    :note "From article abstract: “This article presents a unique assemblage of flint artefacts from the Middle Pre-Pottery Neolithic B (eighth millennium BC) site of Kharaysin in Jordan. Contextual, morphological, statistical and use-wear analyses of these artefacts suggest that they are not tools but rather human figurines. Their close association with burial contexts suggests that they were manufactured and discarded during mortuary rituals and remembrance ceremonies that included the extraction, manipulation and redeposition of human remains.”" ;
    :in-modern-country-note "Jordan" ;
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
@@ -1043,7 +1043,7 @@
 
 :seated-female-tepe-sarab a :human-figure ;
    rdfs:label "Seated Female figure from Tepe Sarab" ;
-   :desribed-by <https://www.worldhistory.org/image/18287/neolithic-clay-figurine-from-west-iran/> ;
+   :described-by <https://www.worldhistory.org/image/18287/neolithic-clay-figurine-from-west-iran/> ;
    :earliest-date -7000 ;
    :latest-date -6100 ;
    :in-modern-country-note "Iran" ;
@@ -1321,7 +1321,7 @@
    :latest-date -4000 ;
    :material-note "Hippopotamus Ivory" ;
    :note "From Louvre website: “Hauteur : 24,8 cm ; Longueur : 4,7 cm ; Epaisseur : 4,2 cm”" ;
-   :modern-country-note "Israel" ;
+   :in-modern-country-note "Israel" ;
    :representative-latlong-point (31.244865 34.840366) ;
    :thumbnail-image <https://collections.louvre.fr/media/cache/small/0000000021/0000146119/0000218347_OG.JPG> .
 
@@ -1500,7 +1500,7 @@
    :latest-date -4000 ;
    :material-note "Hippopotamus Ivory" ;
    :in-modern-country-note "Egypt" ;
-   :represenative-latlong-point (26.9925 31.4156) ;
+   :representative-latlong-point (26.9925 31.4156) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/50f5be40_b3f9_4600_8e01_a3b7006b9b66/mid_00032161_001.jpg> .
 
 :head-from-lake-varna a :human-figure ;
@@ -1826,7 +1826,7 @@
    rdfs:label "Face Pot from Månehøj Tomb" ;
    :described-by <https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-neolithic-period/the-megalithic-tombs-of-the-stone-age/the-mysterious-face-pots-of-themegalithic-period/> ;
    :earliest-date -3500 ;
-   :latest-datae -3000 ;
+   :latest-date -3000 ;
    :material-note "Ceramic" ;
    :in-modern-country-note "Denmark" ;
    :representative-latlong-point (55.114887 11.740591) ;
@@ -1849,7 +1849,7 @@
       <https://en.wikipedia.org/wiki/Niuheliang> ;
    :earliest-date -3500 ;
    :latest-date -3000 ;
-   :materia-note "Jade, ceramic" ;
+   :material-note "Jade, ceramic" ;
    :note "I have not found a good, discrete page for this object The *Ancient Origins* has many adds." ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (41.322015 119.51319) ;
@@ -1874,7 +1874,6 @@
 #    :in-modern-country-note "China";
 #    :representative-latlong-point ( 41.32314 119.4029693 );
 #    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Neolithic_pottery_pregnant_woman,_Hongshan_Culture,_Liaoning,_1982.JPG>.
-
 
 :statue-min-koptos a :human-figure ;
    rdfs:label "Statue of Min from Koptos" ;
@@ -1985,7 +1984,7 @@
 
 :cross-shaped-figure-pomos a :human-figure ;
    rdfs:label "Cross-shaped Figure from Pomos" ;
-   :desribed-by <https://en.wikipedia.org/wiki/Idol_of_Pomos> ;
+   :described-by <https://en.wikipedia.org/wiki/Idol_of_Pomos> ;
    :approximate-date -3000 ;
    :in-modern-country-note "Cyprus" ;
    :representative-latlong-point (35.159722 32.545) ;
@@ -2434,7 +2433,7 @@
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :approximate-date -2200 ;
    :apparent-gender :likely-male ;
-   :materia-note "Steatite" ;
+   :material-note "Steatite" ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (27.329167 68.138889) ; # ll for Mohenjo-daro, Pakistan
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg> .
@@ -3016,7 +3015,7 @@
    :described-by <https://en.wikipedia.org/wiki/Hagia_Triada_Sarcophagus>,
    <https://heraklionmuseum.gr/en/exhibit/the-hagia-triada-sarcophagus/> ;
    :earliest-date -1370 ;
-   :lastest-date -1320 ;
+   :latest-date -1320 ;
    :note "From Wikipedia: “All four faces of the sarcophagus are fully painted in several colours, using the fresco technique otherwise only found in Minoan paintings on walls, and sometimes floors and ceilings. Each of the long sides has a long section with a narrative figure scene of a religious ritual.”" ;
    :material-note "Plastered Limestone" ;
    :in-modern-country-note "Greece" ;
@@ -3194,7 +3193,6 @@
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (39.115278 -5.745833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Estela_de_Magacela_(29350234441).jpg> .
-
 
 :clamshell-carved-face a :human-figure ;
    rdfs:label "Clamshell with Carved Face" ;
@@ -3721,7 +3719,7 @@
    :latest-date -625 ;
    :material-note "Ceramic" ;
    :note "From Wikipedia: “The Eleusis amphora shows some of the earliest artistic depictions of Greek mythology. On the neck of the vase, the figures depict Odysseus and his men blinding the cyclops Polyphemus. The register just below the neck shows a lion chasing a boar. Although it is hard to see because the amphora was found in pieces and then reconstructed, the central register shows Athena and Perseus escaping after Perseus beheads Medusa.”" ;
-   :in-modern-coountry-note "Greece" ;
+   :in-modern-country-note "Greece" ;
    :representative-latlong-point (38.0407 23.5376) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Funerary_proto-Attic_amphora_by_Polyphemos_painter_depicting_Odysseus_and_his_men_blinding_the_cyclops_Polyphemus_from_xxx_flickr_8706777442_b4db371a26_o.jpg> .
 
@@ -3816,7 +3814,7 @@
    :latest-date -500 ;
    :material-note "Electrum" ;
    :note "Findspot not known. Mapped to Sardis as a candidate for the mint that produced this coin. From BM website: “Head of warrior in crested Corinthian helmet, left. (obverse) Incuse square. (reverse)”" ;
-   :in-mondern-country-note "Turkey" ;
+   :in-monern-country-note "Turkey" ;
    :representative-latlong-point (38.488333 28.040278) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2023_1/18_12/b4eaee21_d686_4b39_83d9_af8e00d2f296/mid_ERC_Cab_129_OFFICIAL_00926.jpg> .
 
@@ -4244,7 +4242,7 @@
 
 :caryatids-of-erechtheion a :group-of-human-figures;
    rdfs:label "Caryatid porch of the Erechtheion";
-   :descibed-by <https://en.wikipedia.org/wiki/Caryatid>;
+   :described-by <https://en.wikipedia.org/wiki/Caryatid>;
    :earliest-date -420;
    :latest-date -415;
    :material-note "Marble from Penteli";
@@ -4381,7 +4379,7 @@
       <http://www.ombradellasera.com/en_01.htm> ;
    :earliest-date -300 ;
    :latest-date -200 ;
-   :material-not "Bronze" ;
+   :material-note "Bronze" ;
    :note "From Wikipedia: “.. nude male, 57.5 centimetres long, with very elongated body but head in normal proportions.”" ;
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (43.4 10.866667) ;
@@ -4397,7 +4395,6 @@
    :in-modern-country-note "Tajikistan" ;
    :representative-latlong-point (37.098889 68.285) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Head_of_Bactrian_ruler_(Satrap),_Temple_of_the_Oxus,_Takht-i-Sangin,_3rd-2nd_century_BC.jpg> .
-
 
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
@@ -4653,7 +4650,6 @@
    :representative-latlong-point (15.001667 45.815833) ;
    :thumbnail-image <https://ids.si.edu/ids/iiif/FS-S2013.2.77.1-2/full/500,/0/default.jpg> .
 
-
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
 
 :hendy-heath a :human-figure ;
@@ -4661,7 +4657,7 @@
    :described-by <https://www.peoplescollection.wales/items/411849#?xywh=-1002%2C-200%2C4544%2C3983> ,
       <https://www.peoplescollection.wales/items/12570#?xywh=-359%2C-12%2C1170%2C768> ;
    :approximate-date 50 ;
-   :materia-note "Cheshire sandstone" ;
+   :material-note "Cheshire sandstone" ;
    :note "From the People's Collection Wales website: “This enigmatic stone head, carved from quartz rich red sandstone, was discovered while ploughing a field at Hendy farm near Llanfairpwllgwyngyll on Anglesey during the 1950s. It is widely believed to date from the late Iron Age and that it depicts a Celtic deity or god. Its top is slightly flattened and the mouth has a drilled opening to one side; both features suggest that offerings were made to the head as part of a ritual or ceremony.”" ;
    :in-modern-country-note "Wales" ;
    :representative-latlong-point (53.127731 -4.280277) ;
@@ -4775,7 +4771,7 @@
    :described-by <https://ohiomemory.org/digital/collection/p267401coll7/id/1471/rec/85> ,
     <https://adenaandhopewellart.tumblr.com/post/154227740374/hopewell-figurines> ;
    :earliest-date -200 ;
-   :latest-dat 500 ;
+   :latest-date 500 ;
    :material-note "Copper" ;
    :in-modern-country-note "United States" ;
    :representative-latlong-point (39.361104 -83.085157) ;
@@ -4858,7 +4854,7 @@
 
 :alabaster-female-figurine-with-ruby-eyes a :human-figure ;
    rdfs:label "Alabaster Female Figurine with Ruby Eyes" ;
-   :Described-by <https://collections.louvre.fr/en/ark:/53355/cl010144841> ,
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010144841> ,
    <https://doi.org/10.1086/723488> ;
    :earliest-date -100 ;
    :latest-date 100 ;
@@ -4988,7 +4984,7 @@
    rdfs:label "Small Skeleton in Bronze" ;
    :described-by <https://www.getty.edu/art/collection/object/103TJM> ;
    :earliest-date -25 ;
-   :latestdate 100 ;
+   :latest-date 100 ;
    :material-note "Bronze" ;
    :in-modern-country-note "Italy, by default." ;
    :note "Findspot not known. Mapped to Rome as unfortunate default." ;
@@ -5091,7 +5087,7 @@
       <https://museum.doaks.org/objects-1/info/27025> ;
    :earliest-date 1 ;
    :latest-date 100 ;
-   :materia-note "Bronze" ;
+   :material-note "Bronze" ;
    :note "From Dumbarton Oaks website: “On the drapery around his lower body, two names are inscribed in punched letters: Eudamidas appears from knee to knee and may be the name of the person who commissioned the statuette. The name along the hem of the drapery, Perdik, has two literary associations, each of which casts the statuette in a slightly different light. It may refer to Perdix, a certain Athenian peddler, who had a club foot, and whose name had become synonymous with ailments of the foot. This explanation would correspond with the original function of such a small-scale bronze statuette--in ancient Greece, they were commissioned often as dedications to gods, offered at shrines either in gratitude for blessings received or as supplication by worshipers for divine favors, such as an athletic victory or healing. Eudamidas may have commissioned this piece as an offering to Asklepios, the Greek god of healing, for assistance with a foot problem. / On the other hand, Perdik may be an abbreviated form of Perdikkas, a young man who had neglected to sacrifice to Aphrodite while studying in Athens. As retribution, the vengeful goddess cursed him with a love for his own mother which caused him to waste away—a story that explains the combination of adolescence with the emaciated body.”" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (49.378702 3.335629) ;
@@ -5430,7 +5426,7 @@
 
 :bronze-statue-dhamar-ali-yahbur a :human-figure ;
    rdfs:label "Bronze Statue of Dhamarʿalī Yuhabirr" ;
-   :desribed-by <https://en.wikipedia.org/wiki/Dhamar_Ali_Yahbur> ;
+   :described-by <https://en.wikipedia.org/wiki/Dhamar_Ali_Yahbur> ;
    :approximate-date 150 ;
    :apparent-gender :male ;
    :art-historical-culture-or-tradition :ancient-arabia ;
@@ -5710,7 +5706,7 @@
    rdfs:label "Gold Pendant (Panama)" ;
    :described-by <https://www.metmuseum.org/art/collection/search/312492> ;
    :earliest-date 400 ;
-   :lastest-date 1000 ;
+   :latest-date 1000 ;
    :in-modern-country-note "Panama" ;
    :representative-latlong-point (8.325777 -80.197059) ;
    :note "No specific findspot known" ;
@@ -6325,7 +6321,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :harbor-scene-torlonia-relief a :group-of-human-figures ;
    rdfs:label "Harbor Scene on “Torlonia Relief”" ;
-   :defined-by <https://www.fondazionetorlonia.org/torlonia-collection/bassorilievo-con-veduta-del-portus-augusti.html> ,
+   :described-by <https://www.fondazionetorlonia.org/torlonia-collection/bassorilievo-con-veduta-del-portus-augusti.html> ,
       <https://www.ostia-antica.org/portus/forum-vinarium-torlonia.htm> ;
    :earliest-date 175 ;
    :latest-date 250 ;
@@ -6402,7 +6398,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :apparent-gender :female ;
    :material-note "Ceramic, copper alloy" ;
    :note "Specific findspot not known." ;
-   :in-modern-country "Egypt" ;
+   :in-modern-country-note "Egypt" ;
    :representative-latlong-point (27.807431 30.873016) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Voodoo_doll_Louvre_E27145a.jpg> .
 
@@ -7253,7 +7249,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Rongxian_Giant_Buddha> ;
    :approximate-date 817 ;
    :note "Adapted from Wikipedia: “The Rongxian Giant Buddha (simplified Chinese: 荣县大佛; traditional Chinese: 榮縣大佛; pinyin: Róngxìan Dàfó) formerly romanized as Yong-hien or Hong-yien, is a 36.7-metre (120 ft) tall stone statue, built around 817 (during the Tang dynasty), depicting Maitreya.[citation needed] It is 90 kilometres east of the Leshan Giant Buddha. The Buddha is carved out of the cliff face of a stone hill that lies to the north east of Rongxian and the Rongxi River in the eastern part of Sichuan province in China. Standing 414 metres above sea level, the stone sculpture overlooks the town of Rongxian below its feet.”" ;
-   :in-moodern-country-note "China" ;
+   :in-modern-country-note "China" ;
    :representative-latlong-point (29.454722 104.431111) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rongxian_Dafo_2014.04.24_13-51-12.jpg> .
 
@@ -7380,7 +7376,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :latest-date 1100 ;
    :material-note "Ceramic" ;
    :note "The chronology may be towards the later part of the 900 to 1100 range, see the linked article by A. Antonities. Image here is after Fig. 3 in that. From Google Arts and Culture: “ …male figurine has an animal-like head, making it therianthropic or part-human, part animal. Many of the Schroda anthropomorphic figurines are clearly sexed. This figurine is covered in red ochre on the back and on the lower part of the front abdomen.” The Wikipedia page needs improvement and it is hoped images of the figurines will make it to Wikimedia Commons." ;
-   :in-mondern-country-note "South Africa" ;
+   :in-modern-country-note "South Africa" ;
    :representative-latlong-point (-22.183333 29.423611) .
 
 :blythe-geoglyphs a :group-of-human-figures ;
@@ -7435,7 +7431,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 950 ;
    :latest-date 1000 ;
    :apparent-gender :male ;
-   :mateial-note "Walrus Ivory" ;
+   :material-note "Walrus Ivory" ;
    :in-modern-country-note "Norway" ;
    :representative-latlong-point (59.785901 10.478906) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2025/09/ND25-Artifact-Norway-Viking-Chess-Piece-1.jpg> .
@@ -7449,7 +7445,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :latest-date 1000 ;
    :material-note "Ivory" ;
    :note "From Louvre Website: “…comporte deux volets qui se referment sur la partie centrale. Lorsqu'il est ouvert, la partie centrale, sculptée en très fort relief, offre deux registres superposés, séparés par un bandeau à décor de palmettes et de fleurons alternés. Au registre supérieur, le Christ trône entre la Vierge et saint Jean-Baptiste, tous deux debout de chaque côté, et tournés vers lui pour former la traditionnelle Déisis, la prière d'intercession pour le salut de l'Humanité. Au dessus du trône, deux anges en buste s'inscrivent dans des couronnes végétales rehaussées d'étoiles. Ils sont anonymes à la différence de tous les autres personnages du triptyque, identifiés par les inscriptions gravées. En dessous de la Déisis prennent place cinq apôtres : Pierre au centre, Paul et André à sa gauche, et, à sa droite Jean l'Evangéliste et Jacques. Deux bandeaux enferment la partie centrale. Sur celui du haut, trois petits médaillons contiennent chacun un buste : il s'agit de trois prophètes, Elie, placé au-dessus du Christ, Jérémie, à gauche, et Isaïe, à droite. Les volets se divisent en trois registres : des saints en pied, aux registres supérieur et inférieur, et des saints en buste, inscrits dans des médaillons, au registre médian.”" ;
-   :modern-country-note "Turkey" ;
+   :in-modern-country-note "Turkey" ;
    :representative-latlong-point ( 41.008333 28.98 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Triptych_Harbaville_Louvre_OA3247_recto.jpg> .
 
@@ -7602,7 +7598,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Flourite figureine from Ware Mounds" ;
    :described-by <https://en.wikipedia.org/wiki/Ware_Mounds_and_Village_Site#Stone_statue> ;
    :earliest-date 1000 ;
-   :latest0date 1300 ;
+   :latest-date 1300 ;
    :material-note "Flourite" ;
    :note "From Wikipedia: “A Mississippian culture stone statue made of fluorite was found buried in Mound 1 by Thomas Perrine in 1873 and nicknamed ‘Anna’.”" ;
    :in-modern-country-note "United States" ;
@@ -7780,7 +7776,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 :descent-cross-erill-la-vall a :human-figure ;
    rdfs:label "Descent from the Cross at Erill la Vall" ;
    :described-by <https://en.wikipedia.org/wiki/Erill_la_Vall_Descent_from_the_Cross> ;
-   :earliest-datae 1150 ;
+   :earliest-date 1150 ;
    :latest-date 1200 ;
    :material-note "Wood" ;
    :note "From Wikipedia: “In the centre was the figure of Jesus Christ held by Joseph of Arimathea and unnailed by Nicodemus, flanked by the Virgin Mary and Saint John the Evangelist on either side, with the penitent and impenitent thieves, Dismas and Gestas, at the ends, respectively.”" ;
@@ -7838,7 +7834,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 
 :emmons-rattle-mask a :human-figure ;
    rdfs:label "So-called Emmons Rattle Mask" ;
-   :defined-by <https://en.wikipedia.org/wiki/Emmons_Cemetery_Site#Emmons_mask> ,
+   :described-by <https://en.wikipedia.org/wiki/Emmons_Cemetery_Site#Emmons_mask> ,
       <https://www.museum.state.il.us/muslink/behind/htmls/cr_an_col2.html> ;
    :approximate-date 1200 ;
    :material-note "Coniferous wood, copper" ;
