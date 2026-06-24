@@ -428,10 +428,12 @@ async function buildFiguresInfoDict($rdf) {
                 // Extract all string/literal values consistently - no RDF nodes should reach figuresDict
                 const inModernCountry = tp.anyValue(subject, inModernCountryProp) || null;
                 const materialNote = tp.anyValue(subject, materialNoteProp) || null;
-                // :apparent-gender is a URI node (e.g. :male); store the bare term ("male")
-                const apparentGenderNode = tp.any(subject, apparentGenderProp);
-                const apparentGender = apparentGenderNode
-                    ? apparentGenderNode.value.replace('urn:gaerhf:id:', '')
+                // :apparent-gender values are URI nodes (e.g. :male); a figure may carry
+                // more than one (e.g. a paired male/female). Store the bare terms joined.
+                const apparentGenderTerms = tp.each(subject, apparentGenderProp)
+                    .map(n => n.value.replace('urn:gaerhf:id:', ''));
+                const apparentGender = apparentGenderTerms.length
+                    ? apparentGenderTerms.join(', ')
                     : null;
                 const imageSourceUrls = tp.each(subject, thumbnailImageProp).map(n => n.value);
                 const wikimediaImagePages = tp.each(subject, wikipediaImagePageProp).map(n => n.value);
@@ -468,7 +470,7 @@ async function buildFiguresInfoDict($rdf) {
                     cultureDescribedBy: cultureDescribedBy,  // string or null
                     materialNote: materialNote,  // string or null
                     inModernCountry: inModernCountry,  // string or null
-                    apparentGender: apparentGender,  // string ("male"/"female"/"unclear") or null
+                    apparentGender: apparentGender,  // comma-joined string ("male", "male, female", …) or null
                     imageSourceUrls: imageSourceUrls,       // array of direct image URLs
                     wikimediaImagePages: wikimediaImagePages, // array of Wikimedia Commons page URLs
                     representativeLatLongPoint: representativeLatLongPoint,  // [number, number] or null
