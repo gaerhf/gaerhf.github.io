@@ -172,6 +172,7 @@ function renderFigureMetadata(infoEl, figure) {
     }
     if (figure.inModernCountry) html += `<p><strong>Modern Country:</strong> ${figure.inModernCountry}</p>`;
     if (figure.materialNote)    html += `<p><strong>Material:</strong> ${figure.materialNote}</p>`;
+    if (figure.apparentGender)  html += `<p><strong>Apparent Gender:</strong> ${figure.apparentGender}</p>`;
     if (figure.date !== null && figure.date !== undefined)
         html += `<p><strong>Date:</strong> ${formatDateForDisplay(figure.date)}</p>`;
     else if (figure.approximateDate !== null && figure.approximateDate !== undefined)

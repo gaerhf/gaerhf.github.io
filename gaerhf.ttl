@@ -300,6 +300,7 @@
       <https://en.wikipedia.org/wiki/Caves_in_the_Maros-Pangkep_karst> ,
       <https://smarthistory.org/earliest-hunting-scene-in-sulawesi-indonesia/> ;
    :approximate-date -46000 ;
+   :apparent-gender :unclear ;
    :note "Approximate location. There are human figures to the left of the large bovine animal. From linked article abstract: “We show that a hunting scene from Leang Bulu’ Sipong 4, which was originally dated using the previous approach to a minimum of 43,900 thousand years ago (ka)3, has a minimum age of 50.2 ± 2.2 ka, and so is at least 4,040 years older than thought.”" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-4.796537 119.548710) ;
@@ -312,6 +313,7 @@
       <https://www.nature.com/articles/nature07995> ;
    :earliest-date -40000 ;
    :latest-date -35000 ;
+   :apparent-gender :female ;
    :in-modern-country-note "Germany" ;
    :note "Translated from the Museum Blaubeuren site: “The statuette is 40,000 years old and was carved from a mammoth tusk. It broke apart over time in the ground. Six fragments were pieced together to form an almost complete figure. Instead of a head, there is a loop in the neck area. The female figure was once worn as an amulet or piece of jewelry.”" ;
    :material-note "Mammoth ivory" ;
@@ -337,6 +339,7 @@
       <https://www.pnas.org/doi/10.1073/pnas.2520385123> ;
    :earliest-date -35000 ;
    :latest-date -30000 ;
+   :apparent-gender :unclear ;
    :material-note "Mammoth ivory" ;
    :in-modern-country-note "Germany" ;
    :representative-latlong-point (48.398333 9.772222) ; # ll for cave
@@ -359,6 +362,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Doln%C3%AD_V%C4%9Bstonice> ;
    :earliest-date -31000 ;
    :latest-date -27000 ;
+   :apparent-gender :female ;
    :material-note "Ceramic" ;
    :in-modern-country-note "Czech Republic" ;
    :note "Adapted from Wikipedia: “ …a ceramic statuette of a nude female figure dated to 31,000–27,000 years ago (Gravettian industry). It was found at the Paleolithic site Dolní Věstonice in the Moravian basin south of Brno, at the base of Děvín Mountain in what is today the Czech Republic.”" ;
@@ -374,6 +378,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Willendorf> ;
    :earliest-date -29000 ;
    :latest-date -27000 ;
+   :apparent-gender :female ;
    :material-note "Oolitic limestone" ;
    :note "Adapted from Wikipedia: ” …an 11.1-centimetre-tall (4.4 in) [female] figurine estimated to have been made c. 30,000 years ago. It was recovered on 7 August 1908 from an archaeological dig conducted by Josef Szombathy, Hugo Obermaier, and Josef Bayer at a Paleolithic site near Willendorf, a village in Lower Austria. [It] is carved from an oolitic limestone that is not local to the area, and tinted with red ochre.”" ;
    :in-modern-country-note "Austria" ;
@@ -386,6 +391,7 @@
    :described-by <https://www.donsmaps.com/brnoburial.html> ;
    :earliest-date -29000 ;
    :latest-date -25000 ;
+   :apparent-gender :male ;
    :material-note "Mammoth ivory" ;
    :note "The site Don's Maps has extensive information on the figure and also quotes other works, as here: “A man's head and body carved from mammoth ivory was found at Brno in Moravia. A portion of the neck is missing, and the legs are broken off. There once were arms and part of one survives, but whether the legs were ever complete is not known. If they were, and were long in proportion, then the figure would have stood some 17 inches (42 cm) tall. In spite of the ravaged condition of the face, enough survives to show that it was no caricature: the hair was cropped, the brow rather low but straight, the eyes deep-sunk. The body is too damaged to judge its degree of naturalism but it seems more schematic than the head. Both head and body are pierced lengthwise. The figure was found with the burial of a man who wore, in his prepared grave, a headdress or necklace made up of some 600 slivers of Dentalia shells, roundels cut from bone, and cut and polished beads of mammoth tooth, and finally a stone disc with a central hole, probably used in drilling and possibly connected with fire making”." ;
    :in-modern-country-note "Czech Republic" ;
@@ -421,6 +427,7 @@
    :described-by <https://en.wikipedia.org/wiki/Venus_figurines_of_Kostyonki> ;
    :earliest-date -25000 ;
    :latest-date -20000 ;
+   :apparent-gender :female ;
    :material-note "Ivory" ;
    :in-modern-country-note "Russia" ;
    :art-historical-culture-or-tradition :gravettian ;
@@ -531,6 +538,7 @@
    :art-historical-culture-or-tradition :australian-first-nations ;
    :earliest-date -15000 ;
    :latest-date -3000 ;
+   :apparent-gender :unclear ;
    :in-modern-country-note "Australia" ;
    :representative-latlong-point (-17.49145 124.53265) ;
    :note "Location is approximate, as the exact location is not readily available to protect the site. Adapted from Wikipedia: “The Gwion Gwion rock paintings, Gwion figures, Kiro Kiro or Kujon (also known as the Bradshaw rock paintings, Bradshaw rock art, Bradshaw figures and the Bradshaws) are one of the two major regional traditions of rock art found in the north-west Kimberley region of Western Australia. Key traditional owners have published their own account of the meaning of the images.”" ;
@@ -602,6 +610,7 @@
    rdfs:label "‘Datu Saman’ Style Figures from the Sangkulirang–Mangkalihat Peninsula" ;
    :described-by <https://doi.org/10.1038/s41586-018-0679-9> ;
    :approximate-date -11000 ;
+   :apparent-gender :likely-male , :unclear ;
    :note "The depiction could be earlier. From article abstract: “…rare Pleistocene depiction of a human figure—also coloured dark purple—has a minimum date of 13.6 ka.”" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (0.943212 118.872765) ;
@@ -972,6 +981,7 @@
    :described-by <https://en.wikipedia.org/wiki/Tambun_rock_art> ;
    :earliest-date -8000 ;
    :latest-date -2000 ;
+   :apparent-gender :likely-male , :unclear ;
    :note "The chronology needs confirmation" ;
    :in-modern-country-note "Malaysia" ;
    :representative-latlong-point (4.602 101.1305) ;
@@ -1351,6 +1361,7 @@
    :described-by <https://en.wikipedia.org/wiki/Angono_Petroglyphs> ;
    :earliest-date -5000 ;
    :latest-date -2000 ;
+   :apparent-gender :unclear ;
    :note "From Wikipedia: “There are 127 drawings in the form of animate and static figures of circular or dome-like head on top of a V-shaped torso distributed on a horizontal plane on the rock wall area measuring 25 meters by 3 meters.”" ;
    :in-modern-country-note "Philippines" ;
    :representative-latlong-point (14.532872 121.18679) ;
@@ -1648,6 +1659,7 @@
    :described-by <https://en.wikipedia.org/wiki/Sydney_rock_engravings> ;
    :earliest-date -4000 ;
    :latest-date -3000 ;
+   :apparent-gender :male , :female ;
    :note "From Wikipedia: “The engravings cannot be dated straightforwardly with contemporary archaeological methods, necessitating the use of indirect dating. The Sydney engravings are of a style known as “simple figurative”, which formulaic archaeology dates to around 3,000 BC and 4,000 BC, which is contemporaneous to the Neolithic period in Eurasia. Other engravings show European sailing ships, and so those cannot be more than about 200 years old. It is likely that some of the freshest engravings represent the later part of that time range, whilst the most worn represent the earliest part. However, the situation is complicated by the fact that the engravings were sometimes “re-grooved” during ceremonies.”" ;
    :in-modern-country-note "Australia" ;
    :representative-latlong-point (-33.630948 151.227760) ;
@@ -2168,6 +2180,7 @@
    :described-by <https://en.wikipedia.org/wiki/Copper_Hoard_culture> ;
    :earliest-date -2800 ;
    :latest-date -1500 ;
+   :apparent-gender :unclear ;
    :material-note "Copper" ;
    :note "Not necessarily ‘human’." ;
    :in-modern-country-note "India" ;
@@ -2247,6 +2260,7 @@
       <https://www.harappa.com/blog/male-indus-spear-thrower-or-dancer> ;
    :earliest-date -2600 ;
    :latest-date -1900 ;
+   :apparent-gender :likely-male , :unclear ;
    :material-note "Copper" ;
    :note "Described by MFA as “Male spear thrower or dancer.” MFA restricts access to images so thumbnail coming from harrapa.com." ;
    :in-modern-country-note "Pakistan" ;
@@ -2333,6 +2347,7 @@
    <https://smarthistory.org/dancing-girl-mohenjodaro/> ;
    :earliest-date -2300 ;
    :latest-date -1750 ;
+   :apparent-gender :female ;
    :material-note "Bronze" ;
    :note "From SmartHistory: “This small bronze statuette (only 4 inches in height), depicts a nude young woman, with a coiled hairstyle and bangles adorning her arms. The figure stands with her feet apart and her weight distributed unevenly (often referred to by art historians as contrapposto). She props one arm at her waist and her other arm hangs by her side. The title of the sculpture, *Dancing Girl*, comes from the archaeologist who unearthed it in 1926 who thought the ancient figure recalled images of dancing nautch girls (female dancers who often performed at royal courts and in salons, especially in colonial India).‘" ;
    :in-modern-country-note "Pakistan" ;
@@ -2347,6 +2362,7 @@
    :described-by <https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)#Interpretations> ;
    :earliest-date -2300 ;
    :latest-date -1750 ;
+   :apparent-gender :likely-female ;
    :material-note "Bronze" ;
    :note "Adapted from Wikipedia: “A similar bronze statuette to the so-called Dancing Girl was found by Mackay during his final full season of 1930–31 at DK-G area in a house at Mohenjo-daro.”" ;
    :in-modern-country-note "Pakistan" ;
@@ -2358,6 +2374,7 @@
       <https://en.wikipedia.org/wiki/Bhirrana#Dancing_girl_graffiti> ;
    :earliest-date -2300 ;
    :latest-date -1750 ;
+   :apparent-gender :likely-female ;
    :material-note "Ceramic" ;
    :note "From MAP Academy website: “A potsherd dating back to the Mature Phase of the Harappan Civilisation, the Dancing Girl was discovered at Bhirrana in present-day Haryana in 2004–05. The visual characteristics of the Dancing Girl from Bhirrana, especially her stance, the tilt of her head and the positioning of her arms bear a close resemblance to the Dancing Girl from Mohenjo-Daro…”" ;
    :in-modern-country-note "Pakistan" ;
@@ -2370,6 +2387,7 @@
       <https://en.wikipedia.org/wiki/Sculpture_in_the_Indian_subcontinent#Bronze_Age_sculpture> ;
    :earliest-date -2300 ;
    :latest-date -1750 ;
+   :apparent-gender :likely-female ;
    :material-note "Limestone" ;
    :note "No good landing page." ;
    :in-modern-country-note "Pakistan" ;
@@ -2415,6 +2433,7 @@
    :described-by <https://en.wikipedia.org/wiki/Pashupati_seal> ;
    :art-historical-culture-or-tradition :indus-valley-civilization ;
    :approximate-date -2200 ;
+   :apparent-gender :likely-male ;
    :materia-note "Steatite" ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (27.329167 68.138889) ; # ll for Mohenjo-daro, Pakistan
@@ -2538,6 +2557,7 @@
    :described-by <https://en.wikipedia.org/wiki/Daimabad#Phase_II:_Late_Harappan_culture> ,
       <https://mapacademy.io/article/daimabad-bronzes/> ;
    :approximate-date -2000 ;
+   :apparent-gender :unclear ;
    :material-note "Bronze" ;
    :note "From MAP Academy website: “A hoard of four bronze sculptures found in 1974 near Daimabad in Maharashtra, India, and dated to the second millennium BCE, the Daimabad bronzes depict a chariot yoked to oxen, an elephant, a rhinoceros, and a water buffalo. Noted for the complexity of their construction and attributed to the Late Harappan Culture, they have helped scholars to extend the Indus civilisation’s southward spread into the Deccan Plateau.“" ;
    :in-modern-country-note "India" ;
@@ -2562,6 +2582,7 @@
    <https://smarthistory.org/the-priest-king-sculpture-from-the-indus-valley-civilization/> ;
    :earliest-date -2000 ;
    :latest-date -1900 ;
+   :apparent-gender :likely-male ;
    :material-note "Steatite" ;
    :note "From Wikipedia: “…sculpture shows a neatly bearded man with a fillet around his head, possibly all that is left of a once-elaborate hairstyle or headdress; his hair is combed back. He wears an armband, and a cloak with drilled trefoil, single circle and double circle motifs, which show traces of red. His eyes might have originally been inlaid.[6] The sculpture is incomplete, broken off at the bottom …”" ;
    :in-modern-country-note "Pakistan" ;
@@ -3026,6 +3047,7 @@
    rdfs:label "Faces on Da He Ding" ;
    :described-by <https://en.wikipedia.org/wiki/Da_He_ding> ;
    :approximate-date -1300 ;
+   :apparent-gender :unclear ;
    :material-note "Bronze" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (28.152564 112.11281) ;
@@ -3200,6 +3222,7 @@
     <https://www.jstor.org/stable/j.ctt24h9sg.17> ,
     <https://archaeology.org/issues/november-december-2013/collection/lapita-tahiti-tatau-oceania-captain-cook/ancient-tattoos/> ;
    :approximate-date -1000 ;
+   :apparent-gender :unclear ;
    :in-modern-country-note "Solomon Islands" ;
    :art-historical-culture-or-tradition :lapita-culture ;
    :representative-latlong-point (-11 166.25) ; # for santa cruz islands
@@ -3337,6 +3360,7 @@
    :described-by <https://en.wikipedia.org/wiki/Dong_Son_culture> ;
    :earliest-date -1000 ;
    :latest-date 100 ;
+   :apparent-gender :likely-male ;
    :in-modern-country-note "Vietnam" ;
    :representative-latlong-point (16 108) ; # ll for Red River Valley, Vietnam
    :art-historical-culture-or-tradition :dong-son-culture ;
@@ -3469,6 +3493,7 @@
    :described-by <https://en.wikipedia.org/wiki/Manunggul_Jar> ;
    :earliest-date -890 ;
    :latest-date -710 ;
+   :apparent-gender :unclear ;
    :note "Known as the ‘Manunggul Jar’." ;
    :in-modern-country-note "Philippines" ;
    :representative-latlong-point (9.279882 117.9814) ;
@@ -4041,6 +4066,7 @@
    :described-by <https://en.wikipedia.org/wiki/Silk_painting_depicting_a_man_riding_a_dragon> ;
    :earliest-date -500 ;
    :latest-date -200 ;
+   :apparent-gender :male ;
    :material-note "Ink on silk" ;
    :note "From Wikipedia: “ …man with a sword is riding a dragon by holding the rein. The dragon's body was given the shape of a boat. A little egret is standing at the tail of the dragon. A carp under the dragon is leading the way. The umbrella in the top middle of the picture shows the owner's nobility.”" ;
    :in-modern-country-note "China" ;
@@ -4332,6 +4358,7 @@
       <https://doi.org/10.15184/aqy.2025.10246> ;
    :earliest-date -300 ;
    :latest-date -200 ;
+   :apparent-gender :unclear ;
    :note "Date taken from wikipedia. Is it too narrow?" ;
    :in-modern-country-note "United Arab Emirates" ;
    :representative-latlong-point (25.483333 55.55) ;
@@ -4365,6 +4392,7 @@
    :described-by <https://en.wikipedia.org/wiki/Takht-i_Sangin#Seleucid_and_Greco-Bactrian_periods_(4th-2nd_century_BC)> ;
    :earliest-date -250 ;
    :latest-date -130 ;
+   :apparent-gender :male ;
    :note "Site also known as ‘The Oxus Temple’." ;
    :in-modern-country-note "Tajikistan" ;
    :representative-latlong-point (37.098889 68.285) ;
@@ -4376,6 +4404,7 @@
    :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
    :earliest-date -300 ;
    :latest-date -100 ;
+   :apparent-gender :male ;
    :in-modern-country-note "India" ;
    :art-historical-culture-or-tradition :maurya-empire ;
    :representative-latlong-point (25.606366 85.154401) ;
@@ -4386,6 +4415,7 @@
    :described-by <https://www.britishmuseum.org/collection/object/W_2001-0401-1> ;
    :earliest-date -300 ;
    :latest-date -1 ;
+   :apparent-gender :unclear ;
    :art-historical-culture-or-tradition :ancient-arabia ;
    :in-modern-country-note "Yemen" ;
    :representative-latlong-point (13.039552 43.865330) ;
@@ -4406,6 +4436,7 @@
    rdfs:label "Carpet from Pazyryk Burial 5" ;
    :described-by <https://en.wikipedia.org/wiki/Pazyryk_burials#Pazyryk-5> ;
    :approximate-date -250 ;
+   :apparent-gender :likely-male ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (50.746389 88.0725) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Siberian_tapestry,_Hermitage_Museum,_St._Petersburg.jpg> .
@@ -4416,6 +4447,7 @@
       <https://en.wikipedia.org/wiki/Parthian_music> ;
    :earliest-date -250 ;
    :latest-date 224 ;
+   :apparent-gender :unclear ;
    :note "Arbitrarily mapped to Ecbatana" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (34.806389 48.516111) ;
@@ -4426,6 +4458,7 @@
    :described-by <https://en.wikipedia.org/wiki/Ai-Khanoum_plaque> ;
    :earliest-date -200 ;
    :latest-date -145 ;
+   :apparent-gender :male , :female ;
    :note "From Wikipedia: “The Ay-Khanoum plaque is an ancient Greco-Bactrian disk discovered at the archaeological site of Ay-Khanoum in Takhar Province, Afghanistan. This Hellenistic city served as a military and economic center for the rulers of the Greco-Bactrian Kingdom until its destruction c. 145 BC. Rediscovered in 1961, the ruins of the city were excavated by the French Archaeological Delegation in Afghanistan (DAFA) until an outbreak of conflict in Afghanistan during the late 1970s. Among the structures excavated by the archaeologists was a sanctuary called the 'Temple of Indented Niches', (French: “temple à niches indentées”; alternatively “temple à redans”, meaning 'Stepped Temple') in which the disk was found. The disk is held in the collection of the National Museum of Afghanistan in Kabul.”" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (37.164722 69.408611) ;
@@ -4464,6 +4497,7 @@
     <https://mapacademy.io/article/didarganj-yakshi/> ;
    :earliest-date -200 ;
    :latest-date 100 ;
+   :apparent-gender :female ;
    :note "From MAP Academy website: “A life-sized Chunar stone statue of a female deity or guardian figure, possibly a yakshi, excavated from Didarganj, near present-day Patna, the Didarganj yakshi statue is widely celebrated for its intricacy, polished surface and overall symmetry, as well as naturalistic and standardised style. The figure is depicted carrying a fly-whisk in her right hand, while her left arm and nose are damaged. The statue rests on a 40-centimetre tall stand, bringing it to a total height of 203 centimetres — all of which was carved from a single block of stone.”" ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (25.571667 85.2625) ;
@@ -4505,6 +4539,7 @@
    :described-by <https://en.wikipedia.org/wiki/Sanchi_Stupa_No._2#Early_period_(circa_115_BCE)> ;
    :earliest-date -150 ;
    :latest-date -100 ;
+   :apparent-gender :female ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (23.48 77.73) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lakshmi_Sanchi_Stupa_2.jpg> .
@@ -4514,6 +4549,7 @@
    :described-by <https://en.wikipedia.org/wiki/Bharhut_Yavana> ;
    :earliest-date -150 ;
    :latest-date -50 ;
+   :apparent-gender :male ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (24.446891 80.846041) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bharhut_Yavana.jpg> .
@@ -4523,6 +4559,7 @@
    :described-by <https://en.wikipedia.org/wiki/Nisa_helmeted_warrior> ;
    :earliest-date -125 ;
    :latest-date -1 ;
+   :apparent-gender :male ;
    :material-note "Ceramic" ;
    :note "From Wikipedia: “The sculpture represents a bearded man of mature age, with regular facial features. The thin nose continues the line of the straight forehead. The relief-modeled eyes have carefully worked out eyelids, convex eyeballs, the borders of the iris and pupil. The eyebrows are thin and arched. The moustache frames the mouth and merges with a short, rounded, slightly wavy beard. The hair is depicted as large, smoothly curved strands.”" ;
    :in-modern-country-note "Turkmenistan" ;
@@ -4544,6 +4581,7 @@
    :described-by <https://en.wikipedia.org/wiki/Pauni#Archaeological_sites> ;
    :earliest-date -100 ;
    :latest-date -1 ;
+   :apparent-gender :male ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (20.7835 79.6357) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pillar_with_Naga_Muchalinda_over_the_throne_of_the_Buddha._Pauni_(Bhandara_District)._Railing_pillar_from_Jagannath_Tekri._2nd-1st_century_BCE.jpg> .
@@ -4553,6 +4591,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/64487> ;
    :earliest-date -100 ;
    :latest-date -1 ;
+   :apparent-gender :female ;
    :in-modern-country-note "India" ;
    :note "Specific findspot not known. Object has been returned by Metropolitan Museum to India." ;
    :representative-latlong-point (25.6125 85.128333) ;
@@ -4574,6 +4613,7 @@
    :described-by <https://en.wikipedia.org/wiki/Tillya_Tepe> ;
    :earliest-date -100 ;
    :latest-date 50 ;
+   :apparent-gender :female ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (36.694444 65.789444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Applique,_Tillia_tepe,_tombeVI,_Musée_national_d%27Afghanistan.jpg> .
@@ -4585,6 +4625,7 @@
       <https://artsandculture.google.com/asset/the-kulu-vase/mQGT9UKJEOHFiQ> ;
    :earliest-date -100 ;
    :latest-date -1 ;
+   :apparent-gender :male , :female ;
    :material-note "Bronze" ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (32.509444 77.019444) ;
@@ -4606,6 +4647,7 @@
    :described-by <https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_S2013.2.77.1/> ;
    :earliest-date -100 ;
    :latest-date 100 ;
+   :apparent-gender :male ;
    :material-note "Bronze" ;
    :in-modern-country-note "Yemen" ;
    :representative-latlong-point (15.001667 45.815833) ;
@@ -4630,6 +4672,7 @@
    :period-note "Satavahanas ? (India)" ;
    :earliest-date -200 ;
    :latest-date 500 ;
+   :apparent-gender :male ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (13.603425 79.576767) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudimallam_Lingam_in-situ_photograph.jpg> .
@@ -4664,6 +4707,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/42178> ;
    :earliest-date -200 ;
    :latest-date -100 ;
+   :apparent-gender :female ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (34.6197 112.4539) ; # Luoyang
    :note "No specific findspot known. From Met website: “This figure vividly captures the moment when, with one long sleeve thrown back and the other trailing down, a dancer gently stoops and flexes her knees as she lifts one heel to advance her step, performing a dance described in Han dynasty poetry…”" ;
@@ -4675,6 +4719,7 @@
    :described-by <https://en.wikipedia.org/wiki/Parkham_Yaksha> ;
    :earliest-date -200 ;
    :latest-date -100 ;
+   :apparent-gender :male ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (27.287358 77.717414) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yaksha_Manibhadra_-_Parkham_Mathura_circa_150_BCE.jpg> .
@@ -4694,6 +4739,7 @@
    :described-by <https://www.metmuseum.org/art/collection/search/322114> ;
    :earliest-date -200 ;
    :latest-date 200 ;
+   :apparent-gender :female ;
    :material-note "Alabaster" ;
    :note "From Met Museum website: “ alabaster figurine is of a nude woman reclining on her left side. Her left arm, which would have supported her body, is missing. The right arm is extended along her side, with the tips of her fingers resting lightly on her thigh. Faint bands at the woman's neck indicate creases; the subtle folds of flesh along the right side of the torso emphasize the full curves of her figure.”" ;
    :in-modern-country-note "Iraq" ;
@@ -4761,6 +4807,7 @@
    :described-by <https://en.wikipedia.org/wiki/Pergamon_Altar> ;
    :earliest-date -170 ;
    :latest-date -150 ;
+   :apparent-gender :male , :female ;
    :note "From Wikipedia article: “35.74 metres (117 ft 3 in) wide and 33.4 metres (109 ft 7 in) deep; the front stairway alone was almost 20 metres (66 ft) wide. The base was decorated with a frieze in high relief showing the battle between the Giants and the Olympian gods known as the Gigantomachy. There was a second, smaller and less well-preserved high relief frieze on the inner court walls which surrounded the actual fire altar on the upper level of the structure at the top of the stairs. In a set of consecutive scenes, it depicts events from the life of Telephus, legendary founder of the city of Pergamon and son of the hero Heracles and Auge, one of Tegean king Aleus's daughters.”" ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (39.131051 27.183931) ;
@@ -4792,6 +4839,7 @@
    :described-by <https://www.britishmuseum.org/collection/object/W_1951-0212-1> ;
    :earliest-date -100 ;
    :latest-date -1 ;
+   :apparent-gender :unclear ;
    :art-historical-culture-or-tradition :ancient-arabia ;
    :in-modern-country-note "Yemen" ;
    :representative-latlong-point (15.001667 45.815833) ;
@@ -4803,6 +4851,7 @@
    :described-by <https://en.wikipedia.org/wiki/Noin-Ula_burial_site#Embroidered_carpets> ;
    :earliest-date -100 ;
    :latest-date 100 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Mongolia" ;
    :representative-latlong-point (48.386222 106.754972) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Noin-Ula_carpet,_fighting_sceneNoin-Ula_carpet,_fighting_scene.jpg> .
@@ -4813,6 +4862,7 @@
    <https://doi.org/10.1086/723488> ;
    :earliest-date -100 ;
    :latest-date 100 ;
+   :apparent-gender :female ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (32.4775 44.431389) ;
    :art-historical-culture-or-tradition :parthian ;
@@ -4823,6 +4873,7 @@
    :described-by <https://frontline.thehindu.com/arts-and-culture/heritage/first-ever-human-image-at-pattanam/article32611336.ece> ;
    :earliest-date -100 ;
    :latest-date 200 ;
+   :apparent-gender :unclear ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (10.15654 76.208982) ;
    :note "Paywalled article. Need better source." ;
@@ -4863,6 +4914,7 @@
    rdfs:label "Colossal Statues from Nemrut Dag" ;
    :described-by <https://en.wikipedia.org/wiki/Mount_Nemrut#Ancient_history> ;
    :approximate-date -62 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.980556 38.740833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mount_Nemrut_(4).jpg> .
@@ -4886,6 +4938,7 @@
    :art-historical-culture-or-tradition :kushan ;
    :earliest-date -50 ;
    :latest-date 50;
+   :apparent-gender :male ;
    :in-modern-country-note "Uzbekistan" ;
    :representative-latlong-point (38.293611 67.978889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg> .
@@ -4978,6 +5031,7 @@
    :described-by <https://www.flickr.com/photos/dandiffendale/49997602097> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :likely-male ;
    :art-historical-culture-or-tradition :ancient-arabia ;
    :in-modern-country-note "Saudi Arabia" ;
    :representative-latlong-point (26.871235 48.720597) ;
@@ -4989,6 +5043,7 @@
       <https://www.britishmuseum.org/collection/object/A_1900-0209-1> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :likely-male ;
    :material-note "Gold" ;
    :note "From British Museum: “The casket tapers slightly towards the rim and lacks a lid. The arcading round the side consists of eight pointed caitya-arches resting on pilasters. Each arch has a plain recessed face and the pilaster capitals consist of a plain fillet above a torus and a fillet. The pilaster shafts have each a recessed oblong panel with an outlined border curved at the top and the base mouldings repeat those of the capitals in a contrary sequence. The compartments form two groups (A and B) of three at opposite sides to each other, each group having an almost identical central Buddha flanked by closely similar, worshipping deities in profile, and the three are separated at both ends by a single similar compartment containing the same frontal worshipping figure.”" ;
    :in-modern-country-note "Afghanistan" ;
@@ -5000,6 +5055,7 @@
    :described-by <https://en.wikipedia.org/wiki/Orlat_plaques> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :likely-male ;
    :material-note "Bone" ;
    :note "From the Wikipedia page: “The Orlat plaques are a series of bone plaques that were discovered in the mid-1980s in Uzbekistan. They were found during excavations led by Galina Pugachenkova at the cemetery of Orlat, by the bank of the Saganak River (a tributary of the Zeravshan), immediately north of Samarkand. Pugachenkova published her finds in 1989. The left half is decorated with an elaborated battle scene, while on the other side is depicted a hunting scene." ;
    :in-modern-country-note "Uzbekistan" ;
@@ -5011,6 +5067,7 @@
    :described-by <https://en.wikipedia.org/wiki/Begram_ivories> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :female ;
    :material-note "Ivory" ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.966667 69.3) ;
@@ -5021,6 +5078,7 @@
    :described-by <https://naga-projekt.de/funde-befunde/statue-der-goettin-isis/> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :female ;
    :material-note "Faience" ;
    :note "Translated from German text on the Naqa Projekt website: “Numerous iconographic parallels place this Isis statue within the context of Ptolemaic-Roman sculpture, in which Egyptian formal principles are clothed in Hellenistic garb. While it might initially appear that this statue could be an import from Roman Egypt, the stylistic rendering of the figure leaves no doubt that it is the work of Meroitic artists. A comparison with late Ptolemaic and Roman female figures reveals that the statue's thick arms, short legs, and powerfully developed thighs and hips represent the ideal of female beauty that also characterizes the female figures on the temple reliefs and stelae of Naga. Thus, aspects of Egyptian, Hellenistic-Roman, and Meroitic art combine in this statue to form an artistically autonomous work.”" ;
    :in-modern-country-note "Sudan" ;
@@ -5045,6 +5103,7 @@
       <https://www.academia.edu/108589508/The_Brahmapuri_Bronzes> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :male ;
    :material-note "Bronze" ;
    :note "The Met website doesn't provide an individual page, click on image instead for catalog entry: “The bronze Poseidon is one of many miniature copies after the lost original by the Greek sculptor Lysippos, images of which were issued on coins as early as 290 BCE”" ;
    :in-modern-country-note "India" ;
@@ -5057,6 +5116,7 @@
       <https://www.academia.edu/108589508/The_Brahmapuri_Bronzes> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :male , :female ;
    :material-note "Bronze" ;
    :note "The Met website doesn't provide an individual page. The catalog entry for this piece does not describe it specifically." ;
    :in-modern-country-note "India" ;
@@ -5089,6 +5149,7 @@
    :described-by <https://isaw.nyu.edu/research/io-figures/sessions/march-4/info> ;
    :earliest-date 1 ;
    :latest-date 400 ;
+   :apparent-gender :female ;
    :note "From ISAW Website: “The bronze is a fragmented female figure, but enough remains to identify her with a well-known iconographic type in Indian art—the salabhanjika (alt. salabhanjika), a divine or semi-divine female holding a tree branch. It was found at the port city of Khor Rori in Oman during an excavation sponsored by the American Foundation for the Study of Man. The Khor Rori bronze is part of a wider discourse on iconographic elements from South Asia visible in South Arabian art. It is important to acknowledge that South Arabian art has maintained a very strong autochthonous and original character over time, and that the external contributions are but evidence of its multicultural nature through the years. / The dating of the figure ranges from the 2nd to the 4th Centuries CE, based on its stylistic elements and comparisons with salabhanjika figures from the Indian subcontinent.”" ;
    :material-note "Bronze" ;
    :in-modern-country-note "Oman" ;
@@ -5100,6 +5161,7 @@
    :described-by <https://en.wikipedia.org/wiki/Jamal_Garhi#Sculptural_remains> ;
    :earliest-date 1 ;
    :latest-date 400 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (34.316667 72.066667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Buddha_and_nude_Vajrapani_at_Jamal_Garhi.jpg> .
@@ -5108,6 +5170,7 @@
    rdfs:label "Kahaum Pillar" ;
    :described-by <https://en.wikipedia.org/wiki/Kahaum_pillar> ;
    :approximate-date 460 ;
+   :apparent-gender :male ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (26.394639 83.838056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kakandi.jpg> .
@@ -5194,6 +5257,7 @@
    rdfs:label "Emesa Helmet" ;
    :described-by <https://en.wikipedia.org/wiki/Emesa_helmet> ;
    :approximate-date 25 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (34.73 36.697778) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/a/a5/Emesa_helmet.png?20180213011333> .
@@ -5213,6 +5277,7 @@
    rdfs:label "King Natakamani and Queen Amanitore Smiting Enemies" ;
    :described-by <https://en.wikipedia.org/wiki/Naqa#Temple_of_Apedemak> ;
    :approximate-date 50 ;
+   :apparent-gender :male , :female ;
    :in-modern-country-note "Sudan" ;
    :representative-latlong-point (16.269444 33.275) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Naga_Löwentempel.jpg> .
@@ -5234,6 +5299,7 @@
    :described-by <https://en.wikipedia.org/wiki/Garni_Temple> ;
    :earliest-date 75 ;
    :latest-date 125 ;
+   :apparent-gender :unclear ;
    :note "The Atlas figures are on the front face of the projecting portions of the podium that flank the stairway." ;
    :in-modern-country-note "Armenia" ;
    :representative-latlong-point (40.112421 44.730277) ; 
@@ -5245,6 +5311,7 @@
       <https://arkeonews.net/the-surprising-fact-about-the-roman-era-female-bust/> ;
    :earliest-date 100 ;
    :latest-date 200 ;
+   :apparent-gender :female ;
    :material-note "Marble, beeswax." ;
    :in-modern-country-note "Turkey" ;
    :note "Approximate findspot." ;
@@ -5257,6 +5324,7 @@
       <https://www.academia.edu/108589508/The_Brahmapuri_Bronzes> ;
    :earliest-date 100 ;
    :latest-date 200 ;
+   :apparent-gender :likely-male ;
    :material-note "Bronze" ;
    :note "The Met website doesn't provide an individual page, click on image instead for catalog entry: “group of locally produced miniature bronzes, including the toy cart and elephant with riders, points to an indigenous market for luxury novelties in metal.‘" ;
    :in-modern-country-note "India" ;
@@ -5269,6 +5337,7 @@
       <https://www.academia.edu/108589508/The_Brahmapuri_Bronzes> ;
    :earliest-date 100 ;
    :latest-date 200 ;
+   :apparent-gender :unclear ;
    :material-note "Bronze" ;
    :note "The Met website doesn't provide an individual page, click on image instead for catalog entry. The entry for this piece make no observatoins specific to it." ;
    :in-modern-country-note "India" ;
@@ -5280,6 +5349,7 @@
    :described-by <https://recherche.smb.museum/detail/771625> ;
    :earliest-date 100 ;
    :latest-date 200 ;
+   :apparent-gender :likely-female ;
    :material-note "Fabric" ;
    :note "Specific findsport note known, mapped to arbitrary point. Translated from Staatliche Museen zu Berlin website: “The doll's torso is made of flexible stuffing covered with linen, while its head is framed by an elaborate turban-like hairstyle made of real hair. …The jewelry is exceptional. The earrings are made of real gold leaf, and the rings around the neck, ankles, and wrists are made of leather with a gold leaf overlay.”" ;
    :in-modern-country-note "Egypt" ;
@@ -5291,6 +5361,7 @@
    :described-by <https://en.wikipedia.org/wiki/Fugoppe_Cave> ;
    :earliest-date 100 ;
    :latest-date 400 ;
+   :apparent-gender :unclear ;
    :note "Image is a reproduction in onsite museum." ;
    :in-modern-country-note "Japan" ;
    :representative-latlong-point (43.1946 140.8387) ;
@@ -5301,6 +5372,7 @@
    :described-by <https://en.wikipedia.org/wiki/Berenike_Buddha> ;
    :earliest-date 100 ;
    :latest-date 200 ;
+   :apparent-gender :male ;
    :note "From Wikipedia: “The Berenike Buddha is a statue of the Buddha, parts of which were discovered in January 2018 and January 2022 in an archaeological excavation in the ancient harbour of Berenike, Egypt, by an American-Polish archaeological mission. The statue was discovered in the forecourt of an early Roman period temple dedicated to the Goddess Isis. …It was made from a stone that was extracted south of Istanbul, and may also have been carved in Berenike itself. The statue has a halo around the head of the Buddha, decorated with the rays of the sun, and has a lotus flower by his side. It is 71cm tall.”" ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (23.908611 35.4725) ;
@@ -5321,6 +5393,7 @@
       <https://en.wikipedia.org/wiki/Takht-i-Bahi> ;
    :earliest-date 100 ;
    :latest-date 300 ;
+   :apparent-gender :male , :female ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (34.286111 71.946667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PharroAndArdoxsho.jpg> .
@@ -5330,6 +5403,7 @@
    :described-by <https://en.wikipedia.org/wiki/Surkh_Kotal#The_ancient_name_of_the_site> ;
    :note "Frequently identified as Kanishka" ;
    :approximate-date 125 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (36.036083 68.58905) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Probable_statue_of_Kanishka,_Surkh_Kotal._Kabul_Museum_(2nd_century_CE).jpg> .
@@ -5339,6 +5413,7 @@
    :described-by <https://commons.wikimedia.org/wiki/File:Coin_of_Kanishka_I.jpg> ;
    :earliest-date 127 ;
    :latest-date 150 ;
+   :apparent-gender :male ;
    :material-note "Gold" ;
    :note "Found at the Ahin Posh Monastery. From Wikipedia: “Gold coin of Kanishka I with a representation of the Buddha (c. 120 AD).Obv: Kanishka standing.., clad in heavy Kushan coat and long boots, flames emanating from shoulders, holding standard in his left hand, and making a sacrifice over an altar. Kushan-language legend in Greek script (with the addition of the Kushan Ϸ “sh” letter): ϷΑΟΝΑΝΟϷΑΟ ΚΑΝΗϷΚΙ ΚΟϷΑΝΟ (“Shaonanoshao Kanishki Koshano”): “King of Kings, Kanishka the Kushan”. Rev: Standing Buddha in Hellenistic style, forming the gesture of “no fear” (abhaya mudra) with his right hand, and holding a pleat of his robe in his left hand. Legend in Greek script: ΒΟΔΔΟ “Boddo”, for the Buddha. Kanishka monogram (tamgha) to the right.”" ;
    :in-modern-country-note "Afghanistan" ;
@@ -5357,6 +5432,7 @@
    rdfs:label "Bronze Statue of Dhamarʿalī Yuhabirr" ;
    :desribed-by <https://en.wikipedia.org/wiki/Dhamar_Ali_Yahbur> ;
    :approximate-date 150 ;
+   :apparent-gender :male ;
    :art-historical-culture-or-tradition :ancient-arabia ;
    :in-modern-country-note "Yemen" ;
    :representative-latlong-point (14.55 44.401667) ;
@@ -5382,6 +5458,7 @@
    :described-by <https://www.worldhistory.org/image/10852/statue-of-prince-absadmiya-from-hatra/> ;
    :earliest-date 140 ;
    :latest-date 180 ;
+   :apparent-gender :male ;
    :note "From Smarthistory website: “…right arm is raised in salutation while the left hand holds a palm branch. He wears an elegant and exquisitely carved dress. The feet are lost. The statue was found in the Great Temple. From Hatra, Ninawa Governorate, Iraq. Parthian period, Late 2nd century CE. On display at the Iraq Museum in Baghdad, Republic of Iraq.”" ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (35.588056 42.718333) ;
@@ -5404,6 +5481,7 @@
    :described-by <https://en.wikipedia.org/wiki/Golden_Bust_of_Septimius_Severus> ;
    :earliest-date 194 ;
    :latest-date 197 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Greece" ;
    :note "From Wikipedia: “…23-karat gold bust[2] was probably made between 194 and 196/197 AD from a sheet of gold consisting of over 96% gold, 2-3% silver and 1% copper; the gold was probably obtained from melted gold coins with some silver ones added. The total height of the bust is 28.4 cm and its width is 25.5 cm. It is 1-1.5 mm thick, and weighs around 980 g (or three Roman pounds).”" ;
    :representative-latlong-point (41.35 26.5) ;
@@ -5436,6 +5514,7 @@
    :described-by <https://en.wikipedia.org/wiki/Colossal_statue_of_Shapur_I> ;
    :earliest-date 240 ;
    :latest-date 272 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.777778 51.570833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shapur_statue_with_a_man_standing_in_front_of_it.JPG> .
@@ -5445,6 +5524,7 @@
    :described-by <https://en.wikipedia.org/wiki/Naqsh-e_Rostam#Triumph_of_Shapur_I,_c._241–272> ;
    :earliest-date 249 ;
    :latest-date 272 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (29.988889 52.874722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Naghsh-e_rostam,_Irán,_2016-09-24,_DD_12.jpg> .
@@ -5507,6 +5587,7 @@
       <https://isaw.nyu.edu/research/io-figures/sessions/march-11/info> ;
    :earliest-date 300 ;
    :latest-date 600 ;
+   :apparent-gender :male ;
    :material-note "Ceramic" ;
    :in-modern-country-note "Eritrea" ;
    :representative-latlong-point (15.263611 39.660556) ;
@@ -5567,6 +5648,7 @@
    rdfs:label "Coronation of Ardashir II Relief" ;
    :described-by <https://en.wikipedia.org/wiki/Coronation_of_Ardashir_II> ;
    :approximate-date 380 ;
+   :apparent-gender :male ;
    :note "Adapted from Wikipedia: “The relief shows three standing figures wearing regalia; Ardashir being in the middle, flanked by two male figures. The figure to the right, who is giving the diadem to Ardashir originally used to be recognized as the Zoroastrian supreme god Ahura Mazda, but is now agreed to be Shapur II due to the style of his crown, which also fits well due to Shapur being the one designating Ardashir as shah to begin with. The two shahs are standing on the body of a fallen enemy, unmistakably a Roman, whose crown indicates that he is an emperor. The fallen figure is most likely supposed to represent the Roman emperor Julian, who invaded Iran in 363 and was killed west of the Sasanian capital of Ctesiphon. The figure standing to the far left, perceived by some to be the Zoroastrian prophet Zoroaster, is most likely the angelic divinity Mithra. He is holding a raised barsom, thus sanctifying the investiture.”" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (34.3874 47.1323) ;
@@ -5617,6 +5699,7 @@
       <https://en.wikipedia.org/wiki/Avukana_Buddha_statue> ;
    :earliest-date 400 ;
    :latest-date 800 ;
+   :apparent-gender :male ;
    :material-note "Granite" ;
    :note "From MAP Academy website: “Standing on a double-lotus pedestal a little under a metre tall, the Avukana Buddha rises to a height of a little over 13 metres. The statue is carved in high relief, with a good portion of it detached from the rock face; the head is carved fully in the round. The Buddha is depicted in the samabhanga pose — standing upright, perfectly balanced on both feet. The eyes, brows, nose and lips, as well as the short curly hair, are sharply defined; the eyes are half-closed eyes as if in deep meditation. He is shown with elongated earlobes to indicate the heavy earrings he would have worn as the prince Siddhartha Gautama.”" ;
    :in-modern-country-note "India" ;
@@ -5659,6 +5742,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Sima_Jinlong> ;
    :earliest-date 450 ;
    :latest-date 484 ;
+   :apparent-gender :male ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (40.097 113.367) ;
    :note "On the list of objects that cannot be removed from China for display." ;
@@ -5701,6 +5785,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://en.wikipedia.org/wiki/Burana_Tower> ;
    :earliest-date 500 ;
    :latest-date 700 ;
+   :apparent-gender :male ;
    :note "There is no specific landing page for this figure. What is basis for date?" ;
    :in-modern-country-note "Kyrgyzstan" ;
    :representative-latlong-point (42.746944 75.248611) ;
@@ -5759,6 +5844,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Buddhas_of_Bamiyan> ;
    :earliest-date 570 ;
    :latest-date 625 ;
+   :apparent-gender :male ;
    :material-note "Sandstone" ;
    :note "From Wikipedia: “... the smaller 38 m (125 ft) ‘Eastern Buddha’ was built around 570 CE, and the larger 55 m (180 ft) ‘Western Buddha’ was built around 618 CE, which would date both to the time when the Hephthalites ruled the region. / In March 2001, both structures were destroyed by the Taliban following an order given on February 26, 2001, by Taliban leader Mullah Muhammad Omar”" ;
    :in-modern-country-note "Afghanistan" ;
@@ -5810,6 +5896,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :period-note "Mauryan Empire (India)" ;
    :earliest-date -300 ;
    :latest-date -200 ;
+   :apparent-gender :male ;
    :material-note "Stone" ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (25.594034 85.137553) ;
@@ -5820,6 +5907,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Lady_of_Ibiza> ;
    :earliest-date -300 ;
    :latest-date -200 ;
+   :apparent-gender :female ;
    :material-note "Ceramic" ;
    :note "From Wikipedia: “ …ceramic figure, 47 cm tall, that dates from the third century BC. …found in the necropolis of Puig des Molins on the island of Ibiza in the Mediterranean. It was made using a mold and has a cavity in the back, perhaps used for hanging it up. She is richly ornamented in terms of clothing and jewelry.”" ;
    :in-modern-country-note "Spain" ;
@@ -5885,6 +5973,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Hercules in High Relief at Behistun" ;
    :described-by <https://en.wikipedia.org/wiki/Statue_of_Hercules_in_Behistun> ;
    :approximate-date -148 ;
+   :apparent-gender :male ;
    :note "Dated by inscription. From Wikipedia: “ …lying on a 2 m-long (6.6 ft) platform and holds a bowl in his left hand. His right hand rests on his leg. The statue is 1.47 m long and is attached to the mountain.“" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (34.3833 47.4333) ;
@@ -5895,6 +5984,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Liu_Sheng,_Prince_of_Zhongshan> ;
    :earliest-date -110 ;
    :latest-date -113 ;
+   :apparent-gender :male ;
    :material-note "Jade, Gold" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (38.949 115.322) ;
@@ -5920,6 +6010,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://en.wikipedia.org/wiki/Hadda,_Afghanistan> ;
    :earliest-date -50 ;
    :latest-date 300 ;
+   :apparent-gender :male ;
    :note "Frequently dated within the first two centures CE." ;
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (34.361685 70.470752) ;
@@ -5930,6 +6021,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Kankali_Tila_tablet_of_Sodasa> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :female ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (27.491389 77.673889) ;
    :art-historical-culture-or-tradition :northern-satraps-of-india  ;
@@ -5940,6 +6032,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Sampul_tapestry> ;
    :earliest-date 1 ;
    :latest-date 100 ;
+   :apparent-gender :likely-male ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (37.020199 80.113078) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:UrumqiWarrior.jpg> .
@@ -6005,6 +6098,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://www.iranicaonline.org/articles/shami-statue/> ;
    :earliest-date 50 ;
    :latest-date 150 ;
+   :apparent-gender :male ;
    :material-note "Bronze" ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (32.326389 48.449722) ;
@@ -6015,6 +6109,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Maitum_anthropomorphic_pottery#Physical_characteristics> ;
    :earliest-date 50 ;
    :latest-date 500 ;
+   :apparent-gender :unclear ;
    :in-modern-country-note "Philippines" ;
    :representative-latlong-point (6.03 124.48) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mindanao_Burial_Pottery_-_32843892691.jpg> .
@@ -6052,6 +6147,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://en.wikipedia.org/wiki/Tylos> ;
    :earliest-date 100 ;
    :latest-date 300 ;
+   :apparent-gender :unclear ;
    :in-modern-country-note "Bahrain" ;
    :representative-latlong-point (25.983812 50.556783) ;
    :note "Mapped generically to Bahrain." ;
@@ -6063,6 +6159,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
     <https://universes.art/en/art-destinations/jordan/petra/winged-lions-temple/view-2> ;
    :earliest-date 100 ;
    :latest-date 300;
+   :apparent-gender :female ;
    :in-modern-country-note "Jordan" ;
    :representative-latlong-point (30.33036 35.44254) ;
     :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/757642/1824427/restricted> .
@@ -6100,6 +6197,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Dharmarajika_Stupa> ;
    :earliest-date 100 ;
    :latest-date 200 ;
+   :apparent-gender :female ;
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (33.73 72.78) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dharmarajika_statuette.jpg> .
@@ -6145,6 +6243,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    <https://www.worldhistory.org/image/10857/princess-doshafri-from-hatra/> ,
    <https://www.worldhistory.org/image/10858/statue-of-princess-simi-from-hatra/> ;
    :approximate-date 138 ;
+   :apparent-gender :female ;
    :note "Simi statue is dated to 138 CE by its inscription." ;
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (35.588301 42.716673) ;
@@ -6206,6 +6305,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.britishmuseum.org/collection/object/G_1861-0725-1?selectedImageId=55934001> ,
       <https://en.wikipedia.org/wiki/Apollo_of_Cyrene> ;
    :approximate-date 200 ;
+   :apparent-gender :male ;
    :material-note "Marble" ;
    :in-modern-country-note "Libya" ;
    :representative-latlong-point (32.825 21.858056) ;
@@ -6240,6 +6340,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://doi.org/10.2307/4422976> ;
    :earliest-date 200 ;
    :latest-date 300 ;
+   :apparent-gender :female ;
    :material-note "Bronze" ;
    :note "Specific findspot not known. Image after Barrett 1967. From article: “The figure, apart from the arms, is hollow cast, presumably by the cire perdu method. The arms, or the wax models for them, were presumably made in two-piece moulds. Possibly they were pre-cast, and inserted into the mould for the body when the latter was cast. The upper part of the head and crown has certainly been cast on, apparently around two iron pins, both of which are visible as patches of rust on the crown and one of which can clearly be seen inside the back of the head. The union between the two parts has been filled by four fragments of cast bronze hammered into an enlarged cavity along the line of junction. All three parts of the figure appear to have been made of similar metal which has corroded in a similar manner and to a similar depth”." ;
    :in-modern-country-note "India" ;
@@ -6250,6 +6351,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.metmuseum.org/art/collection/search/327830> ;
    :earliest-date 200 ;
    :latest-date 300 ;
+   :apparent-gender :male ;
    :note "From Metmuseum website: “depicts a deity (with nimbus) being approached by a male worshiper, probably nonroyal but portrayed as of equal stature to the god”" ;
    :in-modern-country-note "Afghanistan and neighboring." ;
    :art-historical-culture-or-tradition :kushan-empire ;
@@ -6274,6 +6376,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Miran_(Xinjiang)#History> ;
    :earliest-date 200 ;
    :latest-date 400 ;
+   :apparent-gender :male ;
    :note "From Wikipedia image caption: “Fragment of a wall painting from a stupa in Miran depicting the Buddha (leftmost) followed by six disciples”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (39.234167 88.939444) ;
@@ -6284,6 +6387,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Balalyk_Tepe> ;
    :earliest-date 200 ;
    :latest-date 400 ;
+   :apparent-gender :male , :female ;
    :in-modern-country-note "Turkmenistan" ;
    :art-historical-culture-or-tradition :kushan-empire ;
    :representative-latlong-point (37.535384 67.115405) ;
@@ -6295,6 +6399,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://collections.louvre.fr/en/ark:/53355/cl010044394> ;
    :earliest-date 200 ;
    :latest-date 400 ;
+   :apparent-gender :female ;
    :material-note "Ceramic, copper alloy" ;
    :note "Specific findspot not known." ;
    :in-modern-country "Egypt" ;
@@ -6306,6 +6411,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.metmuseum.org/art/collection/search/38119> ;
    :earliest-date 200 ;
    :latest-date 500 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Pakistan or India" ;
    :representative-latlong-point (33.756 72.8291) ;
    :note "No specific findspot." ;
@@ -6325,6 +6431,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Julius Terentius Performing a Sacrifice" ;
    :described-by <https://artgallery.yale.edu/collections/objects/4961> ;
    :approximate-date 239 ;
+   :apparent-gender :male ;
    :note "From Yale Gallery website: “Commissioned by the Roman tribune at Dura-Europos, Julius Terentius (depicted and identified here by Latin inscription), this painting mixes Greek, Roman, and Palmyrene elements, perhaps as a gesture of diplomacy. Performing an official sacrifice in front of a military standard, Terentius stands with his men.”" ;
    :in-modern-country-note "Syria" ;
    :representative-latlong-point (34.747 40.73) ;
@@ -6361,6 +6468,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Cheng-Han#Cheng_(304–338)> ;
    :earliest-date 304 ;
    :latest-date 338 ;
+   :apparent-gender :likely-male ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (30.66 104.063333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cheng-Han_Human_Figurine.png> .
@@ -6381,6 +6489,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Garima_Gospels> ;
    :earliest-date 390 ;
    :latest-date 570 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Ethiopia" ;
    :representative-latlong-point (14.161667 38.952778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Illumination-from-Abba-Garima-gospel.jpg> .
@@ -6428,6 +6537,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Huqoq#Ancient_synagogue>,
       <https://www.biblicalarchaeology.org/wp-content/uploads/2019/05/BAR-MJ19-Huqoq.pdf> ;
    :approximate-date 425 ;
+   :apparent-gender :male , :female ;
    :in-modern-country-note "Israel" ;
    :representative-latlong-point (32.884722 35.478889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:פסיפס_מהתקופה.jpg> .
@@ -6438,6 +6548,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Head of Eutropius" ;
    :described-by <https://en.wikipedia.org/wiki/Head_of_Eutropius> ;
    :approximate-date 430 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.941111 27.341944) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:KHM_Wien_I_880_-_Büste_des_Eutropios.jpg> .
@@ -6456,6 +6567,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Penjikent_murals> ;
    :earliest-date 480 ;
    :latest-date 722 ;
+   :apparent-gender :male , :female ;
    :in-modern-country-note "Tajikistan" ;
    :representative-latlong-point (39.486792 67.620477) ;
    :art-historical-culture-or-tradition :sogdian-art ;
@@ -6466,6 +6578,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Christ_Pantocrator_(Sinai)> ;
    :earliest-date 500 ;
    :latest-date 550 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Egypt" ;
    :art-historical-culture-or-tradition :byzantine-art ;
    :representative-latlong-point (28.555556 33.976111) ;
@@ -6476,6 +6589,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.worldhistory.org/image/5764/gilt-bronze-buddha-goguryeo-kingdom/> ;
    :earliest-date 500 ;
    :latest-date 600 ;
+   :apparent-gender :male ;
    :in-modern-country-note "North Korea" ;
    :representative-latlong-point (39.016667 125.7475) ;
    :art-historical-culture-or-tradition :goguryeo ;
@@ -6489,6 +6603,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :art-historical-culture-or-tradition :kofun-period ;
    :earliest-date 500 ;
    :latest-date 600 ;
+   :apparent-gender :male ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:太田市飯塚町出土_埴輪_挂甲の武人-2.jpg> .
 
 :sekijun-male-figure a :human-figure ;
@@ -6496,6 +6611,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Sekijin_sekiba> ;
    :earliest-date 500 ;
    :latest-date 600 ;
+   :apparent-gender :male ;
    :in-modern-country-note "Japan" ;
    :representative-latlong-point (35.561389 139.716111) ;
    :art-historical-culture-or-tradition :kofun-period ;
@@ -6569,6 +6685,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Anyang_funerary_bed> ;
    :earliest-date 550 ;
    :latest-date 577 ;
+   :apparent-gender :unclear ;
    :material-note "Marble" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (36.099 114.392) ;
@@ -6619,6 +6736,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    <https://en.wikipedia.org/wiki/Fondukistan_monastery> ;
    :earliest-date 600 ;
    :latest-date 700 ;
+   :apparent-gender :male ;
    :material-note "Ceramic" ;
    :note "From Guimet website: “The elegance of the figure is visible in the refinement of the folds moulding the body, the details of the ornaments such as the headdress and necklaces and the sophistication of the curls and hairstyle, which make it a timeless and graceful masterpiece. The mannerism and Indian influence are typical of the Fondukistan site - a coin treasure found in another niche allowed to date the sculptures back to the 7th century - which showcases the last manifestation of Buddhist art in Afghanistan before the takeover of Islam.”" ;
    :in-modern-country-note "Afghanistan" ;
@@ -6631,6 +6749,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :period-note "Pallava Dynasty (India)" ;
    :earliest-date 600 ;
    :latest-date 700 ;
+   :apparent-gender :male ;
    :note "From Wikipedia: “Descent of the Ganges, known locally as Arjuna's Penance, is a monument at Mamallapuram, on the Coromandel Coast of the Bay of Bengal, in the Chengalpattu district of the state of Tamil Nadu, India. Measuring 96 by 43 feet (29 m × 13 m), it is a giant open-air rock relief carved on two monolithic rock boulders. The legend depicted in the relief is the story of the descent of the sacred river Ganges to earth from the heavens led by Bhagiratha. The waters of the Ganges are believed to possess supernatural powers. The descent of the Ganges and Arjuna's Penance are portrayed in stone at the Pallava heritage site. The relief is more of a canvas of Indian rock cut sculpture at its best not seen anywhere else in India. It is one of the Group of Monuments at Mamallapuram that was designated as a UNESCO World Heritage Site since 1984.”" ;
    :material-note "Stone" ;
    :in-modern-country-note "India" ;
@@ -6709,6 +6828,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Murals_from_the_Christian_temple_at_Qocho> ;
    :earliest-date 600 ;
    :latest-date 900 ;
+   :apparent-gender :male , :female ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (42.852778 89.529167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nestorian_Temple_-_Palm_Sunday.jpg> .
@@ -6731,6 +6851,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Tashkent#History_as_Chach> ;
    :earliest-date 625 ;
    :latest-date 675 ;
+   :apparent-gender :unclear ;
    :material-note "Copper alloy" ;
    :note "Uncertain ruler. Findspot unknown. Mapped to Chach/Tashkent as mint." ;
    :in-modern-country-note "Uzbekistan" ;
@@ -6742,6 +6863,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Afrasiab_murals> ;
    :earliest-date 640 ;
    :latest-date 660 ;
+   :apparent-gender :male ;
    :material-note "Plaster, pain" ;
    :in-modern-country-note "Uzbekistan" ;
    :representative-latlong-point (39.6693 66.9934) ; # Samarkand, Uzbekistan
@@ -6818,6 +6940,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Renshou Giant Buddha" ;
    :described-by <https://en.wikipedia.org/wiki/Renshou_Giant_Buddha> ;
    :approximate-date 707 ;
+   :apparent-gender :male ;
    :note "Location not precisely mapped. The Wikipedia article is a stub. Brief quote: “Renshou Giant Buddha (traditional Chinese: 仁壽大佛; simplified Chinese: 仁寿大佛; pinyin: Rénshòu Dàfó), also known as Niujiaozhai Giant Buddha (牛角寨大佛), is a large stone Buddha located within Renshou County, Sichuan”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (30.253091 104.174724) ;
@@ -6828,6 +6951,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Takamatsuzuka_Tomb> ;
    :earliest-date 694 ;
    :latest-date 710 ;
+   :apparent-gender :female ;
    :note "The thumbnail image is from the west wall, partial description from Wikipedia: “On the west wall, in contrast, from the south side, there is a group of male figures, the White Tiger, above which is the moon, and a group of female figures. The group of female figures on the west wall was particularly colorful.”." ;
    :in-modern-country-note "Japan" ;
    :representative-latlong-point (34.462222 135.806472) ;
@@ -6871,6 +6995,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
    :earliest-date 713 ;
    :latest-date 803 ;
+   :apparent-gender :male ;
    :material-note "Sandstone" ;
    :note "From Wikipedia: “The Leshan Giant Buddha (Chinese: 樂山大佛) is a 71-meter (233 ft) tall stone statue, built between 713 and 803 (during the Tang dynasty). It is carved out of a cliff face of Cretaceous red bed sandstones that lies at the confluence of the Min River and Dadu River in the southern part of Sichuan Province in China, near the city of Leshan. The stone sculpture faces Mount Emei, with the rivers flowing below its feet.”" ;
    :in-modern-country-note "China" ;
@@ -6923,6 +7048,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Borobudur#Reliefs> ;
    :earliest-date 750 ;
    :latest-date 850 ;
+   :apparent-gender :male , :female ;
    :material-note "Stone" ;
    :in-modern-country-note "Indonesia" ;
    :representative-latlong-point (-7.608 110.204) ; # Borobudur, Indonesia
@@ -6978,6 +7104,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Somapura_Mahavihara#Gallery> ;
    :earliest-date 781 ;
    :latest-date 1043 ;
+   :apparent-gender :unclear ;
    :in-modern-country-note "Bangladesh" ;
    :representative-latlong-point (25.031111 88.976944) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sompura_Mahavihara_2024_17.jpg> .
@@ -6995,6 +7122,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.anatolianarchaeology.net/1300-year-old-communion-bread-unearthed-in-karaman-inscribed-with-gratitude-to-blessed-jesus/> ,
       <https://www.facebook.com/helen.nguyen.725414/photos/archaeologists-have-uncovered-a-1200-year-old-loaf-of-bread-unlike-anything-seen/24782222468136927/> ;
    :approximate-date 800 ;
+   :apparent-gender :male ;
    :note "The find was announced on FaceBook, though I can't find original post and welcome a better long-term landing page. The mapped point is near the Karaman Museum." ;
    :in-modern-country-note "Turkey" ;
    :representative-latlong-point (37.182959 33.211578) ;
@@ -7016,6 +7144,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Nalanda_mahavihara#Pala_dynasty_(750–1200_CE)> ;
    :earliest-date 800 ;
    :latest-date 900 ;
+   :apparent-gender :male ;
    :in-modern-country-note "India" ;
    :representative-latlong-point (25.13662 85.442608) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Khasarpana_Lokesvara.jpg> .
@@ -7162,6 +7291,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Diamond_Sutra> ,
       <https://en.wikipedia.org/wiki/Dunhuang_manuscripts> ;
    :approximate-date 868 ;
+   :apparent-gender :male ;
    :note "From “Diamond Sutra” Wikpedia page: “A copy of the Tang dynasty Diamond Sūtra was found among the Dunhuang manuscripts in 1900 by Daoist monk Wang Yuanlu and sold to Aurel Stein in 1907. It dates back to May 11, 868 CE and is broadly considered to be the oldest extant printed book, although other, earlier, printed materials on paper exist that predate this artifact. It is in the collection of the British Library.”" ;
    :in-modern-country-note "China" ;
    :representative-latlong-point (40.037222 94.804167) ;
@@ -7174,6 +7304,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://fr.wikipedia.org/wiki/Art_du_Champa#Métaux_et_bijoux> ;
    :earliest-date 875 ;
    :latest-date 925 ;
+   :apparent-gender :female ;
    :material-note "Bronze" ;
    :in-modern-country-note "Vietnam" ;
    :representative-latlong-point (15.666944 108.383056) ;
@@ -7203,6 +7334,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> ;
    :earliest-date 900 ;
    :latest-date 1000 ;
+   :apparent-gender :likely-male ;
    :in-modern-country-note "Iran" ;
    :representative-latlong-point (36.206111 58.793333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Two_Bowls_with_Figures_and_a_Footed_Plate_with_Birds_MET_DP258911.jpg> .
@@ -7302,6 +7434,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://doi.org/10.1080/00766097.2025.2518811> ;
    :earliest-date 950 ;
    :latest-date 1000 ;
+   :apparent-gender :male ;
    :mateial-note "Walrus Ivory" ;
    :in-modern-country-note "Norway" ;
    :representative-latlong-point (59.785901 10.478906) ;
@@ -7414,6 +7547,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://en.wikipedia.org/wiki/Luzira_Head> ,
       <https://doi.org/10.1017/S0003598X00096472> ;
    :approximate-date 1000 ;
+   :apparent-gender :unclear ;
    :note "From Wikipedia: “…the head has very narrow, protruding eyes and mouth with a diminutive nose. Along the forehead are three cicatrices. The hair is matted and falls either side of the head.”" ;
    :in-modern-country-note "Uganda" ;
    :representative-latlong-point (0.301667 32.645) ;
@@ -7500,6 +7634,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    rdfs:label "Gold funerary mask of “Princess of Chen State”" ;
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_Princess_of_Chen_State> ;
    :approximate-date 1018 ;
+   :apparent-gender :female ;
    :material-note "Gold" ;
    :note "From Wikipedia: ”The entombed princess was found with “a gold funerary mask, a silver mesh suit, jade ornaments, and precious glass, ceramic, and metal vessels”, among other objects showing diverse origins and influences. Around her neck she wore two amber bead necklaces of different sizes, made using material from the Baltic Sea region, bearing the name of the Liao dynasty and bird, fish, and flower carvings - Chinese motifs symbolizing luck and wards against evil.”" ;
    :in-modern-country-note "China" ;
@@ -7670,6 +7805,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://www.metmuseum.org/collection/the-collection-online/search/463795> ;
    :earliest-date 1175 ;
    :latest-date 1200 ;
+   :apparent-gender :male , :female ;
    :material-note "Walnut wood, Paint, Tin relief, Lead white, Linen" ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (45.333333 3) ;
@@ -7681,6 +7817,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
       <https://en.wikipedia.org/wiki/Jayavarman_VII> ;
    :earliest-date 1181 ;
    :latest-date 1218 ;
+   :apparent-gender :male ;
    :material-note "Sandstone" ;
    :note "From the English version of the musée Guimet website: “The king is represented at a mature age, his face slightly chubby in a posture of humble meditation with lowered eyes. His lips showcase the serene smile famously associated with Angkor. This sculpture is in the Bayon style, (late 12th century - early 13th century) a departure from the somewhat impersonal ideal standard of youth and beauty previously in favour. Bayon sculptors adopted a more naturalistic and human-like approach, modelling more sensitive faces sometimes inspired by the King and his contemporaries. These works are very expressive, even while showing great restraint, and reflect the serenity of the soul and of the royal grandeur through devotion.”" ;
    :in-modern-country-note "Cambodia" ;
@@ -7715,6 +7852,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://nav.shm.ru/en/exhibits/1442/> ;
    :earliest-date 1200 ;
    :latest-date 1250 ;
+   :apparent-gender :unclear ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (54.30441 35.56885) ;
    :thumbnail-image <https://nav.shm.ru/upload/resize_cache/iblock/80b/862_630_1d7a58ff99b324185ccb5ad5dfbdb5e85/80b414d38f2daabb814baba685de1a96.png> .
@@ -7724,6 +7862,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :described-by <https://caravans.library.northwestern.edu/works/15/> ;
    :earliest-date 1200 ;
    :latest-date 1300 ;
+   :apparent-gender :unclear ;
    :material-note "Terracotta" ;
    :note "From the Northwestern University Website: “This terracotta figure of a seated man was found at Natamatao, Mali, alongside skeletons of horses and humans. It was part of a widespread local terracotta sculpture tradition that stretched from the tenth to the fifteenth century. The Niger River’s fertile inland delta supported a thriving urbanism in the Middle Ages that included more than sixty interdependent communities.”" ;
    :in-modern-country-note "Mali" ;

@@ -390,6 +390,7 @@ async function buildFiguresInfoDict($rdf) {
     const cultureProp = $rdf.sym('urn:gaerhf:id:art-historical-culture-or-tradition');
     const inModernCountryProp = $rdf.sym('urn:gaerhf:id:in-modern-country-note');
     const materialNoteProp = $rdf.sym('urn:gaerhf:id:material-note');
+    const apparentGenderProp = $rdf.sym('urn:gaerhf:id:apparent-gender');
     const wikipediaImagePageProp = $rdf.sym('urn:gaerhf:id:wikimedia-commons-image-page');
     const thumbnailImageProp = $rdf.sym('urn:gaerhf:id:thumbnail-image'); // New property
     const latLongProp = $rdf.sym('urn:gaerhf:id:representative-latlong-point');
@@ -427,6 +428,11 @@ async function buildFiguresInfoDict($rdf) {
                 // Extract all string/literal values consistently - no RDF nodes should reach figuresDict
                 const inModernCountry = tp.anyValue(subject, inModernCountryProp) || null;
                 const materialNote = tp.anyValue(subject, materialNoteProp) || null;
+                // :apparent-gender is a URI node (e.g. :male); store the bare term ("male")
+                const apparentGenderNode = tp.any(subject, apparentGenderProp);
+                const apparentGender = apparentGenderNode
+                    ? apparentGenderNode.value.replace('urn:gaerhf:id:', '')
+                    : null;
                 const imageSourceUrls = tp.each(subject, thumbnailImageProp).map(n => n.value);
                 const wikimediaImagePages = tp.each(subject, wikipediaImagePageProp).map(n => n.value);
                 const describedBy = tp.each(subject, describedByProp).map(val => val.value);
@@ -462,6 +468,7 @@ async function buildFiguresInfoDict($rdf) {
                     cultureDescribedBy: cultureDescribedBy,  // string or null
                     materialNote: materialNote,  // string or null
                     inModernCountry: inModernCountry,  // string or null
+                    apparentGender: apparentGender,  // string ("male"/"female"/"unclear") or null
                     imageSourceUrls: imageSourceUrls,       // array of direct image URLs
                     wikimediaImagePages: wikimediaImagePages, // array of Wikimedia Commons page URLs
                     representativeLatLongPoint: representativeLatLongPoint,  // [number, number] or null
@@ -1624,7 +1631,7 @@ function tokenizer(input) {
 }
 
 // Fields on a figure that contribute to the keyword index.
-const KEYWORD_FIELDS = ['label', 'cultureLabel', 'materialNote', 'note', 'inModernCountry'];
+const KEYWORD_FIELDS = ['label', 'cultureLabel', 'materialNote', 'note', 'inModernCountry', 'apparentGender'];
 
 function makeFiguresKWDocsArray() {
     const documents_dict = {};
