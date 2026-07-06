@@ -965,11 +965,18 @@ body.about-tab .detail-window {
 }
 .gaerhf-list-modal-header {
     display: flex; justify-content: space-between; align-items: center;
+    gap: 14px;
     padding: 8px 14px;
     background: #f1f1f1;
     border-bottom: 1px solid #ccc;
     font-size: 0.9em;
 }
+.gaerhf-list-modal-header > span:first-child { flex: 1; }
+.gaerhf-list-modal-size {
+    display: flex; align-items: center; gap: 6px;
+    color: #555; white-space: nowrap;
+}
+.gaerhf-list-modal-size input[type="range"] { width: 140px; }
 .gaerhf-list-modal-body {
     overflow: auto;
     padding: 12px;
@@ -984,6 +991,7 @@ body.about-tab .detail-window {
     border: 2px solid transparent;
     transition: border-color 0.15s, box-shadow 0.15s;
     width: auto;
+    height: var(--list-thumb-h, 90px);
 }
 .list-modal-thumb:hover {
     border-color: #999;

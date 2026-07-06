@@ -1486,6 +1486,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === listModal) closeListModal();
         });
     }
+    const listSizeSlider = document.getElementById('list-modal-size');
+    if (listSizeSlider) listSizeSlider.addEventListener('input', () => {
+        setListThumbHeightPref(Number(listSizeSlider.value));
+        applyListThumbSize();
+    });
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && listModal && !listModal.hidden) closeListModal();
     });
@@ -1926,6 +1931,37 @@ function renderGallery() {
 }
 
 
+// ── List-modal thumbnail sizing policy ───────────────────────────────
+// Kept deliberately small and pluggable: `resolveListThumbHeight()` is the
+// single seam that decides what height to seed the size slider with on each
+// open. Today the policy is "honor the user's last explicit choice for the
+// rest of the session, otherwise fall back to a count-based default." Future
+// behaviors (e.g. remembering a size per view, or persisting across reloads)
+// can be added by changing this resolver and its setter without touching the
+// rendering code below.
+
+// Count-based default: smaller tiles when there are more figures to show.
+function countBasedThumbHeight(n) {
+    if (n <= 4)  return 240;
+    if (n <= 9)  return 180;
+    if (n <= 25) return 130;
+    if (n <= 50) return 90;
+    return 60;
+}
+
+// The user's last explicit slider choice, or null if they haven't moved it.
+let listThumbHeightPref = null;
+
+// Height (px) to seed the slider with for an invocation showing `n` figures.
+function resolveListThumbHeight(n) {
+    return listThumbHeightPref ?? countBasedThumbHeight(n);
+}
+
+// Record an explicit user choice so it persists across later opens.
+function setListThumbHeightPref(height) {
+    listThumbHeightPref = height;
+}
+
 function openListModal() {
     let ids;
     if (currentTab === 'figure-globe' || currentTab === 'figure-map') {
@@ -1935,12 +1971,6 @@ function openListModal() {
     }
 
     const n = ids.length;
-    let thumbHeight;
-    if (n <= 4)       thumbHeight = 240;
-    else if (n <= 9)  thumbHeight = 180;
-    else if (n <= 25) thumbHeight = 130;
-    else if (n <= 50) thumbHeight = 90;
-    else              thumbHeight = 60;
 
     const grid = document.getElementById('list-modal-grid');
     grid.innerHTML = '';
@@ -1949,12 +1979,21 @@ function openListModal() {
         if (!fig) return;
         const img = document.createElement('img');
         img.className = 'list-modal-thumb';
+        img.dataset.figureId = figureId;
         img.src = thumbnailUrl(figureId);
         img.alt = fig.label;
         img.title = fig.label;
         img.loading = 'lazy';
-        img.style.height = thumbHeight + 'px';
-        img.addEventListener('error', () => { img.style.display = 'none'; });
+        img.addEventListener('error', () => {
+            // A missing large variant falls back to the thumbnail (which is
+            // known to exist); a missing thumbnail hides the tile as before.
+            if (img.dataset.noLarge !== '1' && img.src.includes('/large/')) {
+                img.dataset.noLarge = '1';
+                img.src = thumbnailUrl(figureId);
+            } else {
+                img.style.display = 'none';
+            }
+        });
         img.addEventListener('click', () => {
             closeListModal();
             showFigureDetails(figureId, { markAsRecent: true });
@@ -1962,9 +2001,36 @@ function openListModal() {
         grid.appendChild(img);
     });
 
+    // Seed the size slider from the resolved height, then apply it (which also
+    // picks thumbnail-vs-large sources for the chosen height).
+    const sizeSlider = document.getElementById('list-modal-size');
+    if (sizeSlider) sizeSlider.value = resolveListThumbHeight(n);
+    applyListThumbSize();
+
     document.getElementById('list-modal-title').textContent =
         `${n} figure${n === 1 ? '' : 's'} in view`;
     document.getElementById('list-modal').hidden = false;
+}
+
+// Above this rendered height (px) the 200px-wide thumbnail source starts to
+// blur, so switch a tile to its 500px-wide large variant.
+const LIST_LARGE_THRESHOLD = 200;
+
+// Push the slider's current height onto the grid (via a CSS variable, so all
+// tiles resize in one write) and swap each tile between thumbnail and large
+// sources based on that height. Safe to call while the modal is closed.
+function applyListThumbSize() {
+    const slider = document.getElementById('list-modal-size');
+    const grid = document.getElementById('list-modal-grid');
+    if (!slider || !grid) return;
+    const height = Number(slider.value);
+    grid.style.setProperty('--list-thumb-h', height + 'px');
+    grid.querySelectorAll('.list-modal-thumb').forEach(img => {
+        const id = img.dataset.figureId;
+        const wantLarge = height > LIST_LARGE_THRESHOLD && img.dataset.noLarge !== '1';
+        const desired = wantLarge ? largeUrl(id) : thumbnailUrl(id);
+        if (!img.src.endsWith(desired)) img.src = desired;
+    });
 }
 
 function closeListModal() {
