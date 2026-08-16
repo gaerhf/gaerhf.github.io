@@ -2497,6 +2497,16 @@
    :art-historical-culture-or-tradition :bactria-margiana-archaeological-complex ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monstrous_male_figure_MET_dp22227.jpg> .
 
+:mangguan-petroglyphs a :group-of-human-figures ;
+   rdfs:label "Mangguan Petroglyphs" ;
+   :described-by <https://doi.org/10.1073/pnas.2520385123> ;
+   :earliest-date -2200 ;
+   :latest-date -1800 ;
+   :apparent-gender :unclear ;
+   :in-modern-country-note "China" ;
+   :note "From JAS:Reports abstract: “The oldest age, obtained from a human figure, is 4240 ±19 yr BP, indicating that figurative rock art was present at this site by at least the early Late Holocene (Meghalayan Stage)”" ;
+   :representative-latlong-point ( 23.415243 99.621962 ) .
+
 :seated-statue-of-gudea-of-lagash a :human-figure ;
    rdfs:label "Seated Statue of Gudea of Lagash" ;
    :described-by <https://en.wikipedia.org/wiki/Statues_of_Gudea> ;
