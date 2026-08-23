@@ -7061,6 +7061,17 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :art-historical-culture-or-tradition :sailendra-dynasty ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Reliëf_O_89_op_de_verborgen_voet_van_de_Borobudur_TMnr_10015826.jpg> . # https://www.bbc.co.uk/ahistoryoftheworld/objects/CPbWMMoFSnmUlSHF3dkf5A
 
+:figurines-pithouse123-ironwood a :group-of-human-figures ;
+   rdfs:label "Figurines from Pithouse 123 at the Ironwood Site (Arizona)" ;
+   :described-by <https://aac.wildapricot.org/resources/Documents/JAZA/JAzArch%209_2/JAzArch_V9N2_2023_Full.pdf> ;
+   :earliest-date 750 ;
+   :latest-date 850 ;
+   :apparent-gender :female , :unclear ;
+   :material-note "Ceramic" ;
+   :in-modern-country-note "United States" ;
+   :note "The group and the two figurines illustrated here are described in the article “Death Of A Leader, Death Of A Hohokam Village: Origins, Development, And Abandonment Of Ironwood Village” (Pages 113-150). The illustration here is figure 7 in the article. The caption reads: “Two human ceramic figurines from Pithouse 123. Figurine on left is 6.8 cm in height and has breasts indicat- ing it represents a female, one of five female figurines from Pithouse 123. Figurine on right has two applique “coffee bean” eyes and one eyebrow, the only figurine from Pithouse 123 to have these distinguishing characteristics. The sex of this figurine is unknown, but around its neck is an appliqué necklace. Both figurines were hard fired.”" ;
+   :representative-latlong-point ( 32.376177 -111.094793 ) .
+
 :colossal-toltec-warriors a :group-of-human-figures ;
    rdfs:label "Colossal Toltec Warriors" ;
    :described-by <https://en.wikipedia.org/wiki/Atlantean_figures#Tula> ;
