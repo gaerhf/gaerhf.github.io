@@ -904,6 +904,19 @@
    :representative-latlong-point (37.518233 38.605656) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nevalı_Çori_portrait,_Neolithic_age_(8400-8100_BCE),_Urfa_Museum.jpg> .
 
+:gobekli-tepe-incised-female a :human-figure ;
+   rdfs:label "Incised Female Figure from the “Lion Pillar Building”, Göbekli Tepe" ;
+   :described-by <https://doi.org/10.1515/pz-2025-2049> ,
+      <https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe> ;
+   :earliest-date -8200 ;
+   :latest-date -7800 ;
+   :material-note "Limestone" ;
+   :apparent-gender :female ;
+   :note "From Zimmermann, “The Raging Male”, Praehistorische Zeitschrift 2025, n. 34: “This observation includes eventually also the rather popular engraving on a stone slab of an alleged naked ‘female’ from the ‘Lion Pillar Building’ (Schmidt 2007, 290 Fig. 104) (Fig. 6), spreading her legs either for being in labour (Bodet 2021, 147–149), or being forcefully penetrated by a penis belonging to an otherwise invisible male (Hodder/Meskell 2011, 239). Çiğdem Atakuman (Middle East Technical University, Ankara) alerted me of an entirely different possible reading of this figure, since neither the slim ‘breasts’ nor the rather slender torso appears to belong to a (pregnant) woman. The ‘breasts’ could therefore depict the arms of another (real or imagined) individual acting from behind, changing the narrative altogether (personal communication).”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.223333 38.922500) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Urfa_museum_Woman_figure_Göbekli_Tepe_-_Neolithic_age_4750.jpg> .
+
 :tell-mureybet-female-figurine a :human-figure ;
    rdfs:label "Tell Mureybit Female Figurine" ;
    :described-by <https://virtual-museum-syria.org/aleppo/female-figurine-2/> ;
