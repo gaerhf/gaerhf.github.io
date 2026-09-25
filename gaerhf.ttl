@@ -4,16 +4,43 @@
 @prefix : <urn:gaerhf:id:> .
 
 # classes
-:human-figure a rdfs:Class ;
-   rdfs:label "Human figure" .
 
-:context a rdfs:Class ;
-   rdfs:label "Context" .
+# human figures
+
+:single-figure-or-group a rdfs:Class ;
+   rdfs:label "A single figure or a group of figures." .
+
+:human-figure a rdfs:Class ;
+   rdfs:label "Human figure" ;
+   :broader :single-figure-or-group .
 
 :group-of-human-figures a rdfs:Class ;
-   rdfs:label "Group of human figures" .
+   rdfs:label "Group of human figures" ;
+   :broader :single-figure-or-group .
+
+# gender
+
+:male a rdfs:Class .
+
+:likely-male a rdfs:Class ;
+   :broader :male .
+
+:female a rdfs:Class ;
+ rdfs:label "Female" .
+
+:likely-female a rdfs:Class ;
+   :broader :female .
+
+# Unclear
+
+:unclear a rdfs:Class ;
+   rdfs:label "Unclear" .
 
 # properties
+
+:apparent-gender a rdf:roperty ;
+   rdfs:label "Apparent gender" .
+
 :described-by a rdf:Property ;
    rdfs:label "described by" .
 
@@ -966,15 +993,17 @@
 
 # https://www.antiquities.org.il/t/item_en.aspx?CurrentPageKey=112&q=human
 
-:ppnb-stone-mask a :human-figure ;
-   rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
-   :material-note "Stone" ;
-   :in-modern-country-note "West Bank, Palestinian Territories" ;
-   :representative-latlong-point (31.528611 35.096944) ;
-   :earliest-date -7500 ;
-   :latest-date -6500 ;
-   :art-historical-culture-or-tradition :pre-pottery-neolithic ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> .
+
+
+# :ppnb-stone-mask a :human-figure ;
+#    rdfs:label "Pre-pottery Neolithic B Stone Mask" ;
+#    :material-note "Stone" ;
+#    :in-modern-country-note "West Bank, Palestinian Territories" ;
+#    :representative-latlong-point (31.528611 35.096944) ;
+#    :earliest-date -7500 ;
+#    :latest-date -6500 ;
+#    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
+#    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stone_mask_from_Hebron_Hills.JPG> .
 
 # link to this from somewhere https://smarthistory.org/running-horned-woman-tassili-najjer-algeria-2/
 
@@ -2944,6 +2973,18 @@
    :representative-latlong-point (43.803333 75.535000) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tamgaly_Sacred_Site.JPG> .
 
+:gold-mummy-mask-louvre-n2731 a :human-figure ;
+   rdfs:label "Gold Mummy Mask, Louvre N 2731" ;
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010013075> ,
+      <https://en.wikipedia.org/wiki/Djehuty_(general)> ;
+   :earliest-date -1479 ;
+   :latest-date -1425 ;
+   :material-note "Gold sheet; repoussé" ;
+   :in-modern-country-note "Egypt" ;
+   :note "Adapted from Louvre: Saqqara, Memphite necropolis; possibly from the tomb of General Djehuty; acquired from Drovetti in 1827." ;
+   :representative-latlong-point (29.8711 31.2164) ; # ll for Saqqara
+   :thumbnail-image <https://collections.louvre.fr/media/cache/large/0000000021/0000013075/0001135241_OG.JPG> .
+
 :pylos-combat-agate a :group-of-human-figures ;
    rdfs:label "Pylos Combat Agate" ;
    :described-by <https://en.wikipedia.org/wiki/Pylos_Combat_Agate> ;
@@ -3028,7 +3069,7 @@
       <https://egypt-museum.com/statue-of-akhenaten-and-nefertiti/> ;
    :earliest-date -1352 ;
    :latest-date -1335 ;
-   :gender-note "Female" ;
+   :apparent-gender :female ;
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (27.661667 30.905556) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Egypt_Painted_Statue_(28314649872).jpg> .
@@ -3837,7 +3878,7 @@
    :latest-date -500 ;
    :material-note "Electrum" ;
    :note "Findspot not known. Mapped to Sardis as a candidate for the mint that produced this coin. From BM website: “Head of warrior in crested Corinthian helmet, left. (obverse) Incuse square. (reverse)”" ;
-   :in-monern-country-note "Turkey" ;
+   :in-modern-country-note "Turkey" ;
    :representative-latlong-point (38.488333 28.040278) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2023_1/18_12/b4eaee21_d686_4b39_83d9_af8e00d2f296/mid_ERC_Cab_129_OFFICIAL_00926.jpg> .
 
@@ -4357,7 +4398,7 @@
    :latest-date -200 ;
    :in-modern-country-note "France" ;
    :representative-latlong-point (43.5328 5.2715) ;
-   :wikimedia-commons-image-page <4https://commons.wikimedia.org/wiki/File:Seated_warrior_8270_from_Roquepertuse_-_front_(Marseille,_Mus_d%27arch_med).jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_warrior_8270_from_Roquepertuse_-_front_(Marseille,_Mus_d%27arch_med).jpg> .
 
 # -300 -- https://commons.wikimedia.org/wiki/File:Majiayuan_tomb_figurines.jpg
 
@@ -5740,11 +5781,7 @@
    :described-by <https://en.wikipedia.org/wiki/Gupta_art#Sarnath_school> ;
    :date 448 ;
    :in-modern-country-note "India" ;
-   :note """A translation of the inscription is availabel on the Wikemedia Commons page: “Om! Reverence to the Buddhas! This image of the Divine One, who thoroughly
-attained perfect knowledge, (and) who was never refuted in respect of his tenets, has been
-installed by the Bhikshu Buddhamitra, (in) the year 100 (and) 20 (and) 9; in the reign
-of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day 10
-(and) 8, — with the object of averting all Unhappiness.”""" ;
+   :note "A translation of the inscription is available on the Wikimedia Commons page: “Om! Reverence to the Buddhas! This image of the Divine One, who thoroughly attained perfect knowledge, (and) who was never refuted in respect of his tenets, has been installed by the Bhikshu Buddhamitra, (in) the year 100 (and) 20 (and) 9; in the reign of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day 10 (and) 8, — with the object of averting all Unhappiness.”" ;
    :representative-latlong-point (25.435833 81.846389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mankuwar_Buddha_with_background.jpg> .
 
@@ -6001,8 +6038,8 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
 :jade-burial-suit-liu-sheng a :human-figure ;
    rdfs:label "Jade Burial Suit of Liu Sheng" ;
    :described-by <https://en.wikipedia.org/wiki/Liu_Sheng,_Prince_of_Zhongshan> ;
-   :earliest-date -110 ;
-   :latest-date -113 ;
+   :earliest-date -113 ;
+   :latest-date -110 ;
    :apparent-gender :male ;
    :material-note "Jade, Gold" ;
    :in-modern-country-note "China" ;
@@ -6407,7 +6444,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :earliest-date 200 ;
    :latest-date 400 ;
    :apparent-gender :male , :female ;
-   :in-modern-country-note "Turkmenistan" ;
+   :in-modern-country-note "Uzbekistan" ;
    :art-historical-culture-or-tradition :kushan-empire ;
    :representative-latlong-point (37.535384 67.115405) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Balalyk_Tepe_mural.jpg> .
@@ -6995,7 +7032,7 @@ of the Maharaja, the glorious Kumaragupta; (in) the month Jyeshtha; (on) the day
    :representative-latlong-point (55.063611 -2.681944) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_7th_C_Bewcastle_Cross_-_geograph.org.uk_-_1833413.jpg> .
 
-:tianlongshan-bodhisattva-head- a :human-figure ;
+:tianlongshan-bodhisattva-head a :human-figure ;
   rdfs:label "Head of a Bodhisattva (Tianlongshan Cave 21)" ;
   :described-by
     <https://www.metmuseum.org/art/collection/search/39640> ,
