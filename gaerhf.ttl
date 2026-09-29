@@ -4278,6 +4278,18 @@
    :representative-latlong-point (51.342968 54.116974 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Filippovka_kurgan_dagger.jpg> .
 
+:mars-of-todi a :human-figure ;
+   rdfs:label "Mars of Todi" ;
+   :described-by <https://en.wikipedia.org/wiki/Mars_of_Todi> ;
+   :earliest-date -425 ;
+   :latest-date -375 ;
+   :material-note "Bronze" ;
+   :apparent-gender :male ;
+   :in-modern-country-note "Italy" ;
+   :note "From Wikipedia: “The Mars of Todi is a near life-sized bronze warrior, dating from the late 5th or early 4th century BC ... It was found near Todi (ancient Tuder), on the slope of Montesanto, in the property of the Franciscan Convent of Montesanto ... The dedication is inscribed on the skirt of the breastplate. It is written in Umbrian in Etruscan characters ...” Discovered 1835." ;
+   :representative-latlong-point (42.776 12.407) ; # ll for Convento di Montesanto, Todi (estimated)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%22Mars_of_Todi%22_Etruscan_Warrior_Bronze_Statue,_5th-4th_C._BC_(48465689121).jpg> .
+
 :female-figure-guardamar a :human-figure ;
    rdfs:label "Female Figure from Guardamar" ;
    :described-by <https://en.wikipedia.org/wiki/Lady_of_Guardamar> ;
