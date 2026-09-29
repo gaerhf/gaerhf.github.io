@@ -5056,6 +5056,18 @@
    :representative-latlong-point (16.933333 33.726389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_head_from_an_over-life-sized_statue_of_Augustus.jpg> .
 
+:via-labicana-augustus a :human-figure ;
+   rdfs:label "Via Labicana Augustus" ;
+   :described-by <https://en.wikipedia.org/wiki/Via_Labicana_Augustus> ;
+   :earliest-date -12 ;
+   :latest-date 14 ;
+   :material-note "Marble (Luna marble body, Pentelic marble head)" ;
+   :apparent-gender :male ;
+   :in-modern-country-note "Italy" ;
+   :note "From Wikipedia: “The Via Labicana Augustus is a marble statue of the Roman emperor Augustus as Pontifex Maximus depicted in religious ceremony. ... It is dated as having been made after 12 BCE, the year Augustus was appointed Rome's Chief Priest. ... In 1910, the statue was discovered on slopes of the Oppian Hill, in the Via Labicana.”" ;
+   :representative-latlong-point (41.8900 12.4975) ; # ll for Via Labicana on the Oppian slope, Rome (estimated)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CaesarAugustusPontiusMaximus.jpg> .
+
 :small-skeleton-bronze a :human-figure ;
    rdfs:label "Small Skeleton in Bronze" ;
    :described-by <https://www.getty.edu/art/collection/object/103TJM> ;
