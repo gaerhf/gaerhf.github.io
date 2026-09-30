@@ -3979,6 +3979,19 @@
    :note "Mapped location is general for Glauberg, not specific for this figure." ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
 
+:kroisos-kouros a :human-figure ;
+   rdfs:label "Kroisos Kouros" ;
+   :described-by <https://en.wikipedia.org/wiki/Kroisos_Kouros> ;
+   :earliest-date -540 ;
+   :latest-date -515 ;
+   :material-note "Marble" ;
+   :height 1.95 ;
+   :apparent-gender :male ;
+   :in-modern-country-note "Greece" ;
+   :note "From Wikipedia: “The Kroisos Kouros is a marble kouros from Anavyssos in Attica which functioned as a grave marker for a fallen young warrior named Kroisos. ... The sculpture is dated to the Late Archaic Period c. 540–515 BC.” The base inscription reads: “Stop and show pity beside the marker of Kroisos, dead, whom, when he was in the front ranks, raging Ares destroyed.” Illegally excavated at Anavyssos, identified in Paris in 1937, and now in the National Archaeological Museum, Athens (inv. 3851)." ;
+   :representative-latlong-point (37.733333 23.95) ; # ll for Anavyssos, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kouros_anavissos.jpg> .
+
 :pozo-moro-mausoleum a :group-of-human-figures ;
    rdfs:label "Friezes on Mausoleum of Pozo Moro" ;
    :described-by <https://en.wikipedia.org/wiki/Mausoleum_of_Pozo_Moro> ;
@@ -4518,6 +4531,18 @@
    :representative-latlong-point (13.039552 43.865330) ;
    :note "Mapped point is generic as findspot not known." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_9/29_20/3a34aa24_ef47_4703_ace4_a3b5014f47de/mid_00164013_001.jpg> .
+
+:statue-of-bes-fordongianus a :human-figure ;
+   rdfs:label "Statue of Bes from Fordongianus" ;
+   :described-by <https://virtualarchaeology.sardegnacultura.it/index.php/en/archaeological-sites/eta-fenicio-punica/fordongianus/finds/41-statue-of-bes> ;
+   :earliest-date -300 ;
+   :latest-date 100 ;
+   :material-note "Stone" ;
+   :apparent-gender :male ;
+   :in-modern-country-note "Italy" ;
+   :note "From Sardegna Cultura Virtual Archaeology: “The statue (fig. 1) smaller than the real one and with its head missing, portrays Bes, a minor divinity passed from the Egyptian pantheon to the Punic and then the Roman one. The god is portrayed as an obese midget with large feet, and is a beneficial, healthy divinity, assimilated to the god Aesclapius. The only garment worn is a skirt falling to the ankles, held at the waist by a twisted, knotted belt, with a wide band going downwards.” From the Roman baths of Forum Traiani (Fordongianus)." ;
+   :representative-latlong-point (39.997264 8.80816) ; # ll for Terme di Fordongianus (Forum Traiani), from it.wikipedia
+   :thumbnail-image <https://virtualarchaeology.sardegnacultura.it/images/romano/fordongianus/gd/98_pic.jpg> .
 
 :bone-figurine-articulated-limbs a :human-figure ;
    rdfs:label "Bone figurine with Articulated Limbs" ;
