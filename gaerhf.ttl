@@ -3126,6 +3126,18 @@
    :representative-latlong-point (30.993 104.2) ; # ll for Sanxingdui, China
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg> .
 
+:karabel-relief a :human-figure ;
+   rdfs:label "Karabel Relief (Karabel A)" ;
+   :described-by <https://en.wikipedia.org/wiki/Karabel_relief> ;
+   :earliest-date -1300 ;
+   :latest-date -1200 ;
+   :material-note "Rock relief" ;
+   :apparent-gender :male ;
+   :in-modern-country-note "Turkey" ;
+   :note "From Wikipedia: “The Hittite / Luwian Karabel relief is a rock relief in the pass of the same name, between Torbalı and Kemalpaşa, about 20 km from İzmir in Turkey. ... Karabel A shows a warrior marching to the right with a bow in his right hand and a spear in his left. There are Luwian hieroglyphs inscribed above his left arm.” The inscription names Tarkasnawa, King of Mira (Hawkins 1998); Herodotus took the figure for the pharaoh Sesostris." ;
+   :representative-latlong-point (38.3706 27.4560) ; # ll for Karabel pass (student-supplied)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karabel1.jpg> .
+
 # -1208 https://en.wikipedia.org/wiki/Merneptah_Stele
 
 :jade-figure-fu-hao a :human-figure ;
@@ -3698,6 +3710,18 @@
    :in-modern-country-note "England" ;
    :representative-latlong-point (53.7285 0.0382) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Roos_Carr_figures_and_boat.jpg> .
+
+:ivriz-relief-warpalawas-tarhunzas a :group-of-human-figures ;
+   rdfs:label "İvriz Relief of Warpalawas and Tarhunzas" ;
+   :described-by <https://en.wikipedia.org/wiki/%C4%B0vriz_monuments> ;
+   :earliest-date -750 ;
+   :latest-date -700 ;
+   :material-note "Rock relief" ;
+   :apparent-gender :male ;
+   :in-modern-country-note "Turkey" ;
+   :note "From Wikipedia: “The İvriz monuments are a group of Hittite monuments found in south-central Anatolia, located in the town of Aydınkent, formerly called İvriz ...” The relief shows King Warpalawas “standing on a stone platform with his hands raised in a gesture of greeting or worship”; “opposite him at left stands the god Tarhunzas, who is depicted as much larger,” holding “ripe stalks of wheat and grape clusters.” It measures 4.2 by 2.4 m and dates to the second half of the 8th century BC." ;
+   :representative-latlong-point (37.409722 34.1725) ; # ll for İvriz relief, Aydınkent (from Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ivriz_Neo-Hittite_relief_detail_(1993).jpg> .
 
 :standing-figure-cadiz a :human-figure ;
    rdfs:label "Standing Figure from Cadiz" ;
@@ -5482,6 +5506,19 @@
    :representative-latlong-point (34.286111 71.946667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PharroAndArdoxsho.jpg> .
 
+:hadrian-sabina-mars-venus-louvre a :group-of-human-figures ;
+   rdfs:label "Hadrian and Sabina as Mars and Venus" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_and_Mars_(sculpture)> ,
+      <https://collections.louvre.fr/en/ark:/53355/cl010275212> ;
+   :earliest-date 120 ;
+   :latest-date 175 ;
+   :material-note "Marble" ;
+   :apparent-gender :male , :female ;
+   :in-modern-country-note "Italy" ;
+   :note "From Wikipedia: “Hadrian and Sabina as Mars and Venus is a 1.73-metre (5 ft 8 in) tall marble statue of 120–140 AD (with restorations of c. 170–175).” The male head was later reworked as Lucius Verus and the female head as Lucilla. Louvre Ma 1009; the Louvre records it as found in Rome near Santa Maria Maggiore shortly before 1620, then held in the Borghese collection." ;
+   :representative-latlong-point (41.8976 12.4984) ; # ll for Santa Maria Maggiore, Rome
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mars_Venus_Louvre_Ma1009.jpg> .
+
 :kushan-ruler-surkh-kotal a :human-figure ;
    rdfs:label "Kushan Ruler from Surkh Kotal" ;
    :described-by <https://en.wikipedia.org/wiki/Surkh_Kotal#The_ancient_name_of_the_site> ;
@@ -5548,6 +5585,19 @@
    :representative-latlong-point (35.588056 42.718333) ;
    :art-historical-culture-or-tradition :hatra ;
    :thumbnail-image <https://www.worldhistory.org/uploads/images/10852.jpg> .
+
+:calvatone-victoria a :human-figure ;
+   rdfs:label "Calvatone Victoria" ;
+   :described-by <https://en.wikipedia.org/wiki/Calvatone_Victoria> ,
+      <https://commons.wikimedia.org/wiki/Category:Victory_of_Calvatone> ;
+   :earliest-date 161 ;
+   :latest-date 169 ;
+   :material-note "Gilt bronze" ;
+   :apparent-gender :female ;
+   :in-modern-country-note "Italy" ;
+   :note "From Wikipedia: “The Calvatone Victoria is a gilt bronze statue from the Roman Imperial period. ... The statue was discovered at Calvatone, near Cremona in Italy in 1836, in four pieces.” The inscription reads “Victoriae Aug(ustorum) / Antonini et Veri / M(arcus) Satrius Maior”, dating it to the joint reign of Marcus Aurelius and Lucius Verus (161–169). Acquired by the Berlin Antikensammlung in 1841; taken to the Soviet Union in 1946 and now in the Hermitage." ;
+   :representative-latlong-point (45.1267 10.4408) ; # ll for Calvatone (ancient Bedriacum)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Victory_of_Calvatone_(1)_(cropped).jpg> .
 
 :gold-bust-marcus-aurelius a :human-figure ;
    rdfs:label "Gold Bust of Marcus Aurelius" ;
