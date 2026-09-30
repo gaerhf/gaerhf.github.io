@@ -1369,7 +1369,8 @@
 
 :anthropomorphic-design-ceramic-banpo a :human-figure ;
    rdfs:label "Anthropomorphic Design on Ceramic Vessel from Banpo" ;
-   :described-by <https://en.wikipedia.org/wiki/Banpo#Pottery_innovations> ;
+   :described-by <https://en.chnmuseum.cn/collections_577/collection_highlights_608/archaeological_discoveries_609/201911/t20191121_172534.html> ,
+      <https://en.wikipedia.org/wiki/Banpo#Pottery_innovations> ;
    :earliest-date -5000 ;
    :latest-date -3000 ;
    :material-note "Ceramic" ;
