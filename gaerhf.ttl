@@ -101,7 +101,31 @@
 :bactria-margiana-archaeological-complex a :culture ;
    rdfs:label "Bactria–Margiana Archaeological Complex" ;
    :region :central-asia ;
-   :described-by <https://en.wikipedia.org/wiki/Bactria–Margiana_Archaeological_Complex> .
+   :described-by <https://en.wikipedia.org/wiki/Bactria–Margiana_Archaeological_Complex> ;
+   :geojson """
+   {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bactria-margiana-archaeological-complex",
+        "name": "Bactria–Margiana Archaeological Complex",
+        "described-by": "https://en.wikipedia.org/wiki/Bactria–Margiana_Archaeological_Complex"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [59.3, 37.1], [60.8, 36.6], [63.0, 36.9], [65.6, 36.5],
+          [66.9, 36.5], [68.6, 36.8], [69.0, 37.6], [68.2, 38.2],
+          [67.2, 38.4], [66.3, 38.3], [63.0, 37.8], [62.6, 38.6],
+          [61.6, 38.7], [59.2, 37.6], [59.3, 37.1]
+        ]]
+      }
+    }
+  ]
+}
+""".
 
 :chemurchek-culture a :culture ;
    rdfs:label "Chemurchek Culture" ;
@@ -8142,3 +8166,16 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point ( 21.447081 -158.191729 ) ;
    :thumbnail-image <https://npr.brightspotcdn.com/dims4/default/06f2fb1/2147483647/strip/true/crop/3000x2000+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd8%2F01%2F90be35714bffa6f90ef1e9abb926%2Fap25204741938927.jpg> .
+
+:colossus-of-constantine a :human-figure ;
+   rdfs:label "Colossus of Constantine" ;
+   :described-by <https://en.wikipedia.org/wiki/Colossus_of_Constantine> ;
+   :earliest-date 312 ;
+   :latest-date 315 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "White marble, brick, wood, gilded bronze (acrolith)" ;
+   :height 12 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The great head, arms and legs of the Colossus were carved from white marble, while the rest of the body consisted of a brick core and wooden framework, possibly covered with gilded bronze. ... The statue’s right hand is said by Eusebius to have held ‘a trophy of the Saviour’s passion with the saving sign of the Cross’, possibly therefore in the form of a staff with the Chi Rho affixed to it.” ... “a monumental acrolithic statue depicting Constantine the Great ... that occupied the apse of the Basilica of Maxentius in the early 4th century.”" ;
+   :representative-latlong-point (41.8918 12.4883) ; # Basilica of Maxentius (Wikipedia coord)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_colossale_di_Costantino_I.jpg> .
