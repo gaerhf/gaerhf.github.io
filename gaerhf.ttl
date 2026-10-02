@@ -6671,6 +6671,18 @@
    :representative-latlong-point (30.66 104.063333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cheng-Han_Human_Figurine.png> .
 
+:head-constantine-york a :human-figure ;
+   rdfs:label "Head of Constantine the Great, York" ;
+   :described-by <https://en.wikipedia.org/wiki/Head_of_Constantine_the_Great,_York> ;
+   :approximate-date 306 ;
+   :in-modern-country-note "United Kingdom" ;
+   :material-note "Marble" ;
+   :height 0.42 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The Head of Constantine the Great, York is the only surviving fragment of larger, marble statue of the Roman Emperor Constantine the Great. It was found in Stonegate, York, before 1823, and is now in the Yorkshire Museum. ... The face is clean shaven and he wears a corona civica. The axis of the neck suggests that the face had originally been turned slightly to the left and down towards an audience below. ... A 2018 paper argues that the bust was remodelled from a statue of an earlier, deified emperor, probably Hadrian. It argues ... that this recarving occurred after AD 312 and not, as widely believed, at the moment of Constantine's proclamation as emperor in York in AD 306.”" ;
+   :representative-latlong-point (53.961 -1.083) ; # Stonegate, York (find-spot)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bust_of_Constantine_I_from_York_YORYM_1998_23_(4x5_cropped).jpg> .
+
 :dong-shu-funerary-portrait a :human-figure ;
    rdfs:label "Dong Shu Funerary Portrait" ;
    :described-by <https://en.wikipedia.org/wiki/Anak_Tomb_No._3>,
