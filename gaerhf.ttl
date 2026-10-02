@@ -8179,3 +8179,14 @@
    :note "From Wikipedia: “The great head, arms and legs of the Colossus were carved from white marble, while the rest of the body consisted of a brick core and wooden framework, possibly covered with gilded bronze. ... The statue’s right hand is said by Eusebius to have held ‘a trophy of the Saviour’s passion with the saving sign of the Cross’, possibly therefore in the form of a staff with the Chi Rho affixed to it.” ... “a monumental acrolithic statue depicting Constantine the Great ... that occupied the apse of the Basilica of Maxentius in the early 4th century.”" ;
    :representative-latlong-point (41.8918 12.4883) ; # Basilica of Maxentius (Wikipedia coord)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_colossale_di_Costantino_I.jpg> .
+
+:missorium-of-theodosius-i a :group-of-human-figures ;
+   rdfs:label "Missorium of Theodosius I" ;
+   :described-by <https://en.wikipedia.org/wiki/Missorium_of_Theodosius_I> ;
+   :approximate-date 388 ;
+   :in-modern-country-note "Spain" ;
+   :material-note "Silver" ;
+   :apparent-gender :male , :female ;
+   :note "From Wikipedia: “The dish shows a hieratic image of the Emperor framed in an arcade, giving a document contained in a diptych, possibly a letter of appointment, to a much smaller senior official, flanked by his two co-emperors, Valentinian II and his own son Arcadius, and bodyguards who can be identified by their hairstyles, torcs and shields as belonging to the German imperial bodyguard.” ... “The putti fly above a reclining figure of Tellus or Terra, the Roman earth goddess.” ... “The missorium comes from a treasure of silver objects that also included two plain silver cups, now missing, discovered by a labourer in 1847 in Almendralejo, close to Mérida in the Spanish province of Badajoz.”" ;
+   :representative-latlong-point (38.68 -6.41) ; # Almendralejo, Badajoz (find-spot)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Disc_of_Theodosius.png> .
