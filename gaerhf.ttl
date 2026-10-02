@@ -3856,6 +3856,18 @@
    :representative-latlong-point (54.29 18.15) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MuseumGrudziadzA5149.JPG> .
 
+:nikandre-kore a :human-figure ;
+   rdfs:label "Nikandre Kore" ;
+   :described-by <https://en.wikipedia.org/wiki/Dedication_of_Nikandre> ;
+   :approximate-date -650 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Naxian marble" ;
+   :height 1.80 ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “The Dedication of Nikandre is a Greek marble sculpture, made approximately around 650 BCE, held in the National Archaeological Museum, Athens, Greece (Inv. 1). Nikandre, a woman from the island of Naxos, dedicated the statue in the temple of Artemis at Delos, the birthplace of Apollo and Artemis. The statue, which was found during archaeological excavation in the 19th century, is one of the earliest surviving korai, or statues of women, and displays one of the oldest inscriptions of Ancient Greek in stone. ... On the left side of the statue is the dedicatory inscription, one of the earliest surviving inscriptions of Greek in stone.”" ;
+   :representative-latlong-point (37.3993075 25.268868) ; # TO CONFIRM: source unknown (Wikipedia's Delos coord is 37.39333333 25.27111111)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Nikandre.jpg> .
+
 :macmillan-aryballos a :group-of-human-figures ;
    rdfs:label "Macmillan Aryballos" ;
    :described-by <https://en.wikipedia.org/wiki/Macmillan_aryballos> ,
@@ -3881,6 +3893,21 @@
 # -600 - -500 https://en.wikipedia.org/wiki/Kouros_of_Samos
 
 # -600 - -400 https://en.wikipedia.org/wiki/Dar%27a
+
+:kleobis-biton-delphi a :group-of-human-figures ;
+   rdfs:label "Kleobis and Biton" ;
+   :described-by <https://en.wikipedia.org/wiki/Kleobis_and_Biton> ,
+      <https://www.delphimuseum.gr/2025/03/the-twins-of-argos.html> ,
+      <https://www.perseus.tufts.edu/hopper/artifact?name=Delphi,+Kleobis+and+Biton&object=Sculpture> ;
+   :earliest-date -610 ;
+   :latest-date -580 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Parian marble" ;
+   :height 2.16 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The statues are made of Parian marble and stand side by side on a shared base. A partial inscription states that the kouroi were made by the sculptor Polymedes of Argos and dedicated to Apollo by the citizens of Argos. Depicted as nude youths, each figure advances one leg forward with arms slightly bent and fists clenched. ... The earliest attestation of their legend appears later, in Herodotus's Histories of c. 440 BCE. The brothers were venerated in Argos for their extraordinary physical strength, filial devotion, and religious piety.”" ;
+   :representative-latlong-point (38.4823 22.5013) ; # Delphi (find-spot, near the Athenian Treasury), from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kouroi2.jpg> .
 
 :monument-3-danzante a :human-figure ;
    rdfs:label "Monument 3 (“Danzante”)" ;
@@ -3969,6 +3996,18 @@
    :representative-latlong-point (48.639167 9.010833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Holzgerlingen,_Googles_Arts_%26_Culture_(cropped).png> .
 
+:sounion-kouros a :human-figure ;
+   rdfs:label "Sounion Kouros" ;
+   :described-by <https://en.wikipedia.org/wiki/Sounion_Kouros> ;
+   :approximate-date -600 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Naxian marble" ;
+   :height 3.05 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The Sounion Kouros is an early archaic Greek statue of a naked young man or kouros carved in marble from the island of Naxos around 600 BCE. It is one of the earliest examples that scholars have of the kouros-type which functioned as votive offerings to gods or demi-gods, and were dedicated to heroes. Found near the Temple of Poseidon at Cape Sounion, this kouros was found badly damaged and heavily weathered. It was restored to its original height of 3.05 meters (10.0 ft) returning it to its larger than life size.”" ;
+   :representative-latlong-point (37.6502 24.02455) ; # Temple of Poseidon, Sounion (find-spot), from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_di_kouros,_dall'esterno_del_tempio_di_poseidone_a_sounion,_600_ac_ca.,_n._2720,_01.jpg> .
+
 :gorgon-pediment-corfu a :group-of-human-figures ;
    rdfs:label "Gorgon Pediment, Temple of Artemis, Corfu" ;
    :described-by <https://en.wikipedia.org/wiki/Temple_of_Artemis,_Corfu#Pediment_details> ;
@@ -3990,6 +4029,19 @@
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (29.871111 31.216389) ;
    :thumbnail-image <https://media.getty.edu/iiif/image/afdc1e79-9284-4756-958d-2e3f61377f07/full/400,/0/default.jpg> .
+
+:kouros-tenea a :human-figure ;
+   rdfs:label "Kouros of Tenea" ;
+   :described-by <https://en.wikipedia.org/wiki/Kouros_of_Tenea> ;
+   :earliest-date -560 ;
+   :latest-date -550 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Parian marble" ;
+   :height 1.53 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The grave statue of a youth from Tenea known as the Kouros of Tenea (formerly Apollo of Tenea) is now located in the Glyptothek in Munich, Germany. The archaic Kouros was created in North-East Peloponnese about 560 BC. The Parian marble statue was discovered in an ancient cemetery in 1846, approximately twenty kilometers South of Ancient Corinth at the site of ancient Tenea.”" ;
+   :representative-latlong-point (37.8 22.866667) ; # Tenea (find-spot), from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kouros_of_Tenea_560-550_BC,_Glyptothek_Munich_168_120287.jpg> .
 
 :capestrano-warrior a :human-figure ;
    rdfs:label "Capestrano Warrior" ;
@@ -4024,6 +4076,19 @@
    :note "From Wikipedia: “The Kroisos Kouros is a marble kouros from Anavyssos in Attica which functioned as a grave marker for a fallen young warrior named Kroisos. ... The sculpture is dated to the Late Archaic Period c. 540–515 BC.” The base inscription reads: “Stop and show pity beside the marker of Kroisos, dead, whom, when he was in the front ranks, raging Ares destroyed.” Illegally excavated at Anavyssos, identified in Paris in 1937, and now in the National Archaeological Museum, Athens (inv. 3851)." ;
    :representative-latlong-point (37.733333 23.95) ; # ll for Anavyssos, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kouros_anavissos.jpg> .
+
+:merenda-kouros a :human-figure ;
+   rdfs:label "Merenda Kouros" ;
+   :described-by <https://en.wikipedia.org/wiki/Merenda_Kouros> ;
+   :earliest-date -540 ;
+   :latest-date -530 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Parian marble" ;
+   :height 1.89 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The Merenda Kouros (NAMA 4890) is a Late Archaic Greek Kouros, created approximately 540-530 B.C., measuring 1.89 meters tall and made of Parian marble. ... Extremely well preserved, and maintaining some traces of pigment. It was discovered alongside the Phrasikleia Kore in present-day Merenda, Greece in 1972, 25 miles Southeast of Athens. The area was once a part of the necropolis of the Attic Deme of Myrrhinus.”" ;
+   :representative-latlong-point (37.8549039025 23.9483773191) ; # TO CONFIRM: source unknown (Wikipedia's Myrrhinus coord is 37.872812 23.9678945)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kouros,_da_merernda_(myrrhinous)_in_attica,_540-530_ac_ca._01,_n._4890.jpg> .
 
 :pozo-moro-mausoleum a :group-of-human-figures ;
    rdfs:label "Friezes on Mausoleum of Pozo Moro" ;
