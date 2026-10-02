@@ -8167,7 +8167,7 @@
    :representative-latlong-point ( 21.447081 -158.191729 ) ;
    :thumbnail-image <https://npr.brightspotcdn.com/dims4/default/06f2fb1/2147483647/strip/true/crop/3000x2000+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd8%2F01%2F90be35714bffa6f90ef1e9abb926%2Fap25204741938927.jpg> .
 
-:colossus-of-constantine a :human-figure ;
+:colossus-constantine a :human-figure ;
    rdfs:label "Colossus of Constantine" ;
    :described-by <https://en.wikipedia.org/wiki/Colossus_of_Constantine> ;
    :earliest-date 312 ;
@@ -8178,7 +8178,13 @@
    :apparent-gender :male ;
    :note "From Wikipedia: “The great head, arms and legs of the Colossus were carved from white marble, while the rest of the body consisted of a brick core and wooden framework, possibly covered with gilded bronze. ... The statue’s right hand is said by Eusebius to have held ‘a trophy of the Saviour’s passion with the saving sign of the Cross’, possibly therefore in the form of a staff with the Chi Rho affixed to it.” ... “a monumental acrolithic statue depicting Constantine the Great ... that occupied the apse of the Basilica of Maxentius in the early 4th century.”" ;
    :representative-latlong-point (41.8918 12.4883) ; # Basilica of Maxentius (Wikipedia coord)
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_colossale_di_Costantino_I.jpg> .
+   :wikimedia-commons-image-page 
+      <https://commons.wikimedia.org/wiki/File:Colossal_statue_of_Constantine_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Roman_Nose_lower_side.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Braccio_del_colosso_di_Costantino_I_ai_Musei_Capitolini.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Colossal_hand,_Roman_-_Musei_Capitolini_-_Rome,_Italy_-_DSC06255.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Colossal_statue_of_Constantine_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016.JPG_(3).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Statua_colossale_di_Costantino_I.jpg> .
 
 :missorium-of-theodosius-i a :group-of-human-figures ;
    rdfs:label "Missorium of Theodosius I" ;
