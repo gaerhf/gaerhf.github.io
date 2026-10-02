@@ -8190,3 +8190,67 @@
    :note "From Wikipedia: “The dish shows a hieratic image of the Emperor framed in an arcade, giving a document contained in a diptych, possibly a letter of appointment, to a much smaller senior official, flanked by his two co-emperors, Valentinian II and his own son Arcadius, and bodyguards who can be identified by their hairstyles, torcs and shields as belonging to the German imperial bodyguard.” ... “The putti fly above a reclining figure of Tellus or Terra, the Roman earth goddess.” ... “The missorium comes from a treasure of silver objects that also included two plain silver cups, now missing, discovered by a labourer in 1847 in Almendralejo, close to Mérida in the Spanish province of Badajoz.”" ;
    :representative-latlong-point (38.68 -6.41) ; # Almendralejo, Badajoz (find-spot)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Disc_of_Theodosius.png> .
+
+:statuette-god-teisheba a :human-figure ;
+   rdfs:label "Statuette of God Teisheba" ;
+   :described-by <https://en.wikipedia.org/wiki/Statuette_of_God_Teisheba> ;
+   :earliest-date -800 ;
+   :latest-date -700 ;
+   :in-modern-country-note "Armenia" ;
+   :material-note "Bronze" ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The Statuette of God Teisheba is an Urartian (Kingdom of Van) bronze statuette made in the 8-7th century BC, found near Teishebaini (Karmir Blur) in 1941, depicting the Araratian (Urartian) god of storms and thunder Teisheba. ... The statuette looks like a young man who in full height stands on a foliate base. The man wears a gown on which there are characteristic ornaments of Urartian period: a quadrangle with a rosette in the centre, a belt on his waist, a fringed band over his shoulder.”" ;
+   :representative-latlong-point (40.153888 44.453366) ; # Teishebaini (Karmir Blur)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tesheiba02~.jpg> .
+
+:baalshillem-temple-boy a :human-figure ;
+   rdfs:label "Baalshillem Temple Boy" ;
+   :described-by <https://en.wikipedia.org/wiki/Baalshillem_Temple_Boy> ;
+   :earliest-date -425 ;
+   :latest-date -400 ;
+   :in-modern-country-note "Lebanon" ;
+   :material-note "Marble" ;
+   :height 0.35 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The Baalshillem Temple Boy, or Ba'al Sillem Temple Boy, is a votive statue of a ‘temple boy’ with a Phoenician inscription known as KAI 281. It was found along with a number of other votive statues of children near the canal in the Temple of Eshmun in 1963-64 by Maurice Dunand, and is currently in the National Museum of Beirut. ... The inscription is dated from the end of the 5th century BCE.”" ;
+   :representative-latlong-point (33.585556 35.398056) ; # Temple of Eshmun
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Votive_statue_from_eshmun.jpg> .
+
+:bronze-votive-figure-pizzidimonte a :human-figure ;
+   rdfs:label "Bronze Votive Figure from Pizzidimonte" ;
+   :described-by <https://en.wikipedia.org/wiki/Bronze_votive_figure_from_Pizzidimonte> ;
+   :earliest-date -500 ;
+   :latest-date -480 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Bronze" ;
+   :height 0.232 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “This bronze votive statuette shows a young man wearing a bordered tunic with pointed boots. The figure is still fixed to its original lead mount. The small sculpture stands upright with drapery closely wrapped around his body, right hand extended forward with the left hand placed firmly on his waist. ... Though nothing is known about the exact findspot of the bronze figurine, the important Etruscan settlement at Gonfienti was discovered in 1996 only one kilometre away from Pizzidimonte and it is therefore likely that it was originally found there.”" ;
+   :representative-latlong-point (43.860556 11.125833) ; # Gonfienti (Wikipedia coord), probable find-spot near Pizzidimonte
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Votive_figure_from_Pizzidimonte,_Prato_(1).jpg> .
+
+:casa-nocera-statue-a a :human-figure ;
+   rdfs:label "Statue A from the Casa Nocera Necropolis" ;
+   :described-by <https://it.wikipedia.org/wiki/Necropoli_di_Casa_Nocera> ;
+   :earliest-date -700 ;
+   :latest-date -675 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Shelly limestone" ;
+   :height 0.745 ;
+   :apparent-gender :unclear ;
+   :note "Translated from Italian Wikipedia: “The two statues in shelly limestone, datable to the first decades of the 7th century BC, were found reused on the covering of tomb C ... Both lack the lower part of the legs, since they were fitted with long tenons that allowed them to be fixed in the ground. The standing figures wear a triangular loincloth incised with geometric motifs and a wide belt; statue A (preserved height 74.5 cm) wears its hair in a long braid and raises its forearms with the hands joined behind the nape ... The different hairstyles led Friedrich-Wilhelm von Hase to suggest that statue B depicts a man and statue A a woman, a hypothesis Maggiani judged suggestive but not adequately demonstrated.”" ;
+   :representative-latlong-point (43.2975 10.616667) ; # Casale Marittimo; necropolis just outside the town
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figure_da_necropoli_di_casa_nocera,_casale_marittimo,_700-680_a.c._circa,_statua_A.JPG> .
+
+:casa-nocera-statue-b a :human-figure ;
+   rdfs:label "Statue B from the Casa Nocera Necropolis" ;
+   :described-by <https://it.wikipedia.org/wiki/Necropoli_di_Casa_Nocera> ;
+   :earliest-date -700 ;
+   :latest-date -675 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Shelly limestone" ;
+   :height 0.85 ;
+   :apparent-gender :unclear ;
+   :note "Translated from Italian Wikipedia: “The two statues in shelly limestone, datable to the first decades of the 7th century BC, were found reused on the covering of tomb C ... Both lack the lower part of the legs, since they were fitted with long tenons that allowed them to be fixed in the ground. The standing figures wear a triangular loincloth incised with geometric motifs and a wide belt; ... statue B (85 cm) has a short tail on the shoulders, the left hand lowered to the belly and the right drawn to the chest, and preserves a fragment of the right eye, worked in black stone and inset in the eye socket. ... The different hairstyles led Friedrich-Wilhelm von Hase to suggest that statue B depicts a man and statue A a woman, a hypothesis Maggiani judged suggestive but not adequately demonstrated.”" ;
+   :representative-latlong-point (43.2975 10.616667) ; # Casale Marittimo; necropolis just outside the town
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figure_da_necropoli_di_casa_nocera,_casale_marittimo,_700-680_a.c._circa,_statua_B.JPG> .
