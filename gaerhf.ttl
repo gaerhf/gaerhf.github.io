@@ -8310,3 +8310,16 @@
    :note "From Wikipedia: “The image is a wooden core covered with sheets of thin gold leaf and is part of the treasury of Essen Cathedral in Germany. ... Dated around the year 980 A.D., it is both the oldest known sculpture of the Madonna and the oldest free-standing medieval sculpture north of the Alps ... Mary is depicted sitting on a stool, with a slightly oversized Christ child figure sitting on her lap.”" ;
    :representative-latlong-point (51.455833 7.013611) ; # Essen Cathedral (former abbey church)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Goldene-Madonna-Essen.jpg> .
+
+:hadrian-tel-shalem a :group-of-human-figures ;
+   rdfs:label "Bronze Statue of Hadrian from Tel Shalem" ;
+   :described-by <https://www.judaism-and-rome.org/bronze-statue-hadrian-tel-shalem-135-137-ce> ,
+      <https://followinghadrian.com/2014/10/28/bronze-statue-of-hadrian-from-the-legionary-camp-at-tel-shalem-judaea-israel-museum/> ;
+   :earliest-date 132 ;
+   :latest-date 137 ;
+   :in-modern-country-note "Israel" ;
+   :material-note "Bronze" ;
+   :apparent-gender :male ;
+   :note "From Following Hadrian: “The statue likely portrays Hadrian in the pose of the supreme military commander greeting his troops (adlocutio) or as a conqueror stepping on a defeated enemy (a head of a youth was found next to the statue). However, it is uncertain whether the head and the armour originally belonged together.” ... From Judaism and Rome: “The head and arm are attached to a cuirassed torso, which is decorated with a relief depicting a battle scene with a group of three pairs of soldiers who fight in duels.”" ;
+   :representative-latlong-point (32.399263 35.526037) ; # Tel Shalem
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Hadrian_from_Tel_Shalem.jpg> .
