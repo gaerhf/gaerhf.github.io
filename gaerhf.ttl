@@ -6890,6 +6890,28 @@
    :representative-latlong-point (61.331574 -71.499644) ;
    :thumbnail-image <https://www.historymuseum.ca/wp-content/uploads/2022/09/Blog-KRyan-09-2022_Fig567-1024x512.png>  .
 
+:justinian-retinue-san-vitale a :group-of-human-figures ;
+   rdfs:label "Justinian and His Retinue, San Vitale" ;
+   :described-by <https://en.wikipedia.org/wiki/Basilica_of_San_Vitale#Justinian_and_Theodora_panels> ;
+   :approximate-date 547 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Mosaic" ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “At the foot of the apse side walls are two famous mosaic panels, completed in 547. On viewer left (but privileged right side from perspective of Christ in apse) is a mosaic depicting the East Roman Emperor Justinian I, clad in Tyrian purple with a golden halo, standing next to court officials, generals Belisarius and Narses, Bishop Maximian, palatinae guards, and deacons. ... Justinian himself stands in the middle, with soldiers on his right and clergy on his left, emphasising that Justinian is the leader of both church and state of his empire.”" ;
+   :representative-latlong-point (44.4206 12.1964) ; # Basilica of San Vitale, Ravenna
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Justinian_mosaic,_San_Vitale,_consecrated_547,_Ravenna,_Italy.jpg> .
+
+:theodora-attendants-san-vitale a :group-of-human-figures ;
+   rdfs:label "Theodora and Her Attendants, San Vitale" ;
+   :described-by <https://en.wikipedia.org/wiki/Basilica_of_San_Vitale#Justinian_and_Theodora_panels> ;
+   :approximate-date 547 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Mosaic" ;
+   :apparent-gender :female , :male ;
+   :note "From Wikipedia: “At the foot of the apse side walls are two famous mosaic panels, completed in 547. ... On the opposite wall, the more elaborate panel shows Empress Theodora solemn and formal, with a golden halo, crown and jewels, and a group of court women as well as eunuchs. The two women standing beside Theodora are traditionally identified as Antonina, the wife of Belisarius, and their daughter Ioannina. The Empress holds the Eucharistic vessel for the Precious Blood, and her panel differs from that of Justinian in having a more complex background, with a fountain, cupola, and lavish hangings.”" ;
+   :representative-latlong-point (44.4206 12.1964) ; # Basilica of San Vitale, Ravenna
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:San_Vitale_Empress_Theodora_%26_Attendants.jpg> .
+
 :anyang-funerary-bed a :group-of-human-figures ;
    rdfs:label "Anyang Funerary Bed" ;
    :described-by <https://en.wikipedia.org/wiki/Anyang_funerary_bed> ;
