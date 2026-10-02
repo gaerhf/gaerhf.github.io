@@ -6109,15 +6109,15 @@
    :representative-latlong-point (38.9072 1.42951) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dama_de_Ibiza_(M.A.N._Madrid)_01.jpg> .
 
-:maurya-standing-male-figure a :human-figure ;
-   :described-by <https://www.metmuseum.org/art/collection/search/38075> ;
-   :period-note "Mauryan Empire (India)" ;
-   :earliest-date -300 ;
-   :latest-date -100 ;
-   :material-note "Ceramic" ;
-   :art-historical-culture-or-tradition :mauryan-empire ;
-   :in-modern-country-note "India" ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MauryanStatuette2ndCenturyBCE.jpg> .
+# :maurya-standing-male-figure a :human-figure ;
+#    :described-by <https://www.metmuseum.org/art/collection/search/38075> ;
+#    :period-note "Mauryan Empire (India)" ;
+#    :earliest-date -300 ;
+#    :latest-date -100 ;
+#    :material-note "Ceramic" ;
+#    :art-historical-culture-or-tradition :mauryan-empire ;
+#    :in-modern-country-note "India" ;
+#    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MauryanStatuette2ndCenturyBCE.jpg> .
 
 # no longer at this page on met website
 # :okvik-figurine a :human-figure ;
