@@ -5740,6 +5740,18 @@
    :note "The bust is sometimes identified as Antoninus Pius." ;
    :thumbnail-image <https://www.getty.edu/art/exhibitions/aurelius/images/6_gm_391470EX10.jpg> .
 
+:commodus-hercules a :group-of-human-figures ;
+   rdfs:label "Commodus as Hercules" ;
+   :described-by <https://en.wikipedia.org/wiki/Commodus_as_Hercules> ;
+   :approximate-date 192 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Marble" ;
+   :height 1.33 ;
+   :apparent-gender :male , :female ;
+   :note "From Wikipedia: “Commodus as Hercules, also known as The Bust of Commodus as Hercules, is a marble portrait sculpture created sometime in early 192 AD. It is housed in the Capitoline Museums in Rome, Italy. Originally discovered in 1874 in the underground chambers of Horti Lamiani ... Here, the Roman Emperor has taken on the guise of the mythological hero, Hercules. He has been given the attributes of the hero: the skin of the Nemean lion placed over his head and his left arm, the club in his right hand, and the three golden apples of the Hesperides in his left hand. ... Further decoration can be found surrounding the globe, from the kneeling Amazons to either side (one of whom has been lost) ... this idea is furthered by the inclusion of two Tritons, which are believed to represent his apotheosis.”" ;
+   :representative-latlong-point (41.8945 12.5047) ; # Horti Lamiani (find-spot), from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Commodo_vestito_da_Ercole_ai_Musei_Capitolini.jpg> .
+
 :gold-bust-septimius-severus a :human-figure ;
    rdfs:label "Gold Bust of Septimius Severus" ;
    :described-by <https://en.wikipedia.org/wiki/Golden_Bust_of_Septimius_Severus> ;
@@ -6527,7 +6539,7 @@
       <https://collections.nmnh.si.edu/search/anth/?ark=ark:/65665/3d509babb24e74e989f371e4e9da45ee6> ;
    :date 162 ;
    :in-modern-country-note "Mexico" ;
-   :note "See Smithsonian page for findspot." ;
+   :note "See Smithsonian page for findspot. From Wikipedia “The Tuxtla Statuette is a small rounded nephrite figurine about 6.5” high, and carved to resemble a squat, bullet-shaped human with a duck-like bill and wings. It is incised with glyphs of the Epi-Olmec or Isthmian script, two columns in the front and two in the back, one of the few extant examples of this very early Mesoamerican writing system. The front of the statuette is somewhat defaced and the glyphs there are only partially readable.”" ;
    :representative-latlong-point (18.466667 -95.433333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Estatuilla_de_Tuxtla.jpg> .
 
@@ -6989,6 +7001,19 @@
    :note "Dispersed on art market after discovery. Said to be from Anyang." ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anyang_funerary_bed,_Museum_of_Fine_Arts,_Boston,_1.jpg> .
 
+:tashiroota-tomb-wall-painting a :group-of-human-figures ;
+   rdfs:label "Tashiroōta Tomb Wall Painting" ;
+   :described-by <https://doi.org/10.15184/aqy.2026.10377> ,
+      <https://en.wikipedia.org/wiki/Tashiro%C5%8Dta_Kofun> ;
+   :earliest-date 550 ;
+   :latest-date 600 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Red, black and green pigment on granite" ;
+   :apparent-gender :unclear ;
+   :note "From article: “Figure 4. Visual synthesis of core findings: ... b) strategic positioning within specific architectural elements here on the rear wall of Tashiroōta tomb (adapted from the original work by Kusaka Hakkō; © courtesy of the National Museum of Japanese History) ...” ... From Wikipedia: “The 2.3 meter wide and 1.1 meter high waist stone on the back wall of the burial chamber and the wall on the right side of the middle chamber are decorated with continuous triangular patterns, using the three colors of red, black, and green on the granite rock surface. The drawings also depict people, ships, shields, takatsuki (tall cups), bracken (warabi) patterns, concentric circles, and flowers. ... it is estimated that the tumulus was built in the latter half of the 6th century.”" ;
+   :representative-latlong-point (33.394806 130.515167) ; # Tashiroōta Kofun, from Wikipedia
+   :thumbnail-image <https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20260916130530288-0360:S0003598X26103779:S0003598X26103779_fig4.png> .
+
 :attendant-wounded-horse a :human-figure ;
    rdfs:label "Emperor and Wounded House from Zhao Mausoleum" ;
    :described-by <https://en.wikipedia.org/wiki/Six_Steeds_of_Zhao_Mausoleum> ,
@@ -7385,6 +7410,19 @@
    :representative-latlong-point (43.48861 -89.67083) ;
    :thumbnail-image <https://wisconsinfirstnations.org/wp-content/uploads/2018/10/ManMound.jpg> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Man_Mound.jpg> .
+
+:shaka-birth-todaiji a :group-of-human-figures ;
+   rdfs:label "Shaka at Birth (Tōdai-ji)" ;
+   :described-by <https://en.wikipedia.org/wiki/Shaka_at_Birth_(T%C5%8Ddai-ji)> ;
+   :earliest-date 750 ;
+   :latest-date 759 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Gilt bronze" ;
+   :height 0.475 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The statue and its basin date to the Nara period (710–794) ... This example at Tōdai-ji is generally dated to the 750s. ... Evoking the legend of his birth, the statue of the infant Buddha has its right arm raised, pointing to heaven, and left arm pendant, pointing to the earth; he is bare chested and wears a skirt. ... The exterior has incised images of human figures, animals real and imaginary, birds, and butterflies, set against a landscape of flowers, grasses, shrubs, trees, mountain peaks, clouds, and pagodas.”" ;
+   :representative-latlong-point (34.68916667 135.83972222) ; # Tōdai-ji, Nara, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shaka_at_birth_basin.JPG> .
 
 :bell-king-seongdeok a :group-of-human-figures ;
    rdfs:label "Bell of King Seongdeok" ;
@@ -8066,6 +8104,19 @@
    :representative-latlong-point (11.366424 -7.470627) ;
    :thumbnail-image <https://www.artic.edu/iiif/2/3afb386b-1dfd-2264-8646-6d5cbb6f6b38/full/1686,/0/default.jpg> .
 
+:usuki-stone-buddhas a :group-of-human-figures ;
+   rdfs:label "Usuki Stone Buddhas" ;
+   :described-by <https://en.wikipedia.org/wiki/Usuki_Stone_Buddhas> ;
+   :earliest-date 1100 ;
+   :latest-date 1333 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Tuff (carved in bas-relief into the cliff face)" ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The Usuki Stone Buddhas is a group of 61 religious statues in four groups carved in bas-relief into a tuff cliff in the city of Usuki, Ōita Prefecture on the island of Kyushu, Japan. ... There are no historical materials remaining that testify to the period or circumstances surrounding the construction of these statues. ... However, based on the style, it is estimated that most of the statues were made in the late Heian period, and some in the Kamakura period.”" ;
+   :representative-latlong-point (33.0905 131.762639) ; # Usuki Stone Buddhas, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Usuki_Stone_Buddhas.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Usuki_Stone_Buddhas_.jpg> .
+
 :bayeux-tapestry a :group-of-human-figures ;
    rdfs:label "Bayeaux Tapestry" ;
    :described-by <https://en.wikipedia.org/wiki/Bayeux_Tapestry> ;
@@ -8118,6 +8169,18 @@
    :in-modern-country-note "France" ;
    :representative-latlong-point (45.333333 3) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/463795/953347/main-image> .
+
+:dainichi-nyorai-enjoji a :human-figure ;
+   rdfs:label "Dainichi Nyorai (Enjō-ji)" ;
+   :described-by <https://en.wikipedia.org/wiki/Dainichi_Nyorai_(Enj%C5%8D-ji)> ;
+   :earliest-date 1175 ;
+   :latest-date 1176 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Hinoki (Japanese cypress), lacquer, gold leaf, rock-crystal eyes, gilt bronze" ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The seated wooden statue of Dainichi Nyorai at the Shingon temple of Enjō-ji in Nara is the earliest and best-substantiated work by Japanese master sculptor Unkei. An inscription on the pedestal records that he began work on the piece in 1175 and brought it to completion the following year. ... In this image Dainichi is bare-chested, with flowing draperies hanging from the left shoulder; the head is crowned, the arms, wrists, neck, chest, and legs bejewelled; the topknot is high, with long hair resting on the right shoulder.”" ;
+   :representative-latlong-point (34.69583333 135.91527778) ; # Enjō-ji, Nara, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dainichi_Nyorai_Unkei_Enjoji_1.jpg> .
 
 :bust-of-jayavarman-vii a :human-figure ;
    rdfs:label "Bust of Jayavarman VII" ;
@@ -8203,6 +8266,30 @@
    :thumbnail-image <https://www.spiromounds.com/img/figure-9.20.jpg?nf_resize=fit&w=1000&h=1000> .
 
 # 1221 https://en.wikipedia.org/wiki/Emperor_Go-Toba
+
+:todaiji-hachiman a :human-figure ;
+   rdfs:label "Tōdai-ji Hachiman" ;
+   :described-by <https://en.wikipedia.org/wiki/T%C5%8Ddai-ji_Hachiman> ;
+   :approximate-date 1201 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Wood and polychromy" ;
+   :height 0.871 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The Tōdai-ji Hachiman is a syncretic Shinto-Buddhist sculpture of the kami Hachiman carved in 1201 by Buddhist sculptor Kaikei. ... Kaikei's sculpture is a solitary image of Hachiman as a monk. ... the deity is seen legs crossed, left hand on the lap, right hand held at chest level, staff in hand. He wears a grey undergarment, ochre robe, and is painted with a tōyama pattern, wisps of reds (shades of lacquer and cinnabar), greens and blues.”" ;
+   :representative-latlong-point (34.68916667 135.83972222) ; # Tōdai-ji, Nara, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Todaiji_Monastery_Hachiman_by_Kaikei_(420).jpg> .
+
+:ryutoki-kofukuji a :human-figure ;
+   rdfs:label "Ryūtōki: Demon with Dragon and Lantern (Kōfuku-ji)" ;
+   :described-by <https://www.nippon.com/en/japan-topics/b10919/> ;
+   :approximate-date 1215 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Hinoki (Japanese cypress), crystal-inlaid eyes, quartz, copper" ;
+   :height 0.778 ;
+   :apparent-gender :male ;
+   :note "From Nippon.com: “While Tentōki (Demon Holding a Lantern Aloft), which forms a pair with this piece, balances a lantern on his shoulder, this sculpture balances his lantern on top of his head, displaying an almost miraculous sense of balance to prevent it from falling. The dragon wrapped around the figure’s neck peeps out from above his shoulder, like a mischievous accomplice. ... An inscription inside the statue reveals that it was created in 1215 by Kōben, the third son of Unkei, the most revered of all Kamakura period Buddhist sculptors.”" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ryutoki_Kofukuji.jpg> .
 
 :river-creek-tennessee-tablet a :group-of-human-figures ;
    rdfs:label "River Creek Tennessee Tablet" ;
