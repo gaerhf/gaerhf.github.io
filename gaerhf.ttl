@@ -8194,6 +8194,20 @@
    :representative-latlong-point (34.69583333 135.91527778) ; # Enjō-ji, Nara, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dainichi_Nyorai_Unkei_Enjoji_1.jpg> .
 
+:virgin-montserrat a :group-of-human-figures ;
+   rdfs:label "Virgin of Montserrat" ;
+   :described-by <https://en.wikipedia.org/wiki/Virgin_of_Montserrat> ,
+      <https://www.montserratvisita.com/en/spirituality/our-lady-of-montserrat> ;
+   :earliest-date 1175 ;
+   :latest-date 1200 ;
+   :in-modern-country-note "Spain" ;
+   :material-note "Wood, polychrome" ;
+   :height 0.95 ;
+   :apparent-gender :female , :male ;
+   :note "From Montserrat website: “Artistically, the image imitates a popular model, that of Our Lady in Majesty, with a wholly frontal attitude and Baby Jesus on Her lap in the centre. Both Mother and Child are wearing crowns. The figure of Our Lady stretches out Her right hand, which holds the globe, symbolising the cosmos. Our Lady nearly rests Her left hand on the Child’s shoulder, indicating that this omnipotent king is Her Son. With His right hand, the Child gives a blessing, whilst His left hand holds a pinecone, symbol of fertility and everlasting life.” ... From Wikipedia: “The Romanesque sculpture is crafted in wood from the late 12th century.”" ;
+   :representative-latlong-point (41.59320556 1.83713889) ; # Santa Maria de Montserrat Abbey, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:A_Virgem_de_Mont_Serrat.jpg> .
+
 :bust-of-jayavarman-vii a :human-figure ;
    rdfs:label "Bust of Jayavarman VII" ;
    :described-by <https://www.guimet.fr/fr/nos-collections/asie-du-sud-est/portrait-du-roi-jayavarman-vii>,
@@ -8327,6 +8341,44 @@
    :art-historical-culture-or-tradition :mississippian ;
    :representative-latlong-point (34.125131 -84.807664) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .
+
+:madonna-bordone a :group-of-human-figures ;
+   rdfs:label "Madonna del Bordone" ;
+   :described-by <https://en.wikipedia.org/wiki/Madonna_del_Bordone> ;
+   :approximate-date 1261 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Tempera on panel" ;
+   :height 2.25 ;
+   :apparent-gender :female , :male ;
+   :note "From Wikipedia: “The Madonna del Bordone (‘The Madonna of the pilgrim's staff’) is a panel painting by the Italian painter Coppo di Marcovaldo, in the church of Santa Maria dei Servi in Siena, Italy. Signed and dated 1261, the work is the only certain attribution to the Florentine painter. ... It portrays the Madonna enthroned with a halo and two small angels on her sides. She is enthroned, and supports the blessing Child, who is holding the Book of the Law in his left hand and has a halo surrounded by a jewelled cross.”" ;
+   :representative-latlong-point (43.315327 11.338174) ; # Santa Maria dei Servi, Siena, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Coppo_di_marcovaldo,_madonna_del_bordone,_siena,_chiesa_dei_servi,_1261_tavola,.jpg> .
+
+:coronation-virgin-santa-maria-maggiore a :group-of-human-figures ;
+   rdfs:label "Coronation of the Virgin, Apse Mosaic, Santa Maria Maggiore" ;
+   :described-by <https://en.wikipedia.org/wiki/Santa_Maria_Maggiore> ,
+      <https://www.visualmuseum.gallery/gallery/coronation-of-the-virgin-closeup/> ;
+   :approximate-date 1295 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Mosaic" ;
+   :apparent-gender :female , :male ;
+   :note "From Wikipedia: “The apse mosaic, the Coronation of the Virgin, is from 1295, signed by the Franciscan friar, Jacopo Torriti.” ... From Visual Museum website: “The pair are dressed in gold, sitting upon a throne in the heavenlies (stars, sun, and moon against dark blue background). Jesus places crown upon Mary; in his left hand a book. Mary's hands are raised in prayer. Throngs of angels on either side with Peter, Paul, and Francis on the left, John the Baptist, John the Evangelist, and Anthony on the right.”" ;
+   :representative-latlong-point (41.8975 12.49861111) ; # Santa Maria Maggiore, Rome, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jacopo_torriti,_coronation_of_the_virgin,_santa_maria_maggiore,_rome.jpg> .
+
+:life-virgin-cycle-scrovegni a :group-of-human-figures ;
+   rdfs:label "Life of the Virgin Cycle, Scrovegni Chapel" ;
+   :described-by <https://en.wikipedia.org/wiki/Scrovegni_Chapel> ,
+      <https://en.wikipedia.org/wiki/Life_of_the_Virgin> ;
+   :earliest-date 1303 ;
+   :latest-date 1305 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Fresco" ;
+   :apparent-gender :female , :male ;
+   :note "From Wikipedia: “The church was dedicated to Santa Maria della Carità at the Feast of the Annunciation, 1303, and consecrated in 1305. Much of Giotto's fresco cycle focuses on the life of the Virgin Mary and celebrates her role in human salvation.”" ;
+   :representative-latlong-point (45.41184 11.87952) ; # Scrovegni Chapel, Padua, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-11-_-_Marriage_of_the_Virgin.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Giotto_di_Bondone_-_Scenes_with_decorative_bands_-_WGA09284.jpg> .
 
 :saint-catherine-karlstejn-castle a :human-figure ;
    rdfs:label "Saint Catherine from Karlštejn Castle" ;
