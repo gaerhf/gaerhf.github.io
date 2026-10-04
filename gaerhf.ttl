@@ -6750,6 +6750,18 @@
 
 # 200 - 600 ???? https://commons.wikimedia.org/wiki/File:Naked_prisoners_being_led_by_warrior_at_El_Brujo.JPG
 
+:four-tetrarchs-venice a :group-of-human-figures ;
+   rdfs:label "Portrait of the Four Tetrarchs" ;
+   :described-by <https://en.wikipedia.org/wiki/Portrait_of_the_Four_Tetrarchs> ;
+   :approximate-date 300 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Porphyry" ;
+   :height 1.30 ;
+   :apparent-gender :male ;
+   :note "Adapted from Wikipedia: “... a porphyry sculpture group of four Roman emperors dating from around 300 CE. The sculptural group has been fixed to a corner of the façade of St Mark's Basilica in Venice, Italy since the Middle Ages. It probably formed part of the decorations of the Philadelphion in Constantinople, and was removed to Venice in 1204 or soon after.”" ;
+   :representative-latlong-point (45.434167 12.339722) ; # St Mark's Basilica, Venice (current location; probably originally the Philadelphion, Constantinople), from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:(Venice)_Statue_of_the_four_tetrarchs_St._Mark%27s_Basilica.jpg> .
+
 :cheng-han-figurine a :human-figure ;
    rdfs:label "Cheng-Han Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Cheng-Han#Cheng_(304–338)> ;
