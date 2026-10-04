@@ -4064,6 +4064,18 @@
    :note "Mapped location is general for Glauberg, not specific for this figure." ;
    :thumbnail-image <https://www.worldhistory.org/img/r/p/1500x1500/9799.jpg.webp?v=1618560049>  .
 
+:male-torso-portonaccio-veii a :human-figure ;
+   rdfs:label "Male Torso, Possibly Hercules, Portonaccio Sanctuary, Veii" ;
+   :described-by <https://en.wikipedia.org/wiki/Portonaccio> ,
+      <https://elearning.uniroma1.it/pluginfile.php/1375455/mod_resource/content/1/AnnFaina%20XXI%202014%20Carlucci-Michetti%20Portonaccio.pdf> ;
+   :approximate-date -550 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Terracotta" ;
+   :apparent-gender :male ;
+   :note "Translated from article (Carlucci and Michetti, Annali Faina XXI, 2014, p. 509): “In this phase, in the sacred area, still limited to the eastern sector, the large male torso is dedicated, an exceptional votive offering, perhaps depicting Hercules (Fig. 25), the first of the rich gallery of terracotta sculptures ... which to date represents the largest number of original terracotta works recovered from an Etruscan sanctuary between the Archaic and Classical periods. It is the first example of a votive statue on a larger-than-life scale ...” The article dates the statue to the mid-6th century BCE." ;
+   :representative-latlong-point (42.021111 12.390833) ; # Portonaccio sanctuary, Veii, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_torso_Veii.jpg> .
+
 :kroisos-kouros a :human-figure ;
    rdfs:label "Kroisos Kouros" ;
    :described-by <https://en.wikipedia.org/wiki/Kroisos_Kouros> ;
