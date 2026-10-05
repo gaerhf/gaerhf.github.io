@@ -3726,6 +3726,19 @@
    :representative-latlong-point (39.355928 -83.009061) ; # Adena mound
    :thumbnail-image <https://www.clevelandart.org/_next/image?url=https%3A%2F%2Fweb-drupal-cms-prod.clevelandart.org%2F%2Fsites%2Fdefault%2Ffiles%2FJuly-August2016_AdenaPipe_A.jpg&w=1920&q=75> .
 
+:relief-matar-doorway-gordion a :human-figure ;
+   rdfs:label "Relief of Matar in a Doorway from Gordion" ;
+   :described-by <https://www.penn.museum/sites/gordion/history/iron-age-gordion/> ;
+   :earliest-date -800 ;
+   :latest-date -546 ;
+   :apparent-gender :female ;
+   :material-note "Stone" ;
+   :note "From Penn Museum Gordion website: “It is during the life of the Middle Phrygian New Citadel that we have at Gordion our most plentiful evidence for Phrygian writing and religion. ... Statuettes in stone of a figure usually holding a cup and sometimes a bird no doubt represent the Phrygian mother goddess Matar. A stone relief shows her in a doorway, presumably that of her temple.” ... From Gordion Museum label (via Wikimedia Commons): “Fragmented relief of Matar was found in a doorway from the vicinity of Gordion.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (39.650356 31.978243) ; # ll for Gordion site, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Turkey-1457_-_Matar_(16425931698).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Gordion_Museum_Relief_of_Matar_0814.jpg> .
+
 # :orim-dong-megalith-petroglyph a :human-figure ;
 #    :described-by <https://en.m.wikipedia.org/wiki/File:Orim-dongmegalithpetroglyph.jpg> ;
 #    :period-note "Middle Mumun Pottery Period (Korea)" ;
@@ -4076,6 +4089,32 @@
    :representative-latlong-point (42.021111 12.390833) ; # Portonaccio sanctuary, Veii, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_torso_Veii.jpg> .
 
+:phrasikleia-kore a :human-figure ;
+   rdfs:label "Phrasikleia Kore" ;
+   :described-by <https://en.wikipedia.org/wiki/Phrasikleia_Kore> ;
+   :earliest-date -550 ;
+   :latest-date -540 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Parian marble" ;
+   :height 1.79 ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “The Phrasikleia Kore is an Archaic Greek funerary statue by the artist Aristion of Paros, created between 550 and 540 BCE. It was found carefully buried in the ancient city of Myrrhinous (modern Merenta) in Attica and excavated in 1972. The exceptional preservation of the statue and the intact nature of the polychromy elements makes the Phrasikleia Kore one of the most important works of Archaic art. ... The statue is made of Parian marble, and stands 179 centimeters (6.92 ft) high; it rises on a pedestal that gives a total height of 211 centimeters (7 ft) high.”" ;
+   :representative-latlong-point (37.8549039025 23.9483773191) ; # TO CONFIRM: source unknown (Wikipedia's Myrrhinus coord is 37.872812 23.9678945)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aristone_di_paros,_kore_per_la_tomba_di_phrasikleia,_da_merenda_(myrrhinous)_in_attica,_550-540_ac_ca._01,_n._4889.jpg> .
+
+:kore-lyons a :human-figure ;
+   rdfs:label "Kore of Lyons" ;
+   :described-by <https://en.wikipedia.org/wiki/Kore_of_Lyons> ;
+   :earliest-date -550 ;
+   :latest-date -540 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Pentelic marble" ;
+   :height 0.64 ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “The Kore of Lyons is a Greek statue of Pentelic marble depicting a bust of a young girl of the kore type, conserved at the musée des beaux-arts de Lyon, France. Deriving from the Athenian Acropolis, it is generally dated to the 540s BC. ... It was one of the numerous Korai of the Acropolis of Athens discovered during the construction of the old Acropolis Museum in the Perserschutt, a layer of destruction from the Persian Wars, containing material from the 570s BC down to the end of the sixth century BC. It represents the first example of the Ionian influence which entered Attic sculpture in the second half of the century and first use of Ionian costume in Attica.”" ;
+   :representative-latlong-point (37.97166667 23.72611111) ; # Acropolis of Athens, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lyons_Kore_MBA_Lyon_H1993.jpg> .
+
 :kroisos-kouros a :human-figure ;
    rdfs:label "Kroisos Kouros" ;
    :described-by <https://en.wikipedia.org/wiki/Kroisos_Kouros> ;
@@ -4102,6 +4141,23 @@
    :representative-latlong-point (37.8549039025 23.9483773191) ; # TO CONFIRM: source unknown (Wikipedia's Myrrhinus coord is 37.872812 23.9678945)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kouros,_da_merernda_(myrrhinous)_in_attica,_540-530_ac_ca._01,_n._4890.jpg> .
 
+:peplos-kore a :human-figure ;
+   rdfs:label "Peplos Kore" ;
+   :described-by <https://en.wikipedia.org/wiki/Peplos_Kore> ,
+      <https://www.theacropolismuseum.gr/en/statue-kore-peplos-kore> ;
+   :approximate-date -530 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Parian marble" ;
+   :height 1.18 ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “The Peplos Kore is an ancient sculpture from the Acropolis of Athens. ... Although this statue is one of the most famous examples of a kore, it is actually not considered a typical one. The statue is not completely straight, her face is leaned slightly to the side, and she is standing with her weight shifted to one leg. The other part of the statue's name, peplos, is based on the popular archaic Greek gown for women. ... The Peplos Kore is ascribed to the Rampin Master, who is named for another head, very similar in style, which was in the Rampin Collection and is now on display in the Louvre.”" ;
+   :representative-latlong-point (37.97166667 23.72611111) ; # Acropolis of Athens (find-spot, north-west of the Erechtheion), from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:ACMA_679_Kore_1.JPG> ;
+   :thumbnail-image <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7782_1.jpg> ,
+      <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7782_2.jpg> ,
+      <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7782_3.jpg> ,
+      <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7782_5.jpg> .
+
 :pozo-moro-mausoleum a :group-of-human-figures ;
    rdfs:label "Friezes on Mausoleum of Pozo Moro" ;
    :described-by <https://en.wikipedia.org/wiki/Mausoleum_of_Pozo_Moro> ;
@@ -4123,6 +4179,24 @@
    :in-modern-country-note "China" ;
    :representative-latlong-point (31.3 120.619444) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Yue_statue.jpg> .
+
+:antenor-kore a :human-figure ;
+   rdfs:label "Antenor Kore" ;
+   :described-by <https://en.wikipedia.org/wiki/Antenor_Kore> ,
+      <https://www.theacropolismuseum.gr/en/statue-kore-its-base-antenor-kore> ;
+   :earliest-date -525 ;
+   :latest-date -500 ;
+   :in-modern-country-note "Greece" ;
+   :material-note "Parian marble (statue), Pentelic marble (base)" ;
+   :height 2.05 ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “The statue was found in several fragments during excavations on the Athenian Acropolis in the so-called Perserschutt. The lower part and the left arm were dug up east of the Parthenon in 1882 and the upper part was discovered west of the Erechtheion in 1886. Parts of the calf followed. The face is damaged, especially the nose, and the lower right arm is missing, as is the front of the feet on the plinth. The kore was originally located in the Athena sanctuary on the acropolis and is now kept in the Acropolis Museum. The statue is 201 cm high, excluding the plinth. ... The Kore has chest-length hair, which only partially survives. The hair at the front is gathered into tight curls, while the rest of the hair falls in locks, fanning out over the shoulders and back. She wears a crown in her hair. Like all archaic korai, the sculpture has a clear axis and stares directly at the viewer. She wears a chiton and himation. The latter seems to be tied over the left arm, pinned at the top with a fibula and falling below in omega-folds. With the left hand the image gathers the chiton, causing the characteristic drapery. The conspicuously empty eye-holes must have been inlaid with another material, likely glass - a rather rare feature in marble statues of this period.”" ;
+   :representative-latlong-point (37.97166667 23.72611111) ; # Acropolis of Athens (find-spot, east of the Parthenon and west of the Erechtheion), from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:ACMA_681_Kore_Antenor_1.JPG> ;
+   :thumbnail-image <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7784_1.jpg> ,
+      <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7784_2.jpg> ,
+      <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7784_5.jpg> ,
+      <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7784_6.jpg> .
 
 :behistun-relief-darius-i a :group-of-human-figures ;
    rdfs:label "Behistun Relief of Darius I" ;
