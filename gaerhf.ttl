@@ -2948,6 +2948,18 @@
    :representative-latlong-point (40.512278 141.488389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Late_Jomon_clay_statue_Kazahari_I_Aomoriken_1500BCE_-_1000BCE.jpg> .
 
+:masked-goddess-dogu a :human-figure ;
+   rdfs:label "Masked Goddess (Dogū)" ;
+   :described-by <https://en.wikipedia.org/wiki/Masked_Goddess> ;
+   :approximate-date -1500 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Ceramic" ;
+   :height 0.34 ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “The Masked Goddess (仮面の女神, Kamen no Megami) is a relatively large Japanese dogū or clay figurine of the late Jōmon period (c. 2000–1000 BC). Excavated from the Nakappara Site in Chino, Nagano Prefecture, it is exhibited at the nearby Togariishi Museum of Jōmon Archaeology. ... it is one of five dogū that have been designated National Treasures. ... The hollow figurine takes its name from the tilted, triangular mask that covers the face, with lines on top resembling the string with which such a mask might be tied on—or her eyebrows.”" ;
+   :representative-latlong-point (36.0304936 138.2110416) ; # TO CONFIRM: source unknown (Nakappara Site, Chino; no Wikipedia coord)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E4%BB%AE%E9%9D%A2%E3%81%AE%E5%A5%B3%E7%A5%9E.jpg> .
+
 :idrimi-statue a :human-figure ;
    rdfs:label "Statue of King Idrimi" ;
    :described-by <https://en.wikipedia.org/wiki/Statue_of_Idrimi> ,
@@ -6078,6 +6090,21 @@
    :note "No specific findspot known" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312492/1291998/main-image> .
 
+:suda-hachiman-shrine-mirror a :group-of-human-figures ;
+   rdfs:label "Suda Hachiman Shrine Mirror" ;
+   :described-by <https://en.wikipedia.org/wiki/Suda_Hachiman_Shrine_Mirror> ,
+      <https://laits.utexas.edu/~mr56267/HIST_341K/Ancient_pages/Kofun_era_mirror.html> ,
+      <https://ja.wikipedia.org/wiki/%E9%9A%85%E7%94%B0%E5%85%AB%E5%B9%A1%E7%A5%9E%E7%A4%BE%E4%BA%BA%E7%89%A9%E7%94%BB%E5%83%8F%E9%8F%A1> ;
+   :earliest-date 443 ;
+   :latest-date 503 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Bronze" ;
+   :height 0.199 ;
+   :apparent-gender :male , :female ;
+   :note "From UT Austin course page: “This mirror, from Suda Hachiman shrine in Wakayama, includes one of the oldest examples of writing in Japan. The inscription along the edge says that the mirror was made for a king Oshisaka no miya on the tenth day of the eight month of either 443 or 503 (the sixty year zodaical cycle makes this unclear).” ... Translated from Japanese Wikipedia: “Bronze, 19.9 cm in diameter. ... In the inner zone are nine human figures, including Dong Wanggong and Xi Wangmu, legendary figures of ancient China.”" ;
+   :representative-latlong-point (34.33319444 135.64555556) ; # Suda Hachiman Shrine, Hashimoto, from Japanese Wikipedia (exact find-spot unknown)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sumida_Hatiman_Mirror.JPG> .
+
 :mankuwar-buddha a :human-figure ;
    rdfs:label "Mankuwar Buddha" ;
    :described-by <https://en.wikipedia.org/wiki/Gupta_art#Sarnath_school> ;
@@ -7531,6 +7558,20 @@
    :in-modern-country-note "Korea" ;
    :representative-latlong-point ( 35.829575 129.227928 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Apsara_relief._Bell_of_King_Seongdeok.National_Museum_of_Gyeongju.Korea.2018.P1410600.jpg> .
+
+:yakushi-nyorai-jingoji a :human-figure ;
+   rdfs:label "Yakushi Nyorai (Jingo-ji)" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Yakushi_Nyorai_(Jingo-ji)> ;
+   :earliest-date 775 ;
+   :latest-date 825 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Hinoki (Japanese cypress), light pigment" ;
+   :height 1.697 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The Statue of Yakushi Nyorai (Japanese: 木造薬師如来立像, Hepburn: Mokuzō Yakushi Nyorai Ritsuzō) is a late 8th to early 9th-century Japanese Buddhist sculpture dating to the early Heian period depicting the standing figure of Bhaisajyaguru, or the Medicine Buddha. Designated a National Treasure of Japan, the Yakushi Nyorai serves as the principal figure of worship at Jingo-ji, Ukyō-ku, Kyoto. It is deemed a significant masterpiece of early Heian art, as well as a major icon of Shingon Buddhist history. ... The Yakushi Nyorai statue is 169.7 centimetres (5 ft 7 in) tall and is carved from a single block of hinoki cypress wood.”" ;
+   :representative-latlong-point (35.05501667 135.67086667) ; # Jingo-ji, Kyoto, from Wikipedia
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Domon_Ken_-_Yakushi_Nyorai_(Bhaisajyaguru)_Jingo-ji.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Yakushi_Nyorai_Jingoji2.JPG> .
 
 :musician-bomampak-murals a :group-of-human-figures ;
    rdfs:label "Procession from the Bonampak Murals" ;
