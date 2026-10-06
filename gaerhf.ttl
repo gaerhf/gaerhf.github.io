@@ -5620,7 +5620,7 @@
    :apparent-gender :male ;
    :height 0.315 ;
    :material-note "Copper alloy" ;
-   :note "From British Museum (with identification as Nero): “Copper alloy head of the emperor Nero from a life-size statue. The face is heart-shaped, with a strong chin and nose, large, slightly slanting eyes and prominent low-set ears. The hair is combed forward in a thick strands from a flattish crown; it forms a heavy fringe which divides just over the right eye.”" ;
+   :note "From British Museum (with identification as Nero): “Copper alloy head of the emperor Nero from a life-size statue. The face is heart-shaped, with a strong chin and nose, large, slightly slanting eyes and prominent low-set ears. The hair is combed forward in a thick strands from a flattish crown; it forms a heavy fringe which divides just over the right eye (CSIR I, 8).” CSIR = Corpus Signorum Imperii Romani" ;
    :in-modern-country-note "United Kingdom" ;
    :representative-latlong-point (52.229 1.437) ; # Rendham, Suffolk; found in the River Alde, 1907
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_head_of_the_Emperor_Claudius,_found_at_the_River_Alde_at_Rendham,_near_Saxmundham,_Suffolk,_British_Museum_(16250274110).jpg> .
