@@ -38,7 +38,7 @@
 
 # properties
 
-:apparent-gender a rdf:roperty ;
+:apparent-gender a rdf:Property ;
    rdfs:label "Apparent gender" .
 
 :described-by a rdf:Property ;
@@ -1979,7 +1979,7 @@
 
 :idol-garrovillas a :human-figure ;
    rdfs:label "So-called Idol of Garrovillas" ;
-   :described-by <https://es.m.wikipedia.org/wiki/Ídolo_de_Garrovillas> ;
+   :described-by <https://es.wikipedia.org/wiki/Ídolo_de_Garrovillas> ;
    :earliest-date -3200 ;
    :latest-date -2200 ;
    :material-note "Stone" ;
@@ -2698,7 +2698,7 @@
 
 :idol-ciudad-rodrigo a :human-figure ;
    rdfs:label "So-called Idol of Ciudad Rodrigo" ;
-   :described-by <https://es.m.wikipedia.org/wiki/Ídolo_de_Ciudad_Rodrigo> ;
+   :described-by <https://es.wikipedia.org/wiki/Ídolo_de_Ciudad_Rodrigo> ;
    :earliest-date -2000 ;
    :latest-date -1500 ;
    :in-modern-country-note "Spain" ;
@@ -2743,7 +2743,7 @@
    :earliest-date -2000 ;
    :latest-date -500 ;
    :note "Very approximate location." ;
-   :in-modern-country-note "Mauretania" ;
+   :in-modern-country-note "Mauritania" ;
    :representative-latlong-point (18.455944 -9.417171) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Homme_muni_d’un_bâton,_et_vaches_à_robe_marquée_du_village_v.72.jpg> .
 
@@ -4972,7 +4972,7 @@
    rdfs:label "Subsidiary Bust of the “Oso de Porcuna”" ;
    :described-by <https://es.wikipedia.org/wiki/Oso_de_Porcuna> ;
    :earliest-date -100 ;
-   :latest-date 0 ;
+   :latest-date 1 ;
    :material-note "Limestone" ;
    :note "Summarized from Spanish Wikipedia: free-standing sculpture (79 × 70 × 32 cm) of a seated bear with its left forepaw raised and resting on a human head treated as a herm in the classical sense (a pillar surmounted by a human head. Found at Porcuna in 1926; held at the Museo Arqueológico Nacional, Madrid (MAN inv. 33195). Late Iberian / early Roman-period funerary sculpture." ;
    :in-modern-country-note "Spain" ;
@@ -5100,7 +5100,7 @@
    :earliest-date -200 ;
    :latest-date 100 ;
    :note "The figure has been dated both earlier and later than the range given here." ;
-   :in-modern-country-note "Northen Ireland" ;
+   :in-modern-country-note "Northern Ireland" ;
    :representative-latlong-point (54.3478 -6.6562) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Armagh_St._Patrick%27s_Cathedral_of_the_Church_of_Ireland_North_Aisle_“Tandragee_Man“_2019_09_09_(cropped).jpg> .
 
@@ -6536,7 +6536,7 @@
    rdfs:label "Portrait of Cato from Volubulis" ;
    :described-by <https://en.wikipedia.org/wiki/Volubilis#Houses_and_palaces> ;
    :approximate-date 50 ;
-   :in-modern-country-note "Morrocco" ;
+   :in-modern-country-note "Morocco" ;
    :representative-latlong-point (34.071111 -5.553611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cato_Volubilis_bronze_bust.jpg> .
 
