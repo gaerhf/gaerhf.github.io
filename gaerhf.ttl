@@ -7084,7 +7084,8 @@
 :qajartalik-petroglyphs a :group-of-human-figures ;
    rdfs:label "Qajartalik Petroglyphs" ;
    :described-by <https://www.historymuseum.ca/blog/qajartalik-2022-collaborative-community-based-archaeological-fieldwork-in-nunavik>,
-      <https://en.wikipedia.org/wiki/Qajartalik> ;
+      <https://en.wikipedia.org/wiki/Qajartalik> ,
+      <https://thecanadianencyclopedia.ca/en/article/qajartalik> ;
    :earliest-date 500 ;
    :latest-date 1250 ;
    :note "From Wikipedia: “Qajartalik (Inuktitut for “where there is a kayak”) is a petroglyph site located on the Qajartalik peninsula of Qikertaaluk Island, Nunavut, approximately 40 km southeast of Kangiqsujuaq, Quebec. The site consists of over 150 carvings of faces in soapstone. It was created by the Dorset people, the culture who inhabited the Canadian eastern Arctic and Greenland beginning approximately 2,200 years ago before disappearing approximately 1,000 years ago, and who inhabited the region prior to the Thule Inuit who arrived approximately 800 years ago. It is believed to be the northernmost rock art site in North America…”." ;
@@ -7478,6 +7479,23 @@
    :in-modern-country-note "Mongolia" ;
    :representative-latlong-point ( 47.556667 102.831389) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Turkic_Head_of_Koltegin_Statue_(35324303410).jpg> .
+
+:eight-mythological-beings-kohfukuji a :group-of-human-figures ;
+   rdfs:label "The Eight Kinds of Mythological Beings (Kōfuku-ji)" ;
+   :described-by <https://www.kohfukuji.com/english/e010/> ,
+      <https://en.wikipedia.org/wiki/Kōfuku-ji> ;
+   :approximate-date 734 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Dry lacquer (lacquer-impregnated cloth over a hollow core)" ;
+   :apparent-gender :male, :unclear ;
+   :note "From Kōfuku-ji website: “In this role, Ashura are usually depicted as armored, muscular beings with bright red, scowling faces, tusk-like fangs, and hair that stands on end to symbolize their rage. One of the reasons for the fame of the Kohfukuji Ashura, therefore, is that it does not look the way it ought to. The slender figure is clothed in a flowing, realistic-looking sash and trouser-like skirt, and wears wooden sandals on its feet.”" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara
+   :thumbnail-image <https://www.kohfukuji.com/english/e010/img/section01_pic.jpg> , # Ashura
+      <https://www.kohfukuji.com/english/e010/img/section02_pic.jpg> , # Gobujō
+      <https://www.kohfukuji.com/english/e010/img/section03_pic.jpg> , # Sakara
+      <https://www.kohfukuji.com/english/e010/img/section06_pic.jpg> , # Kendatsuba
+      <https://www.kohfukuji.com/english/e010/img/section08_pic.jpg> ; # Hibakara
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statues_of_Tianlong_babu.jpg> .
 
 :kildalton-cross a :group-of-human-figures ;
    rdfs:label "Kildalton Cross" ;
