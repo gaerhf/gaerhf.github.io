@@ -3833,6 +3833,20 @@
    :representative-latlong-point (38.5 22.5) ; # ll for Thebes, Greece
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Collection_MfA_Boston_0198-2.jpg> .
 
+:melqart-statuette-sancti-petri a :human-figure ;
+   rdfs:label "Melqart statuette (Sancti Petri)" ;
+   :described-by <https://ceres.mcu.es/pages/Main?idt=122184&inventary=CE17004&table=FMUS&museum=MCA> ;
+   :earliest-date -675 ;
+   :latest-date -601 ;
+   :apparent-gender :male ;
+   :height 0.365 ;
+   :material-note "Bronze (lost-wax cast)" ;
+   :note "Translated from CER.es: “Bronze statuette representing an upright male figure, standing, striding forward, dressed only in a kilt that covers him to the knee, with an opening at the front. He wears the Osirian crown (Atef, the crown of Upper Egypt flanked by feathers), topped by a circular thickening. … These bronze figurines (Inv. CE17004 to CE17008) appeared in the waters surrounding the islet of Sancti Petri, which has traditionally been interpreted as the site of the temple of Melkart of Gadir.”" ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (36.3801277403 -6.22002993097) ; # islet of Sancti Petri
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Melkart,_Museo_de_C%C3%A1diz.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Museo_de_C%C3%A1diz_(36111125594).jpg> .
+
 :victory-stele-esarhaddon a :group-of-human-figures ;
    rdfs:label "Victory stele of Esarhaddon" ;
    :described-by <https://en.wikipedia.org/wiki/Victory_stele_of_Esarhaddon> ;
