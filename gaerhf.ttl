@@ -4607,6 +4607,19 @@
    :note "Specific findspot not known." ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/708743/1696927/main-image> .
 
+:silk-painting-lady-dragon-phoenix a :human-figure ;
+   rdfs:label "Silk painting of a lady with dragon and phoenix" ;
+   :described-by <https://zh.wikipedia.org/wiki/人物龙凤帛画> ;
+   :earliest-date -400 ;
+   :latest-date -221 ;
+   :apparent-gender :female ;
+   :height 0.312 ;
+   :material-note "Ink and white pigment on silk" ;
+   :note "Translated from Chinese Wikipedia: “In the lower part of the painting is a woman standing in profile, her hands pressed together in an attitude of prayer. She faces to the left, her long hair coiled into a hanging bun; she wears a long, wide-sleeved robe with cloud patterns, slender at the waist and bound with a broad white sash, and a long skirt that trails the ground, its hem turned upward.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (28.228 112.939) ; # Changsha; found at Chenjiadashan, SE outskirts
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Silk_Painting_of_a_Lady,_Phoenix_and_Dragon.jpg> .
+
 :hermes-infant-dionysos a :group-of-human-figures ;
    rdfs:label "Hermes with Infant Dionysos" ;
    :described-by <https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus> ;
