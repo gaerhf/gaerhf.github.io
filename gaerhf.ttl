@@ -5611,6 +5611,20 @@
    :representative-latlong-point (34.73 36.697778) ;
    :thumbnail-image <https://upload.wikimedia.org/wikipedia/en/a/a5/Emesa_helmet.png?20180213011333> .
 
+:head-claudius-nero-rendham a :human-figure ;
+   rdfs:label "Head of Claudius or Nero (Rendham)" ;
+   :described-by <https://www.britishmuseum.org/collection/object/H_1965-1201-1> ,
+      <https://ancientrome.ru/art/artworken/img.htm?id=720> ;
+   :earliest-date 41 ;
+   :latest-date 68 ;
+   :apparent-gender :male ;
+   :height 0.315 ;
+   :material-note "Copper alloy" ;
+   :note "From British Museum (with identification as Nero): “Copper alloy head of the emperor Nero from a life-size statue. The face is heart-shaped, with a strong chin and nose, large, slightly slanting eyes and prominent low-set ears. The hair is combed forward in a thick strands from a flattish crown; it forms a heavy fringe which divides just over the right eye.”" ;
+   :in-modern-country-note "United Kingdom" ;
+   :representative-latlong-point (52.229 1.437) ; # Rendham, Suffolk; found in the River Alde, 1907
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bronze_head_of_the_Emperor_Claudius,_found_at_the_River_Alde_at_Rendham,_near_Saxmundham,_Suffolk,_British_Museum_(16250274110).jpg> .
+
 :couple-from-pompeii a :group-of-human-figures ;
    rdfs:label "Couple from Pompeii" ;
    :described-by <https://en.wikipedia.org/wiki/Portrait_of_Terentius_Neo> ,
