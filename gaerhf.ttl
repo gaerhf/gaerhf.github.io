@@ -2896,7 +2896,7 @@
    :note "From Heraklion Archaeological Museum website: “It depicts a young man in high relief against a red ground. The life-size male figure, comprised of three non-joining pieces, is wearing a colourful loincloth and belt, and a majestic crown of waz-lilies and peacock feathers.”";
    :in-modern-country-note "Greece";
    :representative-latlong-point (35.2980 25.16279);
-   :thumbnail-image <https://commons.wikimedia.org/wiki/File:Knossos_—_Prince_of_the_Lilies.jpg> ,
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Knossos_—_Prince_of_the_Lilies.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Wall_painting_of_the_Priest-King_from_Knossos_(North-South_Corridor)_-_Heraklion_AM_(TORSO_cropped).jpg> .
 
 # :bull-leaping-figurine-knossos a :human-figure;
