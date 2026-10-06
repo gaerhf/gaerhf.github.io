@@ -4872,6 +4872,25 @@
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (66.025833 -170.073333) . # Ekven Burial Ground, ~30 km south of Uelen on Cape Dezhnev; coordinates from UNESCO tentative-list dossier
 
+:dotaku-kagawa a :group-of-human-figures ;
+   rdfs:label "Dōtaku bell (reportedly from Kagawa)" ;
+   :described-by <https://colbase.nich.go.jp/collection_items/tnm/J-37433?locale=en> ,
+      <https://www.tnm.jp/modules/r_collection/index.php?controller=dtl&colid=J37433&t=now> ,
+      <https://emuseum.nich.go.jp/detail?langId=ja&webView=&content_base_id=100201&content_part_id=0&content_pict_id=0> ;
+   :earliest-date -200 ;
+   :latest-date -1 ;
+   :apparent-gender :male, :female ;
+   :height 0.427 ;
+   :material-note "Bronze" ;
+   :note "From Tokyo National Museum: “Around 60 of these are decorated with pictorial representations. This dotaku is particularly renowned for its decorativeness and it was the first dotaku to be designated a national treasure. Motifs include men hunting deer and wild boar, for instance, or women pounding a mortar with a pestle. These offer unique insights into life at the time. … Note also how the heads of the human figures are depicted in shapes of circles and triangles. The former shape represents men and the latter women.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (34.266667 133.95) ; # Kagawa Prefecture (Wikipedia); find-spot only "reportedly Kagawa"
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:J-37433_E0102666.jpg> , # two women pounding a mortar
+      <https://commons.wikimedia.org/wiki/File:J-37433_E0102652.jpg> , # whole bell
+      <https://commons.wikimedia.org/wiki/File:J-37433_E0102670.jpg> , # archer shooting a deer
+      <https://commons.wikimedia.org/wiki/File:J-37433_E0102665.jpg> , # archer, animals
+      <https://commons.wikimedia.org/wiki/File:J-37433_E0102667.jpg> . # figure holding I-shaped tool
+
 :lakshmi-stupa-2-sanchi a :human-figure ;
    rdfs:label "Lakshmi from Stupa 2 at Sanchi" ;
    :described-by <https://en.wikipedia.org/wiki/Sanchi_Stupa_No._2#Early_period_(circa_115_BCE)> ;
