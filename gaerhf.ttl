@@ -5969,6 +5969,18 @@
 #    :earliest-date 300 ;
 #    :latest-date 400 .
 
+:medallion-constantius-galerius-beaurains a :group-of-human-figures ;
+   rdfs:label "Gold medallion of Constantius I and Galerius (Beaurains Treasure)" ;
+   :described-by <https://numismatics.org/collection/1944.100.63131> ,
+      <https://en.wikipedia.org/wiki/Beaurains_Treasure> ;
+   :approximate-date 293 ;
+   :apparent-gender :male ;
+   :material-note "Gold" ;
+   :note "From ANS: “D D N N CONSTANTIO ET MAXIMIANO NOBB CAESS - Busts of Constantius I and Galerius confronted in consular robes; Constantius holds globus, Galerius sceptre in r. (obverse) PRINCIPVM IVVENTVTIS - Two princes sacrificing over altar; behind, military standards (reverse)”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (50.2639 2.7894) ; # Beaurains (Wikipedia); hoard found 1922
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Medallion_of_Constantius_and_Galerius.png> .
+
 :female-athletes-casale a :group-of-human-figures ;
    rdfs:label "Female Athletes Mosaic, Villa Romana del Casale" ;
    :described-by <https://en.wikipedia.org/wiki/Villa_Romana_del_Casale> ;
