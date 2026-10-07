@@ -4505,6 +4505,19 @@
    :representative-latlong-point (29.988889 52.874722) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tomb_of_Darius_I_Image_of_Darius_I.jpg> .
 
+:charioteer-delphi a :human-figure ;
+   rdfs:label "Charioteer of Delphi" ;
+   :described-by <https://en.wikipedia.org/wiki/Charioteer_of_Delphi> ;
+   :earliest-date -478 ;
+   :latest-date -474 ;
+   :material-note "Bronze, with inlaid glass eyes and copper and silver inlays" ;
+   :height 1.8 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The figure represents a young noble, or ephebe, wearing a characteristic sleeved tunic. He is shown after the race has ended, during the victory parade, wearing the champion's headband. His head is turned slightly to the left, and his hands are modeled with great detail, with the fingers still curved around the reins. ... It was originally part of a larger group of statuary, including the chariot, at least four horses and possibly two grooms. ... An inscription on the limestone base of the statue indicates that it was dedicated by Polyzalus, the tyrant of Gela, a Greek colony in Sicily, as a tribute to Apollo for helping him to win the chariot race.”" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (38.4823 22.5013) ; # Delphi, Sanctuary of Apollo (find-spot); same point as :kleobis-biton-delphi
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AurigaDelfi.jpg> .
+
 :anthropoid-sarcophagus-female-cadiz a :human-figure ;
    rdfs:label "Anthropoid Sarcophagus in Female Form from Cadiz" ;
    :described-by <https://en.wikipedia.org/wiki/Lady_of_Cádiz> ;
