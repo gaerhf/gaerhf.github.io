@@ -2341,6 +2341,18 @@
    :thumbnail-image <https://www.harappa.com/sites/default/files/styles/galleryformatter_slide/public/chanhudaro-dancer-spear-thrower.jpg> ;
    :alt-thumbnail-image <https://collections.mfa.org/internal/media/dispatcher/1009998/preview> .
 
+:bust-ankhhaf a :human-figure ;
+   rdfs:label "Bust of Ankhhaf" ;
+   :described-by <https://en.wikipedia.org/wiki/Bust_of_Ankhhaf> ,
+      <https://collections.mfa.org/objects/45982/bust-of-prince-ankhhaf> ;
+   :approximate-date -2510 ;
+   :apparent-gender :male ;
+   :material-note "Limestone core; plaster; paint" ;
+   :note "From Wikipedia: “It depicts a mature man and was therefore likely made during the reign of Khafre (circa 2520–2494 BC). ... Plaster covers a limestone core, which has been painted red, a colour commonly given to males in both sculpture and in reliefs ... The bust was discovered in his tomb, installed within a small chapel oriented to the east and facing the chapel's doorway. ... The bust was discovered in 1925 by a museum expedition funded jointly by the Museum of Fine Arts, Boston and Harvard University ...”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (29.9782 31.1374) ; # ll for Giza East Field (Ankhhaf's tomb is mastaba G 7510 there)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Prince_Ankhaf_at_MFAB.jpg> .
+
 :two-figures-oryxes-al-ain a :group-of-human-figures ;
    rdfs:label "Two figures flanked by Oryxes from Al Ain" ;
    :described-by <https://de.wikivoyage.org/wiki/Al-Ain> ,
