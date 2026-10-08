@@ -4196,6 +4196,20 @@
       <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7782_3.jpg> ,
       <https://www.theacropolismuseum.gr/sites/default/files/exhibits_images/7782_5.jpg> .
 
+:sarcophagus-spouses-villa-giulia a :group-of-human-figures ;
+   rdfs:label "Sarcophagus of the Spouses (Villa Giulia)" ;
+   :described-by <https://en.wikipedia.org/wiki/Sarcophagus_of_the_Spouses> ;
+   :earliest-date -530 ;
+   :latest-date -510 ;
+   :apparent-gender :male, :female ;
+   :height 1.14 ;
+   :material-note "Painted terracotta" ;
+   :note "From Wikipedia: “It depicts a man and woman lying on a klinē, a dining couch with cushions to help keep the spouses propped up, all of which have been stylized. The body proportions of the man and woman have been elongated as was common in the Archaic period. … The man and woman's feet are distinguished from each other, as the man is shown barefoot and the woman wearing pointed-toed shoes, which is an Etruscan characteristic. However, the marked contrast between the busts in high relief and the very flattened legs is typically Etruscan, as is the interest of the upper half of the figures with their expressive faces and arms. … This sarcophagus was created in four separate pieces that were fired separately and then assembled later on.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (42.006 12.099595) ; # Banditaccia necropolis, Cerveteri (Wikidata Q859735)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sarcophagus_of_the_Spouses_from_Villa_Giulia_in_Rome.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Museo-etrusco-di-villa-giulia---sarcofago-degli-sposi_31300412461_o.jpg> .
+
 :pozo-moro-mausoleum a :group-of-human-figures ;
    rdfs:label "Friezes on Mausoleum of Pozo Moro" ;
    :described-by <https://en.wikipedia.org/wiki/Mausoleum_of_Pozo_Moro> ;
