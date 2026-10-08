@@ -485,6 +485,19 @@
    :representative-latlong-point (51.385833 39.051667) ; # ll for Kostyonki, Russia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kostenki_I_Venus.jpg> .
 
+:lespugue-figurine a :human-figure ;
+   rdfs:label "Female Figurine from Lespugue" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_of_Lespugue> ;
+   :earliest-date -24000 ;
+   :latest-date -22000 ;
+   :apparent-gender :female ;
+   :height 0.15 ;
+   :material-note "Tusk ivory" ;
+   :note "From Wikipedia: “Of all the steatopygous Venus figurines discovered from the Upper Paleolithic, the Venus of Lespugue, if the reconstruction is sound, appears to display the most exaggerated female secondary sexual characteristics, especially the extremely large, pendulous breasts. According to textile expert Elizabeth Wayland Barber, the statue displays the earliest representation found of spun thread, as the carving shows a skirt hanging from below the hips, made of twisted fibers, frayed at the end.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.230759 0.654845) ; # Grotte des Rideaux, Lespugue (French Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:V%C3%A9nus_de_Lespugue_Gravettien_Mus%C3%A9e_de_l%27Homme_04022018_1.jpg> .
+
 :female-figurine-from-laussel a :human-figure ;
    rdfs:label "Carved Female Figure from Laussel" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Laussel> ;
@@ -5895,6 +5908,20 @@
    :representative-latlong-point (34.412045 70.45213) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Coin_of_Kanishka_I.jpg> .
 
+:statue-antinous-delphi a :human-figure ;
+   rdfs:label "Statue of Antinous (Delphi)" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Antinous_(Delphi)> ;
+   :earliest-date 130 ;
+   :latest-date 138 ;
+   :apparent-gender :male ;
+   :height 1.8 ;
+   :material-note "Marble" ;
+   :note "From Wikipedia: “During the excavations, the statue was discovered upright on its pedestal, next to the wall of a brick chamber, alongside the holy Temple. … the head of young Antinous is tilted to the side as if he is in a state of reflection. Around its thick and masterfully carved hair (which surrounds the face and falls on the forehead and cheeks …), several holes can be seen by which a bronze laurel wreath was once attached.”" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (38.4823 22.5013) ; # Sanctuary of Apollo, Delphi
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Antinoos,_AM_of_Delphi,_201431_(edited).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Discovery_Antinous_Delphi_1894.jpg> .
+
 :seated-buddha-mathura-132 a :group-of-human-figures ;
    rdfs:label "Seated Buddha from Mathura of 132 CE" ;
    :described-by <https://smarthistory.org/buddha-mathura/> ;
@@ -6155,6 +6182,19 @@
    :in-modern-country-note "Bolivia" ;
    :representative-latlong-point (-16.554682 -68.672476 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:BO_Tihuanako_(89)_(16608396853).jpg> .
+
+:statue-mars-york a :human-figure ;
+   rdfs:label "Statue of Mars, York" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Mars,_York> ;
+   :earliest-date 300 ;
+   :latest-date 350 ;
+   :apparent-gender :male ;
+   :height 1.78 ;
+   :material-note "Sandstone" ;
+   :note "From Wikipedia: “Mars is depicted as a youthful soldier, wearing a Greek helmet and bearing a large oval shield held in his left arm. He is wearing a cuirass with elaborate lappets beneath and at the sleeves over a tunic. He has a sword strapped on his left side. His right arm is extended but the hand is missing; this probably held a spear originally.”" ;
+   :in-modern-country-note "England" ;
+   :representative-latlong-point (53.95487 -1.0918) ; # Bar Convent, York (Wikipedia); found there in 1880
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Mars_(full_length)_YORYM_1998_26-1.jpg> .
 
 :coronation-ardashir-ii-relief a :group-of-human-figures ;
    rdfs:label "Coronation of Ardashir II Relief" ;
