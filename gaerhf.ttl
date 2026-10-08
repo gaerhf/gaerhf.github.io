@@ -5819,6 +5819,20 @@
    :representative-latlong-point (34.286111 71.946667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PharroAndArdoxsho.jpg> .
 
+:hermes-criophorus-troezen a :human-figure ;
+   rdfs:label "Hermes Criophorus (Troezen)" ;
+   :described-by <https://en.wikipedia.org/wiki/Hermes_Criophorus_(Athens)> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :apparent-gender :male ;
+   :height 1.8 ;
+   :material-note "Pentelic marble" ;
+   :note "From Wikipedia: “Hermes is depicted frontally nude, his body turned a bit to the left, in contrapposto as his weight rests on his right leg, leaving the left leg relaxed. He wears a chlamys fastened on his left shoulder that hangs down and covers the arm on that side. On his head, which is turned to the right, he wears a petasos (a type of hat) and holds a ram by the horns with his right hand. The ram is shown squatting on its hind legs in Hermes's right side, as Hermes drags it upwards. It is thus distinguished from other sculptures of the ram-bearing type, as Hermes drags the animal instead of carrying it tenderly over his shoulders.”" ;
+   :in-modern-country-note "Greece" ;
+   :representative-latlong-point (37.483333 23.35) ; # Troezen (Wikipedia); found there in 1890
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hermes_Criophorus_(National_Archaeological_Museum_of_Athens,_1-31-2023).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:NAMA_243._Statue_of_Hermes_Criophorus_02.jpg> .
+
 :hadrian-sabina-mars-venus-louvre a :group-of-human-figures ;
    rdfs:label "Hadrian and Sabina as Mars and Venus" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_and_Mars_(sculpture)> ,
