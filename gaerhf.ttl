@@ -2397,6 +2397,19 @@
 
 # -2400 https://commons.wikimedia.org/wiki/File:Qijia_Culture_Pottery_Head_(10096558193).jpg
 
+:cylinder-seal-banquet-puabi-ur a :group-of-human-figures ;
+   rdfs:label "Cylinder seal with women's banquet (tomb of Puabi, Ur)" ;
+   :described-by <https://collections.penn.museum/collections/object/47880> ;
+   :earliest-date -2500 ;
+   :latest-date -2340 ;
+   :apparent-gender :female ;
+   :height 0.04 ;
+   :material-note "Lapis lazuli" ;
+   :note "From Penn Museum: “This dark blue lapis lazuli cylinder seal was found leaning against the right upper arm of a queen. On it is engraved a double-register banquet scene with only female participants. … To the side, a separate scene depicts a musical performance, in which one woman plays a small four-stringed instrument accompanied by two women who clap cymbals and perhaps sing. Two similar cylinder seals were found close to the body of the queen. … The other carries an inscription Pu-abi, nin designating the owner as Puabi, the queen.”" ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (30.9615 46.1061) . # Royal Cemetery at Ur (Wikipedia); PG 800
+# image: Penn Museum photo 304422 (modern impression), https://collections.penn.museum/collections/assets/030T/304k/304422_1600.jpg
+
 :qijia-culture-ceramic-head a :human-figure ;
    rdfs:label "Qijia Culture Ceramic Head" ;
    :described-by <https://en.wikipedia.org/wiki/Qijia_culture#Pottery> ;
