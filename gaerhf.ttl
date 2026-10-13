@@ -1236,6 +1236,18 @@
    :representative-latlong-point (44.561111 22.024167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lepenski_vir_Praroditeljka_(Foremother,_cca_7000_BCE).jpg> .
 
+:cave-archers-pictographs a :group-of-human-figures ;
+   rdfs:label "Cave of Archers Pictographs" ;
+   :described-by <https://en.wikipedia.org/wiki/Cave_of_Archers> ;
+   :earliest-date -6300 ;
+   :latest-date -5500 ;
+   :apparent-gender :unclear ;
+   :material-note "Paint on sandstone" ;
+   :note "From Wikipedia: “The rock paintings of the cave feature a few panels of persons with bows and arrows as well as a herd of bovines. The paintings are dated between 6300 BC and 5500 BC during the African humid period, much different from the present hyper-arid one. Due to bedrock deterioration, the sandstone is heavily weathered or fragmented and only a few painted sandstone blocks remain.”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (23.594722 25.233611) ; # Cave of Archers, Wadi Sura, Gilf Kebir (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:CaveOfArchers.jpg> .
+
 :catalhoyuk-seated-female-figurine a :human-figure ;
    rdfs:label "Catalhoyuk Seated Female Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Seated_Woman_of_%C3%87atalh%C3%B6y%C3%BCk> ;
@@ -5091,6 +5103,20 @@
 
 # -100 - -1 https://www.metmuseum.org/art/collection/search/38518 (Indian Goddess dispensing Riches)
 
+:god-bouray a :human-figure ;
+   rdfs:label "God of Bouray" ;
+   :described-by <https://en.wikipedia.org/wiki/God_of_Bouray> ;
+   :earliest-date -100 ;
+   :latest-date 25 ;
+   :apparent-gender :male ;
+   :height 0.42 ;
+   :material-note "Sheet and cast bronze; glass inlay eye" ;
+   :note "From Wikipedia: “The statuette is hollow and is made of soldered together bronze plates. … The legs are crossed in lotus position and end in hooves (described as goat or deer-like). … The nude, hooved figure has been widely received as a Gallic god. … Two attributes of Cernunnos, the torc and the crossed legs in lotus position, are represented here. However the statuette lacks the usual antlers.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (48.520278 2.275833) ; # Château de Mesnil-Voisin, Bouray-sur-Juine (Wikipedia); dredged from the Juine near its gardens, 1845
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fran%C3%A7oise_Foliot_-_Dieu_de_Bouray.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:MAN_-_Le_dieu_de_Bouray_(7).jpg> .
+
 :hendy-heath a :human-figure ;
    rdfs:label "The Hendy Head" ;
    :described-by <https://www.peoplescollection.wales/items/411849#?xywh=-1002%2C-200%2C4544%2C3983> ,
@@ -5766,6 +5792,19 @@
    :representative-latlong-point (40.112421 44.730277) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Գառնիի_Տաճար_31.jpg> .
 
+:god-amiens a :human-figure ;
+   rdfs:label "God of Amiens" ;
+   :described-by <https://en.wikipedia.org/wiki/God_of_Amiens> ;
+   :earliest-date 75 ;
+   :latest-date 100 ;
+   :apparent-gender :male ;
+   :height 0.12 ;
+   :material-note "Bronze" ;
+   :note "From Wikipedia: “The statuette is of a young man seated cross-legged. He has a tunic clasped to his torso by a belt, and a cloak (a sagum) fastened to his right shoulder. … His right arm is amputated at the forearm. His left arm has survived in its entirety, but the hand is in a hollow fist, as if clutching a (now missing) object. … His facial features, particularly his eyes, are rendered rather heavily. He gazes upward. His right ear, emerging from the curly hair, is elongated (19 mm (0.75 in) in length) and cornet-shaped. Only the lobe of his left ear is visible under his hair.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (49.892 2.299) ; # Amiens (Wikipedia); found 1845 in the Henriville neighbourhood (faubourg Saint-Fuscien)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Amiens,_mus%C3%A9e_de_Picardie,_divinit%C3%A9_gauloise_%C3%A0_l%27oreille_de_cervid%C3%A9_02.jpg> .
+
 :roman-bust-polychromy a :human-figure ;
    rdfs:label "Roman-period Bust with Well Preserved Polychromy" ;
    :described-by <https://en.wikipedia.org/wiki/Bolu_Museum> ,
@@ -6267,6 +6306,19 @@
    :representative-latlong-point (8.325777 -80.197059) ;
    :note "No specific findspot known" ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312492/1291998/main-image> .
+
+:buddha-first-sermon-sarnath a :group-of-human-figures ;
+   rdfs:label "Buddha Preaching his First Sermon (Sarnath)" ;
+   :described-by <https://en.wikipedia.org/wiki/Buddha_Preaching_his_First_Sermon_(Sarnath)> ;
+   :earliest-date 400 ;
+   :latest-date 500 ;
+   :apparent-gender :male, :female ;
+   :height 1.6 ;
+   :material-note "Sandstone" ;
+   :note "From Wikipedia: “The sculpture depicts the Buddha giving the famous ‘Sermon in the Deer Park’ at Sarnath, where the Buddha initiated his teachings, which are recorded on the Pali Dhammacakkappavattana Sutta. In this sculpture, the Buddha is seated in the padmāsana posture (or ‘lotus position’), with his hands in the dharmachakra pravartana mudra, literally the mudra of ‘turning the wheel of dharma’, by means of teaching. He is delivering the first sermon to the five disciples shown, at a much smaller scale, below, with the dharmachakra in the centre. The wheel is flanked by couchant deer, symbolizing the deer park (Mrigadava) at Sarnath, where the event took place.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (25.3808 83.0245) ; # Dhamek Stupa, Sarnath (Wikipedia); found just south of it, 1904–05
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg> .
 
 :suda-hachiman-shrine-mirror a :group-of-human-figures ;
    rdfs:label "Suda Hachiman Shrine Mirror" ;
