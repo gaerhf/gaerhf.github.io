@@ -4297,6 +4297,19 @@
    :representative-latlong-point (34.390556 47.435833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:39_Bistoun.jpg> .
 
+:egyptian-statue-darius a :human-figure ;
+   rdfs:label "Egyptian Statue of Darius the Great" ;
+   :described-by <https://en.wikipedia.org/wiki/Egyptian_statue_of_Darius_the_Great> ;
+   :earliest-date -522 ;
+   :latest-date -486 ;
+   :apparent-gender :male ;
+   :height 2.46 ;
+   :material-note "Grey granite" ;
+   :note "From Wikipedia: “The Egyptian statue of Darius the Great is one of the main surviving works from the Achaemenid Empire … The style of the statue is a combination of Egyptian (e.g. the base and the back pillar) and Persian (e.g. the figure). Darius is depicted wearing a Persian dress, and armed with a dagger at his belt. The pleats of the right side of the robe are inscribed in Old Persian, Elamite and Babylonian cuneiform. The other side of the robe is inscribed with hieroglyphs. According to these inscriptions, the statue was made in Egypt at the request of Darius. … The statue was later brought to Susa by Darius' son, Xerxes I.”" ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (32.190556 48.257778) ; # Susa (Wikipedia); found there in 1972
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:National_Meusem_Darafsh_6_(42).JPG> .
+
 :euphronios-krater a :group-of-human-figures ;
    rdfs:label "Euphronios Krater" ;
    :described-by <https://en.wikipedia.org/wiki/Euphronios_Krater> ;
@@ -5433,6 +5446,19 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point (40.042931 -90.528939) ;
    :thumbnail-image <https://images-provider.frontiersin.org/api/ipx/w=654&f=webp/https://www.frontiersin.org/files/Articles/1355421/xml-images/fhumd-06-1355421-g003.webp> .
+
+:dendera-zodiac a :group-of-human-figures ;
+   rdfs:label "Dendera Zodiac" ;
+   :described-by <https://en.wikipedia.org/wiki/Dendera_zodiac> ,
+      <https://collections.louvre.fr/en/ark:/53355/cl010028871> ;
+   :date -50 ;
+   :apparent-gender :male, :female ;
+   :height 2.55 ;
+   :material-note "Sandstone" ;
+   :note "From Wikipedia: “The sculptured Dendera zodiac (or Denderah zodiac) is a widely known Egyptian bas-relief from the ceiling of the pronaos (or portico) of a chapel dedicated to Osiris in the Hathor temple at Dendera … The sky disc is centered on the north pole star, with Ursa Minor depicted as a jackal. An inner disc is composed of constellations showing the signs of the zodiac. Some of these are represented in the same Greco-Roman iconographic forms as their familiar counterparts (e.g. the Ram, Taurus, Scorpio, and Capricorn), whilst others are shown in a more Egyptian form: Aquarius is represented as the flood god Hapi, holding two vases which gush water.”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (26.141667 32.670278) ; # Dendera Temple complex (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Zodiaque_de_Dend%C3%A9ra_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_Egyptiennes_D_38_;_E_13482.jpg> .
 
 :augustus-portrait-meroe a :human-figure ;
    rdfs:label "Portrait of Augustus from Meroë" ;
@@ -7613,6 +7639,18 @@
    :representative-latlong-point (17.4836 -92.0468) ; # Temple of the Inscriptions, Palenque, Mexico
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Palenque_-_Maske_des_Pakal.jpg> .
+
+:nirvana-transformation-stele a :group-of-human-figures ;
+   rdfs:label "Nirvana Transformation Stele" ;
+   :described-by <https://zh.wikipedia.org/wiki/涅槃變相碑> ;
+   :date 691 ;
+   :apparent-gender :male, :female ;
+   :height 3.02 ;
+   :material-note "Stone" ;
+   :note "Translated from Chinese Wikipedia: “The stele is 302 cm high overall, 87 cm wide and 25 cm thick. It has a dragon-headed top and a tortoise base; the top is carved with Mount Sumeru guarded by divine generals and is inscribed with the second year of Tianshou (691). The front is carved with six scenes of the Nirvana story: the upper part shows four scenes, the placing in the coffin, the last instructions at the deathbed, the cremation and the funeral procession … the lower part shows the offering of Nanda; the back shows the Buddha preaching to his mother, the burning of the coffin and the manifestation of the feet, the raising of a stupa in the heavens, and other scenes; the lowest register is carved with the names of the donors.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (35.144167 110.774444) ; # Linyi County, Shanxi (Wikipedia); originally at the Dayun Temple there, moved to Taiyuan in 1957
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E5%A4%AA%E5%8E%9F%E7%BA%AF%E9%98%B3%E5%AE%AB%E5%94%90%E4%BB%A3%E6%AD%A6%E5%91%A8%E5%A4%A9%E6%8E%88%E4%BA%8C%E5%B9%B4%E6%B6%85%E6%A7%83%E5%8F%98%E7%9B%B8%E7%A2%91-%E7%A6%81%E6%AD%A2%E5%87%BA%E5%A2%83%E5%B1%95%E8%A7%88%E6%96%87%E7%89%A9%E4%B9%8B%E4%B8%80.jpg> .
 
 :renshou-giant-buddha a :human-figure ;
    rdfs:label "Renshou Giant Buddha" ;
