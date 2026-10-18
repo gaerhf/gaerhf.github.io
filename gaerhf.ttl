@@ -3342,6 +3342,32 @@
    :representative-latlong-point (35.2 72.483333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cremation_Urn_with_Lid_LACMA_AC1994.234.8a-b.jpg> .
 
+:ingot-god-enkomi a :human-figure ;
+   rdfs:label "Ingot God (Enkomi)" ;
+   :described-by <https://en.wikipedia.org/wiki/Enkomi_(archaeological_site)> ;
+   :earliest-date -1200 ;
+   :latest-date -1100 ;
+   :apparent-gender :male ;
+   :height 0.35 ;
+   :material-note "Bronze" ;
+   :note "From Wikipedia: “The Sanctuary of the Ingot God was constructed around a beaten-earth floor with a burnt surface believed to be associated with the deposition of the bronze ‘Ingot God’ figurine. … A bronze figurine approximately 0.35 metres (1.1 ft) metres high, wearing a linen cuirass, a horned helmet, and greaves, was discovered near the entrance. The figure holds an oval shield in one hand and a spear in the other, standing on a base interpreted as a copper ingot.”" ;
+   :in-modern-country-note "Cyprus" ;
+   :representative-latlong-point (35.159722 33.888333) ; # Enkomi archaeological site (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Barren-Gott,_Enkomi,_12._Jh._v._Chr._C.jpg> .
+
+:horned-god-enkomi a :human-figure ;
+   rdfs:label "Horned God (Enkomi)" ;
+   :described-by <https://en.wikipedia.org/wiki/Enkomi_(archaeological_site)> ;
+   :earliest-date -1200 ;
+   :latest-date -1150 ;
+   :apparent-gender :male ;
+   :height 0.55 ;
+   :material-note "Bronze" ;
+   :note "From Wikipedia: “The Horned God, measuring 0.55 metres (1.8 ft) in height, was found in a pit dug in the third phase of a very large tripartite ashlar building, built in the Late Cypriot III period (early 12th century BC) over earlier structures destroyed by an earthquake, also the dating of the statue. Large numbers of oxen skulls, stag antlers, animal bones, and miniature horns of gold sheet and other gold ornaments were found in the area in which the statue had originally stood, suggesting ritual activity. This level was also destroyed.”" ;
+   :in-modern-country-note "Cyprus" ;
+   :representative-latlong-point (35.159722 33.888333) ; # Enkomi archaeological site (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Geh%C3%B6rnter_Gott,_Enkomi.jpg> .
+
 :ralaghan-idol a :human-figure ;
    rdfs:label "Ralaghan Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Ralaghan_Idol> ;
@@ -7706,6 +7732,17 @@
   :representative-latlong-point (37.736 112.377) ;
   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E5%94%90_%E5%A4%A9%E9%BE%8D%E5%B1%B1%E7%AC%AC21%E7%AA%9F_%E5%BD%A9%E7%B9%AA%E7%9F%B3%E9%9B%95%E8%8F%A9%E8%96%A9%E9%A0%AD%E5%83%8F%EF%BC%88%E7%A0%82%E5%B2%A9%EF%BC%89-Head_of_a_Bodhisattva_MET_DP170147.jpg> .
 
+:court-ladies-tomb-princess-yongtai a :group-of-human-figures ;
+   rdfs:label "Court Ladies, Tomb of Princess Yongtai" ;
+   :described-by <https://en.wikipedia.org/wiki/Princess_Yongtai> ;
+   :approximate-date 705 ;
+   :apparent-gender :female ;
+   :material-note "Fresco" ;
+   :note "From Wikipedia: “After Wu Zetian's death, when her father again came to the throne, she and her brother were reburied in grand tombs in the Qianling Mausoleum in 705. … Most of the contents, including the frescoes, are now in the Shaanxi History Museum. The frescoes depicted the four deities, ceremonial weaponry, daily life in the imperial court, and celestial bodies. … The main subject of the frescoes is women, the majority of whom are shown without make-up and wearing no jewellery.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.574444 108.214167) ; # Qianling Mausoleum (Wikipedia); Princess Yongtai's tomb is a satellite tomb within the complex
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Court_Ladies_of_the_Tang.jpg> .
+
 :leshan-giant-buddha a :human-figure ;
    rdfs:label "Leshan Giant Buddha" ;
    :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
@@ -7718,6 +7755,18 @@
    :representative-latlong-point (29.544722 103.773333) ; # Leshan, China
    :art-historical-culture-or-tradition :tang-dynasty ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_View_from_below.jpg> .
+
+:statue-laozi-changyang-tianzun a :human-figure ;
+   rdfs:label "Statue of Laozi (Changyang Tianzun)" ;
+   :described-by <https://zh.wikipedia.org/wiki/常阳太尊石像> ;
+   :date 719 ;
+   :apparent-gender :male ;
+   :height 2.565 ;
+   :material-note "White marble (statue); limestone (base)" ;
+   :note "Translated from Chinese Wikipedia: “The statue shows the Heavenly Worthy seated cross-legged, wearing a lotus on his head and dressed in a Daoist robe; his right hand holds up a fan and a fly-whisk, and his left hand rests on an armrest. … The front of the base is carved with an inscription … recording the date of making as ‘the tenth day, jiazi, of the eleventh month, first day yimao, of the seventh year of Kaiyuan, a jiwei year, of the Great Tang’ … The inscription calls the figure ‘Changyang Tianzun’; the so-called Changyang Tianzun is Laozi.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (35.22023 110.910685) ; # Zhongchen village (中陈村), Yanhu District, Yuncheng (Google Maps); Jingyun Temple site; moved to Taiyuan in 1957
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:20250602_Statue_of_Laozi_in_the_Shanxi_Ancient_Architecture_Museum.jpg> .
 
 :uaxaclajuun-ub-aah-k-awiil-stela-h-copan a :human-figure ;
    rdfs:label "Uaxaclajuun Ub'aah K'awiil on Stela H at Copan" ;
@@ -8481,6 +8530,19 @@
    :representative-latlong-point (27.666314 85.353615) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/37791/2209705/main-image> .
 
+:along-river-qingming-festival a :group-of-human-figures ;
+   rdfs:label "Along the River During the Qingming Festival" ;
+   :described-by <https://en.wikipedia.org/wiki/Along_the_River_During_the_Qingming_Festival> ;
+   :earliest-date 1085 ;
+   :latest-date 1145 ;
+   :apparent-gender :male, :female ;
+   :height 0.255 ;
+   :material-note "Ink and color on silk; handscroll" ;
+   :note "From Wikipedia: “Along the River During the Qingming Festival … is a handscroll painting by the Song dynasty painter Zhang Zeduan (1085–1145) and copied or recreated many times in the following centuries. It captures the daily life of people and the landscape of the capital, Bianjing (present-day Kaifeng) during the Northern Song. … Read right to left, as a viewer would unroll it, successive scenes reveal the lifestyle of all levels of the society from rich to poor as well as economic activities in both rural areas and the city, and offer glimpses of clothing and architecture. The painting is considered the most renowned work among all Chinese paintings, and it has been called ‘China's Mona Lisa.’”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.795 114.345) ; # Kaifeng (Bianjing), the city depicted (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bianjing_city_gate.JPG> .
+
 :cahokian-resting-warrior-figurine a :human-figure ;
    rdfs:label "Cahokian Resting Warrior Figurine" ;
    :described-by <https://archeology.uark.edu/restingwarrior3d/> ;
@@ -8541,6 +8603,20 @@
    :representative-latlong-point (33.0905 131.762639) ; # Usuki Stone Buddhas, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Usuki_Stone_Buddhas.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Usuki_Stone_Buddhas_.jpg> .
+
+:night-revels-han-xizai a :group-of-human-figures ;
+   rdfs:label "The Night Revels of Han Xizai" ;
+   :described-by <https://en.wikipedia.org/wiki/The_Night_Revels_of_Han_Xizai> ;
+   :earliest-date 1100 ;
+   :latest-date 1200 ;
+   :apparent-gender :male, :female ;
+   :height 0.287 ;
+   :material-note "Ink and color on silk; handscroll" ;
+   :note "From Wikipedia: “The painting depicts Han Xizai, a minister from Southern Tang under the imperial government of emperor Li Yu, accompanied with realistic portrayals of more than forty people. Two copies of the artwork survived: a reproduction from the Song Dynasty, currently housed in the Palace Museum at Beijing; and a replica from the Ming Dynasty, under the collection of the Three Gorges Museum at Chongqing. … Viewed from right to left, the parts show Han Xizai listening to a pipa, striking a drum for dancers, resting, watching five female musicians playing flutes, and seeing off his guests.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (32.060833 118.778889) ; # Nanjing (Jinling), Southern Tang capital where the scene is set (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gu_Hongzhong%27s_Night_Revels_1_edit_(cropped2)_(cropped)_(cropped).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Han_Xizai_Night_Party_(part).jpg> .
 
 :bayeux-tapestry a :group-of-human-figures ;
    rdfs:label "Bayeaux Tapestry" ;
