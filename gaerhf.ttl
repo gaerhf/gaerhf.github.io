@@ -3969,6 +3969,21 @@
    :representative-latlong-point (19.600803 30.409731 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tanotamun_statue_in_Kerma_Museum.jpg> .
 
+:statue-official-bes a :human-figure ;
+   rdfs:label "Statue of the Official Bes" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_official_Bes> ,
+      <https://egypt-museum.com/statuette-of-the-official-bes/> ;
+   :earliest-date -664 ;
+   :latest-date -610 ;
+   :apparent-gender :male ;
+   :height 0.322 ;
+   :material-note "Compact limestone" ;
+   :identifier-note "Inv. 158 (Calouste Gulbenkian Museum)" ;
+   :note "Findspot unknown. From Wikipedia: “The statue depicts an elite courtier named Bes. The inscription at the statue's base describes him as ‘Count and Prince, Companion of His Majesty.’ The statue dates to the reign of Psamtik I (664–610 BC) of the 26th Dynasty and depicts Bes in a pose typically used by government officials of that time period (it was also common during the Old Kingdom and beginning of the New Kingdom).”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (30.964722 30.768333) ; # Sais (Wikipedia), 26th-Dynasty capital, as proxy; findspot unknown (ex MacGregor Collection)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Bes,_an_Egyptian_official_(Gulbenkian_Museum,_photo_by_Szilas).jpg> .
+
 :female-flanked-sphinxes a :human-figure ;
    rdfs:label "Seated Female Figure Flanked by Sphinxes" ;
    :described-by <https://en.wikipedia.org/wiki/Lady_of_Galera> ;
@@ -8822,6 +8837,20 @@
    :representative-latlong-point (13.4125 103.866667) ; # Angkhor as contemporary capital
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg> .
 
+:boston-miroku a :human-figure ;
+   rdfs:label "Boston Miroku" ;
+   :described-by <https://collections.mfa.org/objects/28592> ,
+      <https://en.wikipedia.org/wiki/Boston_Miroku> ;
+   :date 1189 ;
+   :apparent-gender :male ;
+   :height 1.422 ;
+   :material-note "Japanese cypress (Chamaecyparis obtusa) with gold and inlaid crystal; split-and-joined construction" ;
+   :identifier-note "Accession no. 20.723.1" ;
+   :note "From Wikipedia: “The Boston Miroku is a Kamakura period wooden sculpture of Maitreya, the Buddha of the future. Carved by the Buddhist sculptor Kaikei in 1189, it was once held and venerated at Kōfuku-ji, Nara until the temple sold it in 1906. It was then acquired by the Museum of Fine Arts, Boston in 1920. It is considered to be the earliest extant work of Kaikei, who is recognized for his works as part of the Kei school of Buddhist sculpture.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara (Wikipedia); held there until 1906
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Miroku,_the_Bodhisattva_of_the_Future.jpg> .
+
 :bayon-southern-market-scene a :group-of-human-figures ;
    rdfs:label "Bayon Market Scene" ;
    :described-by <https://en.wikipedia.org/wiki/Bayon#The_outer_gallery:_historical_events_and_everyday_life> ;
@@ -8904,6 +8933,23 @@
    :note "From Wikipedia: “The Tōdai-ji Hachiman is a syncretic Shinto-Buddhist sculpture of the kami Hachiman carved in 1201 by Buddhist sculptor Kaikei. ... Kaikei's sculpture is a solitary image of Hachiman as a monk. ... the deity is seen legs crossed, left hand on the lap, right hand held at chest level, staff in hand. He wears a grey undergarment, ochre robe, and is painted with a tōyama pattern, wisps of reds (shades of lacquer and cinnabar), greens and blues.”" ;
    :representative-latlong-point (34.68916667 135.83972222) ; # Tōdai-ji, Nara, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Todaiji_Monastery_Hachiman_by_Kaikei_(420).jpg> .
+
+:burke-jizo a :human-figure ;
+   rdfs:label "Jizō, Bodhisattva of the Earth Store (Kshitigarbha)" ;
+   :described-by <https://en.wikipedia.org/wiki/Burke_Jiz%C5%8D> ,
+      <https://www.metmuseum.org/art/collection/search/53175> ;
+   :date 1202 ;
+   :apparent-gender :male ;
+   :height 0.559 ;
+   :material-note "Lacquered Japanese cypress, color, gold, cut gold, and inlaid crystal" ;
+   :identifier-note "Accession no. 2015.300.250a, b" ;
+   :note "From The Met: “Jizō Bosatsu (Sanskrit: Bodhisattva Ksitigarbha) … is represented here in his usual attitude, with a shaved head and wearing the robes of a Buddhist monk. His right hand grasps a staff (shakujō), which he shakes to awaken humans from their delusions; his left hand most likely held a wish-granting jewel (hōju no tama), signifying the bestowal of blessings. An inscription on the interior of the figure identifies this as a work by Kaikei, one of the two leading sculptors of the early Kamakura period.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara (Wikipedia); held there until 1906
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/53175/2035975/main-image> ,
+      <https://collectionapi.metmuseum.org/api/collection/v1/iiif/53175/2035977/main-image> ,
+      <https://collectionapi.metmuseum.org/api/collection/v1/iiif/53175/2035973/main-image> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E5%9C%B0%E8%94%B5%E8%8F%A9%E8%96%A9%E7%AB%8B%E5%83%8F-Jiz%C5%8D_Bosatsu_MET_2015_300_250_F_SF.jpg> .
 
 :ryutoki-kofukuji a :human-figure ;
    rdfs:label "Ryūtōki: Demon with Dragon and Lantern (Kōfuku-ji)" ;
