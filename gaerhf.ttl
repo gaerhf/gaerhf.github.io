@@ -5065,6 +5065,21 @@
       <https://commons.wikimedia.org/wiki/File:J-37433_E0102665.jpg> , # archer, animals
       <https://commons.wikimedia.org/wiki/File:J-37433_E0102667.jpg> . # figure holding I-shaped tool
 
+:bard-paule a :human-figure ;
+   rdfs:label "The Bard of Paule" ;
+   :described-by <https://fr.wikipedia.org/wiki/Barde_%C3%A0_la_lyre> ,
+      <https://www.persee.fr/doc/galia_0016-4119_1999_num_56_1_3013> ,
+      <https://en.wikipedia.org/wiki/Buste-socle> ;
+   :earliest-date -200 ;
+   :latest-date -100 ;
+   :apparent-gender :male ;
+   :height 0.43 ;
+   :material-note "Meta-hornblendite" ;
+   :note "Translated from French Wikipedia: “The Barde à la lyre, or Barde de Paule, is a Gaulish sculpture created during La Tène, then buried around the 2nd or 1st century BC and discovered in 1988 in the fortress of Paule, an archaeological site located at Paule in the Côtes-d'Armor in France. Belonging to a series of four busts, it represents a bard holding a lyre in his hands.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (48.2193 -3.4415) ; # Forteresse de Paule, Côtes-d'Armor (French Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mus%C3%A9eBretagne_-_Statue_barde.jpg> . # image shows the Musée de Bretagne facsimile
+
 :lakshmi-stupa-2-sanchi a :human-figure ;
    rdfs:label "Lakshmi from Stupa 2 at Sanchi" ;
    :described-by <https://en.wikipedia.org/wiki/Sanchi_Stupa_No._2#Early_period_(circa_115_BCE)> ;
@@ -6062,6 +6077,19 @@
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (39.463889 -0.462778) ; # Aldaia (Wikipedia); found on the La Ereta dels Moros farm
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Baco_(M.A.N._Madrid)_01.jpg> .
+
+:buddha-capital-surkh-kotal a :human-figure ;
+   rdfs:label "Capital with Buddha from Surkh Kotal" ;
+   :described-by <https://en.wikipedia.org/wiki/Surkh_Kotal#Architectural_elements> ,
+      <https://commons.wikimedia.org/wiki/File:Buddha_Capitol_2.jpg> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :apparent-gender :male ;
+   :material-note "Stone" ;
+   :note "From Wikipedia: “… capital from Surkh Kotal, with central Buddha figure.”" ;
+   :in-modern-country-note "Afghanistan" ;
+   :representative-latlong-point (36.036083 68.58905) ; # Surkh Kotal (Wikipedia, 36°02′9.9″N 68°35′20.58″E)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_Capitol_2.jpg> .
 
 :hadrian-sabina-mars-venus-louvre a :group-of-human-figures ;
    rdfs:label "Hadrian and Sabina as Mars and Venus" ;
