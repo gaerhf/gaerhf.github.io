@@ -2809,6 +2809,20 @@
    :representative-latlong-point (31.2052 -7.8623) ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_11/11_13/8f7faea9_bfe4_45ba_b483_a3e000dec3a8/mid_01591370_001.jpg> , <https://africanrockart.britishmuseum.org/assets/images/site/2013_2034.5879.jpg> .
 
+:baal-thunderbolt-ugarit a :group-of-human-figures ;
+   rdfs:label "Baal with Thunderbolt" ;
+   :described-by <https://en.wikipedia.org/wiki/Baal_with_Thunderbolt> ,
+      <https://collections.louvre.fr/en/ark:/53355/cl010140542> ;
+   :earliest-date -2000 ;
+   :latest-date -1150 ;
+   :apparent-gender :male ;
+   :height 1.44 ;
+   :material-note "Oolitic limestone" ;
+   :note "From Wikipedia: “The stele depicts Baal (or Hadad), the god of storm and rain as well as that of agriculture, and a smaller male figure. The stele's artistic style has been described as blending Egyptian and Syrian artistic elements. … A man, who is shown with a bare head and wearing ceremonial dress, is depicted standing on a horned altar between the spear and the god and praying. The smaller figure most likely represents the king of Ugarit.”" ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (35.602 35.782) ; # Ugarit (Ras Shamra), acropolis west of the Temple of Baal; found 1932
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Baal_thunderbolt_Louvre_AO15775.jpg> .
+
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
    :described-by <https://www.historymuseum.ca/collections/artifact/1295533> ;
@@ -5711,6 +5725,20 @@
    :in-modern-country-note "France" ;
    :representative-latlong-point (49.242222 2.625833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ex-voto_gallo-romain_Halatte_070908_05.jpg> .
+
+:lyon-cup a :group-of-human-figures ;
+   rdfs:label "Lyon Cup" ;
+   :described-by <https://en.wikipedia.org/wiki/Lyon_cup> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :apparent-gender :male ;
+   :height 0.077 ;
+   :material-note "Silver" ;
+   :note "From Wikipedia: “The Lyon cup (French: gobelet de Lyon) is a silver Gallo-Roman cup found in Lyon (Lugdunum in Roman times), France. It is decorated in relief with a series of images: a reclining male figure with a deer and dog; a seated male figure with purses and a raven; an eagle confronting a serpent; two trees diametrically opposed. The wilderness scene has been interpreted variously as representing the gods Cernunnos and Mercury; the gods Cernunnos and Lugus; the god Apollo and a blessed devotee; and a complicated scene involving the divine trio Taranis, Teutates, and Esus.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (45.7555076 4.8280322) ; # 29 Rue Sala, Lyon, find-spot (1929)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lyon_5e_-_Mus%C3%A9e_Lugdunum_-_Gobelet_d%27argent_aux_dieux_gaulois_01.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Silver_cup_with_Gallic_divinities_(Lyon_Mus_Gall-Rom_2004.0.02)_01.jpg> .
 
 :yelykaevo-bronze-maskette a :human-figure ;
    rdfs:label "Yelykaevo Bronze Maskette" ;
@@ -8830,6 +8858,20 @@
    :art-historical-culture-or-tradition :mississippian ;
    :representative-latlong-point (34.125131 -84.807664) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Etowah_statues_HRoe_2007.jpg> .
+
+:inuit-carving-european-baffin-island a :human-figure ;
+   rdfs:label "Inuit Carving of a European, Baffin Island" ;
+   :described-by <https://www.historymuseum.ca/collections/artifact/482525> ,
+      <https://artofthemiddleages.com/s/main/item/4449> ;
+   :earliest-date 1250 ;
+   :latest-date 1300 ;
+   :apparent-gender :male ;
+   :height 0.0538 ;
+   :material-note "Driftwood" ;
+   :note "From Canadian Museum of History: “The meeting of these two peoples is recorded in the small wooden figure …, carved from driftwood and found in the remains of an early Inuit house on Baffin Island. The featureless face and stumpy arms are characteristic of Inuit carvings of the period, but this figure is unique in portraying a person in European dress; lightly incised lines indicate the folds of a long robe and an apparent cross on the chest. The Norseman portrayed here may have come ashore on Baffin Island to trade with the Inuit.”" ;
+   :in-modern-country-note "Canada" ;
+   :representative-latlong-point (62.846667 -69.871944) ; # Kimmirut, South Baffin (Wikipedia) as proxy; CMH gives "South Baffin", site KeDq-7
+   :thumbnail-image <https://artofthemiddleages.com/files/original/0dfaffb6cbb9b4385dbd8e80f701fe87f932bd9b.jpg> .
 
 :madonna-bordone a :group-of-human-figures ;
    rdfs:label "Madonna del Bordone" ;
