@@ -3248,6 +3248,21 @@
 
 # -1208 https://en.wikipedia.org/wiki/Merneptah_Stele
 
+:nazimaruttas-kudurru a :human-figure ;
+   rdfs:label "Nazimaruttaš Kudurru Stone" ;
+   :described-by <https://en.wikipedia.org/wiki/Nazimarutta%C5%A1_kudurru_stone> ,
+      <https://collections.louvre.fr/en/ark:/53355/cl010174451> ;
+   :earliest-date -1307 ;
+   :latest-date -1282 ;
+   :apparent-gender :male ;
+   :height 0.65 ;
+   :material-note "Black limestone" ;
+   :note "From Wikipedia: “The Nazimaruttash kudurru stone is a boundary stone (kudurru) of Nazimaruttaš, a Kassite king of Babylon, c. 1307–1282 BC (short chronology). It was found at Susa and is now displayed at the Louvre.”" ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (32.190556 48.257778) ; # Susa (Wikipedia); acropolis, 1898; taken there as war booty in the 12th c. BC
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kudurru_of_Nazi-Maruttash.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Lune_Grand_Palais_-_Kudurru_of_Nazi-Maruttash_01.jpg> .
+
 :jade-figure-fu-hao a :human-figure ;
    rdfs:label "Jade Figure from Tomb of Fu Hao" ;
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_Fu_Hao> ,
@@ -5067,6 +5082,21 @@
    :representative-latlong-point (37.966667 58.195) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nisa_helmeted_warrior_(black_background).jpg> .
 
+:apollo-piombino a :human-figure ;
+   rdfs:label "Apollo of Piombino" ;
+   :described-by <https://en.wikipedia.org/wiki/Apollo_of_Piombino> ,
+      <https://collections.louvre.fr/en/ark:/53355/cl010257735> ;
+   :earliest-date -125 ;
+   :latest-date -100 ;
+   :apparent-gender :male ;
+   :height 1.17 ;
+   :material-note "Bronze, with copper inlay" ;
+   :note "From Wikipedia: “The Apollo of Piombino or the Piombino Boy is a famous Greek bronze statuette in late Archaic style that depicts the god as a kouros or youth, or it may be a worshipper bringing an offering. The bronze is inlaid with copper for the boy's lips, eyebrows, and nipples. … It was found in 1832 at Piombino (Roman Populonia), in Etruria, in the harbor off the southwest point, and was purchased for the Musée du Louvre in 1834. … This inscription identifies the artists as Rhodian sculptors working in the 2nd or 1st centuries BCE, proving that it is not a genuine archaic Greek artwork.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (42.916667 10.533333) ; # Piombino (Wikipedia); found 1832 in the sea off the harbor
+   :thumbnail-image <https://www.getty.edu/publications/artistryinbronze/assets/img/figures/fig_42.01_Mille-Descamps.jpg> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Apolo_de_Piombino_-_Louvre.jpg> .
+
 :funeray-masks-oglakhty a :group-of-human-figures ;
    rdfs:label "Funerary Masks from Oglakhty" ;
    :described-by <https://en.wikipedia.org/wiki/Oglakhty> ,
@@ -5992,6 +6022,32 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hermes_Criophorus_(National_Archaeological_Museum_of_Athens,_1-31-2023).jpg> ,
       <https://commons.wikimedia.org/wiki/File:NAMA_243._Statue_of_Hermes_Criophorus_02.jpg> .
 
+:hariti-children-yusufzai a :group-of-human-figures ;
+   rdfs:label "Hārītī with Children" ;
+   :described-by <https://www.britishmuseum.org/collection/object/A_1886-0611-1> ;
+   :earliest-date 100 ;
+   :latest-date 300 ;
+   :apparent-gender :female, :unclear ;
+   :height 0.77 ;
+   :material-note "Grey schist" ;
+   :note "From British Museum: “Seated Hārītī with children. She wears a sleeved tunic with fabric so thin and stretched on her breasts that none of the drapery folds continue over them; the exposed sleeve is ruched in a pattern of short, dense, undulating grooves and with a narrow band of paired beads running down its length.”" ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (34.201222 72.025833) ; # Mardan (Wikipedia), proxy for BM findspot "Yusufzai" (the Yusufzai plain of the Peshawar Valley)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:GoddessHaririWithBaby.jpg> .
+
+:bacchus-aldaia a :human-figure ;
+   rdfs:label "Bacchus of Aldaia" ;
+   :described-by <https://en.wikipedia.org/wiki/Bacchus_of_Aldaia> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :apparent-gender :male ;
+   :height 1.09 ;
+   :material-note "White marble" ;
+   :note "From Wikipedia: “The Bacchus of Aldaia (Spanish: Baco de Aldaya) is an ancient Roman marble statuette of the Roman god Bacchus (Dionysus) that was found in La Ereta dels Moros in Aldaia, Valencia, in Spain, in two fragments between the years 1884 and 1924. The god is depicted naked except for a deer skin draped over him and wearing sandals and a floral crown. The sculpture is now exhibited in the National Archaeological Museum of Spain in the capital Madrid.”" ;
+   :in-modern-country-note "Spain" ;
+   :representative-latlong-point (39.463889 -0.462778) ; # Aldaia (Wikipedia); found on the La Ereta dels Moros farm
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Baco_(M.A.N._Madrid)_01.jpg> .
+
 :hadrian-sabina-mars-venus-louvre a :group-of-human-figures ;
    rdfs:label "Hadrian and Sabina as Mars and Venus" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_and_Mars_(sculpture)> ,
@@ -6014,6 +6070,19 @@
    :in-modern-country-note "Afghanistan" ;
    :representative-latlong-point (36.036083 68.58905) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Probable_statue_of_Kanishka,_Surkh_Kotal._Kabul_Museum_(2nd_century_CE).jpg> .
+
+:lansdowne-herakles a :human-figure ;
+   rdfs:label "Statue of Hercules (Lansdowne Herakles)" ;
+   :described-by <https://www.getty.edu/art/collection/object/103QSP> ,
+      <https://en.wikipedia.org/wiki/Lansdowne_Heracles> ;
+   :approximate-date 125 ;
+   :apparent-gender :male ;
+   :height 1.935 ;
+   :material-note "Marble" ;
+   :note "From Getty: “The Lansdowne Herakles very likely was inspired by a lost Greek statue, probably from the school of Polykleitos from the 300s B.C. Found in 1790 near the ruins of the villa of the Roman emperor Hadrian at Tivoli outside Rome, this statue was one of numerous copies of Greek sculpture commissioned by Hadrian, who loved Greek culture.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.946004 12.772515) ; # Hadrian's Villa, Tivoli (Wikipedia); found 1790
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lansdowne_Herakles_Getty_Museum.jpg> .
 
 :coin-kanushka-boddo a :group-of-human-figures ;
    rdfs:label "Coin of Kanushka with Buddha on Reverse" ;
@@ -8512,6 +8581,20 @@
    :art-historical-culture-or-tradition :maya-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Grolier_Codex_in_HuffPo_2.jpg> .
 
+:ambika-statue-dhar a :group-of-human-figures ;
+   rdfs:label "Ambikā Statue from Dhār" ;
+   :described-by <https://en.wikipedia.org/wiki/Ambika_Statue_from_Dhar> ,
+      <https://www.britishmuseum.org/collection/object/A_1909-1224-1> ;
+   :earliest-date 1034 ;
+   :latest-date 1035 ;
+   :apparent-gender :female, :male ;
+   :height 1.285 ;
+   :material-note "White marble" ;
+   :note "From British Museum: “Standing figure of the Jaina yakṣiṇī Ambikā carved in a coarse white marble. The goddess, originally four-armed, is carved in high relief against the plain ground of the slab; the base has been given offsets and is inscribed. The goddess wears a tiered crown of the beehive (karaṇḍa) type with her long hair tied into a small bun on one side. Two arms of the goddess have been broken away; in the remaining arms, she holds an elephant goad (aṅkuśa) and what seems to be the bottom of a noose or the stalk of a plant. On one of the stepped faces of the base is a small incised figure of a kneeling female donor with a inscribed label above.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (22.597222 75.304167) ; # Dhar (Wikipedia); found in the ruins of the City Palace, 1875
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ambik%C4%81_from_Dh%C4%81r.jpg> .
+
 :keller-figurine a :human-figure ;
    rdfs:label "Keller Figurine" ;
    :described-by <https://en.wikipedia.org/wiki/Mississippian_stone_statuary> ;
@@ -8910,6 +8993,21 @@
    :representative-latlong-point (45.41184 11.87952) ; # Scrovegni Chapel, Padua, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-11-_-_Marriage_of_the_Virgin.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Giotto_di_Bondone_-_Scenes_with_decorative_bands_-_WGA09284.jpg> .
+
+:final-death-buddha-sakyamuni-yale a :group-of-human-figures ;
+   rdfs:label "The Final Death of the Buddha Sakyamuni (Yale Parinirvana)" ;
+   :described-by <https://en.wikipedia.org/wiki/The_Final_Death_of_the_Buddha_Sakyamuni> ,
+      <https://artgallery.yale.edu/collections/objects/104557> ;
+   :earliest-date 1320 ;
+   :latest-date 1340 ;
+   :apparent-gender :male, :female ;
+   :height 1.71 ;
+   :material-note "Hanging scroll: ink, color, gold pigment, and cut gold on silk" ;
+   :identifier-note "Accession no. 2005.58.1a-b" ;
+   :note "From Yale University Art Gallery: “The reactions of the animals and figures depicted in this hanging scroll, both semidivine and human—including Shakyamuni’s mother Maya, who descends from the sky on a cloud bank at the right—attest to the depth of their spiritual understanding. With the exception of the monk Subhadhra, all of the figures cry in distress, as do the animals moaning and writhing in the foreground. Subhadhra, who is seated calmly in front of the right corner of the bier, correctly comprehends that this final passing is a liberation and not a tragedy.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara (Wikipedia): painted by Myōson of the Shōnami workshop under Kōfuku-ji's Ichijōin
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Myoson_-_The_Death_of_the_Buddha_Sakyamuni_(Nehan-zu)_-_2005.58.1a-b_-_Yale_University_Art_Gallery.jpg> .
 
 :saint-catherine-karlstejn-castle a :human-figure ;
    rdfs:label "Saint Catherine from Karlštejn Castle" ;
