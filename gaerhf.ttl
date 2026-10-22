@@ -5230,6 +5230,21 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fran%C3%A7oise_Foliot_-_Dieu_de_Bouray.jpg> ,
       <https://commons.wikimedia.org/wiki/File:MAN_-_Le_dieu_de_Bouray_(7).jpg> .
 
+:euffigneix-statue a :human-figure ;
+   rdfs:label "Euffigneix Statue" ;
+   :described-by <https://en.wikipedia.org/wiki/Euffigneix_statue> ,
+      <https://musee-archeologienationale.fr/collection/objet/statuette-du-dieu-dit-deuffigneix> ;
+   :earliest-date -100 ;
+   :latest-date -1 ;
+   :apparent-gender :male ;
+   :height 0.258 ;
+   :material-note "Limestone" ;
+   :identifier-note "Inv. MAN78243 (Musée d'Archéologie nationale)" ;
+   :note "From Wikipedia: “The statue is a human bust with a large relief of a boar on its chest. The boar was a potent symbol for the Celts and the figure has been thought to represent a Gaulish boar-god, perhaps Moccus. … It is cylindrical, somewhat squared around the torso. … It is broken at the top and bottom.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (48.1306 5.0458) ; # Euffigneix, Haute-Marne; found nearby in 1922, exact findspot not located
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:226_dieu_d%27Euffigneix_(6).jpg> .
+
 :hendy-heath a :human-figure ;
    rdfs:label "The Hendy Head" ;
    :described-by <https://www.peoplescollection.wales/items/411849#?xywh=-1002%2C-200%2C4544%2C3983> ,
@@ -5559,6 +5574,18 @@
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (26.141667 32.670278) ; # Dendera Temple complex (Wikipedia)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Zodiaque_de_Dend%C3%A9ra_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_Egyptiennes_D_38_;_E_13482.jpg> .
+
+:idolino-pesaro a :human-figure ;
+   rdfs:label "Idolino of Pesaro" ;
+   :described-by <https://en.wikipedia.org/wiki/Idolino> ;
+   :approximate-date -30 ;
+   :apparent-gender :male ;
+   :height 1.46 ;
+   :material-note "Bronze" ;
+   :note "From Wikipedia: “It is a copy of a Greek sculpture in the style of Polyclitus made in approximately 440 B.C. It received the name ‘Idolino,’ which is Italian for ‘Little Idol,’ in the 19th century. … The statue represents a youth with his right hand outstretched. Originally thought to be a statue of Bacchus, it is now believed to have been used to hold an oil lamp at dinner parties.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (43.916667 12.9) ; # Pesaro (Wikipedia); found 1530 in a Roman villa there, exact spot not given
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Idolino_di_pesaro,_01.JPG> .
 
 :augustus-portrait-meroe a :human-figure ;
    rdfs:label "Portrait of Augustus from Meroë" ;
@@ -8975,6 +9002,20 @@
    :representative-latlong-point (35.311146 -94.569449) ;
    :thumbnail-image <https://www.spiromounds.com/img/figure-9.20.jpg?nf_resize=fit&w=1000&h=1000> .
 
+:seated-portrait-minamoto-yoritomo a :human-figure ;
+   rdfs:label "Seated Portrait of Minamoto no Yoritomo" ;
+   :described-by <https://en.wikipedia.org/wiki/Seated_Portrait_of_Minamoto_no_Yoritomo> ;
+   :earliest-date 1200 ;
+   :latest-date 1333 ;
+   :apparent-gender :male ;
+   :height 0.705 ;
+   :material-note "Wood, polychromy, inlaid crystal eyes" ;
+   :identifier-note "Catalogue no. C-1526 (Tokyo National Museum)" ;
+   :note "From Wikipedia: “Minamoto no Yoritomo (1147–1199) was the founder and the first shōgun of the Kamakura Shogunate of Japan. … It is generally agreed that the sculpture might be an image of him, but this attribution is not completely certain. … A smaller-than-life portrait, with a height of about 70 cm from the bottom to the top of the eboshi, the typical headgear used by court nobles, it has been praised for its ‘solemnity’ and for ‘showing the noble dignity of the head of a warrior family’.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (35.324722 139.555833) ; # Tsurugaoka Hachimangū, Kamakura, where it is believed to have been enshrined (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_Portrait_of_Minamoto_no_Yoritomo_(Presumed)_1.jpg> .
+
 # 1221 https://en.wikipedia.org/wiki/Emperor_Go-Toba
 
 :todaiji-hachiman a :human-figure ;
@@ -9056,6 +9097,19 @@
    :in-modern-country-note "Canada" ;
    :representative-latlong-point (62.846667 -69.871944) ; # Kimmirut, South Baffin (Wikipedia) as proxy; CMH gives "South Baffin", site KeDq-7
    :thumbnail-image <https://artofthemiddleages.com/files/original/0dfaffb6cbb9b4385dbd8e80f701fe87f932bd9b.jpg> .
+
+:great-buddha-kamakura a :human-figure ;
+   rdfs:label "The Great Buddha of Kamakura" ;
+   :described-by <https://en.wikipedia.org/wiki/K%C5%8Dtoku-in> ;
+   :approximate-date 1252 ;
+   :apparent-gender :male ;
+   :height 13.35 ;
+   :material-note "Bronze, formerly gilded" ;
+   :note "From Wikipedia: “The Great Buddha of Kamakura (鎌倉大仏, Kamakura Daibutsu) is a large bronze statue of Amitābha, located on the temple grounds. Including the base, it measures 13.35 metres (43.8 ft) tall and weighs approximately 93 tonnes (103 short tons). According to temple records, the statue dates from around 1252, during the Kamakura period, which it is named after.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (35.31686 139.53572) ; # Kōtoku-in, Kamakura (Wikidata Q672056)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kamakura_Budda_Daibutsu_front_1885.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Kamakura_Daibutsu_-_Takeshi_DSC_7849_(4833376057).jpg> .
 
 :madonna-bordone a :group-of-human-figures ;
    rdfs:label "Madonna del Bordone" ;
