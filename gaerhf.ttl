@@ -6091,6 +6091,20 @@
    :representative-latlong-point (36.036083 68.58905) ; # Surkh Kotal (Wikipedia, 36°02′9.9″N 68°35′20.58″E)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_Capitol_2.jpg> .
 
+:warrior-relief-efrenk a :human-figure ;
+   rdfs:label "Warrior Relief of Efrenk" ;
+   :described-by <https://en.wikipedia.org/wiki/Warrior_relief_of_Efrenk> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :apparent-gender :male ;
+   :height 1.9 ;
+   :material-note "Rock relief, with traces of paint" ;
+   :note "From Wikipedia: “It is 1.9 m high and depicts a warrior, surrounded by a naiskos. … There are traces of white paint on the relief in several spaces - between the head and the right arm, for instance, there are traces of red paint. … On the left pilaster there is an inscription at about chest height, which has been resolved as an 8 line inscription: … May Helios and Selene attack anyone who attacks or diminishes the Heroon.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (36.607778 34.075389) ; # relief site near Sömek, Silifke, Mersin (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Efrenk_Krieger_Relief.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Efrenk_Krieger_gesamt.jpg> .
+
 :hadrian-sabina-mars-venus-louvre a :group-of-human-figures ;
    rdfs:label "Hadrian and Sabina as Mars and Venus" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_and_Mars_(sculpture)> ,
@@ -9067,6 +9081,20 @@
    :representative-latlong-point (45.41184 11.87952) ; # Scrovegni Chapel, Padua, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-11-_-_Marriage_of_the_Virgin.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Giotto_di_Bondone_-_Scenes_with_decorative_bands_-_WGA09284.jpg> .
+
+:paradise-bhaisajyaguru a :group-of-human-figures ;
+   rdfs:label "Paradise of Bhaisajyaguru" ;
+   :described-by <https://en.wikipedia.org/wiki/Paradise_of_Bhaisajyaguru> ,
+      <https://www.metmuseum.org/art/collection/search/42716> ;
+   :date 1319 ;
+   :apparent-gender :male , :female ;
+   :height 7.518 ;
+   :material-note "Water-based pigment over foundation of clay mixed with straw" ;
+   :identifier-note "Accession no. 65.29.2" ;
+   :note "From The Met: “Bhaishajyaguru (A), the Buddha of Medicine, sits on a lotus throne surrounded by an assembly of deities. Standing to either side of the central figure are the Buddha’s attendant bodhisattvas: Candraprabha (B), or Yueguang Pusa 月光菩薩, and Suryaprabha (C), or Riguang Pusa 日光菩薩.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (36.301667 111.806389) ; # Guangsheng Temple, Hongtong County, Shanxi (Wikipedia); mural from the east wall of the main hall, Lower Temple
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E8%96%AC%E5%B8%AB%E4%BD%9B-Buddha_of_Medicine_Bhaishajyaguru_(Yaoshi_fo)_MET_DT227320.jpg> .
 
 :final-death-buddha-sakyamuni-yale a :group-of-human-figures ;
    rdfs:label "The Final Death of the Buddha Sakyamuni (Yale Parinirvana)" ;
