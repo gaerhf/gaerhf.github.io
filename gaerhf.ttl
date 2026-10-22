@@ -6105,6 +6105,19 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Efrenk_Krieger_Relief.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Efrenk_Krieger_gesamt.jpg> .
 
+:athena-relief-somek a :human-figure ;
+   rdfs:label "Athena Relief of Sömek" ;
+   :described-by <https://en.wikipedia.org/wiki/Athena_relief_of_S%C3%B6mek> ;
+   :earliest-date 100 ;
+   :latest-date 200 ;
+   :apparent-gender :female ;
+   :height 1.3 ;
+   :material-note "Rock relief" ;
+   :note "From Wikipedia: “The relief is carved in the living rock at a height of some 1.5 metres above the ground. It has a total height of 1.3 metres. In a niche finished with a conch-shaped top, the image of a woman is found, who can be identified as the goddess Athena thanks to the inscription, among other things. … The right arm of the figure is raised and holds a lance. Her left, pointing down to the ground, holds a shield on edge.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (36.604444 34.080833) ; # relief site near Sömek, Silifke, Mersin (Wikipedia, 36°36′16″N 34°04′51″E)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AthenaS%C3%B6mek1.jpg> .
+
 :hadrian-sabina-mars-venus-louvre a :group-of-human-figures ;
    rdfs:label "Hadrian and Sabina as Mars and Venus" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_and_Mars_(sculpture)> ,
