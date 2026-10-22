@@ -3397,6 +3397,21 @@
    :representative-latlong-point (35.159722 33.888333) ; # Enkomi archaeological site (Wikipedia)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Geh%C3%B6rnter_Gott,_Enkomi.jpg> .
 
+:cupisnique-whistle-tembladera a :human-figure ;
+   rdfs:label "Cupisnique Whistle" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/316715> ;
+   :earliest-date -1200 ;
+   :latest-date -500 ;
+   :apparent-gender :unclear ;
+   :height 0.06 ;
+   :material-note "Ceramic, traces of white and red pigment" ;
+   :identifier-note "Accession no. 1992.60.3" ;
+   :note "Exact findspot unknown. From The Met: “This small whistle (ocarina in Spanish) is one of a group of similar objects … created by artists of the Cupisnique culture of Peru’s North Coast in the years between 1200 and 500 BCE. This whistle depicts an individual with their hands near their mouth as if they were shouting or calling. A child appears above the person’s head as if being carried on his or her shoulders.”" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-7.2538172 -79.129784) ; # Tembladera, Jequetepeque Valley, Cajamarca; the Met says the group was "said to have come from" there
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/ao/original/DP-24269-001.jpg> ,
+      <https://images.metmuseum.org/CRDImages/ao/original/DP-24269-002.jpg> .
+
 :ralaghan-idol a :human-figure ;
    rdfs:label "Ralaghan Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Ralaghan_Idol> ;
@@ -4853,6 +4868,20 @@
    :representative-latlong-point (46.86701 35.353108) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Melitopol_kurgan_gorytos_(corrected_for_perspective).jpg> .
 
+:head-leucothea-pyrgi a :human-figure ;
+   rdfs:label "Head of Leucothea" ;
+   :described-by <https://www.museoetru.it/opere/testa-di-leucotea> ;
+   :earliest-date -340 ;
+   :latest-date -330 ;
+   :apparent-gender :female ;
+   :height 0.2 ;
+   :material-note "Polychrome terracotta, hand-modelled; pediment high relief" ;
+   :identifier-note "Excavation no. 53889" ;
+   :note "Translated from the Museo Nazionale Etrusco di Villa Giulia website: “The female head must have been part of the high relief that covered the front of the ridge beam of the roof of Temple A in the sanctuary of Pyrgi (Santa Severa), the ancient port of Caere (Cerveteri), during its renovation around 350 BC. Dedicated to Thesan, Etruscan goddess of Dawn, Temple A is attributed in Greek sources, which recall its terrible sacking by Dionysius of Syracuse (384 BC), to Leucothea (literally the ‘white goddess’), assimilated by the Romans to Mater Matuta, a goddess deeply linked to rites of passage and transition, such as birth and, therefore, also the dawn. The head seems to be attributable to this deity, which gives us an image in strong movement with curly hair blowing in the wind and a ‘pathetic’ expression given by the open mouth.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (42.0155 11.9627) ; # Pyrgi (Santa Severa), Temple A; Wikidata Q1724661 gives 42.015226 11.963414
+   :thumbnail-image <https://www.museoetru.it/files/opera/2019/244702.jpg> .
+
 :scultpures-tel-abrak a :group-of-human-figures ;
    rdfs:label "Parthian(?) Sculptures from Tel Abrak" ;
    :described-by <https://en.wikipedia.org/wiki/Tell_Abraq#Archaeology> ,
@@ -6157,6 +6186,20 @@
    :note "From Wikipedia: “Hadrian and Sabina as Mars and Venus is a 1.73-metre (5 ft 8 in) tall marble statue of 120–140 AD (with restorations of c. 170–175).” The male head was later reworked as Lucius Verus and the female head as Lucilla. Louvre Ma 1009; the Louvre records it as found in Rome near Santa Maria Maggiore shortly before 1620, then held in the Borghese collection." ;
    :representative-latlong-point (41.8976 12.4984) ; # ll for Santa Maria Maggiore, Rome
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mars_Venus_Louvre_Ma1009.jpg> .
+
+:apollo-belvedere a :human-figure ;
+   rdfs:label "Apollo Belvedere" ;
+   :described-by <https://en.wikipedia.org/wiki/Apollo_Belvedere> ;
+   :earliest-date 120 ;
+   :latest-date 140 ;
+   :apparent-gender :male ;
+   :height 2.24 ;
+   :material-note "White marble" ;
+   :note "From Wikipedia: “The work has been dated to mid-way through the 2nd century A.D. and is considered to be a Roman copy of an original bronze statue created between 330 and 320 B.C. by the Greek sculptor Leochares. … The Greek god Apollo is depicted as a standing archer having just shot an arrow. … Its complex contrapposto has been much admired, appearing to position the figure both frontally and in profile. The arrow has just left Apollo's bow and the effort impressed on his musculature still lingers. … He is entirely nude except for his sandals and a robe (chlamys) clasped at his right shoulder, turned up on his left arm, and thrown back.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.447947 12.629053) ; # Anzio; Wikipedia says it "seems to have been discovered in 1489" there, or perhaps at Grottaferrata
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Apollo_del_Belvedere.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Belvedere_Apollo_Pio-Clementino_Inv1015_n5.jpg> .
 
 :kushan-ruler-surkh-kotal a :human-figure ;
    rdfs:label "Kushan Ruler from Surkh Kotal" ;
