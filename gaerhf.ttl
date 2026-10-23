@@ -7911,6 +7911,22 @@
    :representative-latlong-point (53.5 -7.966667) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Placca_della_crocifissione,_in_bronzo,_da_st._john%27s_rinnagan,_contea_di_roscommon,_viii_secolo.jpg> .
 
+:enthroned-jina-neminatha-akota a :group-of-human-figures ;
+   rdfs:label "Enthroned Jina (Neminatha)" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/74501> ,
+      <https://en.wikipedia.org/wiki/Akota_Bronzes> ;
+   :earliest-date 675 ;
+   :latest-date 700 ;
+   :apparent-gender :male , :female ;
+   :height 0.349 ;
+   :material-note "Copper alloy" ;
+   :identifier-note "Accession no. 2008.279" ;
+   :note "From The Met: “An enthroned Jain savior is deep in meditation, seated in a yogic posture on a jeweled cushion set on a two-tiered lion-supported throne. At the center of the pedestal two kneeling deer venerate the wheel-of-law (dharmachakra), a symbol of religious wisdom shared with Buddhism. Seated in royal ease on projecting lotus supports are the yaksha Gomedha and the yakshi Ambika, attendants of the jina Neminatha, the twenty-second in the lineage of twenty-four historical jinas recognized by the Jain religion. On the reverse is a donor's inscription in a seventh-century Sanskrit script.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (22.3 73.17) ; # Akota, Vadodara, Gujarat (Wikidata: 22.2951 73.1686); the Met gives "India (Gujarat, Akota)"
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/as/original/DP161523.jpg> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MET_-_Neminatha_Akota.jpg> .
+
 :madara-rider-relief a :human-figure ;
    rdfs:label "Madara Rider Relief" ;
    :described-by <https://en.wikipedia.org/wiki/Madara_Rider> ;
@@ -8052,6 +8068,25 @@
    :in-modern-country-note "Syria" ;
    :representative-latlong-point ( 34.374444 37.605833 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Arabischer_Maler_um_730_002.jpg> .
+
+:brahma-indra-kofukuji a :group-of-human-figures ;
+   rdfs:label "Statues of Brahmā and Indra" ;
+   :described-by <https://en.wikipedia.org/wiki/Statues_of_Brahm%C4%81_and_Indra> ,
+      <https://collections.asianart.org/collection/the-deities-brahma-and-indra/> ,
+      <https://artsandculture.google.com/asset/the-deity-brahma-bonten-one-of-a-pair/AAHkOO_Nbiid7Q> ,
+      <https://artsandculture.google.com/asset/the-deity-indra-taishakuten-one-of-a-pair/PwHQfrF9WISL_A> ;
+   :earliest-date 730 ;
+   :latest-date 750 ;
+   :apparent-gender :male ;
+   :height 1.575 ;
+   :material-note "Hollow dry lacquer" ;
+   :identifier-note "B65S13 and B65S12 (Asian Art Museum, San Francisco)" ;
+   :note "From the Asian Art Museum: “Large-scale, hollow dry-lacquer statues like these are rare even in Japan, where most are designated as National Treasures or Important Cultural Properties. Brahma and Indra, known in Japan as Bonten and Taishakuten, were considered protective figures, and statues of the two deities were typically paired as attendants flanking a buddha or bodhisattva. This pair once belonged to the prominent Buddhist temple Kofukuji in Nara, Japan. Made in the eighth century, these statues are among the few surviving Brahma and Indra images from that period.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara (Wikipedia); sold by the temple in 1906
+   :thumbnail-image <https://collections.asianart.org/wp-content/uploads/sites/5/2020/06/B65S12-B65S13_v01-1200x1120.jpg> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_deity_Brahma_(Bonten),_one_of_a_pair.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:The_deity_Indra_(Taishakuten),_one_of_a_pair.jpg> .
 
 :bust-kul-tigin a :human-figure ;
    rdfs:label "Bust of Kul Tigin" ;
@@ -8334,6 +8369,20 @@
    :in-modern-country-note "El Salvador" ;
    :representative-latlong-point (13.979444 -89.674167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:ES_Tazumal_06_2011_Xipe_Totec_2292.jpg> .
+
+:parsvanatha-akota a :group-of-human-figures ;
+   rdfs:label "Parsvanatha" ;
+   :described-by <https://artsandculture.google.com/asset/parsvanatha/mAFgPOnPHnKiuA> ,
+      <https://en.wikipedia.org/wiki/Akota_Bronzes> ;
+   :earliest-date 801 ;
+   :latest-date 900 ;
+   :apparent-gender :male , :female ;
+   :height 0.31 ;
+   :material-note "Bronze" ;
+   :note "From the National Museum, New Delhi (Google Arts & Culture): “This object depicts Tirthankara Parsvanatha, symbolized by the seven-hooded snake canopy over his head. In the centre the Jaina Master is seated in dhyana-mudra and is flanked by two other tirthankaras. Yaksha and yakshi are shown near the pedestal. The base depicts the navagrahas and the donor couple.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (22.3 73.17) ; # Akota, Vadodara, Gujarat (Wikidata: 22.2951 73.1686); Google Arts & Culture gives "Akota, Gujarat"
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:National_Museum_-_Parsvanatha_9C_(2).jpg> .
 
 :rongxian-giant-buddha a :human-figure ;
    rdfs:label "Rongxian Giant Buddha" ;
@@ -8929,6 +8978,21 @@
    :representative-latlong-point ( 42.524778 0.825641 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Davallament_figures_MEV.jpg> .
 
+:four-heavenly-kings-kofukuji a :group-of-human-figures ;
+   rdfs:label "Four Heavenly Kings (Shitennō) from Kōfuku-ji" ;
+   :described-by <https://en.wikipedia.org/wiki/Four_Heavenly_Kings_(ex-K%C5%8Dfuku-ji)> ,
+      <https://colbase.nich.go.jp/collection_items/narahaku/755-0?locale=en> ,
+      <https://colbase.nich.go.jp/collection_items/narahaku/1114-0?locale=en> ;
+   :earliest-date 1150 ;
+   :latest-date 1250 ;
+   :apparent-gender :male ;
+   :material-note "Japanese cypress (hinoki), pigment, crystal eyes" ;
+   :note "From Wikipedia: “The Statues of the Four Heavenly Kings from Kōfuku-ji are a set of dispersed Japanese Buddhist sculptures depicting the Four Heavenly Kings dating to the Heian to Kamakura period. Formerly held by Kōfuku-ji in Nara, Japan, and among the multiple set of Shitennō carved for the temple, they were dispersed during the Meiji Period in 1906. Two of the sculptures, depicting Vaiśravaṇa (Tamonten) and Virūḍhaka (Zōchōten) are currently held by the Nara National Museum, while the sculpture of Dhṛtarāṣṭra (Jikokuten) is held by the Miho Museum in Shiga Prefecture, with the sculpture of Virūpākṣa (Komokuten) remaining at the temple.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nara_National_Museum_755-0_Vai%C5%9Brava%E1%B9%87a.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:H063462_Z%C5%8Dch%C5%8D-ten_(Vir%C5%AB%E1%B8%8Dhaka)_1114-0.jpg> .
+
 :luohan-laundering-silk a :group-of-human-figures ;
    rdfs:label "Luohan laundering 羅漢洗濯圖" ;
    :described-by <https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1902.224/> ,
@@ -9184,6 +9248,21 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kamakura_Budda_Daibutsu_front_1885.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Kamakura_Daibutsu_-_Takeshi_DSC_7849_(4833376057).jpg> .
 
+:seated-ragaraja-nara a :human-figure ;
+   rdfs:label "Seated Rāgarāja" ;
+   :described-by <https://en.wikipedia.org/wiki/Seated_R%C4%81gar%C4%81ja_(Nara_National_Museum)> ,
+      <https://www.narahaku.go.jp/english/collection/958-2.html> ;
+   :date 1256 ;
+   :apparent-gender :male ;
+   :height 0.262 ;
+   :material-note "Wood, cypress, single block construction (hollow), pigment, crystal eyes" ;
+   :identifier-note "Accession no. 958-2 (Nara National Museum)" ;
+   :note "From Wikipedia: “Seated Rāgarāja or Seated Aizen Myō-ō (Japanese: 木造愛染明王坐像) is a Buddhist sculpture from the Kamakura period depicting the Wisdom King Rāgarāja (Aizen Myō-ō), carved in 1256 in the city of Nara, Japan. Constructed in the decades of restoration after the siege of Nara during the Genpei War using materials used for the reconstruction of the Daibutsuden in Tōdai-ji, the statue was once part of the pantheon at Kōfuku-ji until it was sold off by the temple during the Meiji era.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara (Wikipedia; museum: "comes from Kōfukuji Temple")
+   :thumbnail-image <https://colbase.nich.go.jp/media/narahaku/958-2/image/slideshow_l/H061262.jpg> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aizen_Myo-o_Ragaraja.jpg> .
+
 :madonna-bordone a :group-of-human-figures ;
    rdfs:label "Madonna del Bordone" ;
    :described-by <https://en.wikipedia.org/wiki/Madonna_del_Bordone> ;
@@ -9195,6 +9274,22 @@
    :note "From Wikipedia: “The Madonna del Bordone (‘The Madonna of the pilgrim's staff’) is a panel painting by the Italian painter Coppo di Marcovaldo, in the church of Santa Maria dei Servi in Siena, Italy. Signed and dated 1261, the work is the only certain attribution to the Florentine painter. ... It portrays the Madonna enthroned with a halo and two small angels on her sides. She is enthroned, and supports the blessing Child, who is holding the Book of the Law in his left hand and has a halo surrounded by a jewelled cross.”" ;
    :representative-latlong-point (43.315327 11.338174) ; # Santa Maria dei Servi, Siena, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Coppo_di_marcovaldo,_madonna_del_bordone,_siena,_chiesa_dei_servi,_1261_tavola,.jpg> .
+
+:jizo-intan a :human-figure ;
+   rdfs:label "The Bodhisattva Jizō" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Jiz%C5%8D_(Intan)> ,
+      <https://www.metmuseum.org/art/collection/search/76084> ;
+   :date 1291 ;
+   :apparent-gender :male ;
+   :height 1.359 ;
+   :material-note "Japanese cypress wood (hinoki) with polychrome pigments, gold paint (kindei), cut gold leaf (kirikane), and rock-crystal eyes" ;
+   :identifier-note "Accession no. 2023.640a–c" ;
+   :note "From The Met: “In this sculpture, Jizō is portrayed as a youthful monk with a shaved head and a patchwork surplice over his robe. He wields a monk’s staff in his right hand—which he rattles to awaken humans from their delusions—while in his left he holds a jewel of wisdom that grants all wishes. Jizō’s long earlobes and the urna on his forehead symbolize his enlightened state. This sculpture, one of only three surviving works bearing the name of the sculptor Intan, is signed on one of the wood tenons used to slot the bodhisattva’s feet into the lotus base.”" ;
+   :in-modern-country-note "Japan" ;
+   :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara (Wikipedia); sold by the temple in 1906
+   :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/76084/1737088/main-image> ,
+      <https://collectionapi.metmuseum.org/api/collection/v1/iiif/76084/1737100/main-image> ,
+      <https://collectionapi.metmuseum.org/api/collection/v1/iiif/76084/2226674/main-image> .
 
 :coronation-virgin-santa-maria-maggiore a :group-of-human-figures ;
    rdfs:label "Coronation of the Virgin, Apse Mosaic, Santa Maria Maggiore" ;
