@@ -4973,6 +4973,20 @@
    :representative-latlong-point (40.473750 17.233083) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/248624/531687/main-image> .
 
+:tetradrachm-alexander-pasargadae a :group-of-human-figures ;
+   rdfs:label "Tetradrachm (Coin) of Alexander the Great" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/326395> ;
+   :earliest-date -325 ;
+   :latest-date -319 ;
+   :apparent-gender :male ;
+   :material-note "Silver" ;
+   :identifier-note "Accession no. 1978.93.21" ;
+   :note "From The Met: “On the obverse of this silver tetradrachm coin, a youthful bust of Herakles faces right. … He wears a headdress made of a lion’s pelt, with the paws tied around his neck. … The reverse shows the seated figure of Zeus facing left. … The Greek name ‘AΛEΞANΔPOY’ (in English, ‘Alexander’) is behind him. A ship’s prow is in front of him; this is probably a mint mark indicating who was responsible for making this coin. … This coin was excavated at Pasargadae, about 55 miles northeast of Shiraz, Iran.” Provenance: “1962, excavated under the direction of David Stronach, on behalf of the British Institute of Persian Studies.”" ;
+   :in-modern-country-note "Iran" ;
+   :representative-latlong-point (30.2 53.179444) ; # Pasargadae (Wikidata Q230025); excavated there 1962; struck at Susa
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/an/original/DP-16934-019.jpg> ,
+      <https://images.metmuseum.org/CRDImages/an/original/DP-16934-020.jpg> .
+
 :carpet-pazyryk-5 a :group-of-human-figures ;
    rdfs:label "Carpet from Pazyryk Burial 5" ;
    :described-by <https://en.wikipedia.org/wiki/Pazyryk_burials#Pazyryk-5> ;
@@ -5590,6 +5604,22 @@
    :in-modern-country-note "United States" ;
    :representative-latlong-point (40.042931 -90.528939) ;
    :thumbnail-image <https://images-provider.frontiersin.org/api/ipx/w=654&f=webp/https://www.frontiersin.org/files/Articles/1355421/xml-images/fhumd-06-1355421-g003.webp> .
+
+:god-etang-sur-arroux a :human-figure ;
+   rdfs:label "God of Étang-sur-Arroux" ;
+   :described-by <https://en.wikipedia.org/wiki/God_of_%C3%89tang-sur-Arroux> ;
+   :earliest-date -50 ;
+   :latest-date 250 ;
+   :apparent-gender :male ;
+   :height 0.108 ;
+   :material-note "Bronze" ;
+   :identifier-note "Inv. 7458 (Musée d'Archéologie nationale)" ;
+   :note "Exact findspot unknown. From Wikipedia: “The statuette is of a bearded figure sat cross legged with two ram-headed, fish-tailed serpents feeding from a basket in his hands. The horned serpents and holes in the head for antlers identify this as a representation of the Gaulish stag god Cernunnos. One peculiar feature, the presence of small human faces above each ear, has been commented on.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (46.8669 4.1903) ; # Étang-sur-Arroux; found 1840, perhaps at the gué de la Perrière on the Arroux; the museum inventory gives Savigny (Curgy)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:God_of_Etang_sur_Arroux_possible_depiction_of_Cernunnos.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:God_of_%C3%89tang-sur-Arroux_in_profile,_Salomon_Reinach.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:God_of_%C3%89tang-sur-Arroux_back,_Salomon_Reinach.jpg> .
 
 :dendera-zodiac a :group-of-human-figures ;
    rdfs:label "Dendera Zodiac" ;
