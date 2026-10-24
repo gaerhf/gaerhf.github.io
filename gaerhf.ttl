@@ -3785,6 +3785,19 @@
    :representative-latlong-point (9.466 8.385) ; # find-spot: Tsauni tin mine at Jemaa (Jema'a), southern Kaduna State, Nigeria — coordinates approximate the village of Jema'a
    :thumbnail-image <https://brunoclaessens.com/wp-content/uploads/2013/06/Jemaa-head-Nok-Nigeria.jpeg> .
 
+:spear-bow-warrior-arslan-tash a :human-figure ;
+   rdfs:label "Spear and Bow-holding Warrior" ;
+   :described-by <https://www.hittitemonuments.com/arslantas2/> ;
+   :earliest-date -900 ;
+   :latest-date -800 ;
+   :apparent-gender :male ;
+   :height 1.45 ;
+   :material-note "Basalt" ;
+   :note "From Hittite Monuments: “Likewise, a 1.45-meter-high basalt stele that depicts a spear- and bow-holding warrior (Istanbul Ancient Orient Museum) … stylistically [has] been dated to around the 9th century.”" ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (36.848611 38.407778) ; # Arslan Tash (ancient Hadattu); Wikidata Q1254502 gives 36.849 38.409
+   :thumbnail-image <https://www.hittitemonuments.com/arslantas2/arslan-tas01.jpg> .
+
 :funerary-jar-figures-boat a :group-of-human-figures ;
    rdfs:label "Funerary Jar with Two Figures in Boat" ;
    :described-by <https://en.wikipedia.org/wiki/Manunggul_Jar> ;
@@ -3845,6 +3858,20 @@
    :representative-latlong-point (37.763889 38.277778) ; # Adıyaman (proxy); stele in the Adıyaman Museum, provenance unknown
    :thumbnail-image <https://www.hittitemonuments.com/adiyaman/adiyaman02.jpg> ,
       <https://www.hittitemonuments.com/adiyaman/adiyaman01.jpg> .
+
+:andaval-stele a :human-figure ;
+   rdfs:label "Andaval Stele" ;
+   :described-by <https://www.hittitemonuments.com/andaval/> ,
+      <https://de.wikipedia.org/wiki/Stele_von_Andaval> ;
+   :earliest-date -825 ;
+   :latest-date -775 ;
+   :apparent-gender :male ;
+   :material-note "Basalt" ;
+   :note "From Hittite Monuments: “It is a part of a stele with a relief and four visible lines of an inscription. It was first reported in 1890 by Ramsey, who had seen it built into the floor of a church in Andaval (now Aktaş) village about 9 km. northeast of Niğde. … The inscription names ‘Saruwani, the ruler, the lord of the city Nahitiya’ and mentions herds of horses.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (38.01875 34.740889) ; # Andaval Church, Aktaş, Niğde (Wikidata Q118869725), where the stele was found reused; now in the Museum of Anatolian Civilizations, Ankara
+   :thumbnail-image <https://www.hittitemonuments.com/andaval/andaval03.jpg> ,
+      <https://www.hittitemonuments.com/andaval/andaval02.jpg> .
 
 :gold-cup-hasanlu a :group-of-human-figures ;
    rdfs:label "Gold Cup from Hasanlu" ;
@@ -3950,6 +3977,25 @@
 #    :latest-date -550 .
 
 # -712 calcite and bronze sculpture from circa 712–525 BCE in the Brooklyn Museum. https://www.brooklynmuseum.org/objects/4035
+
+:west-gate-orthostats-arslan-tash a :group-of-human-figures ;
+   rdfs:label "West Gate Orthostats" ;
+   :described-by <https://www.hittitemonuments.com/arslantas2/> ;
+   :earliest-date -800 ;
+   :latest-date -700 ;
+   :apparent-gender :male ;
+   :material-note "Basalt" ;
+   :note "From Hittite Monuments: “Numerous orthostats and three pairs of portal lions that once decorated the city gates and temple entrances mainly date to the Assyrian period in the 8th century, although they display the north Syrian workmanship.”" ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (36.848611 38.407778) ; # Arslan Tash, West Gate (ancient Hadattu); slabs now in Istanbul, Aleppo and the Louvre
+   :thumbnail-image <https://www.hittitemonuments.com/arslantas2/arslan-tas16.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas17.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas18.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas19.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas20.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas21.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas22.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas23.jpg> .
 
 :roos-carr-figures a :group-of-human-figures ;
    rdfs:label "Roos Carr Figures" ;
