@@ -4314,6 +4314,21 @@
    :representative-latlong-point (37.6502 24.02455) ; # Temple of Poseidon, Sounion (find-spot), from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_di_kouros,_dall'esterno_del_tempio_di_poseidone_a_sounion,_600_ac_ca.,_n._2720,_01.jpg> .
 
+:seated-man-rider-oxus-treasure a :human-figure ;
+   rdfs:label "Figure of a Seated Man (Rider) from Oxus Treasure" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1931-0408-1> ,
+      <https://en.wikipedia.org/wiki/Oxus_Treasure> ;
+   :earliest-date -600 ;
+   :latest-date -300 ;
+   :apparent-gender :male ;
+   :height 0.076 ;
+   :material-note "Gold" ;
+   :identifier-note "Registration no. 1931,0408.1" ;
+   :note "From British Museum website: “Gold figure of a seated man: wearing a high, stiff cap, trousers and long tunic with edge decoration. He was probably originally holding reins and mounted on a horse.”" ;
+   :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (37.054553 68.281994) ; # Takht-i Kuwad (?), per British Museum
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_man_Oxus_Treasure_BM_ME1931.0408.1.jpg> .
+
 :gorgon-pediment-corfu a :group-of-human-figures ;
    rdfs:label "Gorgon Pediment, Temple of Artemis, Corfu" ;
    :described-by <https://en.wikipedia.org/wiki/Temple_of_Artemis,_Corfu#Pediment_details> ;
@@ -4622,6 +4637,36 @@
    :representative-latlong-point ( 37.054553 68.281994 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Oxus_treasure_statuette.jpg> .
 
+:gold-statuette-bearded-man-1897-1231-2-oxus-treasure a :human-figure ;
+   rdfs:label "Gold Statuette of Bearded Man from Oxus Treasure (1897,1231.2)" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1897-1231-2> ,
+      <https://en.wikipedia.org/wiki/Oxus_Treasure> ;
+   :earliest-date -500 ;
+   :latest-date -400 ;
+   :apparent-gender :male ;
+   :height 0.056 ;
+   :material-note "Gold" ;
+   :identifier-note "Registration no. 1897,1231.2" ;
+   :note "From British Museum website: “Gold statuette of bearded man; cast and chased; thin face with small straight nose, hair cut short across the forehead; wearing a high stiff hood-like cap, the sides of which cover the ears, a tail-like end and a broad band crossing the chin under the lower lip leaving the moustache visible but covering the presumed beard; also wearing a girded tunic reaching to the knees and over this a long-sleeved coat (candys) with ornamented or furred edges worn as a mantle, the sleeves hanging empty at the sides; left arm beneath the coat but right hand protrudes and holds a bundle of rods (barsom); irregular flat plate base and the feet are not shown.”" ;
+   :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (37.054553 68.281994) ; # Takht-i Kuwad (?), per British Museum
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gold_statuettes_from_the_Oxus_Treasure_by_Nickmard_Khoey.jpg> .
+
+:gold-statuette-bearded-man-1897-1231-2-a-oxus-treasure a :human-figure ;
+   rdfs:label "Gold Statuette of Bearded Man from Oxus Treasure (1897,1231.2.a)" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1897-1231-2-a> ,
+      <https://en.wikipedia.org/wiki/Oxus_Treasure> ;
+   :earliest-date -500 ;
+   :latest-date -400 ;
+   :apparent-gender :male ;
+   :height 0.053 ;
+   :material-note "Gold" ;
+   :identifier-note "Registration no. 1897,1231.2.a" ;
+   :note "From British Museum website: “Gold statuette of bearded man: the figure wears a high, stiff cap, tunic and embroidered coat with empty sleeves (called a ‘kandys’) holding a bundle of rods (called a ‘barsom’).”" ;
+   :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (37.054553 68.281994) ; # Takht-i Kuwad (?), per British Museum
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gold_statuettes_from_the_Oxus_Treasure_by_Nickmard_Khoey.jpg> .
+
 :pfalzfeld-obelisk a :group-of-human-figures ;
    rdfs:label "Pfalzfeld Obelisk" ;
    :described-by <https://en.wikipedia.org/wiki/Pfalzfeld_obelisk> ,
@@ -4653,6 +4698,69 @@
    :in-modern-country-note "Tajikistan" ;
    :representative-latlong-point (37.054553 68.281994) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Chopped_gold_pieces_from_the_Oxus_Treasure_by_Nickmard_Khoey213.jpg> .
+
+:chariot-model-oxus-treasure a :group-of-human-figures ;
+   rdfs:label "Chariot Model from Oxus Treasure" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1897-1231-7> ,
+      <https://en.wikipedia.org/wiki/Oxus_Treasure> ,
+      <https://artsandculture.google.com/asset/oxus-chariot-model/tQEs3NjQRN6N_Q> ;
+   :earliest-date -500 ;
+   :latest-date -300 ;
+   :apparent-gender :male ;
+   :height 0.075 ;
+   :material-note "Gold" ;
+   :identifier-note "Registration no. 1897,1231.7" ;
+   :note "From British Museum website: “Model of gold chariot drawn by four horses abreast … A seat, in the form of a narrow strip of gold, runs from the front to back of the interior. On this is seated the principal figure. He wears a long robe reaching to the ankles, the sleeves of which appear to be empty like those of the ‘kandys’. On his head is a hood or cap, around the front of which is a flat strip of gold, resembling a fillet, with the ends projecting above the forehead, and around his neck is a gold wire torc. The driver wears a similar cap without a fillet, a short girded tunic and a wire torc; his legs are also formed of wires. The two human figures are fixed to the chariot by wires.”" ;
+   :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (37.054553 68.281994) ; # Takht-i Kuwad (?), per British Museum
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:British_Museum_(2931869761).jpg> .
+
+:gold-hollow-head-oxus-treasure a :human-figure ;
+   rdfs:label "Gold Hollow Head from Oxus Treasure" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1897-1231-5> ,
+      <https://en.wikipedia.org/wiki/Oxus_Treasure> ,
+      <https://artsandculture.google.com/asset/gold-head-from-the-oxus-treasure/vwFYQfjYYZEjBA> ;
+   :earliest-date -500 ;
+   :latest-date -300 ;
+   :apparent-gender :male ;
+   :height 0.113 ;
+   :material-note "Gold" ;
+   :identifier-note "Registration no. 1897,1231.5" ;
+   :note "From British Museum website: “Large hollow gold head of a beardless man made from a single piece of hammered sheet; slightly aquiline nose with prominent superciliary ridges; eyes wide open, the pupils being represented by punched circles; pierced ear lobes, and in one the remains of a plug with a small hook at the end which was evidently intended to support an earring; the hair is represented by close-set wavy lines radiating from the centre; the back of the neck is damaged by a long, almost vertical, cut. … Possibly originally fixed onto the top of a staff.”" ;
+   :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (37.054553 68.281994) ; # Takht-i Kuwad (?), per British Museum
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gold_Heads_from_the_Oxus_treasure_(9080184502).jpg> .
+
+:small-hollow-head-oxus-treasure a :human-figure ;
+   rdfs:label "Small Hollow Head from Oxus Treasure" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1897-1231-6> ,
+      <https://en.wikipedia.org/wiki/Oxus_Treasure> ;
+   :earliest-date -500 ;
+   :latest-date -300 ;
+   :apparent-gender :male ;
+   :height 0.025 ;
+   :material-note "Gold" ;
+   :identifier-note "Registration no. 1897,1231.6" ;
+   :note "From British Museum website: “Small hollow gold human head; hammered from sheet; representing a beardless man with a broad face and fine features; the hair is cut straight across the forehead and is long at the back; the top and back have close rows of short, punched, vertical lines; on the crown of the head is a small circular depression pierced with eight holes in a rosette-like arrangement; there are three slots, one above each ear and one at the back of the head; possibly the stopper for a flask.”" ;
+   :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (37.054553 68.281994) ; # Takht-i Kuwad (?), per British Museum
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gold_Heads_from_the_Oxus_treasure_(9080184502).jpg> .
+
+:silver-statuette-bearded-man-oxus-treasure a :human-figure ;
+   rdfs:label "Silver Statuette of Bearded Man from Oxus Treasure" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1897-1231-1> ,
+      <https://en.wikipedia.org/wiki/Oxus_Treasure> ,
+      <https://artsandculture.google.com/asset/cast-silver-statuette-of-a-bearded-man-from-the-oxus-treasure/ZAECYqgWDSjZWg> ;
+   :earliest-date -500 ;
+   :latest-date -300 ;
+   :apparent-gender :male ;
+   :height 0.145 ;
+   :material-note "Silver, gold" ;
+   :identifier-note "Registration no. 1897,1231.1" ;
+   :note "From British Museum website: “Cast and chased silver statuette; a bearded man in Persian costume standing with his right arm hanging beside his side and holding in his left hand a bundle of rods (barsom) in front of his chest; long narrow beard with whiskers and moustache; heavy eyebrows, large eyes and regular nose; wears a short jacket with close sleeves, gilded in front, and at the back ornamented with a vandyked band in cross-hatching; a skirt of many folds falls to his feet and diverges from a vertical raised median band which is decorated with herringbone and gilded; wears a low cylindrical headdress with a flat top covering the ears and bound with a raised fillet knotted at the back where the ends hang down; around the top is a flat band engraved with crenellations; below the headdress the long hair forms a large roll, projecting on each side of the face, and conventionally decorated behind with dotted circles; both feet are pierced at the instep.”" ;
+   :in-modern-country-note "Tajikistan" ;
+   :representative-latlong-point (37.054553 68.281994) ; # Takht-i Kuwad (?), per British Museum
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Male_statuette_Oxus_Treasure_BM_ME1897.1231.1.jpg> .
 
 :lihyanite-colossal-statue a :human-figure ;
    rdfs:label "Lihyanite Colossal Statue" ;
