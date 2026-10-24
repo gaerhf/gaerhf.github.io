@@ -3434,6 +3434,36 @@
    :representative-latlong-point (39.115278 -5.745833) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Estela_de_Magacela_(29350234441).jpg> .
 
+:storm-god-temple-orthostats-aleppo a :group-of-human-figures ;
+   rdfs:label "Temple of the Storm God Orthostats" ;
+   :described-by <https://www.hittitemonuments.com/aleppo/> ,
+      <https://en.wikipedia.org/wiki/Citadel_of_Aleppo> ;
+   :earliest-date -1100 ;
+   :latest-date -900 ;
+   :apparent-gender :male ;
+   :material-note "Limestone" ;
+   :note "From Hittite Monuments: “Aleppo survived the attacks of the Sea Peoples as a Neo-Hittite city-state beyond 1200 BCE. Excavations in the Aleppo citadel revealed remains of a Storm-god temple with multiple orthostats that date to the post-Empire period, possibly around the 11th to 10th century BCE. The city came under Assyrian rule in the 9th century BCE.”" ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (36.199167 37.1625) ; # Citadel of Aleppo (Wikidata Q206231)
+   :thumbnail-image <https://www.hittitemonuments.com/aleppo/aleppo17.jpg> ,
+      <https://www.hittitemonuments.com/aleppo/aleppo06.jpg> ,
+      <https://www.hittitemonuments.com/aleppo/aleppo18.jpg> .
+
+:king-taita-relief-aleppo-6 a :human-figure ;
+   rdfs:label "King Taita’s Inscription (Aleppo 6)" ;
+   :described-by <https://www.hittitemonuments.com/aleppo/aleppo22.htm> ,
+      <https://en.wikipedia.org/wiki/Palistin> ;
+   :earliest-date -1100 ;
+   :latest-date -1000 ;
+   :apparent-gender :male ;
+   :height 2.0 ;
+   :material-note "Black basalt (relief); inscription continues on adjoining limestone slab" ;
+   :note "From Hittite Monuments: “During the 2003 season of the excavations at the Aleppo citadel, the orthostats of the eastern wall of the cella were uncovered in situ. Among them is a relief of King Taita of Palistin carved on a black basalt slab that stands almost 2 meters tall. The king is shown facing a relief of the Storm God to his right. There is an 11-line incised Hieroglyphic Luwian inscription (ALEPPO 6) that starts on the flat space above the king's head and continues on the limestone slab to the right. The inscription identifies that male figure in the fist person as ‘King Taita, the Hero, Palistinean King’ and instructs the visitors to make offerings to the Storm God of Aleppo.”" ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (36.199167 37.1625) ; # Citadel of Aleppo, Storm-God temple cella, in situ (Wikidata Q206231)
+   :thumbnail-image <https://www.hittitemonuments.com/aleppo/aleppo22.jpg> ,
+      <https://www.hittitemonuments.com/aleppo/aleppo22b.jpg> .
+
 :clamshell-carved-face a :human-figure ;
    rdfs:label "Clamshell with Carved Face" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Human_figurine_number_1,_from_Zhouyuan_in_Fufeng._Western_Zhou_palace_complex_(1045–771_BCE)._Baoji_Zhouyuan_Museum.jpg> ;
@@ -3605,6 +3635,34 @@
    :art-historical-culture-or-tradition :dong-son-culture ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Bronze_Lamp_in_the_Shape_of_a_Kneeling_Man_(Original).jpg> .
 
+:storm-god-stele-babylon-1 a :human-figure ;
+   rdfs:label "Storm-god Stele (Babylon 1)" ;
+   :described-by <https://www.hittitemonuments.com/aleppo/aleppo13.htm> ;
+   :earliest-date -1000 ;
+   :latest-date -800 ;
+   :apparent-gender :male ;
+   :height 1.28 ;
+   :note "From Hittite Monuments: “The stele was excavated in Babylon at the palace complex of Nebuchadnezzar II in 1899. … On the front is a relief of the Storm-god in a typical pose holding an axe in one hand and a symbol of lightning in the other.”" ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (32.5425 44.421111) ; # Babylon, findspot (Wikidata Q5684); probably made for the Storm-God temple at Aleppo; now in the Istanbul Archaeology Museum
+   :thumbnail-image <https://www.hittitemonuments.com/aleppo/aleppo13.jpg> ,
+      <https://www.hittitemonuments.com/aleppo/aleppo13c.jpg> ,
+      <https://www.hittitemonuments.com/aleppo/aleppo13d.jpg> .
+
+:adiyaman-2-stele a :human-figure ;
+   rdfs:label "Adiyaman 2" ;
+   :described-by <https://www.hittitemonuments.com/adiyaman/> ;
+   :earliest-date -1000 ;
+   :latest-date -900 ;
+   :apparent-gender :male ;
+   :height 0.72 ;
+   :material-note "Limestone" ;
+   :note "Findspot unknown. From Hittite Monuments: “It shows the Storm-God in a typical pose with an axe in his raised hand. With his short tunic, pointy shoes, and horned pointy hat, he displays an older style, and a date in the 10th century has been suggested. On the right side of the stele is a partially preserved 4-line Luwian inscription, which is a dedication to the Storm-god and the signature of the scribe.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.763889 38.277778) ; # Adıyaman (proxy); stele in the Adıyaman Museum, provenance unknown
+   :thumbnail-image <https://www.hittitemonuments.com/adiyaman/adiyaman05.jpg> ,
+      <https://www.hittitemonuments.com/adiyaman/adiyaman04.jpg> .
+
 :giants-of-mont-e-prama a :group-of-human-figures ;
    rdfs:label "Giants of Mont'e Prama, Sardinia" ;
    :described-by <https://en.wikipedia.org/wiki/Giants_of_Mont%27e_Prama>,
@@ -3774,6 +3832,20 @@
 
 # -800 - -700 https://en.wikipedia.org/wiki/Melqart_stele
 
+:adiyaman-1-stele a :human-figure ;
+   rdfs:label "Adiyaman 1" ;
+   :described-by <https://www.hittitemonuments.com/adiyaman/> ;
+   :earliest-date -825 ;
+   :latest-date -750 ;
+   :apparent-gender :male ;
+   :height 1.0 ;
+   :material-note "Limestone" ;
+   :note "Findspot unknown. From Hittite Monuments: “The limestone stele fragment shows the Storm-God standing on a bull. Only the lower left quarter of the stele has survived. The present fragment is about 1 meter in height (including the tenon), with about 30 cm in width and 20 cm in thickness. The side and back of the stele have partially preserved 4 lines of Hieroglyphic Luwian inscription about the dedication to the Storm God and protective curses against any damage. There is no information about its find place.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.763889 38.277778) ; # Adıyaman (proxy); stele in the Adıyaman Museum, provenance unknown
+   :thumbnail-image <https://www.hittitemonuments.com/adiyaman/adiyaman02.jpg> ,
+      <https://www.hittitemonuments.com/adiyaman/adiyaman01.jpg> .
+
 :gold-cup-hasanlu a :group-of-human-figures ;
    rdfs:label "Gold Cup from Hasanlu" ;
    :described-by <https://en.wikipedia.org/wiki/Golden_bowl_of_Hasanlu> ;
@@ -3900,6 +3972,20 @@
    :note "From Wikipedia: “The İvriz monuments are a group of Hittite monuments found in south-central Anatolia, located in the town of Aydınkent, formerly called İvriz ...” The relief shows King Warpalawas “standing on a stone platform with his hands raised in a gesture of greeting or worship”; “opposite him at left stands the god Tarhunzas, who is depicted as much larger,” holding “ripe stalks of wheat and grape clusters.” It measures 4.2 by 2.4 m and dates to the second half of the 8th century BC." ;
    :representative-latlong-point (37.409722 34.1725) ; # ll for İvriz relief, Aydınkent (from Wikipedia)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ivriz_Neo-Hittite_relief_detail_(1993).jpg> .
+
+:aksaray-stele a :human-figure ;
+   rdfs:label "Aksaray Stele" ;
+   :described-by <https://www.hittitemonuments.com/aksaray/> ;
+   :earliest-date -750 ;
+   :latest-date -700 ;
+   :apparent-gender :male ;
+   :height 0.88 ;
+   :material-note "Limestone" ;
+   :note "From Hittite Monuments: “It is the bottom part of a stele with a relief of Storm God on the front face and the last 5 lines of a Hieroglyphic Luwian inscription on the back and the sides. The last line continues to the front of the stele, forming a line below the god relief. … It was found during the excavations for an office building construction in Aksaray in 1976. … Kiyakiya is thought to be the same person known as Kiakki in Assyrian sources, who was deposed by Assyrian King Sargon II in 718 BCE. Thus, the stele is dated to the end of the 8th century BCE.”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (38.374167 34.028889) ; # Aksaray; found during building construction in the town in 1976
+   :thumbnail-image <https://www.hittitemonuments.com/aksaray/aksaray03.jpg> ,
+      <https://www.hittitemonuments.com/aksaray/aksaray02.jpg> .
 
 :standing-figure-cadiz a :human-figure ;
    rdfs:label "Standing Figure from Cadiz" ;
