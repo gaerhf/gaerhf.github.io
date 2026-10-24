@@ -3156,6 +3156,7 @@
    :earliest-date -1300 ;
    :latest-date -800 ;
    :in-modern-country-note "Mexico" ;
+   :note "From Wikipedia: “The sculpture depicts a man turning his body in an almost perfect circle so that his feet are placed on either side of his head. His hands also curl upward just below his feet. The face of this acrobat is expressive, with a long, hooked nose, almond-shaped eyes, slightly half-open mouth and droopy ears.”" ;
    :art-historical-culture-or-tradition :tlatico-culture ;
    :representative-latlong-point (19.5 -99.25) ; # Tlatilco, Mexico
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Acróbata_de_Tlatilco.JPG> .
