@@ -8083,6 +8083,32 @@
 
 # 600 - 900 https://www.metmuseum.org/art/collection/search/309503
 
+:sancai-camel-musicians-singer-shaanxi a :group-of-human-figures ;
+   rdfs:label "Sancai Camel with Musicians and Singer" ;
+   :described-by <https://en.sxhm.com/en/new/treasure/detail/18046.html> ;
+   :earliest-date 618 ;
+   :latest-date 907 ;
+   :apparent-gender :male , :female ;
+   :height 0.58 ;
+   :material-note "Pottery, three-color (sancai) glaze" ;
+   :note "From Shaanxi History Museum: “This figurine presents a romantic scene of a travelling musical band on camel back. The camel stands on a rectangular base, grunting to the sky. A musical band is on its back where seven sitting male musicians dressed in Tang costumes are playing music with various Hu or exotic instruments while a standing lady is singing in the middle.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.2557 108.8677) ; # Zhongbaocun, western suburb of Xi'an (museum: found 1959)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tri-colored_Camel_Carrying_Musicians_on_the_Back_(8660190403).jpg> .
+
+:sancai-camel-musicians-dancer-xianyu-tinghai a :group-of-human-figures ;
+   rdfs:label "Sancai Camel with Musicians and Dancer" ;
+   :described-by <https://www.chnmuseum.cn/zp/zpml/kgfjp/202008/t20200824_247230.shtml> ;
+   :earliest-date 618 ;
+   :latest-date 723 ;
+   :apparent-gender :male ;
+   :height 0.584 ;
+   :material-note "Pottery, three-color (sancai) glaze" ;
+   :note "Translated from the National Museum of China website: “The camel stands with its head raised, carrying five adult men, Han and Hu (non-Han). In the middle a Hu man is dancing, while the other four sit around him playing music. … The pottery figure of a camel carrying musicians probably represents an acrobatic act from the ‘hundred entertainments’ of Chang’an.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.2726 108.8445) ; # Tomb of Xianyu Tinghai, Xi'an (museum: excavated 1957)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Polychrome_glazed_tomb_figurine_of_a_troupe_of_musicians_on_a_camel,_NMC.jpg> .
+
 :coin-chach-7th-century a :human-figure ;
    rdfs:label "Coin of Chach, e. 7th Century CE" ;
    :described-by <https://en.wikipedia.org/wiki/Tashkent#History_as_Chach> ;
@@ -8140,6 +8166,20 @@
    :in-modern-country-note "China" ;
    :representative-latlong-point (40.037222 94.804167) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Harvard_Art_Museums_Tang_Dynasty_Kneeling_Attendant_Bodhisattva_哈佛美术馆_莫高窟唐代供养菩萨像.jpg> .
+
+:chiik-naab-murals-calakmul a :group-of-human-figures ;
+   rdfs:label "Chiik Naab Murals" ;
+   :described-by <https://en.wikipedia.org/wiki/Chiik_Naab_murals> ,
+      <https://whc.unesco.org/en/activities/685/> ;
+   :earliest-date 650 ;
+   :latest-date 700 ;
+   :apparent-gender :female , :male ;
+   :height 5 ;
+   :material-note "Fresco" ;
+   :note "From UNESCO: “The structure has a base of 12 metres in width and 5 metres in height and has extraordinary mural imagery with scenes of daily life, this being of particular importance as it is one of the few pictorial representations of the Mayan world in which there are no religious, ceremonial or political scenes.”" ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (18.105392 -89.810828) ; # Calakmul, Chiik Naab acropolis, Structure I substructure (Wikidata Q272771: 18.105 -89.8106)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Calakmul_Fresken.JPG> .
 
 :rinnegan-crucifixion-plaque a :group-of-human-figures ;
    rdfs:label "Rinnegan Crucifixion Plaque" ;
