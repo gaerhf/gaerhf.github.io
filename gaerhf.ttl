@@ -778,6 +778,20 @@
    :representative-latlong-point (43.727778 22.582778) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Magura_-_drawings.jpg> .
 
+:northern-running-figures-red-lily-lagoon a :group-of-human-figures ;
+   rdfs:label "Northern Running Figures, Red Lily Lagoon (Red Lily 32B, Panel 6)" ;
+   :described-by <https://doi.org/10.1016/j.jasrep.2016.11.016> ,
+      <https://researchportalplus.anu.edu.au/en/publications/radiocarbon-age-constraints-for-a-pleistoceneholocene-transition-/> ,
+      <https://www.sci.news/archaeology/radiocarbon-dates-australian-aboriginal-rock-art-04464.html> ;
+   :earliest-date -10000 ;
+   :latest-date -7100 ;
+   :apparent-gender :male ;
+   :material-note "Pigment (red, orange, white, yellow) on sandstone; dated by calcium-oxalate mineral crust overlying the paint" ;
+   :note "From Jones et al. 2017: “NRF styled art predominately depicts human figures. The motifs are usually shown in exaggerated movement, and are typified by elongated s-shaped bodies with legs commonly spread wide, as if running. While female gendered motifs do exist, male gender dominates the human depictions. … The results firmly place the NRF art style in the early Holocene, with a minimum age for the art style of c. 9400 years ago.”" ;
+   :in-modern-country-note "Australia" ;
+   :representative-latlong-point (-12.3978 132.9961) ; # Red Lily Lagoon, c. 5 km NE of Cahills Crossing (Jones et al. 2017); Wikidata Q137212986
+   :thumbnail-image <https://cdn.sci.news/images/2016/12/image_4464-Northern-Running-Figures.jpg> .
+
 # -10000?? https://en.wikipedia.org/wiki/El_Abra
 
 :gilgal-figurine a :human-figure ;
