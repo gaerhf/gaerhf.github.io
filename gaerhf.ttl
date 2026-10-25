@@ -6131,6 +6131,20 @@
    :representative-latlong-point (26.394639 83.838056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kakandi.jpg> .
 
+:saptarishi-tila-female-statue a :human-figure ;
+   rdfs:label "Saptarishi Tila Statue" ;
+   :described-by <https://en.wikipedia.org/wiki/Saptarishi_Tila_statue> ;
+   :earliest-date 1 ;
+   :latest-date 200 ;
+   :apparent-gender :female ;
+   :material-note "Blue schist" ;
+   :identifier-note "Acc. no. F-42 (Government Museum, Mathura)" ;
+   :note "From Wikipedia: “The Saptarishi Tila statue, also called the Kambojika statue, is a statue of a woman found in the Saptarishi mound (‘Saptarishi Tila’) in Mathura. The statue is life-size … The statue wears a sleeved blouse, a full skirt, and a torque and necklace like those of the Kamboj Bodhisattvas. … The statue is an example of the Greco-Buddhist art of Gandhara.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (27.4925 77.673611) ; # Mathura; Saptarishi mound, findspot of the Mathura lion capital (Wikipedia gives only 27°36′N 77°39′E)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_Statue_Probably_Representing_Kambojika_the_Chief_Queen_of_Mahakshatrapa_Rajula_-_Saptarishi_Mound_-_Circa_1st_Century_CE_-_ACCN_F-42_-_Government_Museum_-_Mathura_2013-02-24_5956.JPG> ,
+      <https://commons.wikimedia.org/wiki/File:Lady_back_Mathura_Museum.jpg> .
+
 :figurine-temple-foret-halatte-belly a :human-figure ;
    rdfs:label "Figurine from Temple of forêt d’Halatte with Prominent Belly" ;
    :described-by <https://commons.wikimedia.org/wiki/File:Ex-voto_gallo-romain_Halatte_070908_05.jpg> ,
