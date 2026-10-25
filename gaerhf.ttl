@@ -4545,10 +4545,11 @@
 
 :euphronios-krater a :group-of-human-figures ;
    rdfs:label "Euphronios Krater" ;
-   :described-by <https://en.wikipedia.org/wiki/Euphronios_Krater> ;
+   :described-by <https://en.wikipedia.org/wiki/Euphronios_Krater> , 
+      <https://smarthistory.org/euphronios-krater/> ;
    :approximate-date -520 ;
    :in-modern-country-note "Made in Greece, found in Italy" ;
-   :representative-latlong-point (37.984167 23.728056) ; # Athens
+   :representative-latlong-point (42.007416 12.103943) ; # Cerveteri
    :art-historical-culture-or-tradition :archaic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Euphronios_krater_side_A_MET_L.2006.10.jpg> .
 
@@ -5410,6 +5411,20 @@
    :representative-latlong-point (42.916667 10.533333) ; # Piombino (Wikipedia); found 1832 in the sea off the harbor
    :thumbnail-image <https://www.getty.edu/publications/artistryinbronze/assets/img/figures/fig_42.01_Mille-Descamps.jpg> ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Apolo_de_Piombino_-_Louvre.jpg> .
+
+:portrait-head-man-manganello-caere a :human-figure ;
+   rdfs:label "Portrait Head of a Man from the Manganello Sanctuary, Caere" ;
+   :described-by <https://commons.wikimedia.org/wiki/File:Portrait_head_of_a_man,_Caere,_Manganello_temple,_late_2nd-early_1st_century_BC,_terracotta,_Villa_Giulia_-_The_Etruscans_exhibition_-_California_Palace_of_the_Legion_of_Honor_-_San_Francisco,_CA_-_DSC09579.jpg> ,
+      <https://www.flickr.com/photos/125386285@N02/54214226885/> ;
+   :earliest-date -125 ;
+   :latest-date -75 ;
+   :apparent-gender :male ;
+   :material-note "Polychrome terracotta, mold-made and hand-finished" ;
+   :identifier-note "Inv. 56513 (Museo Nazionale Etrusco di Villa Giulia)" ;
+   :note "From Flickr: “While initiated from a workshop press-mold, the facial features were heavily hand-modeled to achieve an intense, personalized verism: a high, deeply wrinkled forehead, an asymmetrical aquiline nose, pronounced cheekbones, and prominent ears. … The head was recovered from the extra-urban votive deposit of the Manganello sanctuary site, located along the tufa cliffs of ancient Cerveteri (Caere).”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (42.0075 12.105) ; # Cerveteri (Wikidata Q242505), proxy for the Manganello sanctuary (Wikidata Q57080522 has no coordinates)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Portrait_head_of_a_man,_Caere,_Manganello_temple,_late_2nd-early_1st_century_BC,_terracotta,_Villa_Giulia_-_The_Etruscans_exhibition_-_California_Palace_of_the_Legion_of_Honor_-_San_Francisco,_CA_-_DSC09579.jpg> .
 
 :funeray-masks-oglakhty a :group-of-human-figures ;
    rdfs:label "Funerary Masks from Oglakhty" ;
