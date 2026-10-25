@@ -5170,6 +5170,21 @@
    :representative-latlong-point (37.098889 68.285) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Head_of_Bactrian_ruler_(Satrap),_Temple_of_the_Oxus,_Takht-i-Sangin,_3rd-2nd_century_BC.jpg> .
 
+:ombra-san-gimignano a :human-figure ;
+   rdfs:label "Ombra di San Gimignano (Hinthial)" ;
+   :described-by <https://it.wikipedia.org/wiki/Ombra_di_San_Gimignano> ,
+      <https://artepiu.info/bronzetto-votivo-etrusco-san-gimignano/> ;
+   :earliest-date -300 ;
+   :latest-date -250 ;
+   :apparent-gender :male ;
+   :height 0.646 ;
+   :material-note "Bronze, cast" ;
+   :identifier-note "Inv. SGTC.1 (Museo archeologico, San Gimignano)" ;
+   :note "Translated from Italian Wikipedia: “The Ombra di San Gimignano is an Etruscan votive statuette in bronze, found in the votive deposit of the Torraccia di Chiusi, in the territory of San Gimignano … It belongs to the class of elongated bronzes, of which it is the tallest known example, and for this reason it has been compared to the Ombra della sera of Volterra … The male figure is standing. Under the toga he wears no tunic, so that the right shoulder and arm and much of the chest remain bare … In his right hand he holds a patera ombelicata.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (43.434665 11.063792) ; # Torraccia di Chiusi, San Gimignano (OpenStreetMap); votive deposit, found 2010
+   :thumbnail-image <https://italics.art/wp-content/uploads/2022/01/Hinthial-6_Low-683x1024.jpg> .
+
 :lohanipur-torso a :human-figure ;
    rdfs:label "Lohanipur Torso" ;
    :described-by <https://en.wikipedia.org/wiki/Lohanipur_torso> ;
