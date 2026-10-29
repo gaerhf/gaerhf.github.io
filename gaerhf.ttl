@@ -4618,6 +4618,21 @@
    # :art-historical-culture-or-tradition :archaic-greece ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Panorama_of_the_west_pediment_of_the_temple_of_Aphaia_in_the_Glyptothek_Munich_n1.jpg> .
 
+:kore-head-vulci a :human-figure ;
+   rdfs:label "Marble Kore Head from Vulci" ;
+   :described-by <https://archaeologymag.com/2025/12/greek-marble-kore-head-unearthed-in-vulci/> ,
+      <https://www.finestresullarte.info/archeologia/importante-scoperta-a-vulci-testa-di-kore-in-marmo-greco> ,
+      <https://cultura.gov.it/comunicato/28422> ;
+   :earliest-date -500 ;
+   :latest-date -475 ;
+   :apparent-gender :female ;
+   :material-note "Marble, traces of polychromy" ;
+   :note "From Archaeology News Online Magazine: “Stylistic study indicates that the piece belongs to an Attic workshop and dates from the early 5th century BCE. Comparable examples are known from the Athenian Acropolis, making the Vulci kore a striking outlier geographically. The sculpture depicts a young woman with a detailed hairstyle and a very finely carved diadem, and shows traces of original paint, which offer rare evidence of ancient polychromy on marble sculpture.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (42.418889 11.631667) ; # Vulci (Wikidata Q931172); found 2025 by the Vulci Cityscape project (Freiburg/Mainz) at the new temple discovered in 2021, near the Tempio Grande
+   :thumbnail-image <https://archaeologymag.com/wp-content/uploads/marble-kore-head-vulci-2.jpg> ,
+      <https://archaeologymag.com/wp-content/uploads/marble-kore-head-vulci-1.jpg> .
+
 :tomb-diver a :group-of-human-figures ;
    rdfs:label "Tomb of the Diver" ;
    :described-by <https://en.wikipedia.org/wiki/Tomb_of_the_Diver> ;
