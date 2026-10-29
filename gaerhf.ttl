@@ -2656,6 +2656,19 @@
    :representative-latlong-point (31.562028 46.177583) ; # ll for Girsu, Iraq
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg> .
 
+:statue-iddi-ilum a :human-figure ;
+   rdfs:label "Statue of Iddi-Ilum" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Iddi-Ilum> ;
+   :approximate-date -2090 ;
+   :apparent-gender :male ;
+   :height 0.415 ;
+   :material-note "Soapstone" ;
+   :identifier-note "AO 19486 (Louvre)" ;
+   :note "From Wikipedia: “The soapstone statue depicts a standing figure in a traditional prayer posture with hands clasped against the chest. The figure's head is lost, but his beard is still visible. The beard is sculpted in eight symmetrical braids that are curled at the end. The statue's right arm and elbow are also lost. / The bottom of the robe bears a cuneiform inscription in Akkadian stating the name and position of the figure, and the deity the statue was dedicated to. The goddess has been interpreted as either Ishtar, or a Sumerian equivalent, Inanna. The inscription, engraved in ten columns, reads: ‘Iddi-Ilum, shakkanakku of Mari, has dedicated his statue to Inanna. Whosoever erases this inscription will have his line wiped out by Inanna.’”" ;
+   :in-modern-country-note "Syria" ;
+   :representative-latlong-point (34.551399 40.888473) ; # Royal Palace of Mari (Tell Hariri), courtyard 148; excavated 1936–37 (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Idi-ilum_Louvre_AO_19486_n01.jpg> .
+
 :bowl-figures-bellapais-vounous a :group-of-human-figures ;
    rdfs:label "Bowl with Figures from Bellapais Vounous" ;
    :described-by <https://www.livescience.com/archaeology/vounous-bowl-a-4-000-year-old-basin-holding-4-miniature-cows-and-18-people-that-was-buried-for-mysterious-reasons-in-a-bronze-age-tomb-in-cyprus> ,
@@ -9764,6 +9777,18 @@
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-13.451387 -76.170803 ) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312640/2085962/main-image> .
+
+:zuccone-donatello a :human-figure ;
+   rdfs:label "Zuccone (Prophet Habakkuk) by Donatello" ;
+   :described-by <https://en.wikipedia.org/wiki/Zuccone> ;
+   :earliest-date 1423 ;
+   :latest-date 1425 ;
+   :apparent-gender :male ;
+   :material-note "Marble" ;
+   :note "From Wikipedia: “It was commissioned for the bell tower of the Cathedral of Florence, Italy and completed between 1423 and 1425. It is also known as the Statue of the Prophet Habakkuk … as many believe it depicts the Old Testament prophet Habakkuk, though Vasari says that it is a portrait (in Biblical garb) of Giovanni di Barduccio Cherichini.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (43.772806 11.255806) ; # Giotto's Campanile, Florence (Wikidata Q1140023), for which it was made; now in the Museo dell'Opera del Duomo
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Zuccone_Donatello_OPA_Florence.jpg> .
 
 :david-donatello a :human-figure ;
    rdfs:label "Bronze David by Donatello" ;
