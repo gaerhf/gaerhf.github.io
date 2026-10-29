@@ -296,7 +296,7 @@
    :region :china ;
    :described-by <https://en.wikipedia.org/wiki/Tang_dynasty> .
 
-:tlatico-culture a :culture ;
+:tlatilco-culture a :culture ;
    rdfs:label "Tlatilco" ;
    :region :central-america ;
    :described-by <https://en.wikipedia.org/wiki/Tlatilco_culture> .
@@ -1095,6 +1095,7 @@
    :described-by <https://www.britishmuseum.org/collection/object/E_2013-2034-4191> ;
    :earliest-date -7500 ;
    :latest-date -4000 ;
+   :note "From British Museum website: “Known as the ‘The Archers Of Tin Aboteka’ this image is 1.8 metres high.”" ;
    :in-modern-country-note "Algeria" ;
    :representative-latlong-point (24.684509 9.693714) ;
    :art-historical-culture-or-tradition :saharan-rock-art ;
@@ -3164,14 +3165,14 @@
    :note "Findspot unknown." ;
    :thumbnail-image <https://media.britishmuseum.org/media/Repository/Documents/2014_10/1_6/b034bae1_724a_4131_855b_a3b700668aa8/mid_00030758_001.jpg> .
 
-:tlatico-so-called-acrobat a :human-figure ;
+:tlatilco-so-called-acrobat a :human-figure ;
    rdfs:label "Tlatilco Acrobat" ;
    :described-by <https://en.wikipedia.org/wiki/Tlatilco_acrobat> ;
    :earliest-date -1300 ;
    :latest-date -800 ;
    :in-modern-country-note "Mexico" ;
    :note "From Wikipedia: “The sculpture depicts a man turning his body in an almost perfect circle so that his feet are placed on either side of his head. His hands also curl upward just below his feet. The face of this acrobat is expressive, with a long, hooked nose, almond-shaped eyes, slightly half-open mouth and droopy ears.”" ;
-   :art-historical-culture-or-tradition :tlatico-culture ;
+   :art-historical-culture-or-tradition :tlatilco-culture ;
    :representative-latlong-point (19.5 -99.25) ; # Tlatilco, Mexico
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Acróbata_de_Tlatilco.JPG> .
 
@@ -3511,13 +3512,13 @@
    :representative-latlong-point (-11 166.25) ; # for santa cruz islands
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2016/12/lapitafragment.jpg> .
 
-:tlatico-figurines a :group-of-human-figures ;
+:tlatilco-figurines a :group-of-human-figures ;
    rdfs:label "Tlatilco Figurines" ;
    :described-by <https://en.wikipedia.org/wiki/Tlatilco_culture> ;
    :earliest-date -1000 ;
    :latest-date -800 ;
    :in-modern-country-note "Mexico" ;
-   :art-historical-culture-or-tradition :tlatico-culture ;
+   :art-historical-culture-or-tradition :tlatilco-culture ;
    :representative-latlong-point (19.5 -99.25) ; # Tlatilco
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tlatilco_culture_figurines.jpg> .
 
