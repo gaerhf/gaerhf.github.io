@@ -3731,6 +3731,21 @@
    :representative-latlong-point (18.4700 -95.4431) ; # Tres Zapotes archaeological site, Veracruz
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tres_Zapotes_Monument_A.jpg> .
 
+:olmec-portrait-mask-arroyo-pesquero a :human-figure ;
+   rdfs:label "Olmec Portrait Mask" ;
+   :described-by <https://collections.mfa.org/objects/36451/portrait-mask> ;
+   :earliest-date -900 ;
+   :latest-date -600 ;
+   :apparent-gender :male ;
+   :height 0.216 ;
+   :material-note "Jadeite with black inclusions" ;
+   :identifier-note "Accession no. 1991.968" ;
+   :note "From Museum of Fine Arts, Boston: “This life-sized jadeite mask is the portrait of an important Olmec figure, perhaps that of a ruler. It may have been a symbol of state authority, and perhaps served as a funerary mask tied to a burial bundle. Originally, the mask was green, but it turned gray when put into a fire as part of a ritual. It is one of twenty-seven life-sized masks found in a freshwater spring in the Río Pesquero where it meets the Gulf of Mexico in southern Veracruz. The spring contained hundreds of greenstone artifacts, many of which had been ritually burned prior to depositing in the water.”" ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (18.0401 -94.1526) ; # Arroyo (Río) Pesquero, Las Choapas area, Veracruz (MFA: "Object Place")
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jade_Olmec_mask-1991.968-IMG_4984.JPG> ,
+      <https://commons.wikimedia.org/wiki/File:Jade_Olmec_mask-1991.968-IMG_4982-white.jpg> .
+
 # :olmec-standing-figure a :human-figure ;
 #    rdfs:label "Jadeite Standing Figure" ;
 #    :described-by <https://www.doaks.org/resources/olmec-art/catalogue/14-standing-figure> ;
@@ -8906,6 +8921,21 @@
    :representative-latlong-point (44.615225 -78.04076) ;
    :thumbnail-image <https://www.pc.gc.ca/apps/dfhd/Resources/Images/Image.aspx?id=92664> .
 
+:manichaean-wall-painting-mik-iii-6918 a :group-of-human-figures ;
+   rdfs:label "Fragment of Manichaean Wall Painting ‘MIK III 6918’" ;
+   :described-by <https://en.wikipedia.org/wiki/Manichaean_wall_painting_MIK_III_6918> ;
+   :earliest-date 901 ;
+   :latest-date 1000 ;
+   :apparent-gender :male , :female ;
+   :height 0.88 ;
+   :material-note "Wall painting" ;
+   :identifier-note "MIK III 6918 (Museum für Asiatische Kunst, Berlin)" ;
+   :note "From Wikipedia: “This mural depicts the worship rituals of the ancient Gaochang Uyghur Manichae community. The leftmost portrait is the largest in the entire painting. It should be the bishop of the local church, that is, the ‘Oriental Bishop’ (Mozhak [Bishop] of the East) … He wears a gorgeously decorated high crown, the most special thing is that the headlight behind his head shows a crescent shape, which looks like a crescent moon and sun wheel pattern as a whole. Behind him are many Manichaean elect and lay believers, both men, and women.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (42.852778 89.529167) ; # Gaochang (Khocho), Turpan, Xinjiang; found by the German Turfan expeditions
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Manichaean_wall_painting_from_Chotcho.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Fragment_of_a_Turpan_Manichaen_Wall_Painting_(MIK_III_6918).jpg> .
+
 :viking-gaming-piece a :human-figure ;
    rdfs:label "Viking Gaming Piece" ;
    :described-by <https://archaeology.org/issues/november-december-2025/artifacts/viking-chess-piece/> ,
@@ -9644,6 +9674,19 @@
    :note "From Wikipedia: “The apse mosaic, the Coronation of the Virgin, is from 1295, signed by the Franciscan friar, Jacopo Torriti.” ... From Visual Museum website: “The pair are dressed in gold, sitting upon a throne in the heavenlies (stars, sun, and moon against dark blue background). Jesus places crown upon Mary; in his left hand a book. Mary's hands are raised in prayer. Throngs of angels on either side with Peter, Paul, and Francis on the left, John the Baptist, John the Evangelist, and Anthony on the right.”" ;
    :representative-latlong-point (41.8975 12.49861111) ; # Santa Maria Maggiore, Rome, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Jacopo_torriti,_coronation_of_the_virgin,_santa_maria_maggiore,_rome.jpg> .
+
+:strakonice-madonna a :group-of-human-figures ;
+   rdfs:label "Strakonice Madonna" ;
+   :described-by <https://en.wikipedia.org/wiki/Strakonice_Madonna> ;
+   :earliest-date 1300 ;
+   :latest-date 1330 ;
+   :apparent-gender :female , :male ;
+   :height 1.84 ;
+   :material-note "Fir wood; head and hand of the Child limewood; remnants of polychromy" ;
+   :note "From Wikipedia: “It is a fully plastic sculpture made of fir wood, hollowed on the backside, with small remnants of polychromy. … The compositional type of the Madonna with an open cloak is derived from French cathedral sculpture (the cathedral portal in Rheims, 1230-1233), from where it spread through the Rhineland and Germany to central Europe. This connection with cathedral sculpture is the basis for the Strakonice Madonna’s clearly arranged and perfectly balanced composition, for the purity and sophistication of its forms as well as for the refinement and cultivated character of its physical gestures. With the compactness of its mass, simplicity and abstract plasticity, the Strakonice Madonna anticipates a new conception of sculpture in the 14th century.”" ;
+   :in-modern-country-note "Czechia" ;
+   :representative-latlong-point (49.261389 13.9025) ; # Strakonice, Johannite commandery (Wikipedia: "comes from the Johannite Commandry in Strakonice")
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Madona_s_d%C4%9Bckem_Strakonick%C3%A1,_Anonym_-_%C4%8Cechy_(kolem_1300-1320),_N%C3%A1rodn%C3%AD_galerie_v_Praze,_inv._%C4%8D._P_677.jpg> .
 
 :life-virgin-cycle-scrovegni a :group-of-human-figures ;
    rdfs:label "Life of the Virgin Cycle, Scrovegni Chapel" ;
