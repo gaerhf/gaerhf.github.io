@@ -9595,6 +9595,22 @@
    :representative-latlong-point (34.68916667 135.83972222) ; # Tōdai-ji, Nara, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Todaiji_Monastery_Hachiman_by_Kaikei_(420).jpg> .
 
+:los-pinchudos a :group-of-human-figures ;
+   rdfs:label "Los Pinchudos" ;
+   :described-by <https://en.wikipedia.org/wiki/Los_Pinchudos> ,
+      <https://www.wmf.org/projects/los-pinchudos-archaeological-site> ;
+   :earliest-date 1201 ;
+   :latest-date 1300 ;
+   :apparent-gender :male ;
+   :material-note "Wooden anthropomorphic sculptures on clay-and-stone tombs with wooden roofs; painted red, yellow, black and white" ;
+   :note "From Wikipedia: “Los Pinchudos is an elaborate Chachapoya tomb complex, perched in a high rock cleft in one of Peru's northern Andean cloud forests. Los Pinchudos is located in Río Abiseo National Park, a natural and cultural World Heritage Site, guarded and closed to all except scientific missions. The clay and stone tombs of the complex have wooden roofs and are painted in red, yellow, black, and white colors. Anthropomorphic carvings featuring prominent phalluses are responsible for giving the site its name.”" ;
+   :in-modern-country-note "Peru" ;
+   :representative-latlong-point (-7.6815845 -77.2864917) ; # Los Pinchudos, Río Abiseo National Park, San Martín (point as supplied; Wikipedia and Wikidata give no coordinates)
+   :thumbnail-image <https://wmf.imgix.net/images/b1_PER-LosPin-fig-det-98.jpg?auto=format,compress&fit=max&w=1500> ,
+      <https://wmf.imgix.net/images/3e_bb.jpg?auto=format,compress&fit=max&w=1500> ,
+      <https://wmf.imgix.net/images/d3_per_lospin_hut_c2000.jpg?auto=format,compress&fit=max&w=1500> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Maqueta_de_Los_Pinchudos.jpg> .
+
 :burke-jizo a :human-figure ;
    rdfs:label "Jizō, Bodhisattva of the Earth Store (Kshitigarbha)" ;
    :described-by <https://en.wikipedia.org/wiki/Burke_Jiz%C5%8D> ,
