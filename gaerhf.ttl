@@ -8427,6 +8427,18 @@
    :representative-latlong-point (34.574444 108.214167) ; # Qianling Mausoleum (Wikipedia); Princess Yongtai's tomb is a satellite tomb within the complex
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Court_Ladies_of_the_Tang.jpg> .
 
+:painting-six-kings-qusayr-amra a :group-of-human-figures ;
+   rdfs:label "Painting of the Six Kings" ;
+   :described-by <https://en.wikipedia.org/wiki/Painting_of_the_Six_Kings> ;
+   :earliest-date 710 ;
+   :latest-date 750 ;
+   :apparent-gender :male ;
+   :material-note "Fresco" ;
+   :note "From Wikipedia: “The Painting of the Six Kings is a fresco found on the wall of Qasr Amra, a desert castle of the Umayyad Caliphate located in modern-day Jordan. It depicts six rulers standing in two rows of three. Four of the six have inscriptions in Arabic and Greek identifying them as the Byzantine emperor, King Roderic of Spain, the Sasanian emperor, and the King of Aksum.”" ;
+   :in-modern-country-note "Jordan" ;
+   :representative-latlong-point (31.801935 36.57663) ; # Qasr Amra, in situ (Wikipedia infobox)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Qusayr_Amra_six_kings_DSCF4936.jpg> .
+
 :leshan-giant-buddha a :human-figure ;
    rdfs:label "Leshan Giant Buddha" ;
    :described-by <https://en.wikipedia.org/wiki/Leshan_Giant_Buddha> ;
