@@ -7049,6 +7049,19 @@
 #    :earliest-date 500 ;
 #    :latest-date 500 .
 
+:buddhagupta-pillar-eran a :human-figure ;
+   rdfs:label "The Buddhagupta pillar at Eran" ;
+   :described-by <https://en.wikipedia.org/wiki/Eran#Pillar> ;
+   :earliest-date 484 ;
+   :latest-date 485 ;
+   :apparent-gender :male ;
+   :height 1.5 ;
+   :material-note "Stone" ;
+   :note "From Wikipedia: “The 43 feet (13 m) high monolith pillar stands on a square platform of 13 feet (4.0 m) side. … On top of the capital is an abacus of 1.5 feet (0.46 m) height, then a cube of 3 feet (0.91 m) and finally 5 feet (1.5 m) double statue of Garuda holding a snake in his hands, with a chakra wheel behind his head. Garuda, the vahana of Vishnu, is depicted as two fused people, sharing the back, each looking over their 180 degree space, one with the temples, the other towards the town. … The Gupta year 165 implies that the pillar was dedicated in 484/485 CE.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (24.093846 78.172695) ; # Eran, Sagar district, Madhya Pradesh (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Eran_Budhagupta_pillar_built_circa_476%E2%80%93495_CE.jpg> .
+
 :lydenburg-heads a :group-of-human-figures ;
    rdfs:label "Lydenburg Heads" ;
    :described-by <https://en.wikipedia.org/wiki/Lydenburg_heads> ,
@@ -8230,6 +8243,19 @@
    :representative-latlong-point (34.2726 108.8445) ; # Tomb of Xianyu Tinghai, Xi'an (museum: excavated 1957)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Polychrome_glazed_tomb_figurine_of_a_troupe_of_musicians_on_a_camel,_NMC.jpg> .
 
+:changsha-ware-ewer-figure a :human-figure ;
+   rdfs:label "Changsha-ware ewer with figure" ;
+   :described-by <https://zh.wikipedia.org/wiki/唐长沙窑青釉褐彩贴花人物纹壶> ;
+   :earliest-date 618 ;
+   :latest-date 907 ;
+   :apparent-gender :female ;
+   :height 0.164 ;
+   :material-note "Pottery (Changsha ware) with green glaze, brown decoration and moulded appliqué" ;
+   :note "Translated from Chinese Wikipedia: “Excavated in 1973 from a well on Siqian Street, Hengyang, Hunan Province, China … now in the Hunan Museum. … A water vessel produced at the Changsha kilns in the Tang dynasty … below the spout and the two lugs are moulded appliqué decorations of a dancing woman, a pointed square pagoda and a standing lion. … The figure, full-bodied and long-necked, with bare chest draped in gauze and wearing tight short trousers, raises the right hand with two fingers extended and holds a ritual implement in the left, dancing the huteng dance on a round mat. The huteng dance originated among the Sogdians of Shi in Central Asia (in present-day Uzbekistan) and was introduced to China in the Sui and Tang dynasties.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (26.9023 112.6111) ; # Siqian Street well, Hengyang, Hunan (findspot); point as supplied
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:%E9%95%BF%E6%B2%99%E7%AA%91%E9%9D%92%E9%87%89%E8%A4%90%E5%BD%A9%E8%B4%B4%E8%8A%B1%E4%BA%BA%E7%89%A9%E7%BA%B9%E5%A3%B6,_2018-09-28.jpg> .
+
 :coin-chach-7th-century a :human-figure ;
    rdfs:label "Coin of Chach, e. 7th Century CE" ;
    :described-by <https://en.wikipedia.org/wiki/Tashkent#History_as_Chach> ;
@@ -8426,6 +8452,18 @@
    :in-modern-country-note "China" ;
    :representative-latlong-point (34.574444 108.214167) ; # Qianling Mausoleum (Wikipedia); Princess Yongtai's tomb is a satellite tomb within the complex
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Court_Ladies_of_the_Tang.jpg> .
+
+:prince-zhanghuai-polo-hunting-murals a :group-of-human-figures ;
+   rdfs:label "Prince Zhanghuai polo and hunting murals" ;
+   :described-by <https://en.wikipedia.org/wiki/Qianling_Mausoleum> ,
+      <https://zh.wikipedia.org/zh-cn/%E5%94%90%E4%B9%BE%E9%99%B5> ;
+   :date 706 ;
+   :apparent-gender :male ;
+   :material-note "Wall painting" ;
+   :note "Translated from Chinese Wikipedia: “In terms of tomb decoration, the tomb of Crown Prince Zhanghuai contains more than 50 groups of murals, covering nearly 400 square metres; the paintings are completely preserved and include works such as the Polo Mural.”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.573158 108.218594) ; # Tomb of Prince Zhanghuai, Qianling, Qian County, Shaanxi; point as supplied (Wikipedia gives no coordinates)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tang_court_playing_Polo.jpg> .
 
 :painting-six-kings-qusayr-amra a :group-of-human-figures ;
    rdfs:label "Painting of the Six Kings" ;
@@ -9040,6 +9078,19 @@
    :representative-latlong-point (38.087321 -111.135686) ;
    :note "Approximate location" ;
    :thumbnail-image <https://www.nps.gov/common/uploads/cropped_image/primary/07C490B0-C60A-35DD-40E539E66DDF3F6F.jpg?width=400&quality=90&mode=crop> .
+
+:emperor-taizong-receiving-tibetan-envoy a :group-of-human-figures ;
+   rdfs:label "Emperor Taizong Receiving the Tibetan Envoy" ;
+   :described-by <https://en.wikipedia.org/wiki/Emperor_Taizong_Receiving_the_Tibetan_Envoy> ;
+   :earliest-date 960 ;
+   :latest-date 1279 ;
+   :apparent-gender :male , :female ;
+   :height 0.385 ;
+   :material-note "Color and ink on silk" ;
+   :note "From Wikipedia: “It depicts a scene in 640 when the Tibetan Empire envoy Gar Tongtsen Yulsung led an embassy to the court of the Emperor Taizong of Tang in Chang'an. … As with other early Chinese paintings, the scroll in Beijing is probably a faithful later copy of Yan Liben's original, perhaps from the Song dynasty …”" ;
+   :in-modern-country-note "China" ;
+   :representative-latlong-point (34.308 108.858) ; # Chang'an (Xi'an), setting of the scene; the Song copy's place of production is unknown; now in the Palace Museum, Beijing
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Emperor_Taizong_Receiving_the_Tibetan_Envoy(Bunian_Tu).jpg> .
 
 :banteay-srei-fight-between-sunda-upasunda a :group-of-human-figures ;
    rdfs:label "Banteay Srei - Fight between Sunda and Upasunda" ;
