@@ -5183,6 +5183,22 @@
    :representative-latlong-point (42.0155 11.9627) ; # Pyrgi (Santa Severa), Temple A; Wikidata Q1724661 gives 42.015226 11.963414
    :thumbnail-image <https://www.museoetru.it/files/opera/2019/244702.jpg> .
 
+:boxer-at-rest a :human-figure ;
+   rdfs:label "Boxer at Rest (Terme Boxer)" ;
+   :described-by <https://en.wikipedia.org/wiki/Boxer_at_Rest> ,
+      <https://www.metmuseum.org/perspectives/the-boxer> ;
+   :earliest-date -330 ;
+   :latest-date -50 ;
+   :apparent-gender :male ;
+   :height 1.28 ;
+   :material-note "Bronze with copper inlays" ;
+   :identifier-note "Inv. 1055 (Museo Nazionale Romano – Palazzo Massimo alle Terme)" ;
+   :note "From Wikipedia: “The statue is a masterpiece of Hellenistic athletic professionalism, with a top-heavy over-muscled torso and scarred and bruised face, penis bound by a kynodesme, cauliflower ears, broken nose, Morton's toe and a mouth suggesting broken teeth. The boxer was also depicted as bearded, which would have been a typical characteristic of ancient boxers.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.901111 12.488333) ; # Quirinal Hill, Rome, near the Baths of Constantine (Wikidata Q588204: 41.89843 12.4879); found 1885
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Boxer_of_Quirinal_(Mys_from_Taranto)_-_Lateral_View.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Thermae_boxer_Massimo_Inv1055_n7.jpg> .
+
 :scultpures-tel-abrak a :group-of-human-figures ;
    rdfs:label "Parthian(?) Sculptures from Tel Abrak" ;
    :described-by <https://en.wikipedia.org/wiki/Tell_Abraq#Archaeology> ,
