@@ -4495,6 +4495,126 @@
    :representative-latlong-point ( 54.024095 13.296299 ) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2022/08/SO22-Artifact-Germany-Bronze-Figurine.jpg> .
 
+:daunian-stele-m065 a :human-figure ;
+   rdfs:label "Daunian Stele M065" ;
+   :described-by <https://dig.ucla.edu/daunia/node/512> ,
+      <https://en.wikipedia.org/wiki/Daunian_stele> ;
+   :earliest-date -725 ;
+   :latest-date -500 ;
+   :apparent-gender :male ;
+   :height 0.9 ;
+   :material-note "Limestone" ;
+   :identifier-note "Museo Nazionale Archeologico di Manfredonia, Inv. 0945-9; Norman M065; Nava 1980a no. 0736" ;
+   :note "From Wikipedia: “Daunian stelae were made from the end of the 8th century BC to the 6th century BC.” From the People of Ancient Daunia stelae database (Norman 2024): scenes “Hunting, Joust”; “hare on hind legs between jousters … deer hunt on back.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.606944 15.895833) ; # Siponto (Wikipedia), proxy: most Manfredonia stelae come from the Siponto plain; exact findspot unknown
+   :thumbnail-image <https://dig.ucla.edu/daunia/sites/default/files/styles/max_650x650/public/2024-06/M65.jpg> .
+
+:daunian-stele-m067 a :human-figure ;
+   rdfs:label "Daunian Stele M067 (‘Rizzoli’ stele)" ;
+   :described-by <https://dig.ucla.edu/daunia/node/515> ,
+      <https://en.wikipedia.org/wiki/Daunian_stele> ;
+   :earliest-date -725 ;
+   :latest-date -500 ;
+   :apparent-gender :male ;
+   :height 1.15 ;
+   :material-note "Limestone" ;
+   :identifier-note "Museo Nazionale Archeologico di Manfredonia, Inv. 0972-974; Norman M067; Nava 1980a no. 0748" ;
+   :note "From Wikipedia: “Daunian stelae were made from the end of the 8th century BC to the 6th century BC.” From the People of Ancient Daunia stelae database (Norman 2024): “The ‘Rizzoli’ stele”; scenes “Weaving, Joust, Procession, Mythological, Pastoral, Martial, Production.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.606944 15.895833) ; # Siponto (Wikipedia), proxy: most Manfredonia stelae come from the Siponto plain; exact findspot unknown
+   :thumbnail-image <https://dig.ucla.edu/daunia/sites/default/files/styles/max_650x650/public/2024-06/M67.jpg> .
+
+:daunian-stele-m145 a :human-figure ;
+   rdfs:label "Daunian Stele M145" ;
+   :described-by <https://dig.ucla.edu/daunia/node/1747> ,
+      <https://en.wikipedia.org/wiki/Daunian_stele> ;
+   :earliest-date -725 ;
+   :latest-date -500 ;
+   :apparent-gender :male ;
+   :height 0.93 ;
+   :material-note "Limestone" ;
+   :identifier-note "Museo Nazionale Archeologico di Manfredonia; Norman M145" ;
+   :note "From Wikipedia: “Daunian stelae were made from the end of the 8th century BC to the 6th century BC.” From the People of Ancient Daunia stelae database (Norman 2024): scene “Hunting”; “from clandestine excavation between Foggia & Manfredonia.” Returned to Manfredonia from Padova in 2014." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.606944 15.895833) ; # Siponto (Wikipedia), proxy; findspot only “between Foggia & Manfredonia”
+   :thumbnail-image <https://dig.ucla.edu/daunia/sites/default/files/styles/max_650x650/public/2024-06/M145.jpg> .
+
+:daunian-stele-f133 a :human-figure ;
+   rdfs:label "Daunian Stele F133" ;
+   :described-by <https://dig.ucla.edu/daunia/node/427> ,
+      <https://en.wikipedia.org/wiki/Daunian_stele> ;
+   :earliest-date -725 ;
+   :latest-date -500 ;
+   :apparent-gender :female ;
+   :height 1.13 ;
+   :material-note "Limestone" ;
+   :identifier-note "Museo Nazionale Archeologico di Manfredonia, Inv. 0235; Norman F133; Nava 1980a no. 0222" ;
+   :note "From Wikipedia: “Daunian stelae were made from the end of the 8th century BC to the 6th century BC.” From the People of Ancient Daunia stelae database (Norman 2024): scenes “Female couple, Procession.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.606944 15.895833) ; # Siponto (Wikipedia), proxy: most Manfredonia stelae come from the Siponto plain; exact findspot unknown
+   :thumbnail-image <https://dig.ucla.edu/daunia/sites/default/files/styles/max_650x650/public/2024-06/F133.jpg> .
+
+:daunian-stele-f297 a :human-figure ;
+   rdfs:label "Daunian Stele F297" ;
+   :described-by <https://dig.ucla.edu/daunia/node/471> ,
+      <https://en.wikipedia.org/wiki/Daunian_stele> ;
+   :earliest-date -725 ;
+   :latest-date -500 ;
+   :apparent-gender :female ;
+   :height 0.95 ;
+   :material-note "Limestone" ;
+   :identifier-note "Museo Nazionale Archeologico di Manfredonia, Inv. 0699-700, 891; Norman F297; Nava 1980a nos. 0585, 0688" ;
+   :note "From Wikipedia: “Daunian stelae were made from the end of the 8th century BC to the 6th century BC.” From the People of Ancient Daunia stelae database (Norman 2024): scenes “Weaving, Procession, Female couple.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.606944 15.895833) ; # Siponto (Wikipedia), proxy: most Manfredonia stelae come from the Siponto plain; exact findspot unknown
+   :thumbnail-image <https://dig.ucla.edu/daunia/sites/default/files/styles/max_650x650/public/2024-06/F297.jpg> .
+
+:daunian-stele-f298 a :human-figure ;
+   rdfs:label "Daunian Stele F298" ;
+   :described-by <https://dig.ucla.edu/daunia/node/472> ,
+      <https://en.wikipedia.org/wiki/Daunian_stele> ;
+   :earliest-date -725 ;
+   :latest-date -500 ;
+   :apparent-gender :female ;
+   :height 0.8 ;
+   :material-note "Limestone" ;
+   :identifier-note "Museo Nazionale Archeologico di Manfredonia, Inv. 0701-0709; Norman F298; Nava 1980a no. 0586" ;
+   :note "From Wikipedia: “Daunian stelae were made from the end of the 8th century BC to the 6th century BC.” From the People of Ancient Daunia stelae database (Norman 2024): scenes “Ritual / cultic, Tripod cauldron, Pastoral.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.606944 15.895833) ; # Siponto (Wikipedia), proxy: most Manfredonia stelae come from the Siponto plain; exact findspot unknown
+   :thumbnail-image <https://dig.ucla.edu/daunia/sites/default/files/styles/max_650x650/public/2024-06/F298.jpg> .
+
+:daunian-stele-f459 a :human-figure ;
+   rdfs:label "Daunian Stele F459" ;
+   :described-by <https://dig.ucla.edu/daunia/node/549> ,
+      <https://en.wikipedia.org/wiki/Daunian_stele> ;
+   :earliest-date -725 ;
+   :latest-date -500 ;
+   :apparent-gender :female ;
+   :height 0.99 ;
+   :material-note "Limestone" ;
+   :identifier-note "Museo Nazionale Archeologico di Manfredonia, Inv. 1207, 1395; Norman F459; Nava 1980a no. 0949" ;
+   :note "From Wikipedia: “Daunian stelae were made from the end of the 8th century BC to the 6th century BC.” From the People of Ancient Daunia stelae database (Norman 2024): scenes “Procession, Farewell.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.606944 15.895833) ; # Siponto (Wikipedia), proxy: most Manfredonia stelae come from the Siponto plain; exact findspot unknown
+   :thumbnail-image <https://dig.ucla.edu/daunia/sites/default/files/styles/max_650x650/public/2024-06/F459.jpg> .
+
+:daunian-stele-f540 a :human-figure ;
+   rdfs:label "Daunian Stele F540" ;
+   :described-by <https://dig.ucla.edu/daunia/node/577> ,
+      <https://en.wikipedia.org/wiki/Daunian_stele> ;
+   :earliest-date -725 ;
+   :latest-date -500 ;
+   :apparent-gender :female ;
+   :height 0.59 ;
+   :material-note "Limestone" ;
+   :identifier-note "Museo Nazionale Archeologico di Manfredonia, Inv. 1430; Norman F540; Nava 1980a no. 1114" ;
+   :note "From Wikipedia: “Daunian stelae were made from the end of the 8th century BC to the 6th century BC.” From the People of Ancient Daunia stelae database (Norman 2024): scenes “Weaving, Procession.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.606944 15.895833) ; # Siponto (Wikipedia), proxy: most Manfredonia stelae come from the Siponto plain; exact findspot unknown
+   :thumbnail-image <https://dig.ucla.edu/daunia/sites/default/files/styles/max_650x650/public/2024-06/F540.jpg> .
+
 :figurine-xanab-chak a :human-figure ;
    rdfs:label "Figurine from Xanab Chak" ;
    :described-by <https://archaeology.org/issues/online/artifacts/maya-ceramic-figurine/> ;
