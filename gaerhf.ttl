@@ -2319,6 +2319,128 @@
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(musée_fenaille,_rodez)_01.jpg> .
 
+:rouergat-statue-menhir-la-prade a :human-figure ;
+   rdfs:label "Statue-menhir de la Prade" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_la_Prade> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :apparent-gender :male ;
+   :height 0.49 ;
+   :material-note "Sandstone" ;
+   :note "Translated from French Wikipedia: “discovered in 1900 near the hamlet of La Prade. It is the upper fragment of a larger statue. … Originally it is a male statue with a face, both arms and hands, a baldric and ‘the object’. At a second stage … ‘the object’ was erased and the right strap of the baldric was modified to represent a three-strand necklace …” Now in the Musée Fenaille, Rodez." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.952463 2.602133) ; # La Prade, Coupiac, Aveyron (French Wikipedia)
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue-menhir_de_La_Prade_au_Mus%C3%A9e_Fenaille_(inv._938.12.2).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Rodez_-_Mus%C3%A9e_Fenaille-_Statue-menhir_de_Coupiac.jpg> .
+
+:rouergat-statue-menhir-la-verriere a :human-figure ;
+   rdfs:label "Statue-menhir de la Verrière" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_la_Verri%C3%A8re> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :apparent-gender :male ;
+   :height 0.99 ;
+   :material-note "Sandstone (Triassic)" ;
+   :note "Translated from French Wikipedia: “discovered in 1925 by M. Arnal near the farm of la Verrière … It is a male statue, extremely stylised, belonging to the group of ‘heretics’ because it does not match the traditional Rouergat canon.” Now in the Musée Fenaille, Rodez." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.852197 3.003644) ; # La Verrière, Montagnol, Aveyron (French Wikipedia)
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rodez_-_Mus%C3%A9e_Fenaille-_Statue-menhir_de_La_Verri%C3%A8re.jpg> .
+
+:rouergat-statue-menhir-nicoules a :human-figure ;
+   rdfs:label "Statue-menhir de Nicoules" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_Nicoules> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :apparent-gender :male ;
+   :height 1.31 ;
+   :material-note "Schist" ;
+   :note "Translated from French Wikipedia: “discovered by M. Matet in 1976 at the place called Nicoules on the south-east slopes of the Puech de Roqueferral. … It is a male statue. It has all the anthropomorphic features: face (nose, eyes, tattoos), arms, hands, feet and toes.” Now in the Musée Fenaille, Rodez." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.767071 2.67062) ; # Nicoules, Saint-Sever-du-Moustier, Aveyron (French Wikipedia)
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rodez_-_Mus%C3%A9e_Fenaille-_Statue-menhir_de_Saint-Sever-du-Moustier.jpg> .
+
+:rouergat-statue-menhir-la-raffinie a :human-figure ;
+   rdfs:label "Statue-menhir de La Raffinié" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_La_Raffini%C3%A9> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :apparent-gender :female ;
+   :height 0.55 ;
+   :material-note "Sandstone" ;
+   :note "Translated from French Wikipedia: “only the upper part remains, which is blackened because it served as a hearth stone in a fireplace before being discovered by Joseph Alvernhe in 1880 … It is a female statue. … On the front, it has a five-strand necklace and breasts.” Now in the Musée Fenaille, Rodez." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.939444 2.62) ; # Martrin, Aveyron (French Wikipedia, commune); exact findspot not given
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rodez_-_Mus%C3%A9e_Fenaille-_Statue-menhir_de_Martrin_recto.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Rodez_-_Mus%C3%A9e_Fenaille-_Statue-menhir_de_Martrin_verso.jpg> .
+
+:rouergat-statue-menhir-cenomes a :human-figure ;
+   rdfs:label "Statue-menhir de Cénomes" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_C%C3%A9nomes> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :apparent-gender :male ;
+   :height 0.72 ;
+   :material-note "Sandstone" ;
+   :note "Translated from French Wikipedia: “discovered in 1940 by Dr Brunel in the Nuéjouls stream. … the upper fragment of a larger statue that was broken. … The statue is decorated only with an engraved representation of ‘the object’, so it is a male statue.” Now in the Musée Fenaille, Rodez." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.80248 3.01902) ; # Nuéjouls stream, Cénomes, Montagnol, Aveyron (French Wikipedia)
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_Menhir_de_C%C3%A9nomes.jpg> . # photo of the in-situ copy, not the original
+
+:rouergat-statue-menhir-saint-leonce a :human-figure ;
+   rdfs:label "Statue-menhir de Saint-Léonce" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_Saint-L%C3%A9once> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :apparent-gender :male ;
+   :height 0.9 ;
+   :material-note "Sandstone" ;
+   :note "Translated from French Wikipedia: “discovered in 1937 by M. Bernat in the hamlet of Saint-Léonce. … The statue is practically complete: the head and left shoulder are missing. It is a male statue.” Now in the Musée Fenaille, Rodez." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.857799 2.672762) ; # Saint-Léonce, Combret, Aveyron (French Wikipedia)
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_Menhir_de_Sainte_L%C3%A9once.jpg> . # photo of the in-situ copy, not the original
+
+:rouergat-statue-menhir-tauriac a :human-figure ;
+   rdfs:label "Statue-menhir de Tauriac" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_Tauriac> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :apparent-gender :female ;
+   :height 0.99 ;
+   :material-note "Sandstone" ;
+   :note "Translated from French Wikipedia: “discovered in 1940 by Dr Brunel near Tauriac. … the upper fragment of a larger statue. … It is a female statue. Its particularly stylised carving led Jean Arnal to class it as ‘heretical’.” Now in the Musée Fenaille, Rodez." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.784511 3.033115) ; # Tauriac-de-Camarès, Aveyron (French Wikipedia)
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_Menhir_de_Tauriac.jpg> . # photo of the in-situ copy, not the original
+
+:rouergat-statue-menhir-borie-des-paulets a :human-figure ;
+   rdfs:label "Statue-menhir de la Borie des Paulets" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_de_la_Borie_des_Paulets> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
+   :earliest-date -3200 ;
+   :latest-date -2800 ;
+   :apparent-gender :male , :female ;
+   :height 1.43 ;
+   :material-note "Sandstone" ;
+   :note "Translated from French Wikipedia: “discovered in 1948 by M. Bru, near the farm of la Borie des Paulets … At a first stage it was a male statue-menhir … At a second stage it was feminised by the engraving of breasts … a four-strand necklace, the erasing of ‘the object’ …” Now in the Musée Fenaille, Rodez." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (43.974672 2.625785) ; # La Borie des Paulets, Brasc, Aveyron (French Wikipedia)
+   :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Brasc_paulets_02.jpg> . # photo of the in-situ copy, not the original
+
 :thinite-female-figurine a :human-figure ;
    rdfs:label "Thinite Female Figurine" ;
    :described-by <https://collections.louvre.fr/en/ark:/53355/cl010007468> ,
