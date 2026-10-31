@@ -1986,6 +1986,238 @@
 #    :representative-latlong-point ( 41.32314 119.4029693 );
 #    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Neolithic_pottery_pregnant_woman,_Hongshan_Culture,_Liaoning,_1982.JPG>.
 
+:lunigiana-statue-stele-sorano-vii a :human-figure ;
+   rdfs:label "Sorano VII Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/sorano-vii/?lang=en> ;
+   :earliest-date -3500 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 73" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “Recovered during an excavation conducted by the Archaeological Superintendence in 2003 in the area of Quartareccia, near the Pieve of Sorano.”" ;
+   :representative-latlong-point (44.329556 9.935286) ; # Pieve di Santo Stefano di Sorano, Filattiera
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_A,_maschile_con_pugnale,_Sorano_VII_(n.73).jpg> .
+
+:lunigiana-statue-stele-venelia-v a :human-figure ;
+   rdfs:label "Venelia V Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/venelia-v/?lang=en> ;
+   :earliest-date -3500 ;
+   :latest-date -2000 ;
+   :apparent-gender :unclear ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 82" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “Discovered in March 2012 ... while uprooting a vineyard in Monti di Licciana, in the area of Castagnolo.”" ;
+   :representative-latlong-point (44.244143 10.001929) ; # Via Castagnolo, Monti, Licciana Nardi
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_Venelia_V_(Moriti-Licciana).JPG> .
+
+:lunigiana-statue-stele-casola a :human-figure ;
+   rdfs:label "Casola Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/casola/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 38" ;
+   :in-modern-country-note "Italy" ;
+   :note "Adapted from museum: “The body has a rectangular shape and the head is semicircular.”" ;
+   :representative-latlong-point (44.21137 10.18469) ; # Vigneta, Casola in Lunigiana (find spot at Nibbiara, between Casola and Vigneta)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_A,_maschile_con_pugnale,_Casola_n.38.jpg> .
+
+:lunigiana-statue-stele-moncigoli-i a :human-figure ;
+   rdfs:label "Moncigoli I Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/moncigoli-i/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :female ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 17" ;
+   :in-modern-country-note "Italy" ;
+   :note "Adapted from museum: “The concave face is U-shaped and the nose and button-shaped eyes are in relief. ... The arms are lightly bent at the elbows and the round breasts are in relief.”" ;
+   :representative-latlong-point (44.21962 10.08442) ; # Moncigoli, Fivizzano
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_A,_femminile,_Moncigoli_I_(n.17).jpg> .
+
+:lunigiana-statue-stele-moncigoli-ii a :human-figure ;
+   rdfs:label "Moncigoli II Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/moncigoli-ii/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :female ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 18" ;
+   :in-modern-country-note "Italy" ;
+   :note "Adapted from museum: “The concave face is U-shaped and the rectangular nose is in relief.”" ;
+   :representative-latlong-point (44.21962 10.08442) ; # Moncigoli, Fivizzano
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_A,_femminile,_Moncigoli_II_(n.18).jpg> .
+
+:lunigiana-statue-stele-canossa-i a :human-figure ;
+   rdfs:label "Canossa I Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/canossa-i/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :material-note "Sandstone" ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 44" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “Under the hands, there is a horizontally placed dagger with a handle featuring a semilunar pommel and a blade inserted in a rectangular sheath.”" ;
+   :representative-latlong-point (44.28183 9.92718) ; # Canossa, Mulazzo
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_canossa_(mulazzo).JPG> .
+
+:lunigiana-statue-stele-filetto-viii a :human-figure ;
+   rdfs:label "Filetto VIII Statue-Stele Head" ;
+   :described-by <https://statuestele.org/statua-stele/filetto-viii/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :unclear ;
+   :material-note "Sandstone" ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 32" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “The head has a semi-elliptical shape, with the lower part slightly broken, and it is delimited by a ribbon-like circle.”" ;
+   :representative-latlong-point (44.301269 9.960711) ; # Filetto, Villafranca in Lunigiana
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_filetto_VIII.JPG> .
+
+:lunigiana-statue-stele-filetto-x a :human-figure ;
+   rdfs:label "Filetto X Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/filetto-x/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :female ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 47" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “It has a quadrangular shape with a lightly raised clavicular band, slightly bent upper limbs at the elbows, and small, close-set, and raised breasts.”" ;
+   :representative-latlong-point (44.301269 9.960711) ; # Filetto, Villafranca in Lunigiana
+   :thumbnail-image <https://statuestele.org/wp-content/uploads/2015/11/N47_Filetto_X_part_0021.jpg> .
+
+:lunigiana-statue-stele-malgrate-vi a :human-figure ;
+   rdfs:label "Malgrate VI Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/malgrate-vi/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :female ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 58" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “The clavicular band is narrow and raised, and the only remaining breast is depicted in relief and has a hemispherical shape.”" ;
+   :representative-latlong-point (44.3145 9.97097) ; # Malgrate, Villafranca in Lunigiana
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_malgrate_VI_(Villafranca_in_Lunigiana).JPG> .
+
+:lunigiana-statue-stele-minucciano-i a :human-figure ;
+   rdfs:label "Minucciano I Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/minucciano-i/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 37" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “On the chest, vertically positioned, there is a depiction of an axe with a long handle and a rectangular blade.”" ;
+   :representative-latlong-point (44.174702 10.206516) ; # Santuario della Madonna del Soccorso, Minucciano
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_minucciano_I.JPG> .
+
+:lunigiana-statue-stele-minucciano-ii a :human-figure ;
+   rdfs:label "Minucciano II Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/minucciano-ii/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :material-note "Sandstone" ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 40" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “A dagger with an elliptical blade and a semicircular pommel is depicted horizontally below the arms.”" ;
+   :representative-latlong-point (44.174702 10.206516) ; # Santuario della Madonna del Soccorso, Minucciano
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_Minucciano_II.JPG> .
+
+:lunigiana-statue-stele-minucciano-iii a :human-figure ;
+   rdfs:label "Minucciano III Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/minucciano-iii/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 42" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “The face is defined by a narrow, circular band that descends in the upper part to indicate the nose.”" ;
+   :representative-latlong-point (44.174702 10.206516) ; # Santuario della Madonna del Soccorso, Minucciano
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_minucciano_III.JPG> .
+
+:lunigiana-statue-stele-mocrone a :human-figure ;
+   rdfs:label "Mocrone Statue-Stele Head" ;
+   :described-by <https://statuestele.org/statua-stele/mocrone/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :unclear ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 52" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “It is a head with a neck and traces of the shoulder attachment. The face, in a “U” shape, was partially damaged at the time of its discovery.”" ;
+   :representative-latlong-point (44.31395 9.96075) ; # Mocrone, Villafranca in Lunigiana
+   :thumbnail-image <https://statuestele.org/wp-content/uploads/2015/11/N52_Mocrone_part_002.jpg> .
+
+:lunigiana-statue-stele-san-cristoforo-gordana a :human-figure ;
+   rdfs:label "San Cristoforo di Gordana Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/san-cristoforo-di-gordana/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :female ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 31" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “The body is rectangular with the upper limbs in relief and slightly bent at the elbows; the hands are depicted with parallel lines.”" ;
+   :representative-latlong-point (44.359056 9.864861) ; # San Cristoforo (di Gordana), Pontremoli
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_san_cristoforo_di_gordana_01.JPG> .
+
+:lunigiana-statue-stele-sorano-iii a :human-figure ;
+   rdfs:label "Sorano III Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/sorano-iii/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 41" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “A dagger, positioned below the arms, is depicted horizontally. Only the triangular blade and part of the rectangular handle are visible.”" ;
+   :representative-latlong-point (44.329556 9.935286) ; # Pieve di Santo Stefano di Sorano, Filattiera
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_sorano_III_(Filattiera).jpg> .
+
+:lunigiana-statue-stele-taponecco a :human-figure ;
+   rdfs:label "Taponecco Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/taponecco/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 49" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “A dagger, depicted beneath the hands in a slightly upward angle, features a wide triangular blade with a central rib and a handle with a semicircular pommel.”" ;
+   :representative-latlong-point (44.31361 10.07484) ; # Taponecco, Licciana Nardi
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_taponecco_(licciana)_01.JPG> .
+
+:lunigiana-statue-stele-treschietto a :human-figure ;
+   rdfs:label "Treschietto Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/treschietto/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :female ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 43" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “The breasts are protruding and show a hint of nipples. A collar made of overlapping rings occupies the entire neck.”" ;
+   :representative-latlong-point (44.337778 10.010556) ; # Treschietto, Bagnone
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_treschietto_(Bagnone).JPG> .
+
+:lunigiana-statue-stele-venelia-i a :human-figure ;
+   rdfs:label "Venelia I Statue-Stele Head" ;
+   :described-by <https://statuestele.org/statua-stele/venelia-i/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :unclear ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 30" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “Two cup marks, located on the sides of the face, represent the ears or earrings.”" ;
+   :representative-latlong-point (44.24864 10.00854) ; # Monti, Licciana Nardi
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_Venelia_I_(Moriti-Licciana).JPG> .
+
+:lunigiana-statue-stele-venelia-ii a :human-figure ;
+   rdfs:label "Venelia II Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/venelia-ii/?lang=en> ;
+   :earliest-date -3400 ;
+   :latest-date -2000 ;
+   :apparent-gender :male ;
+   :material-note "Sandstone" ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 59" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “Below the hands, in a horizontal position, a dagger is depicted in slight relief by lowering the background plane.”" ;
+   :representative-latlong-point (44.24864 10.00854) ; # Monti, Licciana Nardi
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_Stele_di_Venelia_II_(Moriti-Licciana).JPG> .
+
 :statue-min-koptos a :human-figure ;
    rdfs:label "Statue of Min from Koptos" ;
    :described-by <https://www.ashmolean.org/collections-online#/item/ash-object-487742> ;
@@ -4041,6 +4273,33 @@
       <https://www.hittitemonuments.com/arslantas2/arslan-tas22.jpg> ,
       <https://www.hittitemonuments.com/arslantas2/arslan-tas23.jpg> .
 
+:lunigiana-statue-stele-filetto-ii-bocconi a :human-figure ;
+   rdfs:label "Filetto II Statue-Stele (“Bocconi”)" ;
+   :described-by <https://statuestele.org/statua-stele/filetto-ii-calco-da-toccare/?lang=en> ,
+      <https://lexlep.univie.ac.at/wiki/MS%C2%B72_Villafranca_in_Lunigiana> ;
+   :earliest-date -800 ;
+   :latest-date -500 ;
+   :apparent-gender :male ;
+   :material-note "Sandstone" ;
+   :height 1.29 ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 15" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “The left hand holds an axe with a quadrangular blade and a slightly curved long handle. Two javelins rest on the right hand.”" ;
+   :representative-latlong-point (44.301844 9.960806) ; # Filetto; coordinates from Lexicon Leponticum MS·2
+   :thumbnail-image <https://statuestele.org/wp-content/uploads/2015/11/N15_Filetto_II_002.jpg> .
+
+:lunigiana-statue-stele-soliera a :human-figure ;
+   rdfs:label "Soliera Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/soliera/?lang=en> ;
+   :earliest-date -800 ;
+   :latest-date -500 ;
+   :apparent-gender :male ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 54" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “The face, barely visible and in a concave shape, forms a “U.” ... On the chest, an axe with a square blade can be glimpsed.”" ;
+   :representative-latlong-point (44.20891 10.07) ; # Soliera Apuana, Fivizzano
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_C,_stele_di_soliera_(fivizzano)_01.JPG> .
+
 :roos-carr-figures a :group-of-human-figures ;
    rdfs:label "Roos Carr Figures" ;
    :described-by <https://en.wikipedia.org/wiki/Roos_Carr_figures> ;
@@ -4372,6 +4631,20 @@
    :in-modern-country-note "Tajikistan" ;
    :representative-latlong-point (37.054553 68.281994) ; # Takht-i Kuwad (?), per British Museum
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seated_man_Oxus_Treasure_BM_ME1931.0408.1.jpg> .
+
+:lunigiana-statue-stele-bigliolo a :human-figure ;
+   rdfs:label "Bigliolo Statue-Stele" ;
+   :described-by <https://statuestele.org/statua-stele/bigliolo/?lang=en> ,
+      <https://lexlep.univie.ac.at/wiki/MS%C2%B71_Aulla> ;
+   :earliest-date -600 ;
+   :latest-date -500 ;
+   :apparent-gender :male ;
+   :height 0.94 ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 48" ;
+   :in-modern-country-note "Italy" ;
+   :note "From museum: “The face is depicted in a rather realistic manner with raised eyes and eyebrows, and a small incised line represents the mouth.”" ;
+   :representative-latlong-point (44.233875 10.050622) ; # Bigliolo, Aulla; coordinates from Lexicon Leponticum MS·1
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_C,_stele_di_bigliolo_(aulla)_00.JPG> .
 
 :gorgon-pediment-corfu a :group-of-human-figures ;
    rdfs:label "Gorgon Pediment, Temple of Artemis, Corfu" ;
@@ -4976,6 +5249,21 @@
    :in-modern-country-note "Spain" ;
    :representative-latlong-point (36.5359 -6.29755) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sarcófago_femenino_(21887254049).jpg> .
+
+:motya-charioteer a :human-figure ;
+   rdfs:label "Motya Charioteer" ;
+   :described-by <https://en.wikipedia.org/wiki/Motya_Charioteer> ;
+   :earliest-date -470 ;
+   :latest-date -460 ;
+   :apparent-gender :male ;
+   :height 1.81 ;
+   :material-note "Marble" ;
+   :identifier-note "Museo Giuseppe Whitaker, Inv. 4310" ;
+   :note "From Wikipedia: “The marble statue depicts a young male figure in a swinging contraposto pose, with his right foot forward, his left hand resting on his hip, and his right arm raised. He wears a very long chiton, with a broad flat belt over his chest. Two holes once accommodated a metal fitting at the centre of the belt, perhaps a clasp. The figure's musculature, genitals, and posterior are clearly visible; the sculptor managed to create the illusion that they are seen through the sheer fabric of the chiton. Bulging veins are depicted on the upper arms in a rudimentary manner. The figure's face is impassive, with puffy eyelids and almond-shaped eyes. The hair is depicted as three rows of circles, commonly known as ‘snail curls.’ Above them, the head is a featureless dome. There are small holes around the bottom of the dome, which were probably for pins to secure a metal skull cap or helmet.”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (37.868333 12.468611) ; # Motya (Mozia), San Pantaleo island, Sicily (Wikipedia, Motya); findspot, October 1979
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Aurige_de_Mozia_de_face-2.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:The_Motya_Charioteer,_made_by_a_Greek_sculptor_in_Sicily,_about_460-450_BC,_found_in_1979_on_the_Sicilian_island_of_Motya_(Mozia),_Winning_at_the_ancient_Games,_British_Museum_(7642744838).jpg> .
 
 :articulated-female a :human-figure ;
    rdfs:label "Articulated Female Figure attached to Working Surface" ;
@@ -6999,6 +7287,33 @@
    :in-modern-country-note "India" ;
    :representative-latlong-point (25.3808 83.0245) ; # Dhamek Stupa, Sarnath (Wikipedia); found just south of it, 1904–05
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg> .
+
+:brahma-mirpur-khas a :human-figure ;
+   rdfs:label "Brahma from Mirpur-Khas" ;
+   :described-by <https://en.wikipedia.org/wiki/Brahma_from_Mirpur-Khas> ;
+   :earliest-date 401 ;
+   :latest-date 600 ;
+   :apparent-gender :male ;
+   :material-note "Copper alloy (variously described as bronze, brass, copper or gilt bronze)" ;
+   :note "From Wikipedia: “It is the earliest known metallic image of Brahma, and the only known representative of the school it represents. It has been described as ‘an immense artistic creation’ of the Gupta period. It was found in a field near Mirpur-Khas as first reported by Henry Cousens in 1929. Some report it as having been found at Brahmanabad. … The four-headed Brahma bronze statue has a height over 3 feet. … He is shown standing with two hands, wearing a dhoti and a yajnopavita but without any ornaments.”" ;
+   :in-modern-country-note "Pakistan" ;
+   :representative-latlong-point (25.525 69.015833) ; # Mirpur Khas, Sindh (Wikipedia); found in a field near the town (some sources say Brahmanabad); now National Museum of Pakistan, Karachi
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Brahma_mirpur_khas.jpg> .
+
+:vishnu-three-incarnations-mfa a :human-figure ;
+   rdfs:label "Vishnu in three incarnations" ;
+   :described-by <https://collections.mfa.org/objects/14716> ,
+      <https://en.wikipedia.org/wiki/Vaikuntha_Chaturmurti> ;
+   :earliest-date 425 ;
+   :latest-date 475 ;
+   :apparent-gender :male ;
+   :height 0.658 ;
+   :material-note "Sandstone with traces of plaster" ;
+   :identifier-note "Accession no. 17.1015" ;
+   :note "From Wikipedia: “Though three-faced Vishnu images from the Mathura school exist from the Gupta period, not a single four-faced Vaikuntha Chaturmurti from this era has been found until this day. It is suggested by scholars that the three-faced Vishnu images should be considered as Vaikuntha Chaturmurti too, where the fourth head was dropped by sculptors just for sake of convenience.”" ;
+   :in-modern-country-note "India" ;
+   :representative-latlong-point (27.4925 77.673611) ; # Mathura, Uttar Pradesh (MFA object place; Wikipedia coordinates for Mathura)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_God_Vishnu_in_Three_Incarnations._Northern_India_(Mathura),_Gupta_period,_mid-5th_century_AD._Boston_Museum.jpg> .
 
 :suda-hachiman-shrine-mirror a :group-of-human-figures ;
    rdfs:label "Suda Hachiman Shrine Mirror" ;
