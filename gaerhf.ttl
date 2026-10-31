@@ -3065,6 +3065,79 @@
    :representative-latlong-point (27.329167 68.138889) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Seated_Nobleman_with_head_missing._A_limestone_sculpture_excavated_from_Mohenjo_Daro_in_1925.png> .
 
+:okunev-ulug-khurtuyakh-tas a :human-figure ;
+   rdfs:label "Ulug Khurtuyakh Tas" ;
+   :described-by <https://ru.wikipedia.org/wiki/Улуг_Хуртуях_тас> ,
+      <https://ru.wikipedia.org/wiki/Окуневская_культура> ;
+   :earliest-date -2300 ;
+   :latest-date -1800 ;
+   :apparent-gender :female ;
+   :height 2.2 ;
+   :material-note "Brown sandstone" ;
+   :identifier-note "Catalogue no. 106" ;
+   :note "Translated from Russian Wikipedia: “… a stone statue, catalogue no. 106 … reused in a Tagar kurgan located 500 m west of the aal Ankhakov … a monument of the Okunev culture of the end of the 3rd – beginning of the 2nd millennium BC. … At the top of the stone a realistic human head in a conical cap is carved; in the middle part, a poorly distinguishable image of a complex anthropomorphic face. The shape of the projection on which this face is carved resembles a pregnant belly.”" ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (53.01515 90.3321417) ; # Ankhakov, Askizsky District, Khakassia (Russian Wikipedia); re-erected near Ankhakov in 2003
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Хуртуях.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Хуртуях-тас.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Хуртуях-тас_Сурикова.jpg> .
+
+:okunev-esinskaya-khys-tas a :human-figure ;
+   rdfs:label "Esinskaya Khys Tas (Okunev stele no. 16)" ;
+   :described-by <https://ru.wikipedia.org/wiki/Тас_Хыз#Есинская_стела_Хыс_тас> ,
+      <https://ru.wikipedia.org/wiki/Окуневская_культура> ;
+   :earliest-date -2300 ;
+   :latest-date -1800 ;
+   :apparent-gender :female ;
+   :height 0.67 ;
+   :material-note "Red sandstone" ;
+   :identifier-note "Catalogue no. 16" ;
+   :note "Translated from Russian Wikipedia: “On the front a half-length female figure is depicted … Its main feature is a frontal realistic image of an elongated female face with a pointed chin, a straight nose, with long hair parted to both sides, occupying almost half the stone. … First found and drawn by the expedition of D. G. Messerschmidt and F. J. Strahlenberg on the river Es in 1722, 2 km west of the modern village of Ust-Es …” Now in the Khakassia National Museum, Abakan." ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (52.966667 90.25) . # Ust-Es, Askizsky District, Khakassia (Russian Wikipedia); first recorded 2 km west of the village
+
+:okunev-saralinskaya-khys-tas a :human-figure ;
+   rdfs:label "Saralinskaya Khys Tas" ;
+   :described-by <https://ru.wikipedia.org/wiki/Тас_Хыз#Саралинское_изваяние_Хыс_тас> ,
+      <https://ru.wikipedia.org/wiki/Окуневская_культура> ;
+   :earliest-date -2300 ;
+   :latest-date -1800 ;
+   :apparent-gender :female ;
+   :height 3 ;
+   :material-note "Greyish-pink Devonian sandstone" ;
+   :note "Translated from Russian Wikipedia: “Located in the area of the village of Sarala, Ordzhonikidzevsky District of Khakassia. It is a 3-metre menhir of greyish-pink Devonian sandstone, with a clearly distinguishable coarse chin, remains of a cap-crown above the head, clear signs of the female sex …”" ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (54.863667 89.240639) ; # Sarala, Ordzhonikidzevsky District, Khakassia (Russian Wikipedia); re-erected 2004
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:TasHyz.JPG> .
+
+:okunev-khys-tas-lake-chernoe a :human-figure ;
+   rdfs:label "Khys Tas from Lake Chernoe (Okunev stele no. 36)" ;
+   :described-by <https://ru.wikipedia.org/wiki/Тас_Хыз#Изваяние_Хыс_тас_с_озера_Чёрное> ,
+      <https://ru.wikipedia.org/wiki/Окуневская_культура> ;
+   :earliest-date -2300 ;
+   :latest-date -1800 ;
+   :apparent-gender :female ;
+   :height 2.7 ;
+   :material-note "Reddish-brown sandstone" ;
+   :identifier-note "Catalogue no. 36" ;
+   :note "Translated from Russian Wikipedia: “… in a field one kilometre north of the ulus Patankov … In the middle of the stone on its narrow face the visage of a deity of ovoid form is depicted. Below it a female breast and a ‘pregnant’ belly are carved. On the head of the deity large bull horns and two spearheads are shown.” Now in the Khakassia National Museum, Abakan." ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (54.648 89.4467) . # Lake Chernoe, Shirinsky District, Khakassia (Russian Wikipedia), proxy; findspot 1 km north of Patankov
+
+:okunev-khys-tas-poltakov a :human-figure ;
+   rdfs:label "Khys Tas from Poltakov (Okunev stele no. 96)" ;
+   :described-by <https://ru.wikipedia.org/wiki/Тас_Хыз#Изваяние_Хыс_тас_поселка_Полтаков> ,
+      <https://ru.wikipedia.org/wiki/Окуневская_культура> ;
+   :earliest-date -2300 ;
+   :latest-date -1800 ;
+   :apparent-gender :unclear ;
+   :height 2 ;
+   :material-note "Red sandstone" ;
+   :identifier-note "Catalogue no. 96" ;
+   :note "Translated from Russian Wikipedia: “… in the fields of the settlement of Poltakov, Askizsky District … Of unusual L-shaped form with indicated hair, patterned ‘ribbons’ on the shoulders … rings — earrings — placed one above another, and an additional face in place of the belly.” Now in the Khakassia National Museum, Abakan." ;
+   :in-modern-country-note "Russia" ;
+   :representative-latlong-point (52.953556 90.187028) . # Poltakov, Askizsky District, Khakassia (Russian Wikipedia)
+
 :dagenham-idol a :human-figure ;
    rdfs:label "Dagenham Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Dagenham_idol> ;
