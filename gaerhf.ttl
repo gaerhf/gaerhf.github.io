@@ -2602,6 +2602,29 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Arco_VIII,_Statua_stele_maschile_in_marmo,_MAG,_fronte.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Arco_VIII,_Statua_stele_maschile_in_marmo,_MAG,_retro.jpg> .
 
+:saint-martin-de-corleans-stelae a :group-of-human-figures ;
+   rdfs:label "Anthropomorphic Stelae of Saint-Martin-de-Corléans, Aosta" ;
+   :described-by <https://en.wikipedia.org/wiki/Saint-Martin-de-Corl%C3%A9ans_Megalithic_Area> ,
+      <https://it.wikipedia.org/wiki/MegaMuseo> ;
+   :earliest-date -3000 ;
+   :latest-date -2200 ;
+   :apparent-gender :unclear ;
+   :material-note "Stone" ;
+   :note "Translated from Italian Wikipedia: “… oriented alignments of wooden posts … and of anthropomorphic stelae, dolmen and cist burials. … The site took on a funerary function only in the last centuries of the 3rd millennium BC … with monumental tombs of various types, some of which were built reusing the stelae. At the beginning of the Bronze Age, around 2200 BC … the site progressively lost its cultic function …”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (45.7354 7.2975) ; # Saint-Martin-de-Corléans Megalithic Area, Aosta (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Saint-Martin-de-Corl%C3%A9ans_27082016-018_(27103950849).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Saint-Martin-de-Corl%C3%A9ans_27082016-019_(38165134554).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Saint-Martin-de-Corl%C3%A9ans_27082016-020_(25009270058).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:St-Martin-de-Corl%C3%A9ans_2018_abc19.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:St-Martin-de-Corl%C3%A9ans_2018_abc20_stele_3.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:St-Martin-de-Corl%C3%A9ans_2018_abc22_dett_stele.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:St-Martin-de-Corl%C3%A9ans_2018_abc23_steli.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:St-Martin-de-Corl%C3%A9ans_2018_abc24_sala_delle_steli.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:St-Martin-de-Corl%C3%A9ans_2018_abc25_stele.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:St-Martin-de-Corl%C3%A9ans_2018_abc26_stele.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:St-Martin-de-Corl%C3%A9ans_2018_abc27_stele.jpg> .
+
 :skara-brae-buddo a :human-figure ;
    rdfs:label "Skara Brae Buddo" ;
    :described-by <https://www.stromnessmuseum.org.uk/collections/objects/axxx> ,
@@ -2625,6 +2648,28 @@
    :in-modern-country-note "Iraq" ;
    :representative-latlong-point (33.484167 44.728333 ) ;
    :thumbnail-image <https://smarthistory.org/wp-content/uploads/2023/07/Votive-figs4-1.jpg> .
+
+:petit-chasseur-stelae a :group-of-human-figures ;
+   rdfs:label "Anthropomorphic Stelae of Le Petit-Chasseur, Sion" ;
+   :described-by <https://en.wikipedia.org/wiki/Le_Petit-Chasseur> ,
+      <https://fr.wikipedia.org/wiki/Petit-Chasseur> ;
+   :earliest-date -2900 ;
+   :latest-date -2200 ;
+   :apparent-gender :male , :unclear ;
+   :material-note "Stone" ;
+   :note "From Wikipedia: “Discovered in 1960 or 1961, it consists of three dolmens, dated to between 2900 and 2200 BC. … The largest of the stones assumed to be a male figure wearing geometrically decorated clothes with a sun-like motif around his face is about two tonnes.” Translated from French Wikipedia: “… the finds from the excavations, mainly anthropomorphic stelae … Most of the tombs were built with material from earlier, recut Neolithic funerary stelae.”" ;
+   :in-modern-country-note "Switzerland" ;
+   :representative-latlong-point (46.2318 7.3514) ; # Le Petit-Chasseur, Sion (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_stele_no_1,_Sion,_Petit-Chasseur_necropolis_08.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Anthropomorphic_stele_no_2,_Sion,_Petit-Chasseur_necropolis_15.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Anthropomorphic_stele_no_25,_Sion,_Petit-Chasseur_necropolis_13.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Anthropomorphic_stele_no_5,_Sion,_Petit-Chasseur_necropolis_09.JPG> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_1.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Steles_of_the_Mus%C3%A9e_d'Histoire_du_Valais_07.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stone_rubbing_of_anthropomorphic_stele_no_10,_Sion,_Petit-Chasseur_necropolis_14.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stone_rubbing_of_anthropomorphic_stele_no_15,_Sion,_Petit-Chasseur-_necropolis_10.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stone_rubbing_of_anthropomorphic_stele_no_18,_Sion,_Petit-Chasseur-_necropolis_11.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stone_rubbing_of_anthropomorphic_stele_no_20,_Sion,_Petit-Chasseur_necropolis_12.jpg> .
 
 # -2800 - -2300 https://en.wikipedia.org/wiki/Jiroft_culture#/media/File:Chloritgefäße_aus_Iran,_Dschiroft,_2800-2300_v.C._(2).jpg
 
