@@ -3514,6 +3514,34 @@
    :representative-latlong-point (43.803333 75.535000) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tamgaly_Sacred_Site.JPG> .
 
+:hakkari-stelae a :group-of-human-figures ;
+   rdfs:label "Hakkari Stelae" ;
+   :described-by <https://en.wikipedia.org/wiki/Kurgan_stelae#Hakkari_Stelae> ;
+   :earliest-date -1500 ;
+   :latest-date -1000 ;
+   :apparent-gender :male , :female ;
+   :height 3.1 ;
+   :material-note "Stone" ;
+   :note "From Wikipedia: “Thirteen stone stelae … were found in 1998 in their original location at the centre of Hakkâri … and are now on display in the Van Museum. The stelae were carved on upright flagstone-like slabs measuring between 0.7 m to 3.10 m in height. … Eleven of the stelae depict naked warriors with daggers, spears, and axes … Two stelae contain female figures without arms. … They date from the 15th to the 11th century BC …”" ;
+   :in-modern-country-note "Turkey" ;
+   :representative-latlong-point (37.577 43.739) ; # Hakkâri city (Wikipedia); findspot at the city centre
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_donna_00.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo_a_cappuccio,_cinturone,_borsa,_pugnale,_ascia_e_lancia.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo_tipo_keffiyah,_cinturone,_pugnale,_ascia,_lancia_e_bambino.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo_tipo_keffiyah,_pugnale,_ascia_e_lingotti_di_metallo.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo_tipo_keffiyah,_cinturone,_pugnale,_lancia,_lingotti,_coltello_a_serramanico_01.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo_tipo_keffiyah,_cinturone,_pugnale,_bastoni,_accetta,_lingotto,_tenda,_capre_di_montagna.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo_tipo_keffiyah,_cinturone,_pugnale,_lancia,_accetta,_ascia,_lingotto,_bambino_e_capra_di_montagna.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo_tipo_keffiyah,_cinturone,_pugnale,_lancia,_bastone,_ascia,_bambino,_capra_di_montagna_e_un_nemico_sconfitto_01.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_cappello,_cinturone,_pugnale,_lancia,_bastone,_ascia,_bambino,_capre_di_montagna_e_un_cervo_01.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_cappello,_cinturone,_pugnale,_lancia,_bastone,_ascia,_bastone_ricurvo,_lingotto,_bambino_e_anumali_01.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo,_cinturone,_pugnale,_lancia,_accetta,_lingotto,_tenda,_figurette_umane_e_capra_di_montagna.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Stele_hakkari,_1500_ac_ca.,_figura_di_guerriero_con_copricapo,_cinturone,_pugnale,_lancia,_bastone,_mazza,_accetta,_donna_con_oranti,_cavaliere,_pantera_contro_serpente_01.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Hakkari_Stelae1.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Hakkari_Stelae2.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Hakkari_Stelae3.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Hakkari_Stelae4.jpg> .
+
 :gold-mummy-mask-louvre-n2731 a :human-figure ;
    rdfs:label "Gold Mummy Mask, Louvre N 2731" ;
    :described-by <https://collections.louvre.fr/en/ark:/53355/cl010013075> ,
