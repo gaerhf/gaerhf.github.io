@@ -2308,16 +2308,22 @@
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:La_statue-menhir_dite_%22La_Dame_de_Saint-Sernin%22.jpg> .
 
-:stone-relief-figure-of-maurels a :human-figure ;
-   rdfs:label "Stone Relief Figure of Maurels" ;
-   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_des_Maurels> ;
+:rouergat-statue-menhir-maurels a :human-figure ;
+   rdfs:label "Statue-menhir des Maurels" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue-menhir_des_Maurels> ,
+      <https://fr.wikipedia.org/wiki/Statues-menhirs_du_groupe_rouergat> ;
    :earliest-date -3200 ;
    :latest-date -2800 ;
+   :apparent-gender :male ;
+   :height 2.09 ;
    :material-note "Sandstone" ;
+   :note "Translated from French Wikipedia: “discovered in 1880 by M. Fabre at the place called Les Maurels … It is a male statue, complete … with all the anthropomorphic features (face, arms, hands, legs, feet, shoulder-hooks) and all the male warrior attributes: baldric, ‘the object’, a bow and an arrow.” Now in the Musée Fenaille, Rodez." ;
    :in-modern-country-note "France" ;
-   :representative-latlong-point (43.961082 2.739499) ;
+   :representative-latlong-point (43.961027 2.739362) ; # Les Maurels, Calmels-et-le-Viala, Aveyron (French Wikipedia)
    :art-historical-culture-or-tradition :european-neolithic-standing-stones ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(musée_fenaille,_rodez)_01.jpg> .
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rodez_-_Mus%C3%A9e_Fenaille-_Statue-menhir_des_Maurels.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(mus%C3%A9e_fenaille,_rodez)_01.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Statua_stele_di_figura_maschile_da_les_maurels,_3100-2900_ac._(mus%C3%A9e_fenaille,_rodez)_02.jpg> .
 
 :rouergat-statue-menhir-la-prade a :human-figure ;
    rdfs:label "Statue-menhir de la Prade" ;
