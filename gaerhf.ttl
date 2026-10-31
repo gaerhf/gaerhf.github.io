@@ -1992,9 +1992,10 @@
    :earliest-date -3500 ;
    :latest-date -2000 ;
    :apparent-gender :male ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 73" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “Recovered during an excavation conducted by the Archaeological Superintendence in 2003 in the area of Quartareccia, near the Pieve of Sorano.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “Recovered during an excavation … in 2003 in the area of Quartareccia, near the Pieve of Sorano. It belongs to the Copper Age …”" ;
    :representative-latlong-point (44.329556 9.935286) ; # Pieve di Santo Stefano di Sorano, Filattiera
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_A,_maschile_con_pugnale,_Sorano_VII_(n.73).jpg> .
 
@@ -2004,9 +2005,10 @@
    :earliest-date -3500 ;
    :latest-date -2000 ;
    :apparent-gender :unclear ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 82" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “Discovered in March 2012 ... while uprooting a vineyard in Monti di Licciana, in the area of Castagnolo.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “Discovered in March 2012 … while uprooting a vineyard in Monti di Licciana, in the area of Castagnolo. Copper Age (mid-4th to 3rd millennium BC).”" ;
    :representative-latlong-point (44.244143 10.001929) ; # Via Castagnolo, Monti, Licciana Nardi
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_Venelia_V_(Moriti-Licciana).JPG> .
 
@@ -2016,9 +2018,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :male ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 38" ;
    :in-modern-country-note "Italy" ;
-   :note "Adapted from museum: “The body has a rectangular shape and the head is semicircular.”" ;
+   :note "Adapted from the Museo delle Statue Stele Lunigianesi: “Discovered in 1964 … at Nibbiara, between Casola Lunigiana and Vigneta … It belongs to group A and could therefore date to the eneolithic age (between 3400/3300 and 2300/2000 b.C.).”" ;
    :representative-latlong-point (44.21137 10.18469) ; # Vigneta, Casola in Lunigiana (find spot at Nibbiara, between Casola and Vigneta)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_A,_maschile_con_pugnale,_Casola_n.38.jpg> .
 
@@ -2028,9 +2031,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :female ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 17" ;
    :in-modern-country-note "Italy" ;
-   :note "Adapted from museum: “The concave face is U-shaped and the nose and button-shaped eyes are in relief. ... The arms are lightly bent at the elbows and the round breasts are in relief.”" ;
+   :note "Adapted from the Museo delle Statue Stele Lunigianesi: “discovered … around 1910 in the Piana di Monciglioli (Fivizzano, MS) … it therefore probably dates to the Eneolithic Age (between 3400/3300 and 2300/2000 b.C.).”" ;
    :representative-latlong-point (44.21962 10.08442) ; # Moncigoli, Fivizzano
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_A,_femminile,_Moncigoli_I_(n.17).jpg> .
 
@@ -2040,9 +2044,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :female ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 18" ;
    :in-modern-country-note "Italy" ;
-   :note "Adapted from museum: “The concave face is U-shaped and the rectangular nose is in relief.”" ;
+   :note "Adapted from the Museo delle Statue Stele Lunigianesi: “found in the Piana di Monciglioli in 1910. … It belongs to the Eneolithic Age (between 3400/3300 and 2300/2000).”" ;
    :representative-latlong-point (44.21962 10.08442) ; # Moncigoli, Fivizzano
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_A,_femminile,_Moncigoli_II_(n.18).jpg> .
 
@@ -2055,7 +2060,7 @@
    :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 44" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “Under the hands, there is a horizontally placed dagger with a handle featuring a semilunar pommel and a blade inserted in a rectangular sheath.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “found in the ‘al Monte’ locality (Mulazzo, MS), near the Canossa cemetery, in 1972. It belongs to group B … and dates back to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.28183 9.92718) ; # Canossa, Mulazzo
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_canossa_(mulazzo).JPG> .
 
@@ -2068,7 +2073,7 @@
    :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 32" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “The head has a semi-elliptical shape, with the lower part slightly broken, and it is delimited by a ribbon-like circle.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “found around 1950 during the clearing works of the forest in Filetto (Villafranca in Lunigiana, MS). It belongs to Group B and dates back to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.301269 9.960711) ; # Filetto, Villafranca in Lunigiana
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_filetto_VIII.JPG> .
 
@@ -2078,9 +2083,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :female ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 47" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “It has a quadrangular shape with a lightly raised clavicular band, slightly bent upper limbs at the elbows, and small, close-set, and raised breasts.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “found in 1957 in the locality of ‘Casa Madonna’ in Filetto (Villafranca in Lunigiana, MS). It belongs to Group B, indicating a dating to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.301269 9.960711) ; # Filetto, Villafranca in Lunigiana
    :thumbnail-image <https://statuestele.org/wp-content/uploads/2015/11/N47_Filetto_X_part_0021.jpg> .
 
@@ -2090,9 +2096,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :female ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 58" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “The clavicular band is narrow and raised, and the only remaining breast is depicted in relief and has a hemispherical shape.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “discovered in 1981 during agricultural work at Casa Agosti in Malgrate (Villafranca in Lunigiana, MS). It belongs to Group B and can therefore be dated back to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.3145 9.97097) ; # Malgrate, Villafranca in Lunigiana
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_malgrate_VI_(Villafranca_in_Lunigiana).JPG> .
 
@@ -2102,9 +2109,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :male ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 37" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “On the chest, vertically positioned, there is a depiction of an axe with a long handle and a rectangular blade.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “unearthed … in 1964 during excavation work … to open the access road to the Sanctuary of Madonna del Soccorso, near Minucciano … It belongs to Group B and can be dated to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.174702 10.206516) ; # Santuario della Madonna del Soccorso, Minucciano
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_minucciano_I.JPG> .
 
@@ -2117,7 +2125,7 @@
    :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 40" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “A dagger with an elliptical blade and a semicircular pommel is depicted horizontally below the arms.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “found … in 1965 near the Sanctuary of Madonna del Soccorso in Minucciano (LU). … It belongs to Group B and can therefore be dated to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.174702 10.206516) ; # Santuario della Madonna del Soccorso, Minucciano
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_Minucciano_II.JPG> .
 
@@ -2127,9 +2135,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :male ;
-   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 42" ;
+   :material-note "Sandstone" ;
+   :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 442" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “The face is defined by a narrow, circular band that descends in the upper part to indicate the nose.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “found in 1968 … at the Sanctuary of Madonna del Soccorso in Minucciano … during the construction of a parking lot. … based on the results of stratigraphic excavation, it has been dated to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.174702 10.206516) ; # Santuario della Madonna del Soccorso, Minucciano
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_minucciano_III.JPG> .
 
@@ -2139,9 +2148,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :unclear ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 52" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “It is a head with a neck and traces of the shoulder attachment. The face, in a “U” shape, was partially damaged at the time of its discovery.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “likely found in the Canova area in the Piano di Mocrone (Villafranca in Lunigiana, MS) in 1978 … It belongs to Group B and can therefore be traced back to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.31395 9.96075) ; # Mocrone, Villafranca in Lunigiana
    :thumbnail-image <https://statuestele.org/wp-content/uploads/2015/11/N52_Mocrone_part_002.jpg> .
 
@@ -2150,10 +2160,11 @@
    :described-by <https://statuestele.org/statua-stele/san-cristoforo-di-gordana/?lang=en> ;
    :earliest-date -3400 ;
    :latest-date -2000 ;
-   :apparent-gender :female ;
+   :apparent-gender :likely-female ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 31" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “The body is rectangular with the upper limbs in relief and slightly bent at the elbows; the hands are depicted with parallel lines.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “Statue, possibly female … found in 1948 … near the village of S. Cristoforo di Gordana (Pontremoli, MS). … it can possibly be attributed to Group B and thus assigned to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.359056 9.864861) ; # San Cristoforo (di Gordana), Pontremoli
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_san_cristoforo_di_gordana_01.JPG> .
 
@@ -2163,9 +2174,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :male ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 41" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “A dagger, positioned below the arms, is depicted horizontally. Only the triangular blade and part of the rectangular handle are visible.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “came to light in two stages in 1966-67 during the restoration works of the apse and cemetery of the ancient Pieve di Sorano (Filattiera, MS). It belongs to Group B … and can be dated to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.329556 9.935286) ; # Pieve di Santo Stefano di Sorano, Filattiera
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_sorano_III_(Filattiera).jpg> .
 
@@ -2175,9 +2187,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :male ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 49" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “A dagger, depicted beneath the hands in a slightly upward angle, features a wide triangular blade with a central rib and a handle with a semicircular pommel.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “found in 1975 in the locality of ‘Cavallino’ in Taponecco (Licciana, MS) during road expansion works. It belongs to Group B and can therefore be attributed to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.31361 10.07484) ; # Taponecco, Licciana Nardi
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_taponecco_(licciana)_01.JPG> .
 
@@ -2187,9 +2200,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :female ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 43" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “The breasts are protruding and show a hint of nipples. A collar made of overlapping rings occupies the entire neck.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “came to light in 1969 during the works for the arrangement of the cemetery in Treschietto (Bagnone, MS). It belongs to Group B and is dated to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.337778 10.010556) ; # Treschietto, Bagnone
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_treschietto_(Bagnone).JPG> .
 
@@ -2199,9 +2213,10 @@
    :earliest-date -3400 ;
    :latest-date -2000 ;
    :apparent-gender :unclear ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 30" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “Two cup marks, located on the sides of the face, represent the ears or earrings.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “discovered in 1936 … in the area of Groppolungo, between the cemetery of Monti di Licciana and the Taverone River (Licciana Nardi, MS) … It belongs to Group B and can therefore be attributed to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.24864 10.00854) ; # Monti, Licciana Nardi
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_stele_di_Venelia_I_(Moriti-Licciana).JPG> .
 
@@ -2214,7 +2229,7 @@
    :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 59" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “Below the hands, in a horizontal position, a dagger is depicted in slight relief by lowering the background plane.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “brought to light in 1984 during agricultural work in ‘San Martino Basso,’ in the locality of ‘Monti’ (Licciana Nardi, MS). It belongs to Group B and can therefore be attributed to the Eneolithic period (between 3400/3300 and 2300/2000 BC).”" ;
    :representative-latlong-point (44.24864 10.00854) ; # Monti, Licciana Nardi
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_B,_Stele_di_Venelia_II_(Moriti-Licciana).JPG> .
 
@@ -4274,7 +4289,7 @@
       <https://www.hittitemonuments.com/arslantas2/arslan-tas23.jpg> .
 
 :lunigiana-statue-stele-filetto-ii-bocconi a :human-figure ;
-   rdfs:label "Filetto II Statue-Stele (“Bocconi”)" ;
+   rdfs:label "Filetto II Statue-Stele (‘Bocconi’)" ;
    :described-by <https://statuestele.org/statua-stele/filetto-ii-calco-da-toccare/?lang=en> ,
       <https://lexlep.univie.ac.at/wiki/MS%C2%B72_Villafranca_in_Lunigiana> ;
    :earliest-date -800 ;
@@ -4284,7 +4299,7 @@
    :height 1.29 ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 15" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “The left hand holds an axe with a quadrangular blade and a slightly curved long handle. Two javelins rest on the right hand.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “recovered around 1870 in the Selva di Filetto (Villafranca in Lunigiana, MS). It belongs to Group C and can be dated to the Iron Age (around the 8th-6th century BCE). … It is currently preserved in the portico of Palazzo Bocconi in Pontremoli, while casts can be found at the Museum of Pontremoli …”" ;
    :representative-latlong-point (44.301844 9.960806) ; # Filetto; coordinates from Lexicon Leponticum MS·2
    :thumbnail-image <https://statuestele.org/wp-content/uploads/2015/11/N15_Filetto_II_002.jpg> .
 
@@ -4294,9 +4309,10 @@
    :earliest-date -800 ;
    :latest-date -500 ;
    :apparent-gender :male ;
+   :material-note "Sandstone" ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 54" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “The face, barely visible and in a concave shape, forms a “U.” ... On the chest, an axe with a square blade can be glimpsed.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “found in the Torsana di Soliera locality (Fivizzano, MS) in 1979. It belongs to Group C and dates back to the Iron Age, between the 8th and 6th centuries BC.”" ;
    :representative-latlong-point (44.20891 10.07) ; # Soliera Apuana, Fivizzano
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_C,_stele_di_soliera_(fivizzano)_01.JPG> .
 
@@ -4639,10 +4655,11 @@
    :earliest-date -600 ;
    :latest-date -500 ;
    :apparent-gender :male ;
+   :material-note "Sandstone" ;
    :height 0.94 ;
    :identifier-note "Museo delle Statue Stele Lunigianesi Nr. 48" ;
    :in-modern-country-note "Italy" ;
-   :note "From museum: “The face is depicted in a rather realistic manner with raised eyes and eyebrows, and a small incised line represents the mouth.”" ;
+   :note "From the Museo delle Statue Stele Lunigianesi: “found in 1975 in the Belvedere ‘ai falò’ area (Aulla, MS) while cultivating a field. It belongs to group C and is dated to the 6th century BC, based on the presence of an inscription.”" ;
    :representative-latlong-point (44.233875 10.050622) ; # Bigliolo, Aulla; coordinates from Lexicon Leponticum MS·1
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Tipo_C,_stele_di_bigliolo_(aulla)_00.JPG> .
 
