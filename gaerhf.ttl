@@ -4552,6 +4552,21 @@
    :representative-latlong-point (9.279882 117.9814) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Manunggul_Jar.jpg> .
 
+:statue-ashurnasirpal-ii a :human-figure ;
+   rdfs:label "Statue of Ashurnasirpal II" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1851-0902-507> ,
+      <https://en.wikipedia.org/wiki/Statue_of_Ashurnasirpal_II> ;
+   :earliest-date -883 ;
+   :latest-date -859 ;
+   :apparent-gender :male ;
+   :height 1.13 ;
+   :material-note "Magnesite (statue); dolomite (plinth)" ;
+   :identifier-note "BM 118871 (Reg. no. 1851,0902.507)" ;
+   :note "From Wikipedia: “The statue shows Ashurnasirpal without his Assyrian crown allowing the viewer to see the king's hair and beard which he wore fashionably long. … The king's torso is covered by a short-sleeved tunic and a shawl. In his right hand he appears to hold a kind of sickle … In the king's left hand he clasps a mace …” Excavated by Layard in 1850 in the Temple of Ishtar (Belit Mati), Nimrud." ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (36.098056 43.328889) ; # Nimrud (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Assyrian_King_(9817449604).jpg> .
+
 :balawat-gates a :group-of-human-figures ;
    rdfs:label "Balawat Gates" ;
    :described-by <https://en.wikipedia.org/wiki/Balawat_Gates> ;
