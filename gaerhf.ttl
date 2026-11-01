@@ -9712,6 +9712,19 @@
    :representative-latlong-point ( 49.12 6.1754 ) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Charlemagne_Louvre_OA8260_n2.jpg> .
 
+:majesty-sainte-foy-conques a :human-figure ;
+   rdfs:label "Majesty of Sainte Foy" ;
+   :described-by <https://fr.wikipedia.org/wiki/Statue_reliquaire_de_Sainte_Foy> ;
+   :earliest-date 864 ;
+   :latest-date 1000 ;
+   :apparent-gender :female ;
+   :height 0.85 ;
+   :material-note "Yew wood covered with gold and gilded silver, enamel, gems" ;
+   :note "Translated from French Wikipedia: “a statuette 85 cm high, made of yew wood, covered with gold, gilded silver, enamel (notably the blue pupils) and set with gems, which enshrines the most noble relic of Saint Foy, her skull. … it is the only Carolingian ‘Majesty’ to have survived.” The core was made after the relics were taken from Agen to Conques (864–875) and enriched after 995; further additions date to the 13th and 16th centuries." ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (44.599235 2.398103) ; # Abbey church of Sainte-Foy, Conques (French Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_reliquaire_de_sainte_Foy-649.jpg> .
+
 :printed-diamond-sutra-mogao-caves a :group-of-human-figures ;
    rdfs:label "Printed Diamond Sutra from Mogao Caves" ;
    :described-by <https://en.wikipedia.org/wiki/Diamond_Sutra> ,
@@ -10326,6 +10339,33 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Nara_National_Museum_755-0_Vai%C5%9Brava%E1%B9%87a.jpg> ,
       <https://commons.wikimedia.org/wiki/File:H063462_Z%C5%8Dch%C5%8D-ten_(Vir%C5%AB%E1%B8%8Dhaka)_1114-0.jpg> .
 
+:cappenberg-head a :human-figure ;
+   rdfs:label "Cappenberg Head" ;
+   :described-by <https://de.wikipedia.org/wiki/Cappenberger_Kopf> ;
+   :earliest-date 1150 ;
+   :latest-date 1158 ;
+   :apparent-gender :male ;
+   :height 0.314 ;
+   :material-note "Gilt bronze; eyes with silver plate" ;
+   :note "Translated from German Wikipedia: “The Cappenberg Head is a head reliquary dedicated to John the Evangelist. The gilt bronze figure was commissioned before 1158 by Otto von Cappenberg and set up in the then collegiate church of St. John the Evangelist of Cappenberg Abbey. … In 1886 Friedrich Philippi put forward the hypothesis that it was a more or less realistic portrait bust of Emperor Frederick I Barbarossa … This assumption … has since been refuted by scientific investigations in 1978 and 2021.”" ;
+   :in-modern-country-note "Germany" ;
+   :representative-latlong-point (51.650833 7.539028) ; # Cappenberg Abbey (Schloss Cappenberg), Selm (German Wikipedia); still in the parish church treasury
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Cappenberger_Kopf-WUS02772.jpg> .
+
+:virgin-in-majesty-orcival a :group-of-human-figures ;
+   rdfs:label "Virgin in Majesty of Orcival" ;
+   :described-by <https://fr.wikipedia.org/wiki/Basilique_Notre-Dame_d%27Orcival#Patrimoine_:_Vierge_en_majesté,_dite_Notre-Dame_d'Orcival> ;
+   :earliest-date 1151 ;
+   :latest-date 1175 ;
+   :apparent-gender :female , :male ;
+   :height 0.74 ;
+   :material-note "Walnut, gilded with gold leaf; faces, hands and feet painted" ;
+   :note "Translated from French Wikipedia: “The Virgin of Orcival is a processional statue in walnut, dated to about 1170 … It is 74 centimetres high, including the base. … datable to the 3rd quarter of the 12th century … The hands are 18th-century additions. … The Child Jesus, with an adult's face, holds the book of the Gospels. The sculpture corresponds to the iconographic type Sedes sapientiae: Mary as throne of divine wisdom.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (45.683004 2.841522) ; # Basilica of Notre-Dame d'Orcival (French Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Vierge_en_majest%C3%A9,_Basilique_Notre-Dame_d%27Orcival,_Puy-de-D%C3%B4me,_France-2848.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Basilique_Notre-Dame_d%27Orcival_(Vierge_en_Majest%C3%A9)_-_1772.jpg> .
+
 :luohan-laundering-silk a :group-of-human-figures ;
    rdfs:label "Luohan laundering 羅漢洗濯圖" ;
    :described-by <https://asia.si.edu/explore-art-culture/collections/search/edanmdm:fsg_F1902.224/> ,
@@ -10374,6 +10414,38 @@
    :note "From Montserrat website: “Artistically, the image imitates a popular model, that of Our Lady in Majesty, with a wholly frontal attitude and Baby Jesus on Her lap in the centre. Both Mother and Child are wearing crowns. The figure of Our Lady stretches out Her right hand, which holds the globe, symbolising the cosmos. Our Lady nearly rests Her left hand on the Child’s shoulder, indicating that this omnipotent king is Her Son. With His right hand, the Child gives a blessing, whilst His left hand holds a pinecone, symbol of fertility and everlasting life.” ... From Wikipedia: “The Romanesque sculpture is crafted in wood from the late 12th century.”" ;
    :representative-latlong-point (41.59320556 1.83713889) ; # Santa Maria de Montserrat Abbey, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:A_Virgem_de_Mont_Serrat.jpg> .
+
+:reliquary-bust-saint-baudime a :human-figure ;
+   rdfs:label "Reliquary bust of Saint Baudime" ;
+   :described-by <https://fr.wikipedia.org/wiki/Baudime_d%27Auvergne#Buste_byzantin_de_S._Baudime> ,
+      <https://www.pop.culture.gouv.fr/notice/palissy/PM63000893> ;
+   :earliest-date 1176 ;
+   :latest-date 1200 ;
+   :apparent-gender :male ;
+   :height 0.73 ;
+   :material-note "Gilt copper (repoussé) over a wooden core; eyes of horn and ivory" ;
+   :identifier-note "Palissy PM63000893" ;
+   :note "Translated from French Wikipedia: “a reliquary of about 75 cm. The head and hands are of copper, probably from the recycling of an antique statue, mounted on an oak bust covered with plates of repoussé copper. The eyes are of horn and ivory. … The figure of Saint Baudime blesses with his slightly raised right hand while the other holds a case.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (45.588255 2.992353) ; # Église Saint-Nectaire, Saint-Nectaire (French Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Buste_de_Saint-Baudime.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Buste_de_Saint-Baudime_(vue_d%27ensemble).jpg> .
+
+:reliquary-saint-eustace a :group-of-human-figures ;
+   rdfs:label "Reliquary of Saint Eustace" ;
+   :described-by <https://www.britishmuseum.org/collection/object/H_1850-1127-1> ,
+      <https://en.wikipedia.org/wiki/Reliquary_of_Saint_Eustace> ;
+   :earliest-date 1180 ;
+   :latest-date 1200 ;
+   :apparent-gender :male ;
+   :height 0.35 ;
+   :material-note "Silver-gilt (repoussé) over a sycamore wood core; glass and precious and semi-precious stones" ;
+   :identifier-note "Reg. no. 1850,1127.1" ;
+   :note "From Wikipedia: “Scholars have placed the construction of the head between 1180 and 1200 AD. For centuries the reliquary belonged to the cathedral treasury of Basel in Switzerland, where it was first recorded in 1477. … Around the base, twelve gold figures of the Apostles stand within intricate arcading.”" ;
+   :in-modern-country-note "Switzerland" ;
+   :representative-latlong-point (47.556667 7.592222) ; # Basel Minster (Wikipedia); now in the British Museum
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Reliquary_head_st_eustace_british_museum.JPG> ,
+      <https://commons.wikimedia.org/wiki/File:Reliquary_head_of_St_Eustace.jpg> .
 
 :bust-of-jayavarman-vii a :human-figure ;
    rdfs:label "Bust of Jayavarman VII" ;
@@ -10545,6 +10617,20 @@
    :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ryutoki_Kofukuji.jpg> .
 
+:reliquary-bust-saint-yrieix a :human-figure ;
+   rdfs:label "Reliquary Bust of Saint Yrieix" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/464333> ;
+   :earliest-date 1220 ;
+   :latest-date 1240 ;
+   :apparent-gender :male ;
+   :height 0.381 ;
+   :material-note "Silver and gilded silver with rock crystal, gems, and glass; wooden core" ;
+   :identifier-note "Accession no. 17.190.352a, b" ;
+   :note "From The Met: “Saint Yrieix, whose skull was once contained in this reliquary, was the sixth-century founder of a monastery in the town south of Limoges that now bears his name. A special veneration of reliquaries in the form of the heads of local saints developed in the Limoges region during the Middle Ages … On feast days the image would have been carried in procession through the streets and then placed on the altar for veneration by the faithful.”" ;
+   :in-modern-country-note "France" ;
+   :representative-latlong-point (45.51417 1.20389) ; # Saint-Yrieix-la-Perche (French Wikipedia); the Met gives “Made in Limoges”
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Reliquary_Bust_of_Saint_Yrieix_MET_DP134383.jpg> .
+
 :river-creek-tennessee-tablet a :group-of-human-figures ;
    rdfs:label "River Creek Tennessee Tablet" ;
    :described-by <https://tnmuseum.org/tn225/artifacts/001> ,
@@ -10679,6 +10765,17 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-11-_-_Marriage_of_the_Virgin.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Giotto_di_Bondone_-_Scenes_with_decorative_bands_-_WGA09284.jpg> .
 
+:reliquary-bust-san-gennaro a :human-figure ;
+   rdfs:label "Reliquary bust of San Gennaro" ;
+   :described-by <https://it.wikipedia.org/wiki/Busto_reliquiario_di_san_Gennaro> ;
+   :date 1305 ;
+   :apparent-gender :male ;
+   :material-note "Gold and silver; precious stones and enamels" ;
+   :note "Translated from Italian Wikipedia: “The bust was commissioned from the Provençal master goldsmiths Etienne Godefroy, head of the court goldsmiths' workshop, Guillaume de Verdelay and Milet d'Auxerre, by King Charles II of Anjou for the ceremonies of the thousandth anniversary of the martyr's beheading in AD 305 … The figure … was made in silver and gold and clothed in a rich chasuble with precious stones and enamels depicting the heraldic insignia of the Angevins.” The jewelled mitre was added in 1712–13." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.852361 14.259534) ; # Royal Chapel of the Treasure of San Gennaro, Naples Cathedral (Italian Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Reliquaire_of_San_Genaro_-_Cappella_di_San_Gennaro_-_Duomo_-_Naples_-_Italy_2015_(2).JPG> .
+
 :paradise-bhaisajyaguru a :group-of-human-figures ;
    rdfs:label "Paradise of Bhaisajyaguru" ;
    :described-by <https://en.wikipedia.org/wiki/Paradise_of_Bhaisajyaguru> ,
@@ -10708,6 +10805,17 @@
    :representative-latlong-point (34.68325 135.83117) ; # Kōfuku-ji, Nara (Wikipedia): painted by Myōson of the Shōnami workshop under Kōfuku-ji's Ichijōin
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Myoson_-_The_Death_of_the_Buddha_Sakyamuni_(Nehan-zu)_-_2005.58.1a-b_-_Yale_University_Art_Gallery.jpg> .
 
+:bust-of-charlemagne-aachen a :human-figure ;
+   rdfs:label "Bust of Charlemagne" ;
+   :described-by <https://en.wikipedia.org/wiki/Bust_of_Charlemagne> ;
+   :approximate-date 1350 ;
+   :apparent-gender :male ;
+   :material-note "Silver, partly gilt; filigree, precious stones and ancient intaglios; gold crown" ;
+   :note "From Wikipedia: “The Bust of Charlemagne … is a reliquary from around 1350 which contains the top part of Charlemagne's skull. … Created 500 years after the death of Charlemagne, the bust is an idealized representation, the facial structure, hair style and fleur-de-lys crown of which reflect 14th-century, not 9th-century fashion style. … According to the Aachen tradition, the Bust of Charlemagne was a donation from Charles IV, who was crowned king in Aachen Cathedral on 25 July 1349.”" ;
+   :in-modern-country-note "Germany" ;
+   :representative-latlong-point (50.775036 6.082817) ; # Aachen Cathedral Treasury (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bust_of_Charlemagne.png> .
+
 :saint-catherine-karlstejn-castle a :human-figure ;
    rdfs:label "Saint Catherine from Karlštejn Castle" ;
    :described-by <https://en.wikipedia.org/wiki/Saint_Catherine_of_Alexandria_(Master_Theodoric)> ;
@@ -10718,6 +10826,17 @@
    :in-modern-country-note "Czech Republic" ;
    :representative-latlong-point (49.939444 14.188056) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mistr_Theodorik,_Sv._Kateřina,_Národní_galerie_v_Praze.jpg> .
+
+:reliquary-bust-saint-agatha-catania a :group-of-human-figures ;
+   rdfs:label "Reliquary bust of Saint Agatha" ;
+   :described-by <https://it.wikipedia.org/wiki/Busto_reliquiario_di_sant%27Agata> ;
+   :date 1376 ;
+   :apparent-gender :female , :male ;
+   :material-note "Gilded silver; opaque and translucent (basse-taille) enamels" ;
+   :note "Translated from Italian Wikipedia: “made in 1376 by the Sienese goldsmith Giovanni di Bartolo, active at the papal court of Avignon, and by French craftsmen … Signed and dated by the inscription on the base … The saint holds a processional cross in her right hand and an inscribed tablet in her left. At the sides are two kneeling angels in gilded silver … The enamels represent episodes of the story of Saint Agatha, among them the torture ordered by the governor Quintianus and the visit of Saint Peter to the imprisoned saint. The bishops Marziale and Elia also appear in prayer, angelic figures, Saint Lucy, Saint Catherine of Alexandria …”" ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (37.50246 15.08821) ; # Cathedral of Sant'Agata, Catania (Italian Wikipedia); made in France, brought to Catania in 1377
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sant%27Agata_restaurata_2026_copertina_4k.png> .
 
 :wilton-diptych a :group-of-human-figures ;
    rdfs:label "Wilton Diptych" ;
