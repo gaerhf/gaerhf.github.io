@@ -462,6 +462,19 @@
   :representative-latlong-point (48.877778 16.652222) ;
   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Mammoth_ivory_female_head.jpg> .
 
+:anthropomorphic-pendants-arene-candide a :group-of-human-figures ;
+   rdfs:label "Gravettian ivory pendants from the ‘Young Prince’ burial, Arene Candide Cave" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/pendagli-antropomorfi-dalla-caverna-delle-arene-candide-finale-ligure-sv/> ,
+      <https://en.wikipedia.org/wiki/Arene_Candide> ;
+   :approximate-date -26300 ;
+   :apparent-gender :female ;
+   :height 0.049 ; # tallest of the four pendants
+   :material-note "Ivory" ;
+   :note "From Prehistory in Italy: “four claviform pendants in ivory which are part of the funerary objects of the burial of ‘Principle’ … two (1 and 2) have a flat rear face while the front one is rounded with parallel grooves engraved in the lower portion … proposed … as a stylization of the headless female body … The other two pendants (3 and 4) are flatter … characterized by a more expanded body separated from the head with a groove at the height of the throat …” Now in the Archaeological Museum of Finale, Finale Ligure. Distinct from the much later Neolithic clay figurines from the same cave (see :figurines-arene-candide)." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (44.1618 8.326389) ; # Arene Candide cave, Finale Ligure (Wikipedia)
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2024/01/01-ARENE-CANDIDE_Pendagli1.jpg> .
+
 :brassempouy-gravettian-head a :human-figure ;
     rdfs:label "Brassempouy Gravettian Head" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Brassempouy> ;
@@ -1391,15 +1404,15 @@
 #    :thumbnail-image <https://art.thewalters.org/images/art/PS1_48.2741_3Qtr_DD_T09.jpg> .
 
 :figurines-arene-candide a :group-of-human-figures ;
-   rdfs:label "Figurines from the Arene Candide Cave" ;
+   rdfs:label "Neolithic clay figurines from the Arene Candide Cave" ;
    :described-by <https://www.preistoriainitalia.it/en/scheda/statuine-della-caverna-delle-arene-candide-finale-ligure-sv/> ,
       <https://en.wikipedia.org/wiki/Arene_Candide> ;
    :earliest-date -5000 ;
    :latest-date -4200 ;
    :material-note "Ceramic" ;
-   :note "From linked website: “20 statuettes, only some intact and most of them reduced to fragments, found inside the cave of the Arene Candide in the various layers of excavation, most of them on reworked ground and only a few of them come from levels dated with certainty to Middle Neolithic, precisely to the culture of square-mouthed vessels (5000-4200 BC); due to stylistic analogies, even the finds without context can be referred to the same chronological horizon.”" ;
+   :note "From Prehistory in Italy: “20 statuettes, only some intact and most of them reduced to fragments, found inside the cave of the Arene Candide in the various layers of excavation, most of them on reworked ground and only a few of them come from levels dated with certainty to Middle Neolithic, precisely to the culture of square-mouthed vessels (5000-4200 BC); due to stylistic analogies, even the finds without context can be referred to the same chronological horizon.” Distinct from the much earlier Gravettian ivory pendants from the burial of the ‘Young Prince’ in the same cave (see :anthropomorphic-pendants-arene-candide)." ;
    :in-modern-country-note "Italy" ;
-   :representative-latlong-point (44.1618 8.326389) ;
+   :representative-latlong-point (44.1618 8.326389) ; # Arene Candide cave, Finale Ligure (Wikipedia)
    :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2022/12/01-ARENE-CANDIDE_Statuine.jpg> .
 
 :female-figurine-saliagos a :human-figure ;
@@ -2832,6 +2845,18 @@
    :in-modern-country-note "India" ;
    :representative-latlong-point (28.32 78.93) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Anthropomorphic_figures,_chalcolithic,Yamuna-Ganga.BKB.jpg> .
+
+:marinaru-figurine a :human-figure ;
+   rdfs:label "Marinaru Figurine" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/statuina-di-marinaru-ss/> ;
+   :approximate-date -2800 ;
+   :apparent-gender :female ;
+   :height 0.125 ;
+   :material-note "Marble" ;
+   :note "From Prehistory in Italy: “In planar geometric style … It has a rounded head with a striped nose … The bust has a trapezoid pattern with the arms folded at the waist … A peculiarity is the presence of six vertical incisions on the upper part of the left shoulder …” Found in the Amorelli Tomb, Marinaru necropolis, near Porto Torres; now in the Museo Nazionale G. A. Sanna, Sassari." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.810297 8.444178) ; # Su Crucifissu Mannu necropolis, Porto Torres (Italian Wikipedia), proxy for the nearby Marinaru necropolis
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2024/05/01-MARINARU_Statuina.jpg> .
 
 :chemurchek-funerary-marker a :human-figure ;
    rdfs:label "Chemurchek Funerary Marker" ;
