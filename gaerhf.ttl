@@ -7456,6 +7456,22 @@
    :representative-latlong-point (36.604444 34.080833) ; # relief site near Sömek, Silifke, Mersin (Wikipedia, 36°36′16″N 34°04′51″E)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:AthenaS%C3%B6mek1.jpg> .
 
+:mithras-fiano-romano a :group-of-human-figures ;
+   rdfs:label "Mithras of Fiano Romano" ;
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010277122> ,
+      <https://en.wikipedia.org/wiki/Mithras_of_Fiano_Romano> ;
+   :earliest-date 100 ;
+   :latest-date 300 ;
+   :apparent-gender :male , :female ;
+   :height 0.61 ;
+   :material-note "Marble relief on a travertine base" ;
+   :identifier-note "Louvre Ma 3441 (MND 1911)" ;
+   :note "From the Louvre: “Side A; Mithraic sacrifice (in a cave); Mithras (Phrygian cap, tunic, chlamys, anaxyrides, boot, holding a sword, slitting the throat, half-kneeling on); bull … top (left); Helios … top (right); Selene … Side B; Mithraic banquet; Mithras … Helios … Cautes … Cautopates … Selene (bust, chiton, crescent moon).” Found at Fiano Romano in 1926; currently on loan to the Musée de la Romanité, Nîmes." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (42.166667 12.6) ; # Fiano Romano (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fiano_Romano_mithraic_relief.jpg> ;
+   :thumbnail-image <https://collections.louvre.fr/media/cache/medium/0000000021/0000277122/0000624683_OG.JPG> .
+
 :hadrian-sabina-mars-venus-louvre a :group-of-human-figures ;
    rdfs:label "Hadrian and Sabina as Mars and Venus" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_and_Mars_(sculpture)> ,
