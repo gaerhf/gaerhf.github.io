@@ -6172,6 +6172,21 @@
    :representative-latlong-point (39.997264 8.80816) ; # ll for Terme di Fordongianus (Forum Traiani), from it.wikipedia
    :thumbnail-image <https://virtualarchaeology.sardegnacultura.it/images/romano/fordongianus/gd/98_pic.jpg> .
 
+:military-scenes-fannius-tomb a :group-of-human-figures ;
+   rdfs:label "Fresco with military scenes from the tomb of Fannius/Fabius" ;
+   :described-by <https://smarthistory.org/fannius-fabius-tomb-painting-esquiline-necropolis/> ,
+      <https://it.wikipedia.org/wiki/Necropoli_dell%27Esquilino#La_tomba_dei_Fabii_o_Fannii> ;
+   :earliest-date -300 ;
+   :latest-date -280 ;
+   :apparent-gender :male ;
+   :height 0.87 ;
+   :material-note "Fresco (pigment on plaster)" ;
+   :note "From Smarthistory: “… the next register shows a scene of a fortified city wall in front of which two men, shown in three-quarters profile view, meet. The left-hand figure wears a military helmet, cloak, and greaves. The partially obliterated figure at the right holds a spear in his right hand and wears what might be a toga … In the third register, we again see two figures meeting at the center of the composition …” Now in the Centrale Montemartini, Rome." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (41.8957 12.5022) ; # Esquiline Necropolis, Rome (Wikipedia)
+   :thumbnail-image <https://smarthistory.org/wp-content/uploads/2026/03/Tomb-Fixed.jpg> ,
+      <https://smarthistory.org/wp-content/uploads/2026/03/Tomb-Illustration-Fixed-870x1380.jpg> .
+
 :bone-figurine-articulated-limbs a :human-figure ;
    rdfs:label "Bone figurine with Articulated Limbs" ;
    :described-by <https://www.metmuseum.org/art/collection/search/248624> ;
@@ -7657,6 +7672,18 @@
 #    :period-note "Gandhara Region (Pakistan)" ;
 #    :earliest-date 300 ;
 #    :latest-date 400 .
+
+:kohunlich-stucco-masks a :group-of-human-figures ;
+   rdfs:label "Kohunlich Stucco Masks" ;
+   :described-by <https://en.wikipedia.org/wiki/Kohunlich> ;
+   :earliest-date 250 ;
+   :latest-date 600 ;
+   :apparent-gender :male ;
+   :material-note "Stucco, traces of paint" ;
+   :note "From Wikipedia: “The site is best known for its Temple of the Masks, an Early Classic pyramid whose central stairway is flanked by huge humanized stucco masks. The Temple was built around 500 A.D. … After 700 A.D., this temple was covered over with a Terminal Classic construction, which protected the masks … Originally there were eight carved masks flanking its central staircase; only five remain, three having been looted.”" ;
+   :in-modern-country-note "Mexico" ;
+   :representative-latlong-point (18.419167 -88.79) ; # Kohunlich, Quintana Roo (Wikipedia)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:PyramideDesMasquesKohunlich.jpg> .
 
 :medallion-constantius-galerius-beaurains a :group-of-human-figures ;
    rdfs:label "Gold medallion of Constantius I and Galerius (Beaurains Treasure)" ;
