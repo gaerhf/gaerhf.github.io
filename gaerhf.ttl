@@ -10285,6 +10285,21 @@
    :representative-latlong-point ( 52.207125 0.115228 ) ;
    :wikimedia-commons-image-page <https://en.wikipedia.org/wiki/File:Unknown-artist-eadwine-the-scribe-at-work-eadwine-psalter-christ-church-canterbury-england-uk-circa-1160-70.jpg> .
 
+:pope-alexander-head-reliquary a :group-of-human-figures ;
+   rdfs:label "Pope Alexander head reliquary" ;
+   :described-by <https://www.artandhistory.museum/en/collection-piece/head-shaped-reliquary-pope-alexander-i> ,
+      <https://de.wikipedia.org/wiki/Alexanderreliquiar> ;
+   :date 1145 ;
+   :apparent-gender :male , :female ;
+   :height 0.445 ;
+   :material-note "Silver (partially gilt), wood, rock crystal, brass, enamel, semiprecious stones" ;
+   :identifier-note "Inv. 1031" ;
+   :note "From the Art & History Museum, Brussels: “This head-shaped reliquary was dedicated by Wilbald, abbot of Stavelot, on 13 April 1145. On the front of the enamel case, the martyrs saints Alexander, Theodolus and Eventius symbolize the ecclesiastical hierarchy. … Busts of the Virtues on the sides symbolize the seven gifts of the Holy Spirit, the constant diligent practice of which gives the faithful hope of achieving divine wisdom, personified in the center of the rear face.”" ;
+   :in-modern-country-note "Belgium" ;
+   :representative-latlong-point (50.383333 5.933333) ; # Stavelot (Wikipedia); made for Stavelot Abbey, now in the Art & History Museum, Brussels
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pope_Alexander_head_reliquary,_from_Abbey_Saint-Remacle_de_Stavelot,_Mosan_workshop,_c._1145_AD,_silver_partially_gilt,_brass,_enamel,_precious_stones_-_Cinquantenaire_Museum_-_Brussels,_Belgium_-_DSC08823.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Godefroid_de_Huy._Reliekschrijn_met_hoofd_van_paus_Alexander_Detail_Medaillons_van_de_sokkel,_GD009559.jpg> .
+
 :descent-cross-erill-la-vall a :human-figure ;
    rdfs:label "Descent from the Cross at Erill la Vall" ;
    :described-by <https://en.wikipedia.org/wiki/Erill_la_Vall_Descent_from_the_Cross> ;
