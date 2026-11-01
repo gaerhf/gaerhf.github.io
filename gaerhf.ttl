@@ -1307,6 +1307,20 @@
    :representative-latlong-point (35.5991 129.185) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bangudae3.jpg> .
 
+:figurine-alianello a :human-figure ;
+   rdfs:label "Figurine of Alianello" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/statuina-di-alianello-mt/> ,
+      <https://catalogo.beniculturali.it/detail/ArchaeologicalProperty/1700221790> ;
+   :earliest-date -6000 ;
+   :latest-date -5000 ;
+   :apparent-gender :female ;
+   :height 0.06 ;
+   :material-note "Fired clay, painted dark red" ;
+   :note "From Prehistory in Italy: “made of finely purified and compact baked clay, yellow in colour, hand-modelled and smoothed. Without a head, it has a wide and broad neck, a sub-triangular trunk, steatopygia with accentuated buttocks, plastic and slightly asymmetrical breasts. … On the body there are some decorations painted in dark red, probable elements of the dress and ornaments …” Found out of context in 1985 at Alianello Nuovo (Cazzaiola), near Aliano; now in the Museo Nazionale della Siritide, Policoro." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.3002861 16.2321051) ; # Alianello, Aliano (point as supplied; Italian Wikipedia gives 40.3, 16.233333); findspot Alianello Nuovo, Cazzaiola
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2023/10/01-ALIANELLO_Statuina.jpg> .
+
 :sesklo-female-figurine-torso a :human-figure ;
    rdfs:label "Torso of Female Figurine from Sesklo" ;
    :described-by <https://en.wikipedia.org/wiki/Neolithic_Greece#Middle_Neolithic_(MN)_5800–5300_BC> ;
@@ -1530,6 +1544,19 @@
    :in-modern-country-note "Azerbaijan" ;
    :representative-latlong-point (39.16 45.92) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_art_in_Ordubad.jpg> .
+
+:goddess-with-child-perfugas a :group-of-human-figures ;
+   rdfs:label "Goddess with child from Perfugas" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/dea-con-bambino-perfugas-ss/> ;
+   :earliest-date -4900 ;
+   :latest-date -4400 ;
+   :apparent-gender :female , :unclear ;
+   :height 0.114 ;
+   :material-note "Marl" ;
+   :note "From Prehistory in Italy: “a female statuette of ‘geometric-volumetric’ style … mutilated by the very child that the female figure was holding to her chest … a cylindrical head surmounted by a sort of veil-headdress … The face has the usual T-pattern (oblong eyes and close brows) with a well-defined nose and lips. The arms are outstretched towards the infant …” Found by a farmer at Sos Badulesos, Perfugas; now in the Museo Archeologico e Paleobotanico, Perfugas." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.8355112 8.8880158) ; # Perfugas (point as supplied; Italian Wikipedia gives 40.832222, 8.884444); findspot Sos Badulesos
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2023/01/01-PERFUGAS_Statuina.jpg> .
 
 :sesklo-figurine-with-child a :human-figure ;
    rdfs:label "Sesklo Figurine with Child" ;
@@ -1822,6 +1849,19 @@
    :note "From Wikipedia: “The oldest petroglyphs date to 12000 BCE, the masks to 4000 to 2000 BCE.”" ;
    :representative-latlong-point (48.748889 135.646111) ; # Sikachi-Alyan, Khabarovsk Krai, on the Amur River
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Петроглифы_Сикачи-Аляна_4.JPG> .
+
+:grotta-pacelli-figurine a :human-figure ;
+   rdfs:label "Grotta Pacelli figurine" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/statuina-di-grotta-pacelli-castellana-grotte-ba/> ;
+   :earliest-date -4000 ;
+   :latest-date -2000 ;
+   :apparent-gender :female ;
+   :height 0.08 ;
+   :material-note "Fired figulina clay, traces of red paint" ;
+   :note "From Prehistory in Italy: “a small anthropomorphic head in uniformly fired figulina clay … The face has an ovoid profile with some anatomical details, such as the nose and eyes which form the typical plastic T-shaped module … as well as a high fringed polos-type headdress … The mouth is not represented …” Found near a hearth in the Serra d'Alto layers of Grotta Pacelli, Castellana Grotte; now in the Museo Archeologico di Santa Scolastica, Bari." ;
+   :in-modern-country-note "Italy" ;
+   :representative-latlong-point (40.911601 17.0984822) ; # Grotta Pacelli, Castellana Grotte (point as supplied; the source places the cave in the north-western part of the commune)
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2022/03/06-GROTTA-PACELLI_Statuina.jpg> .
 
 :neolithic-figurine-karditsa a :human-figure ;
    rdfs:label "Neolithic Figurine from Karditsa" ;
