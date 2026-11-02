@@ -5995,6 +5995,19 @@
    :representative-latlong-point (19.430639 103.154256) ;
    :thumbnail-image <https://img.geocaching.com/waymarking/large/ffdf15d2-4d98-475c-a241-b4b3c158b08a.jpg> .
 
+:zuojiang-huashan-rock-art a :group-of-human-figures ;
+   rdfs:label "Zuojiang Huashan Rock Art" ;
+   :described-by <https://whc.unesco.org/en/list/1508/> ,
+      <https://en.wikipedia.org/wiki/Zuojiang_Huashan_Rock_Art> ;
+   :earliest-date -500 ;
+   :latest-date 200 ;
+   :in-modern-country-note "China" ;
+   :material-note "Red ochre (hematite) pigment on limestone cliff" ;
+   :apparent-gender :unclear ;
+   :note "From Wikipedia: “The main area contains about 1900 discrete countable images arranged in about 110 groups. … They depict human figures as well as animals along with bronze drums, knives, swords, bells, and ships. Human figures are typically between 60 cm and 150 cm tall, but one figure reaches 3 m in height.” Attributed to the Luoyue people; on cliffs along the Ming River, Ningming County, Guangxi." ;
+   :representative-latlong-point (22.255556 107.023056) ; # Zuojiang Huashan Rock Art (Wikipedia infobox, 22°15′20″N 107°1′23″E)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Rock_painting_hua_mountain_2.jpg> .
+
 :aphaia-east-pediment a :group-of-human-figures ;
    rdfs:label "East Pediment of the Temple of Aphaia, Aegina" ;
    :described-by <https://en.wikipedia.org/wiki/Temple_of_Aphaia#Eastern_pediment> ,
@@ -8147,6 +8160,19 @@
    :in-modern-country-note "Pakistan" ;
    :representative-latlong-point (25.525 69.015833) ; # Mirpur Khas, Sindh (Wikipedia); found in a field near the town (some sources say Brahmanabad); now National Museum of Pakistan, Karachi
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Brahma_mirpur_khas.jpg> .
+
+:parel-relief a :group-of-human-figures ;
+   rdfs:label "Parel Relief (Parel Shiva)" ;
+   :described-by <https://en.wikipedia.org/wiki/Parel_Relief> ;
+   :earliest-date 401 ;
+   :latest-date 600 ;
+   :in-modern-country-note "India" ;
+   :material-note "White granite" ;
+   :height 3.06 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “shows Shiva seven times, with a central image surrounded by six other Shiva images which overlap with each other; thus it is a saptamurti (‘seven images’) composition. … There are also five gana or dwarf musicians (or three musicians and two guardians) in the lower area of the piece.” Found in 1931 during road construction at Parel, Mumbai; now in the nearby Baradevi Temple." ;
+   :representative-latlong-point (18.99 72.84) ; # Parel, Mumbai (Wikipedia coordinates)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Monolithic_bass_relief_depicting_siva_-Mumbai_-Maharashtra_-DSC003.jpg> .
 
 :vishnu-three-incarnations-mfa a :human-figure ;
    rdfs:label "Vishnu in three incarnations" ;
@@ -10738,6 +10764,20 @@
    :note "From Montserrat website: “Artistically, the image imitates a popular model, that of Our Lady in Majesty, with a wholly frontal attitude and Baby Jesus on Her lap in the centre. Both Mother and Child are wearing crowns. The figure of Our Lady stretches out Her right hand, which holds the globe, symbolising the cosmos. Our Lady nearly rests Her left hand on the Child’s shoulder, indicating that this omnipotent king is Her Son. With His right hand, the Child gives a blessing, whilst His left hand holds a pinecone, symbol of fertility and everlasting life.” ... From Wikipedia: “The Romanesque sculpture is crafted in wood from the late 12th century.”" ;
    :representative-latlong-point (41.59320556 1.83713889) ; # Santa Maria de Montserrat Abbey, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:A_Virgem_de_Mont_Serrat.jpg> .
+
+:jizo-indianapolis a :human-figure ;
+   rdfs:label "Ksitigarbha Bodhisattva (Jizō Bosatsu)" ;
+   :described-by <https://collections.discovernewfields.org/art/artwork/41113> ,
+      <https://en.wikipedia.org/wiki/Ksitigarbha_bodhisattva> ;
+   :approximate-date 1175 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Wood, bronze" ;
+   :height 1.245 ;
+   :apparent-gender :male ;
+   :identifier-note "Accession no. 59.29" ;
+   :note "From Wikipedia: “The statue depicts Jizō (Ksitigarbha in Sanskrit), who in Japanese Buddhism is the bodhisattva of the earth, and is considered a protector of children and travelers. … In his right hand Jizō carries a six ringed alarum staff, or khakkhara … and in his left hand he carries a cintamani jewel.” Provenance given by the museum as Kofujuji Temple, Nara; now in the Indianapolis Museum of Art at Newfields." ;
+   :representative-latlong-point (34.685 135.804778) ; # Nara (Wikidata Q169134); museum provenance "Kofujuji Temple Nara"
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ksitigarbha_bodhisattva.jpg> .
 
 :reliquary-bust-saint-baudime a :human-figure ;
    rdfs:label "Reliquary bust of Saint Baudime" ;
