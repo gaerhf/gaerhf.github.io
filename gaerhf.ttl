@@ -1032,6 +1032,21 @@
    :art-historical-culture-or-tradition :pre-pottery-neolithic ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2014/06/JA14-Artifact-Syrian-Neolithic-Face-Wand.jpg> .
 
+:petroglyphs-gobustan a :group-of-human-figures ;
+   rdfs:label "Petroglyphs of Gobustan" ;
+   :described-by <https://en.wikipedia.org/wiki/Gobustan_Rock_Art_Cultural_Landscape> ,
+      <https://donsmaps.com/gobustan.html> ;
+   :earliest-date -8000 ;
+   :latest-date -1000 ;
+   :in-modern-country-note "Azerbaijan" ;
+   :apparent-gender :male , :female ;
+   :note "From Wikipedia: “Human figures such as dancers, hunters, and men wearing tropical-style helmets, as well as animals such as deer and goats, are depicted on the more sheltered faces of the rock formations.” From Don’s Maps, quoting Caferzade (1973): “The earliest period is responsible for almost life-size silhouette representations of men and women … with bows over their shoulders. … 8th to 6th millennia BC … In the Bronze Age and later … Silhouette pictures of human figures tended to be replaced by linear ones.”" ;
+   :representative-latlong-point (40.125 49.375) ; # Gobustan State Historical and Cultural Reserve (Wikipedia infobox, 40°07′30″N 49°22′30″E)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ancient_Azerbaijan_4.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Petroglyphs_of_Qobustan_2.jpg> ;
+   :thumbnail-image <https://donsmaps.com/images26/aurochshumans2.jpg> ,
+      <https://donsmaps.com/images43/dancingwomengobustan.jpg> .
+
 # -8000 https://en.wikipedia.org/wiki/Toquepala_Caves
 
 :phallic-figure-nemrik-9 a :human-figure ;
