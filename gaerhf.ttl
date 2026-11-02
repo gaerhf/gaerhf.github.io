@@ -3343,6 +3343,20 @@
    :representative-latlong-point (36.1545 54.3850) ; # Tepe Hissar, Damghan (Wikipedia)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_aus_Iran,_Tappe_Hesar,_Schicht_III,_Alabaster,_2300-1900_v.C._(2).jpg> .
 
+:stone-faces-shimao a :group-of-human-figures ;
+   rdfs:label "Carved Stone Faces from Shimao" ;
+   :described-by <https://en.wikipedia.org/wiki/Shimao#Arts> ,
+      <https://www.scmp.com/news/china/science/article/3188152/scientists-find-what-could-be-face-king-ancient-pyramid-china> ;
+   :earliest-date -2300 ;
+   :latest-date -1800 ;
+   :in-modern-country-note "China" ;
+   :material-note "Stone" ;
+   :apparent-gender :unclear ;
+   :note "From Wikipedia: “The sculpted human faces of Shimao are highly similar to those of northern cultures, such as the Okunev, Karakol, or Chemurchek culture.” Carved stones set in the walls of the Huangchengtai ‘pyramid’ at Shimao; in 2022 excavators announced a 2 m sculpture with three faces, one of them interpreted as a ruler’s portrait. Compare the Okunev stelae (https://gaerhf.org/#okunev-ulug-khurtuyakh-tas)." ;
+   :representative-latlong-point (38.5657 110.3252) ; # Shimao site (Wikipedia infobox)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Shimao_humanoid_sculpture_(stone_color).jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Figure_at_the_Shimao_Neolithic_Site_in_Shaanxi,_China.jpg> .
+
 :dagenham-idol a :human-figure ;
    rdfs:label "Dagenham Idol" ;
    :described-by <https://en.wikipedia.org/wiki/Dagenham_idol> ;
