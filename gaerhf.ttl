@@ -1147,7 +1147,16 @@
    :thumbnail-image <https://donsmaps.com/images26/aurochshumans2.jpg> ,
       <https://donsmaps.com/images43/dancingwomengobustan.jpg> .
 
-# -8000 https://en.wikipedia.org/wiki/Toquepala_Caves
+:toquepala-caves-hunting-scenes a :group-of-human-figures ;
+   rdfs:label "Hunting Scenes, Toquepala Caves" ;
+   :described-by <https://en.wikipedia.org/wiki/Toquepala_Caves> ;
+   :approximate-date -8000 ;
+   :in-modern-country-note "Peru" ;
+   :material-note "Mineral pigments (mainly red) on rock" ;
+   :apparent-gender :unclear ;
+   :note "From Wikipedia: “These scenes depict armed people hunting the guanaco and Andean religious symbols. … The scene depicted is of hunting by the humans who are corralling and killing a group of guanacos. The humans are in a posture of attacking the animals with axe, lances, and spear throwers.” Best known panel: Abrigo del Diablo; pre-ceramic occupation radiocarbon-dated to about 7,650 BC." ;
+   :representative-latlong-point (-17.304444 -70.718056) ; # Toquepala Caves (Wikipedia infobox, 17°18′16″S 70°43′05″W)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Toquepala_Caves_1.jpg> .
 
 :phallic-figure-nemrik-9 a :human-figure ;
    rdfs:label "Phallic figure with Human Face" ;
