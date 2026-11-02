@@ -411,6 +411,18 @@
    :note "From Wikipedia: “a 35,000–32,000 year-old carved section of mammoth ivory, with a depiction of a human figure. It was discovered in the Geißenklösterle cave in the Swabian Jura near Blaubeuren, Germany.”" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Adorant,_Geisenklösterle,_Blaubeuren-Weiler,_Alb-Donau-Kreis,_Aurignacian_culture,_35,000_to_45,000_years_old,_ivory_-_Landesmuseum_Württemberg_-_Stuttgart,_Germany_-_DSC02709.jpg> .
 
+:female-figurine-breitenbach a :human-figure ;
+   rdfs:label "Female Figurine from Breitenbach" ;
+   :described-by <https://donsmaps.com/breitenbach.html> ,
+      <https://en.wikipedia.org/wiki/Breitenbach_(archaeological_site)> ;
+   :approximate-date -32000 ;
+   :in-modern-country-note "Germany" ;
+   :material-note "Mammoth ivory" ;
+   :apparent-gender :female ;
+   :note "From Don’s Maps: “These three small ivory fragments from Breitenbach, which are only between 14 mm and 18 mm in size … have been carefully worked and polished on the surface, and can be fitted effortlessly into completely preserved figures such as those known from the ‘Hohle Fels’ in the Swabian Alb.” Found in 2012 at the Aurignacian open-air site; recognised as a figurine by Olaf Jöris and team (MONREPOS)." ;
+   :representative-latlong-point (51.007778 12.085) ; # Breitenbach archaeological site (Wikipedia infobox, 51°00′28″N 12°05′06″E)
+   :thumbnail-image <https://donsmaps.com/images37/breitenbachvenus.jpg> .
+
 :anthropomorph-toca-da-bastiana a :human-figure ;
    rdfs:label "Anthropomorph at Toca da Bastiana" ;
    :described-by <https://journals.openedition.org/palethnologie/3170> ;
@@ -546,6 +558,21 @@
    :representative-latlong-point (54.766667 38.883333) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Палеолитическая_Венера_Зарайская_стоянка_верхний_палеолит_(2).jpg> .
 
+# Group record; could be split into individual figurines (Don's Maps has a page for each: Brown Ivory/Abrachiale, Bust, Two-Headed Woman, Losange, Polichinelle, Menton, Woman with Perforated Neck, Mask, etc.).
+:female-figurines-balzi-rossi a :group-of-human-figures ;
+   rdfs:label "Female Figurines from Balzi Rossi" ;
+   :described-by <https://en.wikipedia.org/wiki/Venus_figurines_of_Balzi_Rossi> ,
+      <https://donsmaps.com/grimaldivenus.html> ;
+   :earliest-date -22000 ;
+   :latest-date -17000 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Soapstone (chlorite), steatite, ivory" ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “thirteen Palaeolithic sculptures of the female body, from the caves near Grimaldi, Ventimiglia, Italy. Additionally, two small depictions of the human head were discovered at the same place. The age of these figurines cannot be determined because of missing archaeological context data.” Found 1883–1895 by Louis Jullien; some are in the Musée d’Archéologie nationale, Saint-Germain-en-Laye, and others surfaced in Montreal in the 1990s." ;
+   :representative-latlong-point (43.784 7.534) ; # Balzi Rossi caves (Wikipedia infobox)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:MAN_-_Venus_%26_autre_-_grottes_de_Menton.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Venus_figurine_of_Grimaldi_MAN_35308.jpg> .
+
 :mal-ta-female-figurines a :group-of-human-figures ;
    rdfs:label "Figurines from Mal'ta (Siberia)" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_figurines_of_Mal%27ta> ,
@@ -648,6 +675,22 @@
    :representative-latlong-point (-17.49145 124.53265) ;
    :note "Location is approximate, as the exact location is not readily available to protect the site. Adapted from Wikipedia: “The Gwion Gwion rock paintings, Gwion figures, Kiro Kiro or Kujon (also known as the Bradshaw rock paintings, Bradshaw rock art, Bradshaw figures and the Bradshaws) are one of the two major regional traditions of rock art found in the north-west Kimberley region of Western Australia. Key traditional owners have published their own account of the meaning of the images.”" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
+
+:femme-a-la-capuche-bedeilhac a :human-figure ;
+   rdfs:label "“La Femme à la Capuche”, Carved Horse Tooth from Bédeilhac" ;
+   :described-by <https://donsmaps.com/bedeilhac.html> ,
+      <https://en.wikipedia.org/wiki/Bédeilhac_Cave> ;
+   :earliest-date -15000 ;
+   :latest-date -10000 ;
+   :in-modern-country-note "France" ;
+   :material-note "Horse canine tooth" ;
+   :height 0.047 ;
+   :apparent-gender :unclear ;
+   :identifier-note "MAN 75626" ;
+   :note "From Don’s Maps: “The sculpture represents a human head with eyes, a very large nose … the mouth partially open. The figure is framed by a sort of hood. There is a biconical transverse perforation through the neck.” Found by Joseph Mandement; part of a necklace of perforated teeth. Magdalenian." ;
+   :representative-latlong-point (42.871389 1.570556) ; # Grotte de Bédeilhac (Wikipedia infobox)
+   :thumbnail-image <https://donsmaps.com/images17/bedeilhaccapuche1.jpg> ,
+      <https://donsmaps.com/images17/bedeilhaccapuche2.jpg> .
 
 :anthropomorphs-altamira a :group-of-human-figures ;
    rdfs:label "Anthropomorphic Figures and Masks, Cave of Altamira" ;
