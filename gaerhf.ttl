@@ -357,6 +357,19 @@
    :representative-latlong-point (-4.796537 119.548710) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Maros_hunting_scene.png> .
 
+:engraved-plaque-men-bear-pechialet a :group-of-human-figures ;
+   rdfs:label "Engraved Plaque with Two Men and a Bear, Péchialet" ;
+   :described-by <https://donsmaps.com/pechialet.html> ;
+   :earliest-date -41000 ;
+   :latest-date -26000 ;
+   :in-modern-country-note "France" ;
+   :material-note "Schist" ;
+   :height 0.08 ;
+   :apparent-gender :male ;
+   :note "From Don’s Maps, after Powers (1994): “Engraving showing two men attacked by a bear (or, more likely, attacking a bear), on schist. … Each man is about 8 cm high. … although this has been assigned to the Aurignacean on the basis of other materials found with it, it more closely resembles Magdalenian artefacts from other sites.” Grotte du Chien, Péchialet; now in the Musée d’Archéologie nationale, Saint-Germain-en-Laye." ;
+   :representative-latlong-point (44.8181 1.2964) ; # Groléjac, commune of Péchialet (Wikipedia coordinates); approximate
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Engraving_bear_attacked_humans.jpg> .
+
 :hohle-fels-figurine a :human-figure ;
    rdfs:label "Female Figurine from Hohle Fels" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Hohle_Fels>  ,
@@ -558,6 +571,21 @@
    :note "Mapped at approximate point." ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2020/02/Artifact-France-Gravettian-Venus-Figurine.jpg> .
 
+# Group record; could probably be split into individual entries (e.g. figurines No. 1–3, the male No. 4, the "double venus" Nos. 7–8).
+:figurines-avdeevo a :group-of-human-figures ;
+   rdfs:label "Figurines from Avdeevo" ;
+   :described-by <https://donsmaps.com/avdeevo.html> ,
+      <https://ru.wikipedia.org/wiki/Авдеевская_стоянка> ;
+   :earliest-date -21000 ;
+   :latest-date -18000 ;
+   :in-modern-country-note "Russia" ;
+   :material-note "Mammoth ivory" ;
+   :apparent-gender :female , :male ;
+   :note "From Don’s Maps, after Gvozdover (1995): “The Avdeevo venus figures are quite variable, but most depict mature women in various stages of the reproductive cycle.” The site also yielded a male figurine (No. 4, New Avdeevo). Kostenki-Avdeevo culture, on the Sejm River about 40 km from Kursk." ;
+   :representative-latlong-point (51.6881 35.788857) ; # Avdeevo Palaeolithic site (Russian Wikipedia / Wikidata Q7493789)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Avdeevo_Venus.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Avdeevo_Double_Venuses.jpg> .
+
 :lascaux-ithyphallic-figure a :human-figure ;
    rdfs:label "Lascaux Ithyphallic Figure" ;
    :described-by <https://en.wikipedia.org/wiki/Lascaux> ;
@@ -620,6 +648,20 @@
    :representative-latlong-point (-17.49145 124.53265) ;
    :note "Location is approximate, as the exact location is not readily available to protect the site. Adapted from Wikipedia: “The Gwion Gwion rock paintings, Gwion figures, Kiro Kiro or Kujon (also known as the Bradshaw rock paintings, Bradshaw rock art, Bradshaw figures and the Bradshaws) are one of the two major regional traditions of rock art found in the north-west Kimberley region of Western Australia. Key traditional owners have published their own account of the meaning of the images.”" ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bradshaw_rock_paintings.jpg> .
+
+:anthropomorphs-altamira a :group-of-human-figures ;
+   rdfs:label "Anthropomorphic Figures and Masks, Cave of Altamira" ;
+   :described-by <https://donsmaps.com/altamirapaintings.html> ,
+      <https://en.wikipedia.org/wiki/Cave_of_Altamira> ;
+   :earliest-date -14600 ;
+   :latest-date -12000 ;
+   :in-modern-country-note "Spain" ;
+   :apparent-gender :male , :unclear ;
+   :note "From Don’s Maps, quoting Cartailhac and Breuil (1906): “Graffiti appearing to represent human beings, probably wearing masks, and raising their arms in the air. … the phallus is in champlevé.” Also from Don’s Maps, on a face in the final gallery: “It looks like a natural feature of the walls, but was known to the painters … One ‘eye’ of the face has been outlined in black.”" ;
+   :representative-latlong-point (43.3825 -4.120278) ; # Cave of Altamira (Wikipedia infobox, 43°22′57″N 4°7′13″W)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:14_Máscara_en_la_Galería_Final.JPG> ;
+   :thumbnail-image <https://donsmaps.com/images42/altamiraanthropomorphs1dark.jpg> ,
+      <https://donsmaps.com/images42/altamiraanthropomorphs2.jpg> .
 
 :toca-do-baixao-perna-i a :group-of-human-figures ;
    rdfs:label "Toca do Baixao do Perna I Pictograms" ;
