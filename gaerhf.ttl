@@ -3522,6 +3522,18 @@
    :representative-latlong-point (35.602 35.782) ; # Ugarit (Ras Shamra), acropolis west of the Temple of Baal; found 1932
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Baal_thunderbolt_Louvre_AO15775.jpg> .
 
+:huntcliff-figure a :human-figure ;
+   rdfs:label "Huntcliff Figure" ;
+   :described-by <https://en.wikipedia.org/wiki/Huntcliff_Figure> ;
+   :earliest-date -2000 ;
+   :latest-date 100 ;
+   :apparent-gender :unclear ;
+   :material-note "Sandstone" ;
+   :note "From Wikipedia: “Carved from a single block of stone, it has an ambiguous and highly stylised humanoid form, with a rounded abdomen and disproportionately large thighs. As it was found after being eroded from its original setting, there is no secure archaeological context to establish its date or purpose, and its gender remains uncertain.” Found in 1886 at the foot of Hunt Cliff; now in the Dorman Museum, Middlesbrough." ;
+   :in-modern-country-note "United Kingdom" ;
+   :representative-latlong-point (54.584 -0.92) ; # Hunt Cliff (Wikipedia); found on the beach below the cliff
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Huntcliff_Figure_-_Adam_Morgan_Ibbotson.jpg> .
+
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
    :described-by <https://www.historymuseum.ca/collections/artifact/1295533> ;
@@ -3819,6 +3831,21 @@
    :note "Adapted from Louvre: Saqqara, Memphite necropolis; possibly from the tomb of General Djehuty; acquired from Drovetti in 1827." ;
    :representative-latlong-point (29.8711 31.2164) ; # ll for Saqqara
    :thumbnail-image <https://collections.louvre.fr/media/cache/large/0000000021/0000013075/0001135241_OG.JPG> .
+
+:large-kneeling-statue-hatshepsut a :human-figure ;
+   rdfs:label "Large Kneeling Statue of Hatshepsut" ;
+   :described-by <https://www.metmuseum.org/art/collection/search/544448> ;
+   :earliest-date -1473 ;
+   :latest-date -1458 ;
+   :apparent-gender :female ;
+   :height 2.959 ;
+   :material-note "Granite" ;
+   :identifier-note "Accession no. 30.3.1" ;
+   :note "From The Met: “In her terraced temple at Deir el-Bahri, there were at least ten over life-sized kneeling statues of Hatshepsut. She is shown as a male king wearing a kilt, a false beard, and either the white crown of Upper Egypt (as in this statue), or the nemes–headcloth … In her hands she holds round offering vessels, called nu–pots …”" ;
+   :in-modern-country-note "Egypt" ;
+   :representative-latlong-point (25.7375 32.6075) ; # Deir el-Bahari (Wikipedia)
+   :thumbnail-image <https://images.metmuseum.org/CRDImages/eg/original/21V_CAT092R3.jpg> ,
+      <https://images.metmuseum.org/CRDImages/eg/original/DP116049.jpg> .
 
 :pylos-combat-agate a :group-of-human-figures ;
    rdfs:label "Pylos Combat Agate" ;
@@ -5079,6 +5106,22 @@
    :note "From Wikipedia: “The Dedication of Nikandre is a Greek marble sculpture, made approximately around 650 BCE, held in the National Archaeological Museum, Athens, Greece (Inv. 1). Nikandre, a woman from the island of Naxos, dedicated the statue in the temple of Artemis at Delos, the birthplace of Apollo and Artemis. The statue, which was found during archaeological excavation in the 19th century, is one of the earliest surviving korai, or statues of women, and displays one of the oldest inscriptions of Ancient Greek in stone. ... On the left side of the statue is the dedicatory inscription, one of the earliest surviving inscriptions of Greek in stone.”" ;
    :representative-latlong-point (37.3993075 25.268868) ; # TO CONFIRM: source unknown (Wikipedia's Delos coord is 37.39333333 25.27111111)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Statue_of_Nikandre.jpg> .
+
+:banquet-ashurbanipal-relief a :group-of-human-figures ;
+   rdfs:label "Assyrian Relief of the Banquet of Ashurbanipal" ;
+   :described-by <https://www.britishmuseum.org/collection/object/W_1856-0909-53> ,
+      <https://en.wikipedia.org/wiki/Libb%C4%81li-%C5%A1arrat#Queen_of_Assyria> ;
+   :earliest-date -645 ;
+   :latest-date -635 ;
+   :apparent-gender :male , :female ;
+   :height 0.565 ;
+   :material-note "Gypsum" ;
+   :identifier-note "BM 124920 (Reg. no. 1856,0909.53)" ;
+   :note "From the British Museum: “… two women holding napkins and fanning the queen with fly-whisks; two more each bring a dish … towards the enthroned queen and reclining king, who feast in the arbour amid the vines, conifers and palms, hung with the grisly trophies of victory, consisting of the head and hand … of Teumman, king of Elam. The hands of a woman drummer and a woman harpist can be seen amid the palms and conifers. Behind the king stand two more ladies holding napkins and fanning him …” From the North Palace, Nineveh." ;
+   :in-modern-country-note "Iraq" ;
+   :representative-latlong-point (36.359444 43.152778) ; # Nineveh (Wikipedia); North Palace, Kuyunjik
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Assyrian_Relief_Garden_of_Ashurbanipal_Nineveh_Gypsum_N_Palace_Ashurbanipal_British_Museum_AG_01.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Assyrian_Relief_Garden_of_Ashurbanipal_Nineveh_Gypsum_N_Palace_Ashurbanipal_British_Museum_AG_03.jpg> .
 
 :macmillan-aryballos a :group-of-human-figures ;
    rdfs:label "Macmillan Aryballos" ;
@@ -7078,9 +7121,14 @@
    :described-by <https://en.wikipedia.org/wiki/Corleck_Head> ;
    :earliest-date 1 ;
    :latest-date 200 ;
+   :apparent-gender :unclear ;
+   :height 0.33 ;
+   :material-note "Limestone" ;
+   :note "From Wikipedia: “The head is carved from a single block of limestone into three simply described faces. They each have similar features, including protruding eyes, thin and narrow mouths and enigmatic expressions. The head's exact dating and cultural significance are difficult to establish. The faces may depict all-knowing, all-seeing gods representing the unity of the past, present and future.”" ;
    :in-modern-country-note "Ireland" ;
-   :representative-latlong-point (53.9726 -6.9975) ;
-   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Corleck_Head_A4.jpg> .
+   :representative-latlong-point (53.9725 -6.9981) ; # Corleck Hill, Co. Cavan (Wikipedia, findspot); now in the National Museum of Ireland, Dublin
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Corleck_Head_A4.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Corleck_head_Faces.jpg> .
 
 :female-khor-rori a :human-figure ;
    rdfs:label "Female Figure from Khor Rori" ;
@@ -7196,6 +7244,19 @@
    :in-modern-country-note "Brazil" ;
    :representative-latlong-point (-3.161182 -59.986566) ;
    :thumbnail-image <https://www.ancientartarchive.org/wp-content/uploads/lowwater.png> .
+
+:hohensalzburg-head a :human-figure ;
+   rdfs:label "Hohensalzburg head" ;
+   :described-by <https://en.wikipedia.org/wiki/Hohensalzburg_head> ;
+   :earliest-date 1 ;
+   :latest-date 100 ;
+   :apparent-gender :male ;
+   :height 0.17 ;
+   :material-note "Untersberg marble" ;
+   :note "From Wikipedia: “The head is male and life-sized. The cheeks are hollow. The nose … is wedge-shaped except for two flared nostrils. … The eyes are protruding and oval, with pupils indented. The mouth is peculiarly twisted, like a circumflex. In place of hair, crowning the head, are deep, vertical ridges in a wave-like pattern.” Built into Hohensalzburg Fortress as spolia until 1956; now in the Salzburg Museum." ;
+   :in-modern-country-note "Austria" ;
+   :representative-latlong-point (47.795 13.047222) ; # Hohensalzburg Fortress, Salzburg (Wikipedia); original findspot unknown
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Salzburg_Museum_6900,_Cropped_around_Hohensalzburg_head.jpg> .
 
 :pillar-of-the-boatmen a :group-of-human-figures ;
    rdfs:label "Pillar of the Boatmen (Pilier des nautes)" ;
