@@ -2979,6 +2979,19 @@
    :thumbnail-image <https://www.harappa.com/sites/default/files/styles/galleryformatter_slide/public/chanhudaro-dancer-spear-thrower.jpg> ;
    :alt-thumbnail-image <https://collections.mfa.org/internal/media/dispatcher/1009998/preview> .
 
+:figurines-tureng-tepe a :group-of-human-figures ;
+   rdfs:label "Figurines from Tureng Tepe" ;
+   :described-by <https://en.wikipedia.org/wiki/Tureng_Tepe> ;
+   :earliest-date -2600 ;
+   :latest-date -2100 ;
+   :in-modern-country-note "Iran" ;
+   :material-note "Terracotta and stone" ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “The figurines of Tureng Tepe have long been recognized as quite remarkable. They include both terracotta and stone figurines. ... As far as the stone figurines, there are many similarities between Tureng and the nearby sites of Shah Tepe, Tepe Hissār, and Gohar Tappeh. Yet the terracotta figurines of Tureng Tepe are unparalleled at any other nearby site. These baked clay figurines find their parallels with sites further away, in Turkmenistan and the Indus valley.”" ;
+   :representative-latlong-point (36.938319 54.586519) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ceramic_Female_figurine_Tureng_Tepe_Iran_Tureng_Tepe_IIIB_period_3500-2900_BCE.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:Female_Figurine_Iran_Tureng_Tepe_IIIB_Period_3rd_Millenium_BCE_(64322880).jpg> .
+
 :bust-ankhhaf a :human-figure ;
    rdfs:label "Bust of Ankhhaf" ;
    :described-by <https://en.wikipedia.org/wiki/Bust_of_Ankhhaf> ,
@@ -3202,6 +3215,18 @@
    :note "Translated from Russian Wikipedia: “… in the fields of the settlement of Poltakov, Askizsky District … Of unusual L-shaped form with indicated hair, patterned ‘ribbons’ on the shoulders … rings — earrings — placed one above another, and an additional face in place of the belly.” Now in the Khakassia National Museum, Abakan." ;
    :in-modern-country-note "Russia" ;
    :representative-latlong-point (52.953556 90.187028) . # Poltakov, Askizsky District, Khakassia (Russian Wikipedia)
+
+:alabaster-figurine-tepe-hissar a :human-figure ;
+   rdfs:label "Alabaster Figurine from Tepe Hissar" ;
+   :described-by <https://en.wikipedia.org/wiki/Tepe_Hissar> ;
+   :earliest-date -2300 ;
+   :latest-date -1900 ;
+   :in-modern-country-note "Iran" ;
+   :material-note "Alabaster" ;
+   :apparent-gender :female ;
+   :note "From Wikipedia: “Figurine from Tepe Hissar, Strata IIIC, Alabaster ... The final and most recent layer at Tepe Hissar, IIIC, is also very thin and the buildings are few and insignificant however burials from that layer are ‘extraordinarily well-equipped’ and the buried hoards on Treasure Hill was particularly rich in finds.”" ;
+   :representative-latlong-point (36.1545 54.3850) ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_aus_Iran,_Tappe_Hesar,_Schicht_III,_Alabaster,_2300-1900_v.C._(2).jpg> .
 
 :dagenham-idol a :human-figure ;
    rdfs:label "Dagenham Idol" ;
