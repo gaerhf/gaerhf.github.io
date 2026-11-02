@@ -523,6 +523,21 @@
    :representative-latlong-point (51.385833 39.051667) ; # ll for Kostyonki, Russia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Kostenki_I_Venus.jpg> .
 
+:female-figurine-chiozza a :human-figure ;
+   rdfs:label "Female Figurine from Chiozza" ;
+   :described-by <https://www.musei.re.it/archivio-qr/qr-045/> ,
+      <https://it.wikipedia.org/wiki/Venere_di_Chiozza> ,
+      <https://donsmaps.com/chiozzavenus.html> ;
+   :earliest-date -25000 ;
+   :latest-date -4500 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Sandstone" ;
+   :height 0.205 ;
+   :apparent-gender :female ;
+   :note "Translated from Italian Wikipedia: “The style and material recall the Palaeolithic figurines, but it was found near important Early and Middle Neolithic sites and some scholars prefer that date; it has also been suggested that it was Palaeolithic but reused by the Neolithic inhabitants of Chiozza.” Found in 1940 in the Alboni clay pits at Chiozza di Scandiano; now in the Palazzo dei Musei, Reggio Emilia." ;
+   :representative-latlong-point (44.596274 10.707464) ; # Chiozza, Scandiano (Wikidata Q60483341)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Venere_di_Chiozza_01.jpg> .
+
 :lespugue-figurine a :human-figure ;
    rdfs:label "Female Figurine from Lespugue" ;
    :described-by <https://en.wikipedia.org/wiki/Venus_of_Lespugue> ;
