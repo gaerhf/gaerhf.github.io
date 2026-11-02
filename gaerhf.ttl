@@ -2987,8 +2987,8 @@
    :in-modern-country-note "Iran" ;
    :material-note "Terracotta and stone" ;
    :apparent-gender :female ;
-   :note "From Wikipedia: “The figurines of Tureng Tepe have long been recognized as quite remarkable. They include both terracotta and stone figurines. ... As far as the stone figurines, there are many similarities between Tureng and the nearby sites of Shah Tepe, Tepe Hissār, and Gohar Tappeh. Yet the terracotta figurines of Tureng Tepe are unparalleled at any other nearby site. These baked clay figurines find their parallels with sites further away, in Turkmenistan and the Indus valley.”" ;
-   :representative-latlong-point (36.938319 54.586519) ;
+   :note "From Wikipedia: “The figurines of Tureng Tepe have long been recognized as quite remarkable. They include both terracotta and stone figurines. … As far as the stone figurines, there are many similarities between Tureng and the nearby sites of Shah Tepe, Tepe Hissār, and Gohar Tappeh. Yet the terracotta figurines of Tureng Tepe are unparalleled at any other nearby site. These baked clay figurines find their parallels with sites further away, in Turkmenistan and the Indus valley.”" ;
+   :representative-latlong-point (36.934722 54.590278) ; # Tureng Tepe (Wikidata Q5244467; French Wikipedia)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ceramic_Female_figurine_Tureng_Tepe_Iran_Tureng_Tepe_IIIB_period_3500-2900_BCE.jpg> ,
       <https://commons.wikimedia.org/wiki/File:Female_Figurine_Iran_Tureng_Tepe_IIIB_Period_3rd_Millenium_BCE_(64322880).jpg> .
 
@@ -3224,8 +3224,8 @@
    :in-modern-country-note "Iran" ;
    :material-note "Alabaster" ;
    :apparent-gender :female ;
-   :note "From Wikipedia: “Figurine from Tepe Hissar, Strata IIIC, Alabaster ... The final and most recent layer at Tepe Hissar, IIIC, is also very thin and the buildings are few and insignificant however burials from that layer are ‘extraordinarily well-equipped’ and the buried hoards on Treasure Hill was particularly rich in finds.”" ;
-   :representative-latlong-point (36.1545 54.3850) ;
+   :note "From Wikipedia: “Figurine from Tepe Hissar, Strata IIIC, Alabaster” (image caption). “… The final and most recent layer at Tepe Hissar, IIIC, is also very thin and the buildings are few and insignificant however burials from that layer are ‘extraordinarily well-equipped’ and the buried hoards on Treasure Hill was particularly rich in finds.”" ;
+   :representative-latlong-point (36.1545 54.3850) ; # Tepe Hissar, Damghan (Wikipedia)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Figurine_aus_Iran,_Tappe_Hesar,_Schicht_III,_Alabaster,_2300-1900_v.C._(2).jpg> .
 
 :dagenham-idol a :human-figure ;
