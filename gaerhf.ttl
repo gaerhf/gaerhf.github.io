@@ -3040,6 +3040,7 @@
    :earliest-date -2700 ;
    :latest-date  -2300 ;
    :material-note "Marble" ;
+   :identifier-note "NAM 3908" ;
    :note "From NAM website: “…male harpist sits on an elegant throne holding a large musical instrument resembling a harp or lyre in his right hand. His nose and penis are shown in relief, as on most Cycladic figurines. It was found in a tomb together with the figurine of a flutist; both artefacts were probably made by the same craftsman.”" ;
    :in-modern-country-note "Greece" ;
    :representative-latlong-point (36.887699 25.603557) ;
@@ -3063,6 +3064,21 @@
    :in-modern-country-note "Egypt" ;
    :representative-latlong-point (29.8685 31.218633) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Hesy-Ra_CG1426.jpg> .
+
+:statue-metjen a :human-figure ;
+   rdfs:label "Statue of Metjen" ;
+   :described-by <https://en.wikipedia.org/wiki/Statue_of_Metjen> ,
+      <https://www.smb.museum/en/museums-institutions/aegyptisches-museum-und-papyrussammlung/collection-research/collection-highlights/> ;
+   :earliest-date -2663 ;
+   :latest-date -2604 ;
+   :in-modern-country-note "Egypt" ;
+   :material-note "Granite" ;
+   :height 0.47 ;
+   :apparent-gender :male ;
+   :identifier-note "ÄM 1106" ;
+   :note "From Wikipedia: “Metjen is shown sitting on a chair. His right hand forms a fist and is placed on the chest, the left hand is placed on the leg. … On the sides of the chair are inscriptions providing Metjen’s name and his titles. The statue was once placed in the serdab of the mastaba and was therefore only visible via a small hole in the wall.” Found by the Lepsius expedition (1842–1845); now in the Ägyptisches Museum, Berlin." ;
+   :representative-latlong-point (29.871111 31.216389) ; # Saqqara (Wikipedia coordinates); Berlin museum gives the findspot as Saqqara, Wikipedia as Abusir
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:-2600_Verwalter_und_Schreiber_Metjen_anagoria.JPG> .
 
 :valdiva-culture-female-figurine a :human-figure ;
    rdfs:label "Valdivia Culture Female Figurine" ;
@@ -4381,6 +4397,19 @@
    :representative-latlong-point (36.199167 37.1625) ; # Citadel of Aleppo, Storm-God temple cella, in situ (Wikidata Q206231)
    :thumbnail-image <https://www.hittitemonuments.com/aleppo/aleppo22.jpg> ,
       <https://www.hittitemonuments.com/aleppo/aleppo22b.jpg> .
+
+:writing-on-stone-rock-art a :group-of-human-figures ;
+   rdfs:label "Rock Art of Writing-on-Stone (Áísínai’pi)" ;
+   :described-by <https://thecanadianencyclopedia.ca/en/article/writing-on-stone-archaeological-site> ,
+      <https://en.wikipedia.org/wiki/Writing-on-Stone_Provincial_Park> ;
+   :approximate-date -1050 ;
+   :in-modern-country-note "Canada" ;
+   :material-note "Petroglyphs and pictographs on sandstone cliffs" ;
+   :apparent-gender :male , :unclear ;
+   :note "From the Canadian Encyclopedia: “Human beings are commonly depicted in the rock art of Áísínai’pi. Some figures are round-bodied and are believed to be warriors standing behind large shields. … Young warriors on vision quests — days spent fasting and praying at a sacred place — may have recorded the dreams they had during these journeys.” A sacred place of the Siksikaitsitapi (Blackfoot Nation); most of the art dates to around 1050 BCE, but it continued to be made after European contact." ;
+   :representative-latlong-point (49.081944 -111.616944) ; # Writing-on-Stone Provincial Park (Wikipedia infobox, 49°4′55″N 111°37′1″W)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Writing_on_stone990.jpg> ;
+   :thumbnail-image <https://d3d0lqu00lnqvz.cloudfront.net/media/media/077d6859-bc35-43aa-b7a6-7927717f04cb.jpg> .
 
 :clamshell-carved-face a :human-figure ;
    rdfs:label "Clamshell with Carved Face" ;
@@ -8177,6 +8206,7 @@
    :described-by <https://en.wikipedia.org/wiki/Brahma_from_Mirpur-Khas> ;
    :earliest-date 401 ;
    :latest-date 600 ;
+   :height 0.95 ;
    :apparent-gender :male ;
    :material-note "Copper alloy (variously described as bronze, brass, copper or gilt bronze)" ;
    :note "From Wikipedia: “It is the earliest known metallic image of Brahma, and the only known representative of the school it represents. It has been described as ‘an immense artistic creation’ of the Gupta period. It was found in a field near Mirpur-Khas as first reported by Henry Cousens in 1929. Some report it as having been found at Brahmanabad. … The four-headed Brahma bronze statue has a height over 3 feet. … He is shown standing with two hands, wearing a dhoti and a yajnopavita but without any ornaments.”" ;
@@ -10764,13 +10794,15 @@
 
 :dainichi-nyorai-enjoji a :human-figure ;
    rdfs:label "Dainichi Nyorai (Enjō-ji)" ;
-   :described-by <https://en.wikipedia.org/wiki/Dainichi_Nyorai_(Enj%C5%8D-ji)> ;
+   :described-by <https://kunishitei.bunka.go.jp/heritage/detail/201/282> ,
+      <https://en.wikipedia.org/wiki/Dainichi_Nyorai_(Enj%C5%8D-ji)> ;
    :earliest-date 1175 ;
    :latest-date 1176 ;
    :in-modern-country-note "Japan" ;
    :material-note "Hinoki (Japanese cypress), lacquer, gold leaf, rock-crystal eyes, gilt bronze" ;
    :apparent-gender :male ;
-   :note "From Wikipedia: “The seated wooden statue of Dainichi Nyorai at the Shingon temple of Enjō-ji in Nara is the earliest and best-substantiated work by Japanese master sculptor Unkei. An inscription on the pedestal records that he began work on the piece in 1175 and brought it to completion the following year. ... In this image Dainichi is bare-chested, with flowing draperies hanging from the left shoulder; the head is crowned, the arms, wrists, neck, chest, and legs bejewelled; the topknot is high, with long hair resting on the right shoulder.”" ;
+   :identifier-note "National Treasure designation no. 00119" ;
+   :note "From Wikipedia: “The seated wooden statue of Dainichi Nyorai at the Shingon temple of Enjō-ji in Nara is the earliest and best-substantiated work by Japanese master sculptor Unkei. An inscription on the pedestal records that he began work on the piece in 1175 and brought it to completion the following year. … In this image Dainichi is bare-chested, with flowing draperies hanging from the left shoulder; the head is crowned, the arms, wrists, neck, chest, and legs bejewelled; the topknot is high, with long hair resting on the right shoulder.”" ;
    :representative-latlong-point (34.69583333 135.91527778) ; # Enjō-ji, Nara, from Wikipedia
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Dainichi_Nyorai_Unkei_Enjoji_1.jpg> .
 
