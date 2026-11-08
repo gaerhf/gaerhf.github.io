@@ -10741,6 +10741,23 @@
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Gu_Hongzhong%27s_Night_Revels_1_edit_(cropped2)_(cropped)_(cropped).jpg> ,
       <https://commons.wikimedia.org/wiki/File:Han_Xizai_Night_Party_(part).jpg> .
 
+:sarcophagi-tingorbamba a :group-of-human-figures ;
+   rdfs:label "Sarcophagi of Tingorbamba (Pueblo de los Muertos)" ;
+   :described-by <https://www.chachapoya.org/tingorbamba/> ,
+      <https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=5804> ,
+      <https://es.wikipedia.org/wiki/Tingorbamba> ,
+      <https://www.perunorth.com/pueblo-de-los-muertos-tingorbamba> ,
+      <https://www.chachapoya.org/project/tingorbamba-giga/> ;
+   :earliest-date 1100 ;
+   :latest-date 1470 ;
+   :in-modern-country-note "Peru" ;
+   :material-note "Stone, sticks, reeds, rope and vegetable fibre, covered in clay mortar" ;
+   :apparent-gender :unclear ;
+   :note "From Peru North: “the complex features over 50 funerary structures built by the Chachapoya culture, which was known for its distinctive burial practices of entombing elite groups and individuals on the sides of cliffs. … On lower ledges are sarcophagi that show anthropomorphic features with a prominent jaw (similar to, but smaller than those at Karajia).” Near Lamud, Luya province; compare the Sarcophagi of Karajía (https://gaerhf.org/#sarcophagi-karajia)." ;
+   :representative-latlong-point (-6.1074947 -77.9063749) ; # Pueblo de los Muertos (template value; source to confirm)
+   :thumbnail-image <https://consultasenlinea.mincetur.gob.pe/fichaInventario//foto.aspx?cod=562730> ;
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Pueblo_de_los_muertos_luya_amazonas_peru.jpg> .
+
 :bayeux-tapestry a :group-of-human-figures ;
    rdfs:label "Bayeaux Tapestry" ;
    :described-by <https://en.wikipedia.org/wiki/Bayeux_Tapestry> ;
@@ -11364,6 +11381,23 @@
    :in-modern-country-note "Peru" ;
    :representative-latlong-point (-13.451387 -76.170803 ) ;
    :thumbnail-image <https://collectionapi.metmuseum.org/api/collection/v1/iiif/312640/2085962/main-image> .
+
+:sarcophagi-karajia a :group-of-human-figures ;
+   rdfs:label "Sarcophagi of Karajía" ;
+   :described-by <https://en.wikipedia.org/wiki/Sarcophagi_of_Caraj%C3%ADa> ,
+      <https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=1795> ,
+      <https://www.chachapoya.org/karajia/> ,
+      <https://www.chachapoya.org/project/karajia-3d/> ,
+      <https://www.chachapoya.org/project/karajia-giga/> ;
+   :earliest-date 1401 ;
+   :latest-date 1500 ;
+   :in-modern-country-note "Peru" ;
+   :material-note "Clay, sticks and grasses; painted" ;
+   :height 2.5 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “The seven sarcophagi stand up to 2.5 meters tall, constructed of clay, sticks and grasses, with exaggerated jawlines. … They have been radiocarbon dated to the 15th century, coincident with the Inca conquest of the Chachapoya in the 1470s. … The construction is painted white and overlaid with details of the body and adornment in yellow ochre and two red pigments, such as the feathered tunics and male genitalia visible on the Karajía purunmachus.” Human skulls sit atop their heads." ;
+   :representative-latlong-point (-6.161944 -78.021389) ; # Sarcophagi of Karajía (Wikipedia infobox, 6°09′43″S 78°01′17″W)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Karaj%C3%ADa,_2023_(01,_cropped).jpg> .
 
 :zuccone-donatello a :human-figure ;
    rdfs:label "Zuccone (Prophet Habakkuk) by Donatello" ;
