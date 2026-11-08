@@ -5019,6 +5019,22 @@
       <https://www.hittitemonuments.com/arslantas2/arslan-tas22.jpg> ,
       <https://www.hittitemonuments.com/arslantas2/arslan-tas23.jpg> .
 
+:tribute-bearers-orthostats-arslan-tash a :group-of-human-figures ;
+   rdfs:label "Orthostats of Tribute Bearers" ;
+   :described-by <https://www.hittitemonuments.com/arslantas2/> ;
+   :earliest-date -800 ;
+   :latest-date -700 ;
+   :in-modern-country-note "Syria" ;
+   :material-note "Limestone" ;
+   :apparent-gender :male ;
+   :note "From Hittite Monuments: “Numerous orthostats and three pairs of portal lions that once decorated the city gates and temple entrances mainly date to the Assyrian period in the 8th century, although they display the north Syrian workmanship.” Slabs now in the Istanbul Archaeological Museums, Aleppo Museum, the Louvre and the Bible Lands Museum, Jerusalem; one in the Gaziantep Museum is possibly from Arslan Tash." ;
+   :representative-latlong-point (36.848611 38.407778) ; # Arslan Tash (ancient Hadattu), Wikipedia coordinates
+   :thumbnail-image <https://www.hittitemonuments.com/arslantas2/arslan-tas24.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas25.jpg> ,
+      <https://www.hittitemonuments.com/gaziantep/gaziantep03b.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas26.jpg> ,
+      <https://www.hittitemonuments.com/arslantas2/arslan-tas27.jpg> .
+
 :lunigiana-statue-stele-filetto-ii-bocconi a :human-figure ;
    rdfs:label "Filetto II Statue-Stele (‘Bocconi’)" ;
    :described-by <https://statuestele.org/statua-stele/filetto-ii-calco-da-toccare/?lang=en> ,
@@ -5112,6 +5128,22 @@
    :in-modern-country-note "Germany" ;
    :representative-latlong-point ( 54.024095 13.296299 ) ;
    :thumbnail-image <https://archaeology.org/wp-content/uploads/2022/08/SO22-Artifact-Germany-Bronze-Figurine.jpg> .
+
+:stele-adad-arslan-tash a :human-figure ;
+   rdfs:label "Stele of Adad" ;
+   :described-by <https://collections.louvre.fr/en/ark:/53355/cl010120231> ,
+      <https://www.hittitemonuments.com/arslantas2/> ;
+   :earliest-date -744 ;
+   :latest-date -727 ;
+   :in-modern-country-note "Syria" ;
+   :material-note "Basalt" ;
+   :height 1.36 ;
+   :apparent-gender :male ;
+   :identifier-note "Louvre AO 13092" ;
+   :note "Translated from the Louvre: “Adad standing on a bull. The bearded god wears the horned tiara, a short tunic, an open mantle, a sword and two quivers, and brandishes two thunderbolts. In the field, a rayed disc.” Found in 1928 in the Temple of Ishtar at Arslan Tash; reign of Tiglath-Pileser III." ;
+   :representative-latlong-point (36.848611 38.407778) ; # Arslan Tash (ancient Hadattu), Wikipedia coordinates; findspot Temple of Ishtar; now in the Louvre
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Stele_of_Adad_0240.jpg> ;
+   :thumbnail-image <https://www.hittitemonuments.com/arslantas2/arslan-tas31.jpg> .
 
 :daunian-stele-m065 a :human-figure ;
    rdfs:label "Daunian Stele M065" ;
@@ -7522,6 +7554,20 @@
    :representative-latlong-point (47.795 13.047222) ; # Hohensalzburg Fortress, Salzburg (Wikipedia); original findspot unknown
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Salzburg_Museum_6900,_Cropped_around_Hohensalzburg_head.jpg> .
 
+:muri-statuette-group a :group-of-human-figures ;
+   rdfs:label "Muri Statuette Group" ;
+   :described-by <https://en.wikipedia.org/wiki/Muri_statuette_group> ;
+   :earliest-date 1 ;
+   :latest-date 200 ;
+   :in-modern-country-note "Switzerland" ;
+   :material-note "Bronze" ;
+   :apparent-gender :male , :female ;
+   :note "From Wikipedia: “The deities belong to two different religious traditions, attesting to the fusion of Roman and Gallic practices of worship in Switzerland in the Roman era: Jupiter, Juno and Minerva, the Capitoline Triad, are Roman gods, as is the Lar, while Artio and Naria are Romanized Celtic goddesses of regional significance.” Six figurines found in 1832 at Muri bei Bern; the five main statues probably late 2nd century AD, the Lar 1st century AD from Italy. Historical Museum of Bern." ;
+   :representative-latlong-point (46.933333 7.483333) ; # Muri bei Bern (Wikipedia coordinates)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:HMB_-_Muri_statuette_group_-_Ensemble.jpg> ,
+      <https://commons.wikimedia.org/wiki/File:HMB_-_Muri_statuette_group_-_Naria.jpg> ;
+   :thumbnail-image <https://ik.imagekit.io/jv7stoijc/tr:w-533,h-800,cm-extract,x-36,y-0:w-500,f-auto/assets/Sammlungen/Archaeologische-Sammlung/E-129-a.jpg> .
+
 :pillar-of-the-boatmen a :group-of-human-figures ;
    rdfs:label "Pillar of the Boatmen (Pilier des nautes)" ;
    :described-by <https://en.wikipedia.org/wiki/Pillar_of_the_Boatmen> ,
@@ -7811,6 +7857,21 @@
    :representative-latlong-point (42.166667 12.6) ; # Fiano Romano (Wikipedia)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Fiano_Romano_mithraic_relief.jpg> ;
    :thumbnail-image <https://collections.louvre.fr/media/cache/medium/0000000021/0000277122/0000624683_OG.JPG> .
+
+:neptune-lyon a :human-figure ;
+   rdfs:label "Neptune of Lyon" ;
+   :described-by <https://lugdunum.grandlyon.com/Oeuvre/2587-Statue-en-bronze-de-Neptune> ,
+      <https://en.wikipedia.org/wiki/Neptune_of_Lyon> ;
+   :earliest-date 101 ;
+   :latest-date 200 ;
+   :in-modern-country-note "France" ;
+   :material-note "Bronze (hollow cast, welded); eyes inlaid with silver" ;
+   :height 1.43 ;
+   :apparent-gender :male ;
+   :identifier-note "Lugdunum br.054" ;
+   :note "Translated from the Lugdunum museum: “The arrangement of the hair in ‘wet curls’ is characteristic of Neptune, god of the waters and the sea, depicted emerging from the water. … This statue, which is nearly life-size, would have been located in a public place of worship, perhaps connected to the river.” Found 28 March 1859 in the bed of the Rhône at Lyon; probably from a Gallic workshop." ;
+   :representative-latlong-point (45.7583 4.8392) ; # Rhône between the Hôtel-Dieu and Guillotière bridges, Lyon (approximate findspot)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Lyon_5e_-_Mus%C3%A9e_Lugdunum_-_Statue_en_bronze_de_Neptune,_d%C3%A9couverte_dans_le_lit_du_Rh%C3%B4ne_%C3%A0_Lyon.jpg> .
 
 :hadrian-sabina-mars-venus-louvre a :group-of-human-figures ;
    rdfs:label "Hadrian and Sabina as Mars and Venus" ;
