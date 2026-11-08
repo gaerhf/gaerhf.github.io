@@ -1515,6 +1515,19 @@
    :representative-latlong-point (39.6 22.2) ; # Thessaly (regional centre)
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Female_figurine_marble_Thessaly_5300-3300_BC,_NAMA_8772_080802x.jpg> .
 
+:female-figurine-grotta-pavolella a :human-figure ;
+   rdfs:label "Female Figurine from Grotta Pavolella" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/statuina-di-grotta-pavolella-cassano-jonico-cs/> ;
+   :earliest-date -5300 ;
+   :latest-date -5000 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Ceramic (figulina), painted" ;
+   :height 0.075 ;
+   :apparent-gender :female ;
+   :note "From Prehistory in Italy: “It is a female statuette in the round, probably forming part of the handle of a vase, with a strong naturalistic imprint and with physiognomic details and clothing details made with paint. … the nape is trapezoidal, with a prominent nose and eyes made from simple perforations.” Found in a Middle Neolithic cremation layer in the cave, Monte San Marco, Cassano allo Ionio (Cosenza)." ;
+   :representative-latlong-point (39.7887898 16.3049421) ; # Grotta Pavolella, map point on Prehistory in Italy page
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2023/01/01-PAVOLELLA_Statuina.jpg> .
+
 :mestikawi-cave-group-scenes a :group-of-human-figures ;
    rdfs:label "Mestikawi Cave Group Scenes" ;
    :described-by <https://en.wikipedia.org/wiki/Cave_of_Beasts> ;
@@ -1991,6 +2004,19 @@
    :in-modern-country-note "Italy" ;
    :representative-latlong-point (40.911601 17.0984822) ; # Grotta Pacelli, Castellana Grotte (point as supplied; the source places the cave in the north-western part of the commune)
    :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2022/03/06-GROTTA-PACELLI_Statuina.jpg> .
+
+:female-figurine-baselice a :human-figure ;
+   rdfs:label "Female Figurine from Baselice" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/statuina-di-baselice-bn/> ;
+   :earliest-date -4000 ;
+   :latest-date -2000 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Figulina clay, red paint" ;
+   :height 0.04 ;
+   :apparent-gender :female ;
+   :note "From Prehistory in Italy: “The figurine is a small head in yellowish figulina clay: it consists of only the upper part of the body (shoulders and neck) and the head, the latter with a sort of headgear that frames the face. … the headgear is marked by vertical strokes of variable length, some of which are painted in red.” Serra d’Alto–Diana facies; found by chance in 2001 at the Neolithic settlement in the Cervaro valley, north of Baselice (Benevento)." ;
+   :representative-latlong-point (41.412897 14.9692095) ; # Baselice Neolithic site, map point on Prehistory in Italy page
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2023/01/01-BASELICE_Statuina.jpg> .
 
 :neolithic-figurine-karditsa a :human-figure ;
    rdfs:label "Neolithic Figurine from Karditsa" ;
@@ -3717,6 +3743,20 @@
    :in-modern-country-note "United Kingdom" ;
    :representative-latlong-point (54.584 -0.92) ; # Hunt Cliff (Wikipedia); found on the beach below the cliff
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:The_Huntcliff_Figure_-_Adam_Morgan_Ibbotson.jpg> .
+
+:female-figurine-nola a :human-figure ;
+   rdfs:label "Female Figurine from Nola" ;
+   :described-by <https://www.preistoriainitalia.it/en/scheda/statuina-di-nola-na/> ,
+      <https://en.wikipedia.org/wiki/Nola-Croce_del_Papa> ;
+   :earliest-date -1949 ;
+   :latest-date -1767 ;
+   :in-modern-country-note "Italy" ;
+   :material-note "Coarse clay" ;
+   :height 0.1 ;
+   :apparent-gender :female ;
+   :note "From Prehistory in Italy: “It is a small anthropomorphic statuette in coarse clay, depicting a female character in an upright position with her arms outstretched … The statuette is interpreted as a protective deity linked to a domestic cult, a hypothesis strengthened by the place of discovery, inside a hut.” Early Bronze Age village of Nola–Croce del Papa, buried by the Avellino eruption of Vesuvius; Museo Storico Archeologico di Nola." ;
+   :representative-latlong-point (40.93333 14.53333) ; # Nola–Croce del Papa, map point on Prehistory in Italy page
+   :thumbnail-image <https://www.preistoriainitalia.it/wp-content/uploads/2023/01/01-NOLA_Statuina.jpg> .
 
 :arctic-first-peoples-maskette a :human-figure ;
    rdfs:label "Arctic First Peoples Maskette" ;
@@ -10924,6 +10964,18 @@
    :representative-latlong-point (13.441389 103.858611) ;
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Bayonmarket01.JPG> .
 
+:seitaka-doji-koyasan a :human-figure ;
+   rdfs:label "Seitaka Dōji" ;
+   :described-by <https://en.wikipedia.org/wiki/Koyasan_Reih%C5%8Dkan#Sculptures> ;
+   :date 1197 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Colored hinoki wood, crystal eyes" ;
+   :height 1.03 ;
+   :apparent-gender :male ;
+   :note "From Wikipedia: “Six of the group of Eight Attendants of Fudō Myōō, the oldest, dating to 1197 Kamakura period by Unkei are National Treasures … The group, made of colored hinoki wood with crystal eyes, was formerly enshrined in the Fudō-dō.” Kongōbu-ji, Mount Kōya; now in the Koyasan Reihōkan." ;
+   :representative-latlong-point (34.211278 135.581472) ; # Koyasan Reihōkan (Wikipedia infobox)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Seitaka_Doji_Kongobuji.jpg> .
+
 :emmons-rattle-mask a :human-figure ;
    rdfs:label "So-called Emmons Rattle Mask" ;
    :described-by <https://en.wikipedia.org/wiki/Emmons_Cemetery_Site#Emmons_mask> ,
@@ -11107,6 +11159,20 @@
    :in-modern-country-note "Canada" ;
    :representative-latlong-point (62.846667 -69.871944) ; # Kimmirut, South Baffin (Wikipedia) as proxy; CMH gives "South Baffin", site KeDq-7
    :thumbnail-image <https://artofthemiddleages.com/files/original/0dfaffb6cbb9b4385dbd8e80f701fe87f932bd9b.jpg> .
+
+:thousand-armed-kannon-sanjusangendo a :human-figure ;
+   rdfs:label "Thousand-armed Kannon (Sanjūsangen-dō)" ;
+   :described-by <https://en.wikipedia.org/wiki/Sanj%C5%ABsangen-d%C5%8D#Important_features> ,
+      <https://en.wikipedia.org/wiki/List_of_National_Treasures_of_Japan_(sculptures)> ;
+   :earliest-date 1251 ;
+   :latest-date 1254 ;
+   :in-modern-country-note "Japan" ;
+   :material-note "Wood, gold leaf over lacquer, crystal eyes" ;
+   :height 3.348 ;
+   :apparent-gender :unclear ;
+   :note "From Wikipedia: “The main deity of the temple is Sahasrabhuja-arya-avalokiteśvara or the Thousand Armed Kannon. The statue of the main deity was created by the Kamakura sculptor Tankei and is a National Treasure of Japan.” A seated figure; the hall also houses 1001 standing Thousand-armed Kannon." ;
+   :representative-latlong-point (34.987778 135.771667) ; # Sanjūsangen-dō, Kyoto (Wikipedia coordinates)
+   :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Sanjusangendo_Thousand-armed_Kannon.JPG> .
 
 :great-buddha-kamakura a :human-figure ;
    rdfs:label "The Great Buddha of Kamakura" ;
