@@ -1253,14 +1253,19 @@
 
 :maliwawa-figures a :group-of-human-figures ;
    rdfs:label "Maliwawa Figures" ;
-   :described-by <https://www.smithsonianmag.com/smart-news/ancient-australian-aboriginal-art-unlike-anything-seen-180975984/> ,
-    <https://www.tandfonline.com/doi/figure/10.1080/03122417.2020.1818361?scroll=top&needAccess=true> ;
+   :described-by <https://doi.org/10.1080/03122417.2020.1818361> ,
+    <https://www.smithsonianmag.com/smart-news/ancient-australian-aboriginal-art-unlike-anything-seen-180975984/> ;
    :earliest-date -7400 ;
    :latest-date -4000 ;
    :in-modern-country-note "Australia" ;
+   :material-note "Red to mulberry pigment on rock" ;
+   :apparent-gender :male , :female , :unclear ;
    :art-historical-culture-or-tradition :australian-first-nations ;
-   :representative-latlong-point (-11.87333 133.10472) ; # Wellington Range, West Arnhem Land
-   :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/EdiLRvytYRYjtQGSL7yf9I68uWM=/fit-in/1072x0/filters:focal(931x560:932x561)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b8/65/b865d6a9-bbc1-44ec-9f4b-8b885aa6c83b/rock_art_3a.jpeg> .
+   :note "From Taçon et al. 2020: “Maliwawa Figures comprise mainly naturalistic human and animal forms with stroke-line infill throughout but occasionally they are in outline with only a few strokes of infill. … A male Maliwawa human figure with cone and feather headdress (0.80 metres wide by 1.44 metres high) reaches out to a large bird with one hand and a large macropod with the other (possibly an emu and kangaroo).” Dated to 6,000–9,400 years ago; human figures range from 20 cm to 1.95 m high." ;
+   :representative-latlong-point (-11.87333 133.10472) ; # Wellington Range, West Arnhem Land (Namunidjbuk estate)
+   :thumbnail-image <https://th-thumbnailer.cdn-si-edu.com/EdiLRvytYRYjtQGSL7yf9I68uWM=/fit-in/1072x0/filters:focal(931x560:932x561)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b8/65/b865d6a9-bbc1-44ec-9f4b-8b885aa6c83b/rock_art_3a.jpeg> ,
+      <https://www.tandfonline.com/cms/asset/ca8419cf-0f91-47f3-8118-5d1df0fa8ce3/raaa_a_1818361_f0004_c.jpg> ,
+      <https://www.tandfonline.com/cms/asset/0c4d3dd9-42ec-43ea-a026-07fbb3f09856/raaa_a_1818361_f0005_b.jpg> .
 
 :plaster-head-jericho a :human-figure ;
    rdfs:label "Plaster Head from Jericho" ;
