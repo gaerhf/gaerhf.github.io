@@ -6306,6 +6306,21 @@
    :representative-latlong-point (37.97223 23.72636);
    :wikimedia-commons-image-page <https://commons.wikimedia.org/wiki/File:Ath%C3%A8nes_Acropole_Caryatides.JPG>.
 
+:atlatl-hunter-white-rock-bluff a :human-figure ;
+   rdfs:label "Atlatl Figure with Segmented Ritual Hat, White Rock Bluff" ;
+   :described-by <http://www.profmichaelfuller.com/whiterock.html> ,
+      <https://www.ozarksfirst.com/news/missouri-rock-art-dgated-ancient/> ,
+      <https://www.researchgate.net/publication/393884099_New_Insights_into_Missouri_Pictographs_American_Indian_Rock_Art_51_103-115> ;
+   :earliest-date -420 ;
+   :latest-date -120 ;
+   :in-modern-country-note "United States" ;
+   :material-note "Red pigment (pictograph)" ;
+   :apparent-gender :unclear ;
+   :identifier-note "Site no. 23TE01" ;
+   :note "From Michael Fuller’s White Rock Bluff page: “Karen Steelman calculated a C-14 date of 420 to 120 BC for the red pictograph of the headdress, atlatl hunter.” The figure appears to wear a segmented headdress and carry bags, and holds an atlatl. White Rock Bluff pictograph site, Texas County, Missouri." ;
+   :representative-latlong-point (37.32618 -92.01393) ; # White Rock Bluff (template value; source to confirm)
+   :thumbnail-image <https://www.ozarksfirst.com/wp-content/uploads/sites/65/2026/11/a2b6a42b32202ccb99fe45092ba789fb-1.jpeg?resize=876,1170> .
+
 :deposit-figurines-san-isidro a :group-of-human-figures ;
    rdfs:label "Deposit of Figurines from San Isidro" ;
    :described-by <https://doi.org/10.15184/aqy.2025.37> ,
